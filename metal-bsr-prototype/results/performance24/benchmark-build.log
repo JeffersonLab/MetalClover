@@ -1,0 +1,59 @@
+mkdir -p build
+xcrun clang++ -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobjc-arc -fblocks -DACCELERATE_NEW_LAPACK performance_compare.mm -o build/performance_compare -framework Metal -framework Foundation -framework Accelerate
+make: `build/performance_chroma' is up to date.
+test -n "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel"
+mkdir -p build
+"$("/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config" --cxx)" $("/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config" --cxxflags) -DBASE_PRECISION=64 \
+	  -I"/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib" correctness_chroma.cc \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/io/aniso_io.cc" \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/fermstates/stout_fermstate_params.cc" \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/util/gauge/stout_utils.cc" \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/linop/unprec_clover_linop_w.cc" \
+	  "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/invert/invbicgstab.cc" \
+	  -o build/correctness_chroma $("/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config" --ldflags) $("/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config" --libs)
+In file included from /Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/clover_term_w.h:69,
+                 from /Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/unprec_clover_linop_w.h:12,
+                 from correctness_chroma.cc:4:
+/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/clover_term_qdp_w.h:1605:2: warning: #warning "Using unrolled clover term" [-Wcpp]
+ 1605 | #warning "Using unrolled clover term"
+      |  ^~~~~~~
+/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/util/gauge/stout_utils.cc:869:2: warning: #warning "Using QDP++ stouting" [-Wcpp]
+  869 | #warning "Using QDP++ stouting"
+      |  ^~~~~~~
+In file included from /Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/clover_term_w.h:69,
+                 from /Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/unprec_clover_linop_w.h:12,
+                 from /Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/linop/unprec_clover_linop_w.cc:6:
+/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/clover_term_qdp_w.h:1605:2: warning: #warning "Using unrolled clover term" [-Wcpp]
+ 1605 | #warning "Using unrolled clover term"
+      |  ^~~~~~~
+ld: warning: ignoring duplicate libraries: '-lqmp'
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[2](QIO_close_read.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[3](QIO_close_write.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[4](QIO_info.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[5](QIO_info_ildg_record.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[6](QIO_info_private.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[11](QIO_open_read.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[12](QIO_open_write.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[14](QIO_read_record_data.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[15](QIO_read_record_info.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[16](QIO_string.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[17](QIO_utils.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[18](QIO_write.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[21](DML_crc32.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[22](DML_utils.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[23](LRL_main.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/libqio.a[24](DML_parscalar.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/liblime.a[2](lime_writer.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/liblime.a[3](lime_header.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/liblime.a[4](lime_utils.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qdpxx/lib/liblime.a[5](lime_reader.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[2](QMP_comm.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[3](QMP_error.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[4](QMP_grid.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[5](QMP_init.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[6](QMP_machine.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[7](QMP_mem.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[8](QMP_split.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[9](QMP_topology.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)
+ld: warning: object file (/Users/admin/Downloads/macos-chroma/install/qmp/lib/libqmp.a[10](QMP_util.o)) was built for newer 'macOS' version (26.0) than being linked (15.0)

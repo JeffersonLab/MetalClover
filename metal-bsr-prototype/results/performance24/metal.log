@@ -1,0 +1,146 @@
+MG_SETTINGS blocks=4,4,4,8
+STANDALONE original FP64 operator_match=1.6837236531166961e-16
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.5978638712871563e-08
+INNER metal-bicgstab K=64 relative_FP32=0.026384104344422656
+INNER metal-bicgstab K=128 relative_FP32=0.0060219264619017342
+INNER metal-bicgstab K=192 relative_FP32=0.0049236645294682534
+INNER metal-bicgstab K=256 relative_FP32=0.0037484630950246358
+OUTER method=metal-bicgstab rhs=0 step=1 K=281 full_relative=0.0015841450175628554
+INNER metal-bicgstab K=64 relative_FP32=0.75111626839065759
+INNER metal-bicgstab K=128 relative_FP32=0.53483253009810361
+INNER metal-bicgstab K=192 relative_FP32=0.5118222226354503
+INNER metal-bicgstab K=256 relative_FP32=0.35776978299729545
+INNER metal-bicgstab K=320 relative_FP32=0.16630251625123843
+INNER metal-bicgstab K=384 relative_FP32=0.095859404737025852
+INNER metal-bicgstab K=448 relative_FP32=0.11542217502135858
+INNER metal-bicgstab K=512 relative_FP32=0.059462856708561697
+INNER metal-bicgstab K=576 relative_FP32=0.046572574067015406
+INNER metal-bicgstab K=640 relative_FP32=0.078784984378744635
+INNER metal-bicgstab K=704 relative_FP32=0.033607260760218124
+INNER metal-bicgstab K=768 relative_FP32=0.029472845085707574
+INNER metal-bicgstab K=832 relative_FP32=0.0090525307285960876
+INNER metal-bicgstab K=896 relative_FP32=0.007744230631696057
+INNER metal-bicgstab K=960 relative_FP32=0.0021493726095956327
+OUTER method=metal-bicgstab rhs=0 step=2 K=976 full_relative=2.9758850917770113e-06
+INNER metal-bicgstab K=64 relative_FP32=0.93309699279058811
+INNER metal-bicgstab K=128 relative_FP32=0.59999803776514693
+INNER metal-bicgstab K=192 relative_FP32=0.37864952490123965
+INNER metal-bicgstab K=256 relative_FP32=0.8035065507278315
+INNER metal-bicgstab K=320 relative_FP32=0.90880606944336184
+INNER metal-bicgstab K=384 relative_FP32=0.16406702902768536
+INNER metal-bicgstab K=448 relative_FP32=0.11077379425902124
+INNER metal-bicgstab K=512 relative_FP32=0.10504669509699047
+INNER metal-bicgstab K=576 relative_FP32=0.047935670748431899
+INNER metal-bicgstab K=640 relative_FP32=0.049253072776722334
+INNER metal-bicgstab K=704 relative_FP32=0.031022427095425215
+INNER metal-bicgstab K=768 relative_FP32=0.022305151144201257
+INNER metal-bicgstab K=832 relative_FP32=0.021619083611732308
+INNER metal-bicgstab K=896 relative_FP32=0.013599003239733027
+INNER metal-bicgstab K=960 relative_FP32=0.016227992147580261
+INNER metal-bicgstab K=1024 relative_FP32=0.005816954183185067
+INNER metal-bicgstab K=1088 relative_FP32=0.0027322062787571064
+OUTER method=metal-bicgstab rhs=0 step=3 K=1106 full_relative=6.0081677842520086e-09
+INNER metal-bicgstab K=64 relative_FP32=0.30895700520873615
+INNER metal-bicgstab K=128 relative_FP32=0.32861123059201963
+INNER metal-bicgstab K=192 relative_FP32=0.11161564829920467
+INNER metal-bicgstab K=256 relative_FP32=0.064148034955688674
+INNER metal-bicgstab K=320 relative_FP32=0.049298665375293559
+INNER metal-bicgstab K=384 relative_FP32=0.098187904070272974
+INNER metal-bicgstab K=448 relative_FP32=0.033221431558183245
+INNER metal-bicgstab K=512 relative_FP32=0.024076890293660495
+INNER metal-bicgstab K=576 relative_FP32=0.032012042788632962
+INNER metal-bicgstab K=640 relative_FP32=0.0085081408720214524
+INNER metal-bicgstab K=704 relative_FP32=0.012897838645456581
+INNER metal-bicgstab K=768 relative_FP32=0.0045376514133974978
+OUTER method=metal-bicgstab rhs=0 step=4 K=802 full_relative=1.2026603437263199e-11
+INNER metal-bicgstab K=64 relative_FP32=1.2014066297618138
+INNER metal-bicgstab K=128 relative_FP32=0.52467158451454832
+INNER metal-bicgstab K=192 relative_FP32=0.88916705750384684
+INNER metal-bicgstab K=256 relative_FP32=0.27129608236386149
+INNER metal-bicgstab K=320 relative_FP32=0.13631135618221082
+INNER metal-bicgstab K=384 relative_FP32=0.076908116657128531
+INNER metal-bicgstab K=448 relative_FP32=0.084179775474306148
+INNER metal-bicgstab K=512 relative_FP32=0.097720971731598355
+INNER metal-bicgstab K=576 relative_FP32=0.04776682267523881
+INNER metal-bicgstab K=640 relative_FP32=0.020073386704942665
+INNER metal-bicgstab K=704 relative_FP32=0.011258449509138698
+INNER metal-bicgstab K=768 relative_FP32=0.010239522824384799
+INNER metal-bicgstab K=832 relative_FP32=0.0066169449385720626
+INNER metal-bicgstab K=896 relative_FP32=0.0067142912417498049
+INNER metal-bicgstab K=960 relative_FP32=0.0086321385398961045
+INNER metal-bicgstab K=1024 relative_FP32=0.0024977718454426189
+OUTER method=metal-bicgstab rhs=0 step=5 K=1043 full_relative=2.4259281746122323e-14
+SOLVED method=metal-bicgstab rhs=0 outer=5 K=4208 seconds=541.20735724999997 full_relative=2.4259281746122323e-14
+INNER metal-bicgstab K=64 relative_FP32=0.006612636403841971
+INNER metal-bicgstab K=128 relative_FP32=0.0085456247411378229
+OUTER method=metal-bicgstab rhs=1 step=1 K=172 full_relative=0.0016663381836904379
+INNER metal-bicgstab K=64 relative_FP32=1.1541983778912464
+INNER metal-bicgstab K=128 relative_FP32=0.55590213919546205
+INNER metal-bicgstab K=192 relative_FP32=0.4651012657892184
+INNER metal-bicgstab K=256 relative_FP32=0.22641081225202267
+INNER metal-bicgstab K=320 relative_FP32=0.14705526892902507
+INNER metal-bicgstab K=384 relative_FP32=0.19342637822581329
+INNER metal-bicgstab K=448 relative_FP32=0.16129534493990674
+INNER metal-bicgstab K=512 relative_FP32=0.53152501000255248
+INNER metal-bicgstab K=576 relative_FP32=0.091739997511434176
+INNER metal-bicgstab K=640 relative_FP32=0.066676516975115438
+INNER metal-bicgstab K=704 relative_FP32=0.077318639811115308
+INNER metal-bicgstab K=768 relative_FP32=0.033534974206273924
+INNER metal-bicgstab K=832 relative_FP32=0.015827079402072515
+INNER metal-bicgstab K=896 relative_FP32=0.016749935550427336
+INNER metal-bicgstab K=960 relative_FP32=0.0071633864671708904
+INNER metal-bicgstab K=1024 relative_FP32=0.005301243164199233
+INNER metal-bicgstab K=1088 relative_FP32=0.011808038928590921
+INNER metal-bicgstab K=1152 relative_FP32=0.0044005983539855452
+INNER metal-bicgstab K=1216 relative_FP32=0.0022791609559634544
+OUTER method=metal-bicgstab rhs=1 step=2 K=1220 full_relative=3.2980650757495126e-06
+INNER metal-bicgstab K=64 relative_FP32=0.56087802013547372
+INNER metal-bicgstab K=128 relative_FP32=0.29279442314839293
+INNER metal-bicgstab K=192 relative_FP32=0.29144951042082767
+INNER metal-bicgstab K=256 relative_FP32=0.65540258325165923
+INNER metal-bicgstab K=320 relative_FP32=0.17946350217553569
+INNER metal-bicgstab K=384 relative_FP32=0.067281893794099309
+INNER metal-bicgstab K=448 relative_FP32=0.040500508537600462
+INNER metal-bicgstab K=512 relative_FP32=0.015309104698016345
+INNER metal-bicgstab K=576 relative_FP32=0.022115122314773951
+INNER metal-bicgstab K=640 relative_FP32=0.13739790751326109
+INNER metal-bicgstab K=704 relative_FP32=0.016037770751143342
+INNER metal-bicgstab K=768 relative_FP32=0.0078607659913348168
+INNER metal-bicgstab K=832 relative_FP32=0.0044563074695582496
+OUTER method=metal-bicgstab rhs=1 step=3 K=890 full_relative=6.5327696127188257e-09
+INNER metal-bicgstab K=64 relative_FP32=1.4621968704398938
+INNER metal-bicgstab K=128 relative_FP32=2.2620282036563917
+INNER metal-bicgstab K=192 relative_FP32=0.46380503958300262
+INNER metal-bicgstab K=256 relative_FP32=0.34914339183093041
+INNER metal-bicgstab K=320 relative_FP32=0.2033216333486762
+INNER metal-bicgstab K=384 relative_FP32=0.59446242843165642
+INNER metal-bicgstab K=448 relative_FP32=0.09490674751273262
+INNER metal-bicgstab K=512 relative_FP32=0.062065519108580651
+INNER metal-bicgstab K=576 relative_FP32=0.077466919506794601
+INNER metal-bicgstab K=640 relative_FP32=0.039423181163381449
+INNER metal-bicgstab K=704 relative_FP32=0.041803499184387777
+INNER metal-bicgstab K=768 relative_FP32=0.05495002250894386
+INNER metal-bicgstab K=832 relative_FP32=0.041205788146731294
+INNER metal-bicgstab K=896 relative_FP32=0.02028347882618748
+INNER metal-bicgstab K=960 relative_FP32=0.012774271563946569
+INNER metal-bicgstab K=1024 relative_FP32=0.015202099709932684
+INNER metal-bicgstab K=1088 relative_FP32=0.0028360905760641143
+OUTER method=metal-bicgstab rhs=1 step=4 K=1102 full_relative=1.1285543480437897e-11
+INNER metal-bicgstab K=64 relative_FP32=0.47965331918833337
+INNER metal-bicgstab K=128 relative_FP32=0.23224173035855561
+INNER metal-bicgstab K=192 relative_FP32=0.19682059341863101
+INNER metal-bicgstab K=256 relative_FP32=0.16036034635608207
+INNER metal-bicgstab K=320 relative_FP32=0.098559980526029975
+INNER metal-bicgstab K=384 relative_FP32=0.082884939383980477
+INNER metal-bicgstab K=448 relative_FP32=0.12255432645109714
+INNER metal-bicgstab K=512 relative_FP32=0.08732300470896967
+INNER metal-bicgstab K=576 relative_FP32=0.054019254704543301
+INNER metal-bicgstab K=640 relative_FP32=0.018233575820320411
+INNER metal-bicgstab K=704 relative_FP32=0.0086676064079641499
+INNER metal-bicgstab K=768 relative_FP32=0.0057419308099438951
+INNER metal-bicgstab K=832 relative_FP32=0.0033583764776682458
+OUTER method=metal-bicgstab rhs=1 step=5 K=843 full_relative=2.2322518340747708e-14
+SOLVED method=metal-bicgstab rhs=1 outer=5 K=4227 seconds=542.53361891600002 full_relative=2.2322518340747708e-14
+BASIS filtered 2/12
+BASIS filtered 4/12
