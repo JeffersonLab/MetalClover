@@ -1,0 +1,29 @@
+STANDALONE original FP64 operator_match=1.6837236531166961e-16
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.5978638712871563e-08
+BASIS filtered 1/8
+BASIS filtered 2/8
+BASIS filtered 3/8
+BASIS filtered 4/8
+BASIS filtered 5/8
+BASIS filtered 6/8
+BASIS filtered 7/8
+BASIS filtered 8/8
+BASIS seconds=25.493652708999999 filter_fine_S=512
+COARSE1 seconds=38.706253709000002 entries=540672 dofs=262144
+HIERARCHY seconds=42.590948916999999 coarse1=262144 coarse2=16384
+MG_READY setup_seconds=44.396679708999997 allocated_GiB=13.887786865234375
+CYCLE method=screen-0 pre=1 post=1 omega=1
+OUTER method=screen-0 rhs=0 step=1 K=61 fine_S=189 seconds=22.584532458000002 full_relative=0.0016631853748314102
+INNER metal-mg K=192 relative_FP32=0.0067194532560568253
+OUTER method=screen-0 rhs=0 step=2 K=247 fine_S=762 seconds=80.465090875000001 full_relative=3.2772483661590538e-06
+SCREENED method=screen-0 rhs=0 outer=2 K=308 fine_S=951 seconds=103.050082958 full_relative=3.2772483661590538e-06
+PROJECTION method=screen-0 seconds=344.44535558300004 coarse_at_limit=0/308
+CYCLE method=screen-1 pre=0 post=1 omega=1
+OUTER method=screen-1 rhs=0 step=1 K=93 fine_S=194 seconds=27.557145375000001 full_relative=0.0016731001192383372
+INNER metal-mg K=192 relative_FP32=0.032051659741985705
+OUTER method=screen-1 rhs=0 step=2 K=371 fine_S=773 seconds=104.644327042 full_relative=3.3269292002667488e-06
+SCREENED method=screen-1 rhs=0 outer=2 K=464 fine_S=967 seconds=132.202494583 full_relative=3.3269292002667488e-06
+PROJECTION method=screen-1 seconds=446.13547570899999 coarse_at_limit=0/464
+CYCLE method=screen-2 pre=1 post=0 omega=1
+OUTER method=screen-2 rhs=0 step=1 K=104 fine_S=217 seconds=30.414060625000001 full_relative=0.0016601686936547192

@@ -1,0 +1,3 @@
+method,pre,post,weight,coarse_calls,coarse_iterations,coarse_at_limit,bottom_iterations,projected_seconds
+screen-0,1,1,1,308,920,0,1840,344.44535558300004
+screen-1,0,1,1,464,1212,0,2424,446.13547570899999

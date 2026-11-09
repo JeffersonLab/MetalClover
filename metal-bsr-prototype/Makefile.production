@@ -43,6 +43,10 @@ build/performance_compare: performance_compare.mm $(wildcard *.hpp) $(wildcard *
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) performance_compare.mm -o $@ $(FRAMEWORKS)
 
+build/mg_real_tune: mg_real_tune.mm $(wildcard *.hpp) $(wildcard *.metal)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) mg_real_tune.mm -o $@ $(FRAMEWORKS)
+
 build/metal_memory_limits: metal_memory_limits.mm
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) metal_memory_limits.mm -o $@ -framework Metal -framework Foundation

@@ -1,0 +1,3 @@
+method,rhs,outer,krylov,seconds,residual_seconds,full_relative,save_seconds,fine_schur_applications
+screen-0,0,2,308,103.050082958,2.4867853329999998,3.2772483661590538e-06,0,951
+screen-1,0,2,464,132.202494583,2.1117202079999999,3.3269292002667488e-06,0,967

@@ -1,0 +1,45 @@
+STANDALONE original FP64 operator_match=1.6828153126362093e-16
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.53639000554903e-08
+BASIS filtered 1/8
+BASIS filtered 2/8
+BASIS filtered 3/8
+BASIS filtered 4/8
+BASIS filtered 5/8
+BASIS filtered 6/8
+BASIS filtered 7/8
+BASIS filtered 8/8
+BASIS seconds=1.136754542 filter_fine_S=512
+COARSE1 seconds=1.7011781669999999 entries=25344 dofs=12288
+HIERARCHY seconds=1.9184610419999999 coarse1=12288 coarse2=768
+MG_READY setup_seconds=1.943676959 allocated_GiB=0.649658203125
+CYCLE method=screen-0 pre=1 post=1 omega=1
+OUTER method=screen-0 rhs=0 step=1 K=16 fine_S=50 seconds=0.52538949999999995 full_relative=0.001319786962575653
+OUTER method=screen-0 rhs=0 step=2 K=27 fine_S=84 seconds=0.84902808399999996 full_relative=2.382604826017768e-06
+SCREENED method=screen-0 rhs=0 outer=2 K=43 fine_S=134 seconds=1.3746239170000001 full_relative=2.382604826017768e-06
+PROJECTION method=screen-0 seconds=3.921708169 coarse_at_limit=0/43
+CYCLE method=screen-1 pre=0 post=1 omega=1
+OUTER method=screen-1 rhs=0 step=1 K=24 fine_S=50 seconds=0.72071133399999998 full_relative=0.0015907823210031646
+OUTER method=screen-1 rhs=0 step=2 K=41 fine_S=86 seconds=1.269809 full_relative=3.0032504257203991e-06
+SCREENED method=screen-1 rhs=0 outer=2 K=65 fine_S=136 seconds=1.9907741249999999 full_relative=3.0032504257203991e-06
+PROJECTION method=screen-1 seconds=5.8002011250000001 coarse_at_limit=0/65
+CYCLE method=screen-2 pre=1 post=0 omega=1
+OUTER method=screen-2 rhs=0 step=1 K=25 fine_S=53 seconds=0.77495183400000001 full_relative=0.0016019109286149432
+OUTER method=screen-2 rhs=0 step=2 K=41 fine_S=86 seconds=1.34221875 full_relative=2.94829284250961e-06
+SCREENED method=screen-2 rhs=0 outer=2 K=66 fine_S=139 seconds=2.1173029579999998 full_relative=2.94829284250961e-06
+PROJECTION method=screen-2 seconds=6.1439592080000001 coarse_at_limit=0/66
+SELECTED method=screen-0 pre=1 post=1 weight=1 projected_seconds=3.921708169
+OUTER method=metal-mg rhs=0 step=1 K=16 fine_S=50 seconds=0.59289849999999999 full_relative=0.001319786962575653
+OUTER method=metal-mg rhs=0 step=2 K=27 fine_S=84 seconds=0.84389637500000003 full_relative=2.382604826017768e-06
+OUTER method=metal-mg rhs=0 step=3 K=27 fine_S=84 seconds=0.8588905 full_relative=4.7280899428516813e-09
+OUTER method=metal-mg rhs=0 step=4 K=27 fine_S=84 seconds=0.86849695800000004 full_relative=8.2409672110385732e-12
+OUTER method=metal-mg rhs=0 step=5 K=27 fine_S=84 seconds=1.004783 full_relative=1.5203152069300463e-14
+SOLVED method=metal-mg rhs=0 outer=5 K=124 fine_S=386 seconds=4.1693222499999996 full_relative=1.5203152069300463e-14
+OUTER method=metal-bicgstab rhs=0 step=1 K=41 fine_S=82 seconds=0.30423779200000001 full_relative=0.0015062886259696029
+OUTER method=metal-bicgstab rhs=0 step=2 K=74 fine_S=148 seconds=0.47776437500000002 full_relative=2.9544084683664873e-06
+OUTER method=metal-bicgstab rhs=0 step=3 K=77 fine_S=154 seconds=0.54226633400000002 full_relative=5.5192113050068862e-09
+OUTER method=metal-bicgstab rhs=0 step=4 K=79 fine_S=158 seconds=0.50672045799999998 full_relative=1.0959468521464219e-11
+OUTER method=metal-bicgstab rhs=0 step=5 K=95 fine_S=190 seconds=0.60988066699999999 full_relative=8.4454824742905771e-15
+SOLVED method=metal-bicgstab rhs=0 outer=5 K=366 fine_S=732 seconds=2.4411918749999999 full_relative=8.4454824742905771e-15
+PEAK_RSS_GiB=1.4903411865234375
+PASS tuning complete; only SOLVED rows certify full FP64 tolerance; native Chroma verification required

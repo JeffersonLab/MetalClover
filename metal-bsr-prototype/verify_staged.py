@@ -22,6 +22,8 @@ p.add_argument('directory', type=Path)
 p.add_argument('--bridge', required=True)
 p.add_argument('--rhs', type=int, default=2)
 p.add_argument('--executable', type=Path, default=Path('build/performance_chroma'))
+p.add_argument('--reference-directory', type=Path,
+               help='reuse existing CPU/BiCGStab reference fields when absent from directory')
 a = p.parse_args(); d = a.directory
 manifest = {'staging_outside_solver_timings': True, 'original_fields_modified': False, 'files': []}
 def stage(src, dst, expected=None):
@@ -66,8 +68,10 @@ with tempfile.TemporaryDirectory(prefix='mg-chroma-verify-',dir='/private/tmp') 
     for rhs in range(a.rhs):
         for method in ['chroma-bicgstab','metal-bicgstab','metal-mg']:
             src = d/f'test.{method}.rhs{rhs}.bin'
+            if not src.exists() and a.reference_directory is not None and method != 'metal-mg':
+                src = a.reference_directory/src.name
             row = stage(src,temp/src.name,vector_bytes)
-            old = d/'first-cpu-reference.json'
+            old = src.parent/'first-cpu-reference.json'
             if rhs==0 and method=='chroma-bicgstab' and old.exists():
                 if row['sha256'] != json.loads(old.read_text())['solution_sha256']:
                     raise RuntimeError('Restored CPU reference differs from its original checkpoint hash')

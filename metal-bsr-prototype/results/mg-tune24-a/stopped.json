@@ -1,0 +1,7 @@
+{
+  "reason": "Two completed screens were sufficient to reject post-only smoothing; restart with shorter bottom iteration caps. Third screen deliberately interrupted. No accepted full solution was saved.",
+  "completed_screens": [
+    0,
+    1
+  ]
+}
