@@ -94,6 +94,9 @@ int main(int argc,char** argv){@autoreleasepool{
         summary<<std::setprecision(17)<<"method,rhs,outer,krylov,seconds,residual_seconds,full_relative,save_seconds\n";
         GPUCompactSchur op(metal,c);
         @autoreleasepool{check_schur(c,op);}
+        // Subsequent solves/checks use the GPU copies or the FP64 operator.
+        // The FP64 basis construction retains its separate even inverse.
+        release(c.links32);release(c.oddA32);release(c.inverseEven32);
         {
             GPUBiCGStab bi(metal,c.parity.oe,1,workers);
             bi.encode_override=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){op.encode(e,x,y);};
@@ -113,7 +116,6 @@ int main(int argc,char** argv){@autoreleasepool{
         BlockMatrix a2(2*vectors,second.aggregates,workers);project_matrix(a2,a1,second);
         first.release64();second.release64();a1.release64();a2.release64();
         c.rhs(1,false);
-        release(c.links32);release(c.oddA32);release(c.inverseEven32);
         std::cout<<"HIERARCHY seconds="<<seconds(start)<<" coarse1="<<a1.n<<" coarse2="<<a2.n<<std::endl;
         GPUCycle pre(first,metal,1,c.inverseOdd32);release(first.basis32);release(c.inverseOdd32);
         pre.product=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){op.encode(e,x,y);};
