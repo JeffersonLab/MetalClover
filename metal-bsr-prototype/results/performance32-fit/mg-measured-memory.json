@@ -1,0 +1,10 @@
+{
+  "measured_GPU_GiB_at_MG_ready": 22.699905395507812,
+  "recommended_GPU_working_set_GiB": 24.960006713867188,
+  "physical_memory_GiB": 32,
+  "full_CPU_FP64_x_is_file_backed_GiB": 1.5,
+  "FP64_residual_slab_MiB": 48,
+  "persistent_GPU_array_accounting_GiB": 22.32452791929245,
+  "difference_from_primary_array_accounting_GiB": 0.37537747621536255,
+  "note": "Use measured Metal allocation rather than primary-buffer accounting. Allocator/runtime/setup-retained differences were not disaggregated. Clean gauge/solution mapping pages are dropped between slabs; raw clover is regenerated in CPU FP64."
+}

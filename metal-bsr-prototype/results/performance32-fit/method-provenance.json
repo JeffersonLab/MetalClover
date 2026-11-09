@@ -1,0 +1,46 @@
+{
+  "BiCGStab": {
+    "source_commit": "56c1bf1",
+    "executable_sha256": "1b446134b45f075be0b1521a3caa53e1beea168272b3776001fef64520fcc776",
+    "argv": [
+      "/private/tmp/mg-lowmem-solve-v2",
+      "/private/tmp/mg-fit32",
+      "/private/tmp/mg-fit32-test",
+      "bicg",
+      "2",
+      "4,4,4,8",
+      "8",
+      "128"
+    ],
+    "main_source_sha256": "3d6603bf5a58040965c7522aebe24592f9e2c3f831476f6ceea7e7087ac8fb9c"
+  },
+  "MG": {
+    "source_commit": "9d8173d",
+    "executable_sha256": "8a192e32ac8e322f88f6ba17f506e0706f9b83342364c3f259df41164914a1c8",
+    "argv": [
+      "/private/tmp/mg-lowmem-solve-v3",
+      "/private/tmp/mg-fit32",
+      "/private/tmp/mg-fit32-test",
+      "mg",
+      "2",
+      "4,4,4,4",
+      "8",
+      "256",
+      "64",
+      "8"
+    ],
+    "main_source_sha256": "83092d4aa86ea390da487cb0d52f4d8726b117823f723f267c9206137111b8ef"
+  },
+  "original_native_verifier": {
+    "executable_sha256": "2ff4412b3acec6d0866c9053e19db1a547e739cf4fc551784cbee340aeda49c4",
+    "class": "Chroma::UnprecCloverLinOp",
+    "BASE_PRECISION": 64,
+    "source_tree": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel"
+  },
+  "notes": [
+    "BiCGStab block/restart/filter CLI arguments are unused by that solver branch.",
+    "MG v3 differs by optional second-level filter/bottom-cap parameters and coarse diagnostics; fine operators, LDL arithmetic and FP64 residual code are shared.",
+    "Source SHA files identify pre-run text; accepted-files identifies the exact bridge and all four independently verified full FP64 fields."
+  ],
+  "original_LIME_sha256_rechecked_after_run": "668d86198fed92f4f34414e70279ec942fb6da080d056f4393dc8ba68ec56298"
+}

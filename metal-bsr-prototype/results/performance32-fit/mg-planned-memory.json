@@ -1,0 +1,56 @@
+{
+  "shape": [
+    32,
+    32,
+    32,
+    256
+  ],
+  "blocks": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "fine_restart": 8,
+  "vectors_per_chirality": 8,
+  "coarse_dofs": [
+    524288,
+    32768
+  ],
+  "persistent_GPU_bytes_by_group": {
+    "fine_weighted_gauge": 2415919104,
+    "fine_even_and_odd_LDL_shared_with_smoother": 2415919104,
+    "fine_neighbors_and_parity_maps": 301989888,
+    "fine_Schur_scratch": 805306368,
+    "fine_transfer_basis": 3221225472,
+    "fine_cycle_scratch": 1207959552,
+    "fine_cycle_maps": 33685508,
+    "fine_cycle_coarse_rhs_and_solution": 8388608,
+    "fine_FGMRES_vectors": 9261023232,
+    "fine_FGMRES_reductions": 13370368,
+    "reduction_and_reconstruction": 1610612736,
+    "coarse1_matrix": 2214592512,
+    "coarse1_diagonal": 67108864,
+    "coarse1_csr": 4456452,
+    "coarse1_eight_vectors": 33554432,
+    "coarse1_reductions": 32856,
+    "bottom_matrix": 138412032,
+    "bottom_diagonal": 4194304,
+    "bottom_csr": 278532,
+    "bottom_eight_vectors": 2097152,
+    "bottom_reductions": 2136,
+    "coarse1_FGMRES_vectors": 96468992,
+    "coarse1_FGMRES_reductions": 140288,
+    "coarse1_cycle_transfer": 33554432,
+    "coarse1_cycle_maps": 270340,
+    "coarse1_cycle_diagonal": 67108864,
+    "coarse1_cycle_scratch": 12582912,
+    "coarse1_cycle_bottom_rhs_and_solution": 524288
+  },
+  "persistent_GPU_sum_GiB": 22.32452791929245,
+  "GPU_sum_plus_128MiB_padding_GiB": 22.44952791929245,
+  "CPU_full_FP64_b_residual_clover_arrays": 0,
+  "CPU_FP64_x_file_GiB": 1.5,
+  "CPU_FP64_residual_slab_MiB": 48.0,
+  "note": "Array accounting for LDL clover plus streamed CPU FP64 refinement.\n\nSparse graphs use the 33-neighbor Schur stencil bound. The measured Metal\nallocation is still authoritative; this accounts for persistent buffers,\nnot driver/compiler/OS memory or transient CPU hierarchy construction.\n"
+}

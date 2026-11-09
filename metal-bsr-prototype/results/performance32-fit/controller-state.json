@@ -1,0 +1,15 @@
+{
+  "phase": "complete",
+  "pid": 54630,
+  "argv": [
+    "/private/tmp/mg-lowmem-verify",
+    "/private/tmp/mg-fit32-runtime/action32.xml",
+    "/private/tmp/mg-fit32",
+    "/private/tmp/mg-fit32-test",
+    "metal-mg",
+    "2",
+    "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/performance32-fit/test.mg-native.csv"
+  ],
+  "child_group": 63618,
+  "accepted_full_tolerance": 1e-12
+}

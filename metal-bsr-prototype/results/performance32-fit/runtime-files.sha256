@@ -1,0 +1,13 @@
+ce64a92842bccf803c0097e4bbe1e6907d6c63386db1496ff3536462f3fe0780  /private/tmp/mg-fit32-runtime/action12.xml
+02d7969a5e9d3fd4a254bb69692e921e85bd1ff4f6e9417b6fabad05069d189a  /private/tmp/mg-fit32-runtime/action32.xml
+8b1a9238306973c24917623bf674d83826caec73557fb466d3451da16304c805  /private/tmp/mg-fit32-runtime/bicgstab.metal
+0f166a6081b7f864aeca39a13fc1befca8f79b98e9ce8e69ff1bb95f068ca29e  /private/tmp/mg-fit32-runtime/clover.metal
+876127b42a754209d71d668dc7521a4d016d2b951f07769b112573c1689af126  /private/tmp/mg-fit32-runtime/compact_clover.metal
+0740679fa7acbeecdba9b35b73da979fcf157cc8ee6996e8c3bd1671e6db61ad  /private/tmp/mg-fit32-runtime/evenodd.metal
+ab69811691ebec81f272c03f8dd69665449d65fe1c4c9bc374e2e97d2a73ea41  /private/tmp/mg-fit32-runtime/kernels.metal
+f526a1eb1485fe8bf9d8baabb83a2db5f34215a064c86c92ae061d524096cd4c  /private/tmp/mg-fit32-runtime/mg_real_tune.metal
+5229df37081e99795bc7d7d85fa0b78b65aa20a1d8f06ee8ae13d7bb865ab2c0  /private/tmp/mg-fit32-runtime/multigrid.metal
+3814dbba565f937e307d23abae2ff4700cbbd373133f27519ca387dcb1dd13e4  /private/tmp/mg-fit32-runtime/packed_clover.metal
+e7e900178f53eb880623acc1c0af9e4d959cb6deb0e761200dd70f552386ed66  /private/tmp/mg-fit32-runtime/run_guarded.py
+b44d04e627a5e8270f2b539ed7412e0a9373be3e558036d2e6762cdc53ed529b  /private/tmp/mg-fit32-runtime/solve.metal
+2824d4ddcf23007e46c8768855093db316f1c48ed8b50ddf1a6c1cd643310208  /private/tmp/mg-fit32-runtime/sparse_coarse.metal

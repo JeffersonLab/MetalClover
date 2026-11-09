@@ -1,0 +1,84 @@
+{
+  "shape": [
+    32,
+    32,
+    32,
+    256
+  ],
+  "mass": -0.086,
+  "rhs_count": 2,
+  "resident_rhs": 1,
+  "source_tags": [
+    20261107,
+    20261108
+  ],
+  "full_relative_tolerance": 1e-12,
+  "inner_relative_tolerance": 0.002,
+  "operator": "same original Chroma anisotropic stout clover action from LIME header",
+  "GPU_local_format": "six real D plus fifteen complex lower unit-L entries/chirality, A=L D L^dagger; shared odd factor for Schur multiplication and smoother solve",
+  "CPU_reference": "original FP64 physical gauge mapped; original FP64 onsite clover recomputed per site; full FP64 residual evaluated in eight-time-slice anonymous slabs; full FP64 x file-backed; residual norm before FP32 conversion",
+  "fine_aggregation": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "second_aggregation": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "vectors_per_chirality": 8,
+  "filter_sweeps": 256,
+  "filter_weight": 0.65,
+  "second_filter_FP64_sweeps": 64,
+  "fine_restart": 8,
+  "fine_pre_steps": 1,
+  "fine_post_steps": 1,
+  "fine_smoother_weight": 1,
+  "coarse_restart": 8,
+  "coarse_limit": 32,
+  "coarse_tolerance": 0.1,
+  "bottom_limit": 8,
+  "bottom_tolerance": 0.1,
+  "hierarchies_per_mg_run": 1,
+  "solver_executable_sha256": "1b446134b45f075be0b1521a3caa53e1beea168272b3776001fef64520fcc776",
+  "native_verifier_sha256": "2ff4412b3acec6d0866c9053e19db1a547e739cf4fc551784cbee340aeda49c4",
+  "bridge": "/private/tmp/mg-fit32.bridge",
+  "output_prefix": "/private/tmp/mg-fit32-test",
+  "timing_scope": "Includes GPU reduction/reconstruction, FP64 updates and synchronous slab writeback, full CPU FP64 residual evaluation and clover recomputation. Source generation, common import/operator setup, shader compilation, subsequent original native Chroma verification outside solve. MG hierarchy setup reported separately.",
+  "source_commit": "56c1bf1",
+  "planned_MG_adjustment": {
+    "fine_aggregation": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "filter_sweeps": 256,
+    "reason": "Smaller temporal aggregates and stronger filtering compensate for larger spatial aggregates and restart8, with estimated persistent GPU usage below the measured working-set recommendation. Actual allocation and runtime will be reported."
+  },
+  "MG_planned_second_filter_sweeps": 64,
+  "MG_planned_bottom_limit": 8,
+  "MG_executable_sha256": "8a192e32ac8e322f88f6ba17f506e0706f9b83342364c3f259df41164914a1c8",
+  "MG_argv": [
+    "/private/tmp/mg-lowmem-solve-v3",
+    "/private/tmp/mg-fit32",
+    "/private/tmp/mg-fit32-test",
+    "mg",
+    "2",
+    "4,4,4,4",
+    "8",
+    "256",
+    "64",
+    "8"
+  ],
+  "MG_source_commit": "9d8173d",
+  "hardware": {
+    "cpu": "Apple M1 Max",
+    "physical_memory_bytes": "34359738368",
+    "physical_cpu_cores": "10",
+    "macOS": "26.7.1"
+  }
+}

@@ -3,6 +3,9 @@
 This document preserves the initial MG comparison. Subsequent basis,
 aggregation, and smoother tuning is recorded in
 [the real-field MG tuning report](MG_TUNING_REAL.md).
+The subsequent [LDL/streaming implementation](LOW_MEMORY.md) fits and solves
+the real 32³×256 light field; the earlier resident-layout infeasibility
+calculation below is preserved as historical accounting.
 
 The completed 24³×256 comparison used the header light mass **-0.0856** on an
 **Apple M1 Max with 32 GiB unified memory**. Two deterministic dense Z4 RHS
