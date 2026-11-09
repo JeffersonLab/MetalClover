@@ -37,7 +37,7 @@ by the respective operator implementations.
 make -f Makefile.production build/low_memory_solve build/low_memory_verify \
   CHROMA_CONFIG=/path/to/chroma-config CHROMA_SOURCE=/path/to/chroma
 VECLIB_MAXIMUM_THREADS=1 /private/tmp/low_memory_solve \
-  BRIDGE_PREFIX OUTPUT_PREFIX mg 2 4,4,4,8 8 128
+  BRIDGE_PREFIX OUTPUT_PREFIX mg 2 4,4,4,4 8 256 64 8
 # Use bicg instead of mg for the separate GPU BiCGStab comparison.
 OMP_NUM_THREADS=8 /private/tmp/low_memory_verify \
   ACTION_XML BRIDGE_PREFIX OUTPUT_PREFIX metal-mg 2 CHECKS_CSV
@@ -47,11 +47,14 @@ Stage executables outside FileProvider before running. Use a local scratch
 prefix for the large mapped bridge and fields. The two solver processes
 run sequentially; one MG hierarchy is constructed and reused across its
 RHS loop. The GPU fine FGMRES restart is 8; both transfers have eight basis
-vectors per chirality, with fine aggregates 4×4×4×8 and second aggregates
-2×2×2×2. Fine filtering uses 128 Metal sweeps, second-level filtering 16
+vectors per chirality, with fine aggregates 4×4×4×4 and second aggregates
+2×2×2×2. Fine filtering uses 256 Metal sweeps, second-level filtering 64
 CPU FP64 sweeps. One pre/post block-Jacobi step, coarse FGMRES restart 8 /
-limit 32 / target 0.1, and bottom BiCGStab limit 4 / target 0.1 follow the
-24³ tuning, with a shorter fine restart to fit the larger lattice.
+limit 32 / target 0.1, and bottom BiCGStab limit 8 / target 0.1 follow the
+24³ tuning, with a shorter fine restart, smaller temporal aggregates, and
+stronger basis filtering for this larger, lighter configuration. The optional
+last two CLI arguments set second-level filter sweeps and the bottom limit;
+omitting them preserves the original 16/4 defaults.
 
 The real header action is mass -0.0860, xi0 4.3, nu 1.265, clover R
 1.58932722549812 / T 0.902783591772098, two spatial stout steps at rho 0.14,

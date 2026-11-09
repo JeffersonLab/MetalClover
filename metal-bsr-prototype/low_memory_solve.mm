@@ -29,9 +29,9 @@ template<class Correction>void solve(LowMemoryClover& c,Correction& correction,C
 }
 }
 int main(int argc,char**argv){@autoreleasepool{try{
-    if(argc!=8)throw std::runtime_error("Usage: low_memory_solve BRIDGE_PREFIX OUTPUT_PREFIX mg|bicg RHS BLOCKS RESTART FILTER_SWEEPS");
-    std::string prefix=argv[1],output=argv[2],method=argv[3];int rhs=std::stoi(argv[4]),restart=std::stoi(argv[6]),sweeps=std::stoi(argv[7]);auto blocks=shape_arg(argv[5]);
-    if((method!="mg"&&method!="bicg")||rhs<1||rhs>192||restart<2||restart>12||sweeps<1)throw std::runtime_error("option range");
+    if(argc!=8&&argc!=10)throw std::runtime_error("Usage: low_memory_solve BRIDGE_PREFIX OUTPUT_PREFIX mg|bicg RHS BLOCKS RESTART FILTER_SWEEPS [SECOND_FILTER_SWEEPS BOTTOM_LIMIT]");
+    std::string prefix=argv[1],output=argv[2],method=argv[3];int rhs=std::stoi(argv[4]),restart=std::stoi(argv[6]),sweeps=std::stoi(argv[7]);auto blocks=shape_arg(argv[5]);int second_sweeps=argc==10?std::stoi(argv[8]):16,bottom_limit=argc==10?std::stoi(argv[9]):4;
+    if((method!="mg"&&method!="bicg")||rhs<1||rhs>192||restart<2||restart>12||sweeps<1||second_sweeps<1||bottom_limit<1)throw std::runtime_error("option range");
     if(std::filesystem::exists(output+"."+method+".csv"))throw std::runtime_error("output exists");
     if(!std::getenv("VECLIB_MAXIMUM_THREADS")||std::string(std::getenv("VECLIB_MAXIMUM_THREADS"))!="1")throw std::runtime_error("set VECLIB_MAXIMUM_THREADS=1");
     std::ifstream input(prefix+".bridge",std::ios::binary);auto h=production::read_header(input);size_t offset=size_t(input.tellg());input.close();
@@ -54,15 +54,16 @@ int main(int argc,char**argv){@autoreleasepool{try{
         std::cout<<"BASIS seconds="<<seconds(start)<<" fine_S="<<op.applications-before<<std::endl;
         BlockMatrix a1(16,first.aggregates,workers);assemble_schur(a1,c,first);c.drop_coefficients();
         std::cout<<"COARSE1 seconds="<<seconds(start)<<" dofs="<<a1.n<<std::endl;
-        Transfer second(a1.rows,a1.bs,8,coarse_shape,hypercube(2),false,workers);second.build([&](const D*x,D*y){a1.apply(x,y,8);},[&](const D*x,D*y){a1.apply(x,y,8,true);},16);BlockMatrix a2(16,second.aggregates,workers);project_matrix(a2,a1,second);
+        Transfer second(a1.rows,a1.bs,8,coarse_shape,hypercube(2),false,workers);second.build([&](const D*x,D*y){a1.apply(x,y,8);},[&](const D*x,D*y){a1.apply(x,y,8,true);},second_sweeps);BlockMatrix a2(16,second.aggregates,workers);project_matrix(a2,a1,second);
         first.release64();second.release64();a1.release64();a2.release64();
         std::vector<Cx<float>> empty;TunedGPUCycle pre(first,metal,1,empty,2);pre.inv=op.Aodd;release(first.basis32);pre.product=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer>x,id<MTLBuffer>y){op.encode(e,x,y);};
-        GPUBlockCoarseSolve<BlockMatrix> matrix1(a1,metal,1,1,.1),bottom(a2,metal,1,4,.1);GPUBlockOperator op1(matrix1);TunedGPUCycle pre1(second,metal,1,a1.di32);release(second.basis32);pre1.product=[&](id<MTLComputeCommandEncoder>e,id<MTLBuffer>x,id<MTLBuffer>y){op1.encode(e,x,y);};pre1.coarse=[&](id<MTLComputeCommandEncoder>e,id<MTLBuffer>x,id<MTLBuffer>y){bottom.encode(e,x,y);};pre1.check=[&](){bottom.check();};
-        GPUGenericFGMRES<GPUBlockOperator,TunedGPUCycle> coarse(a1.n,1,op1,pre1,8);coarse.allow_inexact=true;pre.blocking_coarse=[&](id<MTLBuffer>x,id<MTLBuffer>y){coarse.run_device(x,.1,32);pre.copy(coarse.delta,y,a1.n);};
+        GPUBlockCoarseSolve<BlockMatrix> matrix1(a1,metal,1,1,.1),bottom(a2,metal,1,bottom_limit,.1);GPUBlockOperator op1(matrix1);TunedGPUCycle pre1(second,metal,1,a1.di32);release(second.basis32);pre1.product=[&](id<MTLComputeCommandEncoder>e,id<MTLBuffer>x,id<MTLBuffer>y){op1.encode(e,x,y);};pre1.coarse=[&](id<MTLComputeCommandEncoder>e,id<MTLBuffer>x,id<MTLBuffer>y){bottom.encode(e,x,y);};pre1.check=[&](){bottom.check();};
+        GPUGenericFGMRES<GPUBlockOperator,TunedGPUCycle> coarse(a1.n,1,op1,pre1,8);coarse.allow_inexact=true;uint64_t coarse_calls=0,coarse_iterations=0,coarse_at_limit=0;pre.blocking_coarse=[&](id<MTLBuffer>x,id<MTLBuffer>y){auto info=coarse.run_device(x,.1,32);++coarse_calls;coarse_iterations+=info.max_iterations;coarse_at_limit+=info.max_iterations==32;pre.copy(coarse.delta,y,a1.n);};
         release(a1.a32);release(a1.di32);release(a2.a32);release(a2.di32);
         GPUGenericFGMRES<CountedSchur,TunedGPUCycle> mg(first.rows*12,1,op,pre,restart);mg.blocking_pre=[&](id<MTLBuffer>x,id<MTLBuffer>y){pre.apply_device(x,y);};mg.progress=[](int k,double r){std::cout<<"INNER MG K="<<k<<" relative="<<r<<std::endl;};CompactDeviceCorrection<decltype(mg)> correction(c,op,mg,workers);
         std::cout<<"MG_READY hierarchy_seconds="<<seconds(start)<<" hierarchy_fine_S="<<op.applications-before<<" GPU_GiB="<<double(metal.device.currentAllocatedSize)/(1ull<<30)<<" recommended_GiB="<<double(metal.device.recommendedMaxWorkingSetSize)/(1ull<<30)<<std::endl;
         for(int i=0;i<rhs;++i)solve(c,correction,op,residual,output,"metal-mg",i,trace,csv);
+        std::cout<<"COARSE_STATS calls="<<coarse_calls<<" iterations="<<coarse_iterations<<" at_limit="<<coarse_at_limit<<" bottom_iterations="<<bottom.iterations<<" bottom_padded="<<bottom.padded_iterations<<" bottom_worst_true="<<bottom.worst_true<<std::endl;
     }
     rusage u{};getrusage(RUSAGE_SELF,&u);std::cout<<"PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB="<<double(u.ru_maxrss)/(1ull<<30)<<std::endl;
 }catch(const std::exception&e){std::cerr<<"ERROR "<<e.what()<<std::endl;return 1;}return 0;}}
