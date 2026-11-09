@@ -1,0 +1,28 @@
+{
+  "bridge": "build/correctness12",
+  "argv": [
+    "/private/tmp/mg-real-tune-v4",
+    "build/correctness12",
+    "results/mg-tune-default-smoke/test",
+    "--rhs",
+    "1"
+  ],
+  "purpose": "Final selected defaults, screen-outers0 and finish1; actual real-field solve with exported original Chroma operator probe and full CPU FP64 residual checks. Separate original-native checks of this small smoke solution were not repeated; the final 24^3x256 fields all passed independent native verification.",
+  "executable_sha256": "e5531b053bbd52c0984eaeda60c45f80ada6e548260c9b4e4ee43dfc01eddd09",
+  "selected_defaults": {
+    "blocks": [
+      3,
+      3,
+      3,
+      8
+    ],
+    "vectors_per_chirality": 8,
+    "filter_sweeps": 128,
+    "fine_restart": 12,
+    "pre_steps": 1,
+    "post_steps": 1,
+    "weight": 1,
+    "bottom_limit": 4,
+    "full_tolerance": 1e-12
+  }
+}

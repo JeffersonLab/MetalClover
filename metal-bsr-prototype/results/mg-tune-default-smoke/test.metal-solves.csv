@@ -1,0 +1,2 @@
+method,rhs,outer,krylov,seconds,residual_seconds,full_relative,save_seconds,fine_schur_applications
+metal-mg,0,5,107,3.5956280829999998,0.077632831999999999,1.4705367158454302e-14,0.074141708000000001,331

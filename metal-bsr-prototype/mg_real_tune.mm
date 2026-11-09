@@ -55,9 +55,9 @@ void check_schur(CompactClover& c,GPUCompactSchur& op){
 }
 
 struct Options {
-    std::string bridge,output,cycles="1:1:1:4,1:1:1:8,0:1:1:4,1:0:1:4,1:1:1.2:4";
+    std::string bridge,output,cycles="1:1:1";
     LatticeShape blocks{3,3,3,8};
-    int vectors=8,second_vectors=8,sweeps=64,restart=12,coarse_limit=32,bottom_limit=32,rhs=2,screen_outers=2,screen_limit=2048,finish=0,bicg=0;
+    int vectors=8,second_vectors=8,sweeps=128,restart=12,coarse_limit=32,bottom_limit=4,rhs=2,screen_outers=0,screen_limit=2048,finish=1,bicg=0;
     double filter_omega=.65,coarse_tol=.1,bottom_tol=.1;
 };
 LatticeShape shape_arg(const std::string& text){LatticeShape a{};std::stringstream s(text);for(int i=0;i<4;++i){char c;if(i&&(!(s>>c)||c!=','))throw std::runtime_error("four comma-separated extents required");if(!(s>>a[i])||!a[i])throw std::runtime_error("invalid extent");}char c;if(s>>c)throw std::runtime_error("extent suffix");return a;}
@@ -75,7 +75,7 @@ Options options(int argc,char** argv){
         else if(k=="--finish")o.finish=std::stoi(v);else if(k=="--bicg")o.bicg=std::stoi(v);
         else throw std::runtime_error("unknown option "+k);
     }
-    if(o.vectors<1||o.vectors>32||o.second_vectors<1||o.second_vectors>32||o.sweeps<0||o.sweeps>2048||o.restart<2||o.restart>24||o.rhs<1||o.rhs>192||o.screen_outers<1||o.screen_outers>3||o.screen_limit<1||o.coarse_limit<1||o.bottom_limit<1||!(o.filter_omega>0&&o.filter_omega<=2)||!(o.coarse_tol>0&&o.coarse_tol<1)||!(o.bottom_tol>0&&o.bottom_tol<1))throw std::runtime_error("option out of range");
+    if(o.vectors<1||o.vectors>32||o.second_vectors<1||o.second_vectors>32||o.sweeps<0||o.sweeps>2048||o.restart<2||o.restart>24||o.rhs<1||o.rhs>192||o.screen_outers<0||o.screen_outers>3||o.screen_limit<1||o.coarse_limit<1||o.bottom_limit<1||!(o.filter_omega>0&&o.filter_omega<=2)||!(o.coarse_tol>0&&o.coarse_tol<1)||!(o.bottom_tol>0&&o.bottom_tol<1))throw std::runtime_error("option out of range");
     return o;
 }
 struct Result {double elapsed=0,rho=1,previous=1,last_seconds=0,residual_s=0;uint64_t applications=0;int krylov=0,outers=0;};
@@ -155,8 +155,8 @@ int main(int argc,char** argv){@autoreleasepool{try{
     mg.progress=[](int k,double r){if(k%96==0)std::cout<<"INNER metal-mg K="<<k<<" relative_FP32="<<r<<std::endl;};
     CompactDeviceCorrection<decltype(mg)> correction(c,op,mg,workers);
     std::cout<<"MG_READY setup_seconds="<<seconds(start)<<" allocated_GiB="<<double(metal.device.currentAllocatedSize)/(1ull<<30)<<std::endl;
-    auto variants=cycles_arg(o.cycles,o.bottom_limit);size_t best=0;double best_score=1e100;
-    for(size_t i=0;i<variants.size();++i){auto v=variants[i];pre.pre_steps=v.pre;pre.post_steps=v.post;pre.omega=v.omega;bottom.limit=v.bottom;bottom.bp.limit=v.bottom;bottom.reset();bottom_at_limit=0;bottom_max=0;
+    auto variants=cycles_arg(o.cycles,o.bottom_limit);size_t best=0;double best_score=o.screen_outers?1e100:0;
+    for(size_t i=0;o.screen_outers&&i<variants.size();++i){auto v=variants[i];pre.pre_steps=v.pre;pre.post_steps=v.post;pre.omega=v.omega;bottom.limit=v.bottom;bottom.bp.limit=v.bottom;bottom.reset();bottom_at_limit=0;bottom_max=0;
         std::cout<<"CYCLE method="<<v.name<<" pre="<<v.pre<<" post="<<v.post<<" omega="<<v.omega<<" bottom_cap="<<v.bottom<<std::endl;
         source(c,outer,0);uint64_t calls=coarse_calls,it=coarse_iterations,cap=coarse_at_limit,bottom_it=bottom.iterations;
         auto r=refine(c,outer,correction,v.name,o.output,trace,summary,0,op,o.screen_outers,o.screen_limit,false);

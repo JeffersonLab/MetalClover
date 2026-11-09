@@ -1,0 +1,24 @@
+STANDALONE original FP64 operator_match=1.6828153126362093e-16
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.53639000554903e-08
+BASIS filtered 1/8
+BASIS filtered 2/8
+BASIS filtered 3/8
+BASIS filtered 4/8
+BASIS filtered 5/8
+BASIS filtered 6/8
+BASIS filtered 7/8
+BASIS filtered 8/8
+BASIS seconds=1.706920875 filter_fine_S=1024
+COARSE1 seconds=2.3727074589999999 entries=25344 dofs=12288
+HIERARCHY seconds=2.6606012090000002 coarse1=12288 coarse2=768
+MG_READY setup_seconds=2.679621917 allocated_GiB=0.649658203125
+SELECTED method=screen-0 pre=1 post=1 weight=1 bottom_cap=4 projected_seconds=0
+OUTER method=metal-mg rhs=0 step=1 K=14 fine_S=44 seconds=0.40964754199999998 full_relative=0.0015946302641474878
+OUTER method=metal-mg rhs=0 step=2 K=23 fine_S=71 seconds=0.75630733299999997 full_relative=2.9182005204009507e-06
+OUTER method=metal-mg rhs=0 step=3 K=23 fine_S=71 seconds=0.65371662500000005 full_relative=5.1617360676620932e-09
+OUTER method=metal-mg rhs=0 step=4 K=23 fine_S=71 seconds=0.78954966599999998 full_relative=9.2807848922787245e-12
+OUTER method=metal-mg rhs=0 step=5 K=24 fine_S=74 seconds=0.98592016599999999 full_relative=1.4705367158454302e-14
+SOLVED method=metal-mg rhs=0 outer=5 K=107 fine_S=331 seconds=3.5956280829999998 full_relative=1.4705367158454302e-14
+PEAK_RSS_GiB=1.4753570556640625
+PASS tuning complete; only SOLVED rows certify full FP64 tolerance; native Chroma verification required

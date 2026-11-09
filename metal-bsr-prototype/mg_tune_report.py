@@ -7,7 +7,6 @@ import json
 import math
 from pathlib import Path
 import re
-import statistics
 
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('directory', type=Path)

@@ -1,0 +1,69 @@
+{
+  "staging_outside_solver_timings": true,
+  "original_fields_modified": false,
+  "files": [
+    {
+      "source": "build/performance_chroma",
+      "bytes": 1135648,
+      "sha256": "1f04c66027cd6a15938c76ec607c83d54f0ce94bc8668e855b6ede90a76153b5",
+      "hydrated_placeholder": true
+    },
+    {
+      "source": "results/mg-tune24-final/action.xml",
+      "bytes": 930,
+      "sha256": "319e2f03feb9b63c1f251307a551348d6146ea838101ab0b7083e4b5c82ae3e5",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "build/performance24.bridge",
+      "bytes": 2717909068,
+      "sha256": "724ff06c776cd977d44be704e3b5bfbedaf3ddc245e8ebeb6e1149022b15b241",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "results/performance24/test.chroma-bicgstab.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "671469dd361222c32159658b9678e46ed5e7b095f7bb710356f94d9c6543d48b",
+      "hydrated_placeholder": true
+    },
+    {
+      "source": "results/mg-tune24-final/test.metal-bicgstab.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "989119c93bc289c2bf6d580a6731e6c033b2fa8e8cc2b666a4c734d8db0ff8dd",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "results/mg-tune24-final/test.metal-mg.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "caabe49ccdd1bf09f750d286a99fea3a887fd9e4ea2e363a9b34fbbde61364f1",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "results/performance24/test.chroma-bicgstab.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "a1a32fc3f7272834342a73a00d59c9f1df81cb57e472cee27dd03368c56ba994",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "results/mg-tune24-final/test.metal-bicgstab.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "1ce47cec36ef5051a2af6d83b703c47f9e815913b7eaa88e1998914ea8fccd30",
+      "hydrated_placeholder": false
+    },
+    {
+      "source": "results/mg-tune24-final/test.metal-mg.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "a6fe9ba1189d3f0b26e1b899c873e619229e804ee1644a75a6526094c64771c5",
+      "hydrated_placeholder": false
+    }
+  ],
+  "native_argv": [
+    "/private/tmp/mg-chroma-verify-mfcqhx5u/chroma-native",
+    "/private/tmp/mg-chroma-verify-mfcqhx5u/action.xml",
+    "/private/tmp/mg-chroma-verify-mfcqhx5u/bridge",
+    "/private/tmp/mg-chroma-verify-mfcqhx5u/test",
+    "verify",
+    "2"
+  ],
+  "native_returncode": 0
+}

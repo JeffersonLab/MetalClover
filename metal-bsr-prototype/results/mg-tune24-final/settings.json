@@ -1,0 +1,66 @@
+{
+  "bridge": "build/performance24",
+  "aggregation": [
+    3,
+    3,
+    3,
+    8
+  ],
+  "basis_vectors_per_chirality": 8,
+  "second_vectors_per_chirality": 8,
+  "GPU_FP32_filter_sweeps": 128,
+  "filter_omega": 0.65,
+  "second_filter_FP64_sweeps": 16,
+  "restart": 12,
+  "coarse_restart": 8,
+  "coarse_limit": 32,
+  "bottom_limit": 32,
+  "coarse_tolerance": 0.1,
+  "bottom_tolerance": 0.1,
+  "cycles": [
+    [
+      1,
+      1,
+      1.2,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      4
+    ]
+  ],
+  "screen_outers": 2,
+  "screen_source": 20261107,
+  "holdout_source": 20261108,
+  "full_tolerance": 1e-12,
+  "inner_tolerance": 0.002,
+  "rhs": 2,
+  "one_hierarchy_per_run": true,
+  "executable_sha256": "729440c0f597f37048689a4c3cc580d90e5d7632647229b190cbf4b1a4df6aa1",
+  "finish": true,
+  "fresh_bicg": true,
+  "source_commit": "e54ead3",
+  "argv": [
+    "/private/tmp/mg-real-tune-v3",
+    "build/performance24",
+    "results/mg-tune24-final/test",
+    "--filter-sweeps",
+    "128",
+    "--cycles",
+    "1:1:1.2:4,1:1:1:4",
+    "--rhs",
+    "2",
+    "--finish",
+    "1",
+    "--bicg",
+    "1"
+  ],
+  "hardware": {
+    "physical_memory_bytes": "34359738368",
+    "physical_cpu_cores": "10",
+    "cpu": "Apple M1 Max",
+    "macOS": "26.7.1"
+  }
+}
