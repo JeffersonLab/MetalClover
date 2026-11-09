@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><ildgFormat xmlns="http://www.lqcd.org/ildg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.lqcd.org/ildg/filefmt.xsd"><version>1.0</version><field>su3gauge</field><precision>32</precision><lx>24</lx><ly>24</ly><lz>24</lz><lt>256</lt></ildgFormat>

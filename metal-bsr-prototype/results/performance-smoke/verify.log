@@ -1,0 +1,22 @@
+QDP use OpenMP threading. We have 8 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+u0 is 1
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+NATIVE full_operator_match=0 setup_seconds=0.54507799999999995
+CHECK rhs=0 method=chroma-bicgstab full_relative=3.624429272073358e-14 solution_difference=0
+CHECK rhs=0 method=metal-bicgstab full_relative=8.446424440370149e-15 solution_difference=1.1503166751638227e-12
+CHECK rhs=0 method=metal-mg full_relative=1.727365136901651e-14 solution_difference=8.5011074204158751e-13
+PASS mode=verify peak_rss_GiB=0.9860382080078125
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.023281

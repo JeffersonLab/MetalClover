@@ -39,6 +39,21 @@ build/correctness_compare: correctness_compare.mm $(wildcard *.hpp) $(wildcard *
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) correctness_compare.mm -o $@ $(FRAMEWORKS)
 
+build/performance_compare: performance_compare.mm $(wildcard *.hpp) $(wildcard *.metal)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) performance_compare.mm -o $@ $(FRAMEWORKS)
+
+build/performance_chroma: performance_chroma.cc production_bridge.hpp chroma_bridge.hpp
+	test -n "$(CHROMA_SOURCE)"
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) -DBASE_PRECISION=64 \
+	  -I"$(CHROMA_SOURCE)/lib" performance_chroma.cc \
+	  "$(CHROMA_SOURCE)/lib/io/aniso_io.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/linop/eoprec_clover_linop_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/invert/reliable_bicgstab.cc" \
+	  -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
 build/correctness_chroma: correctness_chroma.cc production_bridge.hpp chroma_bridge.hpp
 	test -n "$(CHROMA_SOURCE)"
 	mkdir -p build
