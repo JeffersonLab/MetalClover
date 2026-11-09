@@ -43,6 +43,10 @@ build/performance_compare: performance_compare.mm $(wildcard *.hpp) $(wildcard *
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) performance_compare.mm -o $@ $(FRAMEWORKS)
 
+build/metal_memory_limits: metal_memory_limits.mm
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) metal_memory_limits.mm -o $@ -framework Metal -framework Foundation
+
 build/performance_chroma: performance_chroma.cc production_bridge.hpp chroma_bridge.hpp
 	test -n "$(CHROMA_SOURCE)"
 	mkdir -p build
