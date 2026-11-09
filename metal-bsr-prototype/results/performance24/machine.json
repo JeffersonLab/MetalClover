@@ -1,0 +1,8 @@
+{
+  "hardware": "hw.model: MacBookPro18,2\nhw.memsize: 34359738368\nhw.physicalcpu: 10\nhw.logicalcpu: 10\nmachdep.cpu.brand_string: Apple M1 Max",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "chroma_version": "3.44.0",
+  "chroma_cxxflags": "-O1 -std=c++17 -fopenmp -DCHROMA_SB_SINGLE -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk -mmacosx-version-min=15.0 -I/Users/admin/Downloads/macos-chroma/install/chroma/include -O2 -I/Users/admin/Downloads/macos-chroma/install/qdpxx/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-chroma/install/qmp/include -I/opt/homebrew/opt/gmp/include",
+  "swap_during_cpu": "vm.swapusage: total = 9216.00M  used = 8715.81M  free = 500.19M  (encrypted)"
+}

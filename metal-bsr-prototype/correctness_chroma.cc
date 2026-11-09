@@ -24,7 +24,7 @@ void load(const std::string& path,LatticeFermion& x,const std::vector<int>& loca
 }
 }
 int main(int argc,char** argv){
-    if(argc!=6){std::cerr<<"Usage: correctness_chroma GAUGE ACTION_XML BRIDGE_PREFIX OUTPUT_PREFIX reference|verify\n";return 2;}
+    if(argc!=6){std::cerr<<"Usage: correctness_chroma GAUGE ACTION_XML BRIDGE_PREFIX OUTPUT_PREFIX reference|verify|state-only\n";return 2;}
     std::string gauge=argv[1],xml=argv[2],bridge=argv[3],output=argv[4],mode=argv[5];
     int qargc=1;QDP_initialize(&qargc,&argv);int status=0;
     try{
@@ -56,6 +56,9 @@ int main(int argc,char** argv){
         }
         double link_error=std::sqrt(difference/norm);std::cout<<std::setprecision(17)<<"NATIVE StoutFermState link_match="<<link_error<<std::endl;
         if(!std::isfinite(link_error)||link_error>1e-14)throw std::runtime_error("independent stout/BC pipeline differs");
+        if(mode=="state-only"){
+            std::cout<<"STATE PASS independent LIME/QIO, reunitarization, native StoutFermState and boundary conditions"<<std::endl;
+        }else{
         UnprecCloverLinOp op(state,params);
         LatticeFermion b,x,ax,r,reference;
         double scale=1/std::sqrt(double(h.volume())*12);
@@ -93,6 +96,7 @@ int main(int argc,char** argv){
             }
             std::cout<<"VERIFY PASS all three full native FP64 residuals <= 1e-12"<<std::endl;
         }else throw std::runtime_error("unknown mode");
+        }
     }catch(const std::exception& e){std::cerr<<"ERROR: "<<e.what()<<std::endl;status=1;}
     QDP_finalize();return status;
 }

@@ -1,0 +1,36 @@
+{
+  "chroma-bicgstab": {
+    "rhs_count": 1,
+    "solve_seconds": 18.142269,
+    "mean_seconds_per_rhs": 18.142269,
+    "hierarchy_setup_seconds": 0,
+    "solve_plus_hierarchy_seconds": 18.142269,
+    "mean_seconds_per_rhs_with_hierarchy": 18.142269,
+    "max_native_full_relative": 3.624429272073358e-14,
+    "max_relative_solution_difference_from_chroma": 0.0
+  },
+  "metal-bicgstab": {
+    "rhs_count": 1,
+    "solve_seconds": 2.38612475,
+    "mean_seconds_per_rhs": 2.38612475,
+    "hierarchy_setup_seconds": 0,
+    "solve_plus_hierarchy_seconds": 2.38612475,
+    "mean_seconds_per_rhs_with_hierarchy": 2.38612475,
+    "max_native_full_relative": 8.446424440370149e-15,
+    "max_relative_solution_difference_from_chroma": 1.1503166751638227e-12,
+    "cpu_over_metal_solve_time": 7.603235748675755,
+    "cpu_over_metal_solve_plus_hierarchy_time": 7.603235748675755
+  },
+  "metal-mg": {
+    "rhs_count": 1,
+    "solve_seconds": 7.013665208,
+    "mean_seconds_per_rhs": 7.013665208,
+    "hierarchy_setup_seconds": 6.906977875,
+    "solve_plus_hierarchy_seconds": 13.920643083,
+    "mean_seconds_per_rhs_with_hierarchy": 13.920643083,
+    "max_native_full_relative": 1.727365136901651e-14,
+    "max_relative_solution_difference_from_chroma": 8.501107420415875e-13,
+    "cpu_over_metal_solve_time": 2.586703023592625,
+    "cpu_over_metal_solve_plus_hierarchy_time": 1.3032637135963554
+  }
+}

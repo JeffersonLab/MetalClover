@@ -6,6 +6,10 @@ precision complex** `y = A x` on synthetic periodic four-dimensional lattices.
 
 The measured results and interpretation are in [RESULTS.md](RESULTS.md).
 
+The real-field performance comparison with **Chroma's original reliable
+mixed-precision clover BiCGStab inverter**, GPU BiCGStab, and reused GPU
+multigrid is documented in [PERFORMANCE_REAL_FIELDS.md](PERFORMANCE_REAL_FIELDS.md).
+
 The **mixed-precision solve extension**, CPU comparisons, and large-RHS batching
 study are described in [SOLVE.md](SOLVE.md), with measured results in
 [SOLVE_RESULTS.md](SOLVE_RESULTS.md).

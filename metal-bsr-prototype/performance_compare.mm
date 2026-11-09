@@ -129,6 +129,8 @@ int main(int argc,char** argv){@autoreleasepool{
         mg.progress=[](int k,double r){std::cout<<"INNER metal-mg K="<<k<<" relative_FP32="<<r<<std::endl;};
         CompactDeviceCorrection<decltype(mg)> correction(c,op,mg,workers);
         std::cout<<"MG_READY setup_seconds="<<seconds(start)<<" allocated_GiB="<<double(metal.device.currentAllocatedSize)/(1ull<<30)<<std::endl;
+        const size_t primary_host_bytes=c.w.links.size()*sizeof(M3)+(c.evenA.size()+c.oddA.size()+c.inverseEven.size()+c.w.a.b.size()+outer.x.size()+outer.residual.size())*sizeof(D);
+        std::cout<<"MEMORY primary_host_bytes="<<primary_host_bytes<<" metal_allocated_bytes="<<metal.device.currentAllocatedSize<<" primary_combined_GiB="<<double(primary_host_bytes+metal.device.currentAllocatedSize)/(1ull<<30)<<std::endl;
         for(int rhs=0;rhs<count;++rhs){source(c,outer,rhs);solve(c,outer,correction,"metal-mg",output,trace,summary,rhs);}
         rusage usage{};getrusage(RUSAGE_SELF,&usage);std::cout<<"PEAK_RSS_GiB="<<double(usage.ru_maxrss)/(1ull<<30)<<std::endl;
         std::cout<<"METAL PASS all full FP64 residuals <= 1e-12; native Chroma verification still required"<<std::endl;

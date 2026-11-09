@@ -1,0 +1,47 @@
+{
+  "shape": [
+    24,
+    24,
+    24,
+    256
+  ],
+  "volume": 3538944,
+  "resident_rhs": 1,
+  "fine_restart": 8,
+  "vectors_per_chirality": 12,
+  "bytes_by_live_array_group": {
+    "host_fp64_physical_gauge": 2038431744,
+    "host_fp64_even_and_odd_clover": 4076863488,
+    "host_fp64_b_x_residual": 2038431744,
+    "metal_fp32_weighted_gauge": 1019215872,
+    "metal_fp32_even_clover_inverse": 1019215872,
+    "metal_fp32_odd_clover": 1019215872,
+    "metal_neighbors_and_parity_maps": 127401984,
+    "metal_schur_two_half_fields": 339738624,
+    "metal_fine_smoother_inverse": 1019215872,
+    "metal_fine_transfer_basis": 2038431744,
+    "metal_fine_cycle_three_half_fields": 509607936,
+    "metal_fine_fgmres_fields": 3906994176,
+    "metal_correction_full_and_two_half_fields": 679477248
+  },
+  "gib_by_live_array_group": {
+    "host_fp64_physical_gauge": 1.8984375,
+    "host_fp64_even_and_odd_clover": 3.796875,
+    "host_fp64_b_x_residual": 1.8984375,
+    "metal_fp32_weighted_gauge": 0.94921875,
+    "metal_fp32_even_clover_inverse": 0.94921875,
+    "metal_fp32_odd_clover": 0.94921875,
+    "metal_neighbors_and_parity_maps": 0.11865234375,
+    "metal_schur_two_half_fields": 0.31640625,
+    "metal_fine_smoother_inverse": 0.94921875,
+    "metal_fine_transfer_basis": 1.8984375,
+    "metal_fine_cycle_three_half_fields": 0.474609375,
+    "metal_fine_fgmres_fields": 3.638671875,
+    "metal_correction_full_and_two_half_fields": 0.6328125
+  },
+  "lower_bound_bytes": 19832242176,
+  "lower_bound_gib": 18.47021484375,
+  "excludes": "excludes sparse coarse matrices,\ncoarse solver workspaces, host geometry maps, Metal heaps/driver overhead,\nallocator padding, transient hierarchy construction, and the OS/apps.",
+  "fits_32_gib_even_before_excluded_costs": true,
+  "source": "compact_clover.hpp, compact_solve.hpp, fgmres.hpp, three_level.hpp"
+}
