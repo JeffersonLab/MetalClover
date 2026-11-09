@@ -33,6 +33,10 @@ generation, import, operator setup, shader compilation, saved-field I/O, and
 subsequent independent Chroma verification are outside solve times. Solve
 times include reduction, reconstruction, FP64 updates, and every full FP64
 residual check. Hierarchy setup and its amortization are reported separately.
+The large Metal run counts actual fine Schur applications, including fine
+smoother and FGMRES residual work, separately from Krylov iterations. Coarse
+operators and the individual hopping operations in RHS reduction and
+reconstruction are outside this count.
 
 The hierarchy uses fine aggregates 4×4×4×8, second aggregates 2×2×2×2,
 12 vectors per chirality on each transfer, eight filtering sweeps with a

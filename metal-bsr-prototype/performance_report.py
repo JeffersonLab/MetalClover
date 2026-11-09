@@ -54,6 +54,8 @@ for method in methods:
         'max_native_full_relative': max(float(x['full_relative']) for x in checks if x['method']==method),
         'max_relative_solution_difference_from_chroma': max(float(x['relative_solution_difference']) for x in checks if x['method']==method),
     }
+    if method!='chroma-bicgstab' and all('fine_schur_applications' in x for x in r):
+        summary[method]['fine_schur_applications'] = sum(int(x['fine_schur_applications']) for x in r)
 cpu_time = summary['chroma-bicgstab']['solve_seconds']
 for method in methods[1:]:
     summary[method]['cpu_over_metal_solve_time'] = cpu_time/summary[method]['solve_seconds']

@@ -9,6 +9,13 @@
 namespace {
 constexpr double target=1e-12;
 constexpr int workers=8;
+struct CountedSchur:GPUCompactSchur {
+    using GPUCompactSchur::GPUCompactSchur;
+    uint64_t applications=0;
+    void encode(id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){
+        ++applications;GPUCompactSchur::encode(e,x,y);
+    }
+};
 template<class T> void release(std::vector<T>& v){std::vector<T>().swap(v);}
 void source(CompactClover& c,CompactOuter& w,int rhs){
     double scale=1/std::sqrt(double(c.w.a.p.outputs()));
@@ -48,15 +55,17 @@ void check_schur(CompactClover& c,GPUCompactSchur& op){
 }
 template<class Correction> void solve(const CompactClover& c,CompactOuter& w,Correction& correction,
                                       const std::string& method,const std::string& output,
-                                      std::ostream& trace,std::ostream& summary,int rhs){
+                                      std::ostream& trace,std::ostream& summary,int rhs,CountedSchur& op){
     std::fill(w.x.begin(),w.x.end(),D{});w.residual=c.w.a.b;
+    const uint64_t before=op.applications;
     auto start=Clock::now();int total=0,outers=0;double rho=1,residual_s=0;
     for(int outer=1;outer<=12;++outer){
+        const uint64_t outer_before=op.applications;
         auto info=correction.run(w.residual,.002,8192);total+=info.max_iterations;auto* dx=correction.correction();
         chunks(c.w.a.p.rows*12,workers,[&](int,uint32_t first,uint32_t last){for(size_t j=first;j<last;++j){w.x[j].re+=double(dx[j].re);w.x[j].im+=double(dx[j].im);}});
         auto check=Clock::now();rho=full_residual(c,w);residual_s+=seconds(check);outers=outer;
         if(!std::isfinite(rho))throw std::runtime_error("nonfinite full FP64 residual");
-        trace<<method<<','<<rhs<<','<<outer<<','<<info.max_iterations<<','<<rho<<'\n';trace.flush();
+        trace<<method<<','<<rhs<<','<<outer<<','<<info.max_iterations<<','<<rho<<','<<op.applications-outer_before<<'\n';trace.flush();
         std::cout<<"OUTER method="<<method<<" rhs="<<rhs<<" step="<<outer<<" K="<<info.max_iterations<<" full_relative="<<rho<<std::endl;
         if(rho<=target)break;
     }
@@ -64,7 +73,7 @@ template<class Correction> void solve(const CompactClover& c,CompactOuter& w,Cor
     double elapsed=seconds(start);std::string path=output+"."+method+".rhs"+std::to_string(rhs)+".bin";
     if(std::filesystem::exists(path))throw std::runtime_error("solution output already exists");
     auto io=Clock::now();std::ofstream saved(path,std::ios::binary);chroma_bridge::write(saved,w.x.data(),w.x.size());saved.close();if(!saved)throw std::runtime_error("solution write failed");
-    summary<<method<<','<<rhs<<','<<outers<<','<<total<<','<<elapsed<<','<<residual_s<<','<<rho<<','<<seconds(io)<<'\n';summary.flush();
+    summary<<method<<','<<rhs<<','<<outers<<','<<total<<','<<elapsed<<','<<residual_s<<','<<rho<<','<<seconds(io)<<','<<op.applications-before<<'\n';summary.flush();
     std::cout<<"SOLVED method="<<method<<" rhs="<<rhs<<" outer="<<outers<<" K="<<total<<" seconds="<<elapsed<<" full_relative="<<rho<<std::endl;
 }
 }
@@ -90,9 +99,9 @@ int main(int argc,char** argv){@autoreleasepool{
         std::string shader;for(auto name:{"kernels.metal","bicgstab.metal","clover.metal","multigrid.metal","sparse_coarse.metal","compact_clover.metal"}){std::ifstream f(name);if(!f)throw std::runtime_error("missing shader");shader.append((std::istreambuf_iterator<char>(f)),{});shader+='\n';}
         MetalRun metal(shader);std::cout<<"DEVICE "<<[[metal.device name] UTF8String]<<std::endl;
         std::ofstream trace(output+".trace.csv"),summary(output+".metal-solves.csv");
-        trace<<std::setprecision(17)<<"method,rhs,outer,krylov,full_relative\n";
-        summary<<std::setprecision(17)<<"method,rhs,outer,krylov,seconds,residual_seconds,full_relative,save_seconds\n";
-        GPUCompactSchur op(metal,c);
+        trace<<std::setprecision(17)<<"method,rhs,outer,krylov,full_relative,fine_schur_applications\n";
+        summary<<std::setprecision(17)<<"method,rhs,outer,krylov,seconds,residual_seconds,full_relative,save_seconds,fine_schur_applications\n";
+        CountedSchur op(metal,c);
         @autoreleasepool{check_schur(c,op);}
         // Subsequent solves/checks use the GPU copies or the FP64 operator.
         // The FP64 basis construction retains its separate even inverse.
@@ -102,7 +111,7 @@ int main(int argc,char** argv){@autoreleasepool{
             bi.encode_override=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){op.encode(e,x,y);};
             bi.progress=[](int k,double r){std::cout<<"INNER metal-bicgstab K="<<k<<" relative_FP32="<<r<<std::endl;};
             CompactDeviceCorrection<decltype(bi)> correction(c,op,bi,workers);
-            for(int rhs=0;rhs<count;++rhs){source(c,outer,rhs);solve(c,outer,correction,"metal-bicgstab",output,trace,summary,rhs);}
+            for(int rhs=0;rhs<count;++rhs){source(c,outer,rhs);solve(c,outer,correction,"metal-bicgstab",output,trace,summary,rhs,op);}
         }
         auto start=Clock::now();const uint32_t vectors=12,tile=2;LatticeShape coarse_shape;
         for(int mu=0;mu<4;++mu){if(h.shape[mu]%blocks[mu])throw std::runtime_error("MG block shape mismatch");coarse_shape[mu]=h.shape[mu]/blocks[mu];}
@@ -126,14 +135,14 @@ int main(int argc,char** argv){@autoreleasepool{
         GPUGenericFGMRES<GPUBlockOperator,GPUCycle> coarse(a1.n,1,op1,pre1,8);coarse.allow_inexact=true;
         pre.blocking_coarse=[&](id<MTLBuffer> x,id<MTLBuffer> y){coarse.run_device(x,.1,16);pre.copy(coarse.delta,y,a1.n);};
         release(a1.a32);release(a1.di32);release(a2.a32);release(a2.di32);
-        GPUGenericFGMRES<GPUCompactSchur,GPUCycle> mg(first.rows*12,1,op,pre,8);
+        GPUGenericFGMRES<CountedSchur,GPUCycle> mg(first.rows*12,1,op,pre,8);
         mg.blocking_pre=[&](id<MTLBuffer> x,id<MTLBuffer> y){pre.apply_device(x,y);};
         mg.progress=[](int k,double r){std::cout<<"INNER metal-mg K="<<k<<" relative_FP32="<<r<<std::endl;};
         CompactDeviceCorrection<decltype(mg)> correction(c,op,mg,workers);
         std::cout<<"MG_READY setup_seconds="<<seconds(start)<<" allocated_GiB="<<double(metal.device.currentAllocatedSize)/(1ull<<30)<<std::endl;
         const size_t primary_host_bytes=c.w.links.size()*sizeof(M3)+(c.evenA.size()+c.oddA.size()+c.inverseEven.size()+c.w.a.b.size()+outer.x.size()+outer.residual.size())*sizeof(D);
         std::cout<<"MEMORY primary_host_bytes="<<primary_host_bytes<<" metal_allocated_bytes="<<metal.device.currentAllocatedSize<<" primary_combined_GiB="<<double(primary_host_bytes+metal.device.currentAllocatedSize)/(1ull<<30)<<std::endl;
-        for(int rhs=0;rhs<count;++rhs){source(c,outer,rhs);solve(c,outer,correction,"metal-mg",output,trace,summary,rhs);}
+        for(int rhs=0;rhs<count;++rhs){source(c,outer,rhs);solve(c,outer,correction,"metal-mg",output,trace,summary,rhs,op);}
         rusage usage{};getrusage(RUSAGE_SELF,&usage);std::cout<<"PEAK_RSS_GiB="<<double(usage.ru_maxrss)/(1ull<<30)<<std::endl;
         std::cout<<"METAL PASS all full FP64 residuals <= 1e-12; native Chroma verification still required"<<std::endl;
     }catch(const std::exception& e){std::cerr<<"ERROR: "<<e.what()<<std::endl;return 1;}
