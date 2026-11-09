@@ -1,0 +1,14 @@
+{
+  "status": "first CPU RHS complete; remaining CPU and all GPU timings pending",
+  "native_result": {
+    "rhs": "0",
+    "iterations": "3489",
+    "attempts": "1",
+    "seconds": "3450.683653",
+    "full_relative": "4.0735724072907192e-14",
+    "save_seconds": "1.6848810000000001"
+  },
+  "source_tag": 20261107,
+  "solution_bytes": 679477248,
+  "solution_sha256": "671469dd361222c32159658b9678e46ed5e7b095f7bb710356f94d9c6543d48b"
+}
