@@ -1,0 +1,28 @@
+STANDALONE original FP64 operator_match=1.6828153126362093e-16
+STANDALONE native_gold full_relative=4.6772128094848616e-14
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.53639000554903e-08
+OUTER method=metal-bicgstab step=1 K=41 full_relative=0.0015062886259696029
+INNER metal-bicgstab K=64 relative_FP32=0.017848592196191917
+OUTER method=metal-bicgstab step=2 K=74 full_relative=2.9544084683664873e-06
+INNER metal-bicgstab K=64 relative_FP32=0.024214271551009532
+OUTER method=metal-bicgstab step=3 K=77 full_relative=5.5192113050068862e-09
+INNER metal-bicgstab K=64 relative_FP32=0.0051255352256468698
+OUTER method=metal-bicgstab step=4 K=79 full_relative=1.0959468521464219e-11
+INNER metal-bicgstab K=64 relative_FP32=0.0072828677959856196
+OUTER method=metal-bicgstab step=5 K=95 full_relative=8.4454824742905771e-15
+SOLVED method=metal-bicgstab outer=5 K=366 seconds=2.5873049579999998 full_relative=8.4454824742905771e-15
+BASIS filtered 2/12
+BASIS filtered 4/12
+BASIS filtered 6/12
+BASIS filtered 8/12
+BASIS filtered 10/12
+BASIS filtered 12/12
+HIERARCHY seconds=7.1651260829999996 coarse1=36864 coarse2=2304
+OUTER method=metal-mg step=1 K=20 full_relative=0.0015310218792262411
+OUTER method=metal-mg step=2 K=42 full_relative=2.8216184861407626e-06
+OUTER method=metal-mg step=3 K=42 full_relative=5.3057141397144363e-09
+OUTER method=metal-mg step=4 K=43 full_relative=9.4270161521099339e-12
+OUTER method=metal-mg step=5 K=42 full_relative=1.8345849313544311e-14
+SOLVED method=metal-mg outer=5 K=189 seconds=12.474087917 full_relative=1.8345849313544311e-14
+METAL PASS both full FP64 residuals <= 1e-12

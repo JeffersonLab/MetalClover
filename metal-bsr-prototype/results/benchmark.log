@@ -1,0 +1,35 @@
+GPU: Apple M1 Max | macOS Version 26.7.1 (Build 25G241)
+CPU workers: 8; Accelerate internal threads: 1; samples: 5; initial Metal library setup: 39.6627 ms
+dense12 L=4 rows=256 rhs=1 check=3072/3072 accelerate_1=0.290ms accelerate_parallel=0.098ms neon_parallel=0.091ms metal_latency=0.286ms metal_batch=0.045ms PASS
+dense12 L=4 rows=256 rhs=4 check=12288/12288 metal_latency=0.444ms metal_batch=0.040ms accelerate_1=0.363ms accelerate_parallel=0.116ms neon_parallel=0.167ms PASS
+dense12 L=4 rows=256 rhs=12 check=36864/36864 accelerate_1=1.041ms accelerate_parallel=0.368ms neon_parallel=0.495ms metal_latency=0.276ms metal_batch=0.076ms PASS
+dense12 L=4 rows=256 rhs=48 check=6289/147456 metal_latency=0.563ms metal_batch=0.186ms accelerate_1=8.073ms accelerate_parallel=1.243ms neon_parallel=1.091ms PASS
+dense12 L=8 rows=4096 rhs=1 check=49152/49152 accelerate_1=4.468ms accelerate_parallel=0.733ms neon_parallel=0.953ms metal_latency=0.546ms metal_batch=0.121ms PASS
+dense12 L=8 rows=4096 rhs=4 check=4236/196608 metal_latency=0.327ms metal_batch=0.140ms accelerate_1=5.229ms accelerate_parallel=0.803ms neon_parallel=1.445ms PASS
+dense12 L=8 rows=4096 rhs=12 check=4661/589824 accelerate_1=15.167ms accelerate_parallel=2.267ms neon_parallel=4.090ms metal_latency=1.116ms metal_batch=0.288ms PASS
+dense12 L=8 rows=4096 rhs=48 check=6394/2359296 metal_latency=2.011ms metal_batch=1.667ms accelerate_1=124.491ms accelerate_parallel=17.858ms neon_parallel=17.483ms PASS
+dense12 L=12 rows=20736 rhs=1 check=4107/248832 accelerate_1=22.762ms accelerate_parallel=3.651ms neon_parallel=4.817ms metal_latency=1.806ms metal_batch=0.691ms PASS
+dense12 L=12 rows=20736 rhs=4 check=4278/995328 metal_latency=2.002ms metal_batch=0.711ms accelerate_1=26.707ms accelerate_parallel=4.013ms neon_parallel=7.306ms PASS
+dense12 L=12 rows=20736 rhs=12 check=4668/2985984 accelerate_1=78.176ms accelerate_parallel=11.439ms neon_parallel=20.437ms metal_latency=1.594ms metal_batch=1.383ms PASS
+dense12 L=12 rows=20736 rhs=48 check=6393/11943936 metal_latency=8.553ms metal_batch=8.446ms accelerate_1=642.224ms accelerate_parallel=88.335ms neon_parallel=79.693ms PASS
+dense12 L=16 rows=65536 rhs=1 check=4130/786432 accelerate_1=71.808ms accelerate_parallel=11.991ms neon_parallel=10.499ms metal_latency=2.490ms metal_batch=2.292ms PASS
+dense12 L=16 rows=65536 rhs=4 check=4283/3145728 metal_latency=2.808ms metal_batch=2.503ms accelerate_1=84.439ms accelerate_parallel=11.880ms neon_parallel=23.548ms PASS
+dense12 L=16 rows=65536 rhs=12 check=4671/9437184 accelerate_1=248.477ms accelerate_parallel=35.092ms neon_parallel=63.775ms metal_latency=4.982ms metal_batch=4.843ms PASS
+dense12 L=16 rows=65536 rhs=48 check=6399/37748736 metal_latency=28.234ms metal_batch=28.014ms accelerate_1=1996.945ms accelerate_parallel=287.383ms neon_parallel=249.435ms PASS
+color3_spin4 L=4 rows=256 rhs=1 check=3072/3072 accelerate_1=0.086ms accelerate_parallel=0.062ms neon_parallel=0.060ms metal_latency=0.250ms metal_batch=0.022ms PASS
+color3_spin4 L=4 rows=256 rhs=4 check=12288/12288 metal_latency=0.253ms metal_batch=0.022ms accelerate_1=0.181ms accelerate_parallel=0.078ms neon_parallel=0.073ms PASS
+color3_spin4 L=4 rows=256 rhs=12 check=36864/36864 accelerate_1=0.401ms accelerate_parallel=0.109ms neon_parallel=0.111ms metal_latency=0.287ms metal_batch=0.041ms PASS
+color3_spin4 L=4 rows=256 rhs=48 check=6289/147456 metal_latency=0.244ms metal_batch=0.044ms accelerate_1=1.468ms accelerate_parallel=0.261ms neon_parallel=0.289ms PASS
+color3_spin4 L=8 rows=4096 rhs=1 check=49152/49152 accelerate_1=1.374ms accelerate_parallel=0.301ms neon_parallel=0.242ms metal_latency=0.297ms metal_batch=0.074ms PASS
+color3_spin4 L=8 rows=4096 rhs=4 check=4236/196608 metal_latency=0.284ms metal_batch=0.048ms accelerate_1=2.892ms accelerate_parallel=0.469ms neon_parallel=0.368ms PASS
+color3_spin4 L=8 rows=4096 rhs=12 check=4661/589824 accelerate_1=6.450ms accelerate_parallel=1.003ms neon_parallel=1.000ms metal_latency=0.676ms metal_batch=0.144ms PASS
+color3_spin4 L=8 rows=4096 rhs=48 check=6394/2359296 metal_latency=0.786ms metal_batch=0.624ms accelerate_1=23.542ms accelerate_parallel=3.280ms neon_parallel=3.696ms PASS
+color3_spin4 L=12 rows=20736 rhs=1 check=4107/248832 accelerate_1=7.059ms accelerate_parallel=1.295ms neon_parallel=1.003ms metal_latency=0.498ms metal_batch=0.096ms PASS
+color3_spin4 L=12 rows=20736 rhs=4 check=4278/995328 metal_latency=0.411ms metal_batch=0.206ms accelerate_1=14.755ms accelerate_parallel=2.047ms neon_parallel=1.670ms PASS
+color3_spin4 L=12 rows=20736 rhs=12 check=4668/2985984 accelerate_1=33.183ms accelerate_parallel=5.075ms neon_parallel=5.055ms metal_latency=1.932ms metal_batch=0.697ms PASS
+color3_spin4 L=12 rows=20736 rhs=48 check=6393/11943936 metal_latency=3.237ms metal_batch=3.235ms accelerate_1=122.044ms accelerate_parallel=19.010ms neon_parallel=20.126ms PASS
+color3_spin4 L=16 rows=65536 rhs=1 check=4130/786432 accelerate_1=22.332ms accelerate_parallel=4.155ms neon_parallel=3.476ms metal_latency=1.073ms metal_batch=0.373ms PASS
+color3_spin4 L=16 rows=65536 rhs=4 check=4283/3145728 metal_latency=1.264ms metal_batch=0.678ms accelerate_1=47.194ms accelerate_parallel=6.584ms neon_parallel=5.342ms PASS
+color3_spin4 L=16 rows=65536 rhs=12 check=4671/9437184 accelerate_1=105.093ms accelerate_parallel=15.555ms neon_parallel=15.417ms metal_latency=3.004ms metal_batch=2.260ms PASS
+color3_spin4 L=16 rows=65536 rhs=48 check=6399/37748736 metal_latency=10.188ms metal_batch=10.191ms accelerate_1=384.757ms accelerate_parallel=53.583ms neon_parallel=60.933ms PASS
+PASS: 32 cases; full small / sampled large double-reference validation.

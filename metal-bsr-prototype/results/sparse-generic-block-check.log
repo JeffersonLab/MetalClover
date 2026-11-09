@@ -1,0 +1,4 @@
+GPU=Apple M1 Max maxBuffer_MiB=19169 sparse coarse BiCGStab; csw=1; physical tile=3 workers=8
+Sparse Galerkin: rows=16 block=10 nnz_blocks=176 FP32_MiB=0.134277 assembly_ms=3.98958
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=checked relative_Galerkin=5.40003e-16 coarse_solution_CPU_Metal=4.07073e-07 coarse_true_cpu=9.62826e-06 metal=9.66555e-06
+PASS: sparse hierarchy and coarse-solver validation; no full solves requested.

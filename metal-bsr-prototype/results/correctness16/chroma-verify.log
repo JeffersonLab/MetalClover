@@ -1,0 +1,23 @@
+QDP use OpenMP threading. We have 8 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+u0 is 1
+Lattice initialized:
+  problem size = 16 16 16 128
+  layout size = 8 16 16 128
+  logical machine size = 1 1 1 1
+  subgrid size = 16 16 16 128
+  total number of nodes = 1
+  total volume = 524288
+  subgrid volume = 524288
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+Single Precision Read
+QIO_read_finished
+NATIVE StoutFermState link_match=0
+NATIVE original UnprecCloverLinOp match=0
+CHROMA CHECK method=chroma-bicgstab full_relative=4.6718437504373908e-14 relative_solution_difference=0
+CHROMA CHECK method=metal-bicgstab full_relative=1.2750209568609897e-14 relative_solution_difference=2.5153791152900463e-12
+CHROMA CHECK method=metal-mg full_relative=2.5297595142212809e-14 relative_solution_difference=3.0774910055799336e-12
+VERIFY PASS all three full native FP64 residuals <= 1e-12

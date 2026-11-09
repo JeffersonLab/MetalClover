@@ -1,0 +1,2 @@
+extent,mass,sigma_min_estimate,lambda_min_estimate,ritz_bound,true_H2_residual,stationary_mass,steps,operator_applications,probe_ms,seed,smooth_start,converged
+16,-0.14,0.17852182451282,0.031870041827385,0.00010118027808659,0.00010118027808663,-0.1398258947373,500,1003,201532.679792,92871,1,0

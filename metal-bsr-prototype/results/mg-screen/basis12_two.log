@@ -1,0 +1,6 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Two-level odd clover Schur; csw=1 aggregate=4x4x4x4 restart=8 vectors/chirality=12 pre/post=1/1 setup_omega=0.65 sweeps=24 omega=0.65 workers=8 library_ms=46.7988
+Hierarchy setup L=8 mass=0.1 coarse=384 ms=1422.66
+mass=0.1 L=8 RHS=12 cpu_fgmres_mg trial=0 ms=359.246 outer=4 inner=26 fineS=82 Vcycles=26 true_r=3.19842e-12 x_error=7.78924e-12 PASS
+mass=0.1 L=8 RHS=12 metal_fgmres_mg trial=0 ms=115.383 outer=4 inner=26 fineS=82 Vcycles=26 true_r=3.19844e-12 x_error=7.78925e-12 PASS
+PASS: 1 systems; all methods met full CPU FP64 clover-Wilson residual checks.

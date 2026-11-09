@@ -1,0 +1,53 @@
+CXX := xcrun clang++
+CXXFLAGS := -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobjc-arc -fblocks -DACCELERATE_NEW_LAPACK
+FRAMEWORKS := -framework Metal -framework Foundation -framework Accelerate
+CHROMA_CONFIG ?= chroma-config
+CHROMA_SOURCE ?=
+
+# The native readers/checker use the existing Chroma/QDP++ installation.
+# Example: make -f Makefile.production production \
+#   CHROMA_CONFIG=/path/to/install/chroma/bin/chroma-config \
+#   CHROMA_SOURCE=/path/to/chroma/source
+# All targets are standalone; the Chroma and SuperbBLAS trees are read only.
+.PHONY: production
+production: build/production_solve build/production_export build/production_verify
+
+build/production_solve: production_solve.mm $(wildcard *.hpp) $(wildcard *.metal)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) production_solve.mm -o $@ $(FRAMEWORKS)
+
+build/production_export: production_export.cc production_bridge.hpp chroma_bridge.hpp lattice_geometry.hpp
+	test -n "$(CHROMA_SOURCE)"
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) -DBASE_PRECISION=64 \
+	  -I"$(CHROMA_SOURCE)/lib" production_export.cc \
+	  "$(CHROMA_SOURCE)/lib/io/aniso_io.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/util/gauge/stout_utils.cc" \
+	  -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
+build/production_verify: production_verify.cc production_bridge.hpp chroma_bridge.hpp lattice_geometry.hpp
+	test -n "$(CHROMA_SOURCE)"
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) -DBASE_PRECISION=64 \
+	  -I"$(CHROMA_SOURCE)/lib" production_verify.cc \
+	  "$(CHROMA_SOURCE)/lib/io/aniso_io.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
+build/correctness_compare: correctness_compare.mm $(wildcard *.hpp) $(wildcard *.metal)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) correctness_compare.mm -o $@ $(FRAMEWORKS)
+
+build/correctness_chroma: correctness_chroma.cc production_bridge.hpp chroma_bridge.hpp
+	test -n "$(CHROMA_SOURCE)"
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) -DBASE_PRECISION=64 \
+	  -I"$(CHROMA_SOURCE)/lib" correctness_chroma.cc \
+	  "$(CHROMA_SOURCE)/lib/io/aniso_io.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermstates/stout_fermstate_params.cc" \
+	  "$(CHROMA_SOURCE)/lib/util/gauge/stout_utils.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/linop/unprec_clover_linop_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/invert/invbicgstab.cc" \
+	  -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)

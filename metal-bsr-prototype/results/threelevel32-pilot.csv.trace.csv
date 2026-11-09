@@ -1,0 +1,5 @@
+extent,mass,tile_rhs,offset,backend,method,trial,outer,max_true_residual,krylov
+32,-0.12,4,0,metal,mg3,0,1,0.0006194476615047,6
+32,-0.12,4,0,metal,mg3,0,2,5.866684022272e-07,8
+32,-0.12,4,0,metal,mg3,0,3,6.690299889556e-10,8
+32,-0.12,4,0,metal,mg3,0,4,8.368584101007e-13,8

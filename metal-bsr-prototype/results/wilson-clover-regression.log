@@ -1,0 +1,48 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Wilson BiCGStab workers=8 library_ms=347.934 APBC=1 gauge=0.25 tol=1e-10 inner_tol=0.002 chunk=4
+Wilson structural/direct/Fourier checks PASS L=1 RHS=1 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=1 RHS=1 gauge=0 APBC=1
+mass=0.25 L=1 RHS=1 cpu_fp64 trial=0 ms=0.08925 outer=1 inner=8 dispatched=8 true_r=3.91505e-11 x_error=3.88459e-11 PASS
+mass=0.25 L=1 RHS=1 cpu_mixed trial=0 ms=0.072083 outer=4 inner=11 dispatched=11 true_r=4.27773e-14 x_error=4.20807e-14 PASS
+mass=0.25 L=1 RHS=1 metal_mixed trial=0 ms=5.14946 outer=4 inner=11 dispatched=16 true_r=4.27365e-14 x_error=4.20549e-14 PASS
+Wilson structural/direct/Fourier checks PASS L=1 RHS=3 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=1 RHS=3 gauge=0 APBC=1
+mass=0.25 L=1 RHS=3 cpu_mixed trial=0 ms=0.10325 outer=4 inner=11 dispatched=11 true_r=1.80492e-12 x_error=1.26425e-12 PASS
+mass=0.25 L=1 RHS=3 metal_mixed trial=0 ms=6.7595 outer=4 inner=11 dispatched=16 true_r=1.80581e-12 x_error=1.26484e-12 PASS
+mass=0.25 L=1 RHS=3 cpu_fp64 trial=0 ms=0.074375 outer=1 inner=8 dispatched=8 true_r=9.69918e-11 x_error=6.99203e-11 PASS
+Wilson structural/direct/Fourier checks PASS L=1 RHS=7 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=1 RHS=7 gauge=0 APBC=1
+mass=0.25 L=1 RHS=7 metal_mixed trial=0 ms=5.51733 outer=4 inner=11 dispatched=16 true_r=6.93323e-12 x_error=2.53681e-12 PASS
+mass=0.25 L=1 RHS=7 cpu_fp64 trial=0 ms=0.328083 outer=1 inner=8 dispatched=8 true_r=7.50165e-11 x_error=4.21238e-11 PASS
+mass=0.25 L=1 RHS=7 cpu_mixed trial=0 ms=0.151 outer=4 inner=11 dispatched=11 true_r=6.93348e-12 x_error=2.53702e-12 PASS
+Wilson structural/direct/Fourier checks PASS L=2 RHS=1 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=2 RHS=1 gauge=0 APBC=1
+mass=0.25 L=2 RHS=1 cpu_fp64 trial=0 ms=1.42121 outer=1 inner=23 dispatched=23 true_r=7.41527e-11 x_error=2.01011e-10 PASS
+mass=0.25 L=2 RHS=1 cpu_mixed trial=0 ms=0.772125 outer=4 inner=28 dispatched=28 true_r=1.40354e-12 x_error=3.50231e-12 PASS
+mass=0.25 L=2 RHS=1 metal_mixed trial=0 ms=25.2661 outer=4 inner=28 dispatched=32 true_r=1.40582e-12 x_error=3.50468e-12 PASS
+Wilson structural/direct/Fourier checks PASS L=2 RHS=3 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=2 RHS=3 gauge=0 APBC=1
+mass=0.25 L=2 RHS=3 cpu_mixed trial=0 ms=7.3475 outer=4 inner=32 dispatched=32 true_r=1.85746e-12 x_error=4.67589e-12 PASS
+mass=0.25 L=2 RHS=3 metal_mixed trial=0 ms=30.9455 outer=4 inner=32 dispatched=36 true_r=1.85841e-12 x_error=4.74742e-12 PASS
+mass=0.25 L=2 RHS=3 cpu_fp64 trial=0 ms=5.60754 outer=1 inner=25 dispatched=25 true_r=8.12761e-11 x_error=2.05837e-10 PASS
+Wilson structural/direct/Fourier checks PASS L=2 RHS=7 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=2 RHS=7 gauge=0 APBC=1
+mass=0.25 L=2 RHS=7 metal_mixed trial=0 ms=49.5616 outer=4 inner=34 dispatched=40 true_r=6.24991e-11 x_error=5.59794e-11 PASS
+mass=0.25 L=2 RHS=7 cpu_fp64 trial=0 ms=16.2173 outer=1 inner=26 dispatched=26 true_r=9.65913e-11 x_error=1.93024e-10 PASS
+mass=0.25 L=2 RHS=7 cpu_mixed trial=0 ms=13.6677 outer=4 inner=34 dispatched=34 true_r=6.21016e-11 x_error=5.59327e-11 PASS
+Wilson structural/direct/Fourier checks PASS L=3 RHS=1 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=3 RHS=1 gauge=0 APBC=1
+mass=0.25 L=3 RHS=1 cpu_fp64 trial=0 ms=9.60108 outer=1 inner=32 dispatched=32 true_r=8.96336e-11 x_error=3.54398e-10 PASS
+mass=0.25 L=3 RHS=1 cpu_mixed trial=0 ms=19.0854 outer=4 inner=37 dispatched=37 true_r=6.56046e-12 x_error=1.87088e-11 PASS
+mass=0.25 L=3 RHS=1 metal_mixed trial=0 ms=41.1209 outer=4 inner=37 dispatched=48 true_r=5.87109e-12 x_error=1.70358e-11 PASS
+Wilson structural/direct/Fourier checks PASS L=3 RHS=3 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=3 RHS=3 gauge=0 APBC=1
+mass=0.25 L=3 RHS=3 cpu_mixed trial=0 ms=36.2262 outer=4 inner=39 dispatched=39 true_r=8.41472e-12 x_error=2.21064e-11 PASS
+mass=0.25 L=3 RHS=3 metal_mixed trial=0 ms=37.3656 outer=4 inner=39 dispatched=48 true_r=8.42169e-12 x_error=2.19724e-11 PASS
+mass=0.25 L=3 RHS=3 cpu_fp64 trial=0 ms=21.0058 outer=1 inner=33 dispatched=33 true_r=8.87087e-11 x_error=2.93572e-10 PASS
+Wilson structural/direct/Fourier checks PASS L=3 RHS=7 gauge=0.25 APBC=1
+Wilson structural/direct/Fourier checks PASS L=3 RHS=7 gauge=0 APBC=1
+mass=0.25 L=3 RHS=7 metal_mixed trial=0 ms=64.1359 outer=4 inner=40 dispatched=48 true_r=1.01636e-11 x_error=2.31545e-11 PASS
+mass=0.25 L=3 RHS=7 cpu_fp64 trial=0 ms=38.7945 outer=1 inner=33 dispatched=33 true_r=9.87429e-11 x_error=3.2568e-10 PASS
+mass=0.25 L=3 RHS=7 cpu_mixed trial=0 ms=47.774 outer=4 inner=40 dispatched=40 true_r=9.7586e-12 x_error=2.30745e-11 PASS
+PASS: 9 Wilson systems; full true FP64 residual and known-solution checks on every RHS.

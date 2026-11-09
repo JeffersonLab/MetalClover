@@ -1,0 +1,21 @@
+m=0.1 k=25 lambda=0.356291 ritz_bound=0.615556
+m=0.1 k=50 lambda=0.0963546 ritz_bound=0.211179
+m=0.1 k=75 lambda=0.0798003 ritz_bound=0.0180452
+m=0.1 k=100 lambda=0.0781294 ritz_bound=0.0308269
+GAP mass=0.1 sigma=0.279516 true_H2_residual=0.0308269 stationary_m=-0.108292 steps=100
+m=0 k=25 lambda=0.316442 ritz_bound=0.594445
+m=0 k=50 lambda=0.0667065 ritz_bound=0.217712
+m=0 k=75 lambda=0.0473194 ritz_bound=0.0166502
+m=0 k=100 lambda=0.0467922 ritz_bound=0.0272108
+GAP mass=0 sigma=0.216315 true_H2_residual=0.0272108 stationary_m=-0.1122 steps=100
+m=-0.1 k=25 lambda=0.295726 ritz_bound=0.573675
+m=-0.1 k=50 lambda=0.0570506 ritz_bound=0.222118
+m=-0.1 k=75 lambda=0.0341858 ritz_bound=0.0206999
+m=-0.1 k=100 lambda=0.0340687 ritz_bound=0.00548518
+GAP mass=-0.1 sigma=0.184577 true_H2_residual=0.00548518 stationary_m=-0.117979 steps=100
+m=-0.2 k=25 lambda=0.294007 ritz_bound=0.55311
+m=-0.2 k=50 lambda=0.0671694 ritz_bound=0.222056
+m=-0.2 k=75 lambda=0.0401999 ritz_bound=0.0301374
+m=-0.2 k=100 lambda=0.0396623 ritz_bound=0.0275513
+GAP mass=-0.2 sigma=0.199154 true_H2_residual=0.0275513 stationary_m=-0.124293 steps=100
+PASS: FP64 spectral diagnostics

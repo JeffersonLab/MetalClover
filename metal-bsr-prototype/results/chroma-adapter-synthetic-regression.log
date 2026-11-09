@@ -1,0 +1,71 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=0.000526291 min_clover_pivot=3.60375
+COMPACT PASS full=4.87908e-16 Schur=1.10036e-16 CPU_Metal=1.01442e-07
+P1 basis ready n=64
+A1 sparse ready blocks=176 seconds=0.00101325
+A2 sparse ready n=4 blocks=1 hierarchy_s=0.0035705
+LEVEL1 PASS R_P=3.38244e-16 Galerkin=4.5694e-16 gamma5=5.77201e-16 n=64 blocks=176
+LEVEL2 PASS R_P=2.88829e-16 Galerkin=5.72428e-16 gamma5=7.7827e-16 n=4 blocks=1
+DEVICE PASS inbs=12 R=8.36917e-08 P=9.38607e-08 A=2.28884e-07
+DEVICE PASS inbs=4 R=9.96661e-08 P=1.16228e-07 A=9.47002e-08
+OUTER metal mg3 offset=0 step=1 K=7 true=0.0010853
+OUTER metal mg3 offset=0 step=2 K=10 true=2.13268e-06
+OUTER metal mg3 offset=0 step=3 K=10 true=3.69422e-09
+OUTER metal mg3 offset=0 step=4 K=11 true=5.33067e-12
+TILE L=4 m=-0.1 metal mg3 trial=0 offset=0 seconds=0.20079 outer=4 K=38 fineS=121 c1=266 c2=1292 true=5.33067e-12 PASS
+OUTER metal mg3 offset=3 step=1 K=7 true=0.0010411
+OUTER metal mg3 offset=3 step=2 K=11 true=1.14634e-06
+OUTER metal mg3 offset=3 step=3 K=11 true=1.42361e-09
+OUTER metal mg3 offset=3 step=4 K=11 true=1.5467e-12
+TILE L=4 m=-0.1 metal mg3 trial=0 offset=3 seconds=0.187909 outer=4 K=40 fineS=127 c1=277 c2=1343 true=1.5467e-12 PASS
+OUTER metal bicgstab offset=0 step=1 K=8 true=0.000465514
+OUTER metal bicgstab offset=0 step=2 K=10 true=8.00307e-07
+OUTER metal bicgstab offset=0 step=3 K=9 true=7.78278e-10
+OUTER metal bicgstab offset=0 step=4 K=10 true=1.05501e-12
+TILE L=4 m=-0.1 metal bicgstab trial=0 offset=0 seconds=0.0243234 outer=4 K=37 fineS=74 c1=0 c2=0 true=1.05501e-12 PASS
+OUTER metal bicgstab offset=3 step=1 K=8 true=0.000391423
+OUTER metal bicgstab offset=3 step=2 K=10 true=7.61489e-07
+OUTER metal bicgstab offset=3 step=3 K=9 true=1.03432e-09
+OUTER metal bicgstab offset=3 step=4 K=10 true=1.69805e-12
+TILE L=4 m=-0.1 metal bicgstab trial=0 offset=3 seconds=0.0237796 outer=4 K=37 fineS=74 c1=0 c2=0 true=1.69805e-12 PASS
+OUTER metal smooth offset=0 step=1 K=6 true=0.00101848
+OUTER metal smooth offset=0 step=2 K=8 true=1.9505e-06
+OUTER metal smooth offset=0 step=3 K=9 true=2.2473e-09
+OUTER metal smooth offset=0 step=4 K=8 true=3.99989e-12
+TILE L=4 m=-0.1 metal smooth trial=0 offset=0 seconds=0.027521 outer=4 K=31 fineS=67 c1=0 c2=0 true=3.99989e-12 PASS
+OUTER metal smooth offset=3 step=1 K=6 true=0.00079753
+OUTER metal smooth offset=3 step=2 K=8 true=1.52354e-06
+OUTER metal smooth offset=3 step=3 K=9 true=1.82838e-09
+OUTER metal smooth offset=3 step=4 K=8 true=2.81068e-12
+TILE L=4 m=-0.1 metal smooth trial=0 offset=3 seconds=0.0278947 outer=4 K=31 fineS=67 c1=0 c2=0 true=2.81068e-12 PASS
+OUTER cpu mg3 offset=0 step=1 K=7 true=0.0010853
+OUTER cpu mg3 offset=0 step=2 K=10 true=2.1327e-06
+OUTER cpu mg3 offset=0 step=3 K=10 true=3.6941e-09
+OUTER cpu mg3 offset=0 step=4 K=11 true=5.33062e-12
+TILE L=4 m=-0.1 cpu mg3 trial=0 offset=0 seconds=0.0694089 outer=4 K=38 fineS=121 c1=266 c2=152 true=5.33062e-12 PASS
+OUTER cpu mg3 offset=3 step=1 K=7 true=0.0010411
+OUTER cpu mg3 offset=3 step=2 K=11 true=1.14632e-06
+OUTER cpu mg3 offset=3 step=3 K=11 true=1.42359e-09
+OUTER cpu mg3 offset=3 step=4 K=11 true=1.54688e-12
+TILE L=4 m=-0.1 cpu mg3 trial=0 offset=3 seconds=0.0727648 outer=4 K=40 fineS=127 c1=277 c2=158 true=1.54688e-12 PASS
+OUTER cpu bicgstab offset=0 step=1 K=8 true=0.000465507
+OUTER cpu bicgstab offset=0 step=2 K=10 true=8.00304e-07
+OUTER cpu bicgstab offset=0 step=3 K=9 true=7.8073e-10
+OUTER cpu bicgstab offset=0 step=4 K=10 true=1.06863e-12
+TILE L=4 m=-0.1 cpu bicgstab trial=0 offset=0 seconds=0.0297148 outer=4 K=37 fineS=72 c1=0 c2=0 true=1.06863e-12 PASS
+OUTER cpu bicgstab offset=3 step=1 K=8 true=0.000391404
+OUTER cpu bicgstab offset=3 step=2 K=10 true=7.61589e-07
+OUTER cpu bicgstab offset=3 step=3 K=9 true=1.0116e-09
+OUTER cpu bicgstab offset=3 step=4 K=10 true=1.12122e-12
+TILE L=4 m=-0.1 cpu bicgstab trial=0 offset=3 seconds=0.0338187 outer=4 K=37 fineS=70 c1=0 c2=0 true=1.12122e-12 PASS
+OUTER cpu smooth offset=0 step=1 K=6 true=0.00101848
+OUTER cpu smooth offset=0 step=2 K=8 true=1.95053e-06
+OUTER cpu smooth offset=0 step=3 K=9 true=2.24735e-09
+OUTER cpu smooth offset=0 step=4 K=8 true=3.99988e-12
+TILE L=4 m=-0.1 cpu smooth trial=0 offset=0 seconds=0.0360629 outer=4 K=31 fineS=67 c1=0 c2=0 true=3.99988e-12 PASS
+OUTER cpu smooth offset=3 step=1 K=6 true=0.000797525
+OUTER cpu smooth offset=3 step=2 K=8 true=1.52352e-06
+OUTER cpu smooth offset=3 step=3 K=9 true=1.8283e-09
+OUTER cpu smooth offset=3 step=4 K=8 true=2.81067e-12
+TILE L=4 m=-0.1 cpu smooth trial=0 offset=3 seconds=0.0336465 outer=4 K=31 fineS=67 c1=0 c2=0 true=2.81067e-12 PASS
+PASS all full FP64 original-equation residual checks

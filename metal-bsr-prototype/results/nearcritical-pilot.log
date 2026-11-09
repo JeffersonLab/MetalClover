@@ -1,0 +1,18 @@
+GPU=Apple M1 Max CPU workers=8 c_sw=1 resident_RHS=12 BiCG_chunk=1 paired prefix batch timings
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=786.863
+CASE L=16 bare_mass=-0.1 clover_min_pivot=3.50546
+TILE L=16 mass=-0.1 metal_bicgstab trial=0 offset=0 ms=2555.4 outer=4 krylov=149 fineS=298 true_r=8.82753e-12 PASS
+BATCH L=16 mass=-0.1 RHS=12 metal_bicgstab trial=0 total_ms=2555.4 true_r=8.82753e-12
+TILE L=16 mass=-0.1 metal_sparse_mg trial=0 offset=0 ms=1923.28 outer=4 krylov=49 fineS=154 true_r=2.85519e-12 PASS
+BATCH L=16 mass=-0.1 RHS=12 metal_sparse_mg trial=0 total_ms=1923.28 true_r=2.85519e-12
+TILE L=16 mass=-0.1 metal_smooth trial=0 offset=0 ms=3659.57 outer=4 krylov=199 fineS=425 true_r=8.95025e-12 PASS
+BATCH L=16 mass=-0.1 RHS=12 metal_smooth trial=0 total_ms=3659.57 true_r=8.95025e-12
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=768.987
+CASE L=16 bare_mass=-0.12 clover_min_pivot=3.4854
+TILE L=16 mass=-0.12 metal_sparse_mg trial=0 offset=0 ms=2714.65 outer=4 krylov=80 fineS=252 true_r=3.70684e-12 PASS
+BATCH L=16 mass=-0.12 RHS=12 metal_sparse_mg trial=0 total_ms=2714.65 true_r=3.70684e-12
+TILE L=16 mass=-0.12 metal_smooth trial=0 offset=0 ms=4319.71 outer=4 krylov=241 fineS=515 true_r=9.38956e-12 PASS
+BATCH L=16 mass=-0.12 RHS=12 metal_smooth trial=0 total_ms=4319.71 true_r=9.38956e-12
+TILE L=16 mass=-0.12 metal_bicgstab trial=0 offset=0 ms=3800.97 outer=4 krylov=239 fineS=478 true_r=7.22595e-12 PASS
+BATCH L=16 mass=-0.12 RHS=12 metal_bicgstab trial=0 total_ms=3800.97 true_r=7.22595e-12
+PASS: all methods and RHS met full CPU FP64 clover-Wilson residual checks.

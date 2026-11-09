@@ -1,0 +1,11 @@
+extent,rhs,mass,preconditioner,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations,dispatched_steps
+2,3,0.25,none,cpu_fp64,0,1,2.33280044981e-15,5,5,5
+2,3,0.25,none,cpu_mixed,0,1,1.3368874658e-06,5,5,5
+2,3,0.25,none,cpu_mixed,0,2,2.75619821131e-12,5,5,5
+2,3,0.25,none,metal_mixed,0,1,1.66548339404e-06,5,5,8
+2,3,0.25,none,metal_mixed,0,2,7.92353779387e-13,5,5,8
+2,3,0.25,even_odd,cpu_fp64,0,1,2.6978117884e-16,3,3,3
+2,3,0.25,even_odd,cpu_mixed,0,1,8.83720259358e-08,3,3,3
+2,3,0.25,even_odd,cpu_mixed,0,2,1.25963369335e-14,3,3,3
+2,3,0.25,even_odd,metal_mixed,0,1,7.65044726368e-08,3,3,4
+2,3,0.25,even_odd,metal_mixed,0,2,1.09206019634e-14,3,3,4

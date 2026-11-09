@@ -1,0 +1,6 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Wilson BiCGStab workers=8 library_ms=49.5831 APBC=0 gauge=0 tol=1e-10 inner_tol=0.002 chunk=4
+mass=0.25 L=3 RHS=3 cpu_fp64 trial=0 ms=3.29271 outer=1 inner=9 dispatched=9 true_r=1.0459e-13 x_error=7.38966e-14 PASS
+mass=0.25 L=3 RHS=3 cpu_mixed trial=0 ms=7.75813 outer=3 inner=24 dispatched=24 true_r=1.35397e-11 x_error=2.44197e-11 PASS
+mass=0.25 L=3 RHS=3 metal_mixed trial=0 ms=25.0777 outer=3 inner=24 dispatched=28 true_r=2.13076e-11 x_error=8.47182e-11 PASS
+PASS: 1 Wilson systems; full true FP64 residual and known-solution checks on every RHS.

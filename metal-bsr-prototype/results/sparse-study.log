@@ -1,0 +1,13 @@
+Running: ./build/metal_clover --self-test --csv results/sparse-clover-regression.csv
+Completed: sparse-clover-regression
+Running: ./build/metal_multigrid --self-test --vectors 12 --omega 1 --csv results/sparse-dense-mg-regression.csv
+Completed: sparse-dense-mg-regression
+Running: ./build/metal_sparse_multigrid --self-test --csv results/sparse-self-test-final.csv
+Completed: sparse-self-test-final
+Running: ./build/metal_sparse_multigrid --sizes 8 --rhs 3 --tile-rhs 3 --validate-only --csv results/sparse-hierarchy8-final.csv
+Completed: sparse-hierarchy8-final
+Running: ./build/metal_sparse_multigrid --sizes 16 --rhs 3 --tile-rhs 3 --validate-only --csv results/sparse-hierarchy16-final.csv
+Completed: sparse-hierarchy16-final
+Running: ./build/metal_sparse_multigrid --sizes 16 --rhs 96,192 --tile-rhs 96 --mass .1,.5 --coarse-iters 4 --samples 3 --csw 1 --csv results/sparse-mg16.csv
+Completed: sparse-mg16
+All sparse study runs passed.

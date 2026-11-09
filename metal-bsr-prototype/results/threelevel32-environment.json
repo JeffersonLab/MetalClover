@@ -1,0 +1,6 @@
+{
+  "captured_ET": "2026-11-05T12:55:47.274060-05:00",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=24707171)\t100%; charged; 0:00 remaining present: true\n"
+}

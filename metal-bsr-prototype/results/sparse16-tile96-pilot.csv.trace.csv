@@ -1,0 +1,9 @@
+extent,mass,rhs,tile_rhs,offset,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations
+16,0.1,96,96,0,cpu_sparse_mg,0,1,0.000512945098739,5,5
+16,0.1,96,96,0,cpu_sparse_mg,0,2,8.65509939476e-07,6,6
+16,0.1,96,96,0,cpu_sparse_mg,0,3,1.69647157292e-09,6,6
+16,0.1,96,96,0,cpu_sparse_mg,0,4,9.58670768964e-13,7,7
+16,0.1,96,96,0,metal_sparse_mg,0,1,0.000512945128264,5,5
+16,0.1,96,96,0,metal_sparse_mg,0,2,8.65510459822e-07,6,6
+16,0.1,96,96,0,metal_sparse_mg,0,3,1.69647025982e-09,6,6
+16,0.1,96,96,0,metal_sparse_mg,0,4,9.58663565947e-13,7,7

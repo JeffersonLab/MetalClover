@@ -1,0 +1,4 @@
+metal-bicgstab vs chroma-bicgstab {'relative_2norm': 2.5153791152921684e-12, 'max_absolute_complex_component': 1.1725830663492701e-14}
+metal-mg vs chroma-bicgstab {'relative_2norm': 3.0774910055824576e-12, 'max_absolute_complex_component': 1.5600221034022516e-14}
+metal-mg vs metal-bicgstab {'relative_2norm': 1.7081984227623216e-12, 'max_absolute_complex_component': 1.087634800953406e-14}
+AUDIT PASS: all three independent full FP64 residuals <= 1e-12; compared all 6291456 complex components

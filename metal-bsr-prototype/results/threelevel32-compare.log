@@ -1,0 +1,2314 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=1.80919 min_clover_pivot=3.47058
+P1 basis ready n=98304
+A1 sparse ready blocks=135168 seconds=4.95734
+A2 sparse ready n=6144 blocks=8448 hierarchy_s=45.2062
+OUTER warm metal mg3 step=1 K=6 true=0.000551807
+OUTER warm metal mg3 step=2 K=7 true=1.05619e-06
+OUTER warm metal mg3 step=3 K=8 true=8.71399e-10
+OUTER warm metal mg3 step=4 K=8 true=8.66181e-13
+WARM metal mg3 done
+OUTER metal mg3 offset=0 step=1 K=6 true=0.000551807
+OUTER metal mg3 offset=0 step=2 K=7 true=1.05619e-06
+OUTER metal mg3 offset=0 step=3 K=8 true=8.71399e-10
+OUTER metal mg3 offset=0 step=4 K=8 true=8.66181e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=0 seconds=13.3958 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66181e-13 PASS
+OUTER metal mg3 offset=4 step=1 K=6 true=0.000552652
+OUTER metal mg3 offset=4 step=2 K=7 true=1.05835e-06
+OUTER metal mg3 offset=4 step=3 K=8 true=8.7279e-10
+OUTER metal mg3 offset=4 step=4 K=8 true=8.6804e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=4 seconds=12.7529 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6804e-13 PASS
+OUTER metal mg3 offset=8 step=1 K=6 true=0.00055322
+OUTER metal mg3 offset=8 step=2 K=7 true=1.05697e-06
+OUTER metal mg3 offset=8 step=3 K=8 true=8.70909e-10
+OUTER metal mg3 offset=8 step=4 K=8 true=8.63744e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=8 seconds=17.429 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.63744e-13 PASS
+OUTER metal mg3 offset=12 step=1 K=6 true=0.000551814
+OUTER metal mg3 offset=12 step=2 K=7 true=1.06099e-06
+OUTER metal mg3 offset=12 step=3 K=8 true=8.74747e-10
+OUTER metal mg3 offset=12 step=4 K=8 true=8.6887e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=12 seconds=16.7813 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6887e-13 PASS
+OUTER metal mg3 offset=16 step=1 K=6 true=0.000552189
+OUTER metal mg3 offset=16 step=2 K=7 true=1.05866e-06
+OUTER metal mg3 offset=16 step=3 K=8 true=8.72728e-10
+OUTER metal mg3 offset=16 step=4 K=8 true=8.67438e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=16 seconds=17.3836 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.67438e-13 PASS
+OUTER metal mg3 offset=20 step=1 K=6 true=0.000552716
+OUTER metal mg3 offset=20 step=2 K=7 true=1.05706e-06
+OUTER metal mg3 offset=20 step=3 K=8 true=8.71085e-10
+OUTER metal mg3 offset=20 step=4 K=8 true=8.64171e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=20 seconds=19.3598 outer=4 K=29 fineS=91 c1=206 c2=1003 true=8.64171e-13 PASS
+OUTER metal mg3 offset=24 step=1 K=6 true=0.000552155
+OUTER metal mg3 offset=24 step=2 K=7 true=1.05998e-06
+OUTER metal mg3 offset=24 step=3 K=8 true=8.74666e-10
+OUTER metal mg3 offset=24 step=4 K=8 true=8.69816e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=24 seconds=25.8937 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.69816e-13 PASS
+OUTER metal mg3 offset=28 step=1 K=6 true=0.000551738
+OUTER metal mg3 offset=28 step=2 K=7 true=1.05743e-06
+OUTER metal mg3 offset=28 step=3 K=8 true=8.74716e-10
+OUTER metal mg3 offset=28 step=4 K=8 true=8.6812e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=28 seconds=17.0056 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6812e-13 PASS
+OUTER metal mg3 offset=32 step=1 K=6 true=0.000553666
+OUTER metal mg3 offset=32 step=2 K=7 true=1.05768e-06
+OUTER metal mg3 offset=32 step=3 K=8 true=8.71705e-10
+OUTER metal mg3 offset=32 step=4 K=8 true=8.65099e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=32 seconds=16.4291 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65099e-13 PASS
+OUTER metal mg3 offset=36 step=1 K=6 true=0.000552921
+OUTER metal mg3 offset=36 step=2 K=7 true=1.05854e-06
+OUTER metal mg3 offset=36 step=3 K=8 true=8.7355e-10
+OUTER metal mg3 offset=36 step=4 K=8 true=8.68418e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=36 seconds=22.7275 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68418e-13 PASS
+OUTER metal mg3 offset=40 step=1 K=6 true=0.000552391
+OUTER metal mg3 offset=40 step=2 K=7 true=1.05844e-06
+OUTER metal mg3 offset=40 step=3 K=8 true=8.74836e-10
+OUTER metal mg3 offset=40 step=4 K=8 true=8.70351e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=40 seconds=19.4544 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.70351e-13 PASS
+OUTER metal mg3 offset=44 step=1 K=6 true=0.000552075
+OUTER metal mg3 offset=44 step=2 K=7 true=1.0606e-06
+OUTER metal mg3 offset=44 step=3 K=8 true=8.74261e-10
+OUTER metal mg3 offset=44 step=4 K=8 true=8.68348e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=44 seconds=17.7122 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68348e-13 PASS
+OUTER metal mg3 offset=48 step=1 K=6 true=0.000552417
+OUTER metal mg3 offset=48 step=2 K=7 true=1.05776e-06
+OUTER metal mg3 offset=48 step=3 K=8 true=8.73632e-10
+OUTER metal mg3 offset=48 step=4 K=8 true=8.66403e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=48 seconds=12.8496 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66403e-13 PASS
+OUTER metal mg3 offset=52 step=1 K=6 true=0.000552651
+OUTER metal mg3 offset=52 step=2 K=7 true=1.05918e-06
+OUTER metal mg3 offset=52 step=3 K=8 true=8.74416e-10
+OUTER metal mg3 offset=52 step=4 K=8 true=8.6747e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=52 seconds=13.9665 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6747e-13 PASS
+OUTER metal mg3 offset=56 step=1 K=6 true=0.000552878
+OUTER metal mg3 offset=56 step=2 K=7 true=1.05465e-06
+OUTER metal mg3 offset=56 step=3 K=8 true=8.71944e-10
+OUTER metal mg3 offset=56 step=4 K=8 true=8.70139e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=56 seconds=12.6149 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.70139e-13 PASS
+OUTER metal mg3 offset=60 step=1 K=6 true=0.000552541
+OUTER metal mg3 offset=60 step=2 K=7 true=1.05796e-06
+OUTER metal mg3 offset=60 step=3 K=8 true=8.72501e-10
+OUTER metal mg3 offset=60 step=4 K=8 true=8.66427e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=60 seconds=12.0012 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66427e-13 PASS
+OUTER metal mg3 offset=64 step=1 K=6 true=0.000552585
+OUTER metal mg3 offset=64 step=2 K=7 true=1.05708e-06
+OUTER metal mg3 offset=64 step=3 K=8 true=8.73575e-10
+OUTER metal mg3 offset=64 step=4 K=8 true=8.70929e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=64 seconds=13.6011 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.70929e-13 PASS
+OUTER metal mg3 offset=68 step=1 K=6 true=0.00055198
+OUTER metal mg3 offset=68 step=2 K=7 true=1.05851e-06
+OUTER metal mg3 offset=68 step=3 K=8 true=8.73953e-10
+OUTER metal mg3 offset=68 step=4 K=8 true=8.6858e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=68 seconds=13.4077 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6858e-13 PASS
+OUTER metal mg3 offset=72 step=1 K=6 true=0.000553117
+OUTER metal mg3 offset=72 step=2 K=7 true=1.05692e-06
+OUTER metal mg3 offset=72 step=3 K=8 true=8.71573e-10
+OUTER metal mg3 offset=72 step=4 K=8 true=8.64733e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=72 seconds=12.1264 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.64733e-13 PASS
+OUTER metal mg3 offset=76 step=1 K=6 true=0.000553262
+OUTER metal mg3 offset=76 step=2 K=7 true=1.06133e-06
+OUTER metal mg3 offset=76 step=3 K=8 true=8.75366e-10
+OUTER metal mg3 offset=76 step=4 K=8 true=8.68561e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=76 seconds=14.861 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68561e-13 PASS
+OUTER metal mg3 offset=80 step=1 K=6 true=0.000552952
+OUTER metal mg3 offset=80 step=2 K=7 true=1.05915e-06
+OUTER metal mg3 offset=80 step=3 K=8 true=8.73742e-10
+OUTER metal mg3 offset=80 step=4 K=8 true=8.70115e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=80 seconds=11.7618 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.70115e-13 PASS
+OUTER metal mg3 offset=84 step=1 K=6 true=0.000551868
+OUTER metal mg3 offset=84 step=2 K=7 true=1.0561e-06
+OUTER metal mg3 offset=84 step=3 K=8 true=8.69762e-10
+OUTER metal mg3 offset=84 step=4 K=8 true=8.63002e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=84 seconds=13.2556 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.63002e-13 PASS
+OUTER metal mg3 offset=88 step=1 K=6 true=0.000552243
+OUTER metal mg3 offset=88 step=2 K=7 true=1.05887e-06
+OUTER metal mg3 offset=88 step=3 K=8 true=8.71392e-10
+OUTER metal mg3 offset=88 step=4 K=8 true=8.65679e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=88 seconds=14.0573 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65679e-13 PASS
+OUTER metal mg3 offset=92 step=1 K=6 true=0.000552612
+OUTER metal mg3 offset=92 step=2 K=7 true=1.0564e-06
+OUTER metal mg3 offset=92 step=3 K=8 true=8.71124e-10
+OUTER metal mg3 offset=92 step=4 K=8 true=8.65564e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=92 seconds=11.8709 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65564e-13 PASS
+OUTER metal mg3 offset=96 step=1 K=6 true=0.000551976
+OUTER metal mg3 offset=96 step=2 K=7 true=1.05559e-06
+OUTER metal mg3 offset=96 step=3 K=8 true=8.68941e-10
+OUTER metal mg3 offset=96 step=4 K=8 true=8.62064e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=96 seconds=12.207 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.62064e-13 PASS
+OUTER metal mg3 offset=100 step=1 K=6 true=0.000552812
+OUTER metal mg3 offset=100 step=2 K=7 true=1.05793e-06
+OUTER metal mg3 offset=100 step=3 K=8 true=8.71641e-10
+OUTER metal mg3 offset=100 step=4 K=8 true=8.65259e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=100 seconds=12.0641 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65259e-13 PASS
+OUTER metal mg3 offset=104 step=1 K=6 true=0.00055343
+OUTER metal mg3 offset=104 step=2 K=7 true=1.05593e-06
+OUTER metal mg3 offset=104 step=3 K=8 true=8.72167e-10
+OUTER metal mg3 offset=104 step=4 K=8 true=8.68194e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=104 seconds=21.9483 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68194e-13 PASS
+OUTER metal mg3 offset=108 step=1 K=6 true=0.000552194
+OUTER metal mg3 offset=108 step=2 K=7 true=1.05902e-06
+OUTER metal mg3 offset=108 step=3 K=8 true=8.72261e-10
+OUTER metal mg3 offset=108 step=4 K=8 true=8.67401e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=108 seconds=12.321 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.67401e-13 PASS
+OUTER metal mg3 offset=112 step=1 K=6 true=0.000552845
+OUTER metal mg3 offset=112 step=2 K=7 true=1.05693e-06
+OUTER metal mg3 offset=112 step=3 K=8 true=8.73162e-10
+OUTER metal mg3 offset=112 step=4 K=8 true=8.64808e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=112 seconds=12.6105 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.64808e-13 PASS
+OUTER metal mg3 offset=116 step=1 K=6 true=0.000553465
+OUTER metal mg3 offset=116 step=2 K=7 true=1.05951e-06
+OUTER metal mg3 offset=116 step=3 K=8 true=8.74613e-10
+OUTER metal mg3 offset=116 step=4 K=8 true=8.68374e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=116 seconds=12.1591 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68374e-13 PASS
+OUTER metal mg3 offset=120 step=1 K=6 true=0.000552877
+OUTER metal mg3 offset=120 step=2 K=7 true=1.05908e-06
+OUTER metal mg3 offset=120 step=3 K=8 true=8.73409e-10
+OUTER metal mg3 offset=120 step=4 K=8 true=8.67952e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=120 seconds=12.9274 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.67952e-13 PASS
+OUTER metal mg3 offset=124 step=1 K=6 true=0.00055195
+OUTER metal mg3 offset=124 step=2 K=7 true=1.05917e-06
+OUTER metal mg3 offset=124 step=3 K=8 true=8.72595e-10
+OUTER metal mg3 offset=124 step=4 K=8 true=8.68966e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=124 seconds=11.8793 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68966e-13 PASS
+OUTER metal mg3 offset=128 step=1 K=6 true=0.00055393
+OUTER metal mg3 offset=128 step=2 K=7 true=1.06061e-06
+OUTER metal mg3 offset=128 step=3 K=8 true=8.74391e-10
+OUTER metal mg3 offset=128 step=4 K=8 true=8.66981e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=128 seconds=12.1153 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66981e-13 PASS
+OUTER metal mg3 offset=132 step=1 K=6 true=0.000552776
+OUTER metal mg3 offset=132 step=2 K=7 true=1.05687e-06
+OUTER metal mg3 offset=132 step=3 K=8 true=8.72612e-10
+OUTER metal mg3 offset=132 step=4 K=8 true=8.67335e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=132 seconds=12.3122 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.67335e-13 PASS
+OUTER metal mg3 offset=136 step=1 K=6 true=0.000552515
+OUTER metal mg3 offset=136 step=2 K=7 true=1.05966e-06
+OUTER metal mg3 offset=136 step=3 K=8 true=8.7436e-10
+OUTER metal mg3 offset=136 step=4 K=8 true=8.66528e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=136 seconds=12.0206 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66528e-13 PASS
+OUTER metal mg3 offset=140 step=1 K=6 true=0.000552237
+OUTER metal mg3 offset=140 step=2 K=7 true=1.0592e-06
+OUTER metal mg3 offset=140 step=3 K=8 true=8.74197e-10
+OUTER metal mg3 offset=140 step=4 K=8 true=8.6806e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=140 seconds=11.9956 outer=4 K=29 fineS=91 c1=206 c2=1003 true=8.6806e-13 PASS
+OUTER metal mg3 offset=144 step=1 K=6 true=0.000552659
+OUTER metal mg3 offset=144 step=2 K=7 true=1.05766e-06
+OUTER metal mg3 offset=144 step=3 K=8 true=8.71191e-10
+OUTER metal mg3 offset=144 step=4 K=8 true=8.65811e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=144 seconds=11.9156 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65811e-13 PASS
+OUTER metal mg3 offset=148 step=1 K=6 true=0.000553111
+OUTER metal mg3 offset=148 step=2 K=7 true=1.05838e-06
+OUTER metal mg3 offset=148 step=3 K=8 true=8.72242e-10
+OUTER metal mg3 offset=148 step=4 K=8 true=8.6518e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=148 seconds=16.213 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6518e-13 PASS
+OUTER metal mg3 offset=152 step=1 K=6 true=0.000551693
+OUTER metal mg3 offset=152 step=2 K=7 true=1.06073e-06
+OUTER metal mg3 offset=152 step=3 K=8 true=8.75197e-10
+OUTER metal mg3 offset=152 step=4 K=8 true=8.69689e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=152 seconds=11.7866 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.69689e-13 PASS
+OUTER metal mg3 offset=156 step=1 K=6 true=0.000551865
+OUTER metal mg3 offset=156 step=2 K=7 true=1.0577e-06
+OUTER metal mg3 offset=156 step=3 K=8 true=8.72992e-10
+OUTER metal mg3 offset=156 step=4 K=8 true=8.66352e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=156 seconds=11.8 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66352e-13 PASS
+OUTER metal mg3 offset=160 step=1 K=6 true=0.00055243
+OUTER metal mg3 offset=160 step=2 K=7 true=1.05656e-06
+OUTER metal mg3 offset=160 step=3 K=8 true=8.7082e-10
+OUTER metal mg3 offset=160 step=4 K=8 true=8.64707e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=160 seconds=12.1706 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.64707e-13 PASS
+OUTER metal mg3 offset=164 step=1 K=6 true=0.000553077
+OUTER metal mg3 offset=164 step=2 K=7 true=1.05965e-06
+OUTER metal mg3 offset=164 step=3 K=8 true=8.72713e-10
+OUTER metal mg3 offset=164 step=4 K=8 true=8.65991e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=164 seconds=11.9037 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.65991e-13 PASS
+OUTER metal mg3 offset=168 step=1 K=6 true=0.000553113
+OUTER metal mg3 offset=168 step=2 K=7 true=1.05657e-06
+OUTER metal mg3 offset=168 step=3 K=8 true=8.70091e-10
+OUTER metal mg3 offset=168 step=4 K=8 true=8.63529e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=168 seconds=11.7812 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.63529e-13 PASS
+OUTER metal mg3 offset=172 step=1 K=6 true=0.000552233
+OUTER metal mg3 offset=172 step=2 K=7 true=1.05645e-06
+OUTER metal mg3 offset=172 step=3 K=8 true=8.70383e-10
+OUTER metal mg3 offset=172 step=4 K=8 true=8.6359e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=172 seconds=11.7738 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.6359e-13 PASS
+OUTER metal mg3 offset=176 step=1 K=6 true=0.000553726
+OUTER metal mg3 offset=176 step=2 K=7 true=1.05854e-06
+OUTER metal mg3 offset=176 step=3 K=8 true=8.73368e-10
+OUTER metal mg3 offset=176 step=4 K=8 true=8.69647e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=176 seconds=11.669 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.69647e-13 PASS
+OUTER metal mg3 offset=180 step=1 K=6 true=0.000552878
+OUTER metal mg3 offset=180 step=2 K=7 true=1.05856e-06
+OUTER metal mg3 offset=180 step=3 K=8 true=8.74203e-10
+OUTER metal mg3 offset=180 step=4 K=8 true=8.68051e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=180 seconds=11.7561 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.68051e-13 PASS
+OUTER metal mg3 offset=184 step=1 K=6 true=0.000552404
+OUTER metal mg3 offset=184 step=2 K=7 true=1.06031e-06
+OUTER metal mg3 offset=184 step=3 K=8 true=8.74518e-10
+OUTER metal mg3 offset=184 step=4 K=8 true=8.70106e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=184 seconds=11.7867 outer=4 K=29 fineS=91 c1=206 c2=1003 true=8.70106e-13 PASS
+OUTER metal mg3 offset=188 step=1 K=6 true=0.000553319
+OUTER metal mg3 offset=188 step=2 K=7 true=1.06047e-06
+OUTER metal mg3 offset=188 step=3 K=8 true=8.74051e-10
+OUTER metal mg3 offset=188 step=4 K=8 true=8.66011e-13
+TILE L=32 m=-0.1 metal mg3 trial=0 offset=188 seconds=11.7612 outer=4 K=29 fineS=91 c1=203 c2=986 true=8.66011e-13 PASS
+OUTER warm metal bicgstab step=1 K=13 true=0.00122889
+INNER metal BiCG iteration=64 recursive_relative=0.0492337
+OUTER warm metal bicgstab step=2 K=93 true=1.97308e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0714428
+INNER metal BiCG iteration=128 recursive_relative=0.00197515
+OUTER warm metal bicgstab step=3 K=128 true=3.89724e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0129995
+INNER metal BiCG iteration=128 recursive_relative=0.0082944
+INNER metal BiCG iteration=192 recursive_relative=0.00323091
+OUTER warm metal bicgstab step=4 K=248 true=6.54545e-12
+WARM metal bicgstab done
+OUTER metal bicgstab offset=0 step=1 K=13 true=0.00122889
+INNER metal BiCG iteration=64 recursive_relative=0.0492337
+OUTER metal bicgstab offset=0 step=2 K=93 true=1.97308e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0714428
+INNER metal BiCG iteration=128 recursive_relative=0.00197515
+OUTER metal bicgstab offset=0 step=3 K=128 true=3.89724e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0129995
+INNER metal BiCG iteration=128 recursive_relative=0.0082944
+INNER metal BiCG iteration=192 recursive_relative=0.00323091
+OUTER metal bicgstab offset=0 step=4 K=248 true=6.54545e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=0 seconds=47.1208 outer=4 K=482 fineS=964 c1=0 c2=0 true=6.54545e-12 PASS
+OUTER metal bicgstab offset=4 step=1 K=14 true=0.00129946
+INNER metal BiCG iteration=64 recursive_relative=0.0367986
+OUTER metal bicgstab offset=4 step=2 K=85 true=2.38199e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0474149
+OUTER metal bicgstab offset=4 step=3 K=109 true=4.75449e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0123684
+INNER metal BiCG iteration=128 recursive_relative=0.00338478
+INNER metal BiCG iteration=192 recursive_relative=0.00338153
+INNER metal BiCG iteration=256 recursive_relative=0.00338676
+INNER metal BiCG iteration=320 recursive_relative=0.00355255
+INNER metal BiCG iteration=384 recursive_relative=0.00372745
+INNER metal BiCG iteration=448 recursive_relative=0.00373281
+OUTER metal bicgstab offset=4 step=4 K=472 true=9.13781e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=4 seconds=63.858 outer=4 K=680 fineS=1360 c1=0 c2=0 true=9.13781e-12 PASS
+OUTER metal bicgstab offset=8 step=1 K=12 true=0.00126832
+INNER metal BiCG iteration=64 recursive_relative=0.0232865
+OUTER metal bicgstab offset=8 step=2 K=80 true=1.81531e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00670583
+INNER metal BiCG iteration=128 recursive_relative=0.00296747
+INNER metal BiCG iteration=192 recursive_relative=0.00296228
+INNER metal BiCG iteration=256 recursive_relative=0.0029358
+OUTER metal bicgstab offset=8 step=3 K=312 true=3.05621e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00878218
+INNER metal BiCG iteration=128 recursive_relative=0.0123008
+OUTER metal bicgstab offset=8 step=4 K=170 true=5.9065e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=8 seconds=54.9573 outer=4 K=574 fineS=1148 c1=0 c2=0 true=5.9065e-12 PASS
+OUTER metal bicgstab offset=12 step=1 K=13 true=0.00130349
+INNER metal BiCG iteration=64 recursive_relative=0.0240323
+OUTER metal bicgstab offset=12 step=2 K=86 true=2.11052e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0220096
+OUTER metal bicgstab offset=12 step=3 K=112 true=4.22011e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0119105
+OUTER metal bicgstab offset=12 step=4 K=111 true=7.35205e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=12 seconds=33.4704 outer=4 K=322 fineS=644 c1=0 c2=0 true=7.35205e-12 PASS
+OUTER metal bicgstab offset=16 step=1 K=14 true=0.0011682
+INNER metal BiCG iteration=64 recursive_relative=0.0322335
+OUTER metal bicgstab offset=16 step=2 K=87 true=1.8324e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00545236
+OUTER metal bicgstab offset=16 step=3 K=94 true=3.51419e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00871503
+INNER metal BiCG iteration=128 recursive_relative=0.00331182
+INNER metal BiCG iteration=192 recursive_relative=0.00493237
+OUTER metal bicgstab offset=16 step=4 K=235 true=6.87419e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=16 seconds=43.1527 outer=4 K=430 fineS=860 c1=0 c2=0 true=6.87419e-12 PASS
+OUTER metal bicgstab offset=20 step=1 K=15 true=0.00130651
+INNER metal BiCG iteration=64 recursive_relative=0.0750563
+OUTER metal bicgstab offset=20 step=2 K=79 true=2.22018e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0252464
+INNER metal BiCG iteration=128 recursive_relative=0.00207571
+OUTER metal bicgstab offset=20 step=3 K=133 true=4.42923e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0184949
+INNER metal BiCG iteration=128 recursive_relative=0.00731742
+OUTER metal bicgstab offset=20 step=4 K=161 true=8.31165e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=20 seconds=39.4628 outer=4 K=388 fineS=776 c1=0 c2=0 true=8.31165e-12 PASS
+OUTER metal bicgstab offset=24 step=1 K=13 true=0.00126494
+INNER metal BiCG iteration=64 recursive_relative=0.0232284
+OUTER metal bicgstab offset=24 step=2 K=83 true=2.43763e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00584948
+OUTER metal bicgstab offset=24 step=3 K=119 true=4.31028e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0107517
+INNER metal BiCG iteration=128 recursive_relative=0.00221958
+OUTER metal bicgstab offset=24 step=4 K=129 true=7.96954e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=24 seconds=35.6957 outer=4 K=344 fineS=688 c1=0 c2=0 true=7.96954e-12 PASS
+OUTER metal bicgstab offset=28 step=1 K=20 true=0.00130145
+INNER metal BiCG iteration=64 recursive_relative=0.0365294
+OUTER metal bicgstab offset=28 step=2 K=85 true=2.12961e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00974166
+INNER metal BiCG iteration=128 recursive_relative=0.00222889
+INNER metal BiCG iteration=192 recursive_relative=0.00204753
+INNER metal BiCG iteration=256 recursive_relative=0.00208703
+INNER metal BiCG iteration=320 recursive_relative=0.00216933
+INNER metal BiCG iteration=384 recursive_relative=0.00218001
+INNER metal BiCG iteration=448 recursive_relative=0.00218816
+INNER metal BiCG iteration=512 recursive_relative=0.00218844
+INNER metal BiCG iteration=576 recursive_relative=0.00223588
+OUTER metal bicgstab offset=28 step=3 K=627 true=4.21587e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0116754
+INNER metal BiCG iteration=128 recursive_relative=0.004877
+INNER metal BiCG iteration=192 recursive_relative=0.00192697
+OUTER metal bicgstab offset=28 step=4 K=192 true=8.12411e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=28 seconds=85.5829 outer=4 K=924 fineS=1848 c1=0 c2=0 true=8.12411e-12 PASS
+OUTER metal bicgstab offset=32 step=1 K=16 true=0.00128541
+INNER metal BiCG iteration=64 recursive_relative=0.406916
+OUTER metal bicgstab offset=32 step=2 K=82 true=2.52135e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00591879
+INNER metal BiCG iteration=128 recursive_relative=0.00206683
+OUTER metal bicgstab offset=32 step=3 K=145 true=4.91251e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0292906
+INNER metal BiCG iteration=128 recursive_relative=0.00903854
+OUTER metal bicgstab offset=32 step=4 K=186 true=7.3437e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=32 seconds=43.2319 outer=4 K=429 fineS=858 c1=0 c2=0 true=7.3437e-12 PASS
+OUTER metal bicgstab offset=36 step=1 K=12 true=0.00130281
+INNER metal BiCG iteration=64 recursive_relative=0.13759
+OUTER metal bicgstab offset=36 step=2 K=85 true=2.43945e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00526695
+INNER metal BiCG iteration=128 recursive_relative=0.00349233
+OUTER metal bicgstab offset=36 step=3 K=174 true=4.45392e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00749387
+OUTER metal bicgstab offset=36 step=4 K=100 true=7.62624e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=36 seconds=37.8593 outer=4 K=371 fineS=742 c1=0 c2=0 true=7.62624e-12 PASS
+OUTER metal bicgstab offset=40 step=1 K=14 true=0.00118627
+INNER metal BiCG iteration=64 recursive_relative=0.803971
+OUTER metal bicgstab offset=40 step=2 K=81 true=2.10311e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00477706
+OUTER metal bicgstab offset=40 step=3 K=86 true=4.11468e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0161289
+INNER metal BiCG iteration=128 recursive_relative=0.00429813
+INNER metal BiCG iteration=192 recursive_relative=0.00447249
+INNER metal BiCG iteration=256 recursive_relative=0.00608148
+INNER metal BiCG iteration=320 recursive_relative=0.00615741
+INNER metal BiCG iteration=384 recursive_relative=0.00612992
+INNER metal BiCG iteration=448 recursive_relative=0.00626474
+OUTER metal bicgstab offset=40 step=4 K=475 true=5.95723e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=40 seconds=61.4866 outer=4 K=656 fineS=1312 c1=0 c2=0 true=5.95723e-12 PASS
+OUTER metal bicgstab offset=44 step=1 K=13 true=0.0012559
+INNER metal BiCG iteration=64 recursive_relative=0.053595
+OUTER metal bicgstab offset=44 step=2 K=79 true=2.24169e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00538001
+OUTER metal bicgstab offset=44 step=3 K=103 true=4.33277e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00909417
+INNER metal BiCG iteration=128 recursive_relative=0.00414243
+OUTER metal bicgstab offset=44 step=4 K=140 true=8.0466e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=44 seconds=34.279 outer=4 K=335 fineS=670 c1=0 c2=0 true=8.0466e-12 PASS
+OUTER metal bicgstab offset=48 step=1 K=16 true=0.00128454
+INNER metal BiCG iteration=64 recursive_relative=0.0742316
+OUTER metal bicgstab offset=48 step=2 K=88 true=2.51486e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0241698
+INNER metal BiCG iteration=128 recursive_relative=0.00213254
+OUTER metal bicgstab offset=48 step=3 K=131 true=4.59161e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0697399
+INNER metal BiCG iteration=128 recursive_relative=0.00414179
+INNER metal BiCG iteration=192 recursive_relative=0.00398318
+INNER metal BiCG iteration=256 recursive_relative=0.00320236
+INNER metal BiCG iteration=320 recursive_relative=0.0028411
+OUTER metal bicgstab offset=48 step=4 K=358 true=6.88908e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=48 seconds=56.5841 outer=4 K=593 fineS=1186 c1=0 c2=0 true=6.88908e-12 PASS
+OUTER metal bicgstab offset=52 step=1 K=12 true=0.00129268
+INNER metal BiCG iteration=64 recursive_relative=0.0199427
+OUTER metal bicgstab offset=52 step=2 K=78 true=2.39202e-06
+INNER metal BiCG iteration=64 recursive_relative=0.265081
+OUTER metal bicgstab offset=52 step=3 K=106 true=4.7303e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0141719
+OUTER metal bicgstab offset=52 step=4 K=119 true=9.33567e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=52 seconds=32.425 outer=4 K=315 fineS=630 c1=0 c2=0 true=9.33567e-12 PASS
+OUTER metal bicgstab offset=56 step=1 K=13 true=0.00118127
+INNER metal BiCG iteration=64 recursive_relative=0.0393636
+OUTER metal bicgstab offset=56 step=2 K=89 true=2.24056e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00596492
+INNER metal BiCG iteration=128 recursive_relative=0.00298419
+INNER metal BiCG iteration=192 recursive_relative=0.00295504
+INNER metal BiCG iteration=256 recursive_relative=0.00298998
+INNER metal BiCG iteration=320 recursive_relative=0.006362
+INNER metal BiCG iteration=384 recursive_relative=0.041629
+INNER metal BiCG iteration=448 recursive_relative=0.0379356
+OUTER metal bicgstab offset=56 step=3 K=496 true=3.35634e-09
+INNER metal BiCG iteration=64 recursive_relative=0.018856
+INNER metal BiCG iteration=128 recursive_relative=0.00345993
+INNER metal BiCG iteration=192 recursive_relative=0.0031067
+INNER metal BiCG iteration=256 recursive_relative=0.00316256
+OUTER metal bicgstab offset=56 step=4 K=276 true=6.47482e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=56 seconds=80.2456 outer=4 K=874 fineS=1748 c1=0 c2=0 true=6.47482e-12 PASS
+OUTER metal bicgstab offset=60 step=1 K=13 true=0.00129009
+INNER metal BiCG iteration=64 recursive_relative=0.0288723
+OUTER metal bicgstab offset=60 step=2 K=90 true=2.38555e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00962448
+INNER metal BiCG iteration=128 recursive_relative=0.00357974
+OUTER metal bicgstab offset=60 step=3 K=133 true=4.68742e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0159466
+INNER metal BiCG iteration=128 recursive_relative=0.0177183
+INNER metal BiCG iteration=192 recursive_relative=0.0164143
+OUTER metal bicgstab offset=60 step=4 K=224 true=8.94739e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=60 seconds=44.8019 outer=4 K=460 fineS=920 c1=0 c2=0 true=8.94739e-12 PASS
+OUTER metal bicgstab offset=64 step=1 K=11 true=0.0012692
+INNER metal BiCG iteration=64 recursive_relative=0.0246733
+OUTER metal bicgstab offset=64 step=2 K=78 true=2.02473e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00808524
+OUTER metal bicgstab offset=64 step=3 K=81 true=4.02812e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00622232
+INNER metal BiCG iteration=128 recursive_relative=0.00761165
+OUTER metal bicgstab offset=64 step=4 K=151 true=7.75303e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=64 seconds=32.8708 outer=4 K=321 fineS=642 c1=0 c2=0 true=7.75303e-12 PASS
+OUTER metal bicgstab offset=68 step=1 K=14 true=0.00121808
+INNER metal BiCG iteration=64 recursive_relative=0.0508327
+OUTER metal bicgstab offset=68 step=2 K=90 true=2.31176e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00573386
+OUTER metal bicgstab offset=68 step=3 K=115 true=4.56279e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0621799
+INNER metal BiCG iteration=128 recursive_relative=0.00816126
+INNER metal BiCG iteration=192 recursive_relative=0.00701079
+OUTER metal bicgstab offset=68 step=4 K=249 true=8.22096e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=68 seconds=45.4742 outer=4 K=468 fineS=936 c1=0 c2=0 true=8.22096e-12 PASS
+OUTER metal bicgstab offset=72 step=1 K=14 true=0.00128898
+INNER metal BiCG iteration=64 recursive_relative=0.0459568
+OUTER metal bicgstab offset=72 step=2 K=77 true=2.5308e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0107836
+OUTER metal bicgstab offset=72 step=3 K=102 true=4.95967e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00911693
+INNER metal BiCG iteration=128 recursive_relative=0.010931
+OUTER metal bicgstab offset=72 step=4 K=136 true=6.92836e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=72 seconds=33.6667 outer=4 K=329 fineS=658 c1=0 c2=0 true=6.92836e-12 PASS
+OUTER metal bicgstab offset=76 step=1 K=13 true=0.00130211
+INNER metal BiCG iteration=64 recursive_relative=0.0358195
+OUTER metal bicgstab offset=76 step=2 K=91 true=2.36383e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00953607
+INNER metal BiCG iteration=128 recursive_relative=0.00238594
+INNER metal BiCG iteration=192 recursive_relative=0.00516441
+INNER metal BiCG iteration=256 recursive_relative=0.00290516
+INNER metal BiCG iteration=320 recursive_relative=0.00289802
+INNER metal BiCG iteration=384 recursive_relative=0.00288501
+INNER metal BiCG iteration=448 recursive_relative=0.00294859
+INNER metal BiCG iteration=512 recursive_relative=0.00290682
+INNER metal BiCG iteration=576 recursive_relative=0.002942
+INNER metal BiCG iteration=640 recursive_relative=0.00307089
+INNER metal BiCG iteration=704 recursive_relative=0.00309393
+OUTER metal bicgstab offset=76 step=3 K=757 true=4.51773e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0102464
+INNER metal BiCG iteration=128 recursive_relative=0.00256702
+OUTER metal bicgstab offset=76 step=4 K=142 true=7.79758e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=76 seconds=91.3325 outer=4 K=1003 fineS=2006 c1=0 c2=0 true=7.79758e-12 PASS
+OUTER metal bicgstab offset=80 step=1 K=16 true=0.00123492
+INNER metal BiCG iteration=64 recursive_relative=0.0437397
+OUTER metal bicgstab offset=80 step=2 K=86 true=2.12669e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0129088
+OUTER metal bicgstab offset=80 step=3 K=121 true=3.97186e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0123543
+INNER metal BiCG iteration=128 recursive_relative=0.00348853
+INNER metal BiCG iteration=192 recursive_relative=0.00317859
+OUTER metal bicgstab offset=80 step=4 K=252 true=6.42505e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=80 seconds=46.2069 outer=4 K=475 fineS=950 c1=0 c2=0 true=6.42505e-12 PASS
+OUTER metal bicgstab offset=84 step=1 K=14 true=0.00128478
+INNER metal BiCG iteration=64 recursive_relative=0.0825956
+OUTER metal bicgstab offset=84 step=2 K=79 true=2.42072e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00409784
+OUTER metal bicgstab offset=84 step=3 K=83 true=4.2015e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0122099
+OUTER metal bicgstab offset=84 step=4 K=116 true=7.91785e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=84 seconds=30.5193 outer=4 K=292 fineS=584 c1=0 c2=0 true=7.91785e-12 PASS
+OUTER metal bicgstab offset=88 step=1 K=16 true=0.00112381
+INNER metal BiCG iteration=64 recursive_relative=0.0705075
+OUTER metal bicgstab offset=88 step=2 K=86 true=2.2255e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0374857
+INNER metal BiCG iteration=128 recursive_relative=0.00212534
+OUTER metal bicgstab offset=88 step=3 K=129 true=4.01606e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0157636
+OUTER metal bicgstab offset=88 step=4 K=126 true=7.25724e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=88 seconds=36.0603 outer=4 K=357 fineS=714 c1=0 c2=0 true=7.25724e-12 PASS
+OUTER metal bicgstab offset=92 step=1 K=14 true=0.00127003
+INNER metal BiCG iteration=64 recursive_relative=0.018088
+OUTER metal bicgstab offset=92 step=2 K=88 true=2.10766e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00813874
+OUTER metal bicgstab offset=92 step=3 K=113 true=4.1818e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00874233
+OUTER metal bicgstab offset=92 step=4 K=123 true=8.04819e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=92 seconds=34.3461 outer=4 K=338 fineS=676 c1=0 c2=0 true=8.04819e-12 PASS
+OUTER metal bicgstab offset=96 step=1 K=15 true=0.00116302
+INNER metal BiCG iteration=64 recursive_relative=0.0673565
+OUTER metal bicgstab offset=96 step=2 K=87 true=2.30397e-06
+INNER metal BiCG iteration=64 recursive_relative=0.019969
+INNER metal BiCG iteration=128 recursive_relative=0.00234195
+OUTER metal bicgstab offset=96 step=3 K=145 true=4.53151e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0079507
+INNER metal BiCG iteration=128 recursive_relative=0.00287257
+OUTER metal bicgstab offset=96 step=4 K=158 true=8.21281e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=96 seconds=40.2148 outer=4 K=405 fineS=810 c1=0 c2=0 true=8.21281e-12 PASS
+OUTER metal bicgstab offset=100 step=1 K=13 true=0.00127264
+INNER metal BiCG iteration=64 recursive_relative=0.0738035
+OUTER metal bicgstab offset=100 step=2 K=82 true=2.07605e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00453947
+INNER metal BiCG iteration=128 recursive_relative=0.00310025
+OUTER metal bicgstab offset=100 step=3 K=129 true=3.67625e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00859105
+INNER metal BiCG iteration=128 recursive_relative=0.00372007
+OUTER metal bicgstab offset=100 step=4 K=157 true=5.72586e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=100 seconds=38.064 outer=4 K=381 fineS=762 c1=0 c2=0 true=5.72586e-12 PASS
+OUTER metal bicgstab offset=104 step=1 K=15 true=0.0011942
+INNER metal BiCG iteration=64 recursive_relative=0.0592858
+OUTER metal bicgstab offset=104 step=2 K=90 true=2.37971e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0158787
+INNER metal BiCG iteration=128 recursive_relative=0.00345639
+OUTER metal bicgstab offset=104 step=3 K=144 true=4.29746e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00581726
+INNER metal BiCG iteration=128 recursive_relative=0.00368082
+OUTER metal bicgstab offset=104 step=4 K=166 true=6.89822e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=104 seconds=41.0373 outer=4 K=415 fineS=830 c1=0 c2=0 true=6.89822e-12 PASS
+OUTER metal bicgstab offset=108 step=1 K=13 true=0.00125419
+INNER metal BiCG iteration=64 recursive_relative=0.128604
+OUTER metal bicgstab offset=108 step=2 K=81 true=2.22917e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0282687
+INNER metal BiCG iteration=128 recursive_relative=0.00251916
+INNER metal BiCG iteration=192 recursive_relative=0.00222861
+INNER metal BiCG iteration=256 recursive_relative=0.00221564
+INNER metal BiCG iteration=320 recursive_relative=0.00224456
+OUTER metal bicgstab offset=108 step=3 K=331 true=4.16992e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0089711
+OUTER metal bicgstab offset=108 step=4 K=104 true=7.92086e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=108 seconds=50.535 outer=4 K=529 fineS=1058 c1=0 c2=0 true=7.92086e-12 PASS
+OUTER metal bicgstab offset=112 step=1 K=15 true=0.00126697
+INNER metal BiCG iteration=64 recursive_relative=0.0531699
+OUTER metal bicgstab offset=112 step=2 K=93 true=1.98814e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00574371
+OUTER metal bicgstab offset=112 step=3 K=96 true=3.93721e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00819041
+INNER metal BiCG iteration=128 recursive_relative=0.00585246
+INNER metal BiCG iteration=192 recursive_relative=0.00251566
+OUTER metal bicgstab offset=112 step=4 K=240 true=7.81453e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=112 seconds=43.4998 outer=4 K=444 fineS=888 c1=0 c2=0 true=7.81453e-12 PASS
+OUTER metal bicgstab offset=116 step=1 K=14 true=0.0013147
+INNER metal BiCG iteration=64 recursive_relative=0.0427638
+OUTER metal bicgstab offset=116 step=2 K=82 true=2.17474e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0178169
+INNER metal BiCG iteration=128 recursive_relative=0.00419663
+OUTER metal bicgstab offset=116 step=3 K=153 true=3.9776e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0222235
+OUTER metal bicgstab offset=116 step=4 K=113 true=6.59464e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=116 seconds=36.5039 outer=4 K=362 fineS=724 c1=0 c2=0 true=6.59464e-12 PASS
+OUTER metal bicgstab offset=120 step=1 K=14 true=0.00129752
+INNER metal BiCG iteration=64 recursive_relative=0.0208254
+OUTER metal bicgstab offset=120 step=2 K=82 true=2.05264e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00417724
+OUTER metal bicgstab offset=120 step=3 K=93 true=3.92021e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00839773
+OUTER metal bicgstab offset=120 step=4 K=122 true=7.03883e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=120 seconds=32.1402 outer=4 K=311 fineS=622 c1=0 c2=0 true=7.03883e-12 PASS
+OUTER metal bicgstab offset=124 step=1 K=15 true=0.0013151
+INNER metal BiCG iteration=64 recursive_relative=0.0284418
+OUTER metal bicgstab offset=124 step=2 K=85 true=2.35001e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0140765
+OUTER metal bicgstab offset=124 step=3 K=114 true=4.50652e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0270779
+OUTER metal bicgstab offset=124 step=4 K=96 true=8.67585e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=124 seconds=32.0385 outer=4 K=310 fineS=620 c1=0 c2=0 true=8.67585e-12 PASS
+OUTER metal bicgstab offset=128 step=1 K=12 true=0.00126764
+INNER metal BiCG iteration=64 recursive_relative=0.0214374
+OUTER metal bicgstab offset=128 step=2 K=82 true=2.16904e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0268723
+OUTER metal bicgstab offset=128 step=3 K=93 true=4.30855e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0183403
+INNER metal BiCG iteration=128 recursive_relative=0.00285529
+INNER metal BiCG iteration=192 recursive_relative=0.00225237
+OUTER metal bicgstab offset=128 step=4 K=246 true=7.84714e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=128 seconds=42.6649 outer=4 K=433 fineS=866 c1=0 c2=0 true=7.84714e-12 PASS
+OUTER metal bicgstab offset=132 step=1 K=16 true=0.00130639
+INNER metal BiCG iteration=64 recursive_relative=0.0269541
+OUTER metal bicgstab offset=132 step=2 K=78 true=2.22513e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00455799
+OUTER metal bicgstab offset=132 step=3 K=114 true=4.38009e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0165331
+OUTER metal bicgstab offset=132 step=4 K=103 true=7.95469e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=132 seconds=32.1311 outer=4 K=311 fineS=622 c1=0 c2=0 true=7.95469e-12 PASS
+OUTER metal bicgstab offset=136 step=1 K=17 true=0.00129327
+INNER metal BiCG iteration=64 recursive_relative=0.0212409
+OUTER metal bicgstab offset=136 step=2 K=79 true=2.21089e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00439936
+OUTER metal bicgstab offset=136 step=3 K=116 true=3.7276e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00752772
+INNER metal BiCG iteration=128 recursive_relative=0.00288182
+OUTER metal bicgstab offset=136 step=4 K=140 true=7.00296e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=136 seconds=35.5908 outer=4 K=352 fineS=704 c1=0 c2=0 true=7.00296e-12 PASS
+OUTER metal bicgstab offset=140 step=1 K=15 true=0.00125593
+INNER metal BiCG iteration=64 recursive_relative=0.139229
+OUTER metal bicgstab offset=140 step=2 K=83 true=2.27573e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0040954
+OUTER metal bicgstab offset=140 step=3 K=108 true=4.39481e-09
+INNER metal BiCG iteration=64 recursive_relative=0.016283
+INNER metal BiCG iteration=128 recursive_relative=0.00409657
+OUTER metal bicgstab offset=140 step=4 K=129 true=7.91581e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=140 seconds=34.1771 outer=4 K=335 fineS=670 c1=0 c2=0 true=7.91581e-12 PASS
+OUTER metal bicgstab offset=144 step=1 K=14 true=0.0013022
+INNER metal BiCG iteration=64 recursive_relative=0.0180836
+OUTER metal bicgstab offset=144 step=2 K=81 true=2.31352e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0271822
+OUTER metal bicgstab offset=144 step=3 K=79 true=4.54076e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00624043
+INNER metal BiCG iteration=128 recursive_relative=0.00314139
+OUTER metal bicgstab offset=144 step=4 K=180 true=8.52472e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=144 seconds=35.7327 outer=4 K=354 fineS=708 c1=0 c2=0 true=8.52472e-12 PASS
+OUTER metal bicgstab offset=148 step=1 K=13 true=0.0011837
+INNER metal BiCG iteration=64 recursive_relative=0.0804757
+OUTER metal bicgstab offset=148 step=2 K=80 true=1.69409e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0148544
+OUTER metal bicgstab offset=148 step=3 K=94 true=3.26249e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00683616
+INNER metal BiCG iteration=128 recursive_relative=0.00752256
+INNER metal BiCG iteration=192 recursive_relative=0.00318106
+INNER metal BiCG iteration=256 recursive_relative=0.00271313
+OUTER metal bicgstab offset=148 step=4 K=319 true=5.93432e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=148 seconds=48.7874 outer=4 K=506 fineS=1012 c1=0 c2=0 true=5.93432e-12 PASS
+OUTER metal bicgstab offset=152 step=1 K=14 true=0.00127898
+INNER metal BiCG iteration=64 recursive_relative=0.0329456
+OUTER metal bicgstab offset=152 step=2 K=84 true=2.55094e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0144711
+INNER metal BiCG iteration=128 recursive_relative=0.0024693
+INNER metal BiCG iteration=192 recursive_relative=0.00246298
+OUTER metal bicgstab offset=152 step=3 K=218 true=4.80775e-09
+INNER metal BiCG iteration=64 recursive_relative=0.007917
+OUTER metal bicgstab offset=152 step=4 K=122 true=8.30271e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=152 seconds=42.8565 outer=4 K=438 fineS=876 c1=0 c2=0 true=8.30271e-12 PASS
+OUTER metal bicgstab offset=156 step=1 K=12 true=0.00128379
+INNER metal BiCG iteration=64 recursive_relative=0.0219566
+OUTER metal bicgstab offset=156 step=2 K=79 true=2.33418e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00723664
+OUTER metal bicgstab offset=156 step=3 K=104 true=4.42247e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00691331
+INNER metal BiCG iteration=128 recursive_relative=0.00435767
+INNER metal BiCG iteration=192 recursive_relative=0.00416723
+INNER metal BiCG iteration=256 recursive_relative=0.00419663
+INNER metal BiCG iteration=320 recursive_relative=0.00421515
+OUTER metal bicgstab offset=156 step=4 K=362 true=8.80768e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=156 seconds=53.1886 outer=4 K=557 fineS=1114 c1=0 c2=0 true=8.80768e-12 PASS
+OUTER metal bicgstab offset=160 step=1 K=14 true=0.00129202
+INNER metal BiCG iteration=64 recursive_relative=0.0638578
+OUTER metal bicgstab offset=160 step=2 K=91 true=2.15223e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00485375
+OUTER metal bicgstab offset=160 step=3 K=99 true=4.20596e-09
+INNER metal BiCG iteration=64 recursive_relative=0.01003
+INNER metal BiCG iteration=128 recursive_relative=0.00243199
+INNER metal BiCG iteration=192 recursive_relative=0.0024483
+INNER metal BiCG iteration=256 recursive_relative=0.00251652
+INNER metal BiCG iteration=320 recursive_relative=0.00215224
+OUTER metal bicgstab offset=160 step=4 K=369 true=7.88701e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=160 seconds=54.5445 outer=4 K=573 fineS=1146 c1=0 c2=0 true=7.88701e-12 PASS
+OUTER metal bicgstab offset=164 step=1 K=12 true=0.00121224
+INNER metal BiCG iteration=64 recursive_relative=0.0568602
+OUTER metal bicgstab offset=164 step=2 K=87 true=2.35676e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0110568
+INNER metal BiCG iteration=128 recursive_relative=0.00224647
+INNER metal BiCG iteration=192 recursive_relative=0.00231348
+OUTER metal bicgstab offset=164 step=3 K=211 true=4.24406e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0172736
+INNER metal BiCG iteration=128 recursive_relative=0.00502378
+INNER metal BiCG iteration=192 recursive_relative=0.00567035
+OUTER metal bicgstab offset=164 step=4 K=225 true=8.486e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=164 seconds=51.2198 outer=4 K=535 fineS=1070 c1=0 c2=0 true=8.486e-12 PASS
+OUTER metal bicgstab offset=168 step=1 K=13 true=0.00130115
+INNER metal BiCG iteration=64 recursive_relative=0.0344749
+OUTER metal bicgstab offset=168 step=2 K=85 true=2.32267e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00593925
+OUTER metal bicgstab offset=168 step=3 K=103 true=4.25776e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0436366
+OUTER metal bicgstab offset=168 step=4 K=121 true=7.08527e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=168 seconds=33.0236 outer=4 K=322 fineS=644 c1=0 c2=0 true=7.08527e-12 PASS
+OUTER metal bicgstab offset=172 step=1 K=14 true=0.00127963
+INNER metal BiCG iteration=64 recursive_relative=0.0287016
+OUTER metal bicgstab offset=172 step=2 K=83 true=2.12278e-06
+INNER metal BiCG iteration=64 recursive_relative=0.0123172
+OUTER metal bicgstab offset=172 step=3 K=100 true=4.05631e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00823529
+INNER metal BiCG iteration=128 recursive_relative=0.00487497
+INNER metal BiCG iteration=192 recursive_relative=0.00250823
+OUTER metal bicgstab offset=172 step=4 K=210 true=8.03675e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=172 seconds=40.2913 outer=4 K=407 fineS=814 c1=0 c2=0 true=8.03675e-12 PASS
+OUTER metal bicgstab offset=176 step=1 K=15 true=0.00120535
+INNER metal BiCG iteration=64 recursive_relative=0.0385982
+OUTER metal bicgstab offset=176 step=2 K=88 true=2.3908e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00534901
+INNER metal BiCG iteration=128 recursive_relative=0.00271
+OUTER metal bicgstab offset=176 step=3 K=182 true=4.6742e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0119537
+INNER metal BiCG iteration=128 recursive_relative=0.00476426
+OUTER metal bicgstab offset=176 step=4 K=143 true=9.14681e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=176 seconds=42.1489 outer=4 K=428 fineS=856 c1=0 c2=0 true=9.14681e-12 PASS
+OUTER metal bicgstab offset=180 step=1 K=14 true=0.00128959
+INNER metal BiCG iteration=64 recursive_relative=0.030006
+OUTER metal bicgstab offset=180 step=2 K=99 true=2.49277e-06
+INNER metal BiCG iteration=64 recursive_relative=0.012974
+OUTER metal bicgstab offset=180 step=3 K=105 true=4.78494e-09
+INNER metal BiCG iteration=64 recursive_relative=0.00902879
+INNER metal BiCG iteration=128 recursive_relative=0.00526199
+INNER metal BiCG iteration=192 recursive_relative=0.00378603
+INNER metal BiCG iteration=256 recursive_relative=0.00375911
+INNER metal BiCG iteration=320 recursive_relative=0.00385438
+INNER metal BiCG iteration=384 recursive_relative=0.0057527
+OUTER metal bicgstab offset=180 step=4 K=386 true=7.2583e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=180 seconds=57.1826 outer=4 K=604 fineS=1208 c1=0 c2=0 true=7.2583e-12 PASS
+OUTER metal bicgstab offset=184 step=1 K=12 true=0.0013133
+INNER metal BiCG iteration=64 recursive_relative=0.0399713
+OUTER metal bicgstab offset=184 step=2 K=81 true=2.46722e-06
+INNER metal BiCG iteration=64 recursive_relative=0.00467958
+OUTER metal bicgstab offset=184 step=3 K=116 true=4.86985e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0101202
+OUTER metal bicgstab offset=184 step=4 K=117 true=7.89912e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=184 seconds=33.4335 outer=4 K=326 fineS=652 c1=0 c2=0 true=7.89912e-12 PASS
+OUTER metal bicgstab offset=188 step=1 K=13 true=0.00129559
+INNER metal BiCG iteration=64 recursive_relative=0.0252671
+OUTER metal bicgstab offset=188 step=2 K=79 true=2.11839e-06
+INNER metal BiCG iteration=64 recursive_relative=0.010954
+INNER metal BiCG iteration=128 recursive_relative=0.00232741
+OUTER metal bicgstab offset=188 step=3 K=154 true=4.11257e-09
+INNER metal BiCG iteration=64 recursive_relative=0.0153303
+OUTER metal bicgstab offset=188 step=4 K=110 true=8.18416e-12
+TILE L=32 m=-0.1 metal bicgstab trial=0 offset=188 seconds=35.8704 outer=4 K=356 fineS=712 c1=0 c2=0 true=8.18416e-12 PASS
+OUTER warm metal smooth step=1 K=9 true=0.00121283
+INNER metal smooth iteration=64 fp32_relative=0.0192722
+INNER metal smooth iteration=128 fp32_relative=0.00527299
+OUTER warm metal smooth step=2 K=177 true=2.4211e-06
+INNER metal smooth iteration=64 fp32_relative=0.278982
+INNER metal smooth iteration=128 fp32_relative=0.07823
+INNER metal smooth iteration=192 fp32_relative=0.0220002
+INNER metal smooth iteration=256 fp32_relative=0.00620046
+OUTER warm metal smooth step=3 K=314 true=4.78223e-09
+INNER metal smooth iteration=64 fp32_relative=0.225772
+INNER metal smooth iteration=128 fp32_relative=0.0592853
+INNER metal smooth iteration=192 fp32_relative=0.0157199
+INNER metal smooth iteration=256 fp32_relative=0.00418066
+OUTER warm metal smooth step=4 K=293 true=9.45328e-12
+WARM metal smooth done
+OUTER metal smooth offset=0 step=1 K=9 true=0.00121283
+INNER metal smooth iteration=64 fp32_relative=0.0192722
+INNER metal smooth iteration=128 fp32_relative=0.00527299
+OUTER metal smooth offset=0 step=2 K=177 true=2.4211e-06
+INNER metal smooth iteration=64 fp32_relative=0.278982
+INNER metal smooth iteration=128 fp32_relative=0.07823
+INNER metal smooth iteration=192 fp32_relative=0.0220002
+INNER metal smooth iteration=256 fp32_relative=0.00620046
+OUTER metal smooth offset=0 step=3 K=314 true=4.78223e-09
+INNER metal smooth iteration=64 fp32_relative=0.225772
+INNER metal smooth iteration=128 fp32_relative=0.0592853
+INNER metal smooth iteration=192 fp32_relative=0.0157199
+INNER metal smooth iteration=256 fp32_relative=0.00418066
+OUTER metal smooth offset=0 step=4 K=293 true=9.45328e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=0 seconds=74.3391 outer=4 K=793 fineS=1688 c1=0 c2=0 true=9.45328e-12 PASS
+OUTER metal smooth offset=4 step=1 K=9 true=0.00120939
+INNER metal smooth iteration=64 fp32_relative=0.017339
+INNER metal smooth iteration=128 fp32_relative=0.00474218
+OUTER metal smooth offset=4 step=2 K=172 true=2.38163e-06
+INNER metal smooth iteration=64 fp32_relative=0.162771
+INNER metal smooth iteration=128 fp32_relative=0.0317445
+INNER metal smooth iteration=192 fp32_relative=0.00689635
+OUTER metal smooth offset=4 step=3 K=246 true=4.69955e-09
+INNER metal smooth iteration=64 fp32_relative=0.261808
+INNER metal smooth iteration=128 fp32_relative=0.0737924
+INNER metal smooth iteration=192 fp32_relative=0.0209011
+INNER metal smooth iteration=256 fp32_relative=0.0059425
+OUTER metal smooth offset=4 step=4 K=312 true=9.38467e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=4 seconds=69.4719 outer=4 K=739 fineS=1572 c1=0 c2=0 true=9.38467e-12 PASS
+OUTER metal smooth offset=8 step=1 K=9 true=0.00120622
+INNER metal smooth iteration=64 fp32_relative=0.0155384
+INNER metal smooth iteration=128 fp32_relative=0.00428408
+OUTER metal smooth offset=8 step=2 K=167 true=2.39798e-06
+INNER metal smooth iteration=64 fp32_relative=0.217163
+INNER metal smooth iteration=128 fp32_relative=0.0487233
+INNER metal smooth iteration=192 fp32_relative=0.0111495
+INNER metal smooth iteration=256 fp32_relative=0.00259463
+OUTER metal smooth offset=8 step=3 K=267 true=4.76305e-09
+INNER metal smooth iteration=64 fp32_relative=0.233427
+INNER metal smooth iteration=128 fp32_relative=0.0595283
+INNER metal smooth iteration=192 fp32_relative=0.0157869
+INNER metal smooth iteration=256 fp32_relative=0.00421624
+OUTER metal smooth offset=8 step=4 K=293 true=9.33658e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=8 seconds=68.8411 outer=4 K=736 fineS=1566 c1=0 c2=0 true=9.33658e-12 PASS
+OUTER metal smooth offset=12 step=1 K=9 true=0.00120749
+INNER metal smooth iteration=64 fp32_relative=0.0194132
+INNER metal smooth iteration=128 fp32_relative=0.00529642
+OUTER metal smooth offset=12 step=2 K=178 true=2.37406e-06
+INNER metal smooth iteration=64 fp32_relative=0.283056
+INNER metal smooth iteration=128 fp32_relative=0.080488
+INNER metal smooth iteration=192 fp32_relative=0.0229631
+INNER metal smooth iteration=256 fp32_relative=0.00656218
+OUTER metal smooth offset=12 step=3 K=317 true=4.7194e-09
+INNER metal smooth iteration=64 fp32_relative=0.168814
+INNER metal smooth iteration=128 fp32_relative=0.0288608
+INNER metal smooth iteration=192 fp32_relative=0.00499024
+OUTER metal smooth offset=12 step=4 K=228 true=9.32189e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=12 seconds=68.5372 outer=4 K=732 fineS=1558 c1=0 c2=0 true=9.32189e-12 PASS
+OUTER metal smooth offset=16 step=1 K=9 true=0.00121677
+INNER metal smooth iteration=64 fp32_relative=0.0166712
+INNER metal smooth iteration=128 fp32_relative=0.00457847
+OUTER metal smooth offset=16 step=2 K=170 true=2.40407e-06
+INNER metal smooth iteration=64 fp32_relative=0.0977678
+INNER metal smooth iteration=128 fp32_relative=0.010375
+OUTER metal smooth offset=16 step=3 K=184 true=4.77181e-09
+INNER metal smooth iteration=64 fp32_relative=0.1509
+INNER metal smooth iteration=128 fp32_relative=0.02328
+INNER metal smooth iteration=192 fp32_relative=0.00364605
+OUTER metal smooth offset=16 step=4 K=212 true=9.35683e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=16 seconds=55.0707 outer=4 K=575 fineS=1224 c1=0 c2=0 true=9.35683e-12 PASS
+OUTER metal smooth offset=20 step=1 K=9 true=0.00121122
+INNER metal smooth iteration=64 fp32_relative=0.018502
+INNER metal smooth iteration=128 fp32_relative=0.00509894
+OUTER metal smooth offset=20 step=2 K=176 true=2.4048e-06
+INNER metal smooth iteration=64 fp32_relative=0.283271
+INNER metal smooth iteration=128 fp32_relative=0.0805978
+INNER metal smooth iteration=192 fp32_relative=0.0230064
+INNER metal smooth iteration=256 fp32_relative=0.00658013
+OUTER metal smooth offset=20 step=3 K=318 true=4.75473e-09
+INNER metal smooth iteration=64 fp32_relative=0.151576
+INNER metal smooth iteration=128 fp32_relative=0.0234067
+INNER metal smooth iteration=192 fp32_relative=0.00365818
+OUTER metal smooth offset=20 step=4 K=212 true=9.48188e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=20 seconds=67.0781 outer=4 K=715 fineS=1521 c1=0 c2=0 true=9.48188e-12 PASS
+OUTER metal smooth offset=24 step=1 K=9 true=0.00121614
+INNER metal smooth iteration=64 fp32_relative=0.0153031
+INNER metal smooth iteration=128 fp32_relative=0.00414382
+OUTER metal smooth offset=24 step=2 K=165 true=2.41294e-06
+INNER metal smooth iteration=64 fp32_relative=0.160661
+INNER metal smooth iteration=128 fp32_relative=0.0311772
+INNER metal smooth iteration=192 fp32_relative=0.00675551
+OUTER metal smooth offset=24 step=3 K=245 true=4.72774e-09
+INNER metal smooth iteration=64 fp32_relative=0.225502
+INNER metal smooth iteration=128 fp32_relative=0.0590028
+INNER metal smooth iteration=192 fp32_relative=0.0156072
+INNER metal smooth iteration=256 fp32_relative=0.00413952
+OUTER metal smooth offset=24 step=4 K=293 true=9.34157e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=24 seconds=67.1762 outer=4 K=712 fineS=1515 c1=0 c2=0 true=9.34157e-12 PASS
+OUTER metal smooth offset=28 step=1 K=9 true=0.00120969
+INNER metal smooth iteration=64 fp32_relative=0.0163964
+INNER metal smooth iteration=128 fp32_relative=0.00448806
+OUTER metal smooth offset=28 step=2 K=169 true=2.40773e-06
+INNER metal smooth iteration=64 fp32_relative=0.216889
+INNER metal smooth iteration=128 fp32_relative=0.0485049
+INNER metal smooth iteration=192 fp32_relative=0.0110496
+INNER metal smooth iteration=256 fp32_relative=0.00256044
+OUTER metal smooth offset=28 step=3 K=266 true=4.79998e-09
+INNER metal smooth iteration=64 fp32_relative=0.24898
+INNER metal smooth iteration=128 fp32_relative=0.0656393
+INNER metal smooth iteration=192 fp32_relative=0.0176932
+INNER metal smooth iteration=256 fp32_relative=0.00481827
+OUTER metal smooth offset=28 step=4 K=300 true=9.41788e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=28 seconds=69.8896 outer=4 K=744 fineS=1584 c1=0 c2=0 true=9.41788e-12 PASS
+OUTER metal smooth offset=32 step=1 K=9 true=0.00121679
+INNER metal smooth iteration=64 fp32_relative=0.0188445
+INNER metal smooth iteration=128 fp32_relative=0.00517357
+OUTER metal smooth offset=32 step=2 K=176 true=2.42708e-06
+INNER metal smooth iteration=64 fp32_relative=0.282631
+INNER metal smooth iteration=128 fp32_relative=0.0801965
+INNER metal smooth iteration=192 fp32_relative=0.0228318
+INNER metal smooth iteration=256 fp32_relative=0.0065104
+OUTER metal smooth offset=32 step=3 K=317 true=4.79746e-09
+INNER metal smooth iteration=64 fp32_relative=0.167489
+INNER metal smooth iteration=128 fp32_relative=0.029207
+INNER metal smooth iteration=192 fp32_relative=0.00518621
+OUTER metal smooth offset=32 step=4 K=229 true=9.48616e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=32 seconds=69.2748 outer=4 K=731 fineS=1555 c1=0 c2=0 true=9.48616e-12 PASS
+OUTER metal smooth offset=36 step=1 K=9 true=0.00120797
+INNER metal smooth iteration=64 fp32_relative=0.0149686
+INNER metal smooth iteration=128 fp32_relative=0.00409182
+OUTER metal smooth offset=36 step=2 K=164 true=2.40515e-06
+INNER metal smooth iteration=64 fp32_relative=0.163405
+INNER metal smooth iteration=128 fp32_relative=0.0322332
+INNER metal smooth iteration=192 fp32_relative=0.00710102
+OUTER metal smooth offset=36 step=3 K=248 true=4.61378e-09
+INNER metal smooth iteration=64 fp32_relative=0.227698
+INNER metal smooth iteration=128 fp32_relative=0.0522244
+INNER metal smooth iteration=192 fp32_relative=0.0120499
+INNER metal smooth iteration=256 fp32_relative=0.00279693
+OUTER metal smooth offset=36 step=4 K=272 true=8.86525e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=36 seconds=65.089 outer=4 K=693 fineS=1474 c1=0 c2=0 true=8.86525e-12 PASS
+OUTER metal smooth offset=40 step=1 K=9 true=0.00120323
+INNER metal smooth iteration=64 fp32_relative=0.0175119
+INNER metal smooth iteration=128 fp32_relative=0.00482334
+OUTER metal smooth offset=40 step=2 K=173 true=2.38503e-06
+INNER metal smooth iteration=64 fp32_relative=0.101705
+INNER metal smooth iteration=128 fp32_relative=0.0111823
+OUTER metal smooth offset=40 step=3 K=181 true=4.76825e-09
+INNER metal smooth iteration=64 fp32_relative=0.215107
+INNER metal smooth iteration=128 fp32_relative=0.0559074
+INNER metal smooth iteration=192 fp32_relative=0.0146212
+INNER metal smooth iteration=256 fp32_relative=0.00383444
+OUTER metal smooth offset=40 step=4 K=287 true=9.52428e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=40 seconds=61.5333 outer=4 K=650 fineS=1383 c1=0 c2=0 true=9.52428e-12 PASS
+OUTER metal smooth offset=44 step=1 K=9 true=0.00122085
+INNER metal smooth iteration=64 fp32_relative=0.0179592
+INNER metal smooth iteration=128 fp32_relative=0.00489376
+OUTER metal smooth offset=44 step=2 K=174 true=2.40411e-06
+INNER metal smooth iteration=64 fp32_relative=0.282178
+INNER metal smooth iteration=128 fp32_relative=0.0800203
+INNER metal smooth iteration=192 fp32_relative=0.0227572
+INNER metal smooth iteration=256 fp32_relative=0.00648699
+OUTER metal smooth offset=44 step=3 K=316 true=4.79951e-09
+INNER metal smooth iteration=64 fp32_relative=0.214574
+INNER metal smooth iteration=128 fp32_relative=0.0565932
+INNER metal smooth iteration=192 fp32_relative=0.0151504
+INNER metal smooth iteration=256 fp32_relative=0.00409812
+OUTER metal smooth offset=44 step=4 K=292 true=9.39194e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=44 seconds=79.0813 outer=4 K=791 fineS=1683 c1=0 c2=0 true=9.39194e-12 PASS
+OUTER metal smooth offset=48 step=1 K=9 true=0.00121163
+INNER metal smooth iteration=64 fp32_relative=0.0157049
+INNER metal smooth iteration=128 fp32_relative=0.00429783
+OUTER metal smooth offset=48 step=2 K=167 true=2.42036e-06
+INNER metal smooth iteration=64 fp32_relative=0.28305
+INNER metal smooth iteration=128 fp32_relative=0.0805166
+INNER metal smooth iteration=192 fp32_relative=0.022971
+INNER metal smooth iteration=256 fp32_relative=0.00656724
+OUTER metal smooth offset=48 step=3 K=317 true=4.78504e-09
+INNER metal smooth iteration=64 fp32_relative=0.213964
+INNER metal smooth iteration=128 fp32_relative=0.0461151
+INNER metal smooth iteration=192 fp32_relative=0.0102598
+INNER metal smooth iteration=256 fp32_relative=0.00244595
+OUTER metal smooth offset=48 step=4 K=265 true=9.47401e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=48 seconds=76.4033 outer=4 K=758 fineS=1613 c1=0 c2=0 true=9.47401e-12 PASS
+OUTER metal smooth offset=52 step=1 K=9 true=0.00121128
+INNER metal smooth iteration=64 fp32_relative=0.0197742
+INNER metal smooth iteration=128 fp32_relative=0.00539403
+OUTER metal smooth offset=52 step=2 K=178 true=2.39538e-06
+INNER metal smooth iteration=64 fp32_relative=0.281199
+INNER metal smooth iteration=128 fp32_relative=0.0794553
+INNER metal smooth iteration=192 fp32_relative=0.0225172
+INNER metal smooth iteration=256 fp32_relative=0.00639491
+OUTER metal smooth offset=52 step=3 K=316 true=4.72166e-09
+INNER metal smooth iteration=64 fp32_relative=0.260563
+INNER metal smooth iteration=128 fp32_relative=0.0732736
+INNER metal smooth iteration=192 fp32_relative=0.0207333
+INNER metal smooth iteration=256 fp32_relative=0.00589181
+OUTER metal smooth offset=52 step=4 K=312 true=9.3934e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=52 seconds=86.3649 outer=4 K=815 fineS=1734 c1=0 c2=0 true=9.3934e-12 PASS
+OUTER metal smooth offset=56 step=1 K=9 true=0.00120896
+INNER metal smooth iteration=64 fp32_relative=0.0175257
+INNER metal smooth iteration=128 fp32_relative=0.00478422
+OUTER metal smooth offset=56 step=2 K=173 true=2.40704e-06
+INNER metal smooth iteration=64 fp32_relative=0.0930304
+INNER metal smooth iteration=128 fp32_relative=0.0114993
+OUTER metal smooth offset=56 step=3 K=186 true=4.67163e-09
+INNER metal smooth iteration=64 fp32_relative=0.25969
+INNER metal smooth iteration=128 fp32_relative=0.0728429
+INNER metal smooth iteration=192 fp32_relative=0.0205437
+INNER metal smooth iteration=256 fp32_relative=0.00581175
+OUTER metal smooth offset=56 step=4 K=311 true=9.2292e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=56 seconds=73.926 outer=4 K=679 fineS=1445 c1=0 c2=0 true=9.2292e-12 PASS
+OUTER metal smooth offset=60 step=1 K=9 true=0.00119999
+INNER metal smooth iteration=64 fp32_relative=0.0170344
+INNER metal smooth iteration=128 fp32_relative=0.00468387
+OUTER metal smooth offset=60 step=2 K=172 true=2.39353e-06
+INNER metal smooth iteration=64 fp32_relative=0.280056
+INNER metal smooth iteration=128 fp32_relative=0.0788088
+INNER metal smooth iteration=192 fp32_relative=0.0222572
+INNER metal smooth iteration=256 fp32_relative=0.00629672
+OUTER metal smooth offset=60 step=3 K=315 true=4.71953e-09
+INNER metal smooth iteration=64 fp32_relative=0.245446
+INNER metal smooth iteration=128 fp32_relative=0.0646887
+INNER metal smooth iteration=192 fp32_relative=0.0174772
+INNER metal smooth iteration=256 fp32_relative=0.00473791
+OUTER metal smooth offset=60 step=4 K=299 true=9.33947e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=60 seconds=88.5893 outer=4 K=795 fineS=1692 c1=0 c2=0 true=9.33947e-12 PASS
+OUTER metal smooth offset=64 step=1 K=9 true=0.00120522
+INNER metal smooth iteration=64 fp32_relative=0.0178235
+INNER metal smooth iteration=128 fp32_relative=0.004862
+OUTER metal smooth offset=64 step=2 K=173 true=2.38665e-06
+INNER metal smooth iteration=64 fp32_relative=0.218201
+INNER metal smooth iteration=128 fp32_relative=0.0490819
+INNER metal smooth iteration=192 fp32_relative=0.011259
+INNER metal smooth iteration=256 fp32_relative=0.00262447
+OUTER metal smooth offset=64 step=3 K=268 true=4.71151e-09
+INNER metal smooth iteration=64 fp32_relative=0.191151
+INNER metal smooth iteration=128 fp32_relative=0.0404201
+INNER metal smooth iteration=192 fp32_relative=0.0087347
+OUTER metal smooth offset=64 step=4 K=254 true=9.31428e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=64 seconds=82.2114 outer=4 K=704 fineS=1498 c1=0 c2=0 true=9.31428e-12 PASS
+OUTER metal smooth offset=68 step=1 K=9 true=0.00120631
+INNER metal smooth iteration=64 fp32_relative=0.0145996
+INNER metal smooth iteration=128 fp32_relative=0.0039819
+OUTER metal smooth offset=68 step=2 K=163 true=2.40726e-06
+INNER metal smooth iteration=64 fp32_relative=0.282695
+INNER metal smooth iteration=128 fp32_relative=0.0803271
+INNER metal smooth iteration=192 fp32_relative=0.0228964
+INNER metal smooth iteration=256 fp32_relative=0.00654002
+OUTER metal smooth offset=68 step=3 K=317 true=4.78762e-09
+INNER metal smooth iteration=64 fp32_relative=0.126415
+INNER metal smooth iteration=128 fp32_relative=0.0294727
+INNER metal smooth iteration=192 fp32_relative=0.00758932
+OUTER metal smooth offset=68 step=4 K=255 true=9.28017e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=68 seconds=85.7698 outer=4 K=744 fineS=1583 c1=0 c2=0 true=9.28017e-12 PASS
+OUTER metal smooth offset=72 step=1 K=9 true=0.00121354
+INNER metal smooth iteration=64 fp32_relative=0.0169293
+INNER metal smooth iteration=128 fp32_relative=0.00465345
+OUTER metal smooth offset=72 step=2 K=171 true=2.41784e-06
+INNER metal smooth iteration=64 fp32_relative=0.104145
+INNER metal smooth iteration=128 fp32_relative=0.0123242
+OUTER metal smooth offset=72 step=3 K=184 true=4.73385e-09
+INNER metal smooth iteration=64 fp32_relative=0.206404
+INNER metal smooth iteration=128 fp32_relative=0.0478601
+INNER metal smooth iteration=192 fp32_relative=0.0111808
+INNER metal smooth iteration=256 fp32_relative=0.00262468
+OUTER metal smooth offset=72 step=4 K=270 true=9.30619e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=72 seconds=75.4799 outer=4 K=634 fineS=1349 c1=0 c2=0 true=9.30619e-12 PASS
+OUTER metal smooth offset=76 step=1 K=9 true=0.00120475
+INNER metal smooth iteration=64 fp32_relative=0.0175798
+INNER metal smooth iteration=128 fp32_relative=0.00480976
+OUTER metal smooth offset=76 step=2 K=173 true=2.39861e-06
+INNER metal smooth iteration=64 fp32_relative=0.178778
+INNER metal smooth iteration=128 fp32_relative=0.0400437
+INNER metal smooth iteration=192 fp32_relative=0.00920931
+INNER metal smooth iteration=256 fp32_relative=0.00214554
+OUTER metal smooth offset=76 step=3 K=261 true=4.73273e-09
+INNER metal smooth iteration=64 fp32_relative=0.193215
+INNER metal smooth iteration=128 fp32_relative=0.0512525
+INNER metal smooth iteration=192 fp32_relative=0.0136389
+INNER metal smooth iteration=256 fp32_relative=0.00364053
+OUTER metal smooth offset=76 step=4 K=285 true=9.29102e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=76 seconds=87.0465 outer=4 K=728 fineS=1549 c1=0 c2=0 true=9.29102e-12 PASS
+OUTER metal smooth offset=80 step=1 K=9 true=0.00120002
+INNER metal smooth iteration=64 fp32_relative=0.0166822
+INNER metal smooth iteration=128 fp32_relative=0.00456415
+OUTER metal smooth offset=80 step=2 K=170 true=2.37694e-06
+INNER metal smooth iteration=64 fp32_relative=0.0972579
+INNER metal smooth iteration=128 fp32_relative=0.010269
+OUTER metal smooth offset=80 step=3 K=173 true=4.75267e-09
+INNER metal smooth iteration=64 fp32_relative=0.195797
+INNER metal smooth iteration=128 fp32_relative=0.0534578
+INNER metal smooth iteration=192 fp32_relative=0.0146943
+INNER metal smooth iteration=256 fp32_relative=0.00405821
+OUTER metal smooth offset=80 step=4 K=292 true=9.44426e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=80 seconds=75.766 outer=4 K=644 fineS=1371 c1=0 c2=0 true=9.44426e-12 PASS
+OUTER metal smooth offset=84 step=1 K=9 true=0.001212
+INNER metal smooth iteration=64 fp32_relative=0.0184659
+INNER metal smooth iteration=128 fp32_relative=0.00505545
+OUTER metal smooth offset=84 step=2 K=175 true=2.39593e-06
+INNER metal smooth iteration=64 fp32_relative=0.157058
+INNER metal smooth iteration=128 fp32_relative=0.0298425
+INNER metal smooth iteration=192 fp32_relative=0.00639399
+OUTER metal smooth offset=84 step=3 K=243 true=4.72979e-09
+INNER metal smooth iteration=64 fp32_relative=0.261662
+INNER metal smooth iteration=128 fp32_relative=0.0740172
+INNER metal smooth iteration=192 fp32_relative=0.0210554
+INNER metal smooth iteration=256 fp32_relative=0.00601395
+OUTER metal smooth offset=84 step=4 K=313 true=9.36925e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=84 seconds=85.739 outer=4 K=740 fineS=1575 c1=0 c2=0 true=9.36925e-12 PASS
+OUTER metal smooth offset=88 step=1 K=9 true=0.00121636
+INNER metal smooth iteration=64 fp32_relative=0.015604
+INNER metal smooth iteration=128 fp32_relative=0.00423788
+OUTER metal smooth offset=88 step=2 K=166 true=2.39931e-06
+INNER metal smooth iteration=64 fp32_relative=0.099044
+INNER metal smooth iteration=128 fp32_relative=0.0105631
+OUTER metal smooth offset=88 step=3 K=177 true=4.71734e-09
+INNER metal smooth iteration=64 fp32_relative=0.191103
+INNER metal smooth iteration=128 fp32_relative=0.0406476
+INNER metal smooth iteration=192 fp32_relative=0.0087782
+OUTER metal smooth offset=88 step=4 K=254 true=9.30093e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=88 seconds=74.3657 outer=4 K=606 fineS=1290 c1=0 c2=0 true=9.30093e-12 PASS
+OUTER metal smooth offset=92 step=1 K=9 true=0.0012197
+INNER metal smooth iteration=64 fp32_relative=0.0167668
+INNER metal smooth iteration=128 fp32_relative=0.00458928
+OUTER metal smooth offset=92 step=2 K=170 true=2.42548e-06
+INNER metal smooth iteration=64 fp32_relative=0.21844
+INNER metal smooth iteration=128 fp32_relative=0.0491571
+INNER metal smooth iteration=192 fp32_relative=0.0112624
+INNER metal smooth iteration=256 fp32_relative=0.00262549
+OUTER metal smooth offset=92 step=3 K=268 true=4.83838e-09
+INNER metal smooth iteration=64 fp32_relative=0.215036
+INNER metal smooth iteration=128 fp32_relative=0.0490705
+INNER metal smooth iteration=192 fp32_relative=0.0112708
+INNER metal smooth iteration=256 fp32_relative=0.00260614
+OUTER metal smooth offset=92 step=4 K=269 true=9.46779e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=92 seconds=84.2439 outer=4 K=716 fineS=1524 c1=0 c2=0 true=9.46779e-12 PASS
+OUTER metal smooth offset=96 step=1 K=9 true=0.00121497
+INNER metal smooth iteration=64 fp32_relative=0.0178448
+INNER metal smooth iteration=128 fp32_relative=0.00487458
+OUTER metal smooth offset=96 step=2 K=173 true=2.40348e-06
+INNER metal smooth iteration=64 fp32_relative=0.280054
+INNER metal smooth iteration=128 fp32_relative=0.0788505
+INNER metal smooth iteration=192 fp32_relative=0.0222622
+INNER metal smooth iteration=256 fp32_relative=0.00629907
+OUTER metal smooth offset=96 step=3 K=315 true=4.80272e-09
+INNER metal smooth iteration=64 fp32_relative=0.205622
+INNER metal smooth iteration=128 fp32_relative=0.0473804
+INNER metal smooth iteration=192 fp32_relative=0.0109943
+INNER metal smooth iteration=256 fp32_relative=0.0025678
+OUTER metal smooth offset=96 step=4 K=269 true=9.47679e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=96 seconds=89.0142 outer=4 K=766 fineS=1630 c1=0 c2=0 true=9.47679e-12 PASS
+OUTER metal smooth offset=100 step=1 K=9 true=0.00120393
+INNER metal smooth iteration=64 fp32_relative=0.0174058
+INNER metal smooth iteration=128 fp32_relative=0.00476315
+OUTER metal smooth offset=100 step=2 K=172 true=2.39811e-06
+INNER metal smooth iteration=64 fp32_relative=0.0680961
+INNER metal smooth iteration=128 fp32_relative=0.00738486
+OUTER metal smooth offset=100 step=3 K=168 true=4.71125e-09
+INNER metal smooth iteration=64 fp32_relative=0.140784
+INNER metal smooth iteration=128 fp32_relative=0.0205268
+INNER metal smooth iteration=192 fp32_relative=0.0030468
+OUTER metal smooth offset=100 step=4 K=208 true=9.24652e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=100 seconds=65.7159 outer=4 K=557 fineS=1185 c1=0 c2=0 true=9.24652e-12 PASS
+OUTER metal smooth offset=104 step=1 K=9 true=0.00120513
+INNER metal smooth iteration=64 fp32_relative=0.0181687
+INNER metal smooth iteration=128 fp32_relative=0.00499889
+OUTER metal smooth offset=104 step=2 K=175 true=2.40803e-06
+INNER metal smooth iteration=64 fp32_relative=0.280302
+INNER metal smooth iteration=128 fp32_relative=0.0789567
+INNER metal smooth iteration=192 fp32_relative=0.0223178
+INNER metal smooth iteration=256 fp32_relative=0.00631943
+OUTER metal smooth offset=104 step=3 K=315 true=4.7958e-09
+INNER metal smooth iteration=64 fp32_relative=0.216535
+INNER metal smooth iteration=128 fp32_relative=0.0472454
+INNER metal smooth iteration=192 fp32_relative=0.0106376
+INNER metal smooth iteration=256 fp32_relative=0.00256698
+OUTER metal smooth offset=104 step=4 K=267 true=9.57112e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=104 seconds=91.7522 outer=4 K=766 fineS=1630 c1=0 c2=0 true=9.57112e-12 PASS
+OUTER metal smooth offset=108 step=1 K=9 true=0.00121285
+INNER metal smooth iteration=64 fp32_relative=0.0166226
+INNER metal smooth iteration=128 fp32_relative=0.00454577
+OUTER metal smooth offset=108 step=2 K=170 true=2.41193e-06
+INNER metal smooth iteration=64 fp32_relative=0.179029
+INNER metal smooth iteration=128 fp32_relative=0.0405955
+INNER metal smooth iteration=192 fp32_relative=0.00946313
+INNER metal smooth iteration=256 fp32_relative=0.00223494
+OUTER metal smooth offset=108 step=3 K=262 true=4.76072e-09
+INNER metal smooth iteration=64 fp32_relative=0.159343
+INNER metal smooth iteration=128 fp32_relative=0.0279745
+INNER metal smooth iteration=192 fp32_relative=0.00631387
+OUTER metal smooth offset=108 step=4 K=243 true=9.33401e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=108 seconds=81.0633 outer=4 K=684 fineS=1456 c1=0 c2=0 true=9.33401e-12 PASS
+OUTER metal smooth offset=112 step=1 K=9 true=0.00121145
+INNER metal smooth iteration=64 fp32_relative=0.0152513
+INNER metal smooth iteration=128 fp32_relative=0.00417216
+OUTER metal smooth offset=112 step=2 K=165 true=2.39834e-06
+INNER metal smooth iteration=64 fp32_relative=0.100415
+INNER metal smooth iteration=128 fp32_relative=0.011366
+OUTER metal smooth offset=112 step=3 K=186 true=4.79297e-09
+INNER metal smooth iteration=64 fp32_relative=0.112904
+INNER metal smooth iteration=128 fp32_relative=0.025785
+INNER metal smooth iteration=192 fp32_relative=0.00595366
+OUTER metal smooth offset=112 step=4 K=240 true=9.23092e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=112 seconds=71.125 outer=4 K=600 fineS=1277 c1=0 c2=0 true=9.23092e-12 PASS
+OUTER metal smooth offset=116 step=1 K=9 true=0.0012084
+INNER metal smooth iteration=64 fp32_relative=0.0189698
+INNER metal smooth iteration=128 fp32_relative=0.00521402
+OUTER metal smooth offset=116 step=2 K=177 true=2.39142e-06
+INNER metal smooth iteration=64 fp32_relative=0.18242
+INNER metal smooth iteration=128 fp32_relative=0.0418701
+INNER metal smooth iteration=192 fp32_relative=0.00986423
+INNER metal smooth iteration=256 fp32_relative=0.00235395
+OUTER metal smooth offset=116 step=3 K=264 true=4.75269e-09
+INNER metal smooth iteration=64 fp32_relative=0.240828
+INNER metal smooth iteration=128 fp32_relative=0.0583304
+INNER metal smooth iteration=192 fp32_relative=0.0141962
+INNER metal smooth iteration=256 fp32_relative=0.00346897
+OUTER metal smooth offset=116 step=4 K=282 true=9.4933e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=116 seconds=85.4756 outer=4 K=732 fineS=1558 c1=0 c2=0 true=9.4933e-12 PASS
+OUTER metal smooth offset=120 step=1 K=9 true=0.00121099
+INNER metal smooth iteration=64 fp32_relative=0.0159872
+INNER metal smooth iteration=128 fp32_relative=0.00435205
+OUTER metal smooth offset=120 step=2 K=168 true=2.36708e-06
+INNER metal smooth iteration=64 fp32_relative=0.280563
+INNER metal smooth iteration=128 fp32_relative=0.0791218
+INNER metal smooth iteration=192 fp32_relative=0.0223758
+INNER metal smooth iteration=256 fp32_relative=0.00634464
+OUTER metal smooth offset=120 step=3 K=315 true=4.67739e-09
+INNER metal smooth iteration=64 fp32_relative=0.112527
+INNER metal smooth iteration=128 fp32_relative=0.0269059
+INNER metal smooth iteration=192 fp32_relative=0.00659896
+OUTER metal smooth offset=120 step=4 K=247 true=9.26675e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=120 seconds=85.9347 outer=4 K=739 fineS=1572 c1=0 c2=0 true=9.26675e-12 PASS
+OUTER metal smooth offset=124 step=1 K=9 true=0.00120716
+INNER metal smooth iteration=64 fp32_relative=0.0166174
+INNER metal smooth iteration=128 fp32_relative=0.00450991
+OUTER metal smooth offset=124 step=2 K=169 true=2.38869e-06
+INNER metal smooth iteration=64 fp32_relative=0.280953
+INNER metal smooth iteration=128 fp32_relative=0.079343
+INNER metal smooth iteration=192 fp32_relative=0.0224797
+INNER metal smooth iteration=256 fp32_relative=0.00638256
+OUTER metal smooth offset=124 step=3 K=316 true=4.76567e-09
+INNER metal smooth iteration=64 fp32_relative=0.245619
+INNER metal smooth iteration=128 fp32_relative=0.0642356
+INNER metal smooth iteration=192 fp32_relative=0.0171884
+INNER metal smooth iteration=256 fp32_relative=0.0046454
+OUTER metal smooth offset=124 step=4 K=298 true=9.27186e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=124 seconds=98.4881 outer=4 K=792 fineS=1686 c1=0 c2=0 true=9.27186e-12 PASS
+OUTER metal smooth offset=128 step=1 K=9 true=0.00120822
+INNER metal smooth iteration=64 fp32_relative=0.0170661
+INNER metal smooth iteration=128 fp32_relative=0.00469097
+OUTER metal smooth offset=128 step=2 K=172 true=2.39693e-06
+INNER metal smooth iteration=64 fp32_relative=0.0683436
+INNER metal smooth iteration=128 fp32_relative=0.00704672
+OUTER metal smooth offset=128 step=3 K=167 true=4.73773e-09
+INNER metal smooth iteration=64 fp32_relative=0.260655
+INNER metal smooth iteration=128 fp32_relative=0.0732851
+INNER metal smooth iteration=192 fp32_relative=0.0206657
+INNER metal smooth iteration=256 fp32_relative=0.00584128
+OUTER metal smooth offset=128 step=4 K=311 true=9.30583e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=128 seconds=79.5043 outer=4 K=659 fineS=1402 c1=0 c2=0 true=9.30583e-12 PASS
+OUTER metal smooth offset=132 step=1 K=9 true=0.00120233
+INNER metal smooth iteration=64 fp32_relative=0.016813
+INNER metal smooth iteration=128 fp32_relative=0.00460273
+OUTER metal smooth offset=132 step=2 K=170 true=2.39406e-06
+INNER metal smooth iteration=64 fp32_relative=0.283649
+INNER metal smooth iteration=128 fp32_relative=0.0808585
+INNER metal smooth iteration=192 fp32_relative=0.0231123
+INNER metal smooth iteration=256 fp32_relative=0.00662028
+OUTER metal smooth offset=132 step=3 K=318 true=4.73436e-09
+INNER metal smooth iteration=64 fp32_relative=0.247734
+INNER metal smooth iteration=128 fp32_relative=0.0652262
+INNER metal smooth iteration=192 fp32_relative=0.0175771
+INNER metal smooth iteration=256 fp32_relative=0.00478609
+OUTER metal smooth offset=132 step=4 K=300 true=9.34389e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=132 seconds=97.0912 outer=4 K=797 fineS=1696 c1=0 c2=0 true=9.34389e-12 PASS
+OUTER metal smooth offset=136 step=1 K=9 true=0.00121069
+INNER metal smooth iteration=64 fp32_relative=0.0161761
+INNER metal smooth iteration=128 fp32_relative=0.00440982
+OUTER metal smooth offset=136 step=2 K=168 true=2.40522e-06
+INNER metal smooth iteration=64 fp32_relative=0.281304
+INNER metal smooth iteration=128 fp32_relative=0.0795101
+INNER metal smooth iteration=192 fp32_relative=0.0225398
+INNER metal smooth iteration=256 fp32_relative=0.00640392
+OUTER metal smooth offset=136 step=3 K=316 true=4.74991e-09
+INNER metal smooth iteration=64 fp32_relative=0.149294
+INNER metal smooth iteration=128 fp32_relative=0.032575
+INNER metal smooth iteration=192 fp32_relative=0.00823213
+INNER metal smooth iteration=256 fp32_relative=0.00209505
+OUTER metal smooth offset=136 step=4 K=259 true=9.47218e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=136 seconds=93.4792 outer=4 K=752 fineS=1600 c1=0 c2=0 true=9.47218e-12 PASS
+OUTER metal smooth offset=140 step=1 K=9 true=0.00121096
+INNER metal smooth iteration=64 fp32_relative=0.018446
+INNER metal smooth iteration=128 fp32_relative=0.00504817
+OUTER metal smooth offset=140 step=2 K=175 true=2.39844e-06
+INNER metal smooth iteration=64 fp32_relative=0.158
+INNER metal smooth iteration=128 fp32_relative=0.0302838
+INNER metal smooth iteration=192 fp32_relative=0.00654066
+OUTER metal smooth offset=140 step=3 K=243 true=4.77483e-09
+INNER metal smooth iteration=64 fp32_relative=0.191881
+INNER metal smooth iteration=128 fp32_relative=0.0505961
+INNER metal smooth iteration=192 fp32_relative=0.0133896
+INNER metal smooth iteration=256 fp32_relative=0.003555
+OUTER metal smooth offset=140 step=4 K=284 true=9.36563e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=140 seconds=95.8722 outer=4 K=711 fineS=1513 c1=0 c2=0 true=9.36563e-12 PASS
+OUTER metal smooth offset=144 step=1 K=9 true=0.00121948
+INNER metal smooth iteration=64 fp32_relative=0.0153673
+INNER metal smooth iteration=128 fp32_relative=0.00418674
+OUTER metal smooth offset=144 step=2 K=166 true=2.42142e-06
+INNER metal smooth iteration=64 fp32_relative=0.281398
+INNER metal smooth iteration=128 fp32_relative=0.0795847
+INNER metal smooth iteration=192 fp32_relative=0.0225797
+INNER metal smooth iteration=256 fp32_relative=0.00642039
+OUTER metal smooth offset=144 step=3 K=316 true=4.81638e-09
+INNER metal smooth iteration=64 fp32_relative=0.238037
+INNER metal smooth iteration=128 fp32_relative=0.0613437
+INNER metal smooth iteration=192 fp32_relative=0.0161917
+INNER metal smooth iteration=256 fp32_relative=0.00431859
+OUTER metal smooth offset=144 step=4 K=294 true=9.54676e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=144 seconds=102.886 outer=4 K=785 fineS=1670 c1=0 c2=0 true=9.54676e-12 PASS
+OUTER metal smooth offset=148 step=1 K=9 true=0.00120406
+INNER metal smooth iteration=64 fp32_relative=0.0178416
+INNER metal smooth iteration=128 fp32_relative=0.00490003
+OUTER metal smooth offset=148 step=2 K=174 true=2.39656e-06
+INNER metal smooth iteration=64 fp32_relative=0.180344
+INNER metal smooth iteration=128 fp32_relative=0.0410391
+INNER metal smooth iteration=192 fp32_relative=0.00958954
+INNER metal smooth iteration=256 fp32_relative=0.00226904
+OUTER metal smooth offset=148 step=3 K=263 true=4.74863e-09
+INNER metal smooth iteration=64 fp32_relative=0.247374
+INNER metal smooth iteration=128 fp32_relative=0.065013
+INNER metal smooth iteration=192 fp32_relative=0.0174843
+INNER metal smooth iteration=256 fp32_relative=0.0047505
+OUTER metal smooth offset=148 step=4 K=299 true=9.49687e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=148 seconds=105.167 outer=4 K=745 fineS=1585 c1=0 c2=0 true=9.49687e-12 PASS
+OUTER metal smooth offset=152 step=1 K=9 true=0.00120126
+INNER metal smooth iteration=64 fp32_relative=0.016136
+INNER metal smooth iteration=128 fp32_relative=0.00439322
+OUTER metal smooth offset=152 step=2 K=168 true=2.39235e-06
+INNER metal smooth iteration=64 fp32_relative=0.282209
+INNER metal smooth iteration=128 fp32_relative=0.0800499
+INNER metal smooth iteration=192 fp32_relative=0.0227642
+INNER metal smooth iteration=256 fp32_relative=0.00648921
+OUTER metal smooth offset=152 step=3 K=317 true=4.77714e-09
+INNER metal smooth iteration=64 fp32_relative=0.192904
+INNER metal smooth iteration=128 fp32_relative=0.0459194
+INNER metal smooth iteration=192 fp32_relative=0.0112209
+INNER metal smooth iteration=256 fp32_relative=0.0027776
+OUTER metal smooth offset=152 step=4 K=271 true=9.44619e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=152 seconds=113.992 outer=4 K=765 fineS=1627 c1=0 c2=0 true=9.44619e-12 PASS
+OUTER metal smooth offset=156 step=1 K=9 true=0.00121414
+INNER metal smooth iteration=64 fp32_relative=0.0183709
+INNER metal smooth iteration=128 fp32_relative=0.00501874
+OUTER metal smooth offset=156 step=2 K=175 true=2.38592e-06
+INNER metal smooth iteration=64 fp32_relative=0.181097
+INNER metal smooth iteration=128 fp32_relative=0.0413856
+INNER metal smooth iteration=192 fp32_relative=0.00970835
+INNER metal smooth iteration=256 fp32_relative=0.00230673
+OUTER metal smooth offset=156 step=3 K=264 true=4.75026e-09
+INNER metal smooth iteration=64 fp32_relative=0.239685
+INNER metal smooth iteration=128 fp32_relative=0.0577679
+INNER metal smooth iteration=192 fp32_relative=0.0139929
+INNER metal smooth iteration=256 fp32_relative=0.00340413
+OUTER metal smooth offset=156 step=4 K=281 true=9.22253e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=156 seconds=91.0195 outer=4 K=729 fineS=1551 c1=0 c2=0 true=9.22253e-12 PASS
+OUTER metal smooth offset=160 step=1 K=9 true=0.00121066
+INNER metal smooth iteration=64 fp32_relative=0.0175802
+INNER metal smooth iteration=128 fp32_relative=0.00481733
+OUTER metal smooth offset=160 step=2 K=173 true=2.40915e-06
+INNER metal smooth iteration=64 fp32_relative=0.183197
+INNER metal smooth iteration=128 fp32_relative=0.0421749
+INNER metal smooth iteration=192 fp32_relative=0.00996394
+INNER metal smooth iteration=256 fp32_relative=0.00238274
+OUTER metal smooth offset=160 step=3 K=264 true=4.75942e-09
+INNER metal smooth iteration=64 fp32_relative=0.241172
+INNER metal smooth iteration=128 fp32_relative=0.0594347
+INNER metal smooth iteration=192 fp32_relative=0.0155177
+INNER metal smooth iteration=256 fp32_relative=0.00409558
+OUTER metal smooth offset=160 step=4 K=292 true=9.25731e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=160 seconds=92.95 outer=4 K=738 fineS=1570 c1=0 c2=0 true=9.25731e-12 PASS
+OUTER metal smooth offset=164 step=1 K=9 true=0.00121375
+INNER metal smooth iteration=64 fp32_relative=0.0158975
+INNER metal smooth iteration=128 fp32_relative=0.00432909
+OUTER metal smooth offset=164 step=2 K=168 true=2.4139e-06
+INNER metal smooth iteration=64 fp32_relative=0.281761
+INNER metal smooth iteration=128 fp32_relative=0.0797794
+INNER metal smooth iteration=192 fp32_relative=0.0226479
+INNER metal smooth iteration=256 fp32_relative=0.00644393
+OUTER metal smooth offset=164 step=3 K=316 true=4.78059e-09
+INNER metal smooth iteration=64 fp32_relative=0.21109
+INNER metal smooth iteration=128 fp32_relative=0.0450083
+INNER metal smooth iteration=192 fp32_relative=0.0100765
+INNER metal smooth iteration=256 fp32_relative=0.00250031
+OUTER metal smooth offset=164 step=4 K=266 true=9.4769e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=164 seconds=95.7191 outer=4 K=759 fineS=1615 c1=0 c2=0 true=9.4769e-12 PASS
+OUTER metal smooth offset=168 step=1 K=9 true=0.00121319
+INNER metal smooth iteration=64 fp32_relative=0.018553
+INNER metal smooth iteration=128 fp32_relative=0.00505226
+OUTER metal smooth offset=168 step=2 K=175 true=2.39881e-06
+INNER metal smooth iteration=64 fp32_relative=0.282201
+INNER metal smooth iteration=128 fp32_relative=0.080003
+INNER metal smooth iteration=192 fp32_relative=0.0227502
+INNER metal smooth iteration=256 fp32_relative=0.00648197
+OUTER metal smooth offset=168 step=3 K=316 true=4.76067e-09
+INNER metal smooth iteration=64 fp32_relative=0.110728
+INNER metal smooth iteration=128 fp32_relative=0.0126453
+OUTER metal smooth offset=168 step=4 K=185 true=9.41215e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=168 seconds=86.6722 outer=4 K=685 fineS=1458 c1=0 c2=0 true=9.41215e-12 PASS
+OUTER metal smooth offset=172 step=1 K=9 true=0.00121025
+INNER metal smooth iteration=64 fp32_relative=0.0177997
+INNER metal smooth iteration=128 fp32_relative=0.00490006
+OUTER metal smooth offset=172 step=2 K=174 true=2.38167e-06
+INNER metal smooth iteration=64 fp32_relative=0.092051
+INNER metal smooth iteration=128 fp32_relative=0.0110545
+OUTER metal smooth offset=172 step=3 K=185 true=4.75762e-09
+INNER metal smooth iteration=64 fp32_relative=0.245258
+INNER metal smooth iteration=128 fp32_relative=0.065574
+INNER metal smooth iteration=192 fp32_relative=0.0176565
+INNER metal smooth iteration=256 fp32_relative=0.00477201
+OUTER metal smooth offset=172 step=4 K=299 true=9.43017e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=172 seconds=85.6347 outer=4 K=667 fineS=1420 c1=0 c2=0 true=9.43017e-12 PASS
+OUTER metal smooth offset=176 step=1 K=9 true=0.00120516
+INNER metal smooth iteration=64 fp32_relative=0.0181068
+INNER metal smooth iteration=128 fp32_relative=0.0049683
+OUTER metal smooth offset=176 step=2 K=174 true=2.39319e-06
+INNER metal smooth iteration=64 fp32_relative=0.143021
+INNER metal smooth iteration=128 fp32_relative=0.0280788
+INNER metal smooth iteration=192 fp32_relative=0.0058789
+OUTER metal smooth offset=176 step=3 K=237 true=4.72899e-09
+INNER metal smooth iteration=64 fp32_relative=0.255839
+INNER metal smooth iteration=128 fp32_relative=0.070828
+INNER metal smooth iteration=192 fp32_relative=0.019675
+INNER metal smooth iteration=256 fp32_relative=0.00547757
+OUTER metal smooth offset=176 step=4 K=307 true=9.38742e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=176 seconds=92.0937 outer=4 K=727 fineS=1547 c1=0 c2=0 true=9.38742e-12 PASS
+OUTER metal smooth offset=180 step=1 K=9 true=0.00120457
+INNER metal smooth iteration=64 fp32_relative=0.0174707
+INNER metal smooth iteration=128 fp32_relative=0.00477282
+OUTER metal smooth offset=180 step=2 K=172 true=2.39716e-06
+INNER metal smooth iteration=64 fp32_relative=0.162504
+INNER metal smooth iteration=128 fp32_relative=0.031877
+INNER metal smooth iteration=192 fp32_relative=0.00694264
+OUTER metal smooth offset=180 step=3 K=247 true=4.79152e-09
+INNER metal smooth iteration=64 fp32_relative=0.258558
+INNER metal smooth iteration=128 fp32_relative=0.0721921
+INNER metal smooth iteration=192 fp32_relative=0.0202177
+INNER metal smooth iteration=256 fp32_relative=0.00568105
+OUTER metal smooth offset=180 step=4 K=309 true=9.5263e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=180 seconds=94.1439 outer=4 K=737 fineS=1568 c1=0 c2=0 true=9.5263e-12 PASS
+OUTER metal smooth offset=184 step=1 K=9 true=0.00121667
+INNER metal smooth iteration=64 fp32_relative=0.0181562
+INNER metal smooth iteration=128 fp32_relative=0.00496214
+OUTER metal smooth offset=184 step=2 K=174 true=2.39742e-06
+INNER metal smooth iteration=64 fp32_relative=0.180205
+INNER metal smooth iteration=128 fp32_relative=0.0409806
+INNER metal smooth iteration=192 fp32_relative=0.00957505
+INNER metal smooth iteration=256 fp32_relative=0.00226462
+OUTER metal smooth offset=184 step=3 K=263 true=4.77529e-09
+INNER metal smooth iteration=64 fp32_relative=0.24782
+INNER metal smooth iteration=128 fp32_relative=0.065183
+INNER metal smooth iteration=192 fp32_relative=0.0175475
+INNER metal smooth iteration=256 fp32_relative=0.00477117
+OUTER metal smooth offset=184 step=4 K=300 true=9.43773e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=184 seconds=110.953 outer=4 K=746 fineS=1587 c1=0 c2=0 true=9.43773e-12 PASS
+OUTER metal smooth offset=188 step=1 K=9 true=0.00120369
+INNER metal smooth iteration=64 fp32_relative=0.0150884
+INNER metal smooth iteration=128 fp32_relative=0.00410713
+OUTER metal smooth offset=188 step=2 K=164 true=2.40203e-06
+INNER metal smooth iteration=64 fp32_relative=0.280044
+INNER metal smooth iteration=128 fp32_relative=0.0788828
+INNER metal smooth iteration=192 fp32_relative=0.0222902
+INNER metal smooth iteration=256 fp32_relative=0.00631506
+OUTER metal smooth offset=188 step=3 K=315 true=4.74171e-09
+INNER metal smooth iteration=64 fp32_relative=0.0936833
+INNER metal smooth iteration=128 fp32_relative=0.0102969
+OUTER metal smooth offset=188 step=4 K=177 true=9.43785e-12
+TILE L=32 m=-0.1 metal smooth trial=0 offset=188 seconds=84.0531 outer=4 K=665 fineS=1416 c1=0 c2=0 true=9.43785e-12 PASS
+OUTER warm cpu mg3 step=1 K=6 true=0.000551807
+OUTER warm cpu mg3 step=2 K=7 true=1.05619e-06
+OUTER warm cpu mg3 step=3 K=8 true=8.71391e-10
+OUTER warm cpu mg3 step=4 K=8 true=8.66177e-13
+WARM cpu mg3 done
+OUTER cpu mg3 offset=0 step=1 K=6 true=0.000551807
+OUTER cpu mg3 offset=0 step=2 K=7 true=1.05619e-06
+OUTER cpu mg3 offset=0 step=3 K=8 true=8.71391e-10
+OUTER cpu mg3 offset=0 step=4 K=8 true=8.66177e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=0 seconds=87.3645 outer=4 K=29 fineS=91 c1=203 c2=754 true=8.66177e-13 PASS
+OUTER cpu mg3 offset=4 step=1 K=6 true=0.000552652
+OUTER cpu mg3 offset=4 step=2 K=7 true=1.05835e-06
+OUTER cpu mg3 offset=4 step=3 K=8 true=8.72788e-10
+OUTER cpu mg3 offset=4 step=4 K=8 true=8.68034e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=4 seconds=82.138 outer=4 K=29 fineS=91 c1=203 c2=788 true=8.68034e-13 PASS
+OUTER cpu mg3 offset=8 step=1 K=6 true=0.00055322
+OUTER cpu mg3 offset=8 step=2 K=7 true=1.05696e-06
+OUTER cpu mg3 offset=8 step=3 K=8 true=8.70898e-10
+OUTER cpu mg3 offset=8 step=4 K=8 true=8.63722e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=8 seconds=82.9713 outer=4 K=29 fineS=91 c1=203 c2=712 true=8.63722e-13 PASS
+OUTER cpu mg3 offset=12 step=1 K=6 true=0.000551814
+OUTER cpu mg3 offset=12 step=2 K=7 true=1.06099e-06
+OUTER cpu mg3 offset=12 step=3 K=8 true=8.74754e-10
+OUTER cpu mg3 offset=12 step=4 K=8 true=8.68876e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=12 seconds=75.038 outer=4 K=29 fineS=91 c1=203 c2=748 true=8.68876e-13 PASS
+OUTER cpu mg3 offset=16 step=1 K=6 true=0.000552189
+OUTER cpu mg3 offset=16 step=2 K=7 true=1.05866e-06
+OUTER cpu mg3 offset=16 step=3 K=8 true=8.7272e-10
+OUTER cpu mg3 offset=16 step=4 K=8 true=8.67443e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=16 seconds=75.3523 outer=4 K=29 fineS=91 c1=203 c2=747 true=8.67443e-13 PASS
+OUTER cpu mg3 offset=20 step=1 K=6 true=0.000552716
+OUTER cpu mg3 offset=20 step=2 K=7 true=1.05706e-06
+OUTER cpu mg3 offset=20 step=3 K=8 true=8.7108e-10
+OUTER cpu mg3 offset=20 step=4 K=8 true=8.64188e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=20 seconds=78.1037 outer=4 K=29 fineS=91 c1=206 c2=828 true=8.64188e-13 PASS
+OUTER cpu mg3 offset=24 step=1 K=6 true=0.000552155
+OUTER cpu mg3 offset=24 step=2 K=7 true=1.05998e-06
+OUTER cpu mg3 offset=24 step=3 K=8 true=8.7467e-10
+OUTER cpu mg3 offset=24 step=4 K=8 true=8.69823e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=24 seconds=85.4439 outer=4 K=29 fineS=91 c1=203 c2=750 true=8.69823e-13 PASS
+OUTER cpu mg3 offset=28 step=1 K=6 true=0.000551738
+OUTER cpu mg3 offset=28 step=2 K=7 true=1.05743e-06
+OUTER cpu mg3 offset=28 step=3 K=8 true=8.74723e-10
+OUTER cpu mg3 offset=28 step=4 K=8 true=8.6812e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=28 seconds=87.9937 outer=4 K=29 fineS=91 c1=203 c2=778 true=8.6812e-13 PASS
+OUTER cpu mg3 offset=32 step=1 K=6 true=0.000553666
+OUTER cpu mg3 offset=32 step=2 K=7 true=1.05768e-06
+OUTER cpu mg3 offset=32 step=3 K=8 true=8.71706e-10
+OUTER cpu mg3 offset=32 step=4 K=8 true=8.65098e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=32 seconds=78.6555 outer=4 K=29 fineS=91 c1=203 c2=701 true=8.65098e-13 PASS
+OUTER cpu mg3 offset=36 step=1 K=6 true=0.000552921
+OUTER cpu mg3 offset=36 step=2 K=7 true=1.05854e-06
+OUTER cpu mg3 offset=36 step=3 K=8 true=8.73549e-10
+OUTER cpu mg3 offset=36 step=4 K=8 true=8.68421e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=36 seconds=75.9542 outer=4 K=29 fineS=91 c1=203 c2=794 true=8.68421e-13 PASS
+OUTER cpu mg3 offset=40 step=1 K=6 true=0.000552391
+OUTER cpu mg3 offset=40 step=2 K=7 true=1.05844e-06
+OUTER cpu mg3 offset=40 step=3 K=8 true=8.74815e-10
+OUTER cpu mg3 offset=40 step=4 K=8 true=8.70324e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=40 seconds=77.5632 outer=4 K=29 fineS=91 c1=203 c2=722 true=8.70324e-13 PASS
+OUTER cpu mg3 offset=44 step=1 K=6 true=0.000552075
+OUTER cpu mg3 offset=44 step=2 K=7 true=1.0606e-06
+OUTER cpu mg3 offset=44 step=3 K=8 true=8.7426e-10
+OUTER cpu mg3 offset=44 step=4 K=8 true=8.68358e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=44 seconds=83.4529 outer=4 K=29 fineS=91 c1=203 c2=720 true=8.68358e-13 PASS
+OUTER cpu mg3 offset=48 step=1 K=6 true=0.000552417
+OUTER cpu mg3 offset=48 step=2 K=7 true=1.05776e-06
+OUTER cpu mg3 offset=48 step=3 K=8 true=8.7364e-10
+OUTER cpu mg3 offset=48 step=4 K=8 true=8.6641e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=48 seconds=79.757 outer=4 K=29 fineS=91 c1=203 c2=756 true=8.6641e-13 PASS
+OUTER cpu mg3 offset=52 step=1 K=6 true=0.000552651
+OUTER cpu mg3 offset=52 step=2 K=7 true=1.05918e-06
+OUTER cpu mg3 offset=52 step=3 K=8 true=8.74411e-10
+OUTER cpu mg3 offset=52 step=4 K=8 true=8.67474e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=52 seconds=81.014 outer=4 K=29 fineS=91 c1=203 c2=755 true=8.67474e-13 PASS
+OUTER cpu mg3 offset=56 step=1 K=6 true=0.000552878
+OUTER cpu mg3 offset=56 step=2 K=7 true=1.05466e-06
+OUTER cpu mg3 offset=56 step=3 K=8 true=8.71947e-10
+OUTER cpu mg3 offset=56 step=4 K=8 true=8.70152e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=56 seconds=79.9783 outer=4 K=29 fineS=91 c1=203 c2=759 true=8.70152e-13 PASS
+OUTER cpu mg3 offset=60 step=1 K=6 true=0.000552541
+OUTER cpu mg3 offset=60 step=2 K=7 true=1.05796e-06
+OUTER cpu mg3 offset=60 step=3 K=8 true=8.72502e-10
+OUTER cpu mg3 offset=60 step=4 K=8 true=8.66518e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=60 seconds=77.0658 outer=4 K=29 fineS=91 c1=203 c2=757 true=8.66518e-13 PASS
+OUTER cpu mg3 offset=64 step=1 K=6 true=0.000552585
+OUTER cpu mg3 offset=64 step=2 K=7 true=1.05708e-06
+OUTER cpu mg3 offset=64 step=3 K=8 true=8.73583e-10
+OUTER cpu mg3 offset=64 step=4 K=8 true=8.70944e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=64 seconds=76.1725 outer=4 K=29 fineS=91 c1=203 c2=748 true=8.70944e-13 PASS
+OUTER cpu mg3 offset=68 step=1 K=6 true=0.00055198
+OUTER cpu mg3 offset=68 step=2 K=7 true=1.05851e-06
+OUTER cpu mg3 offset=68 step=3 K=8 true=8.73946e-10
+OUTER cpu mg3 offset=68 step=4 K=8 true=8.68642e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=68 seconds=76.1494 outer=4 K=29 fineS=91 c1=203 c2=720 true=8.68642e-13 PASS
+OUTER cpu mg3 offset=72 step=1 K=6 true=0.000553117
+OUTER cpu mg3 offset=72 step=2 K=7 true=1.05692e-06
+OUTER cpu mg3 offset=72 step=3 K=8 true=8.71571e-10
+OUTER cpu mg3 offset=72 step=4 K=8 true=8.64728e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=72 seconds=92.8851 outer=4 K=29 fineS=91 c1=203 c2=739 true=8.64728e-13 PASS
+OUTER cpu mg3 offset=76 step=1 K=6 true=0.000553262
+OUTER cpu mg3 offset=76 step=2 K=7 true=1.06133e-06
+OUTER cpu mg3 offset=76 step=3 K=8 true=8.75358e-10
+OUTER cpu mg3 offset=76 step=4 K=8 true=8.68553e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=76 seconds=76.0745 outer=4 K=29 fineS=91 c1=203 c2=736 true=8.68553e-13 PASS
+OUTER cpu mg3 offset=80 step=1 K=6 true=0.000552952
+OUTER cpu mg3 offset=80 step=2 K=7 true=1.05915e-06
+OUTER cpu mg3 offset=80 step=3 K=8 true=8.7373e-10
+OUTER cpu mg3 offset=80 step=4 K=8 true=8.70104e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=80 seconds=76.4446 outer=4 K=29 fineS=91 c1=203 c2=733 true=8.70104e-13 PASS
+OUTER cpu mg3 offset=84 step=1 K=6 true=0.000551868
+OUTER cpu mg3 offset=84 step=2 K=7 true=1.0561e-06
+OUTER cpu mg3 offset=84 step=3 K=8 true=8.69764e-10
+OUTER cpu mg3 offset=84 step=4 K=8 true=8.63017e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=84 seconds=75.5672 outer=4 K=29 fineS=91 c1=203 c2=701 true=8.63017e-13 PASS
+OUTER cpu mg3 offset=88 step=1 K=6 true=0.000552243
+OUTER cpu mg3 offset=88 step=2 K=7 true=1.05887e-06
+OUTER cpu mg3 offset=88 step=3 K=8 true=8.71375e-10
+OUTER cpu mg3 offset=88 step=4 K=8 true=8.65685e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=88 seconds=76.7019 outer=4 K=29 fineS=91 c1=203 c2=732 true=8.65685e-13 PASS
+OUTER cpu mg3 offset=92 step=1 K=6 true=0.000552612
+OUTER cpu mg3 offset=92 step=2 K=7 true=1.0564e-06
+OUTER cpu mg3 offset=92 step=3 K=8 true=8.71121e-10
+OUTER cpu mg3 offset=92 step=4 K=8 true=8.65557e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=92 seconds=75.5032 outer=4 K=29 fineS=91 c1=203 c2=745 true=8.65557e-13 PASS
+OUTER cpu mg3 offset=96 step=1 K=6 true=0.000551976
+OUTER cpu mg3 offset=96 step=2 K=7 true=1.05559e-06
+OUTER cpu mg3 offset=96 step=3 K=8 true=8.68938e-10
+OUTER cpu mg3 offset=96 step=4 K=8 true=8.62042e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=96 seconds=75.6971 outer=4 K=29 fineS=91 c1=203 c2=712 true=8.62042e-13 PASS
+OUTER cpu mg3 offset=100 step=1 K=6 true=0.000552812
+OUTER cpu mg3 offset=100 step=2 K=7 true=1.05793e-06
+OUTER cpu mg3 offset=100 step=3 K=8 true=8.71637e-10
+OUTER cpu mg3 offset=100 step=4 K=8 true=8.65257e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=100 seconds=76.8833 outer=4 K=29 fineS=91 c1=203 c2=746 true=8.65257e-13 PASS
+OUTER cpu mg3 offset=104 step=1 K=6 true=0.00055343
+OUTER cpu mg3 offset=104 step=2 K=7 true=1.05592e-06
+OUTER cpu mg3 offset=104 step=3 K=8 true=8.72166e-10
+OUTER cpu mg3 offset=104 step=4 K=8 true=8.68193e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=104 seconds=84.1644 outer=4 K=29 fineS=91 c1=203 c2=711 true=8.68193e-13 PASS
+OUTER cpu mg3 offset=108 step=1 K=6 true=0.000552194
+OUTER cpu mg3 offset=108 step=2 K=7 true=1.05902e-06
+OUTER cpu mg3 offset=108 step=3 K=8 true=8.72248e-10
+OUTER cpu mg3 offset=108 step=4 K=8 true=8.67424e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=108 seconds=77.6154 outer=4 K=29 fineS=91 c1=203 c2=714 true=8.67424e-13 PASS
+OUTER cpu mg3 offset=112 step=1 K=6 true=0.000552845
+OUTER cpu mg3 offset=112 step=2 K=7 true=1.05694e-06
+OUTER cpu mg3 offset=112 step=3 K=8 true=8.73177e-10
+OUTER cpu mg3 offset=112 step=4 K=8 true=8.64858e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=112 seconds=87.1885 outer=4 K=29 fineS=91 c1=203 c2=746 true=8.64858e-13 PASS
+OUTER cpu mg3 offset=116 step=1 K=6 true=0.000553465
+OUTER cpu mg3 offset=116 step=2 K=7 true=1.05951e-06
+OUTER cpu mg3 offset=116 step=3 K=8 true=8.74604e-10
+OUTER cpu mg3 offset=116 step=4 K=8 true=8.68374e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=116 seconds=99.7787 outer=4 K=29 fineS=91 c1=203 c2=760 true=8.68374e-13 PASS
+OUTER cpu mg3 offset=120 step=1 K=6 true=0.000552877
+OUTER cpu mg3 offset=120 step=2 K=7 true=1.05908e-06
+OUTER cpu mg3 offset=120 step=3 K=8 true=8.73413e-10
+OUTER cpu mg3 offset=120 step=4 K=8 true=8.6794e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=120 seconds=97.9711 outer=4 K=29 fineS=91 c1=203 c2=694 true=8.6794e-13 PASS
+OUTER cpu mg3 offset=124 step=1 K=6 true=0.00055195
+OUTER cpu mg3 offset=124 step=2 K=7 true=1.05917e-06
+OUTER cpu mg3 offset=124 step=3 K=8 true=8.7258e-10
+OUTER cpu mg3 offset=124 step=4 K=8 true=8.68938e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=124 seconds=116.354 outer=4 K=29 fineS=91 c1=203 c2=822 true=8.68938e-13 PASS
+OUTER cpu mg3 offset=128 step=1 K=6 true=0.00055393
+OUTER cpu mg3 offset=128 step=2 K=7 true=1.06061e-06
+OUTER cpu mg3 offset=128 step=3 K=8 true=8.74396e-10
+OUTER cpu mg3 offset=128 step=4 K=8 true=8.66982e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=128 seconds=86.3105 outer=4 K=29 fineS=91 c1=203 c2=710 true=8.66982e-13 PASS
+OUTER cpu mg3 offset=132 step=1 K=6 true=0.000552776
+OUTER cpu mg3 offset=132 step=2 K=7 true=1.05687e-06
+OUTER cpu mg3 offset=132 step=3 K=8 true=8.72613e-10
+OUTER cpu mg3 offset=132 step=4 K=8 true=8.67342e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=132 seconds=86.9417 outer=4 K=29 fineS=91 c1=203 c2=717 true=8.67342e-13 PASS
+OUTER cpu mg3 offset=136 step=1 K=6 true=0.000552515
+OUTER cpu mg3 offset=136 step=2 K=7 true=1.05966e-06
+OUTER cpu mg3 offset=136 step=3 K=8 true=8.74357e-10
+OUTER cpu mg3 offset=136 step=4 K=8 true=8.66533e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=136 seconds=86.3802 outer=4 K=29 fineS=91 c1=203 c2=765 true=8.66533e-13 PASS
+OUTER cpu mg3 offset=140 step=1 K=6 true=0.000552219
+OUTER cpu mg3 offset=140 step=2 K=7 true=1.0593e-06
+OUTER cpu mg3 offset=140 step=3 K=8 true=8.74328e-10
+OUTER cpu mg3 offset=140 step=4 K=8 true=8.68644e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=140 seconds=78.5512 outer=4 K=29 fineS=91 c1=206 c2=823 true=8.68644e-13 PASS
+OUTER cpu mg3 offset=144 step=1 K=6 true=0.000552659
+OUTER cpu mg3 offset=144 step=2 K=7 true=1.05766e-06
+OUTER cpu mg3 offset=144 step=3 K=8 true=8.70837e-10
+OUTER cpu mg3 offset=144 step=4 K=8 true=8.6584e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=144 seconds=85.167 outer=4 K=29 fineS=91 c1=203 c2=747 true=8.6584e-13 PASS
+OUTER cpu mg3 offset=148 step=1 K=6 true=0.000553111
+OUTER cpu mg3 offset=148 step=2 K=7 true=1.05838e-06
+OUTER cpu mg3 offset=148 step=3 K=8 true=8.72242e-10
+OUTER cpu mg3 offset=148 step=4 K=8 true=8.65185e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=148 seconds=84.8502 outer=4 K=29 fineS=91 c1=203 c2=768 true=8.65185e-13 PASS
+OUTER cpu mg3 offset=152 step=1 K=6 true=0.000551693
+OUTER cpu mg3 offset=152 step=2 K=7 true=1.06073e-06
+OUTER cpu mg3 offset=152 step=3 K=8 true=8.75197e-10
+OUTER cpu mg3 offset=152 step=4 K=8 true=8.69691e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=152 seconds=76.3015 outer=4 K=29 fineS=91 c1=203 c2=729 true=8.69691e-13 PASS
+OUTER cpu mg3 offset=156 step=1 K=6 true=0.000551865
+OUTER cpu mg3 offset=156 step=2 K=7 true=1.0577e-06
+OUTER cpu mg3 offset=156 step=3 K=8 true=8.73001e-10
+OUTER cpu mg3 offset=156 step=4 K=8 true=8.6635e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=156 seconds=75.6551 outer=4 K=29 fineS=91 c1=203 c2=738 true=8.6635e-13 PASS
+OUTER cpu mg3 offset=160 step=1 K=6 true=0.00055243
+OUTER cpu mg3 offset=160 step=2 K=7 true=1.05656e-06
+OUTER cpu mg3 offset=160 step=3 K=8 true=8.7083e-10
+OUTER cpu mg3 offset=160 step=4 K=8 true=8.64698e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=160 seconds=80.2023 outer=4 K=29 fineS=91 c1=203 c2=733 true=8.64698e-13 PASS
+OUTER cpu mg3 offset=164 step=1 K=6 true=0.000553077
+OUTER cpu mg3 offset=164 step=2 K=7 true=1.05964e-06
+OUTER cpu mg3 offset=164 step=3 K=8 true=8.72717e-10
+OUTER cpu mg3 offset=164 step=4 K=8 true=8.65995e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=164 seconds=83.4134 outer=4 K=29 fineS=91 c1=203 c2=731 true=8.65995e-13 PASS
+OUTER cpu mg3 offset=168 step=1 K=6 true=0.000553113
+OUTER cpu mg3 offset=168 step=2 K=7 true=1.05657e-06
+OUTER cpu mg3 offset=168 step=3 K=8 true=8.70091e-10
+OUTER cpu mg3 offset=168 step=4 K=8 true=8.6354e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=168 seconds=74.4086 outer=4 K=29 fineS=91 c1=203 c2=752 true=8.6354e-13 PASS
+OUTER cpu mg3 offset=172 step=1 K=6 true=0.000552233
+OUTER cpu mg3 offset=172 step=2 K=7 true=1.05645e-06
+OUTER cpu mg3 offset=172 step=3 K=8 true=8.70387e-10
+OUTER cpu mg3 offset=172 step=4 K=8 true=8.63702e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=172 seconds=81.6605 outer=4 K=29 fineS=91 c1=203 c2=768 true=8.63702e-13 PASS
+OUTER cpu mg3 offset=176 step=1 K=6 true=0.000553726
+OUTER cpu mg3 offset=176 step=2 K=7 true=1.05854e-06
+OUTER cpu mg3 offset=176 step=3 K=8 true=8.73364e-10
+OUTER cpu mg3 offset=176 step=4 K=8 true=8.69497e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=176 seconds=78.4352 outer=4 K=29 fineS=91 c1=203 c2=772 true=8.69497e-13 PASS
+OUTER cpu mg3 offset=180 step=1 K=6 true=0.000552879
+OUTER cpu mg3 offset=180 step=2 K=7 true=1.05856e-06
+OUTER cpu mg3 offset=180 step=3 K=8 true=8.74198e-10
+OUTER cpu mg3 offset=180 step=4 K=8 true=8.68041e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=180 seconds=77.1894 outer=4 K=29 fineS=91 c1=203 c2=718 true=8.68041e-13 PASS
+OUTER cpu mg3 offset=184 step=1 K=6 true=0.000552404
+OUTER cpu mg3 offset=184 step=2 K=7 true=1.06029e-06
+OUTER cpu mg3 offset=184 step=3 K=8 true=8.74484e-10
+OUTER cpu mg3 offset=184 step=4 K=8 true=8.68356e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=184 seconds=73.6278 outer=4 K=29 fineS=91 c1=206 c2=802 true=8.68356e-13 PASS
+OUTER cpu mg3 offset=188 step=1 K=6 true=0.000553319
+OUTER cpu mg3 offset=188 step=2 K=7 true=1.06047e-06
+OUTER cpu mg3 offset=188 step=3 K=8 true=8.74049e-10
+OUTER cpu mg3 offset=188 step=4 K=8 true=8.66006e-13
+TILE L=32 m=-0.1 cpu mg3 trial=0 offset=188 seconds=77.6624 outer=4 K=29 fineS=91 c1=203 c2=727 true=8.66006e-13 PASS
+OUTER warm cpu bicgstab step=1 K=13 true=0.00122925
+INNER cpu BiCG iteration=64 recursive_relative=0.0121118
+OUTER warm cpu bicgstab step=2 K=76 true=2.34407e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00895068
+OUTER warm cpu bicgstab step=3 K=92 true=4.47023e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00743576
+OUTER warm cpu bicgstab step=4 K=117 true=7.76265e-12
+WARM cpu bicgstab done
+OUTER cpu bicgstab offset=0 step=1 K=13 true=0.00122925
+INNER cpu BiCG iteration=64 recursive_relative=0.0121118
+OUTER cpu bicgstab offset=0 step=2 K=76 true=2.34407e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00895068
+OUTER cpu bicgstab offset=0 step=3 K=92 true=4.47023e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00743576
+OUTER cpu bicgstab offset=0 step=4 K=117 true=7.76265e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=0 seconds=376.133 outer=4 K=298 fineS=593 c1=0 c2=0 true=7.76265e-12 PASS
+OUTER cpu bicgstab offset=4 step=1 K=14 true=0.00129938
+INNER cpu BiCG iteration=64 recursive_relative=0.050175
+OUTER cpu bicgstab offset=4 step=2 K=81 true=2.40296e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00953209
+INNER cpu BiCG iteration=128 recursive_relative=0.00292715
+OUTER cpu bicgstab offset=4 step=3 K=172 true=4.71946e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0123682
+OUTER cpu bicgstab offset=4 step=4 K=125 true=8.66359e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=4 seconds=500.209 outer=4 K=392 fineS=782 c1=0 c2=0 true=8.66359e-12 PASS
+OUTER cpu bicgstab offset=8 step=1 K=12 true=0.00126829
+INNER cpu BiCG iteration=64 recursive_relative=0.0302845
+OUTER cpu bicgstab offset=8 step=2 K=72 true=2.37246e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00595334
+OUTER cpu bicgstab offset=8 step=3 K=98 true=4.60748e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0345361
+OUTER cpu bicgstab offset=8 step=4 K=102 true=6.80099e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=8 seconds=362.143 outer=4 K=284 fineS=566 c1=0 c2=0 true=6.80099e-12 PASS
+OUTER cpu bicgstab offset=12 step=1 K=13 true=0.00130341
+INNER cpu BiCG iteration=64 recursive_relative=0.0229248
+OUTER cpu bicgstab offset=12 step=2 K=79 true=2.59811e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00402794
+OUTER cpu bicgstab offset=12 step=3 K=91 true=4.88981e-09
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=1.88039 min_clover_pivot=3.47058
+P1 basis ready n=98304
+A1 sparse ready blocks=135168 seconds=4.613
+A2 sparse ready n=6144 blocks=8448 hierarchy_s=44.1406
+RESUME accepted 195 completed tiles
+OUTER warm cpu bicgstab step=1 K=13 true=0.00122925
+INNER cpu BiCG iteration=64 recursive_relative=0.0121118
+OUTER warm cpu bicgstab step=2 K=76 true=2.34407e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00895068
+OUTER warm cpu bicgstab step=3 K=92 true=4.47023e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00743576
+OUTER warm cpu bicgstab step=4 K=117 true=7.76265e-12
+WARM cpu bicgstab done
+OUTER cpu bicgstab offset=12 step=1 K=13 true=0.00130341
+INNER cpu BiCG iteration=64 recursive_relative=0.0229248
+OUTER cpu bicgstab offset=12 step=2 K=79 true=2.59811e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00402794
+OUTER cpu bicgstab offset=12 step=3 K=91 true=4.88981e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00950243
+OUTER cpu bicgstab offset=12 step=4 K=111 true=9.66607e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=12 seconds=428.736 outer=4 K=294 fineS=586 c1=0 c2=0 true=9.66607e-12 PASS
+OUTER cpu bicgstab offset=16 step=1 K=14 true=0.00116775
+INNER cpu BiCG iteration=64 recursive_relative=0.0558253
+OUTER cpu bicgstab offset=16 step=2 K=78 true=2.13949e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00529199
+OUTER cpu bicgstab offset=16 step=3 K=79 true=3.78093e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.032958
+OUTER cpu bicgstab offset=16 step=4 K=113 true=7.22186e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=16 seconds=363.714 outer=4 K=284 fineS=565 c1=0 c2=0 true=7.22186e-12 PASS
+OUTER cpu bicgstab offset=20 step=1 K=15 true=0.00130697
+INNER cpu BiCG iteration=64 recursive_relative=0.0493829
+OUTER cpu bicgstab offset=20 step=2 K=77 true=2.347e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0049497
+INNER cpu BiCG iteration=128 recursive_relative=0.00221542
+OUTER cpu bicgstab offset=20 step=3 K=132 true=4.45766e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0158984
+OUTER cpu bicgstab offset=20 step=4 K=119 true=7.95952e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=20 seconds=451.472 outer=4 K=343 fineS=684 c1=0 c2=0 true=7.95952e-12 PASS
+OUTER cpu bicgstab offset=24 step=1 K=13 true=0.00126483
+INNER cpu BiCG iteration=64 recursive_relative=0.0276477
+OUTER cpu bicgstab offset=24 step=2 K=72 true=2.44687e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00513471
+OUTER cpu bicgstab offset=24 step=3 K=93 true=4.87501e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00743475
+OUTER cpu bicgstab offset=24 step=4 K=99 true=8.94916e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=24 seconds=413.45 outer=4 K=277 fineS=550 c1=0 c2=0 true=8.94916e-12 PASS
+OUTER cpu bicgstab offset=28 step=1 K=20 true=0.00130181
+INNER cpu BiCG iteration=64 recursive_relative=0.0383098
+OUTER cpu bicgstab offset=28 step=2 K=84 true=1.74493e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00566959
+OUTER cpu bicgstab offset=28 step=3 K=75 true=3.44122e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0140822
+OUTER cpu bicgstab offset=28 step=4 K=121 true=6.489e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=28 seconds=441.664 outer=4 K=300 fineS=598 c1=0 c2=0 true=6.489e-12 PASS
+OUTER cpu bicgstab offset=32 step=1 K=16 true=0.00128529
+INNER cpu BiCG iteration=64 recursive_relative=0.0279683
+OUTER cpu bicgstab offset=32 step=2 K=75 true=2.46545e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00687667
+OUTER cpu bicgstab offset=32 step=3 K=85 true=4.88774e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0380844
+OUTER cpu bicgstab offset=32 step=4 K=123 true=8.52609e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=32 seconds=436.415 outer=4 K=299 fineS=595 c1=0 c2=0 true=8.52609e-12 PASS
+OUTER cpu bicgstab offset=36 step=1 K=12 true=0.00130281
+INNER cpu BiCG iteration=64 recursive_relative=0.0181596
+OUTER cpu bicgstab offset=36 step=2 K=74 true=2.25501e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00508284
+OUTER cpu bicgstab offset=36 step=3 K=110 true=4.48469e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0395236
+OUTER cpu bicgstab offset=36 step=4 K=104 true=8.8256e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=36 seconds=393.095 outer=4 K=300 fineS=596 c1=0 c2=0 true=8.8256e-12 PASS
+OUTER cpu bicgstab offset=40 step=1 K=14 true=0.00118636
+INNER cpu BiCG iteration=64 recursive_relative=0.0642444
+OUTER cpu bicgstab offset=40 step=2 K=75 true=1.82948e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00676686
+OUTER cpu bicgstab offset=40 step=3 K=84 true=3.63896e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00853696
+OUTER cpu bicgstab offset=40 step=4 K=95 true=5.82443e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=40 seconds=357.211 outer=4 K=268 fineS=534 c1=0 c2=0 true=5.82443e-12 PASS
+OUTER cpu bicgstab offset=44 step=1 K=13 true=0.00125595
+INNER cpu BiCG iteration=64 recursive_relative=0.0368677
+OUTER cpu bicgstab offset=44 step=2 K=78 true=2.3199e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00472264
+OUTER cpu bicgstab offset=44 step=3 K=82 true=4.37668e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0115926
+OUTER cpu bicgstab offset=44 step=4 K=104 true=7.87874e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=44 seconds=374.209 outer=4 K=277 fineS=551 c1=0 c2=0 true=7.87874e-12 PASS
+OUTER cpu bicgstab offset=48 step=1 K=16 true=0.00128496
+INNER cpu BiCG iteration=64 recursive_relative=0.0345371
+OUTER cpu bicgstab offset=48 step=2 K=82 true=2.3836e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0247783
+OUTER cpu bicgstab offset=48 step=3 K=105 true=4.65639e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00745348
+OUTER cpu bicgstab offset=48 step=4 K=98 true=7.12459e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=48 seconds=409.657 outer=4 K=301 fineS=598 c1=0 c2=0 true=7.12459e-12 PASS
+OUTER cpu bicgstab offset=52 step=1 K=12 true=0.00129273
+INNER cpu BiCG iteration=64 recursive_relative=0.0492354
+OUTER cpu bicgstab offset=52 step=2 K=75 true=2.49595e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00634498
+OUTER cpu bicgstab offset=52 step=3 K=100 true=4.1369e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00696813
+OUTER cpu bicgstab offset=52 step=4 K=111 true=7.38258e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=52 seconds=403.953 outer=4 K=298 fineS=594 c1=0 c2=0 true=7.38258e-12 PASS
+OUTER cpu bicgstab offset=56 step=1 K=13 true=0.0011813
+INNER cpu BiCG iteration=64 recursive_relative=0.0234008
+OUTER cpu bicgstab offset=56 step=2 K=76 true=2.22684e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00366609
+OUTER cpu bicgstab offset=56 step=3 K=98 true=4.04885e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0127048
+OUTER cpu bicgstab offset=56 step=4 K=94 true=7.87369e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=56 seconds=378.095 outer=4 K=281 fineS=560 c1=0 c2=0 true=7.87369e-12 PASS
+OUTER cpu bicgstab offset=60 step=1 K=13 true=0.00129024
+INNER cpu BiCG iteration=64 recursive_relative=0.0170786
+OUTER cpu bicgstab offset=60 step=2 K=70 true=2.40593e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00588786
+OUTER cpu bicgstab offset=60 step=3 K=108 true=4.7691e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0164206
+INNER cpu BiCG iteration=128 recursive_relative=0.00300362
+INNER cpu BiCG iteration=192 recursive_relative=0.00318548
+INNER cpu BiCG iteration=256 recursive_relative=0.00305742
+INNER cpu BiCG iteration=320 recursive_relative=0.00278571
+OUTER cpu bicgstab offset=60 step=4 K=327 true=6.14452e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=60 seconds=682.173 outer=4 K=518 fineS=1034 c1=0 c2=0 true=6.14452e-12 PASS
+OUTER cpu bicgstab offset=64 step=1 K=11 true=0.00126927
+INNER cpu BiCG iteration=64 recursive_relative=0.0257053
+OUTER cpu bicgstab offset=64 step=2 K=76 true=2.35355e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00385673
+OUTER cpu bicgstab offset=64 step=3 K=99 true=4.34846e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00750106
+INNER cpu BiCG iteration=128 recursive_relative=0.00435831
+OUTER cpu bicgstab offset=64 step=4 K=146 true=7.33773e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=64 seconds=444.719 outer=4 K=332 fineS=661 c1=0 c2=0 true=7.33773e-12 PASS
+OUTER cpu bicgstab offset=68 step=1 K=14 true=0.00121822
+INNER cpu BiCG iteration=64 recursive_relative=0.0336632
+OUTER cpu bicgstab offset=68 step=2 K=78 true=2.3924e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0229723
+OUTER cpu bicgstab offset=68 step=3 K=97 true=4.74342e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00851339
+OUTER cpu bicgstab offset=68 step=4 K=124 true=8.21468e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=68 seconds=424.089 outer=4 K=313 fineS=624 c1=0 c2=0 true=8.21468e-12 PASS
+OUTER cpu bicgstab offset=72 step=1 K=14 true=0.00128891
+INNER cpu BiCG iteration=64 recursive_relative=0.0216955
+OUTER cpu bicgstab offset=72 step=2 K=77 true=2.213e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0156414
+OUTER cpu bicgstab offset=72 step=3 K=88 true=4.24155e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0134668
+OUTER cpu bicgstab offset=72 step=4 K=122 true=6.08282e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=72 seconds=397.673 outer=4 K=301 fineS=600 c1=0 c2=0 true=6.08282e-12 PASS
+OUTER cpu bicgstab offset=76 step=1 K=13 true=0.00130197
+INNER cpu BiCG iteration=64 recursive_relative=0.0229162
+OUTER cpu bicgstab offset=76 step=2 K=76 true=2.56073e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00422434
+OUTER cpu bicgstab offset=76 step=3 K=127 true=4.91223e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0875703
+INNER cpu BiCG iteration=128 recursive_relative=0.00413452
+OUTER cpu bicgstab offset=76 step=4 K=133 true=8.03742e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=76 seconds=443.357 outer=4 K=349 fineS=695 c1=0 c2=0 true=8.03742e-12 PASS
+OUTER cpu bicgstab offset=80 step=1 K=16 true=0.00123492
+INNER cpu BiCG iteration=64 recursive_relative=0.0184737
+OUTER cpu bicgstab offset=80 step=2 K=76 true=1.88617e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00616931
+INNER cpu BiCG iteration=128 recursive_relative=0.00202432
+OUTER cpu bicgstab offset=80 step=3 K=152 true=3.75354e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0205637
+OUTER cpu bicgstab offset=80 step=4 K=110 true=7.25812e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=80 seconds=456.861 outer=4 K=354 fineS=704 c1=0 c2=0 true=7.25812e-12 PASS
+OUTER cpu bicgstab offset=84 step=1 K=14 true=0.00128465
+INNER cpu BiCG iteration=64 recursive_relative=0.0243334
+OUTER cpu bicgstab offset=84 step=2 K=76 true=2.29671e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00666484
+OUTER cpu bicgstab offset=84 step=3 K=85 true=3.67684e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0416448
+INNER cpu BiCG iteration=128 recursive_relative=0.00598107
+OUTER cpu bicgstab offset=84 step=4 K=132 true=6.36249e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=84 seconds=386.222 outer=4 K=307 fineS=613 c1=0 c2=0 true=6.36249e-12 PASS
+OUTER cpu bicgstab offset=88 step=1 K=16 true=0.00112266
+INNER cpu BiCG iteration=64 recursive_relative=0.0268659
+OUTER cpu bicgstab offset=88 step=2 K=77 true=2.1168e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0072391
+OUTER cpu bicgstab offset=88 step=3 K=91 true=4.23175e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0122787
+OUTER cpu bicgstab offset=88 step=4 K=107 true=8.41455e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=88 seconds=356.179 outer=4 K=291 fineS=580 c1=0 c2=0 true=8.41455e-12 PASS
+OUTER cpu bicgstab offset=92 step=1 K=14 true=0.00127028
+INNER cpu BiCG iteration=64 recursive_relative=0.0260579
+OUTER cpu bicgstab offset=92 step=2 K=76 true=2.52036e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00617655
+OUTER cpu bicgstab offset=92 step=3 K=100 true=4.89271e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0833238
+OUTER cpu bicgstab offset=92 step=4 K=113 true=6.78048e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=92 seconds=368.475 outer=4 K=303 fineS=602 c1=0 c2=0 true=6.78048e-12 PASS
+OUTER cpu bicgstab offset=96 step=1 K=15 true=0.00116302
+INNER cpu BiCG iteration=64 recursive_relative=0.0368878
+OUTER cpu bicgstab offset=96 step=2 K=72 true=2.23862e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00689952
+OUTER cpu bicgstab offset=96 step=3 K=108 true=4.26911e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00856347
+OUTER cpu bicgstab offset=96 step=4 K=125 true=7.45484e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=96 seconds=391.777 outer=4 K=320 fineS=637 c1=0 c2=0 true=7.45484e-12 PASS
+OUTER cpu bicgstab offset=100 step=1 K=13 true=0.00127256
+INNER cpu BiCG iteration=64 recursive_relative=0.0153914
+OUTER cpu bicgstab offset=100 step=2 K=79 true=1.88645e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00388099
+OUTER cpu bicgstab offset=100 step=3 K=85 true=3.74387e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0208478
+OUTER cpu bicgstab offset=100 step=4 K=109 true=6.90558e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=100 seconds=1346.46 outer=4 K=286 fineS=568 c1=0 c2=0 true=6.90558e-12 PASS
+OUTER cpu bicgstab offset=104 step=1 K=15 true=0.00119395
+INNER cpu BiCG iteration=64 recursive_relative=0.0553634
+OUTER cpu bicgstab offset=104 step=2 K=81 true=2.37879e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00767192
+OUTER cpu bicgstab offset=104 step=3 K=85 true=4.6806e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0107054
+OUTER cpu bicgstab offset=104 step=4 K=113 true=8.7758e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=104 seconds=414.322 outer=4 K=294 fineS=585 c1=0 c2=0 true=8.7758e-12 PASS
+OUTER cpu bicgstab offset=108 step=1 K=13 true=0.0012542
+INNER cpu BiCG iteration=64 recursive_relative=0.0207121
+OUTER cpu bicgstab offset=108 step=2 K=80 true=2.00574e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00417492
+OUTER cpu bicgstab offset=108 step=3 K=115 true=3.93497e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00999923
+OUTER cpu bicgstab offset=108 step=4 K=119 true=7.58393e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=108 seconds=453.226 outer=4 K=327 fineS=650 c1=0 c2=0 true=7.58393e-12 PASS
+OUTER cpu bicgstab offset=112 step=1 K=15 true=0.00126694
+INNER cpu BiCG iteration=64 recursive_relative=0.0287305
+OUTER cpu bicgstab offset=112 step=2 K=80 true=2.21666e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00737269
+INNER cpu BiCG iteration=128 recursive_relative=0.00198705
+OUTER cpu bicgstab offset=112 step=3 K=128 true=3.15215e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0280844
+OUTER cpu bicgstab offset=112 step=4 K=103 true=5.02321e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=112 seconds=428.195 outer=4 K=326 fineS=649 c1=0 c2=0 true=5.02321e-12 PASS
+OUTER cpu bicgstab offset=116 step=1 K=14 true=0.00131465
+INNER cpu BiCG iteration=64 recursive_relative=0.0283654
+OUTER cpu bicgstab offset=116 step=2 K=75 true=2.29942e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00453909
+OUTER cpu bicgstab offset=116 step=3 K=91 true=4.55208e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0170447
+OUTER cpu bicgstab offset=116 step=4 K=105 true=6.81553e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=116 seconds=428.539 outer=4 K=285 fineS=567 c1=0 c2=0 true=6.81553e-12 PASS
+OUTER cpu bicgstab offset=120 step=1 K=14 true=0.00129699
+INNER cpu BiCG iteration=64 recursive_relative=0.0353728
+OUTER cpu bicgstab offset=120 step=2 K=76 true=2.08934e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00376219
+OUTER cpu bicgstab offset=120 step=3 K=78 true=4.12905e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00773356
+OUTER cpu bicgstab offset=120 step=4 K=119 true=6.71033e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=120 seconds=369.54 outer=4 K=287 fineS=571 c1=0 c2=0 true=6.71033e-12 PASS
+OUTER cpu bicgstab offset=124 step=1 K=15 true=0.00131516
+INNER cpu BiCG iteration=64 recursive_relative=0.06435
+OUTER cpu bicgstab offset=124 step=2 K=78 true=1.90022e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00510469
+OUTER cpu bicgstab offset=124 step=3 K=116 true=3.78788e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0187241
+INNER cpu BiCG iteration=128 recursive_relative=0.00389058
+OUTER cpu bicgstab offset=124 step=4 K=167 true=5.61129e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=124 seconds=604.408 outer=4 K=376 fineS=749 c1=0 c2=0 true=5.61129e-12 PASS
+OUTER cpu bicgstab offset=128 step=1 K=12 true=0.00126761
+INNER cpu BiCG iteration=64 recursive_relative=0.0364982
+OUTER cpu bicgstab offset=128 step=2 K=77 true=2.45396e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00811855
+OUTER cpu bicgstab offset=128 step=3 K=107 true=4.87862e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0450463
+OUTER cpu bicgstab offset=128 step=4 K=113 true=9.08219e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=128 seconds=886.368 outer=4 K=309 fineS=617 c1=0 c2=0 true=9.08219e-12 PASS
+OUTER cpu bicgstab offset=132 step=1 K=16 true=0.00130508
+INNER cpu BiCG iteration=64 recursive_relative=0.0203894
+OUTER cpu bicgstab offset=132 step=2 K=72 true=2.58942e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00435929
+OUTER cpu bicgstab offset=132 step=3 K=90 true=4.90592e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0161327
+OUTER cpu bicgstab offset=132 step=4 K=108 true=7.79799e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=132 seconds=483.369 outer=4 K=286 fineS=570 c1=0 c2=0 true=7.79799e-12 PASS
+OUTER cpu bicgstab offset=136 step=1 K=17 true=0.00129364
+INNER cpu BiCG iteration=64 recursive_relative=0.0201353
+OUTER cpu bicgstab offset=136 step=2 K=73 true=2.46595e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00944594
+OUTER cpu bicgstab offset=136 step=3 K=109 true=4.62963e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0107448
+OUTER cpu bicgstab offset=136 step=4 K=110 true=8.68026e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=136 seconds=419.086 outer=4 K=309 fineS=616 c1=0 c2=0 true=8.68026e-12 PASS
+OUTER cpu bicgstab offset=140 step=1 K=15 true=0.00125598
+INNER cpu BiCG iteration=64 recursive_relative=0.0550821
+OUTER cpu bicgstab offset=140 step=2 K=77 true=2.36037e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00814754
+OUTER cpu bicgstab offset=140 step=3 K=92 true=4.53652e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00947084
+OUTER cpu bicgstab offset=140 step=4 K=117 true=6.91604e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=140 seconds=374.481 outer=4 K=301 fineS=598 c1=0 c2=0 true=6.91604e-12 PASS
+OUTER cpu bicgstab offset=144 step=1 K=14 true=0.00130189
+INNER cpu BiCG iteration=64 recursive_relative=0.0263951
+OUTER cpu bicgstab offset=144 step=2 K=76 true=2.23648e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00372383
+OUTER cpu bicgstab offset=144 step=3 K=81 true=4.08957e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0189472
+INNER cpu BiCG iteration=128 recursive_relative=0.00180936
+OUTER cpu bicgstab offset=144 step=4 K=128 true=7.20571e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=144 seconds=492.344 outer=4 K=299 fineS=596 c1=0 c2=0 true=7.20571e-12 PASS
+OUTER cpu bicgstab offset=148 step=1 K=13 true=0.0011838
+INNER cpu BiCG iteration=64 recursive_relative=0.00822182
+OUTER cpu bicgstab offset=148 step=2 K=72 true=1.71354e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0164554
+OUTER cpu bicgstab offset=148 step=3 K=86 true=3.12559e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0139521
+OUTER cpu bicgstab offset=148 step=4 K=111 true=4.49553e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=148 seconds=461.659 outer=4 K=282 fineS=562 c1=0 c2=0 true=4.49553e-12 PASS
+OUTER cpu bicgstab offset=152 step=1 K=14 true=0.00127937
+INNER cpu BiCG iteration=64 recursive_relative=0.131451
+OUTER cpu bicgstab offset=152 step=2 K=78 true=2.18365e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00519649
+OUTER cpu bicgstab offset=152 step=3 K=99 true=4.3287e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00938683
+OUTER cpu bicgstab offset=152 step=4 K=124 true=7.41643e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=152 seconds=400.233 outer=4 K=315 fineS=627 c1=0 c2=0 true=7.41643e-12 PASS
+OUTER cpu bicgstab offset=156 step=1 K=12 true=0.00128385
+INNER cpu BiCG iteration=64 recursive_relative=0.0312627
+OUTER cpu bicgstab offset=156 step=2 K=75 true=2.28151e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00424444
+OUTER cpu bicgstab offset=156 step=3 K=95 true=4.42681e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0301651
+OUTER cpu bicgstab offset=156 step=4 K=97 true=7.49858e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=156 seconds=396.51 outer=4 K=279 fineS=556 c1=0 c2=0 true=7.49858e-12 PASS
+OUTER cpu bicgstab offset=160 step=1 K=14 true=0.00129222
+INNER cpu BiCG iteration=64 recursive_relative=0.0290891
+OUTER cpu bicgstab offset=160 step=2 K=77 true=2.38343e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.0188467
+OUTER cpu bicgstab offset=160 step=3 K=108 true=4.76233e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0116482
+INNER cpu BiCG iteration=128 recursive_relative=0.00241192
+OUTER cpu bicgstab offset=160 step=4 K=130 true=5.30412e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=160 seconds=462.259 outer=4 K=329 fineS=656 c1=0 c2=0 true=5.30412e-12 PASS
+OUTER cpu bicgstab offset=164 step=1 K=12 true=0.00121233
+INNER cpu BiCG iteration=64 recursive_relative=0.0256054
+OUTER cpu bicgstab offset=164 step=2 K=74 true=2.29963e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00630663
+OUTER cpu bicgstab offset=164 step=3 K=78 true=4.53784e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0127548
+INNER cpu BiCG iteration=128 recursive_relative=0.00199195
+OUTER cpu bicgstab offset=164 step=4 K=128 true=7.99445e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=164 seconds=391.41 outer=4 K=292 fineS=582 c1=0 c2=0 true=7.99445e-12 PASS
+OUTER cpu bicgstab offset=168 step=1 K=13 true=0.00130176
+INNER cpu BiCG iteration=64 recursive_relative=0.0181571
+OUTER cpu bicgstab offset=168 step=2 K=75 true=2.52703e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00475652
+OUTER cpu bicgstab offset=168 step=3 K=95 true=5.00623e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0058641
+INNER cpu BiCG iteration=128 recursive_relative=0.00265655
+OUTER cpu bicgstab offset=168 step=4 K=132 true=9.90448e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=168 seconds=415.948 outer=4 K=315 fineS=627 c1=0 c2=0 true=9.90448e-12 PASS
+OUTER cpu bicgstab offset=172 step=1 K=14 true=0.00127952
+INNER cpu BiCG iteration=64 recursive_relative=0.0326459
+OUTER cpu bicgstab offset=172 step=2 K=73 true=1.99169e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00444281
+OUTER cpu bicgstab offset=172 step=3 K=79 true=3.88649e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0314385
+OUTER cpu bicgstab offset=172 step=4 K=109 true=6.31391e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=172 seconds=365.44 outer=4 K=275 fineS=548 c1=0 c2=0 true=6.31391e-12 PASS
+OUTER cpu bicgstab offset=176 step=1 K=15 true=0.00120537
+INNER cpu BiCG iteration=64 recursive_relative=0.0176435
+OUTER cpu bicgstab offset=176 step=2 K=80 true=2.20275e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00711071
+OUTER cpu bicgstab offset=176 step=3 K=81 true=3.60073e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0104666
+INNER cpu BiCG iteration=128 recursive_relative=0.00366814
+OUTER cpu bicgstab offset=176 step=4 K=150 true=6.42093e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=176 seconds=429.688 outer=4 K=326 fineS=649 c1=0 c2=0 true=6.42093e-12 PASS
+OUTER cpu bicgstab offset=180 step=1 K=14 true=0.00129015
+INNER cpu BiCG iteration=64 recursive_relative=0.0273092
+OUTER cpu bicgstab offset=180 step=2 K=76 true=2.46742e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00530651
+OUTER cpu bicgstab offset=180 step=3 K=111 true=4.54724e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.00627468
+OUTER cpu bicgstab offset=180 step=4 K=112 true=8.4991e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=180 seconds=433.754 outer=4 K=313 fineS=624 c1=0 c2=0 true=8.4991e-12 PASS
+OUTER cpu bicgstab offset=184 step=1 K=12 true=0.00131323
+INNER cpu BiCG iteration=64 recursive_relative=0.0226024
+OUTER cpu bicgstab offset=184 step=2 K=73 true=2.30065e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00762883
+OUTER cpu bicgstab offset=184 step=3 K=109 true=4.59816e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0363509
+OUTER cpu bicgstab offset=184 step=4 K=120 true=8.47593e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=184 seconds=437.586 outer=4 K=314 fineS=625 c1=0 c2=0 true=8.47593e-12 PASS
+OUTER cpu bicgstab offset=188 step=1 K=13 true=0.00129571
+INNER cpu BiCG iteration=64 recursive_relative=0.0281352
+OUTER cpu bicgstab offset=188 step=2 K=76 true=2.55609e-06
+INNER cpu BiCG iteration=64 recursive_relative=0.00428012
+OUTER cpu bicgstab offset=188 step=3 K=84 true=4.94938e-09
+INNER cpu BiCG iteration=64 recursive_relative=0.0120629
+OUTER cpu bicgstab offset=188 step=4 K=122 true=9.7442e-12
+TILE L=32 m=-0.1 cpu bicgstab trial=0 offset=188 seconds=405.511 outer=4 K=295 fineS=586 c1=0 c2=0 true=9.7442e-12 PASS
+OUTER warm cpu smooth step=1 K=9 true=0.00121283
+INNER cpu smooth iteration=64 fp32_relative=0.0192696
+INNER cpu smooth iteration=128 fp32_relative=0.005272
+OUTER warm cpu smooth step=2 K=177 true=2.42176e-06
+INNER cpu smooth iteration=64 fp32_relative=0.279139
+INNER cpu smooth iteration=128 fp32_relative=0.0783458
+INNER cpu smooth iteration=192 fp32_relative=0.0220583
+INNER cpu smooth iteration=256 fp32_relative=0.00622601
+OUTER warm cpu smooth step=3 K=314 true=4.78712e-09
+INNER cpu smooth iteration=64 fp32_relative=0.062908
+INNER cpu smooth iteration=128 fp32_relative=0.0079175
+OUTER warm cpu smooth step=4 K=174 true=9.38403e-12
+WARM cpu smooth done
+OUTER cpu smooth offset=0 step=1 K=9 true=0.00121283
+INNER cpu smooth iteration=64 fp32_relative=0.0192696
+INNER cpu smooth iteration=128 fp32_relative=0.005272
+OUTER cpu smooth offset=0 step=2 K=177 true=2.42176e-06
+INNER cpu smooth iteration=64 fp32_relative=0.279139
+INNER cpu smooth iteration=128 fp32_relative=0.0783458
+INNER cpu smooth iteration=192 fp32_relative=0.0220583
+INNER cpu smooth iteration=256 fp32_relative=0.00622601
+OUTER cpu smooth offset=0 step=3 K=314 true=4.78712e-09
+INNER cpu smooth iteration=64 fp32_relative=0.062908
+INNER cpu smooth iteration=128 fp32_relative=0.0079175
+OUTER cpu smooth offset=0 step=4 K=174 true=9.38403e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=0 seconds=957.546 outer=4 K=674 fineS=1435 c1=0 c2=0 true=9.38403e-12 PASS
+OUTER cpu smooth offset=4 step=1 K=9 true=0.00120939
+INNER cpu smooth iteration=64 fp32_relative=0.0173365
+INNER cpu smooth iteration=128 fp32_relative=0.00474119
+OUTER cpu smooth offset=4 step=2 K=172 true=2.38211e-06
+INNER cpu smooth iteration=64 fp32_relative=0.163542
+INNER cpu smooth iteration=128 fp32_relative=0.0322442
+INNER cpu smooth iteration=192 fp32_relative=0.00710915
+OUTER cpu smooth offset=4 step=3 K=248 true=4.73245e-09
+INNER cpu smooth iteration=64 fp32_relative=0.261997
+INNER cpu smooth iteration=128 fp32_relative=0.0739113
+INNER cpu smooth iteration=192 fp32_relative=0.0209597
+INNER cpu smooth iteration=256 fp32_relative=0.00596716
+OUTER cpu smooth offset=4 step=4 K=312 true=9.37488e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=4 seconds=1043.04 outer=4 K=741 fineS=1576 c1=0 c2=0 true=9.37488e-12 PASS
+OUTER cpu smooth offset=8 step=1 K=9 true=0.00120622
+INNER cpu smooth iteration=64 fp32_relative=0.0155367
+INNER cpu smooth iteration=128 fp32_relative=0.00428324
+OUTER cpu smooth offset=8 step=2 K=167 true=2.39866e-06
+INNER cpu smooth iteration=64 fp32_relative=0.21741
+INNER cpu smooth iteration=128 fp32_relative=0.0490072
+INNER cpu smooth iteration=192 fp32_relative=0.0113001
+INNER cpu smooth iteration=256 fp32_relative=0.0026562
+OUTER cpu smooth offset=8 step=3 K=268 true=4.74757e-09
+INNER cpu smooth iteration=64 fp32_relative=0.235296
+INNER cpu smooth iteration=128 fp32_relative=0.0606451
+INNER cpu smooth iteration=192 fp32_relative=0.016115
+INNER cpu smooth iteration=256 fp32_relative=0.00430656
+OUTER cpu smooth offset=8 step=4 K=294 true=9.15268e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=8 seconds=1027.15 outer=4 K=738 fineS=1570 c1=0 c2=0 true=9.15268e-12 PASS
+OUTER cpu smooth offset=12 step=1 K=9 true=0.00120749
+INNER cpu smooth iteration=64 fp32_relative=0.0194114
+INNER cpu smooth iteration=128 fp32_relative=0.00529547
+OUTER cpu smooth offset=12 step=2 K=178 true=2.37474e-06
+INNER cpu smooth iteration=64 fp32_relative=0.283209
+INNER cpu smooth iteration=128 fp32_relative=0.0806021
+INNER cpu smooth iteration=192 fp32_relative=0.0230224
+INNER cpu smooth iteration=256 fp32_relative=0.00658896
+OUTER cpu smooth offset=12 step=3 K=317 true=4.74865e-09
+INNER cpu smooth iteration=64 fp32_relative=0.179341
+INNER cpu smooth iteration=128 fp32_relative=0.0474583
+INNER cpu smooth iteration=192 fp32_relative=0.0126077
+INNER cpu smooth iteration=256 fp32_relative=0.0033608
+OUTER cpu smooth offset=12 step=4 K=282 true=9.44139e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=12 seconds=1143.31 outer=4 K=786 fineS=1673 c1=0 c2=0 true=9.44139e-12 PASS
+OUTER cpu smooth offset=16 step=1 K=9 true=0.00121677
+INNER cpu smooth iteration=64 fp32_relative=0.0166697
+INNER cpu smooth iteration=128 fp32_relative=0.00457746
+OUTER cpu smooth offset=16 step=2 K=170 true=2.4043e-06
+INNER cpu smooth iteration=64 fp32_relative=0.0982499
+INNER cpu smooth iteration=128 fp32_relative=0.0106118
+OUTER cpu smooth offset=16 step=3 K=184 true=4.77406e-09
+INNER cpu smooth iteration=64 fp32_relative=0.179759
+INNER cpu smooth iteration=128 fp32_relative=0.0482097
+INNER cpu smooth iteration=192 fp32_relative=0.0130414
+INNER cpu smooth iteration=256 fp32_relative=0.00355152
+OUTER cpu smooth offset=16 step=4 K=284 true=9.53067e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=16 seconds=960.718 outer=4 K=647 fineS=1377 c1=0 c2=0 true=9.53067e-12 PASS
+OUTER cpu smooth offset=20 step=1 K=9 true=0.00121122
+INNER cpu smooth iteration=64 fp32_relative=0.0184985
+INNER cpu smooth iteration=128 fp32_relative=0.00509802
+OUTER cpu smooth offset=20 step=2 K=176 true=2.40571e-06
+INNER cpu smooth iteration=64 fp32_relative=0.283437
+INNER cpu smooth iteration=128 fp32_relative=0.0807202
+INNER cpu smooth iteration=192 fp32_relative=0.0230706
+INNER cpu smooth iteration=256 fp32_relative=0.00660811
+OUTER cpu smooth offset=20 step=3 K=318 true=4.78283e-09
+INNER cpu smooth iteration=64 fp32_relative=0.157417
+INNER cpu smooth iteration=128 fp32_relative=0.0374171
+INNER cpu smooth iteration=192 fp32_relative=0.00905167
+INNER cpu smooth iteration=256 fp32_relative=0.00221806
+OUTER cpu smooth offset=20 step=4 K=262 true=9.52832e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=20 seconds=3565.19 outer=4 K=765 fineS=1627 c1=0 c2=0 true=9.52832e-12 PASS
+OUTER cpu smooth offset=24 step=1 K=9 true=0.00121615
+INNER cpu smooth iteration=64 fp32_relative=0.0153014
+INNER cpu smooth iteration=128 fp32_relative=0.00414289
+OUTER cpu smooth offset=24 step=2 K=165 true=2.41362e-06
+INNER cpu smooth iteration=64 fp32_relative=0.161541
+INNER cpu smooth iteration=128 fp32_relative=0.0317056
+INNER cpu smooth iteration=192 fp32_relative=0.00696554
+OUTER cpu smooth offset=24 step=3 K=247 true=4.77228e-09
+INNER cpu smooth iteration=64 fp32_relative=0.246494
+INNER cpu smooth iteration=128 fp32_relative=0.063843
+INNER cpu smooth iteration=192 fp32_relative=0.0172744
+INNER cpu smooth iteration=256 fp32_relative=0.00473679
+OUTER cpu smooth offset=24 step=4 K=300 true=9.43602e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=24 seconds=970.438 outer=4 K=721 fineS=1534 c1=0 c2=0 true=9.43602e-12 PASS
+OUTER cpu smooth offset=28 step=1 K=9 true=0.0012097
+INNER cpu smooth iteration=64 fp32_relative=0.016395
+INNER cpu smooth iteration=128 fp32_relative=0.00448707
+OUTER cpu smooth offset=28 step=2 K=169 true=2.40848e-06
+INNER cpu smooth iteration=64 fp32_relative=0.217092
+INNER cpu smooth iteration=128 fp32_relative=0.0487704
+INNER cpu smooth iteration=192 fp32_relative=0.0111937
+INNER cpu smooth iteration=256 fp32_relative=0.00261897
+OUTER cpu smooth offset=28 step=3 K=268 true=4.72164e-09
+INNER cpu smooth iteration=64 fp32_relative=0.241274
+INNER cpu smooth iteration=128 fp32_relative=0.0587331
+INNER cpu smooth iteration=192 fp32_relative=0.0143967
+INNER cpu smooth iteration=256 fp32_relative=0.00355373
+OUTER cpu smooth offset=28 step=4 K=284 true=9.38137e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=28 seconds=1042.44 outer=4 K=730 fineS=1554 c1=0 c2=0 true=9.38137e-12 PASS
+OUTER cpu smooth offset=32 step=1 K=9 true=0.00121679
+INNER cpu smooth iteration=64 fp32_relative=0.0188423
+INNER cpu smooth iteration=128 fp32_relative=0.00517271
+OUTER cpu smooth offset=32 step=2 K=176 true=2.42801e-06
+INNER cpu smooth iteration=64 fp32_relative=0.282803
+INNER cpu smooth iteration=128 fp32_relative=0.0803189
+INNER cpu smooth iteration=192 fp32_relative=0.0228934
+INNER cpu smooth iteration=256 fp32_relative=0.00653777
+OUTER cpu smooth offset=32 step=3 K=317 true=4.82712e-09
+INNER cpu smooth iteration=64 fp32_relative=0.167948
+INNER cpu smooth iteration=128 fp32_relative=0.0413596
+INNER cpu smooth iteration=192 fp32_relative=0.0103418
+INNER cpu smooth iteration=256 fp32_relative=0.00260276
+OUTER cpu smooth offset=32 step=4 K=268 true=9.55386e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=32 seconds=1028.55 outer=4 K=770 fineS=1638 c1=0 c2=0 true=9.55386e-12 PASS
+OUTER cpu smooth offset=36 step=1 K=9 true=0.00120797
+INNER cpu smooth iteration=64 fp32_relative=0.0149668
+INNER cpu smooth iteration=128 fp32_relative=0.00409109
+OUTER cpu smooth offset=36 step=2 K=164 true=2.40595e-06
+INNER cpu smooth iteration=64 fp32_relative=0.164229
+INNER cpu smooth iteration=128 fp32_relative=0.0327553
+INNER cpu smooth iteration=192 fp32_relative=0.00731018
+OUTER cpu smooth offset=36 step=3 K=249 true=4.70842e-09
+INNER cpu smooth iteration=64 fp32_relative=0.170224
+INNER cpu smooth iteration=128 fp32_relative=0.0449773
+INNER cpu smooth iteration=192 fp32_relative=0.0120387
+INNER cpu smooth iteration=256 fp32_relative=0.00325081
+OUTER cpu smooth offset=36 step=4 K=280 true=9.3199e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=36 seconds=935.34 outer=4 K=702 fineS=1494 c1=0 c2=0 true=9.3199e-12 PASS
+OUTER cpu smooth offset=40 step=1 K=9 true=0.00120323
+INNER cpu smooth iteration=64 fp32_relative=0.0175094
+INNER cpu smooth iteration=128 fp32_relative=0.0048226
+OUTER cpu smooth offset=40 step=2 K=173 true=2.38555e-06
+INNER cpu smooth iteration=64 fp32_relative=0.102178
+INNER cpu smooth iteration=128 fp32_relative=0.0114083
+OUTER cpu smooth offset=40 step=3 K=182 true=4.75123e-09
+INNER cpu smooth iteration=64 fp32_relative=0.116101
+INNER cpu smooth iteration=128 fp32_relative=0.0269205
+INNER cpu smooth iteration=192 fp32_relative=0.00700208
+OUTER cpu smooth offset=40 step=4 K=252 true=9.47334e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=40 seconds=819.269 outer=4 K=616 fineS=1311 c1=0 c2=0 true=9.47334e-12 PASS
+OUTER cpu smooth offset=44 step=1 K=9 true=0.00122085
+INNER cpu smooth iteration=64 fp32_relative=0.0179577
+INNER cpu smooth iteration=128 fp32_relative=0.00489281
+OUTER cpu smooth offset=44 step=2 K=174 true=2.40471e-06
+INNER cpu smooth iteration=64 fp32_relative=0.282323
+INNER cpu smooth iteration=128 fp32_relative=0.0801301
+INNER cpu smooth iteration=192 fp32_relative=0.0228138
+INNER cpu smooth iteration=256 fp32_relative=0.00651269
+OUTER cpu smooth offset=44 step=3 K=317 true=4.77779e-09
+INNER cpu smooth iteration=64 fp32_relative=0.163135
+INNER cpu smooth iteration=128 fp32_relative=0.0354586
+INNER cpu smooth iteration=192 fp32_relative=0.0089341
+INNER cpu smooth iteration=256 fp32_relative=0.00227098
+OUTER cpu smooth offset=44 step=4 K=263 true=9.50624e-12
+TILE L=32 m=-0.1 cpu smooth trial=0 offset=44 seconds=1016.47 outer=4 K=763 fineS=1623 c1=0 c2=0 true=9.50624e-12 PASS
+OUTER cpu smooth offset=48 step=1 K=9 true=0.00121163
+INNER cpu smooth iteration=64 fp32_relative=0.0157026

@@ -1,0 +1,8 @@
+GPU=Apple M1 Max maxBuffer_MiB=19169 sparse coarse BiCGStab; csw=1; physical tile=12 workers=8
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=857.229
+L=16 mass=0.1 RHS=12 tile=0+12 cpu_sparse_mg trial=0 ms=4574.66 outer=4 inner=24 fineS=76 coarse_spmv=124 coarse_true=0.0985442 true_r=9.48086e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=12 tile=12 trial=0 total_ms=4574.66 true_r=9.48086e-13 peak_RSS_MiB=4447.05
+Metal allocated_MiB=1628
+L=16 mass=0.1 RHS=12 tile=0+12 metal_sparse_mg trial=0 ms=1472.36 outer=4 inner=24 fineS=76 coarse_spmv=408 coarse_true=0.0985438 true_r=9.48093e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=12 tile=12 trial=0 total_ms=1472.36 true_r=9.48093e-13 peak_RSS_MiB=4447.05
+PASS: all requested systems; full CPU FP64 clover-Wilson residual checks for every RHS.

@@ -1,0 +1,57 @@
+MG_SETTINGS blocks=4,4,4,4
+STANDALONE original FP64 operator_match=1.9858960433204296e-16
+REFERENCE deferred: independent Chroma verification and vector comparison required after native reference completes
+DEVICE Apple M1 Max
+METAL CPU_FP32 Schur_match=7.5874554698288714e-08
+INNER metal-bicgstab K=64 relative_FP32=0.014370480714564071
+OUTER method=metal-bicgstab step=1 K=98 full_relative=0.0015754772147242861
+INNER metal-bicgstab K=64 relative_FP32=0.27920958893167896
+INNER metal-bicgstab K=128 relative_FP32=0.10273356174506795
+INNER metal-bicgstab K=192 relative_FP32=0.032291054182576114
+INNER metal-bicgstab K=256 relative_FP32=0.026165203104848201
+INNER metal-bicgstab K=320 relative_FP32=0.0094824708749301091
+OUTER method=metal-bicgstab step=2 K=367 full_relative=3.0152185207950952e-06
+INNER metal-bicgstab K=64 relative_FP32=0.10144393626135151
+INNER metal-bicgstab K=128 relative_FP32=0.039229702290523076
+INNER metal-bicgstab K=192 relative_FP32=0.011322326865825684
+INNER metal-bicgstab K=256 relative_FP32=0.0041205249041776533
+OUTER method=metal-bicgstab step=3 K=261 full_relative=5.9924853471626605e-09
+INNER metal-bicgstab K=64 relative_FP32=0.32622152628783707
+INNER metal-bicgstab K=128 relative_FP32=0.051669025129690092
+INNER metal-bicgstab K=192 relative_FP32=0.043708355454487077
+INNER metal-bicgstab K=256 relative_FP32=0.0068718632676763669
+INNER metal-bicgstab K=320 relative_FP32=0.0061496919506140672
+OUTER method=metal-bicgstab step=4 K=364 full_relative=6.4309684065547923e-12
+INNER metal-bicgstab K=64 relative_FP32=0.24538968058744867
+INNER metal-bicgstab K=128 relative_FP32=0.074168642787707642
+INNER metal-bicgstab K=192 relative_FP32=0.062026472520323464
+INNER metal-bicgstab K=256 relative_FP32=0.0097912423615333245
+INNER metal-bicgstab K=320 relative_FP32=0.0026157509234805525
+OUTER method=metal-bicgstab step=5 K=330 full_relative=1.2749140449895491e-14
+SOLVED method=metal-bicgstab outer=5 K=1420 seconds=28.782451458000001 full_relative=1.2749140449895491e-14
+BASIS filtered 2/12
+BASIS filtered 4/12
+BASIS filtered 6/12
+BASIS filtered 8/12
+BASIS filtered 10/12
+BASIS filtered 12/12
+HIERARCHY seconds=20.852333000000002 coarse1=49152 coarse2=3072
+OUTER method=metal-mg step=1 K=52 full_relative=0.0016347057486039804
+INNER metal-mg K=64 relative_FP32=0.13689044455877034
+INNER metal-mg K=128 relative_FP32=0.021654662096375805
+INNER metal-mg K=192 relative_FP32=0.0028476754850337914
+OUTER method=metal-mg step=2 K=203 full_relative=3.2616085574667307e-06
+INNER metal-mg K=64 relative_FP32=0.12282529340587842
+INNER metal-mg K=128 relative_FP32=0.013699008264603359
+INNER metal-mg K=192 relative_FP32=0.0020062974515758143
+OUTER method=metal-mg step=3 K=193 full_relative=6.362228845587632e-09
+INNER metal-mg K=64 relative_FP32=0.15919285910159106
+INNER metal-mg K=128 relative_FP32=0.021364482371130044
+INNER metal-mg K=192 relative_FP32=0.0026027308712586804
+OUTER method=metal-mg step=4 K=200 full_relative=1.2671234212263028e-11
+INNER metal-mg K=64 relative_FP32=0.13556344067098325
+INNER metal-mg K=128 relative_FP32=0.018897977500803978
+INNER metal-mg K=192 relative_FP32=0.002371417388462459
+OUTER method=metal-mg step=5 K=197 full_relative=2.530712283083642e-14
+SOLVED method=metal-mg outer=5 K=845 seconds=72.336825665999996 full_relative=2.530712283083642e-14
+METAL PASS both full FP64 residuals <= 1e-12

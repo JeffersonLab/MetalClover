@@ -1,0 +1,8 @@
+extent,rhs,mass,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations,dispatched_steps
+3,3,0.25,cpu_fp64,0,1,1.04590499454e-13,9,9,9
+3,3,0.25,cpu_mixed,0,1,0.00198095150835,7,8,8
+3,3,0.25,cpu_mixed,0,2,2.10431763382e-06,5,7,7
+3,3,0.25,cpu_mixed,0,3,1.35397321984e-11,9,9,9
+3,3,0.25,metal_mixed,0,1,0.00198095015866,7,8,8
+3,3,0.25,metal_mixed,0,2,2.10610624283e-06,5,7,8
+3,3,0.25,metal_mixed,0,3,2.13075785762e-11,9,9,12

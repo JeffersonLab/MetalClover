@@ -1,0 +1,53 @@
+m=0.1 k=25 lambda=0.0814362 ritz_bound=0.0238536
+m=0.1 k=50 lambda=0.0787903 ritz_bound=0.0440224
+m=0.1 k=75 lambda=0.0777853 ritz_bound=0.00593585
+m=0.1 k=100 lambda=0.0776757 ritz_bound=0.0138953
+m=0.1 k=125 lambda=0.0774811 ritz_bound=0.00655436
+m=0.1 k=150 lambda=0.0773324 ritz_bound=0.0189432
+m=0.1 k=175 lambda=0.0771322 ritz_bound=0.00278277
+m=0.1 k=200 lambda=0.0771237 ritz_bound=0.00367019
+m=0.1 k=225 lambda=0.0770134 ritz_bound=0.00542646
+m=0.1 k=250 lambda=0.0769815 ritz_bound=0.00567462
+m=0.1 k=275 lambda=0.0769174 ritz_bound=0.00299216
+m=0.1 k=300 lambda=0.0769119 ritz_bound=0.00308598
+GAP mass=0.1 sigma=0.27733 true_H2_residual=0.00308598 stationary_m=-0.107411 steps=300
+m=-0.1 k=25 lambda=0.0343252 ritz_bound=0.0107855
+m=-0.1 k=50 lambda=0.0342614 ritz_bound=0.00451535
+m=-0.1 k=75 lambda=0.0339747 ritz_bound=0.0269571
+m=-0.1 k=100 lambda=0.0335843 ritz_bound=0.00272805
+m=-0.1 k=125 lambda=0.0335745 ritz_bound=0.00337624
+m=-0.1 k=150 lambda=0.0334013 ritz_bound=0.0143823
+m=-0.1 k=175 lambda=0.0333377 ritz_bound=0.00187945
+m=-0.1 k=200 lambda=0.0333252 ritz_bound=0.00499738
+m=-0.1 k=225 lambda=0.0332223 ritz_bound=0.00448946
+m=-0.1 k=250 lambda=0.0332163 ritz_bound=0.00184909
+m=-0.1 k=275 lambda=0.0331866 ritz_bound=0.0077196
+m=-0.1 k=300 lambda=0.0331302 ritz_bound=0.0014743
+GAP mass=-0.1 sigma=0.182017 true_H2_residual=0.0014743 stationary_m=-0.120454 steps=300
+m=-0.12 k=25 lambda=0.0339121 ritz_bound=0.010942
+m=-0.12 k=50 lambda=0.0338378 ritz_bound=0.00573438
+m=-0.12 k=75 lambda=0.0333057 ritz_bound=0.0348516
+m=-0.12 k=100 lambda=0.032774 ritz_bound=0.00358201
+m=-0.12 k=125 lambda=0.0327267 ritz_bound=0.00949693
+m=-0.12 k=150 lambda=0.0323526 ritz_bound=0.0106801
+m=-0.12 k=175 lambda=0.0323219 ritz_bound=0.0017976
+m=-0.12 k=200 lambda=0.0323021 ritz_bound=0.00585966
+m=-0.12 k=225 lambda=0.03225 ritz_bound=0.0021908
+m=-0.12 k=250 lambda=0.0322484 ritz_bound=0.00108448
+m=-0.12 k=275 lambda=0.0322413 ritz_bound=0.00299446
+m=-0.12 k=300 lambda=0.0322353 ritz_bound=0.000481303
+GAP mass=-0.12 sigma=0.179542 true_H2_residual=0.000481303 stationary_m=-0.13786 steps=300
+m=-0.14 k=25 lambda=0.0342787 ritz_bound=0.0113853
+m=-0.14 k=50 lambda=0.0341646 ritz_bound=0.00952141
+m=-0.14 k=75 lambda=0.0328833 ritz_bound=0.0385714
+m=-0.14 k=100 lambda=0.0324004 ritz_bound=0.00448044
+m=-0.14 k=125 lambda=0.0322627 ritz_bound=0.0155832
+m=-0.14 k=150 lambda=0.0319621 ritz_bound=0.00580761
+m=-0.14 k=175 lambda=0.0319504 ritz_bound=0.00276021
+m=-0.14 k=200 lambda=0.03191 ritz_bound=0.00583036
+m=-0.14 k=225 lambda=0.031888 ritz_bound=0.00106982
+m=-0.14 k=250 lambda=0.0318859 ritz_bound=0.00218961
+m=-0.14 k=275 lambda=0.0318766 ritz_bound=0.00175991
+m=-0.14 k=300 lambda=0.0318752 ritz_bound=0.000454599
+GAP mass=-0.14 sigma=0.178536 true_H2_residual=0.000454599 stationary_m=-0.139941 steps=300
+DONE: FP64 Rayleigh diagnostics; convergence is recorded explicitly.

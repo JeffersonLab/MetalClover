@@ -1,0 +1,8 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=2.49941 min_clover_pivot=3.45057
+P1 basis ready n=98304
+A1 sparse ready blocks=135168 seconds=4.6621
+A2 sparse ready n=6144 blocks=8448 hierarchy_s=47.7235
+LEVEL1 PASS R_P=1.34722e-15 Galerkin=1.91707e-15 gamma5=4.77525e-15 n=98304 blocks=135168
+LEVEL2 PASS R_P=7.1451e-16 Galerkin=1.98709e-15 gamma5=2.55691e-15 n=6144 blocks=8448
+PASS validation only

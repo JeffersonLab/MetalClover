@@ -1,0 +1,16 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Two-level odd clover Schur; csw=1 aggregate=4x4x4x4 restart=8 vectors/chirality=6 pre/post=1/1 setup_omega=0.65 sweeps=8 omega=0.65 workers=8 library_ms=45.3062
+Hierarchy setup L=8 mass=0.1 coarse=192 ms=618.537
+mass=0.1 L=8 RHS=96 cpu_bicgstab trial=0 ms=2454.65 outer=4 inner=46 fineS=90 Vcycles=0 true_r=8.26979e-12 x_error=2.932e-11 PASS
+mass=0.1 L=8 RHS=96 metal_bicgstab trial=0 ms=604.725 outer=4 inner=46 fineS=104 Vcycles=0 true_r=8.27319e-12 x_error=2.95024e-11 PASS
+mass=0.1 L=8 RHS=96 cpu_fgmres_mg trial=0 ms=6361.36 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.14143e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 metal_fgmres_mg trial=0 ms=899.247 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.1414e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 metal_bicgstab trial=1 ms=648.448 outer=4 inner=46 fineS=104 Vcycles=0 true_r=8.27319e-12 x_error=2.95024e-11 PASS
+mass=0.1 L=8 RHS=96 cpu_fgmres_mg trial=1 ms=5661.96 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.14143e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 metal_fgmres_mg trial=1 ms=771.381 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.1414e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 cpu_bicgstab trial=1 ms=2478.89 outer=4 inner=46 fineS=90 Vcycles=0 true_r=8.26979e-12 x_error=2.932e-11 PASS
+mass=0.1 L=8 RHS=96 cpu_fgmres_mg trial=2 ms=4004.76 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.14143e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 metal_fgmres_mg trial=2 ms=758.708 outer=4 inner=45 fineS=142 Vcycles=45 true_r=7.1414e-12 x_error=2.34335e-11 PASS
+mass=0.1 L=8 RHS=96 cpu_bicgstab trial=2 ms=2409.71 outer=4 inner=46 fineS=90 Vcycles=0 true_r=8.26979e-12 x_error=2.932e-11 PASS
+mass=0.1 L=8 RHS=96 metal_bicgstab trial=2 ms=591.964 outer=4 inner=46 fineS=104 Vcycles=0 true_r=8.27319e-12 x_error=2.95024e-11 PASS
+PASS: 1 systems; all methods met full CPU FP64 clover-Wilson residual checks.

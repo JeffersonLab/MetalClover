@@ -1,0 +1,76 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+CHROMA link_import_s=0.0298712
+COMPACT setup_s=0.170266 min_clover_pivot=3.03379
+CHROMA FP64 full_relative=1.51119e-16 odd_schur_relative=1.60124e-16
+P1 basis ready n=6144
+A1 sparse ready blocks=8448 seconds=0.484144
+A2 sparse ready n=384 blocks=176 hierarchy_s=5.5454
+OUTER metal mg3 offset=0 step=1 K=15 true=0.0018996
+OUTER metal mg3 offset=0 step=2 K=34 true=3.64326e-06
+OUTER metal mg3 offset=0 step=3 K=34 true=6.65236e-09
+OUTER metal mg3 offset=0 step=4 K=34 true=1.26098e-11
+CHROMA RHS metal offset=0 prepare_ms=42.6922 output_ms=95.6816
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=0 seconds=4.31597 outer=4 K=117 fineS=368 c1=468 c2=1989 true=1.26098e-11 PASS
+OUTER cpu mg3 offset=0 step=1 K=15 true=0.0018996
+OUTER cpu mg3 offset=0 step=2 K=34 true=3.64327e-06
+OUTER cpu mg3 offset=0 step=3 K=34 true=6.65241e-09
+OUTER cpu mg3 offset=0 step=4 K=34 true=1.26099e-11
+CHROMA RHS cpu offset=0 prepare_ms=34.5463 output_ms=92.8388
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=0 seconds=41.5506 outer=4 K=117 fineS=368 c1=468 c2=351 true=1.26099e-11 PASS
+PASS all full FP64 original-equation residual checks
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 20 20 20 20
+  layout size = 10 20 20 20
+  logical machine size = 1 1 1 1
+  subgrid size = 20 20 20 20
+  total number of nodes = 1
+  total volume = 160000
+  subgrid volume = 160000
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+Start of header
+BEGIN_HEADER
+DATATYPE = 4D_SU3_GAUGE
+DIMENSION_1 = 20
+DIMENSION_2 = 20
+DIMENSION_3 = 20
+DIMENSION_4 = 20
+CHECKSUM = f53f13b1
+LINK_TRACE = -0.0004205016749
+PLAQUETTE = 0.6381995717
+FLOATING_POINT = IEEE32BIG
+END_HEADER
+End of header
+CHROMA SOLUTIONS PASS rhs=4 worst_full_relative=1.26098e-11
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 20 20 20 20
+  layout size = 10 20 20 20
+  logical machine size = 1 1 1 1
+  subgrid size = 20 20 20 20
+  total number of nodes = 1
+  total volume = 160000
+  subgrid volume = 160000
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+Start of header
+BEGIN_HEADER
+DATATYPE = 4D_SU3_GAUGE
+DIMENSION_1 = 20
+DIMENSION_2 = 20
+DIMENSION_3 = 20
+DIMENSION_4 = 20
+CHECKSUM = f53f13b1
+LINK_TRACE = -0.0004205016749
+PLAQUETTE = 0.6381995717
+FLOATING_POINT = IEEE32BIG
+END_HEADER
+End of header
+CHROMA SOLUTIONS PASS rhs=4 worst_full_relative=1.26099e-11

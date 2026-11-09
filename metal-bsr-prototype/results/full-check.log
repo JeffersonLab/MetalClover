@@ -1,0 +1,5 @@
+GPU: Apple M1 Max | macOS Version 26.7.1 (Build 25G241)
+CPU workers: 8; Accelerate internal threads: 1; samples: 3; initial Metal library setup: 40.6276 ms
+dense12 L=8 rows=4096 rhs=12 check=589824/589824 accelerate_1=15.559ms accelerate_parallel=2.782ms neon_parallel=6.648ms metal_latency=1.173ms metal_batch=0.926ms PASS
+color3_spin4 L=8 rows=4096 rhs=12 check=589824/589824 metal_latency=0.383ms metal_batch=0.144ms accelerate_1=6.401ms accelerate_parallel=0.968ms neon_parallel=1.508ms PASS
+PASS: 2 cases; full double-reference validation.

@@ -1,0 +1,20 @@
+Running self-test --self-test --vectors 12 --omega 1 --csv results/mg-tuned/self-test.csv
+Running hierarchy --validate-only --rhs 3 --vectors 12 --omega 1
+Running anisotropic-hierarchy --validate-only --rhs 3 --aggregate-shape 4,4,4,2
+Running original-m.1-r96 --mass .1 --rhs 96 --samples 3 --csw 1 --csv results/mg-tuned/original-m.1-r96.csv --vectors 6 --omega .65 --methods cpu_bicgstab,metal_bicgstab,cpu_fgmres_mg,metal_fgmres_mg
+Finished original-m.1-r96
+Running tuned-m.1-r96 --mass .1 --rhs 96 --samples 3 --csw 1 --csv results/mg-tuned/tuned-m.1-r96.csv --vectors 12 --omega 1 --methods cpu_fgmres_smooth,metal_fgmres_smooth,cpu_fgmres_mg,metal_fgmres_mg
+Finished tuned-m.1-r96
+Running tuned-m.1-r192 --mass .1 --rhs 192 --samples 3 --csw 1 --csv results/mg-tuned/tuned-m.1-r192.csv --vectors 12 --omega 1 --methods cpu_fgmres_smooth,metal_fgmres_smooth,cpu_fgmres_mg,metal_fgmres_mg
+Finished tuned-m.1-r192
+Running original-m.1-r192 --mass .1 --rhs 192 --samples 3 --csw 1 --csv results/mg-tuned/original-m.1-r192.csv --vectors 6 --omega .65 --methods cpu_bicgstab,metal_bicgstab,cpu_fgmres_mg,metal_fgmres_mg
+Finished original-m.1-r192
+Running original-m.5-r96 --mass .5 --rhs 96 --samples 3 --csw 1 --csv results/mg-tuned/original-m.5-r96.csv --vectors 6 --omega .65 --methods cpu_bicgstab,metal_bicgstab,cpu_fgmres_mg,metal_fgmres_mg
+Finished original-m.5-r96
+Running tuned-m.5-r96 --mass .5 --rhs 96 --samples 3 --csw 1 --csv results/mg-tuned/tuned-m.5-r96.csv --vectors 12 --omega 1 --methods cpu_fgmres_smooth,metal_fgmres_smooth,cpu_fgmres_mg,metal_fgmres_mg
+Finished tuned-m.5-r96
+Running tuned-m.5-r192 --mass .5 --rhs 192 --samples 3 --csw 1 --csv results/mg-tuned/tuned-m.5-r192.csv --vectors 12 --omega 1 --methods cpu_fgmres_smooth,metal_fgmres_smooth,cpu_fgmres_mg,metal_fgmres_mg
+Finished tuned-m.5-r192
+Running original-m.5-r192 --mass .5 --rhs 192 --samples 3 --csw 1 --csv results/mg-tuned/original-m.5-r192.csv --vectors 6 --omega .65 --methods cpu_bicgstab,metal_bicgstab,cpu_fgmres_mg,metal_fgmres_mg
+Finished original-m.5-r192
+Completed 96 measured full FP64-checked solves

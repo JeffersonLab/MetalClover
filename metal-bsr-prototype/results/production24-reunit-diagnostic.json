@@ -1,0 +1,41 @@
+{
+  "spin_source": 0,
+  "raw_link_baseline": {
+    "elements": 192,
+    "relative_2norm": 6.601229349084659e-06,
+    "max_absolute": 1.7025933790911927e-06,
+    "worst_key": [
+      0,
+      3,
+      203
+    ],
+    "t176_spin00_computed": [
+      0.731292356429334,
+      -1.725967131271245e-14
+    ],
+    "t176_spin00_reference": [
+      0.7312910678982807,
+      -7.804260423668885e-10
+    ]
+  },
+  "corrected_gauge_startup": {
+    "elements": 192,
+    "relative_2norm": 3.8569319470842944e-05,
+    "max_absolute": 9.964153589860885e-06,
+    "worst_key": [
+      0,
+      3,
+      203
+    ],
+    "t176_spin00_computed": [
+      0.7312985722196034,
+      1.0362013341722834e-13
+    ],
+    "t176_spin00_reference": [
+      0.7312910678982807,
+      -7.804260423668885e-10
+    ]
+  },
+  "baseline_full_residual_on_corrected_field": 1.836806810166236e-06,
+  "corrected_full_residual": 9.403627007618e-12
+}

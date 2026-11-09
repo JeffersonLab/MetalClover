@@ -1,0 +1,24 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Open store database /Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.prop.n162.light.t0_0.sdb1000a
+Opening a file /Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.prop.n162.light.t0_0.sdb1000a with hash version 5 using current library version 6
+PERAM keys=768 metadata_bytes=439689 source_times=176  sink_times=176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223  mass_labels=U-0.0856 
+Lattice initialized:
+  problem size = 24 24 24 256
+  layout size = 12 24 24 256
+  logical machine size = 1 1 1 1
+  subgrid size = 24 24 24 256
+  total number of nodes = 1
+  total volume = 3538944
+  subgrid volume = 3538944
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+MapObjectDisk: opening file /Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.3d.eigs.mod1000a for reading
+MapObjectDisk: reading and checking header
+MapObjectDisk: file has version: 1
+MapObjectDisk: reading key/fileposition data
+EIGEN keys=41472
+EIGEN vec=0 t=176 norm_squared=0.99999999992236543
+EIGEN vec=0 t=223 norm_squared=0.99999999951329788

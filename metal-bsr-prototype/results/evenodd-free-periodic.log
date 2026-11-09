@@ -1,0 +1,9 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Wilson EO BiCGStab workers=8 library_ms=47.5668 gauge=0 APBC=0 tol=1e-10 chunk=4
+mass=0.25 L=2 RHS=3 none cpu_fp64 trial=0 ms=0.47975 outer=1 inner=5 dispatched=5 true_r=2.3328e-15 x_error=3.42604e-15 PASS
+mass=0.25 L=2 RHS=3 none cpu_mixed trial=0 ms=0.691041 outer=2 inner=10 dispatched=10 true_r=2.7562e-12 x_error=1.45877e-12 PASS
+mass=0.25 L=2 RHS=3 none metal_mixed trial=0 ms=11.4781 outer=2 inner=10 dispatched=16 true_r=7.92354e-13 x_error=2.35733e-12 PASS
+mass=0.25 L=2 RHS=3 even_odd cpu_fp64 trial=0 ms=0.3595 outer=1 inner=3 dispatched=3 true_r=2.69781e-16 x_error=1.21075e-15 PASS
+mass=0.25 L=2 RHS=3 even_odd cpu_mixed trial=0 ms=0.483958 outer=2 inner=6 dispatched=6 true_r=1.25963e-14 x_error=4.64195e-14 PASS
+mass=0.25 L=2 RHS=3 even_odd metal_mixed trial=0 ms=4.41425 outer=2 inner=6 dispatched=8 true_r=1.09206e-14 x_error=7.20251e-14 PASS
+PASS: 1 systems; every RHS checked on the full FP64 Wilson equation after reconstruction.

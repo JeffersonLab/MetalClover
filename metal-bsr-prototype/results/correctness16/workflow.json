@@ -1,0 +1,72 @@
+{
+  "environment": {
+    "OMP_NUM_THREADS": "8",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "mass_selection": "Light-quark action m=-0.0840; six matching header entries. Strange action m=-0.0743 is also recorded in the LIME header but is not the target of this run.",
+  "commands": {
+    "prepare": [
+      "python3",
+      "correctness12_prepare.py",
+      "--gauge",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_16_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per_cfg_1000.lime",
+      "--mass=-0.0840",
+      "--out-dir",
+      "results/correctness16"
+    ],
+    "export": [
+      "./build/production_export",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_16_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per_cfg_1000.lime",
+      "results/correctness16/action.xml",
+      "-",
+      "build/correctness16"
+    ],
+    "native_reference": [
+      "./build/correctness_chroma",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_16_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per_cfg_1000.lime",
+      "results/correctness16/action.xml",
+      "build/correctness16",
+      "results/correctness16/test",
+      "reference"
+    ],
+    "metal": [
+      "./build/correctness_compare",
+      "build/correctness16",
+      "results/correctness16/test",
+      "4,4,4,4",
+      "--defer-reference"
+    ],
+    "native_verify": [
+      "./build/correctness_chroma",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_16_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per_cfg_1000.lime",
+      "results/correctness16/action.xml",
+      "build/correctness16",
+      "results/correctness16/test",
+      "verify"
+    ],
+    "report": [
+      "python3",
+      "correctness12_report.py",
+      "--folder",
+      "results/correctness16",
+      "--bridge-prefix",
+      "build/correctness16"
+    ]
+  },
+  "logs": {
+    "export": "export.log",
+    "native_reference": "chroma-reference.log",
+    "metal": "metal.log",
+    "native_verify": "chroma-verify.log"
+  },
+  "source_seed": 20261107,
+  "full_relative_tolerance": 1e-12,
+  "fine_blocks": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "note": "The shared RHS is newly sized and unit-normalized for 16^3x128, with the same Z4 seed used for the 12^3x96 test. Both Metal methods start from zero.",
+  "execution_order": "Native reference and Metal solves overlap; native verify and final report run only after both exit successfully."
+}

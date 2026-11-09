@@ -1,0 +1,7 @@
+m=0.1 k=25 lambda=0.654365 ritz_bound=1.20029e-13
+GAP mass=0.1 sigma=0.808928 true_H2_residual=1.20317e-13 stationary_m=-0.292893 steps=25
+m=-0.1 k=25 lambda=0.537208 ritz_bound=3.41101e-13
+GAP mass=-0.1 sigma=0.732945 true_H2_residual=3.41284e-13 stationary_m=-0.292893 steps=25
+m=-0.25 k=25 lambda=0.50184 ritz_bound=1.22907e-13
+GAP mass=-0.25 sigma=0.708407 true_H2_residual=1.22935e-13 stationary_m=-0.292893 steps=25
+DONE: FP64 Rayleigh diagnostics; convergence is recorded explicitly.

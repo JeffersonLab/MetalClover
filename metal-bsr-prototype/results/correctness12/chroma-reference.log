@@ -1,0 +1,24 @@
+QDP use OpenMP threading. We have 8 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+u0 is 1
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+Single Precision Read
+QIO_read_finished
+NATIVE StoutFermState link_match=0
+NATIVE original UnprecCloverLinOp match=0
+InvBiCGStab: k = 679 resid = 4.6554403743598e-14
+QDP:FlopCount:invbicgstab Performance/CPU: t=52.927378(s) Flops=540992618496 => 10221.4135469926 Mflops/cpu.
+QDP:FlopCount:invbicgstab Total performance:  10221.4135469926 Mflops = 10.2214135469926 Gflops = 0.0102214135469926 Tflops
+CHROMA BICGSTAB attempt=0 iterations=679 full_relative=4.677214826764511e-14
+REFERENCE PASS seconds=52.965964999999997

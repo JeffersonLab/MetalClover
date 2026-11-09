@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+
+<HMC>
+  <ProgramInfo>
+    <code_version>
+      <chroma>3.27.0</chroma>
+      <qdp>1.25.1</qdp>
+    </code_version>
+    <run_date>09 Dec 07 22:37:54 EST</run_date>
+    <Setgeom>
+      <latt_size>12 12 12 96</latt_size>
+      <logical_size>1 4 4 16</logical_size>
+      <subgrid_size>12 3 3 6</subgrid_size>
+      <total_volume>165888</total_volume>
+      <subgrid_volume>648</subgrid_volume>
+    </Setgeom>
+  </ProgramInfo>
+</HMC>

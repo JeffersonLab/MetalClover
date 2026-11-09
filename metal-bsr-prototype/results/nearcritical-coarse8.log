@@ -1,0 +1,6 @@
+GPU=Apple M1 Max CPU workers=8 c_sw=1 resident_RHS=12 BiCG_chunk=1 paired prefix batch timings
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=966.382
+CASE L=16 bare_mass=-0.12 clover_min_pivot=3.4854
+TILE L=16 mass=-0.12 metal_sparse_mg trial=0 offset=0 ms=2481 outer=4 krylov=30 fineS=94 true_r=1.2873e-12 PASS
+BATCH L=16 mass=-0.12 RHS=12 metal_sparse_mg trial=0 total_ms=2481 true_r=1.2873e-12
+PASS: all methods and RHS met full CPU FP64 clover-Wilson residual checks.

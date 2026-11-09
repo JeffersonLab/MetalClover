@@ -1,0 +1,30 @@
+GPU: Apple M1 Max | macOS Version 26.7.1 (Build 25G241)
+CPU workers=8 library_ms=45.2184 mass=0.25 true_tol=1e-10 inner_tol=0.002 GPU_chunk=8
+L=1 RHS=1 cpu_fp64 trial=0 total_ms=0.043958 outer=1 inner=1 dispatched=1 true_r=1.60728e-16 x_error=1.58953e-16 PASS
+L=1 RHS=1 cpu_mixed trial=0 total_ms=0.019584 outer=2 inner=2 dispatched=2 true_r=3.56252e-15 x_error=3.57491e-15 PASS
+L=1 RHS=1 metal_mixed trial=0 total_ms=2.05646 outer=2 inner=2 dispatched=16 true_r=5.63268e-14 x_error=5.63267e-14 PASS
+L=1 RHS=3 cpu_mixed trial=0 total_ms=0.03 outer=2 inner=2 dispatched=2 true_r=4.53238e-15 x_error=4.17648e-15 PASS
+L=1 RHS=3 metal_mixed trial=0 total_ms=1.52704 outer=2 inner=2 dispatched=16 true_r=2.34648e-14 x_error=1.50265e-14 PASS
+L=1 RHS=3 cpu_fp64 trial=0 total_ms=0.024833 outer=1 inner=1 dispatched=1 true_r=1.80022e-16 x_error=1.46748e-16 PASS
+L=1 RHS=7 metal_mixed trial=0 total_ms=3.70225 outer=2 inner=2 dispatched=16 true_r=4.24027e-14 x_error=2.16856e-14 PASS
+L=1 RHS=7 cpu_fp64 trial=0 total_ms=0.010292 outer=1 inner=1 dispatched=1 true_r=2.65767e-16 x_error=1.91677e-16 PASS
+L=1 RHS=7 cpu_mixed trial=0 total_ms=0.021458 outer=2 inner=2 dispatched=2 true_r=1.76989e-14 x_error=9.12435e-15 PASS
+L=2 RHS=1 cpu_fp64 trial=0 total_ms=0.175375 outer=1 inner=3 dispatched=3 true_r=2.97857e-16 x_error=3.47803e-16 PASS
+L=2 RHS=1 cpu_mixed trial=0 total_ms=0.299709 outer=2 inner=6 dispatched=6 true_r=1.7621e-14 x_error=2.05557e-14 PASS
+L=2 RHS=1 metal_mixed trial=0 total_ms=3.89875 outer=2 inner=6 dispatched=16 true_r=4.25882e-14 x_error=4.00289e-14 PASS
+L=2 RHS=3 cpu_mixed trial=0 total_ms=0.245 outer=2 inner=6 dispatched=6 true_r=1.75656e-14 x_error=1.75417e-14 PASS
+L=2 RHS=3 metal_mixed trial=0 total_ms=5.25896 outer=2 inner=6 dispatched=16 true_r=3.31892e-14 x_error=3.4722e-14 PASS
+L=2 RHS=3 cpu_fp64 trial=0 total_ms=0.104792 outer=1 inner=3 dispatched=3 true_r=3.74416e-16 x_error=4.48971e-16 PASS
+L=2 RHS=7 metal_mixed trial=0 total_ms=20.3749 outer=2 inner=6 dispatched=16 true_r=6.05355e-14 x_error=4.22748e-14 PASS
+L=2 RHS=7 cpu_fp64 trial=0 total_ms=0.214875 outer=1 inner=3 dispatched=3 true_r=3.92084e-16 x_error=4.27917e-16 PASS
+L=2 RHS=7 cpu_mixed trial=0 total_ms=0.32275 outer=2 inner=6 dispatched=6 true_r=3.44793e-14 x_error=2.69271e-14 PASS
+L=3 RHS=1 cpu_fp64 trial=0 total_ms=1.39963 outer=1 inner=19 dispatched=19 true_r=3.49661e-16 x_error=4.78876e-16 PASS
+L=3 RHS=1 cpu_mixed trial=0 total_ms=1.72071 outer=4 inner=39 dispatched=39 true_r=8.3232e-13 x_error=2.06656e-12 PASS
+L=3 RHS=1 metal_mixed trial=0 total_ms=33.6342 outer=4 inner=39 dispatched=64 true_r=8.28123e-13 x_error=2.06167e-12 PASS
+L=3 RHS=3 cpu_mixed trial=0 total_ms=7.04113 outer=4 inner=39 dispatched=39 true_r=3.4981e-12 x_error=6.85873e-12 PASS
+L=3 RHS=3 metal_mixed trial=0 total_ms=20.7992 outer=4 inner=39 dispatched=64 true_r=3.51078e-12 x_error=6.88955e-12 PASS
+L=3 RHS=3 cpu_fp64 trial=0 total_ms=2.50271 outer=1 inner=19 dispatched=19 true_r=4.15244e-16 x_error=5.71412e-16 PASS
+L=3 RHS=7 metal_mixed trial=0 total_ms=27.5331 outer=4 inner=39 dispatched=64 true_r=1.42386e-12 x_error=2.40953e-12 PASS
+L=3 RHS=7 cpu_fp64 trial=0 total_ms=2.60042 outer=1 inner=19 dispatched=19 true_r=4.30084e-16 x_error=5.85785e-16 PASS
+L=3 RHS=7 cpu_mixed trial=0 total_ms=4.22813 outer=4 inner=39 dispatched=39 true_r=1.42395e-12 x_error=2.40937e-12 PASS
+PASS: 9 systems; every RHS has full CPU FP64 true-residual and known-solution checks.

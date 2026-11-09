@@ -1,0 +1,4 @@
+method,full_relative,relative_solution_difference
+chroma-bicgstab,4.6718437504373908e-14,0
+metal-bicgstab,1.2750209568609897e-14,2.5153791152900463e-12
+metal-mg,2.5297595142212809e-14,3.0774910055799336e-12

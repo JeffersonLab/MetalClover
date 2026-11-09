@@ -1,0 +1,15 @@
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=1 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=2.83362e-11,5.88281e-13
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=4.98281e-11,1.5208e-12
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=7 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=5.56561e-11,1.76048e-12
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=1 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=1.58531e-11,3.32866e-12
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=3 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=3.80112e-11,1.23584e-12
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=7 csw=1
+Clover stage-1 full CPU and Metal/FP64-elimination solves PASS residuals=6.52695e-11,3.88599e-12
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=1
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=0
+PASS: clover stage 1 validated before GPU elimination changes.

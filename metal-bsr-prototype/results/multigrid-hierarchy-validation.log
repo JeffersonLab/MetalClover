@@ -1,0 +1,7 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Two-level odd clover Schur; csw=1 aggregate=4 restart=8 filtered seeds=6/chirality, sweeps=8 omega=0.65 workers=8 library_ms=43.6505
+Hierarchy setup L=8 mass=0.1 coarse=192 ms=636.727
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=192
+Hierarchy setup L=8 mass=0.5 coarse=192 ms=581.134
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=192
+PASS: 2 hierarchy/operator validation cases.

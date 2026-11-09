@@ -1,0 +1,22 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=0.0112372 min_clover_pivot=3.52058
+P1 basis ready n=384
+A1 sparse ready blocks=176 seconds=0.0251758
+A2 sparse ready n=24 blocks=1 hierarchy_s=0.345451
+LEVEL1 PASS R_P=1.38787e-15 Galerkin=1.71562e-15 gamma5=3.54602e-15 n=384 blocks=176
+LEVEL2 PASS R_P=6.26108e-16 Galerkin=1.62531e-15 gamma5=1.1678e-15 n=24 blocks=1
+DEVICE PASS inbs=12 R=1.86259e-07 P=2.10772e-07 A=5.20547e-07
+DEVICE PASS inbs=24 R=1.35088e-07 P=1.60897e-07 A=2.52304e-07
+TILE L=8 m=-0.12 metal mg3 trial=0 offset=0 seconds=0.867483 outer=4 K=26 fineS=82 c1=203 c2=1947 true=2.77973e-12 PASS
+TILE L=8 m=-0.12 metal mg3 trial=0 offset=4 seconds=0.759105 outer=4 K=26 fineS=82 c1=203 c2=1947 true=2.94806e-12 PASS
+TILE L=8 m=-0.12 metal bicgstab trial=0 offset=0 seconds=0.260669 outer=4 K=78 fineS=156 c1=0 c2=0 true=8.29593e-12 PASS
+TILE L=8 m=-0.12 metal bicgstab trial=0 offset=4 seconds=0.268135 outer=4 K=78 fineS=156 c1=0 c2=0 true=9.09557e-12 PASS
+TILE L=8 m=-0.12 metal smooth trial=0 offset=0 seconds=0.230973 outer=4 K=65 fineS=141 c1=0 c2=0 true=8.09516e-12 PASS
+TILE L=8 m=-0.12 metal smooth trial=0 offset=4 seconds=0.222211 outer=4 K=66 fineS=143 c1=0 c2=0 true=6.5991e-12 PASS
+TILE L=8 m=-0.12 cpu mg3 trial=0 offset=0 seconds=1.02368 outer=4 K=26 fineS=82 c1=203 c2=118 true=2.77976e-12 PASS
+TILE L=8 m=-0.12 cpu mg3 trial=0 offset=4 seconds=0.914492 outer=4 K=26 fineS=82 c1=203 c2=118 true=2.94804e-12 PASS
+TILE L=8 m=-0.12 cpu bicgstab trial=0 offset=0 seconds=1.23106 outer=4 K=76 fineS=149 c1=0 c2=0 true=4.72145e-12 PASS
+TILE L=8 m=-0.12 cpu bicgstab trial=0 offset=4 seconds=1.34231 outer=4 K=78 fineS=153 c1=0 c2=0 true=7.82863e-12 PASS
+TILE L=8 m=-0.12 cpu smooth trial=0 offset=0 seconds=1.34998 outer=4 K=65 fineS=141 c1=0 c2=0 true=8.09509e-12 PASS
+TILE L=8 m=-0.12 cpu smooth trial=0 offset=4 seconds=1.20012 outer=4 K=66 fineS=143 c1=0 c2=0 true=6.59921e-12 PASS
+PASS all full FP64 original-equation residual checks

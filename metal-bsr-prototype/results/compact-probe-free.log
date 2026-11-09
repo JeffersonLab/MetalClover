@@ -1,0 +1,4 @@
+PROBE m=0.1 step=0 sigma=0.814929 residual=0.511988
+GAP m=0.1 estimate=0.808928 residual=5.45585e-06 stationary=-0.292893 steps=19
+PROBE m=-0.12 step=0 sigma=0.73406 residual=0.474434
+GAP m=-0.12 estimate=0.727937 residual=9.09057e-06 stationary=-0.292893 steps=19

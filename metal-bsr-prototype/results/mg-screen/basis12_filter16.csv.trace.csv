@@ -1,0 +1,9 @@
+extent,rhs,mass,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations,dispatched_steps
+8,12,0.1,cpu_fgmres_mg,0,1,0.000848801725635,8,8,8
+8,12,0.1,cpu_fgmres_mg,0,2,1.32664102817e-06,10,10,10
+8,12,0.1,cpu_fgmres_mg,0,3,1.92093589624e-09,10,10,10
+8,12,0.1,cpu_fgmres_mg,0,4,3.18289917461e-12,10,10,10
+8,12,0.1,metal_fgmres_mg,0,1,0.000848801379695,8,8,8
+8,12,0.1,metal_fgmres_mg,0,2,1.32658733988e-06,10,10,10
+8,12,0.1,metal_fgmres_mg,0,3,1.92092027814e-09,10,10,10
+8,12,0.1,metal_fgmres_mg,0,4,3.18295828609e-12,10,10,10

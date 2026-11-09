@@ -1,0 +1,30 @@
+GPU=Apple M1 Max maxBuffer_MiB=19169 sparse coarse BiCGStab; csw=1; physical tile=3 workers=8
+Sparse Galerkin: rows=1 block=12 nnz_blocks=1 FP32_MiB=0.00109863 assembly_ms=0.531208
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=9.00669e-08 coarse_true_cpu=1.62828e-07 metal=1.47566e-07
+L=2 mass=0.1 RHS=3 tile=0+3 cpu_sparse_mg trial=0 ms=2.92496 outer=4 inner=16 fineS=52 coarse_spmv=32 coarse_true=1.91323e-07 true_r=6.70181e-13 PASS
+BATCH cpu_sparse_mg L=2 mass=0.1 RHS=3 tile=3 trial=0 total_ms=2.92496 true_r=6.70181e-13 peak_RSS_MiB=17.125
+Metal allocated_MiB=0
+L=2 mass=0.1 RHS=3 tile=0+3 metal_sparse_mg trial=0 ms=51.7885 outer=4 inner=16 fineS=52 coarse_spmv=272 coarse_true=2.00291e-07 true_r=6.70477e-13 PASS
+BATCH metal_sparse_mg L=2 mass=0.1 RHS=3 tile=3 trial=0 total_ms=51.7885 true_r=6.70477e-13 peak_RSS_MiB=17.8594
+Sparse Galerkin: rows=16 block=12 nnz_blocks=176 FP32_MiB=0.193359 assembly_ms=4.31758
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=4.26819e-07 coarse_true_cpu=8.12379e-06 metal=8.13655e-06
+L=4 mass=0.1 RHS=3 tile=0+3 cpu_sparse_mg trial=0 ms=42.5371 outer=4 inner=22 fineS=70 coarse_spmv=142 coarse_true=0.0970274 true_r=1.85363e-12 PASS
+BATCH cpu_sparse_mg L=4 mass=0.1 RHS=3 tile=3 trial=0 total_ms=42.5371 true_r=1.85363e-12 peak_RSS_MiB=87.2031
+Metal allocated_MiB=3
+L=4 mass=0.1 RHS=3 tile=0+3 metal_sparse_mg trial=0 ms=82.9007 outer=4 inner=22 fineS=70 coarse_spmv=374 coarse_true=0.0970273 true_r=1.85372e-12 PASS
+BATCH metal_sparse_mg L=4 mass=0.1 RHS=3 tile=3 trial=0 total_ms=82.9007 true_r=1.85372e-12 peak_RSS_MiB=88.4062
+Sparse Galerkin: rows=1 block=12 nnz_blocks=1 FP32_MiB=0.00109863 assembly_ms=0.292583
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=1.43329e-07 coarse_true_cpu=1.36324e-07 metal=1.39278e-07
+L=2 mass=0.5 RHS=3 tile=0+3 cpu_sparse_mg trial=0 ms=2.19517 outer=4 inner=15 fineS=49 coarse_spmv=30 coarse_true=1.65116e-07 true_r=2.1639e-13 PASS
+BATCH cpu_sparse_mg L=2 mass=0.5 RHS=3 tile=3 trial=0 total_ms=2.19517 true_r=2.1639e-13 peak_RSS_MiB=88.5469
+Metal allocated_MiB=0
+L=2 mass=0.5 RHS=3 tile=0+3 metal_sparse_mg trial=0 ms=24.8726 outer=4 inner=15 fineS=49 coarse_spmv=255 coarse_true=2.26312e-07 true_r=2.16447e-13 PASS
+BATCH metal_sparse_mg L=2 mass=0.5 RHS=3 tile=3 trial=0 total_ms=24.8726 true_r=2.16447e-13 peak_RSS_MiB=88.625
+Sparse Galerkin: rows=16 block=12 nnz_blocks=176 FP32_MiB=0.193359 assembly_ms=3.188
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=3.76892e-07 coarse_true_cpu=9.77336e-06 metal=9.77319e-06
+L=4 mass=0.5 RHS=3 tile=0+3 cpu_sparse_mg trial=0 ms=28.9079 outer=4 inner=16 fineS=52 coarse_spmv=74 coarse_true=0.0997216 true_r=2.31266e-12 PASS
+BATCH cpu_sparse_mg L=4 mass=0.5 RHS=3 tile=3 trial=0 total_ms=28.9079 true_r=2.31266e-12 peak_RSS_MiB=95.25
+Metal allocated_MiB=3
+L=4 mass=0.5 RHS=3 tile=0+3 metal_sparse_mg trial=0 ms=62.032 outer=4 inner=16 fineS=52 coarse_spmv=272 coarse_true=0.0997245 true_r=2.31295e-12 PASS
+BATCH metal_sparse_mg L=4 mass=0.5 RHS=3 tile=3 trial=0 total_ms=62.032 true_r=2.31295e-12 peak_RSS_MiB=96.4219
+PASS: all requested systems; full CPU FP64 clover-Wilson residual checks for every RHS.

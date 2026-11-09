@@ -1,0 +1,9 @@
+extent,mass,rhs,tile_rhs,offset,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations
+4,0.25,3,3,0,cpu_smooth,0,1,0.000664541511502,5,5
+4,0.25,3,3,0,cpu_smooth,0,2,8.486140691e-07,6,6
+4,0.25,3,3,0,cpu_smooth,0,3,2.29746820045e-10,7,7
+4,0.25,3,3,0,cpu_smooth,0,4,4.20773853705e-13,6,6
+4,0.25,3,3,0,metal_smooth,0,1,0.000664540794302,5,5
+4,0.25,3,3,0,metal_smooth,0,2,8.48609586072e-07,6,6
+4,0.25,3,3,0,metal_smooth,0,3,2.29758135163e-10,7,7
+4,0.25,3,3,0,metal_smooth,0,4,4.20815794074e-13,6,6

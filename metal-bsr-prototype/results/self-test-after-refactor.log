@@ -1,0 +1,33 @@
+GPU: Apple M1 Max | macOS Version 26.7.1 (Build 25G241)
+CPU workers: 8; Accelerate internal threads: 1; samples: 5; initial Metal library setup: 49.3665 ms
+dense12 L=1 rows=1 rhs=1 check=12/12 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=1 rows=1 rhs=3 check=36/36 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=1 rows=1 rhs=4 check=48/48 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=1 rows=1 rhs=7 check=84/84 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=1 rows=1 rhs=12 check=144/144 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=2 rows=16 rhs=1 check=192/192 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=2 rows=16 rhs=3 check=576/576 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=2 rows=16 rhs=4 check=768/768 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=2 rows=16 rhs=7 check=1344/1344 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=2 rows=16 rhs=12 check=2304/2304 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=3 rows=81 rhs=1 check=972/972 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=3 rows=81 rhs=3 check=2916/2916 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=3 rows=81 rhs=4 check=3888/3888 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+dense12 L=3 rows=81 rhs=7 check=6804/6804 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+dense12 L=3 rows=81 rhs=12 check=11664/11664 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=1 rows=1 rhs=1 check=12/12 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=1 rows=1 rhs=3 check=36/36 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=1 rows=1 rhs=4 check=48/48 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=1 rows=1 rhs=7 check=84/84 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=1 rows=1 rhs=12 check=144/144 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=2 rows=16 rhs=1 check=192/192 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=2 rows=16 rhs=3 check=576/576 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=2 rows=16 rhs=4 check=768/768 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=2 rows=16 rhs=7 check=1344/1344 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=2 rows=16 rhs=12 check=2304/2304 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=3 rows=81 rhs=1 check=972/972 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=3 rows=81 rhs=3 check=2916/2916 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=3 rows=81 rhs=4 check=3888/3888 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+color3_spin4 L=3 rows=81 rhs=7 check=6804/6804 accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms metal=0.000ms PASS
+color3_spin4 L=3 rows=81 rhs=12 check=11664/11664 metal=0.000ms accelerate_1=0.000ms accelerate_parallel=0.000ms neon_parallel=0.000ms PASS
+PASS: 30 cases; full double-reference validation.

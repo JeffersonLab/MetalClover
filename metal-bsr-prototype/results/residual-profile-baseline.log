@@ -1,0 +1,3 @@
+CHROMA FP64 full_relative=1.51119e-16 odd_schur_relative=1.60124e-16
+PROFILE pid=36016 L=20 rhs=4 iterations=50
+PROFILE baseline_operator_median_ms=204.293625 baseline_subtract_norm_median_ms=2.633375 checksum=3002662.999

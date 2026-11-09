@@ -1,0 +1,4 @@
+Sparse Galerkin: rows=1 block=12 nnz_blocks=1 FP32_MiB=0.00109863 assembly_ms=0.424792
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=1.49161e-07 coarse_true_cpu=2.17542e-07 metal=1.75969e-07
+Sparse Galerkin: rows=16 block=12 nnz_blocks=176 FP32_MiB=0.193359 assembly_ms=3.38271
+Sparse Galerkin/gamma5/dense oracle/CPU-Metal SpMV/coarse solve PASS; relative_Galerkin=4.01317e-07 coarse_true_cpu=7.87374e-06 metal=7.90597e-06

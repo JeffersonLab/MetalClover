@@ -1,0 +1,17 @@
+PROBE m=-0.12 step=0 sigma=0.557436 residual=2.36973
+PROBE m=-0.12 step=25 sigma=0.0956634 residual=0.00794039
+PROBE m=-0.12 step=50 sigma=0.0955082 residual=0.00214656
+PROBE m=-0.12 step=75 sigma=0.0954784 residual=0.00186238
+PROBE m=-0.12 step=100 sigma=0.0954217 residual=0.00358851
+PROBE m=-0.12 step=125 sigma=0.0949844 residual=0.0127257
+PROBE m=-0.12 step=150 sigma=0.0932682 residual=0.0089737
+PROBE m=-0.12 step=175 sigma=0.0929866 residual=0.00297447
+PROBE m=-0.12 step=200 sigma=0.0929452 residual=0.00168131
+PROBE m=-0.12 step=225 sigma=0.0929215 residual=0.00184506
+PROBE m=-0.12 step=250 sigma=0.0928011 residual=0.00608545
+PROBE m=-0.12 step=275 sigma=0.0922788 residual=0.00742442
+PROBE m=-0.12 step=300 sigma=0.0920525 residual=0.00275553
+PROBE m=-0.12 step=325 sigma=0.0920126 residual=0.00136956
+PROBE m=-0.12 step=350 sigma=0.0920005 residual=0.00122097
+PROBE m=-0.12 step=375 sigma=0.0919561 residual=0.00341566
+GAP m=-0.12 estimate=0.0916705 residual=0.00637704 stationary=-0.126559 steps=400

@@ -1,0 +1,106 @@
+GPU=Apple M1 Max CPU workers=8 c_sw=1 resident_RHS=3 BiCG_chunk=1 paired prefix batch timings
+Sparse Galerkin: rows=1 block=12 nnz_blocks=1 FP32_MiB=0.00109863 assembly_ms=0.312375
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=checked relative_Galerkin=4.09264e-16 coarse_solution_CPU_Metal=9.00669e-08 coarse_true_cpu=1.62828e-07 metal=1.47566e-07
+TILE L=2 mass=0.1 cpu_bicgstab trial=0 offset=0 ms=1.53188 outer=4 krylov=16 fineS=31 true_r=2.86932e-12 PASS
+BATCH L=2 mass=0.1 RHS=3 cpu_bicgstab trial=0 total_ms=1.53188 true_r=2.86932e-12
+TILE L=2 mass=0.1 cpu_bicgstab trial=0 offset=3 ms=1.47379 outer=4 krylov=16 fineS=31 true_r=5.54833e-13 PASS
+BATCH L=2 mass=0.1 RHS=6 cpu_bicgstab trial=0 total_ms=3.00567 true_r=2.86932e-12
+TILE L=2 mass=0.1 cpu_smooth trial=0 offset=0 ms=1.90842 outer=4 krylov=18 fineS=40 true_r=2.13426e-12 PASS
+BATCH L=2 mass=0.1 RHS=3 cpu_smooth trial=0 total_ms=1.90842 true_r=2.13426e-12
+TILE L=2 mass=0.1 cpu_smooth trial=0 offset=3 ms=1.58062 outer=4 krylov=16 fineS=36 true_r=2.61482e-12 PASS
+BATCH L=2 mass=0.1 RHS=6 cpu_smooth trial=0 total_ms=3.48904 true_r=2.61482e-12
+TILE L=2 mass=0.1 cpu_sparse_mg trial=0 offset=0 ms=2.22763 outer=4 krylov=16 fineS=52 true_r=6.70181e-13 PASS
+BATCH L=2 mass=0.1 RHS=3 cpu_sparse_mg trial=0 total_ms=2.22763 true_r=6.70181e-13
+TILE L=2 mass=0.1 cpu_sparse_mg trial=0 offset=3 ms=2.297 outer=4 krylov=16 fineS=52 true_r=6.45121e-13 PASS
+BATCH L=2 mass=0.1 RHS=6 cpu_sparse_mg trial=0 total_ms=4.52463 true_r=6.70181e-13
+TILE L=2 mass=0.1 metal_smooth trial=0 offset=0 ms=22.2034 outer=4 krylov=18 fineS=40 true_r=2.13439e-12 PASS
+BATCH L=2 mass=0.1 RHS=3 metal_smooth trial=0 total_ms=22.2034 true_r=2.13439e-12
+TILE L=2 mass=0.1 metal_smooth trial=0 offset=3 ms=20.2795 outer=4 krylov=16 fineS=36 true_r=2.61467e-12 PASS
+BATCH L=2 mass=0.1 RHS=6 metal_smooth trial=0 total_ms=42.4829 true_r=2.61467e-12
+TILE L=2 mass=0.1 metal_sparse_mg trial=0 offset=0 ms=33.9889 outer=4 krylov=16 fineS=52 true_r=6.70477e-13 PASS
+BATCH L=2 mass=0.1 RHS=3 metal_sparse_mg trial=0 total_ms=33.9889 true_r=6.70477e-13
+TILE L=2 mass=0.1 metal_sparse_mg trial=0 offset=3 ms=34.9028 outer=4 krylov=16 fineS=52 true_r=6.45292e-13 PASS
+BATCH L=2 mass=0.1 RHS=6 metal_sparse_mg trial=0 total_ms=68.8918 true_r=6.70477e-13
+TILE L=2 mass=0.1 metal_bicgstab trial=0 offset=0 ms=14.2907 outer=4 krylov=16 fineS=32 true_r=2.87686e-12 PASS
+BATCH L=2 mass=0.1 RHS=3 metal_bicgstab trial=0 total_ms=14.2907 true_r=2.87686e-12
+TILE L=2 mass=0.1 metal_bicgstab trial=0 offset=3 ms=14.8805 outer=4 krylov=16 fineS=32 true_r=5.5486e-13 PASS
+BATCH L=2 mass=0.1 RHS=6 metal_bicgstab trial=0 total_ms=29.1713 true_r=2.87686e-12
+Sparse Galerkin: rows=16 block=12 nnz_blocks=176 FP32_MiB=0.193359 assembly_ms=3.91196
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=checked relative_Galerkin=5.9105e-16 coarse_solution_CPU_Metal=4.26819e-07 coarse_true_cpu=8.12379e-06 metal=8.13655e-06
+TILE L=4 mass=0.1 metal_sparse_mg trial=0 offset=0 ms=56.1143 outer=4 krylov=22 fineS=70 true_r=1.85372e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 metal_sparse_mg trial=0 total_ms=56.1143 true_r=1.85372e-12
+TILE L=4 mass=0.1 metal_sparse_mg trial=0 offset=3 ms=51.3014 outer=4 krylov=22 fineS=70 true_r=2.26808e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 metal_sparse_mg trial=0 total_ms=107.416 true_r=2.26808e-12
+TILE L=4 mass=0.1 metal_bicgstab trial=0 offset=0 ms=23.5386 outer=4 krylov=31 fineS=62 true_r=2.39701e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 metal_bicgstab trial=0 total_ms=23.5386 true_r=2.39701e-12
+TILE L=4 mass=0.1 metal_bicgstab trial=0 offset=3 ms=21.428 outer=4 krylov=30 fineS=60 true_r=5.2917e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 metal_bicgstab trial=0 total_ms=44.9666 true_r=5.2917e-12
+TILE L=4 mass=0.1 metal_smooth trial=0 offset=0 ms=28.1832 outer=4 krylov=30 fineS=67 true_r=2.62011e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 metal_smooth trial=0 total_ms=28.1832 true_r=2.62011e-12
+TILE L=4 mass=0.1 metal_smooth trial=0 offset=3 ms=27.4099 outer=4 krylov=30 fineS=67 true_r=2.20362e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 metal_smooth trial=0 total_ms=55.5931 true_r=2.62011e-12
+TILE L=4 mass=0.1 cpu_smooth trial=0 offset=0 ms=28.4954 outer=4 krylov=30 fineS=67 true_r=2.62026e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 cpu_smooth trial=0 total_ms=28.4954 true_r=2.62026e-12
+TILE L=4 mass=0.1 cpu_smooth trial=0 offset=3 ms=41.9032 outer=4 krylov=30 fineS=67 true_r=2.20359e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 cpu_smooth trial=0 total_ms=70.3986 true_r=2.62026e-12
+TILE L=4 mass=0.1 cpu_sparse_mg trial=0 offset=0 ms=44.2355 outer=4 krylov=22 fineS=70 true_r=1.85363e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 cpu_sparse_mg trial=0 total_ms=44.2355 true_r=1.85363e-12
+TILE L=4 mass=0.1 cpu_sparse_mg trial=0 offset=3 ms=39.0412 outer=4 krylov=22 fineS=70 true_r=2.26743e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 cpu_sparse_mg trial=0 total_ms=83.2768 true_r=2.26743e-12
+TILE L=4 mass=0.1 cpu_bicgstab trial=0 offset=0 ms=24.0662 outer=4 krylov=31 fineS=60 true_r=2.41232e-12 PASS
+BATCH L=4 mass=0.1 RHS=3 cpu_bicgstab trial=0 total_ms=24.0662 true_r=2.41232e-12
+TILE L=4 mass=0.1 cpu_bicgstab trial=0 offset=3 ms=23.0198 outer=4 krylov=30 fineS=58 true_r=5.28904e-12 PASS
+BATCH L=4 mass=0.1 RHS=6 cpu_bicgstab trial=0 total_ms=47.086 true_r=5.28904e-12
+Sparse Galerkin: rows=1 block=12 nnz_blocks=1 FP32_MiB=0.00109863 assembly_ms=0.247042
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=checked relative_Galerkin=4.49985e-16 coarse_solution_CPU_Metal=1.43329e-07 coarse_true_cpu=1.36324e-07 metal=1.39278e-07
+TILE L=2 mass=0.5 cpu_sparse_mg trial=0 offset=0 ms=2.15292 outer=4 krylov=15 fineS=49 true_r=2.1639e-13 PASS
+BATCH L=2 mass=0.5 RHS=3 cpu_sparse_mg trial=0 total_ms=2.15292 true_r=2.1639e-13
+TILE L=2 mass=0.5 cpu_sparse_mg trial=0 offset=3 ms=2.12354 outer=4 krylov=15 fineS=49 true_r=2.82499e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 cpu_sparse_mg trial=0 total_ms=4.27646 true_r=2.82499e-13
+TILE L=2 mass=0.5 cpu_bicgstab trial=0 offset=0 ms=1.24263 outer=4 krylov=13 fineS=25 true_r=1.36776e-13 PASS
+BATCH L=2 mass=0.5 RHS=3 cpu_bicgstab trial=0 total_ms=1.24263 true_r=1.36776e-13
+TILE L=2 mass=0.5 cpu_bicgstab trial=0 offset=3 ms=1.17183 outer=4 krylov=13 fineS=25 true_r=2.32078e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 cpu_bicgstab trial=0 total_ms=2.41446 true_r=2.32078e-13
+TILE L=2 mass=0.5 cpu_smooth trial=0 offset=0 ms=1.623 outer=4 krylov=15 fineS=34 true_r=8.066e-14 PASS
+BATCH L=2 mass=0.5 RHS=3 cpu_smooth trial=0 total_ms=1.623 true_r=8.066e-14
+TILE L=2 mass=0.5 cpu_smooth trial=0 offset=3 ms=1.82117 outer=4 krylov=15 fineS=34 true_r=2.13435e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 cpu_smooth trial=0 total_ms=3.44417 true_r=2.13435e-13
+TILE L=2 mass=0.5 metal_bicgstab trial=0 offset=0 ms=11.6666 outer=4 krylov=13 fineS=26 true_r=1.36519e-13 PASS
+BATCH L=2 mass=0.5 RHS=3 metal_bicgstab trial=0 total_ms=11.6666 true_r=1.36519e-13
+TILE L=2 mass=0.5 metal_bicgstab trial=0 offset=3 ms=12.5699 outer=4 krylov=13 fineS=26 true_r=2.31944e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 metal_bicgstab trial=0 total_ms=24.2365 true_r=2.31944e-13
+TILE L=2 mass=0.5 metal_smooth trial=0 offset=0 ms=16.722 outer=4 krylov=15 fineS=34 true_r=8.06979e-14 PASS
+BATCH L=2 mass=0.5 RHS=3 metal_smooth trial=0 total_ms=16.722 true_r=8.06979e-14
+TILE L=2 mass=0.5 metal_smooth trial=0 offset=3 ms=15.0744 outer=4 krylov=15 fineS=34 true_r=2.13385e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 metal_smooth trial=0 total_ms=31.7963 true_r=2.13385e-13
+TILE L=2 mass=0.5 metal_sparse_mg trial=0 offset=0 ms=29.3819 outer=4 krylov=15 fineS=49 true_r=2.16447e-13 PASS
+BATCH L=2 mass=0.5 RHS=3 metal_sparse_mg trial=0 total_ms=29.3819 true_r=2.16447e-13
+TILE L=2 mass=0.5 metal_sparse_mg trial=0 offset=3 ms=34.2687 outer=4 krylov=15 fineS=49 true_r=2.82641e-13 PASS
+BATCH L=2 mass=0.5 RHS=6 metal_sparse_mg trial=0 total_ms=63.6506 true_r=2.82641e-13
+Sparse Galerkin: rows=16 block=12 nnz_blocks=176 FP32_MiB=0.193359 assembly_ms=3.36512
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=checked relative_Galerkin=6.0959e-16 coarse_solution_CPU_Metal=3.76892e-07 coarse_true_cpu=9.77336e-06 metal=9.77319e-06
+TILE L=4 mass=0.5 metal_smooth trial=0 offset=0 ms=22.2303 outer=4 krylov=19 fineS=42 true_r=4.6304e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 metal_smooth trial=0 total_ms=22.2303 true_r=4.6304e-12
+TILE L=4 mass=0.5 metal_smooth trial=0 offset=3 ms=23.2153 outer=4 krylov=19 fineS=42 true_r=3.15731e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 metal_smooth trial=0 total_ms=45.4455 true_r=4.6304e-12
+TILE L=4 mass=0.5 metal_sparse_mg trial=0 offset=0 ms=54.1845 outer=4 krylov=16 fineS=52 true_r=2.31295e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 metal_sparse_mg trial=0 total_ms=54.1845 true_r=2.31295e-12
+TILE L=4 mass=0.5 metal_sparse_mg trial=0 offset=3 ms=51.717 outer=4 krylov=15 fineS=49 true_r=3.43074e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 metal_sparse_mg trial=0 total_ms=105.901 true_r=3.43074e-12
+TILE L=4 mass=0.5 metal_bicgstab trial=0 offset=0 ms=22.1432 outer=4 krylov=20 fineS=40 true_r=2.03689e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 metal_bicgstab trial=0 total_ms=22.1432 true_r=2.03689e-12
+TILE L=4 mass=0.5 metal_bicgstab trial=0 offset=3 ms=22.5444 outer=4 krylov=20 fineS=40 true_r=4.73053e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 metal_bicgstab trial=0 total_ms=44.6877 true_r=4.73053e-12
+TILE L=4 mass=0.5 cpu_bicgstab trial=0 offset=0 ms=16.0684 outer=4 krylov=20 fineS=40 true_r=2.03714e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 cpu_bicgstab trial=0 total_ms=16.0684 true_r=2.03714e-12
+TILE L=4 mass=0.5 cpu_bicgstab trial=0 offset=3 ms=16.4063 outer=4 krylov=20 fineS=40 true_r=4.73048e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 cpu_bicgstab trial=0 total_ms=32.4748 true_r=4.73048e-12
+TILE L=4 mass=0.5 cpu_smooth trial=0 offset=0 ms=18.4045 outer=4 krylov=19 fineS=42 true_r=4.63044e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 cpu_smooth trial=0 total_ms=18.4045 true_r=4.63044e-12
+TILE L=4 mass=0.5 cpu_smooth trial=0 offset=3 ms=19.7547 outer=4 krylov=19 fineS=42 true_r=3.15728e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 cpu_smooth trial=0 total_ms=38.1592 true_r=4.63044e-12
+TILE L=4 mass=0.5 cpu_sparse_mg trial=0 offset=0 ms=28.9938 outer=4 krylov=16 fineS=52 true_r=2.31266e-12 PASS
+BATCH L=4 mass=0.5 RHS=3 cpu_sparse_mg trial=0 total_ms=28.9938 true_r=2.31266e-12
+TILE L=4 mass=0.5 cpu_sparse_mg trial=0 offset=3 ms=26.1337 outer=4 krylov=15 fineS=49 true_r=3.43098e-12 PASS
+BATCH L=4 mass=0.5 RHS=6 cpu_sparse_mg trial=0 total_ms=55.1275 true_r=3.43098e-12
+PASS: all methods and RHS met full CPU FP64 clover-Wilson residual checks.

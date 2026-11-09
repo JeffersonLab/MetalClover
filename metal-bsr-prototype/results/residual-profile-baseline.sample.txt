@@ -1,0 +1,619 @@
+Analysis of sampling residual_profile (pid 36016) every 10 milliseconds
+Process:         residual_profile [36016]
+Path:            /Users/USER/Documents/*/residual_profile
+Load Address:    0x100110000
+Identifier:      residual_profile
+Version:         ???
+Code Type:       ARM64
+Parent Process:  zsh [36014]
+Target Type:     live task
+
+Date/Time:       2026-11-07 13:27:22.230 -0500
+Launch Time:     2026-11-07 13:27:22.004 -0500
+OS Version:      macOS 26.7.1 (25G241)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         1.2G
+Physical footprint (peak):  1.2G
+Idle exit:                  untracked
+----
+
+Call graph:
+    432 Thread_2452682: Main Thread   DispatchQueue_<multiple>
+    + 426 start  (in dyld) + 6992  [0x18f0084e4]
+    + ! 365 main  (in residual_profile) + 1524  [0x1001221a0]  residual_profile.mm:55
+    + ! : 360 reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)  (in residual_profile) + 88  [0x100121890]  residual_profile.mm:17
+    + ! : | 360 void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+    + ! : |   360 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+    + ! : |     360 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! : |       360 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! : |         353 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! : |         + 353 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! : |         +   353 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! : |         +     353 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! : |         +       353 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! : |         +         350 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    + ! : |         +         ! 286 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 272,1260,...  [0x100128f8c,0x100129368,...]  compact_clover.hpp:63
+    + ! : |         +         ! 34 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1680,1760,...  [0x10012950c,0x10012955c,...]  compact_clover.hpp:65
+    + ! : |         +         ! 16 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 324,48,...  [0x100128fc0,0x100128eac,...]  compact_clover.hpp:62
+    + ! : |         +         ! 6 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556,548,...  [0x1001290a8,0x1001290a0,...]  wilson_common.hpp:0
+    + ! : |         +         ! 5 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    + ! : |         +         ! 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1408,1412,...  [0x1001293fc,0x100129400,...]  compact_clover.hpp:64
+    + ! : |         +         1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    + ! : |         +         1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 296  [0x100128d80]  compact_clover.hpp:66
+    + ! : |         +         1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 392  [0x100128de0]  compact_clover.hpp:67
+    + ! : |         7 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+    + ! : |           7 _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+    + ! : |             7 _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+    + ! : |               7 _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+    + ! : |                 7 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18f391af8]
+    + ! : 5 reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)  (in residual_profile) + 348  [0x100121994]  residual_profile.mm:21
+    + ! :   5 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! :     5 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! :       4 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! :       + 4 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! :       +   4 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! :       +     4 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! :       +       4 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! :       +         4 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 324,308,...  [0x10012f4bc,0x10012f4ac,...]  solve_common.hpp:13
+    + ! :       1 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+    + ! :         1 _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+    + ! :           1 _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+    + ! :             1 _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+    + ! :               1 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18f391af8]
+    + ! 21 main  (in residual_profile) + 460  [0x100121d78]  residual_profile.mm:41
+    + ! : 13 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 6336  [0x100126e44]  compact_clover.hpp:35
+    + ! : | 13 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! : |   13 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! : |     12 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! : |     + 12 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! : |     +   12 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! : |     +     12 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! : |     +       12 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! : |     +         7 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    + ! : |     +         ! 4 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1304,1468,...  [0x100127d7c,0x100127e20,...]  compact_clover.hpp:37
+    + ! : |     +         ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1516,2416  [0x10011a57c,0x10011a900]  clover_common.hpp:10
+    + ! : |     +         ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 176  [0x10011a040]  clover_common.hpp:9
+    + ! : |     +         2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    + ! : |     +         ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 412  [0x10011b244]  clover_common.hpp:29
+    + ! : |     +         ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 2992  [0x10011bc58]  clover_common.hpp:35
+    + ! : |     +         1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+    + ! : |     +         ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1496  [0x10011a568]  clover_common.hpp:10
+    + ! : |     +         1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    + ! : |     +         ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    + ! : |     +         !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 156  [0x100119bf0]  clover_common.hpp:5
+    + ! : |     +         1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    + ! : |     +           1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1196  [0x10011a43c]  clover_common.hpp:10
+    + ! : |     1 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+    + ! : |       1 _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+    + ! : |         1 _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+    + ! : |           1 _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+    + ! : |             1 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18f391af8]
+    + ! : 2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 5948  [0x100126cc0]  compact_clover.hpp:33
+    + ! : | 2 std::vector<Cx<double>>::__append(unsigned long)  (in residual_profile) + 188  [0x10012da30]  vector.h:958
+    + ! : |   2 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 4912  [0x1001268b4]  compact_clover.hpp:29
+    + ! : | 1 <deduplicated_symbol>  (in residual_profile) + 188  [0x10012cacc]
+    + ! : |   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 5816  [0x100126c3c]  compact_clover.hpp:31
+    + ! : | 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 5248  [0x100126a04]  compact_clover.hpp:31
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 5884  [0x100126c80]  compact_clover.hpp:33
+    + ! : | 1 std::vector<Cx<double>>::__append(unsigned long)  (in residual_profile) + 188  [0x10012da30]  vector.h:958
+    + ! : |   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 6012  [0x100126d00]  compact_clover.hpp:33
+    + ! : | 1 std::vector<Cx<double>>::__append(unsigned long)  (in residual_profile) + 188  [0x10012da30]  vector.h:958
+    + ! : |   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 6756  [0x100126fe8]  compact_clover.hpp:42
+    + ! : | 1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)  (in residual_profile) + 7048  [0x10012710c]  compact_clover.hpp:42
+    + ! :   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! 20 main  (in residual_profile) + 1452  [0x100122158]  residual_profile.mm:52
+    + ! : 20 reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)  (in residual_profile) + 88  [0x100121890]  residual_profile.mm:17
+    + ! :   20 void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+    + ! :     20 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+    + ! :       20 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! :         20 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! :           19 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! :           | 19 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! :           |   19 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! :           |     19 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! :           |       19 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! :           |         18 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    + ! :           |         + 15 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304,824,...  [0x100128fac,0x1001291b4,...]  compact_clover.hpp:63
+    + ! :           |         + 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1588,2128,...  [0x1001294b0,0x1001296cc,...]  compact_clover.hpp:65
+    + ! :           |         1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x100128dc0]  compact_clover.hpp:66
+    + ! :           1 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+    + ! :             1 _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+    + ! :               1 _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+    + ! :                 1 _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+    + ! :                   1 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18f391af8]
+    + ! 8 main  (in residual_profile) + 492  [0x100121d98]  residual_profile.mm:42
+    + ! : 2 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 364  [0x100122e74]  chroma_import.hpp:66
+    + ! : | 2 void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+    + ! : |   2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+    + ! : |     2 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! : |       2 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! : |         2 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! : |           2 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! : |             2 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! : |               2 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! : |                 2 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! : |                   1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 880  [0x100129b5c]  compact_clover.hpp:63
+    + ! : |                   1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1404  [0x100129d68]  compact_clover.hpp:65
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 216  [0x100122de0]  chroma_import.hpp:61
+    + ! : | 1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 376  [0x100122e80]  chroma_import.hpp:67
+    + ! : | 1 ChromaImport::compare(std::vector<Cx<double>> const&)  (in residual_profile) + 224  [0x10012b8d0]  chroma_import.hpp:14
+    + ! : |   1 std::basic_istream<char>::read(char*, long)  (in libc++.1.dylib) + 136  [0x18f2e8e80]
+    + ! : |     1 std::basic_streambuf<char>::xsgetn(char*, long)  (in libc++.1.dylib) + 156  [0x18f2e8ff0]
+    + ! : |       1 std::basic_streambuf<char>::uflow()  (in libc++.1.dylib) + 48  [0x18f2e905c]
+    + ! : |         1 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 264  [0x18f319778]
+    + ! : |           1 fread  (in libsystem_c.dylib) + 136  [0x18f275c5c]
+    + ! : |             1 __fread  (in libsystem_c.dylib) + 488  [0x18f26d3a0]
+    + ! : |               1 __srefill1  (in libsystem_c.dylib) + 36  [0x18f26d0f0]
+    + ! : |                 1 _sread  (in libsystem_c.dylib) + 32  [0x18f26d15c]
+    + ! : |                   1 __sread  (in libsystem_c.dylib) + 24  [0x18f28fa08]
+    + ! : |                     1 __read_nocancel  (in libsystem_kernel.dylib) + 8  [0x18f391cac]
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 740  [0x100122fec]  chroma_import.hpp:71
+    + ! : | 1 CPUCloverSchur<double, CompactClover>::CPUCloverSchur(CompactClover const&, int)  (in residual_profile) + 120  [0x10012bce4]  clover_common.hpp:80
+    + ! : |   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 768  [0x100123008]  chroma_import.hpp:72
+    + ! : | 1 void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+    + ! : |   1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+    + ! : |     1 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! : |       1 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! : |         1 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+    + ! : |           1 _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+    + ! : |             1 _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+    + ! : |               1 _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+    + ! : |                 1 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x18f391af8]
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 824  [0x100123040]  chroma_import.hpp:72
+    + ! : | 1 void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+    + ! : |   1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+    + ! : |     1 dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+    + ! : |       1 _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+    + ! : |         1 _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+    + ! : |           1 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    + ! : |             1 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    + ! : |               1 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    + ! : |                 1 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    + ! : |                   1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    + ! : 1 ChromaImport::validate(CompactClover&, int)  (in residual_profile) + 872  [0x100123070]  chroma_import.hpp:73
+    + ! :   1 ChromaImport::compare(std::vector<Cx<double>> const&)  (in residual_profile) + 224  [0x10012b8d0]  chroma_import.hpp:14
+    + ! :     1 std::basic_istream<char>::read(char*, long)  (in libc++.1.dylib) + 136  [0x18f2e8e80]
+    + ! :       1 std::basic_streambuf<char>::xsgetn(char*, long)  (in libc++.1.dylib) + 156  [0x18f2e8ff0]
+    + ! :         1 std::basic_streambuf<char>::uflow()  (in libc++.1.dylib) + 48  [0x18f2e905c]
+    + ! :           1 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 264  [0x18f319778]
+    + ! :             1 fread  (in libsystem_c.dylib) + 136  [0x18f275c5c]
+    + ! :               1 __fread  (in libsystem_c.dylib) + 488  [0x18f26d3a0]
+    + ! :                 1 __srefill1  (in libsystem_c.dylib) + 36  [0x18f26d0f0]
+    + ! :                   1 _sread  (in libsystem_c.dylib) + 32  [0x18f26d15c]
+    + ! :                     1 __sread  (in libsystem_c.dylib) + 24  [0x18f28fa08]
+    + ! :                       1 __read_nocancel  (in libsystem_kernel.dylib) + 8  [0x18f391cac]
+    + ! 4 main  (in residual_profile) + 432  [0x100121d5c]  residual_profile.mm:41
+    + ! : 3 ChromaImport::links()  (in residual_profile) + 300  [0x1001229fc]  chroma_import.hpp:47
+    + ! : | 3 std::basic_istream<char>::read(char*, long)  (in libc++.1.dylib) + 136  [0x18f2e8e80]
+    + ! : |   3 std::basic_streambuf<char>::xsgetn(char*, long)  (in libc++.1.dylib) + 156  [0x18f2e8ff0]
+    + ! : |     3 std::basic_streambuf<char>::uflow()  (in libc++.1.dylib) + 48  [0x18f2e905c]
+    + ! : |       3 std::basic_filebuf<char>::underflow()  (in libc++.1.dylib) + 264  [0x18f319778]
+    + ! : |         3 fread  (in libsystem_c.dylib) + 136  [0x18f275c5c]
+    + ! : |           3 __fread  (in libsystem_c.dylib) + 488  [0x18f26d3a0]
+    + ! : |             3 __srefill1  (in libsystem_c.dylib) + 36  [0x18f26d0f0]
+    + ! : |               3 _sread  (in libsystem_c.dylib) + 32  [0x18f26d15c]
+    + ! : |                 3 __sread  (in libsystem_c.dylib) + 24  [0x18f28fa08]
+    + ! : |                   3 __read_nocancel  (in libsystem_kernel.dylib) + 8  [0x18f391cac]
+    + ! : 1 ChromaImport::links()  (in residual_profile) + 176  [0x100122980]  chroma_import.hpp:42
+    + ! :   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! 3 main  (in residual_profile) + 1076,1184,...  [0x100121fe0,0x10012204c,...]  residual_profile.mm:49
+    + ! 2 main  (in residual_profile) + 748  [0x100121e98]  residual_profile.mm:45
+    + ! : 1 CompactOuter::CompactOuter(System const&, int)  (in residual_profile) + 112  [0x10012be04]  compact_solve.hpp:10
+    + ! : | 1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! : 1 CompactOuter::CompactOuter(System const&, int)  (in residual_profile) + 168  [0x10012be3c]  compact_solve.hpp:10
+    + ! :   1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! 1 main  (in residual_profile) + 652  [0x100121e38]  residual_profile.mm:44
+    + ! : 1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! 1 main  (in residual_profile) + 940  [0x100121f58]  residual_profile.mm:48
+    + ! : 1 __bzero  (in libsystem_platform.dylib) + 64  [0x18f3dd070]
+    + ! 1 main  (in residual_profile) + 1032  [0x100121fb4]  residual_profile.mm:48
+    + !   1 __bzero  (in libsystem_platform.dylib) + 68  [0x18f3dd074]
+    + 5 _dyld_start  (in dyld) + 0  [0x1002c89c0]
+    + 1 start  (in dyld) + 6904  [0x18f00848c]
+    +   1 dyld4::start(dyld4::KernelArgs*, void*, void*, unsigned long long)::$_1::operator()() const  (in dyld) + 320  [0x18f008b30]
+    +     1 dyld4::prepare(dyld4::APIs&, mach_o::UnsafeHeader const*)  (in dyld) + 3996  [0x18f009ae8]
+    +       1 dyld4::RuntimeState::notifyDebuggerLoad(std::span<dyld4::Loader const*, 18446744073709551615ul> const&)  (in dyld) + 528  [0x18f018c8c]
+    +         1 dyld4::ExternallyViewableState::addImages(lsl::Allocator&, lsl::Allocator&, std::span<dyld4::ExternallyViewableState::ImageInfo, 18446744073709551615ul> const&)  (in dyld) + 1084  [0x18f023c80]
+    +           1 dyld4::ExternallyViewableState::triggerNotifications(dyld_image_mode, unsigned int, dyld_image_info const*)  (in dyld) + 296  [0x18f023524]
+    +             1 dyld4::RemoteNotificationResponder::blockOnSynchronousEvent(unsigned int)  (in dyld) + 48  [0x18f069c90]
+    +               1 dyld4::RemoteNotificationResponder::sendMessage(int, unsigned int, mach_msg_header_t*)  (in dyld) + 244  [0x18f069904]
+    +                 1 mach_msg_overwrite  (in dyld) + 244  [0x18f08318c]
+    +                   1 mach_msg2_internal  (in dyld) + 76  [0x18f082fe4]
+    +                     1 mach_msg2_trap  (in dyld) + 8  [0x18efe972c]
+    388 Thread_2452734   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 388 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   388 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     388 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       388 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         388 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           388 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             388 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               388 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 388 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   388 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     388 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       361 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 306 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1104,1200,...  [0x1001292cc,0x10012932c,...]  compact_clover.hpp:63
+    +                       ! 35 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1680,1920,...  [0x10012950c,0x1001295fc,...]  compact_clover.hpp:65
+    +                       ! 17 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,344,...  [0x100128fb0,0x100128fd4,...]  compact_clover.hpp:62
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 568  [0x1001290b4]  wilson_common.hpp:0
+    +                       6 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 6 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1092,1344,...  [0x100127ca8,0x100127da4,...]  compact_clover.hpp:37
+    +                       5 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 324,308,...  [0x10012f4bc,0x10012f4ac,...]  solve_common.hpp:13
+    +                       4 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 380,332,...  [0x100128dd4,0x100128da4,...]  compact_clover.hpp:66
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1740,2992  [0x10011a65c,0x10011ab40]  clover_common.hpp:10
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 292  [0x100119c78]  clover_common.hpp:5
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 248  [0x100119c4c]  clover_common.hpp:5
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 224  [0x10011a070]  clover_common.hpp:9
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 80,300  [0x10012983c,0x100129918]  compact_clover.hpp:62
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 640,800  [0x100129a6c,0x100129b0c]  compact_clover.hpp:63
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 48  [0x100119b84]  clover_common.hpp:5
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 288  [0x100128d78]  compact_clover.hpp:62
+    375 Thread_2452739   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 375 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   375 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     375 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       375 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         375 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           375 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             375 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               375 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 375 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   375 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     375 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       349 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 288 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304,124,...  [0x100128fac,0x100128ef8,...]  compact_clover.hpp:63
+    +                       ! 37 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 2128,2408,...  [0x1001296cc,0x1001297e4,...]  compact_clover.hpp:65
+    +                       ! 14 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 344,308,...  [0x100128fd4,0x100128fb0,...]  compact_clover.hpp:62
+    +                       ! 6 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556,568  [0x1001290a8,0x1001290b4]  wilson_common.hpp:0
+    +                       ! 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1464  [0x100129434]  compact_clover.hpp:64
+    +                       5 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 5 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1344,1512,...  [0x100127da4,0x100127e4c,...]  compact_clover.hpp:37
+    +                       4 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 2 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 244,328  [0x100119c48,0x100119c9c]  clover_common.hpp:5
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1740  [0x10011a65c]  clover_common.hpp:10
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3280  [0x10011ac60]  clover_common.hpp:11
+    +                       4 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 316,332  [0x100128d94,0x100128da4]  compact_clover.hpp:66
+    +                       4 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 324,336  [0x10012f4bc,0x10012f4c8]  solve_common.hpp:13
+    +                       3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 256,640,...  [0x1001298ec,0x100129a6c,...]  compact_clover.hpp:63
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172,260  [0x100128d04,0x100128d5c]  compact_clover.hpp:61
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 376  [0x100119ccc]  clover_common.hpp:5
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3316  [0x10011ac84]  clover_common.hpp:14
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 1708  [0x10011b754]  clover_common.hpp:34
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 392  [0x100128de0]  compact_clover.hpp:67
+    365 Thread_2452738   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 365 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   365 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     365 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       365 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         365 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           365 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             365 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               365 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 365 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   365 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     365 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       343 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 282 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304,1072,...  [0x100128fac,0x1001292ac,...]  compact_clover.hpp:63
+    +                       ! 36 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1680,2256,...  [0x10012950c,0x10012974c,...]  compact_clover.hpp:65
+    +                       ! 17 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,344,...  [0x100128fb0,0x100128fd4,...]  compact_clover.hpp:62
+    +                       ! 6 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556,548  [0x1001290a8,0x1001290a0]  wilson_common.hpp:0
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1412  [0x100129400]  compact_clover.hpp:64
+    +                       5 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1200,1300,...  [0x100127d14,0x100127d78,...]  compact_clover.hpp:37
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 2992  [0x10011ab40]  clover_common.hpp:10
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 48  [0x100119b84]  clover_common.hpp:5
+    +                       5 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 324,348  [0x10012f4bc,0x10012f4d4]  solve_common.hpp:13
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 208  [0x10011b178]  clover_common.hpp:29
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 1772  [0x10011b794]  clover_common.hpp:34
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 2404  [0x10011ba0c]  clover_common.hpp:35
+    +                       3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 392,640,...  [0x100129974,0x100129a6c,...]  compact_clover.hpp:63
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 276  [0x10011a0a4]  clover_common.hpp:10
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 0  [0x100119b54]  clover_common.hpp:5
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 76  [0x100119ba0]  clover_common.hpp:5
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 176  [0x10011a040]  clover_common.hpp:9
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 88  [0x100128cb0]  compact_clover.hpp:60
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 296  [0x100128d80]  compact_clover.hpp:66
+    362 Thread_2452752   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 362 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   362 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     362 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       362 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         362 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           362 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             362 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               362 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 362 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   362 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     362 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       353 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 292 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 656,1104,...  [0x10012910c,0x1001292cc,...]  compact_clover.hpp:63
+    +                       ! 39 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 2196,1952,...  [0x100129710,0x10012961c,...]  compact_clover.hpp:65
+    +                       ! 14 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,344,...  [0x100128fb0,0x100128fd4,...]  compact_clover.hpp:62
+    +                       ! 4 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556  [0x1001290a8]  wilson_common.hpp:0
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1408,1444  [0x1001293fc,0x100129420]  compact_clover.hpp:64
+    +                       4 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 336,308  [0x10012f4c8,0x10012f4ac]  solve_common.hpp:13
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 316  [0x100128d94]  compact_clover.hpp:66
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 300  [0x100128d84]  compact_clover.hpp:0
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 288  [0x100128d78]  compact_clover.hpp:62
+    357 Thread_2452737   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 357 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   357 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     357 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       357 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         357 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           357 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             357 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               357 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 357 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   357 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     357 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       330 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 276 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304,716,...  [0x100128fac,0x100129148,...]  compact_clover.hpp:63
+    +                       ! 40 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1588,1844,...  [0x1001294b0,0x1001295b0,...]  compact_clover.hpp:65
+    +                       ! 8 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 344,308,...  [0x100128fd4,0x100128fb0,...]  compact_clover.hpp:62
+    +                       ! 4 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556,568  [0x1001290a8,0x1001290b4]  wilson_common.hpp:0
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1412,1464  [0x100129400,0x100129434]  compact_clover.hpp:64
+    +                       7 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 6 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 6 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 292,216,...  [0x100119c78,0x100119c2c,...]  clover_common.hpp:5
+    +                       ! 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 372  [0x1001279d8]  compact_clover.hpp:36
+    +                       5 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 380,296,...  [0x100128dd4,0x100128d80,...]  compact_clover.hpp:66
+    +                       4 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 324,336  [0x10012f4bc,0x10012f4c8]  solve_common.hpp:13
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1796  [0x10011a694]  clover_common.hpp:10
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 292  [0x100119c78]  clover_common.hpp:5
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 392,396  [0x100128de0,0x100128de4]  compact_clover.hpp:67
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 244,880  [0x1001298e0,0x100129b5c]  compact_clover.hpp:63
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 116  [0x100119bc8]  clover_common.hpp:5
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1628  [0x100127ec0]  compact_clover.hpp:37
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 212  [0x10011b17c]  clover_common.hpp:29
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 160  [0x10012988c]  compact_clover.hpp:62
+    311 Thread_2452736   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 311 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   311 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     311 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       311 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         311 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           311 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             311 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               311 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 311 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   311 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     311 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       285 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 223 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 176,304,...  [0x100128f2c,0x100128fac,...]  compact_clover.hpp:63
+    +                       ! 48 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 2344,2064,...  [0x1001297a4,0x10012968c,...]  compact_clover.hpp:65
+    +                       ! 10 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,344,...  [0x100128fb0,0x100128fd4,...]  compact_clover.hpp:62
+    +                       ! 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 568,556  [0x1001290b4,0x1001290a8]  wilson_common.hpp:0
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       6 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1292,1468,...  [0x100127d70,0x100127e20,...]  compact_clover.hpp:37
+    +                       ! 3 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   3 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 76,216,...  [0x100119ba0,0x100119c2c,...]  clover_common.hpp:5
+    +                       5 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 368,316,...  [0x100128dc8,0x100128d94,...]  compact_clover.hpp:66
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 2 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 2664,2980  [0x10011bb10,0x10011bc4c]  clover_common.hpp:35
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 1660  [0x10011b724]  clover_common.hpp:34
+    +                       3 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 336,308  [0x10012f4c8,0x10012f4ac]  solve_common.hpp:13
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 836,1140  [0x10011a2d4,0x10011a404]  clover_common.hpp:10
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 260  [0x100128d5c]  compact_clover.hpp:61
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364,640  [0x100129958,0x100129a6c]  compact_clover.hpp:63
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 292  [0x100119c78]  clover_common.hpp:5
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 392  [0x100128de0]  compact_clover.hpp:67
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304  [0x10012991c]  compact_clover.hpp:62
+    240 Thread_2452740   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 240 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   240 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     240 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       240 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         240 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           240 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             240 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               240 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 240 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   240 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     240 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       217 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 180 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304,656,...  [0x100128fac,0x10012910c,...]  compact_clover.hpp:63
+    +                       ! 23 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1680,1824,...  [0x10012950c,0x10012959c,...]  compact_clover.hpp:65
+    +                       ! 5 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1464,1420,...  [0x100129434,0x100129408,...]  compact_clover.hpp:64
+    +                       ! 4 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,516  [0x100128fb0,0x100129080]  compact_clover.hpp:62
+    +                       ! 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556,568  [0x1001290a8,0x1001290b4]  wilson_common.hpp:0
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       4 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 4 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1292,1304,...  [0x100127d70,0x100127d7c,...]  compact_clover.hpp:37
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 2 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 380,388  [0x100119cd0,0x100119cd8]  clover_common.hpp:5
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 1440  [0x10011a530]  clover_common.hpp:10
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 2 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 1876,2044  [0x10011b7fc,0x10011b8a4]  clover_common.hpp:34
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 248  [0x10011b1a0]  clover_common.hpp:29
+    +                       3 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 296,324,...  [0x10012f4a0,0x10012f4bc,...]  solve_common.hpp:13
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       ! : 1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 420  [0x100119cf8]  clover_common.hpp:5
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3036  [0x10011ab6c]  clover_common.hpp:11
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 172  [0x100128d04]  compact_clover.hpp:61
+    +                       2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 640,880  [0x100129a6c,0x100129b5c]  compact_clover.hpp:63
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 3300  [0x100128548]  compact_clover.hpp:39
+    +                       ! 1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 3372  [0x100128590]  compact_clover.hpp:39
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 300  [0x100128d84]  compact_clover.hpp:0
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 316  [0x100128d94]  compact_clover.hpp:66
+    +                       1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 304  [0x10012991c]  compact_clover.hpp:62
+    225 Thread_2452735   DispatchQueue_16: com.apple.root.user-initiated-qos  (concurrent)
+    + 225 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   225 _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+    +     225 _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+    +       225 _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+    +         225 <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+    +           225 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +             225 _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+    +               225 _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+    +                 225 _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+    +                   225 _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+    +                     225 _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+    +                       203 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+    +                       ! 170 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 272,304,...  [0x100128f8c,0x100128fac,...]  compact_clover.hpp:63
+    +                       ! 21 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1824,1920,...  [0x10012959c,0x1001295fc,...]  compact_clover.hpp:65
+    +                       ! 6 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 308,324,...  [0x100128fb0,0x100128fc0,...]  compact_clover.hpp:62
+    +                       ! 3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 556  [0x1001290a8]  wilson_common.hpp:0
+    +                       ! 2 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 1464,1484  [0x100129434,0x100129448]  compact_clover.hpp:64
+    +                       ! 1 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 364  [0x100128fe8]  compact_clover.hpp:0
+    +                       6 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 368,380,...  [0x100128dc8,0x100128dd4,...]  compact_clover.hpp:66
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+    +                       ! 3 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   3 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 76,256  [0x100119ba0,0x100119c54]  clover_common.hpp:5
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 172,176  [0x10011a03c,0x10011a040]  clover_common.hpp:9
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 420  [0x100119cf8]  clover_common.hpp:5
+    +                       3 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+    +                       ! 2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 1228,1388  [0x100127d30,0x100127dd0]  compact_clover.hpp:37
+    +                       ! 1 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   1 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 216  [0x100119c2c]  clover_common.hpp:5
+    +                       3 CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 256,364,...  [0x1001298ec,0x100129958,...]  compact_clover.hpp:63
+    +                       2 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+    +                       ! 2 gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+    +                       !   2 m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 216,408  [0x100119c2c,0x100119cec]  clover_common.hpp:5
+    +                       1 CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+    +                       ! 1 invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 2136  [0x10011b900]  clover_common.hpp:34
+    +                       1 invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 336  [0x10012f4c8]  solve_common.hpp:13
+    191 Thread_2452735
+    + 191 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   191 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     191 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    176 Thread_2452740
+    + 176 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   176 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     176 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    105 Thread_2452736
+    + 105 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   105 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     105 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    59 Thread_2452737
+    + 59 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   59 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     59 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    51 Thread_2452738
+    + 51 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   51 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     51 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    41 Thread_2452739
+    + 41 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   41 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     41 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    28 Thread_2452734
+    + 28 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+    +   28 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+    +     28 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+    23 Thread_2452752
+      23 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+        23 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+          23 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x18f3919f0]
+
+Total number in stack (recursive counted multiple, when >=5):
+        22       _dispatch_client_callout  (in libdispatch.dylib) + 16  [0x18f2314b0]
+        20       gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 3016  [0x10011ab58]  clover_common.hpp:11
+        20       m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile) + 0  [0x100119b54]  clover_common.hpp:5
+        16       start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18f3cec10]
+        14       __bzero  (in libsystem_platform.dylib) + 0  [0x18f3dd030]
+        14       _dispatch_apply_invoke3  (in libdispatch.dylib) + 336  [0x18f22c1a4]
+        14       _dispatch_client_callout2  (in libdispatch.dylib) + 16  [0x18f2314c8]
+        14       _dispatch_once_callout  (in libdispatch.dylib) + 32  [0x18f21a630]
+        10       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 0  [0x100128c58]  compact_clover.hpp:66
+        10       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 332  [0x100128da4]  compact_clover.hpp:66
+        10       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  compact_clover.hpp:63
+        10       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  compact_clover.hpp:65
+        10       gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile) + 0  [0x100119f90]  clover_common.hpp:10
+        9       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  compact_clover.hpp:62
+        9       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  wilson_common.hpp:0
+        9       invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile) + 0  [0x10012f378]  solve_common.hpp:13
+        8       <deduplicated_symbol>  (in libdispatch.dylib) + 28  [0x18f24ed6c]
+        8       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 0  [0x100127864]  compact_clover.hpp:37
+        8       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 360  [0x1001279cc]  compact_clover.hpp:36
+        8       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 400  [0x1001279f4]  compact_clover.hpp:36
+        8       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 440  [0x100127a1c]  compact_clover.hpp:36
+        8       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 0  [0x100128c58]  compact_clover.hpp:61
+        8       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  compact_clover.hpp:0
+        8       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x1001297ec]  compact_clover.hpp:63
+        8       __workq_kernreturn  (in libsystem_kernel.dylib) + 0  [0x18f3919e8]
+        8       _dispatch_apply_invoke  (in libdispatch.dylib) + 248  [0x18f22b2f4]
+        8       _dispatch_root_queue_drain  (in libdispatch.dylib) + 708  [0x18f229adc]
+        8       _dispatch_worker_thread2  (in libdispatch.dylib) + 184  [0x18f22a120]
+        8       _pthread_wqthread  (in libsystem_pthread.dylib) + 232  [0x18f3cfe84]
+        8       _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18f3cff0c]
+        7       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 4076  [0x100128850]  compact_clover.hpp:40
+        7       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile) + 0  [0x100128e7c]  compact_clover.hpp:64
+        7       _dispatch_apply_with_attr_f  (in libdispatch.dylib) + 1312  [0x18f22b944]
+        7       dispatch_apply  (in libdispatch.dylib) + 96  [0x18f22bac8]
+        6       _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 364  [0x18f22c844]
+        5       CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile) + 320  [0x1001279a4]  compact_clover.hpp:36
+        5       CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const  (in residual_profile) + 236  [0x100128c3c]  compact_clover.hpp:60
+        5       __ulock_wait  (in libsystem_kernel.dylib) + 0  [0x18f391af0]
+        5       _dispatch_apply_invoke_and_wait  (in libdispatch.dylib) + 196  [0x18f22c79c]
+        5       _dispatch_once_wait  (in libdispatch.dylib) + 60  [0x18f219824]
+        5       _dispatch_once_wait.cold.1  (in libdispatch.dylib) + 148  [0x18f24d07c]
+        5       _dlock_wait  (in libdispatch.dylib) + 56  [0x18f2198cc]
+        5       invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile) + 0  [0x10011b0a8]  clover_common.hpp:34
+        5       void apply_cpu<double>(System const&, Cx<double> const*, Cx<double>*, int)  (in residual_profile) + 80  [0x100114308]  solve_common.hpp:72
+
+Sort by top of stack, same collapsed (when >= 5):
+        CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile)        2809
+        __workq_kernreturn  (in libsystem_kernel.dylib)        674
+        CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile)        51
+        invocation function for block in void chunks<reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0>(unsigned int, int, reference_residual(CompactClover const&, std::vector<Cx<double>> const&, std::vector<Cx<double>>&, std::vector<double>&, int)::$_0 const&)  (in residual_profile)        33
+        m3_mul(std::array<std::complex<double>, 9ul> const&, std::array<std::complex<double>, 9ul> const&)  (in residual_profile)        32
+        CompactClover::CompactClover(unsigned int, double, int, double, std::vector<std::array<std::complex<double>, 9ul>>)::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const  (in residual_profile)        30
+        CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda'(double const&)::operator()<void CompactClover::apply<double>(Cx<double> const*, Cx<double>*, int, int, bool) const::'lambda'(int, unsigned int, unsigned int)::operator()(int, unsigned int, unsigned int) const::'lambda0'(Cx<double>, unsigned long)>(double const&) const  (in residual_profile)        24
+        gauge_loop(WilsonSystem const&, unsigned int, std::initializer_list<int>)  (in residual_profile)        21
+        __bzero  (in libsystem_platform.dylib)        15
+        invert_cholesky(std::array<std::complex<double>, 36ul> const&, double&)  (in residual_profile)        14
+        __ulock_wait  (in libsystem_kernel.dylib)        11
+        __read_nocancel  (in libsystem_kernel.dylib)        5
+        _dyld_start  (in dyld)        5
+
+Binary images description not available
+

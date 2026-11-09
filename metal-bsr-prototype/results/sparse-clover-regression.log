@@ -1,0 +1,59 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+QDP-basis clover c_sw=1 odd Schur, workers=8 APBC=1 tol=1e-10 inner_tol=0.002 chunk=4 library_ms=52.9428
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=1 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=2 RHS=1 csw=1 cpu_fp64 trial=0 ms=0.470542 outer=1 inner=12 dispatched=12 true_r=2.83362e-11 x_error=5.76056e-11 PASS
+mass=0.25 L=2 RHS=1 csw=1 cpu_mixed_host64 trial=0 ms=0.551708 outer=4 inner=15 dispatched=15 true_r=5.88606e-13 x_error=1.15559e-12 PASS
+mass=0.25 L=2 RHS=1 csw=1 cpu_mixed_fp32 trial=0 ms=0.600042 outer=4 inner=15 dispatched=15 true_r=5.88733e-13 x_error=1.15582e-12 PASS
+mass=0.25 L=2 RHS=1 csw=1 metal_mixed_host64 trial=0 ms=7.74733 outer=4 inner=15 dispatched=16 true_r=5.88281e-13 x_error=1.1549e-12 PASS
+mass=0.25 L=2 RHS=1 csw=1 metal_mixed_fp32 trial=0 ms=9.99675 outer=4 inner=15 dispatched=16 true_r=5.88639e-13 x_error=1.15566e-12 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_mixed_host64 trial=0 ms=1.58654 outer=4 inner=16 dispatched=16 true_r=1.52444e-12 x_error=2.24653e-12 PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_mixed_fp32 trial=0 ms=1.38092 outer=4 inner=16 dispatched=16 true_r=1.51732e-12 x_error=2.24239e-12 PASS
+mass=0.25 L=2 RHS=3 csw=1 metal_mixed_host64 trial=0 ms=10.1436 outer=4 inner=16 dispatched=16 true_r=1.5208e-12 x_error=2.2441e-12 PASS
+mass=0.25 L=2 RHS=3 csw=1 metal_mixed_fp32 trial=0 ms=8.68867 outer=4 inner=16 dispatched=16 true_r=1.5242e-12 x_error=2.24638e-12 PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_fp64 trial=0 ms=1.15992 outer=1 inner=12 dispatched=12 true_r=4.98281e-11 x_error=9.11931e-11 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=7 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=2 RHS=7 csw=1 cpu_mixed_fp32 trial=0 ms=2.87975 outer=4 inner=16 dispatched=16 true_r=1.76161e-12 x_error=2.74387e-12 PASS
+mass=0.25 L=2 RHS=7 csw=1 metal_mixed_host64 trial=0 ms=7.50633 outer=4 inner=16 dispatched=16 true_r=1.76048e-12 x_error=2.73769e-12 PASS
+mass=0.25 L=2 RHS=7 csw=1 metal_mixed_fp32 trial=0 ms=9.38792 outer=4 inner=16 dispatched=16 true_r=1.75953e-12 x_error=2.73983e-12 PASS
+mass=0.25 L=2 RHS=7 csw=1 cpu_fp64 trial=0 ms=2.57842 outer=1 inner=13 dispatched=13 true_r=5.56561e-11 x_error=8.59844e-11 PASS
+mass=0.25 L=2 RHS=7 csw=1 cpu_mixed_host64 trial=0 ms=2.70583 outer=4 inner=16 dispatched=16 true_r=1.76076e-12 x_error=2.73892e-12 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=1 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=4 RHS=1 csw=1 metal_mixed_host64 trial=0 ms=23.2891 outer=4 inner=25 dispatched=32 true_r=3.32866e-12 x_error=1.15641e-11 PASS
+mass=0.25 L=4 RHS=1 csw=1 metal_mixed_fp32 trial=0 ms=22.435 outer=4 inner=25 dispatched=32 true_r=3.33132e-12 x_error=1.15735e-11 PASS
+mass=0.25 L=4 RHS=1 csw=1 cpu_fp64 trial=0 ms=8.98033 outer=1 inner=22 dispatched=22 true_r=1.58531e-11 x_error=5.66165e-11 PASS
+mass=0.25 L=4 RHS=1 csw=1 cpu_mixed_host64 trial=0 ms=9.88258 outer=4 inner=25 dispatched=25 true_r=3.32863e-12 x_error=1.15639e-11 PASS
+mass=0.25 L=4 RHS=1 csw=1 cpu_mixed_fp32 trial=0 ms=9.10908 outer=4 inner=25 dispatched=25 true_r=3.32944e-12 x_error=1.15669e-11 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=3 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=4 RHS=3 csw=1 metal_mixed_fp32 trial=0 ms=26.6696 outer=4 inner=26 dispatched=32 true_r=1.23341e-12 x_error=3.5643e-12 PASS
+mass=0.25 L=4 RHS=3 csw=1 cpu_fp64 trial=0 ms=17.395 outer=1 inner=21 dispatched=21 true_r=3.80112e-11 x_error=1.14349e-10 PASS
+mass=0.25 L=4 RHS=3 csw=1 cpu_mixed_host64 trial=0 ms=21.4436 outer=4 inner=26 dispatched=26 true_r=1.23559e-12 x_error=3.56794e-12 PASS
+mass=0.25 L=4 RHS=3 csw=1 cpu_mixed_fp32 trial=0 ms=20.9385 outer=4 inner=26 dispatched=26 true_r=1.23413e-12 x_error=3.56546e-12 PASS
+mass=0.25 L=4 RHS=3 csw=1 metal_mixed_host64 trial=0 ms=28.9671 outer=4 inner=26 dispatched=32 true_r=1.23584e-12 x_error=3.5688e-12 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=4 RHS=7 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=4 RHS=7 csw=1 cpu_fp64 trial=0 ms=27.4765 outer=1 inner=22 dispatched=22 true_r=6.52695e-11 x_error=1.44663e-10 PASS
+mass=0.25 L=4 RHS=7 csw=1 cpu_mixed_host64 trial=0 ms=33.5224 outer=4 inner=29 dispatched=29 true_r=3.8874e-12 x_error=5.94146e-12 PASS
+mass=0.25 L=4 RHS=7 csw=1 cpu_mixed_fp32 trial=0 ms=31.3574 outer=4 inner=29 dispatched=29 true_r=3.8889e-12 x_error=5.94788e-12 PASS
+mass=0.25 L=4 RHS=7 csw=1 metal_mixed_host64 trial=0 ms=31.1013 outer=4 inner=29 dispatched=32 true_r=3.88599e-12 x_error=5.93685e-12 PASS
+mass=0.25 L=4 RHS=7 csw=1 metal_mixed_fp32 trial=0 ms=21.474 outer=4 inner=29 dispatched=32 true_r=3.88703e-12 x_error=5.94083e-12 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=1
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_mixed_host64 trial=0 ms=0.547834 outer=2 inner=6 dispatched=6 true_r=1.0728e-14 x_error=3.44664e-14 PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_mixed_fp32 trial=0 ms=0.554375 outer=2 inner=6 dispatched=6 true_r=1.63439e-14 x_error=3.8684e-14 PASS
+mass=0.25 L=2 RHS=3 csw=1 metal_mixed_host64 trial=0 ms=2.11425 outer=2 inner=6 dispatched=8 true_r=1.93735e-14 x_error=1.50656e-13 PASS
+mass=0.25 L=2 RHS=3 csw=1 metal_mixed_fp32 trial=0 ms=3.07675 outer=2 inner=6 dispatched=8 true_r=1.95801e-14 x_error=4.75553e-14 PASS
+mass=0.25 L=2 RHS=3 csw=1 cpu_fp64 trial=0 ms=0.3795 outer=1 inner=3 dispatched=3 true_r=2.73386e-16 x_error=1.11461e-15 PASS
+Clover convention/two-6x6/inverse/gauge-covariance/full-operator/odd-Schur CPU+Metal checks PASS L=2 RHS=3 csw=0
+Metal FP32 clover RHS reduction and even reconstruction checks PASS
+mass=0.25 L=2 RHS=3 csw=0 cpu_mixed_fp32 trial=0 ms=1.27287 outer=4 inner=16 dispatched=16 true_r=1.70084e-12 x_error=2.65456e-12 PASS
+mass=0.25 L=2 RHS=3 csw=0 metal_mixed_host64 trial=0 ms=4.80879 outer=4 inner=16 dispatched=16 true_r=1.70178e-12 x_error=2.65461e-12 PASS
+mass=0.25 L=2 RHS=3 csw=0 metal_mixed_fp32 trial=0 ms=7.34762 outer=4 inner=16 dispatched=16 true_r=1.69901e-12 x_error=2.65209e-12 PASS
+mass=0.25 L=2 RHS=3 csw=0 cpu_fp64 trial=0 ms=1.19367 outer=1 inner=12 dispatched=12 true_r=3.44761e-11 x_error=5.33089e-11 PASS
+mass=0.25 L=2 RHS=3 csw=0 cpu_mixed_host64 trial=0 ms=1.391 outer=4 inner=16 dispatched=16 true_r=1.70058e-12 x_error=2.65327e-12 PASS
+PASS: 8 clover systems; every RHS checked on the full FP64 clover-Wilson equation after even reconstruction.

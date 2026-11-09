@@ -1,0 +1,5 @@
+extent,mass,tile_rhs,offset,backend,trial,outer_step,max_true_residual,inner_min_iterations,inner_max_iterations,dispatched_steps
+16,-0.12,12,0,cpu_sparse_mg,0,1,0.000603472765344,6,6,6
+16,-0.12,12,0,cpu_sparse_mg,0,2,6.31522391726e-07,8,8,8
+16,-0.12,12,0,cpu_sparse_mg,0,3,7.5408180987e-10,8,8,8
+16,-0.12,12,0,cpu_sparse_mg,0,4,9.91933760237e-13,8,8,8

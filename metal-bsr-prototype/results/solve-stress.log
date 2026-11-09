@@ -1,0 +1,6 @@
+GPU: Apple M1 Max | macOS Version 26.7.1 (Build 25G241)
+CPU workers=8 library_ms=136.592 mass=0.01 true_tol=1e-10 inner_tol=0.002 GPU_chunk=8
+L=4 RHS=7 cpu_fp64 trial=0 total_ms=4.47171 outer=1 inner=9 dispatched=9 true_r=1.1189e-14 x_error=2.13697e-14 PASS
+L=4 RHS=7 cpu_mixed trial=0 total_ms=18.0277 outer=3 inner=26 dispatched=26 true_r=1.0564e-13 x_error=2.55305e-11 PASS
+L=4 RHS=7 metal_mixed trial=0 total_ms=25.361 outer=3 inner=26 dispatched=40 true_r=1.08329e-13 x_error=2.26036e-11 PASS
+PASS: 1 systems; every RHS has full CPU FP64 true-residual and known-solution checks.

@@ -1,0 +1,11 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=1.79374 min_clover_pivot=3.45057
+P1 basis ready n=98304
+A1 sparse ready blocks=135168 seconds=5.00831
+A2 sparse ready n=6144 blocks=8448 hierarchy_s=44.8052
+LEVEL1 PASS R_P=1.34722e-15 Galerkin=1.91707e-15 gamma5=4.77525e-15 n=98304 blocks=135168
+LEVEL2 PASS R_P=7.1451e-16 Galerkin=1.98709e-15 gamma5=2.55691e-15 n=6144 blocks=8448
+DEVICE PASS inbs=12 R=1.8204e-07 P=2.07171e-07 A=8.89555e-07
+DEVICE PASS inbs=24 R=1.2516e-07 P=1.56534e-07 A=8.79073e-07
+TILE L=32 m=-0.12 metal mg3 trial=0 offset=0 seconds=28.9935 outer=4 K=30 fineS=94 c1=210 c2=1980 true=8.36858e-13 PASS
+ERROR: GPU BiCGStab iteration limit

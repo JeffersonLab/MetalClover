@@ -1,0 +1,453 @@
+{
+  "recorded_utc": "2026-11-07T20:11:21.323078+00:00",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "hardware": "Apple M1 Max, 24 GPU cores, 32 GiB unified memory",
+  "sources": [
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/Makefile.production",
+      "bytes": 1850,
+      "sha256": "dae6093859e3f8681d7c2952e3f49bc31d1f726b0fe57f4bf2415912a22b4abf"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/bicgstab.hpp",
+      "bytes": 12382,
+      "sha256": "86df4aa46b2bda22e55d41e2e1aea9d5ecde45ce030b7cc02344192960efcb09"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/bicgstab.metal",
+      "bytes": 4088,
+      "sha256": "8b1a9238306973c24917623bf674d83826caec73557fb466d3451da16304c805"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/bsr_common.hpp",
+      "bytes": 15055,
+      "sha256": "d071b3d0059c870d377e10127a022417200e5928a680a9bba91a942f7d7108b1"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/chroma_bridge.hpp",
+      "bytes": 1661,
+      "sha256": "502079174dc6a1237923079e8ff8bc1d1260926f6d42ec139d3eb0dfe692f6dd"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/chroma_import.hpp",
+      "bytes": 5789,
+      "sha256": "18e39fde30dd65a49200f8a7184cb1263a143dc003dfd4d3db88ad4200bb7117"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/clover.metal",
+      "bytes": 1966,
+      "sha256": "0f166a6081b7f864aeca39a13fc1befca8f79b98e9ce8e69ff1bb95f068ca29e"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/clover_checks.hpp",
+      "bytes": 9280,
+      "sha256": "188b34115502b8aa13febb48d2b1c7c3cf5bd92bf022de50dc5d447a426098be"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/clover_common.hpp",
+      "bytes": 14511,
+      "sha256": "f68c9492f656b29a2e2fcaed3249983fa450f68b110ffda4590a467cf9c7cc13"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/compact_clover.hpp",
+      "bytes": 11675,
+      "sha256": "efd7533185818b351c0f6b8a0c6b0628711e373b038a4151f9228a1fc71adc1d"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/compact_clover.metal",
+      "bytes": 4416,
+      "sha256": "876127b42a754209d71d668dc7521a4d016d2b951f07769b112573c1689af126"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/compact_residual.hpp",
+      "bytes": 6010,
+      "sha256": "e187eb4f13e9a1b4ab1cb96b362010e7f1a3efcc42012ab59a9ca3dbe456d05f"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/compact_solve.hpp",
+      "bytes": 9036,
+      "sha256": "fc2577c9388e88b7f89a8e9b3d711745e781e438cd780576b7ee99ea6970a6d1"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/compare_production.py",
+      "bytes": 6462,
+      "sha256": "e329cf0815e6b31f24a504c6c507b6e56239c86ce16fb4903e69fabbde3683bd"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/evenodd.hpp",
+      "bytes": 6373,
+      "sha256": "3dcc31d1e041151673722119b6dd3b18b0288690f8803a4fadf2d8f1b53ac3de"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/evenodd.metal",
+      "bytes": 369,
+      "sha256": "0740679fa7acbeecdba9b35b73da979fcf157cc8ee6996e8c3bd1671e6db61ad"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/fgmres.hpp",
+      "bytes": 13210,
+      "sha256": "53e05af8e0df422c383019a4c43b01a6cdfe279c5f525bc60ccfa670c64cb6ae"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/kernels.metal",
+      "bytes": 2002,
+      "sha256": "ab69811691ebec81f272c03f8dd69665449d65fe1c4c9bc374e2e97d2a73ea41"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/lattice_geometry.hpp",
+      "bytes": 646,
+      "sha256": "498f131edb80c474638356a32066660149ab0ed0ba343047a7be5fcd1334136a"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/mg_checks.hpp",
+      "bytes": 4389,
+      "sha256": "d51a1f9b587090dc0e1e7450ebc34d3c508045250061cba63e28eba35d5c34a7"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/multigrid.hpp",
+      "bytes": 14294,
+      "sha256": "8a182e60939c51eb9c10fd6796c44f81e241a243250630fe8afdced858639005"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/multigrid.metal",
+      "bytes": 5675,
+      "sha256": "5229df37081e99795bc7d7d85fa0b78b65aa20a1d8f06ee8ae13d7bb865ab2c0"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/production_bridge.hpp",
+      "bytes": 1733,
+      "sha256": "9c49feeb4df0c12dcea0e418b417bd512d653f64d39c09fe83d2dae94819b2f2"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/production_export.cc",
+      "bytes": 8530,
+      "sha256": "50fb342d559b823439ed5f33f3faf866cd023a3bbf6d1cae4a960230eceb47ad"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/production_solve.mm",
+      "bytes": 14507,
+      "sha256": "30226341890c1f8d4bb652b3fc0dd3433322bc02ab08ff975576d35d414ceb5a"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/production_verify.cc",
+      "bytes": 4594,
+      "sha256": "5aa6bc304789a50eb0b7a0338d987b601cca0731816c9fbc15ebab878efbabbe"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/solve.metal",
+      "bytes": 3577,
+      "sha256": "b44d04e627a5e8270f2b539ed7412e0a9373be3e558036d2e6762cdc53ed529b"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/solve_common.hpp",
+      "bytes": 20844,
+      "sha256": "b60f39e68d8e36a2e105fe7de05b6fa454808b07264eb9f9a8121043a35ecda0"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/sparse_checks.hpp",
+      "bytes": 4101,
+      "sha256": "d010473f618ca4e831165997f2942ad3bfa733564fcfb4b56861e2de8e504cfc"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/sparse_coarse.hpp",
+      "bytes": 13092,
+      "sha256": "3f31317bcf9e226fcbd6a6db098e9fa8e38d4a7584fa77fe359e56c822d1a1fb"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/sparse_coarse.metal",
+      "bytes": 1883,
+      "sha256": "2824d4ddcf23007e46c8768855093db316f1c48ed8b50ddf1a6c1cd643310208"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/sparse_rhs.hpp",
+      "bytes": 1126,
+      "sha256": "5f6590530906fccac6e9718ddfd7e1b4db932085114f4b25a031a40bbc2dbdab"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/three_level.hpp",
+      "bytes": 19016,
+      "sha256": "657f16d9f564e8c8c8cf030f31012b77045d677ccd1e07af59ec44cb03db1265"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/wilson_common.hpp",
+      "bytes": 9353,
+      "sha256": "a8b76befeef9cfe632d433061580fd667d42d7a35a69cf6c5d9d29209223a7fe"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/production_solve",
+      "bytes": 412976,
+      "sha256": "985f9f8ee063c6161f7401676bdf717799bf1d642ae9ca954963e99e39dae349"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/production_export",
+      "bytes": 1793312,
+      "sha256": "b2d53b03878c642522c3043f12516ba7caf0c64aef6fe63d6a45b1a77fd157fc"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/production_verify",
+      "bytes": 803088,
+      "sha256": "9a809f9b6c66d16377c158dca1289f1bc63fba04f77222f105a292a31e451843"
+    }
+  ],
+  "inputs": {
+    "gauge": {
+      "path": "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265_cfg_1000a.lime",
+      "bytes": 1019237832,
+      "sha256": "7a4e2f5f41838bce746adf928f31b8d4f1814c904402289892fda6d20b8d9003"
+    },
+    "eigenvectors": {
+      "path": "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.3d.eigs.mod1000a",
+      "bytes": 13761154495,
+      "sha256": "696d0bad4b1c412fa99d95f0d44fa4515402731835b29391eace80743732735e"
+    },
+    "perambulator": {
+      "path": "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.prop.n162.light.t0_0.sdb1000a",
+      "bytes": 324501504,
+      "sha256": "b3ddc543d30abd6ad9a750df0520b18167ea8624046ab1dcc69e4f76548e8ded"
+    }
+  },
+  "bridge": {
+    "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/production24.bridge",
+    "bytes": 2717909068,
+    "sha256": "f4a60afb273e161d4265940aa024c03349d13834370c856b7206a27f46eceeac"
+  },
+  "eigen0": {
+    "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/production24.eigen0",
+    "bytes": 15925268,
+    "sha256": "00aae546df4428a341de5440f8d780cbc114c9b9d1f09ad56b47af16e2d6e5a2"
+  },
+  "peram_metadata": {
+    "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/anisotropic24-peram-metadata.xml",
+    "bytes": 439689,
+    "sha256": "9a551e70c8e1fe8c8d90751096425f2be1bae269e217ff112b8d68486bc32d79"
+  },
+  "peram_reference": {
+    "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/anisotropic24-peram-00.csv",
+    "bytes": 49367,
+    "sha256": "aefd1aa63f4ad7ad629920ee911be718913991361c3ced185815d6783371f125"
+  },
+  "native_build": {
+    "chroma_config": "/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config",
+    "matching_chroma_source": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel",
+    "base_precision": 64,
+    "note": "Native aniso_io, CloverFermActParams and stout_utils are compiled locally in FP64; installed Chroma is not modified."
+  },
+  "production_settings": {
+    "rhs_resident": 1,
+    "source_spins": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "source_time": 176,
+    "sink_times": [
+      176,
+      223
+    ],
+    "workers": 8,
+    "fine_blocks": [
+      4,
+      4,
+      4,
+      8
+    ],
+    "second_blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "vectors_per_chirality": [
+      12,
+      12
+    ],
+    "filter_sweeps": 8,
+    "filter_rhs_tile": 2,
+    "fine_restart": 8,
+    "inner_target": 0.002,
+    "outer_target_full_fp64": 1e-10,
+    "coarse1_restart": 8,
+    "coarse1_max_iterations": 16,
+    "coarse1_target": 0.1,
+    "coarse2_max_iterations": 16,
+    "coarse2_target": 0.1,
+    "initial_guess_spins": [
+      0
+    ],
+    "initial_guess_prefix": "results/production24-pre-reunit",
+    "initial_guess_note": "Spin 0 starts from the earlier raw-link diagnostic solution, then is corrected and accepted only against the reunitarized full operator. Spins 1-3 start from zero.",
+    "fine_pre_smoother_sweeps": 1,
+    "fine_post_smoother_sweeps": 1,
+    "coarse1_pre_smoother_sweeps": 1,
+    "coarse1_post_smoother_sweeps": 1,
+    "smoother_weight": 1,
+    "filter_weight": 0.65,
+    "reuse_hierarchy_across_sources": true
+  },
+  "commands": {
+    "build": [
+      "make",
+      "-f",
+      "Makefile.production",
+      "production",
+      "CHROMA_CONFIG=/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config",
+      "CHROMA_SOURCE=/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel"
+    ],
+    "export": [
+      "./build/production_export",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265_cfg_1000a.lime",
+      "results/anisotropic24-peram-metadata.xml",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265.3d.eigs.mod1000a",
+      "build/production24"
+    ],
+    "solve": [
+      "./build/production_solve",
+      "build/production24",
+      "results/production24",
+      "--initial-prefix",
+      "results/production24-pre-reunit"
+    ],
+    "verify": [
+      "./build/production_verify",
+      "build/production24",
+      "results/production24"
+    ],
+    "compare": [
+      "python3",
+      "compare_production.py",
+      "results/production24",
+      "--chroma-residuals",
+      "results/production24.chroma-residuals.csv",
+      "--solve-log",
+      "results/production24-solve.log",
+      "--action",
+      "results/anisotropic24-action.json"
+    ]
+  },
+  "environment": {
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OMP_NUM_THREADS": "8 (native tools)"
+  },
+  "initial_guess_input": {
+    "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24-pre-reunit.spin0.bin",
+    "bytes": 679477248,
+    "sha256": "1c839ead55ab7ace0c5fdbf91cb9d1fa1c8c7486cc8005a7ef21f37b6d4b4eba"
+  },
+  "discarded_transient_baseline_inputs": [
+    {
+      "path": "build/production24-pre-reunit.bridge",
+      "bytes": 2717909068
+    },
+    {
+      "path": "build/production24-pre-reunit.eigen0",
+      "bytes": 15925268
+    }
+  ],
+  "timing_conditions": {
+    "background_compilation_observed": true,
+    "swap_used_mib_observed": 14328.5,
+    "note": "One correctness run with concurrent compiler activity and substantial system swapping. These timings are not a controlled CPU-versus-Metal comparison. Spin 0 also uses the explicitly recorded initial guess."
+  },
+  "source_and_binary_hash_verification": {
+    "passed": true,
+    "files": 37
+  },
+  "result": {
+    "completed_utc": "2026-11-07T20:40:40.728730+00:00",
+    "standalone_full_fp64_passed": true,
+    "independent_chroma_full_fp64_passed": true,
+    "max_native_full_relative": 1.75173546335182e-11,
+    "compared_elements": 768,
+    "perambulator_comparison": {
+      "relative_2norm": 3.437950789761576e-05,
+      "max_absolute": 1.0121273296057026e-05,
+      "max_absolute_at": {
+        "spin_source": 3,
+        "spin_sink": 2,
+        "time": 207
+      }
+    },
+    "historical_discrepancy_cause": "unresolved",
+    "native_verification_seconds": 14.24
+  },
+  "outputs": [
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/README.md",
+      "bytes": 15171,
+      "sha256": "022c343d785600df45d48bb8b2223b44af888264d5e2a4e23d6e43b34f9269cc"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/anisotropic24-action.json",
+      "bytes": 4544,
+      "sha256": "4cddfb1a15e8c939527df4aa7c20c45eafedc8fa495d9c9cfd3f90706949ea57"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.csv",
+      "bytes": 39341,
+      "sha256": "9eee30ddb7f7f5bccd333c456a3330b9720da39192e8adbe0e477f09ba0e4e02"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.trace.csv",
+      "bytes": 495,
+      "sha256": "2df309ed3b169dbae972d1fe640d449f2773c47f0ade7b1bece57bcabe78b7a2"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.chroma-residuals.csv",
+      "bytes": 126,
+      "sha256": "8750e649a8f2da8d8d260c6cd1ec3729e8f86849991f72cf32910f3e95722516"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.comparison.csv",
+      "bytes": 124113,
+      "sha256": "1599f8dfe9fadd089fea169ff68358675356dac2597e9fa21339a4dfc548a372"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.comparison.json",
+      "bytes": 18474,
+      "sha256": "be911f7ae409658d34bde480d6704c4cfd0912f9684589d8dec7b95f69b50781"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24-solve.log",
+      "bytes": 8502,
+      "sha256": "80e807d52574d043d3cb10f2e2fd1ebe7f9228f971f1733fb2873e615216e853"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24-export.log",
+      "bytes": 1111,
+      "sha256": "0e679be124b6b36e85b5fefb20954a529f25b272d928525028e77bfef0f633d7"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24-chroma-verify.log",
+      "bytes": 710,
+      "sha256": "306b14c9380713ecb0e34e755f5d0aee0f88480a5f3b27ad4374c39a1fcee6f6"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24-reunit-diagnostic.json",
+      "bytes": 903,
+      "sha256": "34063d8dedc8eefbdcbb4243c464de22770dc6094df5ec639af7f813af6ca26c"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.spin0.bin",
+      "bytes": 679477248,
+      "sha256": "d1c465a48851c74b59a94e6405f76c559da35fc5a2edda5148d890c3773ef14b"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.spin1.bin",
+      "bytes": 679477248,
+      "sha256": "e249e403ad6a7b67ea9e790443d4f4e545dc6ff0e9c3354657fbffb959bcd55f"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.spin2.bin",
+      "bytes": 679477248,
+      "sha256": "411f0e4651bf06a1e73e526ef083a768a303811bc7e9f60b2a8810f9bae9c10b"
+    },
+    {
+      "path": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/production24.spin3.bin",
+      "bytes": 679477248,
+      "sha256": "80d19e4e5319ea9e49e0dead8dfa766f399db4d228788deb70e9845d7409e0d5"
+    }
+  ]
+}

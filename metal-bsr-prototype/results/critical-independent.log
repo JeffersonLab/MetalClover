@@ -1,0 +1,22 @@
+m=-0.14 k=25 lambda=0.0347372 ritz_bound=0.0105595
+m=-0.14 k=50 lambda=0.0346678 ritz_bound=0.00511183
+m=-0.14 k=75 lambda=0.034182 ritz_bound=0.0365946
+m=-0.14 k=100 lambda=0.0334773 ritz_bound=0.00496678
+m=-0.14 k=125 lambda=0.0333352 ritz_bound=0.0180327
+m=-0.14 k=150 lambda=0.0322872 ritz_bound=0.0132204
+m=-0.14 k=175 lambda=0.032227 ritz_bound=0.00605615
+m=-0.14 k=200 lambda=0.0320366 ritz_bound=0.0128198
+m=-0.14 k=225 lambda=0.0319399 ritz_bound=0.00208617
+m=-0.14 k=250 lambda=0.0319339 ritz_bound=0.00348632
+m=-0.14 k=275 lambda=0.0319066 ritz_bound=0.00331502
+m=-0.14 k=300 lambda=0.0319017 ritz_bound=0.000638671
+m=-0.14 k=325 lambda=0.0318936 ritz_bound=0.00351612
+m=-0.14 k=350 lambda=0.0318854 ritz_bound=0.000963664
+m=-0.14 k=375 lambda=0.0318846 ritz_bound=0.000933464
+m=-0.14 k=400 lambda=0.0318744 ritz_bound=0.00180227
+m=-0.14 k=425 lambda=0.0318728 ritz_bound=0.000418738
+m=-0.14 k=450 lambda=0.0318721 ritz_bound=0.00111938
+m=-0.14 k=475 lambda=0.0318701 ritz_bound=0.000297917
+m=-0.14 k=500 lambda=0.03187 ritz_bound=0.00010118
+GAP mass=-0.14 sigma=0.178522 true_H2_residual=0.00010118 stationary_m=-0.139826 steps=500
+DONE: FP64 Rayleigh diagnostics; convergence is recorded explicitly.

@@ -1,0 +1,66 @@
+GPU=Apple M1 Max maxBuffer_MiB=19169 sparse coarse BiCGStab; csw=1; physical tile=96 workers=8
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=808.148
+L=16 mass=0.1 RHS=96 tile=0+96 cpu_sparse_mg trial=0 ms=39710.4 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=0 total_ms=39710.4 true_r=9.58671e-13 peak_RSS_MiB=16145.9
+L=16 mass=0.1 RHS=96 tile=0+96 cpu_sparse_mg trial=1 ms=33538 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=1 total_ms=33538 true_r=9.58671e-13 peak_RSS_MiB=16145.9
+L=16 mass=0.1 RHS=96 tile=0+96 cpu_sparse_mg trial=2 ms=32748.1 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=2 total_ms=32748.1 true_r=9.58671e-13 peak_RSS_MiB=16145.9
+L=16 mass=0.1 RHS=192 tile=0+96 cpu_sparse_mg trial=0 ms=40990.9 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 cpu_sparse_mg trial=0 ms=35195.9 outer=4 inner=24 fineS=76 coarse_spmv=134 coarse_true=0.196645 true_r=9.67754e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=0 total_ms=76186.9 true_r=9.67754e-13 peak_RSS_MiB=16146.2
+L=16 mass=0.1 RHS=192 tile=0+96 cpu_sparse_mg trial=1 ms=33959.3 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 cpu_sparse_mg trial=1 ms=41929.6 outer=4 inner=24 fineS=76 coarse_spmv=134 coarse_true=0.196645 true_r=9.67754e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=1 total_ms=75888.8 true_r=9.67754e-13 peak_RSS_MiB=16146.2
+L=16 mass=0.1 RHS=192 tile=0+96 cpu_sparse_mg trial=2 ms=32478.3 outer=4 inner=24 fineS=76 coarse_spmv=135 coarse_true=0.126782 true_r=9.58671e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 cpu_sparse_mg trial=2 ms=32202.8 outer=4 inner=24 fineS=76 coarse_spmv=134 coarse_true=0.196645 true_r=9.67754e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=2 total_ms=64681.1 true_r=9.67754e-13 peak_RSS_MiB=16146.5
+Metal allocated_MiB=11252
+L=16 mass=0.1 RHS=96 tile=0+96 metal_sparse_mg trial=0 ms=7756.46 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=0 total_ms=7756.46 true_r=9.58664e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.1 RHS=96 tile=0+96 metal_sparse_mg trial=1 ms=7849.53 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=1 total_ms=7849.53 true_r=9.58664e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.1 RHS=96 tile=0+96 metal_sparse_mg trial=2 ms=7838.31 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=96 tile=96 trial=2 total_ms=7838.31 true_r=9.58664e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.1 RHS=192 tile=0+96 metal_sparse_mg trial=0 ms=7848.01 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 metal_sparse_mg trial=0 ms=7818.12 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.196056 true_r=9.6774e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=0 total_ms=15666.1 true_r=9.6774e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.1 RHS=192 tile=0+96 metal_sparse_mg trial=1 ms=8010.49 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 metal_sparse_mg trial=1 ms=7873.62 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.196056 true_r=9.6774e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=1 total_ms=15884.1 true_r=9.6774e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.1 RHS=192 tile=0+96 metal_sparse_mg trial=2 ms=7903.49 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.126744 true_r=9.58664e-13 PASS
+L=16 mass=0.1 RHS=192 tile=96+96 metal_sparse_mg trial=2 ms=7863.87 outer=4 inner=24 fineS=76 coarse_spmv=216 coarse_true=0.196056 true_r=9.6774e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.1 RHS=192 tile=96 trial=2 total_ms=15767.4 true_r=9.6774e-13 peak_RSS_MiB=16729.4
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=830.671
+Metal allocated_MiB=11252
+L=16 mass=0.5 RHS=96 tile=0+96 metal_sparse_mg trial=0 ms=6478.27 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=0 total_ms=6478.27 true_r=2.3793e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=96 tile=0+96 metal_sparse_mg trial=1 ms=6463.69 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=1 total_ms=6463.69 true_r=2.3793e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=96 tile=0+96 metal_sparse_mg trial=2 ms=6574.08 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=2 total_ms=6574.08 true_r=2.3793e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=192 tile=0+96 metal_sparse_mg trial=0 ms=6678.88 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 metal_sparse_mg trial=0 ms=7794.63 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0990939 true_r=2.38705e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=0 total_ms=14473.5 true_r=2.38705e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=192 tile=0+96 metal_sparse_mg trial=1 ms=6515.77 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 metal_sparse_mg trial=1 ms=6552.06 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0990939 true_r=2.38705e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=1 total_ms=13067.8 true_r=2.38705e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=192 tile=0+96 metal_sparse_mg trial=2 ms=6453.66 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0992951 true_r=2.3793e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 metal_sparse_mg trial=2 ms=6469.64 outer=4 inner=19 fineS=61 coarse_spmv=171 coarse_true=0.0990939 true_r=2.38705e-13 PASS
+BATCH metal_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=2 total_ms=12923.3 true_r=2.38705e-13 peak_RSS_MiB=16729.4
+L=16 mass=0.5 RHS=96 tile=0+96 cpu_sparse_mg trial=0 ms=24946 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=0 total_ms=24946 true_r=2.37927e-13 peak_RSS_MiB=18555.9
+L=16 mass=0.5 RHS=96 tile=0+96 cpu_sparse_mg trial=1 ms=29491.7 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=1 total_ms=29491.7 true_r=2.37927e-13 peak_RSS_MiB=18555.9
+L=16 mass=0.5 RHS=96 tile=0+96 cpu_sparse_mg trial=2 ms=26363.9 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=96 tile=96 trial=2 total_ms=26363.9 true_r=2.37927e-13 peak_RSS_MiB=18555.9
+L=16 mass=0.5 RHS=192 tile=0+96 cpu_sparse_mg trial=0 ms=24135.7 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 cpu_sparse_mg trial=0 ms=23903 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.099089 true_r=2.38705e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=0 total_ms=48038.7 true_r=2.38705e-13 peak_RSS_MiB=18555.9
+L=16 mass=0.5 RHS=192 tile=0+96 cpu_sparse_mg trial=1 ms=24180.1 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 cpu_sparse_mg trial=1 ms=24515.8 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.099089 true_r=2.38705e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=1 total_ms=48695.8 true_r=2.38705e-13 peak_RSS_MiB=18555.9
+L=16 mass=0.5 RHS=192 tile=0+96 cpu_sparse_mg trial=2 ms=24111.8 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.0992939 true_r=2.37927e-13 PASS
+L=16 mass=0.5 RHS=192 tile=96+96 cpu_sparse_mg trial=2 ms=24158.1 outer=4 inner=19 fineS=61 coarse_spmv=59 coarse_true=0.099089 true_r=2.38705e-13 PASS
+BATCH cpu_sparse_mg L=16 mass=0.5 RHS=192 tile=96 trial=2 total_ms=48269.9 true_r=2.38705e-13 peak_RSS_MiB=18555.9
+PASS: all requested systems; full CPU FP64 clover-Wilson residual checks for every RHS.

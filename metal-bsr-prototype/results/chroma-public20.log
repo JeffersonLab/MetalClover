@@ -1,0 +1,598 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+CHROMA link_import_s=0.0354197
+COMPACT setup_s=0.190394 min_clover_pivot=3.03379
+CHROMA FP64 full_relative=1.51119e-16 odd_schur_relative=1.60124e-16
+P1 basis ready n=6144
+A1 sparse ready blocks=8448 seconds=0.564608
+A2 sparse ready n=384 blocks=176 hierarchy_s=6.05655
+LEVEL1 PASS R_P=2.04622e-15 Galerkin=2.50859e-15 gamma5=2.78951e-15 n=6144 blocks=8448
+LEVEL2 PASS R_P=6.54534e-16 Galerkin=1.67402e-15 gamma5=8.89154e-16 n=384 blocks=176
+DEVICE PASS inbs=12 R=2.21263e-07 P=2.42872e-07 A=8.89282e-07
+DEVICE PASS inbs=24 R=1.34002e-07 P=1.63501e-07 A=5.17078e-07
+OUTER warm metal mg3 step=1 K=14 true=0.00151835
+OUTER warm metal mg3 step=2 K=33 true=2.87516e-06
+OUTER warm metal mg3 step=3 K=34 true=4.85109e-09
+OUTER warm metal mg3 step=4 K=34 true=8.43915e-12
+WARM metal mg3 done
+OUTER metal mg3 offset=0 step=1 K=14 true=0.00151835
+OUTER metal mg3 offset=0 step=2 K=33 true=2.87516e-06
+OUTER metal mg3 offset=0 step=3 K=34 true=4.85109e-09
+OUTER metal mg3 offset=0 step=4 K=34 true=8.43915e-12
+CHROMA RHS metal offset=0 prepare_ms=3.44454
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=0 seconds=4.38745 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.43915e-12 PASS
+OUTER metal mg3 offset=4 step=1 K=14 true=0.00156467
+OUTER metal mg3 offset=4 step=2 K=33 true=2.89779e-06
+OUTER metal mg3 offset=4 step=3 K=34 true=5.12459e-09
+OUTER metal mg3 offset=4 step=4 K=34 true=9.7644e-12
+CHROMA RHS metal offset=4 prepare_ms=3.31254
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=4 seconds=4.19843 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.7644e-12 PASS
+OUTER metal mg3 offset=8 step=1 K=14 true=0.0016097
+OUTER metal mg3 offset=8 step=2 K=33 true=2.8564e-06
+OUTER metal mg3 offset=8 step=3 K=34 true=5.30613e-09
+OUTER metal mg3 offset=8 step=4 K=34 true=9.96566e-12
+CHROMA RHS metal offset=8 prepare_ms=3.87679
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=8 seconds=4.15766 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.96566e-12 PASS
+OUTER metal mg3 offset=12 step=1 K=14 true=0.00144555
+OUTER metal mg3 offset=12 step=2 K=33 true=2.81165e-06
+OUTER metal mg3 offset=12 step=3 K=34 true=4.8838e-09
+OUTER metal mg3 offset=12 step=4 K=34 true=8.8157e-12
+CHROMA RHS metal offset=12 prepare_ms=3.82583
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=12 seconds=4.13568 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.8157e-12 PASS
+OUTER metal mg3 offset=16 step=1 K=14 true=0.00152228
+OUTER metal mg3 offset=16 step=2 K=33 true=2.62059e-06
+OUTER metal mg3 offset=16 step=3 K=34 true=5.00556e-09
+OUTER metal mg3 offset=16 step=4 K=34 true=9.26806e-12
+CHROMA RHS metal offset=16 prepare_ms=2.72908
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=16 seconds=4.6406 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.26806e-12 PASS
+OUTER metal mg3 offset=20 step=1 K=14 true=0.00141031
+OUTER metal mg3 offset=20 step=2 K=33 true=2.62778e-06
+OUTER metal mg3 offset=20 step=3 K=34 true=4.61332e-09
+OUTER metal mg3 offset=20 step=4 K=34 true=8.56509e-12
+CHROMA RHS metal offset=20 prepare_ms=4.02204
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=20 seconds=4.19883 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.56509e-12 PASS
+OUTER metal mg3 offset=24 step=1 K=14 true=0.00161988
+OUTER metal mg3 offset=24 step=2 K=33 true=3.02293e-06
+OUTER metal mg3 offset=24 step=3 K=34 true=5.44179e-09
+OUTER metal mg3 offset=24 step=4 K=34 true=1.03074e-11
+CHROMA RHS metal offset=24 prepare_ms=3.34425
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=24 seconds=4.30445 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.03074e-11 PASS
+OUTER metal mg3 offset=28 step=1 K=14 true=0.00137484
+OUTER metal mg3 offset=28 step=2 K=33 true=2.62263e-06
+OUTER metal mg3 offset=28 step=3 K=34 true=4.65816e-09
+OUTER metal mg3 offset=28 step=4 K=34 true=8.87219e-12
+CHROMA RHS metal offset=28 prepare_ms=3.47529
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=28 seconds=4.58526 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.87219e-12 PASS
+OUTER metal mg3 offset=32 step=1 K=14 true=0.00161263
+OUTER metal mg3 offset=32 step=2 K=33 true=2.82224e-06
+OUTER metal mg3 offset=32 step=3 K=34 true=5.37978e-09
+OUTER metal mg3 offset=32 step=4 K=34 true=1.05731e-11
+CHROMA RHS metal offset=32 prepare_ms=2.21675
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=32 seconds=4.57729 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.05731e-11 PASS
+OUTER metal mg3 offset=36 step=1 K=14 true=0.00134974
+OUTER metal mg3 offset=36 step=2 K=33 true=2.48849e-06
+OUTER metal mg3 offset=36 step=3 K=34 true=4.62472e-09
+OUTER metal mg3 offset=36 step=4 K=34 true=8.68647e-12
+CHROMA RHS metal offset=36 prepare_ms=2.97675
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=36 seconds=4.27393 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.68647e-12 PASS
+OUTER metal mg3 offset=40 step=1 K=14 true=0.00162013
+OUTER metal mg3 offset=40 step=2 K=33 true=2.99866e-06
+OUTER metal mg3 offset=40 step=3 K=34 true=5.44205e-09
+OUTER metal mg3 offset=40 step=4 K=35 true=1.03682e-11
+CHROMA RHS metal offset=40 prepare_ms=3.17383
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=40 seconds=4.99779 outer=4 K=116 fineS=365 c1=464 c2=1972 true=1.03682e-11 PASS
+OUTER metal mg3 offset=44 step=1 K=14 true=0.00130322
+OUTER metal mg3 offset=44 step=2 K=33 true=2.31735e-06
+OUTER metal mg3 offset=44 step=3 K=34 true=4.16252e-09
+OUTER metal mg3 offset=44 step=4 K=34 true=8.28653e-12
+CHROMA RHS metal offset=44 prepare_ms=3.67904
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=44 seconds=4.26825 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.28653e-12 PASS
+OUTER metal mg3 offset=48 step=1 K=14 true=0.00157741
+OUTER metal mg3 offset=48 step=2 K=33 true=2.95851e-06
+OUTER metal mg3 offset=48 step=3 K=34 true=5.28666e-09
+OUTER metal mg3 offset=48 step=4 K=34 true=9.42953e-12
+CHROMA RHS metal offset=48 prepare_ms=4.07296
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=48 seconds=4.36428 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.42953e-12 PASS
+OUTER metal mg3 offset=52 step=1 K=14 true=0.00134565
+OUTER metal mg3 offset=52 step=2 K=33 true=2.61551e-06
+OUTER metal mg3 offset=52 step=3 K=34 true=4.75877e-09
+OUTER metal mg3 offset=52 step=4 K=34 true=8.9682e-12
+CHROMA RHS metal offset=52 prepare_ms=4.2205
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=52 seconds=4.27814 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.9682e-12 PASS
+OUTER metal mg3 offset=56 step=1 K=14 true=0.00131032
+OUTER metal mg3 offset=56 step=2 K=33 true=2.47827e-06
+OUTER metal mg3 offset=56 step=3 K=34 true=4.33647e-09
+OUTER metal mg3 offset=56 step=4 K=34 true=8.34159e-12
+CHROMA RHS metal offset=56 prepare_ms=2.54163
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=56 seconds=4.41543 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.34159e-12 PASS
+OUTER metal mg3 offset=60 step=1 K=14 true=0.00157963
+OUTER metal mg3 offset=60 step=2 K=33 true=3.14209e-06
+OUTER metal mg3 offset=60 step=3 K=34 true=6.06799e-09
+OUTER metal mg3 offset=60 step=4 K=34 true=1.11668e-11
+CHROMA RHS metal offset=60 prepare_ms=3.23167
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=60 seconds=4.3224 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.11668e-11 PASS
+OUTER metal mg3 offset=64 step=1 K=14 true=0.00135186
+OUTER metal mg3 offset=64 step=2 K=33 true=2.58626e-06
+OUTER metal mg3 offset=64 step=3 K=34 true=4.97375e-09
+OUTER metal mg3 offset=64 step=4 K=34 true=9.23242e-12
+CHROMA RHS metal offset=64 prepare_ms=3.48475
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=64 seconds=4.74313 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.23242e-12 PASS
+OUTER metal mg3 offset=68 step=1 K=14 true=0.00138721
+OUTER metal mg3 offset=68 step=2 K=33 true=2.36343e-06
+OUTER metal mg3 offset=68 step=3 K=34 true=4.4983e-09
+OUTER metal mg3 offset=68 step=4 K=34 true=8.5107e-12
+CHROMA RHS metal offset=68 prepare_ms=3.26358
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=68 seconds=4.08281 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.5107e-12 PASS
+OUTER metal mg3 offset=72 step=1 K=14 true=0.0015985
+OUTER metal mg3 offset=72 step=2 K=33 true=2.99843e-06
+OUTER metal mg3 offset=72 step=3 K=34 true=5.35998e-09
+OUTER metal mg3 offset=72 step=4 K=34 true=9.67003e-12
+CHROMA RHS metal offset=72 prepare_ms=2.36804
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=72 seconds=4.21337 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.67003e-12 PASS
+OUTER metal mg3 offset=76 step=1 K=14 true=0.00156812
+OUTER metal mg3 offset=76 step=2 K=33 true=2.74964e-06
+OUTER metal mg3 offset=76 step=3 K=34 true=5.04828e-09
+OUTER metal mg3 offset=76 step=4 K=34 true=9.35954e-12
+CHROMA RHS metal offset=76 prepare_ms=2.27325
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=76 seconds=4.03062 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.35954e-12 PASS
+OUTER metal mg3 offset=80 step=1 K=14 true=0.00160146
+OUTER metal mg3 offset=80 step=2 K=32 true=2.93752e-06
+OUTER metal mg3 offset=80 step=3 K=34 true=5.30293e-09
+OUTER metal mg3 offset=80 step=4 K=34 true=9.85774e-12
+CHROMA RHS metal offset=80 prepare_ms=2.60471
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=80 seconds=4.83832 outer=4 K=114 fineS=358 c1=456 c2=1938 true=9.85774e-12 PASS
+OUTER metal mg3 offset=84 step=1 K=14 true=0.00161806
+OUTER metal mg3 offset=84 step=2 K=33 true=3.1136e-06
+OUTER metal mg3 offset=84 step=3 K=34 true=5.40074e-09
+OUTER metal mg3 offset=84 step=4 K=34 true=9.44094e-12
+CHROMA RHS metal offset=84 prepare_ms=2.37213
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=84 seconds=4.58322 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.44094e-12 PASS
+OUTER metal mg3 offset=88 step=1 K=14 true=0.00138621
+OUTER metal mg3 offset=88 step=2 K=33 true=2.70462e-06
+OUTER metal mg3 offset=88 step=3 K=34 true=4.60736e-09
+OUTER metal mg3 offset=88 step=4 K=34 true=8.65736e-12
+CHROMA RHS metal offset=88 prepare_ms=2.25779
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=88 seconds=4.29825 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.65736e-12 PASS
+OUTER metal mg3 offset=92 step=1 K=14 true=0.00152291
+OUTER metal mg3 offset=92 step=2 K=33 true=2.89896e-06
+OUTER metal mg3 offset=92 step=3 K=34 true=5.23299e-09
+OUTER metal mg3 offset=92 step=4 K=34 true=9.64899e-12
+CHROMA RHS metal offset=92 prepare_ms=2.48971
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=92 seconds=4.0231 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.64899e-12 PASS
+OUTER metal mg3 offset=96 step=1 K=14 true=0.00142322
+OUTER metal mg3 offset=96 step=2 K=33 true=2.60501e-06
+OUTER metal mg3 offset=96 step=3 K=34 true=4.64336e-09
+OUTER metal mg3 offset=96 step=4 K=34 true=8.9369e-12
+CHROMA RHS metal offset=96 prepare_ms=2.728
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=96 seconds=4.02868 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.9369e-12 PASS
+OUTER metal mg3 offset=100 step=1 K=14 true=0.00135529
+OUTER metal mg3 offset=100 step=2 K=34 true=2.33014e-06
+OUTER metal mg3 offset=100 step=3 K=34 true=4.17105e-09
+OUTER metal mg3 offset=100 step=4 K=34 true=8.0314e-12
+CHROMA RHS metal offset=100 prepare_ms=2.634
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=100 seconds=4.02577 outer=4 K=116 fineS=365 c1=464 c2=1972 true=8.0314e-12 PASS
+OUTER metal mg3 offset=104 step=1 K=14 true=0.0013349
+OUTER metal mg3 offset=104 step=2 K=33 true=2.62199e-06
+OUTER metal mg3 offset=104 step=3 K=34 true=4.8197e-09
+OUTER metal mg3 offset=104 step=4 K=34 true=8.70896e-12
+CHROMA RHS metal offset=104 prepare_ms=2.34904
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=104 seconds=4.09508 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.70896e-12 PASS
+OUTER metal mg3 offset=108 step=1 K=14 true=0.00153047
+OUTER metal mg3 offset=108 step=2 K=33 true=2.97998e-06
+OUTER metal mg3 offset=108 step=3 K=34 true=5.04612e-09
+OUTER metal mg3 offset=108 step=4 K=34 true=9.08418e-12
+CHROMA RHS metal offset=108 prepare_ms=2.92083
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=108 seconds=4.18793 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.08418e-12 PASS
+OUTER metal mg3 offset=112 step=1 K=14 true=0.00159046
+OUTER metal mg3 offset=112 step=2 K=33 true=3.14661e-06
+OUTER metal mg3 offset=112 step=3 K=34 true=5.71277e-09
+OUTER metal mg3 offset=112 step=4 K=34 true=1.08803e-11
+CHROMA RHS metal offset=112 prepare_ms=2.69408
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=112 seconds=4.21947 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.08803e-11 PASS
+OUTER metal mg3 offset=116 step=1 K=14 true=0.00160925
+OUTER metal mg3 offset=116 step=2 K=33 true=2.98507e-06
+OUTER metal mg3 offset=116 step=3 K=34 true=5.34666e-09
+OUTER metal mg3 offset=116 step=4 K=34 true=1.00404e-11
+CHROMA RHS metal offset=116 prepare_ms=3.76067
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=116 seconds=4.28695 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.00404e-11 PASS
+OUTER metal mg3 offset=120 step=1 K=14 true=0.00158377
+OUTER metal mg3 offset=120 step=2 K=33 true=3.09476e-06
+OUTER metal mg3 offset=120 step=3 K=34 true=5.67431e-09
+OUTER metal mg3 offset=120 step=4 K=35 true=1.00307e-11
+CHROMA RHS metal offset=120 prepare_ms=4.15171
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=120 seconds=4.16338 outer=4 K=116 fineS=365 c1=464 c2=1972 true=1.00307e-11 PASS
+OUTER metal mg3 offset=124 step=1 K=14 true=0.00140084
+OUTER metal mg3 offset=124 step=2 K=33 true=2.60114e-06
+OUTER metal mg3 offset=124 step=3 K=34 true=4.76264e-09
+OUTER metal mg3 offset=124 step=4 K=34 true=9.13543e-12
+CHROMA RHS metal offset=124 prepare_ms=2.3635
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=124 seconds=4.14667 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.13543e-12 PASS
+OUTER metal mg3 offset=128 step=1 K=14 true=0.00155425
+OUTER metal mg3 offset=128 step=2 K=33 true=2.80032e-06
+OUTER metal mg3 offset=128 step=3 K=34 true=5.11053e-09
+OUTER metal mg3 offset=128 step=4 K=34 true=9.77688e-12
+CHROMA RHS metal offset=128 prepare_ms=2.36242
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=128 seconds=4.55895 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.77688e-12 PASS
+OUTER metal mg3 offset=132 step=1 K=14 true=0.00158082
+OUTER metal mg3 offset=132 step=2 K=33 true=3.09885e-06
+OUTER metal mg3 offset=132 step=3 K=34 true=5.3078e-09
+OUTER metal mg3 offset=132 step=4 K=34 true=9.25316e-12
+CHROMA RHS metal offset=132 prepare_ms=2.99092
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=132 seconds=4.10744 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.25316e-12 PASS
+OUTER metal mg3 offset=136 step=1 K=14 true=0.0016093
+OUTER metal mg3 offset=136 step=2 K=33 true=2.87387e-06
+OUTER metal mg3 offset=136 step=3 K=34 true=5.44474e-09
+OUTER metal mg3 offset=136 step=4 K=34 true=1.01612e-11
+CHROMA RHS metal offset=136 prepare_ms=2.95683
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=136 seconds=4.18545 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.01612e-11 PASS
+OUTER metal mg3 offset=140 step=1 K=14 true=0.00161207
+OUTER metal mg3 offset=140 step=2 K=33 true=2.76222e-06
+OUTER metal mg3 offset=140 step=3 K=34 true=4.9528e-09
+OUTER metal mg3 offset=140 step=4 K=34 true=9.16563e-12
+CHROMA RHS metal offset=140 prepare_ms=2.23621
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=140 seconds=4.34859 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.16563e-12 PASS
+OUTER metal mg3 offset=144 step=1 K=14 true=0.00154654
+OUTER metal mg3 offset=144 step=2 K=33 true=2.93877e-06
+OUTER metal mg3 offset=144 step=3 K=34 true=5.26864e-09
+OUTER metal mg3 offset=144 step=4 K=34 true=9.38374e-12
+CHROMA RHS metal offset=144 prepare_ms=2.35442
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=144 seconds=4.23997 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.38374e-12 PASS
+OUTER metal mg3 offset=148 step=1 K=14 true=0.00161923
+OUTER metal mg3 offset=148 step=2 K=33 true=2.93124e-06
+OUTER metal mg3 offset=148 step=3 K=34 true=5.42646e-09
+OUTER metal mg3 offset=148 step=4 K=34 true=1.03054e-11
+CHROMA RHS metal offset=148 prepare_ms=3.81583
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=148 seconds=4.17885 outer=4 K=115 fineS=362 c1=460 c2=1955 true=1.03054e-11 PASS
+OUTER metal mg3 offset=152 step=1 K=14 true=0.00152847
+OUTER metal mg3 offset=152 step=2 K=33 true=2.87976e-06
+OUTER metal mg3 offset=152 step=3 K=34 true=5.32067e-09
+OUTER metal mg3 offset=152 step=4 K=34 true=9.5568e-12
+CHROMA RHS metal offset=152 prepare_ms=4.24404
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=152 seconds=4.19251 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.5568e-12 PASS
+OUTER metal mg3 offset=156 step=1 K=14 true=0.00159917
+OUTER metal mg3 offset=156 step=2 K=33 true=3.09275e-06
+OUTER metal mg3 offset=156 step=3 K=34 true=5.19109e-09
+OUTER metal mg3 offset=156 step=4 K=34 true=8.78917e-12
+CHROMA RHS metal offset=156 prepare_ms=3.74638
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=156 seconds=4.27049 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.78917e-12 PASS
+OUTER metal mg3 offset=160 step=1 K=14 true=0.00139442
+OUTER metal mg3 offset=160 step=2 K=33 true=2.36785e-06
+OUTER metal mg3 offset=160 step=3 K=34 true=4.36801e-09
+OUTER metal mg3 offset=160 step=4 K=34 true=7.89345e-12
+CHROMA RHS metal offset=160 prepare_ms=2.75058
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=160 seconds=4.29083 outer=4 K=115 fineS=362 c1=460 c2=1955 true=7.89345e-12 PASS
+OUTER metal mg3 offset=164 step=1 K=14 true=0.0015975
+OUTER metal mg3 offset=164 step=2 K=33 true=2.79044e-06
+OUTER metal mg3 offset=164 step=3 K=34 true=5.06119e-09
+OUTER metal mg3 offset=164 step=4 K=34 true=9.24681e-12
+CHROMA RHS metal offset=164 prepare_ms=3.15512
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=164 seconds=4.20655 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.24681e-12 PASS
+OUTER metal mg3 offset=168 step=1 K=14 true=0.00159807
+OUTER metal mg3 offset=168 step=2 K=33 true=2.97795e-06
+OUTER metal mg3 offset=168 step=3 K=34 true=5.23291e-09
+OUTER metal mg3 offset=168 step=4 K=34 true=9.25029e-12
+CHROMA RHS metal offset=168 prepare_ms=3.30929
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=168 seconds=4.12538 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.25029e-12 PASS
+OUTER metal mg3 offset=172 step=1 K=14 true=0.0015589
+OUTER metal mg3 offset=172 step=2 K=34 true=2.72416e-06
+OUTER metal mg3 offset=172 step=3 K=34 true=4.956e-09
+OUTER metal mg3 offset=172 step=4 K=34 true=9.0244e-12
+CHROMA RHS metal offset=172 prepare_ms=2.72171
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=172 seconds=4.06576 outer=4 K=116 fineS=365 c1=464 c2=1972 true=9.0244e-12 PASS
+OUTER metal mg3 offset=176 step=1 K=14 true=0.00131393
+OUTER metal mg3 offset=176 step=2 K=33 true=2.34148e-06
+OUTER metal mg3 offset=176 step=3 K=34 true=4.14207e-09
+OUTER metal mg3 offset=176 step=4 K=34 true=8.09384e-12
+CHROMA RHS metal offset=176 prepare_ms=2.68354
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=176 seconds=4.07354 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.09384e-12 PASS
+OUTER metal mg3 offset=180 step=1 K=14 true=0.00136392
+OUTER metal mg3 offset=180 step=2 K=33 true=2.57278e-06
+OUTER metal mg3 offset=180 step=3 K=34 true=4.61488e-09
+OUTER metal mg3 offset=180 step=4 K=35 true=8.77887e-12
+CHROMA RHS metal offset=180 prepare_ms=2.39842
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=180 seconds=4.07614 outer=4 K=116 fineS=365 c1=464 c2=1972 true=8.77887e-12 PASS
+OUTER metal mg3 offset=184 step=1 K=14 true=0.00160669
+OUTER metal mg3 offset=184 step=2 K=33 true=2.72229e-06
+OUTER metal mg3 offset=184 step=3 K=34 true=4.95616e-09
+OUTER metal mg3 offset=184 step=4 K=34 true=9.28627e-12
+CHROMA RHS metal offset=184 prepare_ms=3.87454
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=184 seconds=4.64601 outer=4 K=115 fineS=362 c1=460 c2=1955 true=9.28627e-12 PASS
+OUTER metal mg3 offset=188 step=1 K=14 true=0.00139229
+OUTER metal mg3 offset=188 step=2 K=33 true=2.59062e-06
+OUTER metal mg3 offset=188 step=3 K=34 true=4.81962e-09
+OUTER metal mg3 offset=188 step=4 K=34 true=8.75124e-12
+CHROMA RHS metal offset=188 prepare_ms=4.13175
+TILE L=20 m=-0.375 metal mg3 trial=0 offset=188 seconds=4.08592 outer=4 K=115 fineS=362 c1=460 c2=1955 true=8.75124e-12 PASS
+OUTER warm cpu mg3 step=1 K=14 true=0.00151835
+OUTER warm cpu mg3 step=2 K=33 true=2.87516e-06
+OUTER warm cpu mg3 step=3 K=34 true=4.85109e-09
+OUTER warm cpu mg3 step=4 K=34 true=8.43907e-12
+WARM cpu mg3 done
+OUTER cpu mg3 offset=0 step=1 K=14 true=0.00151835
+OUTER cpu mg3 offset=0 step=2 K=33 true=2.87516e-06
+OUTER cpu mg3 offset=0 step=3 K=34 true=4.85109e-09
+OUTER cpu mg3 offset=0 step=4 K=34 true=8.43907e-12
+CHROMA RHS cpu offset=0 prepare_ms=2.48892
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=0 seconds=40.1796 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.43907e-12 PASS
+OUTER cpu mg3 offset=4 step=1 K=14 true=0.00156467
+OUTER cpu mg3 offset=4 step=2 K=33 true=2.8978e-06
+OUTER cpu mg3 offset=4 step=3 K=34 true=5.1246e-09
+OUTER cpu mg3 offset=4 step=4 K=34 true=9.76446e-12
+CHROMA RHS cpu offset=4 prepare_ms=3.03017
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=4 seconds=38.2524 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.76446e-12 PASS
+OUTER cpu mg3 offset=8 step=1 K=14 true=0.0016097
+OUTER cpu mg3 offset=8 step=2 K=33 true=2.8564e-06
+OUTER cpu mg3 offset=8 step=3 K=34 true=5.30614e-09
+OUTER cpu mg3 offset=8 step=4 K=34 true=9.96566e-12
+CHROMA RHS cpu offset=8 prepare_ms=2.44821
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=8 seconds=37.9045 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.96566e-12 PASS
+OUTER cpu mg3 offset=12 step=1 K=14 true=0.00144555
+OUTER cpu mg3 offset=12 step=2 K=33 true=2.81166e-06
+OUTER cpu mg3 offset=12 step=3 K=34 true=4.88381e-09
+OUTER cpu mg3 offset=12 step=4 K=34 true=8.81578e-12
+CHROMA RHS cpu offset=12 prepare_ms=2.56129
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=12 seconds=36.9455 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.81578e-12 PASS
+OUTER cpu mg3 offset=16 step=1 K=14 true=0.00152228
+OUTER cpu mg3 offset=16 step=2 K=33 true=2.62059e-06
+OUTER cpu mg3 offset=16 step=3 K=34 true=5.00553e-09
+OUTER cpu mg3 offset=16 step=4 K=34 true=9.26805e-12
+CHROMA RHS cpu offset=16 prepare_ms=2.34554
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=16 seconds=36.7465 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.26805e-12 PASS
+OUTER cpu mg3 offset=20 step=1 K=14 true=0.00141031
+OUTER cpu mg3 offset=20 step=2 K=33 true=2.62778e-06
+OUTER cpu mg3 offset=20 step=3 K=34 true=4.61334e-09
+OUTER cpu mg3 offset=20 step=4 K=34 true=8.56513e-12
+CHROMA RHS cpu offset=20 prepare_ms=2.34408
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=20 seconds=37.1634 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.56513e-12 PASS
+OUTER cpu mg3 offset=24 step=1 K=14 true=0.00161988
+OUTER cpu mg3 offset=24 step=2 K=33 true=3.02294e-06
+OUTER cpu mg3 offset=24 step=3 K=34 true=5.44184e-09
+OUTER cpu mg3 offset=24 step=4 K=34 true=1.03075e-11
+CHROMA RHS cpu offset=24 prepare_ms=2.35887
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=24 seconds=37.2482 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.03075e-11 PASS
+OUTER cpu mg3 offset=28 step=1 K=14 true=0.00137484
+OUTER cpu mg3 offset=28 step=2 K=33 true=2.62264e-06
+OUTER cpu mg3 offset=28 step=3 K=34 true=4.65817e-09
+OUTER cpu mg3 offset=28 step=4 K=34 true=8.87219e-12
+CHROMA RHS cpu offset=28 prepare_ms=2.701
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=28 seconds=37.0221 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.87219e-12 PASS
+OUTER cpu mg3 offset=32 step=1 K=14 true=0.00161263
+OUTER cpu mg3 offset=32 step=2 K=33 true=2.82225e-06
+OUTER cpu mg3 offset=32 step=3 K=34 true=5.37981e-09
+OUTER cpu mg3 offset=32 step=4 K=34 true=1.05731e-11
+CHROMA RHS cpu offset=32 prepare_ms=2.65379
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=32 seconds=37.6419 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.05731e-11 PASS
+OUTER cpu mg3 offset=36 step=1 K=14 true=0.00134974
+OUTER cpu mg3 offset=36 step=2 K=33 true=2.48849e-06
+OUTER cpu mg3 offset=36 step=3 K=34 true=4.62472e-09
+OUTER cpu mg3 offset=36 step=4 K=34 true=8.68651e-12
+CHROMA RHS cpu offset=36 prepare_ms=2.509
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=36 seconds=37.1776 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.68651e-12 PASS
+OUTER cpu mg3 offset=40 step=1 K=14 true=0.00162013
+OUTER cpu mg3 offset=40 step=2 K=33 true=2.99866e-06
+OUTER cpu mg3 offset=40 step=3 K=34 true=5.44203e-09
+OUTER cpu mg3 offset=40 step=4 K=35 true=1.03682e-11
+CHROMA RHS cpu offset=40 prepare_ms=2.24017
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=40 seconds=37.2454 outer=4 K=116 fineS=365 c1=464 c2=348 true=1.03682e-11 PASS
+OUTER cpu mg3 offset=44 step=1 K=14 true=0.00130322
+OUTER cpu mg3 offset=44 step=2 K=33 true=2.31736e-06
+OUTER cpu mg3 offset=44 step=3 K=34 true=4.16254e-09
+OUTER cpu mg3 offset=44 step=4 K=34 true=8.2866e-12
+CHROMA RHS cpu offset=44 prepare_ms=2.64062
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=44 seconds=36.5281 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.2866e-12 PASS
+OUTER cpu mg3 offset=48 step=1 K=14 true=0.0015774
+OUTER cpu mg3 offset=48 step=2 K=33 true=2.95852e-06
+OUTER cpu mg3 offset=48 step=3 K=34 true=5.28672e-09
+OUTER cpu mg3 offset=48 step=4 K=34 true=9.42959e-12
+CHROMA RHS cpu offset=48 prepare_ms=2.71025
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=48 seconds=36.5902 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.42959e-12 PASS
+OUTER cpu mg3 offset=52 step=1 K=14 true=0.00134565
+OUTER cpu mg3 offset=52 step=2 K=33 true=2.61551e-06
+OUTER cpu mg3 offset=52 step=3 K=34 true=4.75876e-09
+OUTER cpu mg3 offset=52 step=4 K=34 true=8.96818e-12
+CHROMA RHS cpu offset=52 prepare_ms=2.66542
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=52 seconds=37.1812 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.96818e-12 PASS
+OUTER cpu mg3 offset=56 step=1 K=14 true=0.00131032
+OUTER cpu mg3 offset=56 step=2 K=33 true=2.47827e-06
+OUTER cpu mg3 offset=56 step=3 K=34 true=4.3365e-09
+OUTER cpu mg3 offset=56 step=4 K=34 true=8.34165e-12
+CHROMA RHS cpu offset=56 prepare_ms=2.44562
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=56 seconds=39.0207 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.34165e-12 PASS
+OUTER cpu mg3 offset=60 step=1 K=14 true=0.00157963
+OUTER cpu mg3 offset=60 step=2 K=33 true=3.14209e-06
+OUTER cpu mg3 offset=60 step=3 K=34 true=6.068e-09
+OUTER cpu mg3 offset=60 step=4 K=34 true=1.11668e-11
+CHROMA RHS cpu offset=60 prepare_ms=2.44021
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=60 seconds=36.6058 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.11668e-11 PASS
+OUTER cpu mg3 offset=64 step=1 K=14 true=0.00135186
+OUTER cpu mg3 offset=64 step=2 K=33 true=2.58626e-06
+OUTER cpu mg3 offset=64 step=3 K=34 true=4.97376e-09
+OUTER cpu mg3 offset=64 step=4 K=34 true=9.23251e-12
+CHROMA RHS cpu offset=64 prepare_ms=2.67104
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=64 seconds=38.2033 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.23251e-12 PASS
+OUTER cpu mg3 offset=68 step=1 K=14 true=0.00138721
+OUTER cpu mg3 offset=68 step=2 K=33 true=2.36343e-06
+OUTER cpu mg3 offset=68 step=3 K=34 true=4.49827e-09
+OUTER cpu mg3 offset=68 step=4 K=34 true=8.51069e-12
+CHROMA RHS cpu offset=68 prepare_ms=2.44517
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=68 seconds=37.324 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.51069e-12 PASS
+OUTER cpu mg3 offset=72 step=1 K=14 true=0.0015985
+OUTER cpu mg3 offset=72 step=2 K=33 true=2.99845e-06
+OUTER cpu mg3 offset=72 step=3 K=34 true=5.36e-09
+OUTER cpu mg3 offset=72 step=4 K=34 true=9.67004e-12
+CHROMA RHS cpu offset=72 prepare_ms=2.61387
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=72 seconds=36.9116 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.67004e-12 PASS
+OUTER cpu mg3 offset=76 step=1 K=14 true=0.00156812
+OUTER cpu mg3 offset=76 step=2 K=33 true=2.74964e-06
+OUTER cpu mg3 offset=76 step=3 K=34 true=5.04827e-09
+OUTER cpu mg3 offset=76 step=4 K=34 true=9.35945e-12
+CHROMA RHS cpu offset=76 prepare_ms=2.52967
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=76 seconds=36.8277 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.35945e-12 PASS
+OUTER cpu mg3 offset=80 step=1 K=14 true=0.00160145
+OUTER cpu mg3 offset=80 step=2 K=32 true=2.93753e-06
+OUTER cpu mg3 offset=80 step=3 K=34 true=5.30295e-09
+OUTER cpu mg3 offset=80 step=4 K=34 true=9.85776e-12
+CHROMA RHS cpu offset=80 prepare_ms=2.35575
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=80 seconds=37.5398 outer=4 K=114 fineS=358 c1=456 c2=342 true=9.85776e-12 PASS
+OUTER cpu mg3 offset=84 step=1 K=14 true=0.00161806
+OUTER cpu mg3 offset=84 step=2 K=33 true=3.1136e-06
+OUTER cpu mg3 offset=84 step=3 K=34 true=5.40076e-09
+OUTER cpu mg3 offset=84 step=4 K=34 true=9.44094e-12
+CHROMA RHS cpu offset=84 prepare_ms=3.80079
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=84 seconds=39.2374 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.44094e-12 PASS
+OUTER cpu mg3 offset=88 step=1 K=14 true=0.00138621
+OUTER cpu mg3 offset=88 step=2 K=33 true=2.70462e-06
+OUTER cpu mg3 offset=88 step=3 K=34 true=4.60735e-09
+OUTER cpu mg3 offset=88 step=4 K=34 true=8.65739e-12
+CHROMA RHS cpu offset=88 prepare_ms=2.70004
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=88 seconds=38.5047 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.65739e-12 PASS
+OUTER cpu mg3 offset=92 step=1 K=14 true=0.00152291
+OUTER cpu mg3 offset=92 step=2 K=33 true=2.89897e-06
+OUTER cpu mg3 offset=92 step=3 K=34 true=5.23298e-09
+OUTER cpu mg3 offset=92 step=4 K=34 true=9.64898e-12
+CHROMA RHS cpu offset=92 prepare_ms=2.41708
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=92 seconds=38.9769 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.64898e-12 PASS
+OUTER cpu mg3 offset=96 step=1 K=14 true=0.00142322
+OUTER cpu mg3 offset=96 step=2 K=33 true=2.60501e-06
+OUTER cpu mg3 offset=96 step=3 K=34 true=4.64334e-09
+OUTER cpu mg3 offset=96 step=4 K=34 true=8.93688e-12
+CHROMA RHS cpu offset=96 prepare_ms=2.34237
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=96 seconds=38.3515 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.93688e-12 PASS
+OUTER cpu mg3 offset=100 step=1 K=14 true=0.00135529
+OUTER cpu mg3 offset=100 step=2 K=34 true=2.33015e-06
+OUTER cpu mg3 offset=100 step=3 K=34 true=4.17107e-09
+OUTER cpu mg3 offset=100 step=4 K=34 true=8.03134e-12
+CHROMA RHS cpu offset=100 prepare_ms=2.83712
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=100 seconds=37.6868 outer=4 K=116 fineS=365 c1=464 c2=348 true=8.03134e-12 PASS
+OUTER cpu mg3 offset=104 step=1 K=14 true=0.0013349
+OUTER cpu mg3 offset=104 step=2 K=33 true=2.62199e-06
+OUTER cpu mg3 offset=104 step=3 K=34 true=4.8197e-09
+OUTER cpu mg3 offset=104 step=4 K=34 true=8.70892e-12
+CHROMA RHS cpu offset=104 prepare_ms=2.35729
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=104 seconds=38.3119 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.70892e-12 PASS
+OUTER cpu mg3 offset=108 step=1 K=14 true=0.00153047
+OUTER cpu mg3 offset=108 step=2 K=33 true=2.98e-06
+OUTER cpu mg3 offset=108 step=3 K=34 true=5.04613e-09
+OUTER cpu mg3 offset=108 step=4 K=34 true=9.08423e-12
+CHROMA RHS cpu offset=108 prepare_ms=2.46421
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=108 seconds=37.2286 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.08423e-12 PASS
+OUTER cpu mg3 offset=112 step=1 K=14 true=0.00159046
+OUTER cpu mg3 offset=112 step=2 K=33 true=3.14662e-06
+OUTER cpu mg3 offset=112 step=3 K=34 true=5.71277e-09
+OUTER cpu mg3 offset=112 step=4 K=34 true=1.08803e-11
+CHROMA RHS cpu offset=112 prepare_ms=2.78875
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=112 seconds=36.8089 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.08803e-11 PASS
+OUTER cpu mg3 offset=116 step=1 K=14 true=0.00160925
+OUTER cpu mg3 offset=116 step=2 K=33 true=2.98506e-06
+OUTER cpu mg3 offset=116 step=3 K=34 true=5.34667e-09
+OUTER cpu mg3 offset=116 step=4 K=34 true=1.00404e-11
+CHROMA RHS cpu offset=116 prepare_ms=2.67475
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=116 seconds=37.9458 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.00404e-11 PASS
+OUTER cpu mg3 offset=120 step=1 K=14 true=0.00158377
+OUTER cpu mg3 offset=120 step=2 K=33 true=3.09477e-06
+OUTER cpu mg3 offset=120 step=3 K=34 true=5.67433e-09
+OUTER cpu mg3 offset=120 step=4 K=35 true=1.00306e-11
+CHROMA RHS cpu offset=120 prepare_ms=2.66008
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=120 seconds=39.0152 outer=4 K=116 fineS=365 c1=464 c2=348 true=1.00306e-11 PASS
+OUTER cpu mg3 offset=124 step=1 K=14 true=0.00140084
+OUTER cpu mg3 offset=124 step=2 K=33 true=2.60115e-06
+OUTER cpu mg3 offset=124 step=3 K=34 true=4.76265e-09
+OUTER cpu mg3 offset=124 step=4 K=34 true=9.13543e-12
+CHROMA RHS cpu offset=124 prepare_ms=2.50438
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=124 seconds=38.8727 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.13543e-12 PASS
+OUTER cpu mg3 offset=128 step=1 K=14 true=0.00155425
+OUTER cpu mg3 offset=128 step=2 K=33 true=2.80032e-06
+OUTER cpu mg3 offset=128 step=3 K=34 true=5.11051e-09
+OUTER cpu mg3 offset=128 step=4 K=34 true=9.77684e-12
+CHROMA RHS cpu offset=128 prepare_ms=2.86396
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=128 seconds=39.8717 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.77684e-12 PASS
+OUTER cpu mg3 offset=132 step=1 K=14 true=0.00158082
+OUTER cpu mg3 offset=132 step=2 K=33 true=3.09885e-06
+OUTER cpu mg3 offset=132 step=3 K=34 true=5.30781e-09
+OUTER cpu mg3 offset=132 step=4 K=34 true=9.25321e-12
+CHROMA RHS cpu offset=132 prepare_ms=2.36287
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=132 seconds=37.5086 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.25321e-12 PASS
+OUTER cpu mg3 offset=136 step=1 K=14 true=0.0016093
+OUTER cpu mg3 offset=136 step=2 K=33 true=2.87387e-06
+OUTER cpu mg3 offset=136 step=3 K=34 true=5.4447e-09
+OUTER cpu mg3 offset=136 step=4 K=34 true=1.01611e-11
+CHROMA RHS cpu offset=136 prepare_ms=2.36479
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=136 seconds=37.0159 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.01611e-11 PASS
+OUTER cpu mg3 offset=140 step=1 K=14 true=0.00161207
+OUTER cpu mg3 offset=140 step=2 K=33 true=2.76222e-06
+OUTER cpu mg3 offset=140 step=3 K=34 true=4.95275e-09
+OUTER cpu mg3 offset=140 step=4 K=34 true=9.16554e-12
+CHROMA RHS cpu offset=140 prepare_ms=2.70633
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=140 seconds=36.9574 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.16554e-12 PASS
+OUTER cpu mg3 offset=144 step=1 K=14 true=0.00154654
+OUTER cpu mg3 offset=144 step=2 K=33 true=2.93876e-06
+OUTER cpu mg3 offset=144 step=3 K=34 true=5.26864e-09
+OUTER cpu mg3 offset=144 step=4 K=34 true=9.38374e-12
+CHROMA RHS cpu offset=144 prepare_ms=2.35308
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=144 seconds=37.4492 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.38374e-12 PASS
+OUTER cpu mg3 offset=148 step=1 K=14 true=0.00161923
+OUTER cpu mg3 offset=148 step=2 K=33 true=2.93123e-06
+OUTER cpu mg3 offset=148 step=3 K=34 true=5.42645e-09
+OUTER cpu mg3 offset=148 step=4 K=34 true=1.03055e-11
+CHROMA RHS cpu offset=148 prepare_ms=2.47596
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=148 seconds=36.823 outer=4 K=115 fineS=362 c1=460 c2=345 true=1.03055e-11 PASS
+OUTER cpu mg3 offset=152 step=1 K=14 true=0.00152847
+OUTER cpu mg3 offset=152 step=2 K=33 true=2.87976e-06
+OUTER cpu mg3 offset=152 step=3 K=34 true=5.32067e-09
+OUTER cpu mg3 offset=152 step=4 K=34 true=9.55685e-12
+CHROMA RHS cpu offset=152 prepare_ms=2.46988
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=152 seconds=37.2809 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.55685e-12 PASS
+OUTER cpu mg3 offset=156 step=1 K=14 true=0.00159917
+OUTER cpu mg3 offset=156 step=2 K=33 true=3.09274e-06
+OUTER cpu mg3 offset=156 step=3 K=34 true=5.19112e-09
+OUTER cpu mg3 offset=156 step=4 K=34 true=8.7892e-12
+CHROMA RHS cpu offset=156 prepare_ms=2.53433
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=156 seconds=39.2112 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.7892e-12 PASS
+OUTER cpu mg3 offset=160 step=1 K=14 true=0.00139442
+OUTER cpu mg3 offset=160 step=2 K=33 true=2.36785e-06
+OUTER cpu mg3 offset=160 step=3 K=34 true=4.368e-09
+OUTER cpu mg3 offset=160 step=4 K=34 true=7.89339e-12
+CHROMA RHS cpu offset=160 prepare_ms=3.13837
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=160 seconds=37.3856 outer=4 K=115 fineS=362 c1=460 c2=345 true=7.89339e-12 PASS
+OUTER cpu mg3 offset=164 step=1 K=14 true=0.0015975
+OUTER cpu mg3 offset=164 step=2 K=33 true=2.79044e-06
+OUTER cpu mg3 offset=164 step=3 K=34 true=5.06119e-09
+OUTER cpu mg3 offset=164 step=4 K=34 true=9.24681e-12
+CHROMA RHS cpu offset=164 prepare_ms=3.13746
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=164 seconds=37.4546 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.24681e-12 PASS
+OUTER cpu mg3 offset=168 step=1 K=14 true=0.00159807
+OUTER cpu mg3 offset=168 step=2 K=33 true=2.97795e-06
+OUTER cpu mg3 offset=168 step=3 K=34 true=5.23291e-09
+OUTER cpu mg3 offset=168 step=4 K=34 true=9.25033e-12
+CHROMA RHS cpu offset=168 prepare_ms=2.69246
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=168 seconds=37.776 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.25033e-12 PASS
+OUTER cpu mg3 offset=172 step=1 K=14 true=0.0015589
+OUTER cpu mg3 offset=172 step=2 K=34 true=2.72416e-06
+OUTER cpu mg3 offset=172 step=3 K=34 true=4.95598e-09
+OUTER cpu mg3 offset=172 step=4 K=34 true=9.02436e-12
+CHROMA RHS cpu offset=172 prepare_ms=2.49008
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=172 seconds=39.6675 outer=4 K=116 fineS=365 c1=464 c2=348 true=9.02436e-12 PASS
+OUTER cpu mg3 offset=176 step=1 K=14 true=0.00131393
+OUTER cpu mg3 offset=176 step=2 K=33 true=2.34148e-06
+OUTER cpu mg3 offset=176 step=3 K=34 true=4.14208e-09
+OUTER cpu mg3 offset=176 step=4 K=34 true=8.09382e-12
+CHROMA RHS cpu offset=176 prepare_ms=2.62175
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=176 seconds=46.7383 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.09382e-12 PASS
+OUTER cpu mg3 offset=180 step=1 K=14 true=0.00136392
+OUTER cpu mg3 offset=180 step=2 K=33 true=2.57278e-06
+OUTER cpu mg3 offset=180 step=3 K=34 true=4.6149e-09
+OUTER cpu mg3 offset=180 step=4 K=35 true=8.77891e-12
+CHROMA RHS cpu offset=180 prepare_ms=15.6715
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=180 seconds=46.8117 outer=4 K=116 fineS=365 c1=464 c2=348 true=8.77891e-12 PASS
+OUTER cpu mg3 offset=184 step=1 K=14 true=0.00160669
+OUTER cpu mg3 offset=184 step=2 K=33 true=2.7223e-06
+OUTER cpu mg3 offset=184 step=3 K=34 true=4.95613e-09
+OUTER cpu mg3 offset=184 step=4 K=34 true=9.28634e-12
+CHROMA RHS cpu offset=184 prepare_ms=3.66933
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=184 seconds=51.6837 outer=4 K=115 fineS=362 c1=460 c2=345 true=9.28634e-12 PASS
+OUTER cpu mg3 offset=188 step=1 K=14 true=0.00139229
+OUTER cpu mg3 offset=188 step=2 K=33 true=2.59062e-06
+OUTER cpu mg3 offset=188 step=3 K=34 true=4.81964e-09
+OUTER cpu mg3 offset=188 step=4 K=34 true=8.75129e-12
+CHROMA RHS cpu offset=188 prepare_ms=3.64867
+TILE L=20 m=-0.375 cpu mg3 trial=0 offset=188 seconds=43.9136 outer=4 K=115 fineS=362 c1=460 c2=345 true=8.75129e-12 PASS
+PASS all full FP64 original-equation residual checks

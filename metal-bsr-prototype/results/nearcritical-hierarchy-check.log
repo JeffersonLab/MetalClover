@@ -1,0 +1,5 @@
+GPU=Apple M1 Max CPU workers=8 c_sw=1 resident_RHS=3 BiCG_chunk=1 paired prefix batch timings
+Sparse Galerkin: rows=256 block=24 nnz_blocks=8448 FP32_MiB=37.125 assembly_ms=818.67
+CASE L=16 bare_mass=-0.12 clover_min_pivot=3.4854
+Sparse Galerkin/gamma5/CPU-Metal SpMV/coarse solve PASS; dense_oracle=skipped relative_Galerkin=1.84115e-15 coarse_solution_CPU_Metal=3.15284e-05 coarse_true_cpu=6.9344e-06 metal=8.25426e-06
+PASS: hierarchy and coarse-solver validation; no full solves requested.

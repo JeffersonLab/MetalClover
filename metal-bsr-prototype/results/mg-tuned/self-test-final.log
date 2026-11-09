@@ -1,0 +1,33 @@
+GPU: Apple M1 Max OS: Version 26.7.1 (Build 25G241)
+Two-level odd clover Schur; csw=1 aggregate=2x2x2x2 restart=6 vectors/chirality=12 pre/post=1/1 setup_omega=0.65 sweeps=8 omega=1 workers=8 library_ms=101.327
+Hierarchy setup L=2 mass=0.25 coarse=24 ms=2.40867
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=24
+mass=0.25 L=2 RHS=1 cpu_bicgstab trial=0 ms=0.591375 outer=4 inner=15 fineS=27 Vcycles=0 true_r=5.88733e-13 x_error=1.15582e-12 PASS
+mass=0.25 L=2 RHS=1 metal_bicgstab trial=0 ms=11.3313 outer=4 inner=15 fineS=32 Vcycles=0 true_r=5.88639e-13 x_error=1.15566e-12 PASS
+mass=0.25 L=2 RHS=1 cpu_fgmres_smooth trial=0 ms=0.752084 outer=4 inner=15 fineS=34 Vcycles=0 true_r=2.01573e-12 x_error=3.22949e-12 PASS
+mass=0.25 L=2 RHS=1 metal_fgmres_smooth trial=0 ms=15.834 outer=4 inner=15 fineS=34 Vcycles=0 true_r=2.01542e-12 x_error=3.22874e-12 PASS
+mass=0.25 L=2 RHS=1 cpu_fgmres_mg trial=0 ms=0.660209 outer=3 inner=7 fineS=24 Vcycles=7 true_r=2.98566e-11 x_error=4.4651e-11 PASS
+mass=0.25 L=2 RHS=1 metal_fgmres_mg trial=0 ms=11.5799 outer=3 inner=7 fineS=24 Vcycles=7 true_r=2.98657e-11 x_error=4.46863e-11 PASS
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=24
+mass=0.25 L=2 RHS=3 metal_bicgstab trial=0 ms=10.9653 outer=4 inner=16 fineS=32 Vcycles=0 true_r=1.5242e-12 x_error=2.24638e-12 PASS
+mass=0.25 L=2 RHS=3 cpu_fgmres_smooth trial=0 ms=1.83275 outer=4 inner=16 fineS=36 Vcycles=0 true_r=3.24854e-13 x_error=4.96109e-13 PASS
+mass=0.25 L=2 RHS=3 metal_fgmres_smooth trial=0 ms=19.2393 outer=4 inner=16 fineS=36 Vcycles=0 true_r=3.24927e-13 x_error=4.96195e-13 PASS
+mass=0.25 L=2 RHS=3 cpu_fgmres_mg trial=0 ms=1.45525 outer=3 inner=8 fineS=27 Vcycles=8 true_r=5.83894e-11 x_error=6.22187e-11 PASS
+mass=0.25 L=2 RHS=3 metal_fgmres_mg trial=0 ms=11.3297 outer=3 inner=8 fineS=27 Vcycles=8 true_r=5.84899e-11 x_error=6.23989e-11 PASS
+mass=0.25 L=2 RHS=3 cpu_bicgstab trial=0 ms=1.53592 outer=4 inner=16 fineS=28 Vcycles=0 true_r=1.51732e-12 x_error=2.24239e-12 PASS
+Hierarchy setup L=4 mass=0.25 coarse=384 ms=239.922
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=384
+mass=0.25 L=4 RHS=1 cpu_fgmres_smooth trial=0 ms=11.3591 outer=4 inner=25 fineS=56 Vcycles=0 true_r=6.37235e-13 x_error=2.206e-12 PASS
+mass=0.25 L=4 RHS=1 metal_fgmres_smooth trial=0 ms=30.1613 outer=4 inner=25 fineS=56 Vcycles=0 true_r=6.37224e-13 x_error=2.20597e-12 PASS
+mass=0.25 L=4 RHS=1 cpu_fgmres_mg trial=0 ms=9.36904 outer=4 inner=12 fineS=40 Vcycles=12 true_r=1.15456e-12 x_error=2.58147e-12 PASS
+mass=0.25 L=4 RHS=1 metal_fgmres_mg trial=0 ms=14.947 outer=4 inner=12 fineS=40 Vcycles=12 true_r=1.15452e-12 x_error=2.58142e-12 PASS
+mass=0.25 L=4 RHS=1 cpu_bicgstab trial=0 ms=11.2909 outer=4 inner=25 fineS=48 Vcycles=0 true_r=3.32944e-12 x_error=1.15669e-11 PASS
+mass=0.25 L=4 RHS=1 metal_bicgstab trial=0 ms=13.1922 outer=4 inner=25 fineS=64 Vcycles=0 true_r=3.33132e-12 x_error=1.15735e-11 PASS
+MG orthogonality/gamma5/Galerkin/coarse correction/CPU-Metal transfers/V-cycle checks PASS; coarse=384
+mass=0.25 L=4 RHS=3 metal_fgmres_smooth trial=0 ms=26.3794 outer=4 inner=25 fineS=56 Vcycles=0 true_r=5.46788e-13 x_error=1.85202e-12 PASS
+mass=0.25 L=4 RHS=3 cpu_fgmres_mg trial=0 ms=24.1838 outer=4 inner=12 fineS=40 Vcycles=12 true_r=1.21517e-12 x_error=2.42626e-12 PASS
+mass=0.25 L=4 RHS=3 metal_fgmres_mg trial=0 ms=27.2398 outer=4 inner=12 fineS=40 Vcycles=12 true_r=1.21518e-12 x_error=2.42644e-12 PASS
+mass=0.25 L=4 RHS=3 cpu_bicgstab trial=0 ms=23.479 outer=4 inner=26 fineS=50 Vcycles=0 true_r=1.23413e-12 x_error=3.56546e-12 PASS
+mass=0.25 L=4 RHS=3 metal_bicgstab trial=0 ms=22.191 outer=4 inner=26 fineS=64 Vcycles=0 true_r=1.23341e-12 x_error=3.5643e-12 PASS
+mass=0.25 L=4 RHS=3 cpu_fgmres_smooth trial=0 ms=36.7071 outer=4 inner=25 fineS=56 Vcycles=0 true_r=5.46857e-13 x_error=1.85209e-12 PASS
+PASS: 4 systems; all methods met full CPU FP64 clover-Wilson residual checks.

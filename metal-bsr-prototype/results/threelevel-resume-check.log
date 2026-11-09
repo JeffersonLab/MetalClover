@@ -1,0 +1,10 @@
+GPU=Apple M1 Max recommended_working_set_GiB=24.96 max_buffer_GiB=18.72
+COMPACT setup_s=0.0020945 min_clover_pivot=3.58372
+COMPACT PASS full=4.88793e-16 Schur=1.14465e-16 CPU_Metal=1.00232e-07
+P1 basis ready n=64
+A1 sparse ready blocks=176 seconds=0.00139817
+A2 sparse ready n=4 blocks=1 hierarchy_s=0.0292634
+LEVEL1 PASS R_P=3.76455e-16 Galerkin=4.50723e-16 gamma5=3.95191e-16 n=64 blocks=176
+LEVEL2 PASS R_P=1.09733e-16 Galerkin=4.95439e-16 gamma5=2.22072e-16 n=4 blocks=1
+RESUME accepted 12 completed tiles
+PASS all full FP64 original-equation residual checks
