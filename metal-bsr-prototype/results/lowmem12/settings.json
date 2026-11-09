@@ -1,0 +1,7 @@
+{
+  "final_solver_sha256": "1b446134b45f075be0b1521a3caa53e1beea168272b3776001fef64520fcc776",
+  "final_native_sha256": "2ff4412b3acec6d0866c9053e19db1a547e739cf4fc551784cbee340aeda49c4",
+  "final_v2": "No persistent FP64 clover or residual; two RHS each solver; all four original-native FP64 checks <=1e-12.",
+  "v1": "Initial packed FP64 clover and disk residual prototype; superseded by v2; one RHS each solver.",
+  "first_launch": "Nonexecutable copied file was fixed before any solver execution; initial empty launch logs are not numerical evidence."
+}

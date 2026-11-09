@@ -19,7 +19,8 @@ struct WilsonSystem{
     LatticeShape dimensions{};
     uint32_t length(uint32_t mu)const{return dimensions[mu]?dimensions[mu]:extent;}
     uint32_t stride(uint32_t mu)const{uint32_t s=1;for(uint32_t j=0;j<mu;++j)s*=length(j);return s;}
-    std::vector<M3> links;std::array<M4,4> gamma=gamma_matrices();
+    std::vector<M3> links;const M3* mapped_links=nullptr;const M3& link_at(size_t i)const{return mapped_links?mapped_links[i]:links[i];}
+    std::array<M4,4> gamma=gamma_matrices();
     uint32_t neighbor(uint32_t i,uint32_t mu,bool forward)const{
         uint32_t step=stride(mu),n=length(mu),c=(i/step)%n;
         int delta=forward?(c+1==n?-int(n-1):1):(c==0?int(n-1):-1);
@@ -30,7 +31,7 @@ struct WilsonSystem{
         return ((forward&&c==length(3)-1)||(!forward&&c==0))?-1:1;
     }
     CD link(uint32_t i,uint32_t mu,bool forward,uint32_t c,uint32_t k)const{
-        return forward?links[i*4+mu][c*3+k]:std::conj(links[neighbor(i,mu,false)*4+mu][k*3+c]);
+        return forward?link_at(i*4+mu)[c*3+k]:std::conj(link_at(neighbor(i,mu,false)*4+mu)[k*3+c]);
     }
 };
 

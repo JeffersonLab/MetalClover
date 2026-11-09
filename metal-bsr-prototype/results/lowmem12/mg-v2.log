@@ -1,0 +1,26 @@
+LDL_CLOVER seconds=0.200894 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.40464
+FP64 original_Chroma_operator_match=1.3442431902383949e-16
+BASIS filtered 1/8
+BASIS filtered 2/8
+BASIS filtered 3/8
+BASIS filtered 4/8
+BASIS filtered 5/8
+BASIS filtered 6/8
+BASIS filtered 7/8
+BASIS filtered 8/8
+BASIS seconds=2.3075345829999998 fine_S=1024
+COARSE1 seconds=3.291409083 dofs=12288
+MG_READY hierarchy_seconds=3.5550534580000002 hierarchy_fine_S=1024 GPU_GiB=0.4567413330078125 recommended_GiB=24.960006713867188
+OUTER method=metal-mg rhs=0 step=1 K=14 fine_S=44 seconds=0.62646812500000004 full_FP64_relative=0.0015673028320016596
+OUTER method=metal-mg rhs=0 step=2 K=23 fine_S=72 seconds=0.74199466599999997 full_FP64_relative=2.9415602829936891e-06
+OUTER method=metal-mg rhs=0 step=3 K=23 fine_S=72 seconds=0.74779829099999995 full_FP64_relative=5.2213011067209534e-09
+OUTER method=metal-mg rhs=0 step=4 K=23 fine_S=72 seconds=0.74877770899999996 full_FP64_relative=9.3033255750613172e-12
+OUTER method=metal-mg rhs=0 step=5 K=24 fine_S=75 seconds=0.80060925000000005 full_FP64_relative=1.4555444960088087e-14
+SOLVED method=metal-mg rhs=0 seconds=3.6657470000000001 K=107 fine_S=335 full_FP64_relative=1.4555444960088087e-14
+OUTER method=metal-mg rhs=1 step=1 K=14 fine_S=44 seconds=0.62107875000000001 full_FP64_relative=0.0014325089652472696
+OUTER method=metal-mg rhs=1 step=2 K=23 fine_S=72 seconds=0.90077841700000005 full_FP64_relative=2.4998924911100054e-06
+OUTER method=metal-mg rhs=1 step=3 K=23 fine_S=72 seconds=0.76785475000000003 full_FP64_relative=4.841972401915488e-09
+OUTER method=metal-mg rhs=1 step=4 K=24 fine_S=75 seconds=0.78029533399999995 full_FP64_relative=7.713639352095561e-12
+OUTER method=metal-mg rhs=1 step=5 K=24 fine_S=75 seconds=0.93278075000000005 full_FP64_relative=1.4178230627213719e-14
+SOLVED method=metal-mg rhs=1 seconds=4.0028912080000003 K=108 fine_S=338 full_FP64_relative=1.4178230627213719e-14
+PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB=0.8814239501953125

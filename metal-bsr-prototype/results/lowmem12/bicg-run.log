@@ -1,0 +1,10 @@
+PACKED_CLOVER reuse=0 seconds=0.37564 mapped_FP64_GiB=0.0889893
+FP64 original_Chroma_operator_match=1.3442431902383949e-16
+BICG_READY GPU_GiB=0.183990478515625
+OUTER method=metal-bicgstab rhs=0 step=1 K=41 fine_S=82 seconds=0.41276037500000001 full_FP64_relative=0.0015012833036412482
+OUTER method=metal-bicgstab rhs=0 step=2 K=76 fine_S=152 seconds=0.63146370799999996 full_FP64_relative=2.4783842826565571e-06
+OUTER method=metal-bicgstab rhs=0 step=3 K=76 fine_S=152 seconds=0.60515624999999995 full_FP64_relative=4.7900899951080397e-09
+OUTER method=metal-bicgstab rhs=0 step=4 K=76 fine_S=152 seconds=0.60802958299999998 full_FP64_relative=9.3972365050281503e-12
+OUTER method=metal-bicgstab rhs=0 step=5 K=78 fine_S=156 seconds=0.61532579200000004 full_FP64_relative=1.8357075227581341e-14
+SOLVED method=metal-bicgstab rhs=0 seconds=2.8727993340000002 K=347 fine_S=694 full_FP64_relative=1.8357075227581341e-14
+PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB=0.4881439208984375

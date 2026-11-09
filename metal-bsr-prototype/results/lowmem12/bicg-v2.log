@@ -1,0 +1,16 @@
+LDL_CLOVER seconds=0.255399 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.40464
+FP64 original_Chroma_operator_match=1.3442431902383949e-16
+BICG_READY GPU_GiB=0.183990478515625
+OUTER method=metal-bicgstab rhs=0 step=1 K=41 fine_S=82 seconds=0.549241584 full_FP64_relative=0.0015012833036412482
+OUTER method=metal-bicgstab rhs=0 step=2 K=76 fine_S=152 seconds=0.78143295800000001 full_FP64_relative=2.4783842826565571e-06
+OUTER method=metal-bicgstab rhs=0 step=3 K=76 fine_S=152 seconds=0.78707550000000004 full_FP64_relative=4.7900899951080397e-09
+OUTER method=metal-bicgstab rhs=0 step=4 K=76 fine_S=152 seconds=0.76369462499999996 full_FP64_relative=9.3972365050281503e-12
+OUTER method=metal-bicgstab rhs=0 step=5 K=78 fine_S=156 seconds=0.77385858299999999 full_FP64_relative=1.8357075227581341e-14
+SOLVED method=metal-bicgstab rhs=0 seconds=3.6554045409999998 K=347 fine_S=694 full_FP64_relative=1.8357075227581341e-14
+OUTER method=metal-bicgstab rhs=1 step=1 K=35 fine_S=70 seconds=0.48777933299999998 full_FP64_relative=0.0016286857197773913
+OUTER method=metal-bicgstab rhs=1 step=2 K=82 fine_S=164 seconds=0.82455699999999998 full_FP64_relative=2.8527630884958276e-06
+OUTER method=metal-bicgstab rhs=1 step=3 K=83 fine_S=166 seconds=0.82092804200000002 full_FP64_relative=4.843126266910603e-09
+OUTER method=metal-bicgstab rhs=1 step=4 K=87 fine_S=174 seconds=0.859693084 full_FP64_relative=9.186255058096435e-12
+OUTER method=metal-bicgstab rhs=1 step=5 K=71 fine_S=142 seconds=0.71182620799999996 full_FP64_relative=1.7821755929779726e-14
+SOLVED method=metal-bicgstab rhs=1 seconds=3.7048377920000002 K=358 fine_S=716 full_FP64_relative=1.7821755929779726e-14
+PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB=0.3988189697265625

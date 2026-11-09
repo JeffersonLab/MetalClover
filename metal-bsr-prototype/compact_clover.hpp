@@ -5,6 +5,22 @@
 // Only forward links, neighbor indices, and local 6x6 blocks are retained.
 struct CompactClover {
     WilsonSystem w;
+    // Optional canonical-site Hermitian FP64 blocks, 36 real numbers/chirality.
+    double* packed64=nullptr;bool packed=false,factorized=false;
+    std::function<void(uint32_t,D*)> generated_clover;uint64_t generation=0;
+    CompactClover()=default;
+    D onsite_value(bool odd,uint32_t ix,uint32_t ch,uint32_t i,uint32_t j)const{
+        if(!packed)return (odd?oddA:evenA)[(size_t(ix)*2+ch)*36+i*6+j];
+        uint32_t site=(odd?parity.odd:parity.even)[ix];
+        if(generated_clover){struct Cache{const CompactClover* owner=nullptr;uint64_t generation=0;uint32_t site=UINT32_MAX;std::array<D,72> values;};thread_local Cache cache;
+            if(cache.owner!=this||cache.generation!=generation||cache.site!=site){generated_clover(site,cache.values.data());cache.owner=this;cache.generation=generation;cache.site=site;}return cache.values[ch*36+i*6+j];}
+        const double* a=packed64+(size_t(site)*2+ch)*36;
+        if(i==j)return {a[i],0};bool lower=i>j;uint32_t r=lower?i:j,k=lower?j:i,pos=6+r*(r-1)+2*k;return {a[pos],lower?a[pos+1]:-a[pos+1]};
+    }
+    void even_inverse_blocks(uint32_t ix,D* out)const{
+        if(!packed){std::copy_n(inverseEven.data()+size_t(ix)*72,72,out);return;}
+        double pivot=1e100;for(uint32_t ch=0;ch<2;++ch){M6 a;for(int i=0;i<6;++i)for(int j=0;j<6;++j){auto z=onsite_value(false,ix,ch,i,j);a[i*6+j]={z.re,z.im};}auto inv=invert_cholesky(a,pivot);for(int k=0;k<36;++k)out[ch*36+k]={inv[k].real(),inv[k].imag()};}
+    }
     struct Parity {System eo,oe;std::vector<uint32_t> even,odd,index,parity;} parity;
     std::vector<uint32_t> neighbors;
     std::vector<Cx<float>> links32,evenA32,oddA32,inverseEven32,inverseOdd32;
@@ -58,7 +74,7 @@ struct CompactClover {
     template<class T> const std::vector<Cx<T>>& odd()const{if constexpr(std::is_same_v<T,double>)return oddA;else return oddA32;}
     template<class T> Cx<T> gauge(uint32_t site,uint32_t d,uint32_t c,uint32_t k)const{
         uint32_t mu=d/2,n=neighbors[size_t(site)*8+d];bool f=d%2==0;Cx<T> z;
-        if constexpr(std::is_same_v<T,double>){auto a=w.links[(f?site:n)*4+mu][f?c*3+k:k*3+c];z={a.real(),f?a.imag():-a.imag()};}
+        if constexpr(std::is_same_v<T,double>){auto a=w.link_at((f?site:n)*4+mu)[f?c*3+k:k*3+c];z={a.real(),f?a.imag():-a.imag()};}
         else {z=links32[((size_t(f?site:n)*4+mu)*3+(f?c:k))*3+(f?k:c)];if(!f)z.im=-z.im;}
         T scale=T(-.5*w.bc(site,mu,f));if constexpr(std::is_same_v<T,double>)scale*=hopping[mu];return {scale*z.re,scale*z.im};
     }
@@ -69,7 +85,7 @@ struct CompactClover {
                 auto terms=[&](const auto& emit){for(uint32_t d=0;d<8;++d){uint32_t mu=d/2,n=neighbors[size_t(site)*8+d],ni=pa<0?n:parity.index[n],si=perm[mu*4+s];auto ph=phase[mu*4+s];T sign=d%2==0?T(-1):T(1);
                         for(uint32_t k=0;k<3;++k){auto z=gauge<T>(site,d,color,k);emit(z,(size_t(ni)*12+k*4+s)*nrhs);emit(cm(z,Cx<T>{sign*T(ph.re),sign*T(ph.im)}),(size_t(ni)*12+k*4+si)*nrhs);}}
                     if(onsite){uint32_t ch=s/2,q=(s%2)*3+color;const auto& blocks=[&]()->const std::vector<Cx<T>>&{if constexpr(std::is_same_v<T,double>)return parity.parity[site]?oddA:evenA;else return parity.parity[site]?oddA32:evenA32;}();
-                        for(uint32_t k=0;k<6;++k)emit(blocks[(size_t(parity.index[site])*2+ch)*36+q*6+k],(size_t(row)*12+(k%3)*4+ch*2+k/3)*nrhs);}};
+                        for(uint32_t k=0;k<6;++k){Cx<T> z;if constexpr(std::is_same_v<T,double>)z=onsite_value(parity.parity[site],parity.index[site],ch,q,k);else z=blocks[(size_t(parity.index[site])*2+ch)*36+q*6+k];emit(z,(size_t(row)*12+(k%3)*4+ch*2+k/3)*nrhs);}}};
                 for(;r+V::width<=nrhs;r+=V::width){auto re=V::zero(),im=V::zero();terms([&](Cx<T> z,size_t q){auto v=V::load(x+q+r);re=V::ma(re,v.first,z.re);re=V::ms(re,v.second,z.im);im=V::ma(im,v.second,z.re);im=V::ma(im,v.first,z.im);});V::store(y+out+r,re,im);}
                 for(;r<nrhs;++r){Cx<T> sum{};terms([&](Cx<T> z,size_t q){sum=plus(sum,cm(z,x[q+r]));});y[out+r]=sum;}
             }
@@ -81,7 +97,7 @@ struct GPUCompactSchur {
     MetalRun& m;const CompactClover& c;
     struct Half{uint32_t rows;size_t outputs;id<MTLBuffer> map;} eo,oe;
     id<MTLBuffer> links,neighbors,inv,Aodd,temp,inverted,perms,phases;
-    id<MTLComputePipelineState> hopping,local,subtract,gather,scatter;
+    id<MTLComputePipelineState> hopping,local,local_inverse,subtract,gather,scatter;
     struct Params{uint32_t rows;float beta;} params;
     GPUCompactSchur(MetalRun& m,const CompactClover& c):m(m),c(c){
         auto put=[&](const void* p,size_t n){auto b=[m.device newBufferWithLength:std::max(size_t(8),n) options:MTLResourceStorageModeShared];if(!b)throw std::runtime_error("compact Metal allocation");if(p)std::memcpy([b contents],p,n);return b;};
@@ -90,10 +106,10 @@ struct GPUCompactSchur {
         perms=put(c.perm.data(),64);auto ph=block_cast<float>(std::vector<D>(c.phase.begin(),c.phase.end()));phases=put(ph.data(),128);params={eo.rows,0};
         auto values=[MTLFunctionConstantValues new];uint32_t rhs=c.w.a.p.rhs;[values setConstantValue:&rhs type:MTLDataTypeUInt atIndex:0];
         auto pipe=[&](const char* n){NSError* e=nil;auto f=[m.library newFunctionWithName:[NSString stringWithUTF8String:n] constantValues:values error:&e];auto p=[m.device newComputePipelineStateWithFunction:f error:&e];if(!p)throw std::runtime_error([[e localizedDescription] UTF8String]);return p;};
-        hopping=pipe("compact_hop_rect");local=pipe("clover_local");subtract=pipe("clover_subtract");gather=pipe("clover_gather");scatter=pipe("clover_scatter");
+        hopping=pipe("compact_hop_rect");local=pipe(c.factorized?"clover_ldl_multiply":(c.packed?"clover_local_hermitian":"clover_local"));local_inverse=c.factorized?pipe("clover_ldl_solve"):local;subtract=pipe("clover_subtract");gather=pipe("clover_gather");scatter=pipe("clover_scatter");
     }
     void hop(id<MTLComputeCommandEncoder> enc,const Half& h,id<MTLBuffer> x,id<MTLBuffer> y){struct P{uint32_t rows,time_stride,time_extent,antiperiodic;} p{h.rows,c.w.stride(3),c.w.length(3),uint32_t(c.w.antiperiodic)};[enc setComputePipelineState:hopping];size_t i=0;for(auto b:{links,neighbors,h.map,perms,phases,x,y}){[enc setBuffer:b offset:0 atIndex:i];++i;}[enc setBytes:&p length:sizeof(p) atIndex:i];[enc dispatchThreads:MTLSizeMake(h.outputs,1,1) threadsPerThreadgroup:MTLSizeMake(128,1,1)];[enc memoryBarrierWithScope:MTLBarrierScopeBuffers];}
-    void block(id<MTLComputeCommandEncoder> enc,id<MTLBuffer> a,id<MTLBuffer> x,id<MTLBuffer> y,float beta=0){params.beta=beta;[enc setComputePipelineState:local];size_t i=0;for(auto b:{a,x,y}){[enc setBuffer:b offset:0 atIndex:i];++i;}[enc setBytes:&params length:sizeof(params) atIndex:3];[enc dispatchThreads:MTLSizeMake(eo.outputs,1,1) threadsPerThreadgroup:MTLSizeMake(128,1,1)];[enc memoryBarrierWithScope:MTLBarrierScopeBuffers];}
+    void block(id<MTLComputeCommandEncoder> enc,id<MTLBuffer> a,id<MTLBuffer> x,id<MTLBuffer> y,float beta=0){params.beta=beta;[enc setComputePipelineState:(c.factorized&&beta==0?local_inverse:local)];size_t i=0;for(auto b:{a,x,y}){[enc setBuffer:b offset:0 atIndex:i];++i;}[enc setBytes:&params length:sizeof(params) atIndex:3];[enc dispatchThreads:MTLSizeMake(eo.outputs,1,1) threadsPerThreadgroup:MTLSizeMake(128,1,1)];[enc memoryBarrierWithScope:MTLBarrierScopeBuffers];}
     void difference(id<MTLComputeCommandEncoder> enc,id<MTLBuffer> a,id<MTLBuffer> b,id<MTLBuffer> y){[enc setComputePipelineState:subtract];size_t i=0;for(auto p:{a,b,y}){[enc setBuffer:p offset:0 atIndex:i];++i;}[enc setBytes:&params length:sizeof(params) atIndex:3];[enc dispatchThreads:MTLSizeMake(eo.outputs,1,1) threadsPerThreadgroup:MTLSizeMake(128,1,1)];[enc memoryBarrierWithScope:MTLBarrierScopeBuffers];}
     void encode(id<MTLComputeCommandEncoder> enc,id<MTLBuffer> x,id<MTLBuffer> y){hop(enc,eo,x,temp);block(enc,inv,temp,inverted);hop(enc,oe,inverted,y);block(enc,Aodd,x,y,-1);}
 };

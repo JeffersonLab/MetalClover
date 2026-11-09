@@ -15,7 +15,7 @@ struct TuneVector {
 // smoother weight 1. Changing cycles does not change the fine operator.
 struct TunedGPUCycle:GPUCycle {
     TuneVector vectors;int pre_steps=1,post_steps=1;float omega=1;
-    TunedGPUCycle(const Transfer& h,MetalRun& m,uint32_t rhs,const std::vector<Cx<float>>& inverse):GPUCycle(h,m,rhs,inverse),vectors(m){}
+    TunedGPUCycle(const Transfer& h,MetalRun& m,uint32_t rhs,const std::vector<Cx<float>>& inverse,uint32_t format=0):GPUCycle(h,m,rhs,inverse,format),vectors(m){}
     void diagonal(id<MTLComputeCommandEncoder> e,id<MTLBuffer> r,id<MTLBuffer> z){
         size_t n=size_t(h.rows)*h.inbs*rhs;dispatch(e,0,{inv,r,z},n);
         if(omega!=1)vectors.encode(e,z,z,uint32_t(n),omega,0);
@@ -50,7 +50,7 @@ struct TunedGPUCycle:GPUCycle {
 template<class Schur> void build_gpu_filtered_basis(Transfer& h,Schur& op,const CompactClover& c,int sweeps,double omega,int workers){
     TuneVector vectors(op.m);size_t n=size_t(h.rows)*h.inbs;
     auto alloc=[&](const void* p,size_t bytes){auto b=[op.m.device newBufferWithLength:bytes options:MTLResourceStorageModeShared];if(!b)throw std::runtime_error("GPU basis filter allocation");if(p)std::memcpy([b contents],p,bytes);return b;};
-    auto inverse=alloc(c.inverseOdd32.data(),c.inverseOdd32.size()*8),x=alloc(nullptr,n*8),y=alloc(nullptr,n*8);
+    auto inverse=c.factorized?op.Aodd:alloc(c.inverseOdd32.data(),c.inverseOdd32.size()*8),x=alloc(nullptr,n*8),y=alloc(nullptr,n*8);
     h.build([&](const D* input,D* difference){
         auto* values=static_cast<Cx<float>*>([x contents]);
         chunks(uint32_t(n),workers,[&](int,uint32_t first,uint32_t last){for(size_t i=first;i<last;++i)values[i]={float(input[i].re),float(input[i].im)};});

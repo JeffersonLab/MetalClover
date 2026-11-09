@@ -27,10 +27,12 @@ inline void write_header(std::ostream& out,const Header& h){
 }
 inline Header read_header(std::istream& in){
     Header h;std::array<char,8> tag;chroma_bridge::read(in,tag.data(),8);
-    if(tag!=magic)throw std::runtime_error("unsupported production bridge");
+    bool aligned=tag==std::array<char,8>{'C','H','R','M','G','0','0','3'};
+    if(tag!=magic&&!aligned)throw std::runtime_error("unsupported production bridge");
     chroma_bridge::read(in,h.shape.data(),4);
     for(auto* p:{&h.mass,&h.xi0,&h.nu,&h.clover_r,&h.clover_t})chroma_bridge::read(in,p,1);
     for(auto* p:{&h.source_time,&h.first_time,&h.time_count})chroma_bridge::read(in,p,1);
+    if(aligned){uint32_t padding;chroma_bridge::read(in,&padding,1);if(padding)throw std::runtime_error("bridge padding");}
     h.validate();return h;
 }
 } // namespace production

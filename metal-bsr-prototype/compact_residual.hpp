@@ -1,5 +1,6 @@
 #pragma once
 #include "compact_clover.hpp"
+#include "chroma_bridge.hpp"
 
 namespace compact_fp64 {
 using Vector = float64x2_t;
@@ -31,7 +32,7 @@ inline void store(D* x, ComplexVector z) {
 
 template<int Width>
 inline void site_residual(const CompactClover& c, const D* x, const D* b, D* residual,
-                          uint32_t site, uint32_t r, double* sums) {
+                          uint32_t site, uint32_t r, double* sums, uint32_t source_tag=0, bool zero_source=false) {
     const uint32_t rhs = c.w.a.p.rhs;
     std::array<ComplexVector, 12> output{};
 
@@ -80,15 +81,13 @@ inline void site_residual(const CompactClover& c, const D* x, const D* b, D* res
         }
     }
 
-    const auto& clover = c.parity.parity[site] ? c.oddA : c.evenA;
-    size_t block = size_t(c.parity.index[site]) * 72;
     for (uint32_t color = 0; color < 3; ++color) {
         for (uint32_t spin = 0; spin < 4; ++spin) {
             uint32_t chirality = spin / 2;
             uint32_t row = (spin % 2) * 3 + color;
             auto& out = output[color * 4 + spin];
             for (uint32_t k = 0; k < 6; ++k) {
-                auto a = clover[block + chirality * 36 + row * 6 + k];
+                auto a = c.onsite_value(c.parity.parity[site], c.parity.index[site], chirality, row, k);
                 auto v = load<Width>(x + (size_t(site) * 12 + (k % 3) * 4 +
                                          chirality * 2 + k / 3) * rhs + r);
                 out.re = vfmsq_n_f64(vfmaq_n_f64(out.re, v.re, a.re), v.im, a.im);
@@ -101,7 +100,9 @@ inline void site_residual(const CompactClover& c, const D* x, const D* b, D* res
                   vsetq_lane_f64(sums[r], vdupq_n_f64(0), 0);
     for (uint32_t component = 0; component < 12; ++component) {
         size_t q = (size_t(site) * 12 + component) * rhs + r;
-        auto source = load<Width>(b + q);
+        ComplexVector source{};
+        if(b)source=load<Width>(b+q);
+        else if(!zero_source){auto z=chroma_bridge::source(q,source_tag);double scale=1/std::sqrt(double(c.w.a.p.outputs()));source.re=vsetq_lane_f64(z.re*scale,source.re,0);source.im=vsetq_lane_f64(z.im*scale,source.im,0);}
         ComplexVector z{vsubq_f64(source.re, output[component].re),
                         vsubq_f64(source.im, output[component].im)};
         store<Width>(residual + q, z);

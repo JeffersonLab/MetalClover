@@ -1,0 +1,2 @@
+method,rhs,outer,krylov,seconds,residual_seconds,full_relative,fine_schur_applications
+metal-bicgstab,0,5,347,2.8727993340000002,0.25108129299999998,1.8357075227581341e-14,694

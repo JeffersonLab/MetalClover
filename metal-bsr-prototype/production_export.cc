@@ -76,7 +76,7 @@ int main(int argc,char** argv){
                 links=next;
                 std::cout<<"STOUT step="<<step+1<<" complete"<<std::endl;
             }
-            std::ofstream out(prefix+".bridge",std::ios::binary);production::write_header(out,h);
+            std::ofstream out(prefix+".bridge",std::ios::binary);if(std::getenv("METALCLOVER_ALIGNED_BRIDGE")){std::ostringstream header(std::ios::binary);production::write_header(header,h);auto bytes=header.str();bytes[7]='3';out.write(bytes.data(),bytes.size());uint32_t padding=0;chroma_bridge::write(out,&padding,1);}else production::write_header(out,h);
             std::array<chroma_bridge::Complex,36> site_links;
             for(uint32_t site=0;site<h.volume();++site){
                 for(int mu=0;mu<4;++mu)for(int row=0;row<3;++row)for(int col=0;col<3;++col){

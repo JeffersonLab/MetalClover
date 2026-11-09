@@ -74,3 +74,17 @@ build/correctness_chroma: correctness_chroma.cc production_bridge.hpp chroma_bri
 	  "$(CHROMA_SOURCE)/lib/actions/ferm/linop/unprec_clover_linop_w.cc" \
 	  "$(CHROMA_SOURCE)/lib/actions/ferm/invert/invbicgstab.cc" \
 	  -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
+build/low_memory_solve: low_memory_solve.mm $(wildcard *.hpp) $(wildcard *.metal)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) low_memory_solve.mm -o $@ $(FRAMEWORKS)
+
+build/low_memory_verify: low_memory_verify.cc production_bridge.hpp chroma_bridge.hpp
+	test -n "$(CHROMA_SOURCE)"
+	mkdir -p build
+	"$$($(CHROMA_CONFIG) --cxx)" $$($(CHROMA_CONFIG) --cxxflags) -DBASE_PRECISION=64 \
+	  -I"$(CHROMA_SOURCE)/lib" low_memory_verify.cc \
+	  "$(CHROMA_SOURCE)/lib/io/aniso_io.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/fermacts/clover_fermact_params_w.cc" \
+	  "$(CHROMA_SOURCE)/lib/actions/ferm/linop/unprec_clover_linop_w.cc" \
+	  -o $@ $$($(CHROMA_CONFIG) --ldflags) $$($(CHROMA_CONFIG) --libs)
