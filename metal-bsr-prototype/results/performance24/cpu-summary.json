@@ -1,0 +1,25 @@
+{
+  "status": "both native Chroma CPU references complete; GPU timings and independent cross-check pending",
+  "rhs_count": 2,
+  "solve_seconds": 6750.76833,
+  "mean_seconds_per_rhs": 3375.384165,
+  "max_full_relative": 4.0973105753969004e-14,
+  "results": [
+    {
+      "rhs": "0",
+      "iterations": "3489",
+      "attempts": "1",
+      "seconds": "3450.683653",
+      "full_relative": "4.0735724072907192e-14",
+      "save_seconds": "1.6848810000000001"
+    },
+    {
+      "rhs": "1",
+      "iterations": "3350",
+      "attempts": "1",
+      "seconds": "3300.0846769999998",
+      "full_relative": "4.0973105753969004e-14",
+      "save_seconds": "2.1195170000000001"
+    }
+  ]
+}

@@ -21,3 +21,11 @@ QDP:FlopCount:reliable_bicgstab Total performance:  15383.5128662365 Mflops = 15
 CHROMA rhs=0 attempt=1 iterations=3489 full_relative=4.0735724072907192e-14
 CPU SOLVED rhs=0 seconds=3450.683653
 r0 = 0.705805937185065
+reliable_bicgstab: n_count 3349 r-updates: 36 xr-updates: 12
+QDP:FlopCount:reliable_bicgstab Performance/CPU: t=3296.414278(s) Flops=50900065320960 => 15441.0401813458 Mflops/cpu.
+QDP:FlopCount:reliable_bicgstab Total performance:  15441.0401813458 Mflops = 15.4410401813458 Gflops = 0.0154410401813458 Tflops
+CHROMA rhs=1 attempt=1 iterations=3350 full_relative=4.0973105753969004e-14
+CPU SOLVED rhs=1 seconds=3300.0846769999998
+PASS mode=cpu peak_rss_GiB=14.135482788085938
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 25.114497
