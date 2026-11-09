@@ -1,0 +1,14 @@
+Waiting for CPU PID 67653
+RUN ['make', '-f', 'Makefile.production', 'build/performance_compare', 'build/performance_chroma', 'build/correctness_chroma', 'CHROMA_CONFIG=/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config', 'CHROMA_SOURCE=/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel']
+RUN ['./build/correctness_chroma', '/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265_cfg_1000a.lime', 'results/performance24/action.xml', 'build/performance24', 'results/performance24/test', 'state-only']
+RUN ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', 'run_guarded.py', '--log', 'results/performance24/metal.log', '--resources', 'results/performance24/metal-resources.csv', '--', './build/performance_compare', 'build/performance24', 'results/performance24/test', '2', '4,4,4,8']
+Benchmark exit=0; elapsed=2848.545s
+RUN ['./build/performance_chroma', 'results/performance24/action.xml', 'build/performance24', 'results/performance24/test', 'verify', '2']
+Traceback (most recent call last):
+  File "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_real_performance.py", line 62, in <module>
+    run(['./build/performance_chroma',str(d/'action.xml'),a.bridge,prefix,'verify',str(a.rhs)],
+  File "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_real_performance.py", line 36, in run
+    subprocess.run(list(map(str,command)), env=active_env, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['./build/performance_chroma', 'results/performance24/action.xml', 'build/performance24', 'results/performance24/test', 'verify', '2']' died with <Signals.SIGKILL: 9>.

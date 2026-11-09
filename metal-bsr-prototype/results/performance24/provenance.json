@@ -1,0 +1,229 @@
+{
+  "measured_cpu_source_commit": "bec7fdc",
+  "measured_gpu_solver_source_commit": "08600aa",
+  "math_kernels_changed_after_timing": false,
+  "timings_repeated_after_storage_failure": false,
+  "native_verification": "Passed using byte-identical executable and field copies outside FileProvider. Original CPU RHS0 hash confirmed. See verification-staging.json and verifier-macos.log.",
+  "source_and_tool_hashes": [
+    {
+      "file": "performance_chroma.cc",
+      "sha256": "d75daedf395484c83cc3c1421b67c515cea72653007201793ce81913003caf89"
+    },
+    {
+      "file": "performance_compare.mm",
+      "sha256": "0d5e1e5314d1e65cccd76775a3613992ddd21e735bf00be484ab35672283510d"
+    },
+    {
+      "file": "correctness_chroma.cc",
+      "sha256": "b343a8bb7199263f1f7d9467fbfcb219c12f99f737866a8302c31394b7ed9481"
+    },
+    {
+      "file": "production_export.cc",
+      "sha256": "50fb342d559b823439ed5f33f3faf866cd023a3bbf6d1cae4a960230eceb47ad"
+    },
+    {
+      "file": "production_bridge.hpp",
+      "sha256": "9c49feeb4df0c12dcea0e418b417bd512d653f64d39c09fe83d2dae94819b2f2"
+    },
+    {
+      "file": "chroma_bridge.hpp",
+      "sha256": "502079174dc6a1237923079e8ff8bc1d1260926f6d42ec139d3eb0dfe692f6dd"
+    },
+    {
+      "file": "compact_clover.hpp",
+      "sha256": "efd7533185818b351c0f6b8a0c6b0628711e373b038a4151f9228a1fc71adc1d"
+    },
+    {
+      "file": "compact_residual.hpp",
+      "sha256": "e187eb4f13e9a1b4ab1cb96b362010e7f1a3efcc42012ab59a9ca3dbe456d05f"
+    },
+    {
+      "file": "compact_solve.hpp",
+      "sha256": "fc2577c9388e88b7f89a8e9b3d711745e781e438cd780576b7ee99ea6970a6d1"
+    },
+    {
+      "file": "three_level.hpp",
+      "sha256": "657f16d9f564e8c8c8cf030f31012b77045d677ccd1e07af59ec44cb03db1265"
+    },
+    {
+      "file": "fgmres.hpp",
+      "sha256": "53e05af8e0df422c383019a4c43b01a6cdfe279c5f525bc60ccfa670c64cb6ae"
+    },
+    {
+      "file": "bicgstab.hpp",
+      "sha256": "86df4aa46b2bda22e55d41e2e1aea9d5ecde45ce030b7cc02344192960efcb09"
+    },
+    {
+      "file": "kernels.metal",
+      "sha256": "ab69811691ebec81f272c03f8dd69665449d65fe1c4c9bc374e2e97d2a73ea41"
+    },
+    {
+      "file": "bicgstab.metal",
+      "sha256": "8b1a9238306973c24917623bf674d83826caec73557fb466d3451da16304c805"
+    },
+    {
+      "file": "clover.metal",
+      "sha256": "0f166a6081b7f864aeca39a13fc1befca8f79b98e9ce8e69ff1bb95f068ca29e"
+    },
+    {
+      "file": "multigrid.metal",
+      "sha256": "5229df37081e99795bc7d7d85fa0b78b65aa20a1d8f06ee8ae13d7bb865ab2c0"
+    },
+    {
+      "file": "sparse_coarse.metal",
+      "sha256": "2824d4ddcf23007e46c8768855093db316f1c48ed8b50ddf1a6c1cd643310208"
+    },
+    {
+      "file": "compact_clover.metal",
+      "sha256": "876127b42a754209d71d668dc7521a4d016d2b951f07769b112573c1689af126"
+    },
+    {
+      "file": "run_real_performance.py",
+      "sha256": "e3b8ef6c9d165e0b464b0c73de22d9cf1e6ff9688800878b2bcf73c6ac674e65"
+    },
+    {
+      "file": "run_guarded.py",
+      "sha256": "e7e900178f53eb880623acc1c0af9e4d959cb6deb0e761200dd70f552386ed66"
+    },
+    {
+      "file": "verify_staged.py",
+      "sha256": "5efa3fb97605b1dc302afe8bff70e3da2a928504cff45086e8679793c72a281d"
+    },
+    {
+      "file": "resident_memory_budget.py",
+      "sha256": "5065339507a448432d748c5c9c580a6fbcd0663e1659ecea73905c21732737fe"
+    },
+    {
+      "file": "metal_memory_limits.mm",
+      "sha256": "6ac57798ef9f2772f7019d9cea3e1a645c11569392e3d15a4eb940fe74a7f16c"
+    },
+    {
+      "file": "performance_report.py",
+      "sha256": "252ef375af8321b50b76c82c6d8525d9a63125c497e3bb3be7bca0e5c52f4f00"
+    },
+    {
+      "file": "build/performance_chroma",
+      "sha256": "1f04c66027cd6a15938c76ec607c83d54f0ce94bc8668e855b6ede90a76153b5"
+    },
+    {
+      "file": "build/performance_compare",
+      "sha256": "e914a63859bf5551c4e5fc69e33e8a9dd542c2bdecc2fef77ec403aa9e8487e8"
+    },
+    {
+      "file": "build/correctness_chroma",
+      "sha256": "466be732ac671e59cd7532a7a46f82e33175b2f90cd36e6e14ed6d34c9f727dc"
+    },
+    {
+      "file": "build/metal_memory_limits",
+      "sha256": "5c0d33da6abfa2a857f1aedff7198f7fcf64faa56557edecf18350261d483ccb"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/io/aniso_io.cc",
+      "sha256": "56b4f18bf5ca06ea3ae27940e811a858da3dee432d5d1dd16ef90257c4f70512"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/fermacts/clover_fermact_params_w.cc",
+      "sha256": "ca3df093114297cde445241fd5f6a88562349d598f3c1c6b71fca4a54a5de977"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/fermstates/stout_fermstate_params.cc",
+      "sha256": "d9ac12a484a3ab33d6ad52bfab474f84d2bd470f7f5a69ddac4792f962cfae64"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/linop/eoprec_clover_linop_w.cc",
+      "sha256": "0a9aeaa105d8879edd162bcbe6a007ceda65491405a0e43d903530923bea1b65"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/linop/unprec_clover_linop_w.cc",
+      "sha256": "d98de44a7a21a0b44f6e813dbc23b2122a6ed3d38a221b0a8bc2e58e259dab72"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/actions/ferm/invert/reliable_bicgstab.cc",
+      "sha256": "91c54693f081179a059abfbae804e573c3279a785e3600e837e00507d46b5801"
+    },
+    {
+      "file": "/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel/lib/util/gauge/stout_utils.cc",
+      "sha256": "7bcb9b8544f171dfdd05dcab3966e3a7be77d68149194cec38f1d1bb50fcef8a"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/clover_term_qdp_w.h",
+      "sha256": "ef2f90e908cb045c70d46bbd00e86dcf810f7dc31500ccef269607578a2980be"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/eoprec_clover_dumb_linop_w.h",
+      "sha256": "d7d608a06645771216558be6e2ff0a60b778ed187f42a10d00fe631bdc292eb9"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/eoprec_clover_linop_w.h",
+      "sha256": "6e8e4d7b10ff097e889c5793965a28a16a17e888f781babab25217958b251769"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/linop/dslash_w.h",
+      "sha256": "ea8e15b2758e560904230ac36b71e13504728e1fe6d06373f5bab8f92519b796"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/fermstates/stout_fermstate_w.h",
+      "sha256": "8d5c76c29d45b7397fa5ce72f7e32038560e46e39d49c3b94c2d869a1c1adc9b"
+    },
+    {
+      "file": "/Users/admin/Downloads/macos-chroma/install/chroma/include/actions/ferm/invert/reliable_bicgstab.h",
+      "sha256": "850dd8ed6088a54d14fea228cade590c22b3f1bc750c9aa7d1252642d4f5080d"
+    }
+  ],
+  "input": {
+    "FermAct": "CLOVER",
+    "Mass": "-0.0856",
+    "clovCoeffR": "1.58932722549812",
+    "clovCoeffT": "0.902783591772098",
+    "AnisoParam/anisoP": "true",
+    "AnisoParam/xi_0": "4.3",
+    "AnisoParam/nu": "1.265",
+    "AnisoParam/t_dir": "3",
+    "FermState/Name": "STOUT_FERM_STATE",
+    "FermState/rho": "0.14",
+    "FermState/n_smear": "2",
+    "FermState/orthog_dir": "3",
+    "FermState/FermionBC/FermBC": "SIMPLE_FERMBC",
+    "FermState/FermionBC/boundary": "1 1 1 -1",
+    "gauge": "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265_cfg_1000a.lime",
+    "shape": [
+      24,
+      24,
+      24,
+      256
+    ],
+    "gauge_sha256": "7a4e2f5f41838bce746adf928f31b8d4f1814c904402289892fda6d20b8d9003",
+    "agreeing_header_actions": 3,
+    "random_seed": 20261107,
+    "available_header_masses": [
+      "-0.0743",
+      "-0.0856"
+    ],
+    "selected_mass_argument": "-0.0856",
+    "source": "unit-norm dense complex Z4, generated by SplitMix64 component hashing",
+    "full_relative_residual_tolerance": 1e-12,
+    "note": "Action values come from this gauge header, not the older 24^3 perambulator. Dummy contraction times in action.xml are unused for this random-source test."
+  },
+  "machine": {
+    "hardware": "hw.model: MacBookPro18,2\nhw.memsize: 34359738368\nhw.physicalcpu: 10\nhw.logicalcpu: 10\nmachdep.cpu.brand_string: Apple M1 Max",
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241",
+    "chroma_version": "3.44.0",
+    "chroma_cxxflags": "-O1 -std=c++17 -fopenmp -DCHROMA_SB_SINGLE -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk -mmacosx-version-min=15.0 -I/Users/admin/Downloads/macos-chroma/install/chroma/include -O2 -I/Users/admin/Downloads/macos-chroma/install/qdpxx/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-chroma/install/qmp/include -I/opt/homebrew/opt/gmp/include",
+    "swap_during_cpu": "vm.swapusage: total = 9216.00M  used = 8715.81M  free = 500.19M  (encrypted)",
+    "native_cxx": "/opt/homebrew/bin/g++-14",
+    "native_compiler_version": "g++-14 (Homebrew GCC 14.2.0_1) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "metal_compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+  },
+  "source_tags": [
+    20261107,
+    20261108
+  ],
+  "resident_rhs": 1,
+  "logical_rhs": 2,
+  "full_native_fp64_residual_tolerance": 1e-12,
+  "rhs_generation_and_saved_field_io_outside_solve_timing": true,
+  "timing_includes_eo_reduction_reconstruction_and_all_full_cpu_fp64_checks": true,
+  "hierarchies_built": 1,
+  "hierarchy_setup_seconds": 154.544942125,
+  "note": "Current launcher/staging fixes change executable and verification file locations only; numerical solver code and saved fields are unchanged."
+}

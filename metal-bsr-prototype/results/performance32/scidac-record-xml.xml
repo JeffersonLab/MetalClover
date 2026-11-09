@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+
+
+<Params>
+  <MCControl>
+<Cfg>
+  <cfg_type>SZINQIO</cfg_type>
+  <cfg_file>./cfgs/szscl21_32_256_b1p50_t_x4p300_um0p0860_sm0p0743_n1p265_cfg_1000.lime</cfg_file>
+</Cfg>
+    <RNG>
+      <Seed>
+        <elem>631</elem>
+        <elem>2571</elem>
+        <elem>2512</elem>
+        <elem>733</elem>
+      </Seed>
+    </RNG>
+    <StartUpdateNum>1000</StartUpdateNum>
+    <NWarmUpUpdates>2</NWarmUpUpdates>
+    <NProductionUpdates>20000</NProductionUpdates>
+    <NUpdatesThisRun>40</NUpdatesThisRun>
+    <SaveInterval>2</SaveInterval>
+    <SavePrefix>./cfgs/szscl21_32_256_b1p50_t_x4p300_um0p0860_sm0p0743_n1p265</SavePrefix>
+    <SaveVolfmt>SINGLEFILE</SaveVolfmt>
+    <ReproCheckP>true</ReproCheckP>
+    <ReproCheckFrequency>12</ReproCheckFrequency>
+    <ReverseCheckP>true</ReverseCheckP>
+    <ReverseCheckFrequency>10</ReverseCheckFrequency><InlineMeasurements>
+    <elem>
+      <Name>PLAQUETTE</Name>
+      <Frequency>1</Frequency>
+      <Param>
+        <version>2</version>
+        <GaugeState>
+           <Name>STOUT_GAUGE_STATE</Name>
+           <rho>0.14</rho>
+           <n_smear>2</n_smear>
+           <orthog_dir>3</orthog_dir>
+           <GaugeBC>
+              <Name>PERIODIC_GAUGEBC</Name>
+           </GaugeBC>
+        </GaugeState>
+      </Param>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+      </NamedObject>
+      <xml_file>./plaquette/stout_plaquette.xml</xml_file>
+    </elem>
+
+    <elem>
+      <Name>PLAQUETTE</Name>
+      <Frequency>1</Frequency>
+      <Param>
+        <version>2</version>
+        <GaugeState>
+           <Name>SIMPLE_GAUGE_STATE</Name>
+           <GaugeBC>
+              <Name>PERIODIC_GAUGEBC</Name>
+           </GaugeBC>
+        </GaugeState>
+      </Param>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+      </NamedObject>
+      <xml_file>./plaquette/thin_plaquette.xml</xml_file>
+    </elem>
+    <!-- Kill this measurement
+    <elem>
+      <Name>EIGBNDSMDAGM</Name>
+      <Frequency>5</Frequency>
+      <Ritz>
+        <RsdR>1.0e-1</RsdR>
+        <RsdRHi>1.0e-2</RsdRHi>
+        <RsdA>1.0e-6</RsdA>
+        <RsdAHi>1.0e-3</RsdAHi>
+        <RsdZero>1.0e-8</RsdZero>
+        <ProjApsiP>false</ProjApsiP>
+        <Nmin>5</Nmin>
+        <MaxCG>100000</MaxCG>
+        <Nrenorm>10</Nrenorm>
+      </Ritz>
+      <FermionAction>
+        <FermAct>CLOVER</FermAct>
+        <Mass>-0.0860</Mass>
+        <clovCoeffR>1.58932722549812</clovCoeffR>
+        <clovCoeffT>0.902783591772098</clovCoeffT>
+        <AnisoParam>
+            <anisoP>true</anisoP>
+            <t_dir>3</t_dir>
+            <xi_0>4.3</xi_0>
+            <nu>1.265</nu>
+        </AnisoParam>
+        <FermState>
+          <Name>STOUT_FERM_STATE</Name>
+          <rho>0.14</rho>
+          <n_smear>2</n_smear>
+          <orthog_dir>3</orthog_dir>
+          <FermionBC>
+            <FermBC>SIMPLE_FERMBC</FermBC>
+            <boundary>1 1 1 -1</boundary>
+          </FermionBC>
+        </FermState>
+      </FermionAction>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+      </NamedObject>
+      <xml_file>./eigen_mdagm/eigen_mdagm_u.xml</xml_file>
+    </elem>
+    --> 
+    <elem>
+      <!-- This measures lowest/highest ev of mass_s prec. Clover -->
+      <Name>EIGBNDSMDAGM</Name>
+      <Frequency>5</Frequency>
+      <Ritz>
+        <RsdR>1.0e-2</RsdR>
+        <RsdRHi>1.0e-2</RsdRHi>
+        <RsdA>1.0e-6</RsdA>
+	<RsdAHi>1.0e-3</RsdAHi>
+        <RsdZero>1.0e-8</RsdZero>
+        <ProjApsiP>false</ProjApsiP>
+        <Nmin>5</Nmin>
+        <MaxCG>100000</MaxCG>
+        <Nrenorm>10</Nrenorm>
+      </Ritz>
+      <FermionAction>
+        <FermAct>CLOVER</FermAct>
+        <Mass>-0.0743</Mass>
+        <clovCoeffR>1.58932722549812</clovCoeffR>
+        <clovCoeffT>0.902783591772098</clovCoeffT>
+        <AnisoParam>
+            <anisoP>true</anisoP>
+            <t_dir>3</t_dir>
+            <xi_0>4.3</xi_0>
+            <nu>1.265</nu>
+        </AnisoParam>
+        <FermState>
+          <Name>STOUT_FERM_STATE</Name>
+          <rho>0.14</rho>
+          <n_smear>2</n_smear>
+          <orthog_dir>3</orthog_dir>
+          <FermionBC>
+            <FermBC>SIMPLE_FERMBC</FermBC>
+            <boundary>1 1 1 -1</boundary>
+          </FermionBC>
+        </FermState>
+      </FermionAction>
+      <NamedObject>
+        <gauge_id>default_gauge_field</gauge_id>
+      </NamedObject>
+      <xml_file>./eigen_mdagm/eigen_mdagm_s.xml</xml_file>
+    </elem>
+   
+    </InlineMeasurements>
+</MCControl>
+  <HMCTrj>
+    <nrow>32 32 32 256</nrow><Monomials>
+
+      <!-- EvenEven part of 2 flavour clover -->
+      <elem>
+	<Name>N_FLAVOR_LOGDET_EVEN_EVEN_FERM_MONOMIAL</Name>
+        <FermionAction>
+          <FermAct>CLOVER</FermAct>
+ 	  <Mass>-0.0860</Mass>
+          <clovCoeffR>1.58932722549812</clovCoeffR>
+          <clovCoeffT>0.902783591772098</clovCoeffT>
+          <AnisoParam>
+            <anisoP>true</anisoP>
+            <t_dir>3</t_dir>
+            <xi_0>4.3</xi_0>
+            <nu>1.265</nu>
+          </AnisoParam>
+          <FermState>
+            <Name>STOUT_FERM_STATE</Name>
+            <rho>0.14</rho>
+            <n_smear>2</n_smear>
+	    <orthog_dir>3</orthog_dir>
+            <FermionBC>
+              <FermBC>SIMPLE_FERMBC</FermBC>
+              <boundary>1 1 1 -1</boundary>
+            </FermionBC>
+          </FermState>
+        </FermionAction>
+	<num_flavors>2</num_flavors>
+	<NamedObject>
+	  <monomial_id>HMC::logdet_2flav</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- EvenEven part of 1 flavour clover -->
+      <elem>
+	<Name>N_FLAVOR_LOGDET_EVEN_EVEN_FERM_MONOMIAL</Name>
+        <FermionAction>
+          <FermAct>CLOVER</FermAct>
+          <Mass>-0.0743</Mass>
+          <clovCoeffR>1.58932722549812</clovCoeffR>
+          <clovCoeffT>0.902783591772098</clovCoeffT>
+          <AnisoParam>
+            <anisoP>true</anisoP>
+            <t_dir>3</t_dir>
+            <xi_0>4.3</xi_0>
+            <nu>1.265</nu>
+          </AnisoParam>
+          <FermState>
+            <Name>STOUT_FERM_STATE</Name>
+            <rho>0.14</rho>
+            <n_smear>2</n_smear>
+	    <orthog_dir>3</orthog_dir>
+            <FermionBC>
+              <FermBC>SIMPLE_FERMBC</FermBC>
+              <boundary>1 1 1 -1</boundary>
+            </FermionBC>
+          </FermState>
+        </FermionAction>
+	<num_flavors>1</num_flavors>
+	<NamedObject>
+	  <monomial_id>HMC::logdet_1flav</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Odd Odd part of ratio -->
+      <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_RATIO_CONV_CONV_FERM_MONOMIAL</Name>
+        <Action>
+          <InvertParam>
+            <invType>BICGSTAB_INVERTER</invType>
+            <RsdBiCGStab>1.0e-12</RsdBiCGStab>
+            <MaxBiCGStab>100000</MaxBiCGStab>
+          </InvertParam>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0860</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+        </Action>
+        <PrecAction>
+	  <!-- Strange mass preconditioned -->
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0815</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+	</PrecAction>
+        <NamedObject>
+          <monomial_id>HMC::has_ratio</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Odd Odd part of ratio -->
+      <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_RATIO_CONV_CONV_FERM_MONOMIAL</Name>
+        <Action>
+          <InvertParam>
+            <invType>BICGSTAB_INVERTER</invType>
+            <RsdBiCGStab>1.0e-12</RsdBiCGStab>
+            <MaxBiCGStab>100000</MaxBiCGStab>
+          </InvertParam>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0815</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+        </Action>
+        <PrecAction>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0743</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+	</PrecAction>
+        <NamedObject>
+          <monomial_id>HMC::has_ratio2</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Odd Odd part of ratio -->
+      <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_RATIO_CONV_CONV_FERM_MONOMIAL</Name>
+        <Action>
+          <InvertParam>
+            <invType>BICGSTAB_INVERTER</invType>
+            <RsdBiCGStab>1.0e-9</RsdBiCGStab>
+            <MaxBiCGStab>100000</MaxBiCGStab>
+          </InvertParam>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0860</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+        </Action>
+        <PrecAction>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0815</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+	</PrecAction>
+        <NamedObject>
+          <monomial_id>HMC::md_has_ratio</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Odd Odd part of ratio -->
+      <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_RATIO_CONV_CONV_FERM_MONOMIAL</Name>
+        <Action>
+          <InvertParam>
+            <invType>BICGSTAB_INVERTER</invType>
+            <RsdBiCGStab>1.0e-9</RsdBiCGStab>
+            <MaxBiCGStab>100000</MaxBiCGStab>
+          </InvertParam>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0815</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+        </Action>
+        <PrecAction>
+          <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0743</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+	</PrecAction>
+        <NamedObject>
+          <monomial_id>HMC::md_has_ratio2</monomial_id>
+        </NamedObject>
+      </elem>
+
+     <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_FERM_MONOMIAL</Name>
+        <InvertParam>
+          <invType>CG_INVERTER</invType>
+          <RsdCG>1.0e-12</RsdCG>
+          <MaxCG>10000</MaxCG>
+        </InvertParam>
+	  <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0743</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+        <NamedObject>
+          <monomial_id>HMC::double_strange</monomial_id>
+        </NamedObject>
+      </elem>
+
+     <elem>
+        <Name>TWO_FLAVOR_EOPREC_CONSTDET_FERM_MONOMIAL</Name>
+        <InvertParam>
+          <invType>CG_INVERTER</invType>
+          <RsdCG>1.0e-9</RsdCG>
+          <MaxCG>10000</MaxCG>
+        </InvertParam>
+	  <FermionAction>
+	    <FermAct>CLOVER</FermAct>
+ 	    <Mass>-0.0743</Mass>
+	    <clovCoeffR>1.58932722549812</clovCoeffR>
+	    <clovCoeffT>0.902783591772098</clovCoeffT>
+	    <AnisoParam>
+	      <anisoP>true</anisoP>
+	      <t_dir>3</t_dir>
+	      <xi_0>4.3</xi_0>
+	      <nu>1.265</nu>
+	    </AnisoParam>
+	    <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>
+         <ChronologicalPredictor>
+            <Name>MINIMAL_RESIDUAL_EXTRAPOLATION_4D_PREDICTOR</Name>
+            <MaxChrono>11</MaxChrono>
+         </ChronologicalPredictor>
+ 
+        <NamedObject>
+          <monomial_id>HMC::md_double_strange</monomial_id>
+        </NamedObject>
+      </elem>
+
+
+      <!-- Odd Odd part of 1 flavor Mass=mass_s clover -->
+      <!-- This is the one used in the MC hamiltonian -->
+      <elem>
+	<Name>ONE_FLAVOR_EOPREC_CONSTDET_FERM_RAT_MONOMIAL</Name>
+	<!-- Approximations below assume 1 pf per flavor. So 1 pf means 
+	     1 flavor -->
+	<num_pf>1</num_pf>
+	<Action>
+          <FermionAction>
+            <FermAct>CLOVER</FermAct>
+            <Mass>-0.0743</Mass>
+            <clovCoeffR>1.58932722549812</clovCoeffR>
+            <clovCoeffT>0.902783591772098</clovCoeffT>
+            <AnisoParam>
+              <anisoP>true</anisoP>
+              <t_dir>3</t_dir>
+              <xi_0>4.3</xi_0>
+              <nu>1.265</nu>
+            </AnisoParam>
+            <FermState>
+              <Name>STOUT_FERM_STATE</Name>
+              <rho>0.14</rho>
+              <n_smear>2</n_smear>
+	      <orthog_dir>3</orthog_dir>
+              <FermionBC>
+		<FermBC>SIMPLE_FERMBC</FermBC>
+		<boundary>1 1 1 -1</boundary>
+              </FermionBC>
+            </FermState>
+          </FermionAction>	  
+	  <ActionApprox>
+	    <RationalApprox>
+	      <ratApproxType>READ_COEFFS</ratApproxType>
+	      <Param>
+	        <lowerMin>2.0e-4</lowerMin>
+	        <upperMax>10</upperMax>
+	        <numPower>-1</numPower>
+	        <denPower>4</denPower>
+	        <degree>13</degree>
+	      </Param>
+	      <ApproxInfo>
+	        <lowerMin>0.0002</lowerMin>
+	        <upperMax>10</upperMax>
+	        <degree>13</degree>
+	        <error>8.53359759155053e-09</error>
+	      </ApproxInfo>
+	      <PFECoeffs>
+	        <norm>0.235485866818045</norm>
+	        <res>0.000225192428610066 0.000493198674487029 0.00101098944690569 0.00210966479427735 0.00445341664197467 0.00945108960561729 0.0201221040804977 0.0430335164962971 0.0930149163490357 0.206877941073909 0.49800938741062 1.50426604429933 9.64588011579469</res>
+		<pole>2.13984298644252e-05 0.000167952110725128 0.00060887602643753 0.00182959869647478 0.00517440200375724 0.0143300682933111 0.039414086340563 0.108339010139494 0.299267597111873 0.840081382951181 2.47015136430147 8.35141226703362 47.1440813696294</pole>
+	      </PFECoeffs>
+	      <IPFECoeffs>
+	        <norm>4.24653935079968</norm>
+	        <res>-1.83558710964104e-06 -9.12204689643441e-06 -3.45205646515825e-05 -0.000123982091699911 -0.000439259033038762 -0.0015506886355438 -0.00547845322979375 -0.0194658268078658 -0.0703494148580012 -0.266556492901423 -1.15339049324629 -7.39500484641764 -208.006767009261</res>
+	        <pole>4.24231407611734e-05 0.000239480453850279 0.000809666981912087 0.002380721726 0.00668298211801512 0.018460571103842 0.0507432795148089 0.139566676101156 0.386518093984147 1.0931358903204 3.28474092123776 11.9081563867525 93.4648015144787</pole>
+	      </IPFECoeffs>
+	    </RationalApprox>
+	    <InvertParam>
+              <invType>CG_INVERTER</invType>
+              <RsdCG>1e-9</RsdCG>
+              <MaxCG>10000</MaxCG>
+            </InvertParam>
+	  </ActionApprox>
+	  <ForceApprox> 
+	    <RationalApprox>
+	      <ratApproxType>READ_COEFFS</ratApproxType>
+	      <Param><annotation>
+		  Single Light Flavour, Force piece. Bounds are 5.0e-6 to 10 .
+		  Because it is the force,  it is a square root, and assumes
+		  1 pseudofermion field per flavor.
+		</annotation>
+		<lowerMin>2.0e-4</lowerMin>
+		<upperMax>10</upperMax>
+		<numPower>-1</numPower>
+		<denPower>2</denPower>
+		<degree>12</degree>
+	      </Param>
+	      <ApproxInfo>
+		<lowerMin>0.0002</lowerMin>
+		<upperMax>10</upperMax>
+		<degree>12</degree>
+		<error>5.2284680862031e-08</error>
+	      </ApproxInfo>
+	      <PFECoeffs>
+		<norm>0.0547276831428071</norm>
+		<res>0.00507698729668402 0.0066151725685671 0.0101577938592028 0.0167794204884187 0.0284928077171634 0.0488808001988765 0.0842952468229152 0.146367448808401 0.258625107384016 0.481012357852968 1.04600847097866 3.86723649654098</res>
+		<pole>1.51480322230288e-05 0.000165259114300968 0.000661184012887753 0.00214955953261573 0.00657190811374048 0.0197043312297316 0.0587640674448055 0.175534749714768 0.529999019144126 1.6565878795396 5.78532483906374 30.6835527589452</pole>
+	      </PFECoeffs>
+	      <IPFECoeffs>
+		<norm>18.2722882200328</norm>
+		<res>-3.67396011655789e-07 -2.79527600795379e-06 -1.56773360818779e-05 -8.23503682881716e-05 -0.000424877064532166 -0.00218335514109711 -0.0112605577342041 -0.0590061495274579 -0.324805216795793 -2.07825914676428 -21.6648322084522 -1978.96735278723</res>
+		<pole>6.51815001904216e-05 0.000345702282177066 0.00120730087712331 0.00377359188933919 0.011393755386041 0.0340344037940959 0.101500526796983 0.304325618281001 0.930423172586555 3.02487652607464 12.1022069400519 132.030350249685</pole>
+	      </IPFECoeffs>
+	    </RationalApprox>	   
+	    <InvertParam>
+              <invType>CG_INVERTER</invType>
+              <RsdCG>1e-7 1e-7 1e-7 1e-8 1e-8 1e-8 1e-8 1e-8 1e-9 1e-9 1e-9 1e-9</RsdCG>
+	      <!-- 1.0e-8 -->
+              <MaxCG>100000</MaxCG>
+            </InvertParam>
+	  </ForceApprox>
+	</Action>
+	<NamedObject>
+	  <monomial_id>HMC::rat_strange</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Gauge monomial  -->
+      <elem>
+	<Name>GAUGE_MONOMIAL</Name>
+	<GaugeAction>
+	   <Name>ANISO_SYM_SPATIAL_GAUGEACT</Name>
+	   <beta>1.5</beta>
+           <u_s>0.73356648935927</u_s>
+           <AnisoParam>
+             <anisoP>true</anisoP>
+             <t_dir>3</t_dir>
+             <xi_0>4.3</xi_0>
+           </AnisoParam>
+           <GaugeBC>
+	      <Name>PERIODIC_GAUGEBC</Name>
+           </GaugeBC>
+        </GaugeAction>
+	<NamedObject>
+	  <monomial_id>HMC::gauge_s</monomial_id>
+        </NamedObject>
+      </elem>
+
+      <!-- Gauge monomial  -->
+      <elem>
+	<Name>GAUGE_MONOMIAL</Name>
+	<GaugeAction>
+	   <Name>ANISO_SYM_TEMPORAL_GAUGEACT</Name>
+	   <beta>1.5</beta>
+           <u_s>0.73356648935927</u_s>
+           <u_t>1</u_t>
+           <AnisoParam>
+             <anisoP>true</anisoP>
+             <t_dir>3</t_dir>
+             <xi_0>4.3</xi_0>
+           </AnisoParam>
+           <GaugeBC>
+	      <Name>PERIODIC_GAUGEBC</Name>
+           </GaugeBC>
+        </GaugeAction>
+	<NamedObject>
+	  <monomial_id>HMC::gauge_t</monomial_id>
+        </NamedObject>
+      </elem>
+
+   </Monomials>
+<Hamiltonian>
+     <monomial_ids>
+       <elem>HMC::logdet_2flav</elem>
+       <elem>HMC::logdet_1flav</elem>
+       <elem>HMC::has_ratio</elem>
+       <elem>HMC::has_ratio2</elem>
+       <elem>HMC::double_strange</elem>
+       <elem>HMC::rat_strange</elem>
+       <elem>HMC::gauge_s</elem>
+       <elem>HMC::gauge_t</elem>
+     </monomial_ids>
+   </Hamiltonian>
+<MDIntegrator>
+     <tau0>1</tau0>
+
+     <anisoP>true</anisoP>
+     <t_dir>3</t_dir>
+     <xi_mom>3.9</xi_mom>
+
+    <copyList>
+       <elem><copyFrom>HMC::has_ratio</copyFrom><copyTo>HMC::md_has_ratio</copyTo></elem>
+       <elem><copyFrom>HMC::has_ratio2</copyFrom><copyTo>HMC::md_has_ratio2</copyTo></elem>
+       <elem><copyFrom>HMC::double_strange</copyFrom><copyTo>HMC::md_double_strange</copyTo></elem>
+     </copyList>
+ 
+    <Integrator>
+       <Name>LCM_STS_MIN_NORM_2</Name>
+       <n_steps>8</n_steps>
+       <lambda>0.1769</lambda>
+       <monomial_ids>
+         <elem>HMC::logdet_2flav</elem>
+         <elem>HMC::logdet_1flav</elem>
+         <elem>HMC::md_has_ratio</elem>
+	 <elem>HMC::md_has_ratio2</elem>
+       </monomial_ids>
+       <SubIntegrator>
+         <Name>LCM_STS_MIN_NORM_2</Name>
+         <n_steps>2</n_steps>
+	 <lambda>0.1952</lambda>
+         <monomial_ids>
+            <elem>HMC::rat_strange</elem>
+	    <elem>HMC::gauge_s</elem>
+         </monomial_ids>
+         <SubIntegrator>
+           <Name>LCM_STS_MIN_NORM_2</Name>
+           <n_steps>2</n_steps>
+           <lambda>0.1667</lambda>
+           <monomial_ids>
+             <elem>HMC::md_double_strange</elem>
+             <elem>HMC::gauge_t</elem>
+           </monomial_ids>
+         </SubIntegrator>
+       </SubIntegrator>
+    </Integrator>
+   </MDIntegrator>
+</HMCTrj>
+</Params>

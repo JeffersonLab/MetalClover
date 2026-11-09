@@ -1,0 +1,6 @@
+{
+  "first_attempt": "SIGKILL before any stdout, binary signature verifies on disk",
+  "retry_executable": "/private/tmp/mg-performance24-chroma-verify",
+  "identical_binary_sha256": "1f04c66027cd6a15938c76ec607c83d54f0ce94bc8668e855b6ede90a76153b5",
+  "solver_timings_repeated": false
+}

@@ -1,0 +1,19 @@
+QDP use OpenMP threading. We have 8 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+u0 is 1
+Lattice initialized:
+  problem size = 24 24 24 256
+  layout size = 12 24 24 256
+  logical machine size = 1 1 1 1
+  subgrid size = 24 24 24 256
+  total number of nodes = 1
+  total volume = 3538944
+  subgrid volume = 3538944
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+NATIVE full_operator_match=1.738530524094291e-16 setup_seconds=22.231926999999999
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.232203
+ERROR: truncated Chroma bridge payload

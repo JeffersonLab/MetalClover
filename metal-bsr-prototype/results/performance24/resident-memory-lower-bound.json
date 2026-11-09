@@ -41,7 +41,26 @@
   },
   "lower_bound_bytes": 19832242176,
   "lower_bound_gib": 18.47021484375,
+  "known_single_metal_buffers_bytes": {
+    "fine_transfer_basis": 2038431744,
+    "fine_fgmres_V": 1528823808,
+    "fine_fgmres_Z": 1358954496,
+    "weighted_gauge": 1019215872,
+    "even_clover_inverse": 1019215872,
+    "correction_full_field": 339738624,
+    "neighbors": 113246208
+  },
+  "largest_known_single_metal_buffer_bytes": 2038431744,
   "excludes": "excludes sparse coarse matrices,\ncoarse solver workspaces, host geometry maps, Metal heaps/driver overhead,\nallocator padding, transient hierarchy construction, and the OS/apps.",
   "fits_32_gib_even_before_excluded_costs": true,
-  "source": "compact_clover.hpp, compact_solve.hpp, fgmres.hpp, three_level.hpp"
+  "source": "compact_clover.hpp, compact_solve.hpp, fgmres.hpp, three_level.hpp",
+  "device_limits": {
+    "max_buffer_length_bytes": 20100448256,
+    "device": "Apple M1 Max",
+    "physical_memory_bytes": 34359738368,
+    "recommended_max_working_set_bytes": 26800603136,
+    "has_unified_memory": true
+  },
+  "known_buffers_within_device_max_buffer_length": true,
+  "live_storage_within_physical_memory_before_excluded_costs": true
 }

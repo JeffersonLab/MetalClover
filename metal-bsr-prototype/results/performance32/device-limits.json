@@ -1,0 +1,7 @@
+{
+  "max_buffer_length_bytes" : 20100448256,
+  "device" : "Apple M1 Max",
+  "physical_memory_bytes" : 34359738368,
+  "recommended_max_working_set_bytes" : 26800603136,
+  "has_unified_memory" : true
+}

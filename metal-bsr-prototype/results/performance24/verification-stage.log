@@ -1,0 +1,12 @@
+STAGE build/performance_chroma
+STAGE results/performance24/action.xml
+STAGE build/performance24.bridge
+HYDRATE results/performance24/test.chroma-bicgstab.rhs0.bin
+STAGE results/performance24/test.chroma-bicgstab.rhs0.bin
+STAGE results/performance24/test.metal-bicgstab.rhs0.bin
+STAGE results/performance24/test.metal-mg.rhs0.bin
+STAGE results/performance24/test.chroma-bicgstab.rhs1.bin
+STAGE results/performance24/test.metal-bicgstab.rhs1.bin
+STAGE results/performance24/test.metal-mg.rhs1.bin
+VERIFY ['/private/tmp/mg-chroma-verify-a1o0o4ew/chroma-native', '/private/tmp/mg-chroma-verify-a1o0o4ew/action.xml', '/private/tmp/mg-chroma-verify-a1o0o4ew/bridge', '/private/tmp/mg-chroma-verify-a1o0o4ew/test', 'verify', '2']
+PASS staged original Chroma FP64 verification; all copies hashed

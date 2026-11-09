@@ -1,5 +1,5 @@
 {
-  "status": "first CPU RHS complete; remaining CPU and all GPU timings pending",
+  "status": "Historical first-RHS checkpoint; original hash later confirmed after iCloud restoration and successful final native verification",
   "native_result": {
     "rhs": "0",
     "iterations": "3489",

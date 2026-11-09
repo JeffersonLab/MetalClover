@@ -1,0 +1,18 @@
+Timestamp               Ty Process[PID:TID]
+2026-11-08 23:56:56.160 Df kernel[0:48adc0] (apfs) apfs_set_bsd_flags:8895: disk3s1 fileproviderd: unsetting SF_DATALESS bsd_flag on ino 836739810 (performance_chroma) old flags (0x40000060) new flags (0x40)
+2026-11-08 23:56:56.931 Df kernel[0:48ae2a] proc 955: load code signature error 2 for file "performance_chroma"
+2026-11-08 23:56:56.933 Df kernel[0:48ae2b] (AppleSystemPolicy) ASP: Security policy would not allow process: 955, /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/build/performance_chroma
+2026-11-08 23:56:57.119 Df kernel[0:48ae2b] performance_chroma[955] Corpse allowed 2 of 5
+2026-11-08 23:56:58.208 Df ReportCrash[1085:48b237] Formulating fatal 309 report for corpse[955] performance_chroma
+2026-11-08 23:56:58.303 Df osanalyticshelper[99150:489ea0] (OSAnalytics) creating type 309 as /Users/admin/Library/Logs/DiagnosticReports/.performance_chroma-2026-11-08-235658.ips
+2026-11-08 23:56:59.104 Df osanalyticshelper[99150:489ea0] (OSAnalytics) Saved type '309(<private>)' report (1 of max 25) at /Users/admin/Library/Logs/DiagnosticReports/performance_chroma-2026-11-08-235658.ips
+2026-11-08 23:56:59.110 Df osanalyticshelper[99150:489ea0] xpc log creation type 309 result success: /Users/admin/Library/Logs/DiagnosticReports/performance_chroma-2026-11-08-235658.ips
+2026-11-08 23:56:59.111 Df ReportCrash[1085:48b237] (OSAnalytics) client log create type 309 result success: /Users/admin/Library/Logs/DiagnosticReports/performance_chroma-2026-11-08-235658.ips
+2026-11-08 23:56:59.111 Df ReportCrash[1085:48b237] no MetricKit for process performance_chroma type 309 bundleId (null)
+2026-11-08 23:56:59.178 Df ReportCrash[1085:48b237] recordCrashEvent; isBeta 0, log: '/Users/admin/Library/Logs/DiagnosticReports/performance_chroma-2026-11-08-235658.ips'
+2026-11-08 23:59:16.263 Df log[1784:48c165] [com.apple.log:] log run noninteractively, parent: 1782 (zsh), args: '/usr/bin/log' 'show' '--last' '10m' '--style' 'compact' '--predicate' 'eventMessage CONTAINS "performance_chroma"'
+2026-11-08 23:59:21.569 Df syspolicyd[476:48bf62] [com.apple.syspolicy.exec:default] GK evaluateScanResult: 2, PST: (path: 7907fc6ff3494bd4), (team: (null)), (id: performance_chroma), (bundle_id: NOT_A_BUNDLE), 0, 0, 1, 0, 0, 0, 0
+2026-11-08 23:59:21.569 Df syspolicyd[476:48bf62] [com.apple.syspolicy.exec:default] Found provenance data on target: TA(5e66f4bb46cabadf, 2), PST: (path: 7907fc6ff3494bd4), (team: (null)), (id: performance_chroma), (bundle_id: NOT_A_BUNDLE)
+2026-11-08 23:59:21.570 Df syspolicyd[476:48bf62] [com.apple.syspolicy.exec:default] Created provenance data for target: TA(5e66f4bb46cabadf, 2), PST: (path: 7907fc6ff3494bd4), (team: (null)), (id: performance_chroma), (bundle_id: NOT_A_BUNDLE)
+2026-11-09 00:01:39.746 Df kernel[0:48c3f7] (apfs) apfs_set_bsd_flags:8895: disk3s1 fileproviderd: unsetting SF_DATALESS bsd_flag on ino 836739489 (performance_chroma.cc) old flags (0x40000060) new flags (0x40)
+2026-11-09 00:01:40.593 Df log[2698:48d30e] [com.apple.log:] log run noninteractively, parent: 8625 (codex), args: '/usr/bin/log' 'show' '--last' '15m' '--style' 'compact' '--predicate' 'eventMessage CONTAINS "performance_chroma"'

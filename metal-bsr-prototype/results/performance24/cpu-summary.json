@@ -1,5 +1,5 @@
 {
-  "status": "both native Chroma CPU references complete; GPU timings and independent cross-check pending",
+  "status": "Both native CPU references complete; see summary.json for the completed three-method comparison",
   "rhs_count": 2,
   "solve_seconds": 6750.76833,
   "mean_seconds_per_rhs": 3375.384165,

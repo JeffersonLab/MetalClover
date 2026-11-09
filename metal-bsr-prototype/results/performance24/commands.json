@@ -1,0 +1,64 @@
+[
+  {
+    "argv": [
+      "make",
+      "-f",
+      "Makefile.production",
+      "build/performance_compare",
+      "build/performance_chroma",
+      "build/correctness_chroma",
+      "CHROMA_CONFIG=/Users/admin/Downloads/macos-chroma/install/chroma/bin/chroma-config",
+      "CHROMA_SOURCE=/Users/admin/Downloads/qcd-macos-share-20261005/chroma.devel"
+    ],
+    "log": "results/performance24/benchmark-build.log",
+    "env": {}
+  },
+  {
+    "argv": [
+      "./build/correctness_chroma",
+      "/Users/admin/Downloads/download/prop_tests/szscl21_24_256_b1p50_t_x4p300_um0p0856_sm0p0743_n1p265_cfg_1000a.lime",
+      "results/performance24/action.xml",
+      "build/performance24",
+      "results/performance24/test",
+      "state-only"
+    ],
+    "log": "results/performance24/stout-state-check.log",
+    "env": {
+      "OMP_NUM_THREADS": "8"
+    }
+  },
+  {
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "run_guarded.py",
+      "--log",
+      "results/performance24/metal.log",
+      "--resources",
+      "results/performance24/metal-resources.csv",
+      "--",
+      "./build/performance_compare",
+      "build/performance24",
+      "results/performance24/test",
+      "2",
+      "4,4,4,8"
+    ],
+    "log": null,
+    "env": {
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  {
+    "argv": [
+      "./build/performance_chroma",
+      "results/performance24/action.xml",
+      "build/performance24",
+      "results/performance24/test",
+      "verify",
+      "2"
+    ],
+    "log": "results/performance24/verify.log",
+    "env": {
+      "OMP_NUM_THREADS": "8"
+    }
+  }
+]

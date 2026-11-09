@@ -1,0 +1,66 @@
+{
+  "shape": [
+    32,
+    32,
+    32,
+    256
+  ],
+  "volume": 8388608,
+  "resident_rhs": 1,
+  "fine_restart": 1,
+  "vectors_per_chirality": 1,
+  "bytes_by_live_array_group": {
+    "host_fp64_physical_gauge": 4831838208,
+    "host_fp64_even_and_odd_clover": 9663676416,
+    "host_fp64_b_x_residual": 4831838208,
+    "metal_fp32_weighted_gauge": 2415919104,
+    "metal_fp32_even_clover_inverse": 2415919104,
+    "metal_fp32_odd_clover": 2415919104,
+    "metal_neighbors_and_parity_maps": 301989888,
+    "metal_schur_two_half_fields": 805306368,
+    "metal_fine_smoother_inverse": 2415919104,
+    "metal_fine_transfer_basis": 402653184,
+    "metal_fine_cycle_three_half_fields": 1207959552,
+    "metal_fine_fgmres_fields": 3623878656,
+    "metal_correction_full_and_two_half_fields": 1610612736
+  },
+  "gib_by_live_array_group": {
+    "host_fp64_physical_gauge": 4.5,
+    "host_fp64_even_and_odd_clover": 9.0,
+    "host_fp64_b_x_residual": 4.5,
+    "metal_fp32_weighted_gauge": 2.25,
+    "metal_fp32_even_clover_inverse": 2.25,
+    "metal_fp32_odd_clover": 2.25,
+    "metal_neighbors_and_parity_maps": 0.28125,
+    "metal_schur_two_half_fields": 0.75,
+    "metal_fine_smoother_inverse": 2.25,
+    "metal_fine_transfer_basis": 0.375,
+    "metal_fine_cycle_three_half_fields": 1.125,
+    "metal_fine_fgmres_fields": 3.375,
+    "metal_correction_full_and_two_half_fields": 1.5
+  },
+  "lower_bound_bytes": 36943429632,
+  "lower_bound_gib": 34.40625,
+  "known_single_metal_buffers_bytes": {
+    "fine_transfer_basis": 402653184,
+    "fine_fgmres_V": 805306368,
+    "fine_fgmres_Z": 402653184,
+    "weighted_gauge": 2415919104,
+    "even_clover_inverse": 2415919104,
+    "correction_full_field": 805306368,
+    "neighbors": 268435456
+  },
+  "largest_known_single_metal_buffer_bytes": 2415919104,
+  "excludes": "excludes sparse coarse matrices,\ncoarse solver workspaces, host geometry maps, Metal heaps/driver overhead,\nallocator padding, transient hierarchy construction, and the OS/apps.",
+  "fits_32_gib_even_before_excluded_costs": false,
+  "source": "compact_clover.hpp, compact_solve.hpp, fgmres.hpp, three_level.hpp",
+  "device_limits": {
+    "max_buffer_length_bytes": 20100448256,
+    "device": "Apple M1 Max",
+    "physical_memory_bytes": 34359738368,
+    "recommended_max_working_set_bytes": 26800603136,
+    "has_unified_memory": true
+  },
+  "known_buffers_within_device_max_buffer_length": true,
+  "live_storage_within_physical_memory_before_excluded_costs": false
+}
