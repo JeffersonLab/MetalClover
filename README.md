@@ -11,3 +11,8 @@ The source and reproducible numerical results are in [metal-bsr-prototype](metal
 
 Large gauge fields, generated binaries, and saved solution fields are excluded from Git;
 text results, input/output hashes, source, and reproduction instructions are versioned.
+
+Run `make format` from the repo root or `metal-bsr-prototype/` to format the
+`.hpp`, `.cc`, `.mm`, and `.metal` sources using the checked-in
+[`.clang-format`](.clang-format). This requires `clang-format` on `PATH`;
+override the executable with `make format CLANG_FORMAT=clang-format-23` if needed.

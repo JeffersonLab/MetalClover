@@ -2,6 +2,12 @@ CXX := xcrun clang++
 .DEFAULT_GOAL := all
 CXXFLAGS := -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobjc-arc -fblocks -DACCELERATE_NEW_LAPACK
 FRAMEWORKS := -framework Metal -framework Foundation -framework Accelerate
+CLANG_FORMAT ?= clang-format
+FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal)
+
+.PHONY: format
+format:
+	$(CLANG_FORMAT) --style=file -i $(FORMAT_SOURCES)
 
 build/metal_three_level: three_level.mm $(wildcard *.hpp) $(wildcard *.metal)
 	mkdir -p build

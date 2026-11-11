@@ -1,0 +1,3 @@
+BasedOnStyle: LLVM
+NamespaceIndentation: All
+IndentWidth: 2

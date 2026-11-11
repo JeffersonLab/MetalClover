@@ -67,6 +67,7 @@ vcpkg_installed/
 Testing/
 .cache/
 
-# Preserve scientific benchmark evidence and the standalone build recipe.
+# Preserve scientific benchmark evidence and the hand-written Makefiles.
+!/Makefile
 !metal-bsr-prototype/Makefile
 !metal-bsr-prototype/results/**/*.log
