@@ -1,113 +1,727 @@
-#include <sys/resource.h>
-#include <filesystem>
-#include <set>
 #include "three_level.hpp"
 #include "chroma_import.hpp"
+#include <filesystem>
+#include <set>
+#include <sys/resource.h>
 
-double relative(const std::vector<D>& a,const std::vector<D>& b){double e=0,n=0;for(size_t j=0;j<a.size();++j){e+=std::norm(CD(a[j].re-b[j].re,a[j].im-b[j].im));n+=std::norm(CD(b[j].re,b[j].im));}return std::sqrt(e/std::max(n,1e-300));}
-void check_compact(CompactClover& c,MetalRun& m,int workers){c.rhs(3);CloverSystem old(c.w.extent,3,c.w.a.mass,.25,1,true,workers);set_rhs(c,0,workers,true);auto& p=c.w.a.p;std::vector<D> a(p.outputs()),b(a.size());apply_cpu(c.w.a,c.w.a.truth.data(),a.data(),workers);apply_cpu(old.w.a,c.w.a.truth.data(),b.data(),workers);double full=relative(a,b);if(full>3e-14)throw std::runtime_error("compact/full original matrix mismatch");
-    CPUCloverSchur<double,CompactClover> s(c,workers);CPUCloverSchur<double> os(old,workers);a.resize(c.parity.oe.p.outputs());b.resize(a.size());s.apply(c.w.a.truth.data(),a.data());os.apply(c.w.a.truth.data(),b.data());double schur=relative(a,b);if(schur>3e-14)throw std::runtime_error("compact/encoded Schur mismatch");
-    auto xf=block_cast<float>(std::vector<D>(c.w.a.truth.begin(),c.w.a.truth.begin()+a.size()));std::vector<Cx<float>> yf(a.size());CPUCloverSchur<float,CompactClover> sf(c,workers);sf.apply(xf.data(),yf.data());GPUCompactSchur gs(m,c);auto x=[m.device newBufferWithBytes:xf.data() length:xf.size()*8 options:MTLResourceStorageModeShared];auto y=[m.device newBufferWithLength:xf.size()*8 options:MTLResourceStorageModeShared];auto cmd=[m.queue commandBuffer];auto enc=[cmd computeCommandEncoder];gs.encode(enc,x,y);[enc endEncoding];[cmd commit];[cmd waitUntilCompleted];if(cmd.status==MTLCommandBufferStatusError)throw std::runtime_error("compact GPU command failed");auto* gpu=static_cast<Cx<float>*>([y contents]);double e=0,n=0;for(size_t j=0;j<yf.size();++j){e+=std::norm(CD(gpu[j].re-yf[j].re,gpu[j].im-yf[j].im));n+=std::norm(CD(yf[j].re,yf[j].im));}double metal=std::sqrt(e/n);if(metal>3e-6)throw std::runtime_error("compact CPU/Metal Schur mismatch");std::cout<<"COMPACT PASS full="<<full<<" Schur="<<schur<<" CPU_Metal="<<metal<<std::endl;
+double relative(const std::vector<D> &a, const std::vector<D> &b) {
+  double e = 0, n = 0;
+  for (size_t j = 0; j < a.size(); ++j) {
+    e += std::norm(CD(a[j].re - b[j].re, a[j].im - b[j].im));
+    n += std::norm(CD(b[j].re, b[j].im));
+  }
+  return std::sqrt(e / std::max(n, 1e-300));
 }
-template<class Apply> void check_projection(const Transfer& h,const BlockMatrix& a,Apply apply,const char* label){uint32_t rhs=2;std::mt19937_64 rng(78212);std::uniform_real_distribution<double> rnd(-1,1);std::vector<D> x(size_t(h.coarse)*rhs),p(size_t(h.rows)*h.inbs*rhs),sp(p.size()),rp(x.size()),ac(x.size()),id(x.size());for(auto& z:x)z={rnd(rng),rnd(rng)};h.prolong(x.data(),p.data(),rhs);h.restrict_vector(p.data(),id.data(),rhs);double iso=relative(id,x);apply(p.data(),sp.data());h.restrict_vector(sp.data(),rp.data(),rhs);a.apply(x.data(),ac.data(),rhs);double err=relative(ac,rp);if(iso>5e-13||err>5e-12)throw std::runtime_error("recursive Galerkin/isometry check failed");
-    double herm=0;for(uint32_t row=0;row<a.rows;++row)for(uint32_t e=a.row[row];e<a.row[row+1];++e){size_t rev=a.position(a.col[e],row);for(uint32_t i=0;i<a.bs;++i)for(uint32_t j=0;j<a.bs;++j){auto x=a.a64[(size_t(e)*a.bs+i)*a.bs+j],y=a.a64[(rev*a.bs+j)*a.bs+i];double sign=(i<a.bs/2)==(j<a.bs/2)?1:-1;herm=std::max(herm,std::abs(CD(x.re,x.im)-sign*std::conj(CD(y.re,y.im))));}}if(herm>5e-11)throw std::runtime_error("recursive gamma5 identity");std::cout<<label<<" PASS R_P="<<iso<<" Galerkin="<<err<<" gamma5="<<herm<<" n="<<a.n<<" blocks="<<a.col.size()<<std::endl;
+void check_compact(CompactClover &c, MetalRun &m, int workers) {
+  c.rhs(3);
+  CloverSystem old(c.w.extent, 3, c.w.a.mass, .25, 1, true, workers);
+  set_rhs(c, 0, workers, true);
+  auto &p = c.w.a.p;
+  std::vector<D> a(p.outputs()), b(a.size());
+  apply_cpu(c.w.a, c.w.a.truth.data(), a.data(), workers);
+  apply_cpu(old.w.a, c.w.a.truth.data(), b.data(), workers);
+  double full = relative(a, b);
+  if (full > 3e-14)
+    throw std::runtime_error("compact/full original matrix mismatch");
+  CPUCloverSchur<double, CompactClover> s(c, workers);
+  CPUCloverSchur<double> os(old, workers);
+  a.resize(c.parity.oe.p.outputs());
+  b.resize(a.size());
+  s.apply(c.w.a.truth.data(), a.data());
+  os.apply(c.w.a.truth.data(), b.data());
+  double schur = relative(a, b);
+  if (schur > 3e-14)
+    throw std::runtime_error("compact/encoded Schur mismatch");
+  auto xf = block_cast<float>(
+      std::vector<D>(c.w.a.truth.begin(), c.w.a.truth.begin() + a.size()));
+  std::vector<Cx<float>> yf(a.size());
+  CPUCloverSchur<float, CompactClover> sf(c, workers);
+  sf.apply(xf.data(), yf.data());
+  GPUCompactSchur gs(m, c);
+  auto x = [m.device newBufferWithBytes:xf.data()
+                                 length:xf.size() * 8
+                                options:MTLResourceStorageModeShared];
+  auto y = [m.device newBufferWithLength:xf.size() * 8
+                                 options:MTLResourceStorageModeShared];
+  auto cmd = [m.queue commandBuffer];
+  auto enc = [cmd computeCommandEncoder];
+  gs.encode(enc, x, y);
+  [enc endEncoding];
+  [cmd commit];
+  [cmd waitUntilCompleted];
+  if (cmd.status == MTLCommandBufferStatusError)
+    throw std::runtime_error("compact GPU command failed");
+  auto *gpu = static_cast<Cx<float> *>([y contents]);
+  double e = 0, n = 0;
+  for (size_t j = 0; j < yf.size(); ++j) {
+    e += std::norm(CD(gpu[j].re - yf[j].re, gpu[j].im - yf[j].im));
+    n += std::norm(CD(yf[j].re, yf[j].im));
+  }
+  double metal = std::sqrt(e / n);
+  if (metal > 3e-6)
+    throw std::runtime_error("compact CPU/Metal Schur mismatch");
+  std::cout << "COMPACT PASS full=" << full << " Schur=" << schur
+            << " CPU_Metal=" << metal << std::endl;
 }
-void check_device(const Transfer& h,const BlockMatrix& a,MetalRun& m){uint32_t rhs=2;size_t n=size_t(h.rows)*h.inbs*rhs,nc=size_t(h.coarse)*rhs;std::vector<Cx<float>> input(n),r(nc),p(n),ap(nc);std::mt19937 rng(4134);std::uniform_real_distribution<float> rnd(-1,1);for(auto& z:input)z={rnd(rng),rnd(rng)};h.restrict_vector(input.data(),r.data(),rhs);h.prolong(r.data(),p.data(),rhs);a.apply(r.data(),ap.data(),rhs);
-    auto put=[&](const void* x,size_t bytes){auto b=[m.device newBufferWithLength:bytes options:MTLResourceStorageModeShared];if(!b)throw std::runtime_error("device validation allocation");if(x)std::memcpy([b contents],x,bytes);else std::memset([b contents],0,bytes);return b;};auto x=put(input.data(),n*8),y=put(nullptr,n*8),rc=put(nullptr,nc*8),ac=put(nullptr,nc*8);GPUCycle cycle(h,m,rhs,a.di32);GPUBlockCoarseSolve<BlockMatrix> matrix(a,m,rhs,1,.1);auto cmd=[m.queue commandBuffer];auto enc=[cmd computeCommandEncoder];cycle.dispatch(enc,1,{x,cycle.basis,cycle.offsets,cycle.sites,rc},nc);cycle.dispatch(enc,2,{rc,cycle.basis,cycle.aggregate,y},n);matrix.encode_product(enc,rc,ac);cycle.finish(cmd,enc);
-    auto compare=[&](const std::vector<Cx<float>>& expected,id<MTLBuffer> b){auto* v=static_cast<Cx<float>*>([b contents]);double e=0,norm=0;for(size_t i=0;i<expected.size();++i){e+=std::norm(CD(expected[i].re-v[i].re,expected[i].im-v[i].im));norm+=std::norm(CD(expected[i].re,expected[i].im));}double rel=std::sqrt(e/norm);if(!std::isfinite(rel)||rel>4e-6)throw std::runtime_error("recursive CPU/Metal transfer or SpMV mismatch");return rel;};std::cout<<"DEVICE PASS inbs="<<h.inbs<<" R="<<compare(r,rc)<<" P="<<compare(p,y)<<" A="<<compare(ap,ac)<<std::endl;
-}
-struct ThreeOptions {uint32_t l=32,tile=4,nv=12,nv2=12,block=4,restart=8;int workers=8,samples=1,coarse=8,bottom=8;double mass=-.10;bool self=false,validate=false,check=false,warm=true,resume=false,csv_set=false,geometry_set=false;std::string chroma_field,chroma_rhs,chroma_solutions;std::string backend="both",methods="mg3,bicgstab,smooth",csv="results/threelevel32.csv";std::vector<uint32_t> rhs{96,192};std::set<std::string> completed;};
-std::string record_key(const std::string& backend,const std::string& method,int trial,uint32_t offset){return backend+":"+method+":"+std::to_string(trial)+":"+std::to_string(offset);}
-struct Metrics {uint64_t fine=0,c1=0,c2=0,c1k=0,c2k=0;double coarse_true=0;};
-template<class Run> void measure(CompactClover& c,MetalRun& metal,CompactOuter& outer,const ThreeOptions& o,const std::string& method,const std::string& backend,double hierarchy,double workspace,Run run,std::ofstream& csv,std::ofstream& trace){
-    std::ifstream source_file;
-    if(!o.chroma_rhs.empty()){
-        source_file.open(o.chroma_rhs,std::ios::binary|std::ios::ate);
-        auto expected=std::streamoff(o.rhs.back())*c.w.a.p.rows*12*sizeof(chroma_bridge::Complex);
-        if(!source_file||source_file.tellg()!=std::streampos(expected))
-            throw std::runtime_error("Chroma RHS file size must match largest RHS count");
+template <class Apply>
+void check_projection(const Transfer &h, const BlockMatrix &a, Apply apply,
+                      const char *label) {
+  uint32_t rhs = 2;
+  std::mt19937_64 rng(78212);
+  std::uniform_real_distribution<double> rnd(-1, 1);
+  std::vector<D> x(size_t(h.coarse) * rhs), p(size_t(h.rows) * h.inbs * rhs),
+      sp(p.size()), rp(x.size()), ac(x.size()), id(x.size());
+  for (auto &z : x)
+    z = {rnd(rng), rnd(rng)};
+  h.prolong(x.data(), p.data(), rhs);
+  h.restrict_vector(p.data(), id.data(), rhs);
+  double iso = relative(id, x);
+  apply(p.data(), sp.data());
+  h.restrict_vector(sp.data(), rp.data(), rhs);
+  a.apply(x.data(), ac.data(), rhs);
+  double err = relative(ac, rp);
+  if (iso > 5e-13 || err > 5e-12)
+    throw std::runtime_error("recursive Galerkin/isometry check failed");
+  double herm = 0;
+  for (uint32_t row = 0; row < a.rows; ++row)
+    for (uint32_t e = a.row[row]; e < a.row[row + 1]; ++e) {
+      size_t rev = a.position(a.col[e], row);
+      for (uint32_t i = 0; i < a.bs; ++i)
+        for (uint32_t j = 0; j < a.bs; ++j) {
+          auto x = a.a64[(size_t(e) * a.bs + i) * a.bs + j],
+               y = a.a64[(rev * a.bs + j) * a.bs + i];
+          double sign = (i < a.bs / 2) == (j < a.bs / 2) ? 1 : -1;
+          herm = std::max(herm, std::abs(CD(x.re, x.im) -
+                                         sign * std::conj(CD(y.re, y.im))));
+        }
     }
-    std::ofstream solutions;
-    if(!o.chroma_solutions.empty()){
-        std::string path=o.chroma_solutions+"."+backend+".bin";
-        if(std::ifstream(path,std::ios::binary))throw std::runtime_error("Chroma solutions file already exists: "+path);
-        solutions.open(path,std::ios::binary);
-        if(!solutions)throw std::runtime_error("cannot open Chroma solutions file: "+path);
+  if (herm > 5e-11)
+    throw std::runtime_error("recursive gamma5 identity");
+  std::cout << label << " PASS R_P=" << iso << " Galerkin=" << err
+            << " gamma5=" << herm << " n=" << a.n << " blocks=" << a.col.size()
+            << std::endl;
+}
+void check_device(const Transfer &h, const BlockMatrix &a, MetalRun &m) {
+  uint32_t rhs = 2;
+  size_t n = size_t(h.rows) * h.inbs * rhs, nc = size_t(h.coarse) * rhs;
+  std::vector<Cx<float>> input(n), r(nc), p(n), ap(nc);
+  std::mt19937 rng(4134);
+  std::uniform_real_distribution<float> rnd(-1, 1);
+  for (auto &z : input)
+    z = {rnd(rng), rnd(rng)};
+  h.restrict_vector(input.data(), r.data(), rhs);
+  h.prolong(r.data(), p.data(), rhs);
+  a.apply(r.data(), ap.data(), rhs);
+  auto put = [&](const void *x, size_t bytes) {
+    auto b = [m.device newBufferWithLength:bytes
+                                   options:MTLResourceStorageModeShared];
+    if (!b)
+      throw std::runtime_error("device validation allocation");
+    if (x)
+      std::memcpy([b contents], x, bytes);
+    else
+      std::memset([b contents], 0, bytes);
+    return b;
+  };
+  auto x = put(input.data(), n * 8), y = put(nullptr, n * 8),
+       rc = put(nullptr, nc * 8), ac = put(nullptr, nc * 8);
+  GPUCycle cycle(h, m, rhs, a.di32);
+  GPUBlockCoarseSolve<BlockMatrix> matrix(a, m, rhs, 1, .1);
+  auto cmd = [m.queue commandBuffer];
+  auto enc = [cmd computeCommandEncoder];
+  cycle.dispatch(enc, 1, {x, cycle.basis, cycle.offsets, cycle.sites, rc}, nc);
+  cycle.dispatch(enc, 2, {rc, cycle.basis, cycle.aggregate, y}, n);
+  matrix.encode_product(enc, rc, ac);
+  cycle.finish(cmd, enc);
+  auto compare = [&](const std::vector<Cx<float>> &expected, id<MTLBuffer> b) {
+    auto *v = static_cast<Cx<float> *>([b contents]);
+    double e = 0, norm = 0;
+    for (size_t i = 0; i < expected.size(); ++i) {
+      e += std::norm(CD(expected[i].re - v[i].re, expected[i].im - v[i].im));
+      norm += std::norm(CD(expected[i].re, expected[i].im));
     }
-    auto prepare=[&](uint32_t offset){
-        if(o.chroma_field.empty())set_compact_rhs(c,outer,offset,o.workers,o.self);
-        else set_chroma_rhs(c,outer,offset,o.workers,source_file);
+    double rel = std::sqrt(e / norm);
+    if (!std::isfinite(rel) || rel > 4e-6)
+      throw std::runtime_error("recursive CPU/Metal transfer or SpMV mismatch");
+    return rel;
+  };
+  std::cout << "DEVICE PASS inbs=" << h.inbs << " R=" << compare(r, rc)
+            << " P=" << compare(p, y) << " A=" << compare(ap, ac) << std::endl;
+}
+struct ThreeOptions {
+  uint32_t l = 32, tile = 4, nv = 12, nv2 = 12, block = 4, restart = 8;
+  int workers = 8, samples = 1, coarse = 8, bottom = 8;
+  double mass = -.10;
+  bool self = false, validate = false, check = false, warm = true,
+       resume = false, csv_set = false, geometry_set = false;
+  std::string chroma_field, chroma_rhs, chroma_solutions;
+  std::string backend = "both", methods = "mg3,bicgstab,smooth",
+              csv = "results/threelevel32.csv";
+  std::vector<uint32_t> rhs{96, 192};
+  std::set<std::string> completed;
+};
+std::string record_key(const std::string &backend, const std::string &method,
+                       int trial, uint32_t offset) {
+  return backend + ":" + method + ":" + std::to_string(trial) + ":" +
+         std::to_string(offset);
+}
+struct Metrics {
+  uint64_t fine = 0, c1 = 0, c2 = 0, c1k = 0, c2k = 0;
+  double coarse_true = 0;
+};
+template <class Run>
+void measure(CompactClover &c, MetalRun &metal, CompactOuter &outer,
+             const ThreeOptions &o, const std::string &method,
+             const std::string &backend, double hierarchy, double workspace,
+             Run run, std::ofstream &csv, std::ofstream &trace) {
+  std::ifstream source_file;
+  if (!o.chroma_rhs.empty()) {
+    source_file.open(o.chroma_rhs, std::ios::binary | std::ios::ate);
+    auto expected = std::streamoff(o.rhs.back()) * c.w.a.p.rows * 12 *
+                    sizeof(chroma_bridge::Complex);
+    if (!source_file || source_file.tellg() != std::streampos(expected))
+      throw std::runtime_error(
+          "Chroma RHS file size must match largest RHS count");
+  }
+  std::ofstream solutions;
+  if (!o.chroma_solutions.empty()) {
+    std::string path = o.chroma_solutions + "." + backend + ".bin";
+    if (std::ifstream(path, std::ios::binary))
+      throw std::runtime_error("Chroma solutions file already exists: " + path);
+    solutions.open(path, std::ios::binary);
+    if (!solutions)
+      throw std::runtime_error("cannot open Chroma solutions file: " + path);
+  }
+  auto prepare = [&](uint32_t offset) {
+    if (o.chroma_field.empty())
+      set_compact_rhs(c, outer, offset, o.workers, o.self);
+    else
+      set_chroma_rhs(c, outer, offset, o.workers, source_file);
+  };
+  bool remaining = false;
+  for (int t = 0; t < o.samples; ++t)
+    for (uint32_t off = 0; off < o.rhs.back(); off += o.tile)
+      remaining |= !o.completed.count(record_key(backend, method, t, off));
+  if (!remaining)
+    return;
+  if (o.warm && !o.self) {
+    outer.observe = [&](int step, double r, int k) {
+      std::cout << "OUTER warm " << backend << ' ' << method << " step=" << step
+                << " K=" << k << " true=" << r << std::endl;
     };
-    bool remaining=false;for(int t=0;t<o.samples;++t)for(uint32_t off=0;off<o.rhs.back();off+=o.tile)remaining|=!o.completed.count(record_key(backend,method,t,off));if(!remaining)return;
-    if(o.warm&&!o.self){outer.observe=[&](int step,double r,int k){std::cout<<"OUTER warm "<<backend<<' '<<method<<" step="<<step<<" K="<<k<<" true="<<r<<std::endl;};prepare(0);run();std::cout<<"WARM "<<backend<<' '<<method<<" done"<<std::endl;}
-    for(int trial=0;trial<o.samples;++trial)for(uint32_t offset=0;offset<o.rhs.back();offset+=o.tile){if(o.completed.count(record_key(backend,method,trial,offset)))continue;outer.observe=[&,offset](int step,double r,int k){std::cout<<"OUTER "<<backend<<' '<<method<<" offset="<<offset<<" step="<<step<<" K="<<k<<" true="<<r<<std::endl;};auto packing_start=Clock::now();prepare(offset);double packing_ms=seconds(packing_start)*1000;auto result=run();const auto& r=result.first;
-        double output_ms=0;
-        if(solutions.is_open()){
-            auto output_start=Clock::now();
-            write_chroma_solutions(solutions,outer,o.tile);
-            output_ms=seconds(output_start)*1000;
-        }
-        double total_ms=r.total_ms+(o.chroma_field.empty()?0:packing_ms+output_ms);
-        if(!o.chroma_field.empty())
-            std::cout<<"CHROMA RHS "<<backend<<" offset="<<offset<<" prepare_ms="<<packing_ms<<" output_ms="<<output_ms<<std::endl;
-        const auto& w=result.second;rusage u{};getrusage(RUSAGE_SELF,&u);
-        csv<<std::setprecision(13)<<o.l<<','<<o.mass<<",1,"<<o.tile<<','<<offset<<','<<backend<<','<<method<<','<<trial<<','<<o.workers<<','<<o.nv<<','<<o.nv2<<','<<o.block<<','<<o.restart<<','<<o.coarse<<','<<o.bottom<<",1e-10,.002,"<<total_ms<<','<<r.inner_ms<<','<<r.residual_ms<<','<<r.update_ms<<','<<r.outer<<','<<r.inner_max_sum<<','<<w.fine<<','<<w.c1<<','<<w.c2<<','<<w.c1k<<','<<w.c2k<<','<<w.coarse_true<<','<<r.max_residual<<',';if(outer.known_solution)csv<<r.solution_error;csv<<','<<hierarchy<<','<<workspace<<','<<double(u.ru_maxrss)/1048576<<','<<double(metal.device.currentAllocatedSize)/1048576<<'\n';
-        for(auto t:r.trace)trace<<std::setprecision(13)<<o.l<<','<<o.mass<<','<<o.tile<<','<<offset<<','<<backend<<','<<method<<','<<trial<<','<<t.outer<<','<<t.max_residual<<','<<t.inner.max_iterations<<'\n';trace.flush();csv.flush();
-        std::cout<<"TILE L="<<o.l<<" m="<<o.mass<<' '<<backend<<' '<<method<<" trial="<<trial<<" offset="<<offset<<" seconds="<<total_ms/1000<<" outer="<<r.outer<<" K="<<r.inner_max_sum<<" fineS="<<w.fine<<" c1="<<w.c1<<" c2="<<w.c2<<" true="<<r.max_residual<<" PASS"<<std::endl;
+    prepare(0);
+    run();
+    std::cout << "WARM " << backend << ' ' << method << " done" << std::endl;
+  }
+  for (int trial = 0; trial < o.samples; ++trial)
+    for (uint32_t offset = 0; offset < o.rhs.back(); offset += o.tile) {
+      if (o.completed.count(record_key(backend, method, trial, offset)))
+        continue;
+      outer.observe = [&, offset](int step, double r, int k) {
+        std::cout << "OUTER " << backend << ' ' << method
+                  << " offset=" << offset << " step=" << step << " K=" << k
+                  << " true=" << r << std::endl;
+      };
+      auto packing_start = Clock::now();
+      prepare(offset);
+      double packing_ms = seconds(packing_start) * 1000;
+      auto result = run();
+      const auto &r = result.first;
+      double output_ms = 0;
+      if (solutions.is_open()) {
+        auto output_start = Clock::now();
+        write_chroma_solutions(solutions, outer, o.tile);
+        output_ms = seconds(output_start) * 1000;
+      }
+      double total_ms =
+          r.total_ms + (o.chroma_field.empty() ? 0 : packing_ms + output_ms);
+      if (!o.chroma_field.empty())
+        std::cout << "CHROMA RHS " << backend << " offset=" << offset
+                  << " prepare_ms=" << packing_ms << " output_ms=" << output_ms
+                  << std::endl;
+      const auto &w = result.second;
+      rusage u{};
+      getrusage(RUSAGE_SELF, &u);
+      csv << std::setprecision(13) << o.l << ',' << o.mass << ",1," << o.tile
+          << ',' << offset << ',' << backend << ',' << method << ',' << trial
+          << ',' << o.workers << ',' << o.nv << ',' << o.nv2 << ',' << o.block
+          << ',' << o.restart << ',' << o.coarse << ',' << o.bottom
+          << ",1e-10,.002," << total_ms << ',' << r.inner_ms << ','
+          << r.residual_ms << ',' << r.update_ms << ',' << r.outer << ','
+          << r.inner_max_sum << ',' << w.fine << ',' << w.c1 << ',' << w.c2
+          << ',' << w.c1k << ',' << w.c2k << ',' << w.coarse_true << ','
+          << r.max_residual << ',';
+      if (outer.known_solution)
+        csv << r.solution_error;
+      csv << ',' << hierarchy << ',' << workspace << ','
+          << double(u.ru_maxrss) / 1048576 << ','
+          << double(metal.device.currentAllocatedSize) / 1048576 << '\n';
+      for (auto t : r.trace)
+        trace << std::setprecision(13) << o.l << ',' << o.mass << ',' << o.tile
+              << ',' << offset << ',' << backend << ',' << method << ','
+              << trial << ',' << t.outer << ',' << t.max_residual << ','
+              << t.inner.max_iterations << '\n';
+      trace.flush();
+      csv.flush();
+      std::cout << "TILE L=" << o.l << " m=" << o.mass << ' ' << backend << ' '
+                << method << " trial=" << trial << " offset=" << offset
+                << " seconds=" << total_ms / 1000 << " outer=" << r.outer
+                << " K=" << r.inner_max_sum << " fineS=" << w.fine
+                << " c1=" << w.c1 << " c2=" << w.c2
+                << " true=" << r.max_residual << " PASS" << std::endl;
     }
 }
-int main(int argc,char** argv){@autoreleasepool{try{ThreeOptions o;for(int i=1;i<argc;++i){std::string f=argv[i];auto next=[&](){if(++i>=argc)throw std::runtime_error("missing option");return std::string(argv[i]);};if(f=="--help"){std::cout<<"--size 32 --rhs 96,192 --tile-rhs 4 --mass -.10 --samples 1 --threads 8 --csw 1 --coarse-iters 8 --bottom-iters 8 --backend both|cpu|metal --methods mg3,bicgstab,smooth --csv results/threelevel32.csv --resume --check-hierarchy --validate-only --self-test --no-warmup --chroma-field BRIDGE --block EXTENT --chroma-rhs FILE --chroma-solutions PREFIX\n";return 0;}else if(f=="--size"){o.l=std::stoul(next());o.geometry_set=true;}else if(f=="--chroma-field")o.chroma_field=next();else if(f=="--chroma-rhs")o.chroma_rhs=next();else if(f=="--chroma-solutions")o.chroma_solutions=next();else if(f=="--block")o.block=std::stoul(next());else if(f=="--tile-rhs")o.tile=std::stoul(next());else if(f=="--rhs")o.rhs=list_arg(next(),192);else if(f=="--mass"){o.mass=std::stod(next());o.geometry_set=true;}else if(f=="--samples")o.samples=std::stoi(next());else if(f=="--threads")o.workers=std::stoi(next());else if(f=="--coarse-iters")o.coarse=std::stoi(next());else if(f=="--bottom-iters")o.bottom=std::stoi(next());else if(f=="--backend")o.backend=next();else if(f=="--methods")o.methods=next();else if(f=="--csv"){o.csv=next();o.csv_set=true;}else if(f=="--self-test")o.self=true;else if(f=="--validate-only")o.validate=true;else if(f=="--check-hierarchy")o.check=true;else if(f=="--no-warmup")o.warm=false;else if(f=="--resume")o.resume=true;else if(f=="--csw"){if(std::stod(next())!=1)throw std::runtime_error("requires c_sw=1");}else throw std::runtime_error("unknown flag "+f);}
-    if((!o.chroma_rhs.empty()||!o.chroma_solutions.empty())&&o.chroma_field.empty())
-        throw std::runtime_error("Chroma RHS and solution files require --chroma-field");
-    if(!o.chroma_solutions.empty()&&(o.samples!=1||o.methods!="mg3"))
-        throw std::runtime_error("Chroma solutions require one sample and --methods mg3");
-    std::unique_ptr<ChromaImport> chroma;
-    if(!o.chroma_field.empty()){
-        if(o.self||o.resume||o.geometry_set)
-            throw std::runtime_error("Chroma import supplies the extent and mass, and cannot use synthetic checkpoints");
-        if(!o.validate&&(!o.csv_set||std::filesystem::exists(o.csv)||
-                         std::filesystem::exists(o.csv+".trace.csv")))
-            throw std::runtime_error("Chroma import requires a new explicit CSV path for benchmarks");
-        chroma=std::make_unique<ChromaImport>(o.chroma_field);
-        o.l=chroma->extent;o.mass=chroma->mass;
-    }
-    if(o.self){if(!o.csv_set)o.csv="results/threelevel-self-test.csv";o.l=4;o.block=2;o.nv=2;o.nv2=2;o.tile=3;o.rhs={3,6};o.samples=1;}
-    std::sort(o.rhs.begin(),o.rhs.end());if(!o.block||o.l%o.block||o.l<4||o.l>32||(o.l/o.block)%2||o.tile<1||o.tile>12||o.samples<1||o.workers<1||o.workers>16||o.coarse<1||o.coarse>64||o.bottom<1||o.bottom>64||!(o.mass>-.5&&o.mass<1)||(o.backend!="both"&&o.backend!="cpu"&&o.backend!="metal"))throw std::runtime_error("invalid dimensions/options");for(auto n:o.rhs)if(n%o.tile)throw std::runtime_error("RHS count must be a multiple of tile");if(!std::getenv("VECLIB_MAXIMUM_THREADS")||std::string(std::getenv("VECLIB_MAXIMUM_THREADS"))!="1")throw std::runtime_error("set VECLIB_MAXIMUM_THREADS=1");
-    std::string source;for(auto file:{"kernels.metal","bicgstab.metal","clover.metal","multigrid.metal","sparse_coarse.metal","compact_clover.metal"}){std::ifstream f(file);if(!f)throw std::runtime_error("missing Metal source");source.append((std::istreambuf_iterator<char>(f)),{});source+='\n';}MetalRun metal(source);std::cout<<"GPU="<<[[metal.device name] UTF8String]<<" recommended_working_set_GiB="<<metal.device.recommendedMaxWorkingSetSize/1073741824.<<" max_buffer_GiB="<<metal.device.maxBufferLength/1073741824.<<std::endl;
-    auto import_start=Clock::now();
-    auto links=chroma?chroma->links():std::vector<M3>{};
-    if(chroma)std::cout<<"CHROMA link_import_s="<<seconds(import_start)<<std::endl;
-    CompactClover c(o.l,o.mass,o.workers,.25,std::move(links));std::cout<<"COMPACT setup_s="<<c.setup_ms/1000<<" min_clover_pivot="<<c.min_pivot<<std::endl;if(o.self)check_compact(c,metal,o.workers);
-    if(chroma)chroma->validate(c,o.workers);
-    auto start=Clock::now();
-    c.rhs(o.nv,false);Transfer h(c.parity.oe.p.rows,12,o.nv,o.l,o.block,true,o.workers,&c.parity.odd);
-    {CPUCloverSchur<double,CompactClover> op(c,o.workers);std::vector<D> inv(c.oddA.size());for(size_t i=0;i<c.oddA.size()/36;++i){M6 a;for(int j=0;j<36;++j){auto z=c.oddA[i*36+j];a[j]={z.re,z.im};}double p=1e100;auto b=invert_cholesky(a,p);for(int j=0;j<36;++j)inv[i*36+j]={b[j].real(),b[j].imag()};}h.build([&](const D* x,D* y){op.apply(x,y);},[&](const D* x,D* y){local_blocks(inv,x,y,h.rows,o.nv,o.workers);},o.self?4:8);}
-    std::cout<<"P1 basis ready n="<<h.coarse<<std::endl;BlockMatrix a1(2*o.nv,h.aggregates,o.workers);assemble_schur(a1,c,h);std::cout<<"A1 sparse ready blocks="<<a1.col.size()<<" seconds="<<a1.setup_ms/1000<<std::endl;
-    Transfer h2(a1.rows,a1.bs,o.nv2,o.l/o.block,2,false,o.workers);h2.build([&](const D* x,D* y){a1.apply(x,y,o.nv2);},[&](const D* x,D* y){a1.apply(x,y,o.nv2,true);},o.self?4:8);BlockMatrix a2(2*o.nv2,h2.aggregates,o.workers);project_matrix(a2,a1,h2);double setup=seconds(start)*1000;std::cout<<"A2 sparse ready n="<<a2.n<<" blocks="<<a2.col.size()<<" hierarchy_s="<<setup/1000<<std::endl;
-    if(o.self||o.validate||o.check){c.rhs(2);CPUCloverSchur<double,CompactClover> op(c,o.workers);check_projection(h,a1,[&](const D* x,D* y){op.apply(x,y);},"LEVEL1");check_projection(h2,a2,[&](const D* x,D* y){a1.apply(x,y,2);},"LEVEL2");check_device(h,a1,metal);check_device(h2,a2,metal);if(o.validate){std::cout<<"PASS validation only"<<std::endl;return 0;}}
-    h.release64();h2.release64();a1.release64();a2.release64();std::vector<D>().swap(c.inverseEven);std::vector<Cx<float>>().swap(c.evenA32);std::vector<D>().swap(c.w.a.truth);c.rhs(o.tile,false);c.w.a.b.resize(c.w.a.p.outputs());c.w.a.bnorm.resize(o.tile);CompactOuter outer(c.w.a,o.workers);outer.known_solution=!chroma;
-    if(o.resume){std::ifstream previous(o.csv),previous_trace(o.csv+".trace.csv");if(!previous||!previous_trace)throw std::runtime_error("resume requires CSV and trace files");std::string line;std::getline(previous,line);while(std::getline(previous,line)){std::vector<std::string> f;std::stringstream ss(line);std::string v;while(std::getline(ss,v,','))f.push_back(v);if(f.size()!=35||std::stoul(f[0])!=o.l||std::stod(f[1])!=o.mass||std::stod(f[2])!=1||std::stoul(f[3])!=o.tile||std::stoi(f[8])!=o.workers||std::stoul(f[9])!=o.nv||std::stoul(f[10])!=o.nv2||std::stoul(f[11])!=o.block||std::stoul(f[12])!=o.restart||std::stoi(f[13])!=o.coarse||std::stoi(f[14])!=o.bottom||std::stod(f[15])!=1e-10||std::stod(f[16])!=.002||std::stoul(f[4])>=o.rhs.back()||std::stoi(f[7])>=o.samples||std::stod(f[29])>1e-10||f[30].empty())throw std::runtime_error("resume configuration/acceptance mismatch");if(!o.completed.insert(record_key(f[5],f[6],std::stoi(f[7]),std::stoul(f[4]))).second)throw std::runtime_error("duplicate resume record");}std::cout<<"RESUME accepted "<<o.completed.size()<<" completed tiles"<<std::endl;}
-    std::ofstream csv(o.csv,o.resume?std::ios::app:std::ios::out),trace(o.csv+".trace.csv",o.resume?std::ios::app:std::ios::out);if(!csv||!trace)throw std::runtime_error("cannot create CSV");if(!o.resume){csv<<"extent,mass,csw,tile_rhs,offset,backend,method,trial,workers,vectors1,vectors2,block1,restart,coarse_limit,bottom_limit,tolerance,inner_tolerance,total_ms,inner_ms,residual_ms,update_ms,outer,krylov,fine_schur_calls,level1_products,level2_products,level1_krylov,level2_krylov,worst_bottom_true_residual,max_true_residual,solution_error,hierarchy_ms,workspace_ms,peak_rss_mib,metal_allocated_mib\n";trace<<"extent,mass,tile_rhs,offset,backend,method,trial,outer,max_true_residual,krylov\n";}
-    std::vector<std::string> methods;{std::stringstream s(o.methods);std::string v;while(std::getline(s,v,',')){if(v!="mg3"&&v!="bicgstab"&&v!="smooth")throw std::runtime_error("unknown method");methods.push_back(v);}}
-    if(methods.empty()||std::set<std::string>(methods.begin(),methods.end()).size()!=methods.size())throw std::runtime_error("empty or duplicate method selection");
-    for(auto backend:{std::string("metal"),std::string("cpu")}){if(o.backend!="both"&&o.backend!=backend)continue;for(const auto& method:methods){@autoreleasepool{auto begin=Clock::now();
-        if(backend=="cpu"){CPUCloverSchur<float,CompactClover> op(c,o.workers);
-            if(method=="bicgstab"){CPUBiCGStab<float> bi(c.parity.oe,o.workers);bi.stable_reductions=true;bi.progress=[](int k,double r){std::cout<<"INNER cpu BiCG iteration="<<k<<" recursive_relative="<<r<<std::endl;};uint64_t fine=0;bi.apply_override=[&](const Cx<float>* x,Cx<float>* y){++fine;op.apply(x,y);};CompactHostCorrection<decltype(bi)> correction(c,bi,o.workers);double workspace=seconds(begin)*1000;
-                measure(c,metal,outer,o,method,backend,0,workspace,[&](){fine=0;auto r=compact_solve(c,correction,outer,o.workers,2048);return std::make_pair(r,Metrics{fine});},csv,trace);
-            }else{CPUCycle pre(h,o.tile,o.workers);pre.enabled=method=="mg3";pre.product=[&](const Cx<float>* x,Cx<float>* y){op.apply(x,y);};pre.diagonal=[&](const Cx<float>* x,Cx<float>* y){local_blocks(c.inverseOdd32,x,y,h.rows,o.tile,o.workers);};
-                CPUBlockOperator op1{a1,o.tile};CPUCycle pre1(h2,o.tile,o.workers);pre1.product=[&](const Cx<float>* x,Cx<float>* y){op1.apply(x,y);};pre1.diagonal=[&](const Cx<float>* x,Cx<float>* y){a1.apply(x,y,o.tile,true);};CPUBlockCoarseSolve<BlockMatrix> bottom(a2,o.tile,o.workers,o.bottom,.1);pre1.coarse=[&](const Cx<float>* x,Cx<float>* y){bottom.solve(x,y);};CPUGenericFGMRES<CPUBlockOperator,CPUCycle> fg1(a1.n,o.tile,op1,pre1,o.workers,4);fg1.allow_inexact=true;uint64_t coarse_k=0;pre.coarse=[&](const Cx<float>* x,Cx<float>* y){std::vector<Cx<float>> input(x,x+size_t(a1.n)*o.tile);auto info=fg1.run(input,.1,o.coarse);coarse_k+=info.max_iterations;std::copy(fg1.delta.begin(),fg1.delta.end(),y);};
-                CPUGenericFGMRES<decltype(op),CPUCycle> fg(h.rows*12,o.tile,op,pre,o.workers,o.restart);fg.progress=[method](int k,double r){std::cout<<"INNER cpu "<<method<<" iteration="<<k<<" fp32_relative="<<r<<std::endl;};CompactHostCorrection<decltype(fg)> correction(c,fg,o.workers);double workspace=seconds(begin)*1000;
-                measure(c,metal,outer,o,method,backend,method=="mg3"?setup:0,workspace,[&](){pre.calls=pre.products=fg.fine_calls=pre1.products=fg1.fine_calls=coarse_k=0;bottom.reset();auto r=compact_solve(c,correction,outer,o.workers,2048);return std::make_pair(r,Metrics{pre.products+fg.fine_calls,pre1.products+fg1.fine_calls,bottom.applications,coarse_k,bottom.iterations,bottom.worst_true});},csv,trace);
-            }
-        }else{GPUCompactSchur op(metal,c);
-            if(method=="bicgstab"){GPUBiCGStab bi(metal,c.parity.oe,1,o.workers);bi.progress=[](int k,double r){std::cout<<"INNER metal BiCG iteration="<<k<<" recursive_relative="<<r<<std::endl;};uint64_t fine=0;bi.encode_override=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){++fine;op.encode(e,x,y);};CompactDeviceCorrection<decltype(bi)> correction(c,op,bi,o.workers);double workspace=seconds(begin)*1000;
-                measure(c,metal,outer,o,method,backend,0,workspace,[&](){fine=0;auto r=compact_solve(c,correction,outer,o.workers,2048);return std::make_pair(r,Metrics{fine});},csv,trace);
-            }else{GPUCycle pre(h,metal,o.tile,c.inverseOdd32);pre.enabled=method=="mg3";pre.product=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){op.encode(e,x,y);};
-                GPUBlockCoarseSolve<BlockMatrix> matrix1(a1,metal,o.tile,1,.1),bottom(a2,metal,o.tile,o.bottom,.1);GPUBlockOperator op1(matrix1);GPUCycle pre1(h2,metal,o.tile,a1.di32);pre1.product=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){op1.encode(e,x,y);};pre1.coarse=[&](id<MTLComputeCommandEncoder> e,id<MTLBuffer> x,id<MTLBuffer> y){bottom.encode(e,x,y);};pre1.check=[&](){bottom.check();};GPUGenericFGMRES<GPUBlockOperator,GPUCycle> fg1(a1.n,o.tile,op1,pre1,4);fg1.allow_inexact=true;uint64_t coarse_k=0;pre.blocking_coarse=[&](id<MTLBuffer> x,id<MTLBuffer> y){auto info=fg1.run_device(x,.1,o.coarse);coarse_k+=info.max_iterations;pre.copy(fg1.delta,y,size_t(a1.n)*o.tile);};
-                GPUGenericFGMRES<GPUCompactSchur,GPUCycle> fg(h.rows*12,o.tile,op,pre,o.restart);if(pre.enabled)fg.blocking_pre=[&](id<MTLBuffer> x,id<MTLBuffer> y){pre.apply_device(x,y);};fg.progress=[method](int k,double r){std::cout<<"INNER metal "<<method<<" iteration="<<k<<" fp32_relative="<<r<<std::endl;};CompactDeviceCorrection<decltype(fg)> correction(c,op,fg,o.workers);double workspace=seconds(begin)*1000;
-                measure(c,metal,outer,o,method,backend,method=="mg3"?setup:0,workspace,[&](){pre.calls=pre.products=fg.fine_calls=coarse_k=matrix1.applications=0;bottom.reset();auto r=compact_solve(c,correction,outer,o.workers,2048);return std::make_pair(r,Metrics{pre.products+fg.fine_calls,matrix1.applications,bottom.applications,coarse_k,bottom.iterations,bottom.worst_true});},csv,trace);
-            }
+int main(int argc, char **argv) {
+  @autoreleasepool {
+    try {
+      ThreeOptions o;
+      for (int i = 1; i < argc; ++i) {
+        std::string f = argv[i];
+        auto next = [&]() {
+          if (++i >= argc)
+            throw std::runtime_error("missing option");
+          return std::string(argv[i]);
+        };
+        if (f == "--help") {
+          std::cout << "--size 32 --rhs 96,192 --tile-rhs 4 --mass -.10 "
+                       "--samples 1 --threads 8 --csw 1 --coarse-iters 8 "
+                       "--bottom-iters 8 --backend both|cpu|metal --methods "
+                       "mg3,bicgstab,smooth --csv results/threelevel32.csv "
+                       "--resume --check-hierarchy --validate-only --self-test "
+                       "--no-warmup --chroma-field BRIDGE --block EXTENT "
+                       "--chroma-rhs FILE --chroma-solutions PREFIX\n";
+          return 0;
+        } else if (f == "--size") {
+          o.l = std::stoul(next());
+          o.geometry_set = true;
+        } else if (f == "--chroma-field")
+          o.chroma_field = next();
+        else if (f == "--chroma-rhs")
+          o.chroma_rhs = next();
+        else if (f == "--chroma-solutions")
+          o.chroma_solutions = next();
+        else if (f == "--block")
+          o.block = std::stoul(next());
+        else if (f == "--tile-rhs")
+          o.tile = std::stoul(next());
+        else if (f == "--rhs")
+          o.rhs = list_arg(next(), 192);
+        else if (f == "--mass") {
+          o.mass = std::stod(next());
+          o.geometry_set = true;
+        } else if (f == "--samples")
+          o.samples = std::stoi(next());
+        else if (f == "--threads")
+          o.workers = std::stoi(next());
+        else if (f == "--coarse-iters")
+          o.coarse = std::stoi(next());
+        else if (f == "--bottom-iters")
+          o.bottom = std::stoi(next());
+        else if (f == "--backend")
+          o.backend = next();
+        else if (f == "--methods")
+          o.methods = next();
+        else if (f == "--csv") {
+          o.csv = next();
+          o.csv_set = true;
+        } else if (f == "--self-test")
+          o.self = true;
+        else if (f == "--validate-only")
+          o.validate = true;
+        else if (f == "--check-hierarchy")
+          o.check = true;
+        else if (f == "--no-warmup")
+          o.warm = false;
+        else if (f == "--resume")
+          o.resume = true;
+        else if (f == "--csw") {
+          if (std::stod(next()) != 1)
+            throw std::runtime_error("requires c_sw=1");
+        } else
+          throw std::runtime_error("unknown flag " + f);
+      }
+      if ((!o.chroma_rhs.empty() || !o.chroma_solutions.empty()) &&
+          o.chroma_field.empty())
+        throw std::runtime_error(
+            "Chroma RHS and solution files require --chroma-field");
+      if (!o.chroma_solutions.empty() && (o.samples != 1 || o.methods != "mg3"))
+        throw std::runtime_error(
+            "Chroma solutions require one sample and --methods mg3");
+      std::unique_ptr<ChromaImport> chroma;
+      if (!o.chroma_field.empty()) {
+        if (o.self || o.resume || o.geometry_set)
+          throw std::runtime_error(
+              "Chroma import supplies the extent and mass, and cannot use "
+              "synthetic checkpoints");
+        if (!o.validate && (!o.csv_set || std::filesystem::exists(o.csv) ||
+                            std::filesystem::exists(o.csv + ".trace.csv")))
+          throw std::runtime_error(
+              "Chroma import requires a new explicit CSV path for benchmarks");
+        chroma = std::make_unique<ChromaImport>(o.chroma_field);
+        o.l = chroma->extent;
+        o.mass = chroma->mass;
+      }
+      if (o.self) {
+        if (!o.csv_set)
+          o.csv = "results/threelevel-self-test.csv";
+        o.l = 4;
+        o.block = 2;
+        o.nv = 2;
+        o.nv2 = 2;
+        o.tile = 3;
+        o.rhs = {3, 6};
+        o.samples = 1;
+      }
+      std::sort(o.rhs.begin(), o.rhs.end());
+      if (!o.block || o.l % o.block || o.l < 4 || o.l > 32 ||
+          (o.l / o.block) % 2 || o.tile < 1 || o.tile > 12 || o.samples < 1 ||
+          o.workers < 1 || o.workers > 16 || o.coarse < 1 || o.coarse > 64 ||
+          o.bottom < 1 || o.bottom > 64 || !(o.mass > -.5 && o.mass < 1) ||
+          (o.backend != "both" && o.backend != "cpu" && o.backend != "metal"))
+        throw std::runtime_error("invalid dimensions/options");
+      for (auto n : o.rhs)
+        if (n % o.tile)
+          throw std::runtime_error("RHS count must be a multiple of tile");
+      if (!std::getenv("VECLIB_MAXIMUM_THREADS") ||
+          std::string(std::getenv("VECLIB_MAXIMUM_THREADS")) != "1")
+        throw std::runtime_error("set VECLIB_MAXIMUM_THREADS=1");
+      std::string source;
+      for (auto file :
+           {"kernels.metal", "bicgstab.metal", "clover.metal",
+            "multigrid.metal", "sparse_coarse.metal", "compact_clover.metal"}) {
+        std::ifstream f(file);
+        if (!f)
+          throw std::runtime_error("missing Metal source");
+        source.append((std::istreambuf_iterator<char>(f)), {});
+        source += '\n';
+      }
+      MetalRun metal(source);
+      std::cout << "GPU=" << [[metal.device name] UTF8String]
+                << " recommended_working_set_GiB="
+                << metal.device.recommendedMaxWorkingSetSize / 1073741824.
+                << " max_buffer_GiB="
+                << metal.device.maxBufferLength / 1073741824. << std::endl;
+      auto import_start = Clock::now();
+      auto links = chroma ? chroma->links() : std::vector<M3>{};
+      if (chroma)
+        std::cout << "CHROMA link_import_s=" << seconds(import_start)
+                  << std::endl;
+      CompactClover c(o.l, o.mass, o.workers, .25, std::move(links));
+      std::cout << "COMPACT setup_s=" << c.setup_ms / 1000
+                << " min_clover_pivot=" << c.min_pivot << std::endl;
+      if (o.self)
+        check_compact(c, metal, o.workers);
+      if (chroma)
+        chroma->validate(c, o.workers);
+      auto start = Clock::now();
+      c.rhs(o.nv, false);
+      Transfer h(c.parity.oe.p.rows, 12, o.nv, o.l, o.block, true, o.workers,
+                 &c.parity.odd);
+      {
+        CPUCloverSchur<double, CompactClover> op(c, o.workers);
+        std::vector<D> inv(c.oddA.size());
+        for (size_t i = 0; i < c.oddA.size() / 36; ++i) {
+          M6 a;
+          for (int j = 0; j < 36; ++j) {
+            auto z = c.oddA[i * 36 + j];
+            a[j] = {z.re, z.im};
+          }
+          double p = 1e100;
+          auto b = invert_cholesky(a, p);
+          for (int j = 0; j < 36; ++j)
+            inv[i * 36 + j] = {b[j].real(), b[j].imag()};
         }
-    }}}
-    std::cout<<"PASS all full FP64 original-equation residual checks"<<std::endl;return 0;
-}catch(const std::exception& e){std::cerr<<"ERROR: "<<e.what()<<std::endl;return 1;}}}
+        h.build([&](const D *x, D *y) { op.apply(x, y); },
+                [&](const D *x, D *y) {
+                  local_blocks(inv, x, y, h.rows, o.nv, o.workers);
+                },
+                o.self ? 4 : 8);
+      }
+      std::cout << "P1 basis ready n=" << h.coarse << std::endl;
+      BlockMatrix a1(2 * o.nv, h.aggregates, o.workers);
+      assemble_schur(a1, c, h);
+      std::cout << "A1 sparse ready blocks=" << a1.col.size()
+                << " seconds=" << a1.setup_ms / 1000 << std::endl;
+      Transfer h2(a1.rows, a1.bs, o.nv2, o.l / o.block, 2, false, o.workers);
+      h2.build([&](const D *x, D *y) { a1.apply(x, y, o.nv2); },
+               [&](const D *x, D *y) { a1.apply(x, y, o.nv2, true); },
+               o.self ? 4 : 8);
+      BlockMatrix a2(2 * o.nv2, h2.aggregates, o.workers);
+      project_matrix(a2, a1, h2);
+      double setup = seconds(start) * 1000;
+      std::cout << "A2 sparse ready n=" << a2.n << " blocks=" << a2.col.size()
+                << " hierarchy_s=" << setup / 1000 << std::endl;
+      if (o.self || o.validate || o.check) {
+        c.rhs(2);
+        CPUCloverSchur<double, CompactClover> op(c, o.workers);
+        check_projection(
+            h, a1, [&](const D *x, D *y) { op.apply(x, y); }, "LEVEL1");
+        check_projection(
+            h2, a2, [&](const D *x, D *y) { a1.apply(x, y, 2); }, "LEVEL2");
+        check_device(h, a1, metal);
+        check_device(h2, a2, metal);
+        if (o.validate) {
+          std::cout << "PASS validation only" << std::endl;
+          return 0;
+        }
+      }
+      h.release64();
+      h2.release64();
+      a1.release64();
+      a2.release64();
+      std::vector<D>().swap(c.inverseEven);
+      std::vector<Cx<float>>().swap(c.evenA32);
+      std::vector<D>().swap(c.w.a.truth);
+      c.rhs(o.tile, false);
+      c.w.a.b.resize(c.w.a.p.outputs());
+      c.w.a.bnorm.resize(o.tile);
+      CompactOuter outer(c.w.a, o.workers);
+      outer.known_solution = !chroma;
+      if (o.resume) {
+        std::ifstream previous(o.csv), previous_trace(o.csv + ".trace.csv");
+        if (!previous || !previous_trace)
+          throw std::runtime_error("resume requires CSV and trace files");
+        std::string line;
+        std::getline(previous, line);
+        while (std::getline(previous, line)) {
+          std::vector<std::string> f;
+          std::stringstream ss(line);
+          std::string v;
+          while (std::getline(ss, v, ','))
+            f.push_back(v);
+          if (f.size() != 35 || std::stoul(f[0]) != o.l ||
+              std::stod(f[1]) != o.mass || std::stod(f[2]) != 1 ||
+              std::stoul(f[3]) != o.tile || std::stoi(f[8]) != o.workers ||
+              std::stoul(f[9]) != o.nv || std::stoul(f[10]) != o.nv2 ||
+              std::stoul(f[11]) != o.block || std::stoul(f[12]) != o.restart ||
+              std::stoi(f[13]) != o.coarse || std::stoi(f[14]) != o.bottom ||
+              std::stod(f[15]) != 1e-10 || std::stod(f[16]) != .002 ||
+              std::stoul(f[4]) >= o.rhs.back() ||
+              std::stoi(f[7]) >= o.samples || std::stod(f[29]) > 1e-10 ||
+              f[30].empty())
+            throw std::runtime_error(
+                "resume configuration/acceptance mismatch");
+          if (!o.completed
+                   .insert(record_key(f[5], f[6], std::stoi(f[7]),
+                                      std::stoul(f[4])))
+                   .second)
+            throw std::runtime_error("duplicate resume record");
+        }
+        std::cout << "RESUME accepted " << o.completed.size()
+                  << " completed tiles" << std::endl;
+      }
+      std::ofstream csv(o.csv, o.resume ? std::ios::app : std::ios::out),
+          trace(o.csv + ".trace.csv", o.resume ? std::ios::app : std::ios::out);
+      if (!csv || !trace)
+        throw std::runtime_error("cannot create CSV");
+      if (!o.resume) {
+        csv << "extent,mass,csw,tile_rhs,offset,backend,method,trial,workers,"
+               "vectors1,vectors2,block1,restart,coarse_limit,bottom_limit,"
+               "tolerance,inner_tolerance,total_ms,inner_ms,residual_ms,update_"
+               "ms,outer,krylov,fine_schur_calls,level1_products,level2_"
+               "products,level1_krylov,level2_krylov,worst_bottom_true_"
+               "residual,max_true_residual,solution_error,hierarchy_ms,"
+               "workspace_ms,peak_rss_mib,metal_allocated_mib\n";
+        trace << "extent,mass,tile_rhs,offset,backend,method,trial,outer,max_"
+                 "true_residual,krylov\n";
+      }
+      std::vector<std::string> methods;
+      {
+        std::stringstream s(o.methods);
+        std::string v;
+        while (std::getline(s, v, ',')) {
+          if (v != "mg3" && v != "bicgstab" && v != "smooth")
+            throw std::runtime_error("unknown method");
+          methods.push_back(v);
+        }
+      }
+      if (methods.empty() ||
+          std::set<std::string>(methods.begin(), methods.end()).size() !=
+              methods.size())
+        throw std::runtime_error("empty or duplicate method selection");
+      for (auto backend : {std::string("metal"), std::string("cpu")}) {
+        if (o.backend != "both" && o.backend != backend)
+          continue;
+        for (const auto &method : methods) {
+          @autoreleasepool {
+            auto begin = Clock::now();
+            if (backend == "cpu") {
+              CPUCloverSchur<float, CompactClover> op(c, o.workers);
+              if (method == "bicgstab") {
+                CPUBiCGStab<float> bi(c.parity.oe, o.workers);
+                bi.stable_reductions = true;
+                bi.progress = [](int k, double r) {
+                  std::cout << "INNER cpu BiCG iteration=" << k
+                            << " recursive_relative=" << r << std::endl;
+                };
+                uint64_t fine = 0;
+                bi.apply_override = [&](const Cx<float> *x, Cx<float> *y) {
+                  ++fine;
+                  op.apply(x, y);
+                };
+                CompactHostCorrection<decltype(bi)> correction(c, bi,
+                                                               o.workers);
+                double workspace = seconds(begin) * 1000;
+                measure(
+                    c, metal, outer, o, method, backend, 0, workspace,
+                    [&]() {
+                      fine = 0;
+                      auto r =
+                          compact_solve(c, correction, outer, o.workers, 2048);
+                      return std::make_pair(r, Metrics{fine});
+                    },
+                    csv, trace);
+              } else {
+                CPUCycle pre(h, o.tile, o.workers);
+                pre.enabled = method == "mg3";
+                pre.product = [&](const Cx<float> *x, Cx<float> *y) {
+                  op.apply(x, y);
+                };
+                pre.diagonal = [&](const Cx<float> *x, Cx<float> *y) {
+                  local_blocks(c.inverseOdd32, x, y, h.rows, o.tile, o.workers);
+                };
+                CPUBlockOperator op1{a1, o.tile};
+                CPUCycle pre1(h2, o.tile, o.workers);
+                pre1.product = [&](const Cx<float> *x, Cx<float> *y) {
+                  op1.apply(x, y);
+                };
+                pre1.diagonal = [&](const Cx<float> *x, Cx<float> *y) {
+                  a1.apply(x, y, o.tile, true);
+                };
+                CPUBlockCoarseSolve<BlockMatrix> bottom(a2, o.tile, o.workers,
+                                                        o.bottom, .1);
+                pre1.coarse = [&](const Cx<float> *x, Cx<float> *y) {
+                  bottom.solve(x, y);
+                };
+                CPUGenericFGMRES<CPUBlockOperator, CPUCycle> fg1(
+                    a1.n, o.tile, op1, pre1, o.workers, 4);
+                fg1.allow_inexact = true;
+                uint64_t coarse_k = 0;
+                pre.coarse = [&](const Cx<float> *x, Cx<float> *y) {
+                  std::vector<Cx<float>> input(x, x + size_t(a1.n) * o.tile);
+                  auto info = fg1.run(input, .1, o.coarse);
+                  coarse_k += info.max_iterations;
+                  std::copy(fg1.delta.begin(), fg1.delta.end(), y);
+                };
+                CPUGenericFGMRES<decltype(op), CPUCycle> fg(
+                    h.rows * 12, o.tile, op, pre, o.workers, o.restart);
+                fg.progress = [method](int k, double r) {
+                  std::cout << "INNER cpu " << method << " iteration=" << k
+                            << " fp32_relative=" << r << std::endl;
+                };
+                CompactHostCorrection<decltype(fg)> correction(c, fg,
+                                                               o.workers);
+                double workspace = seconds(begin) * 1000;
+                measure(
+                    c, metal, outer, o, method, backend,
+                    method == "mg3" ? setup : 0, workspace,
+                    [&]() {
+                      pre.calls = pre.products = fg.fine_calls = pre1.products =
+                          fg1.fine_calls = coarse_k = 0;
+                      bottom.reset();
+                      auto r =
+                          compact_solve(c, correction, outer, o.workers, 2048);
+                      return std::make_pair(
+                          r, Metrics{pre.products + fg.fine_calls,
+                                     pre1.products + fg1.fine_calls,
+                                     bottom.applications, coarse_k,
+                                     bottom.iterations, bottom.worst_true});
+                    },
+                    csv, trace);
+              }
+            } else {
+              GPUCompactSchur op(metal, c);
+              if (method == "bicgstab") {
+                GPUBiCGStab bi(metal, c.parity.oe, 1, o.workers);
+                bi.progress = [](int k, double r) {
+                  std::cout << "INNER metal BiCG iteration=" << k
+                            << " recursive_relative=" << r << std::endl;
+                };
+                uint64_t fine = 0;
+                bi.encode_override = [&](id<MTLComputeCommandEncoder> e,
+                                         id<MTLBuffer> x, id<MTLBuffer> y) {
+                  ++fine;
+                  op.encode(e, x, y);
+                };
+                CompactDeviceCorrection<decltype(bi)> correction(c, op, bi,
+                                                                 o.workers);
+                double workspace = seconds(begin) * 1000;
+                measure(
+                    c, metal, outer, o, method, backend, 0, workspace,
+                    [&]() {
+                      fine = 0;
+                      auto r =
+                          compact_solve(c, correction, outer, o.workers, 2048);
+                      return std::make_pair(r, Metrics{fine});
+                    },
+                    csv, trace);
+              } else {
+                GPUCycle pre(h, metal, o.tile, c.inverseOdd32);
+                pre.enabled = method == "mg3";
+                pre.product = [&](id<MTLComputeCommandEncoder> e,
+                                  id<MTLBuffer> x,
+                                  id<MTLBuffer> y) { op.encode(e, x, y); };
+                GPUBlockCoarseSolve<BlockMatrix> matrix1(a1, metal, o.tile, 1,
+                                                         .1),
+                    bottom(a2, metal, o.tile, o.bottom, .1);
+                GPUBlockOperator op1(matrix1);
+                GPUCycle pre1(h2, metal, o.tile, a1.di32);
+                pre1.product = [&](id<MTLComputeCommandEncoder> e,
+                                   id<MTLBuffer> x,
+                                   id<MTLBuffer> y) { op1.encode(e, x, y); };
+                pre1.coarse = [&](id<MTLComputeCommandEncoder> e,
+                                  id<MTLBuffer> x,
+                                  id<MTLBuffer> y) { bottom.encode(e, x, y); };
+                pre1.check = [&]() { bottom.check(); };
+                GPUGenericFGMRES<GPUBlockOperator, GPUCycle> fg1(a1.n, o.tile,
+                                                                 op1, pre1, 4);
+                fg1.allow_inexact = true;
+                uint64_t coarse_k = 0;
+                pre.blocking_coarse = [&](id<MTLBuffer> x, id<MTLBuffer> y) {
+                  auto info = fg1.run_device(x, .1, o.coarse);
+                  coarse_k += info.max_iterations;
+                  pre.copy(fg1.delta, y, size_t(a1.n) * o.tile);
+                };
+                GPUGenericFGMRES<GPUCompactSchur, GPUCycle> fg(
+                    h.rows * 12, o.tile, op, pre, o.restart);
+                if (pre.enabled)
+                  fg.blocking_pre = [&](id<MTLBuffer> x, id<MTLBuffer> y) {
+                    pre.apply_device(x, y);
+                  };
+                fg.progress = [method](int k, double r) {
+                  std::cout << "INNER metal " << method << " iteration=" << k
+                            << " fp32_relative=" << r << std::endl;
+                };
+                CompactDeviceCorrection<decltype(fg)> correction(c, op, fg,
+                                                                 o.workers);
+                double workspace = seconds(begin) * 1000;
+                measure(
+                    c, metal, outer, o, method, backend,
+                    method == "mg3" ? setup : 0, workspace,
+                    [&]() {
+                      pre.calls = pre.products = fg.fine_calls = coarse_k =
+                          matrix1.applications = 0;
+                      bottom.reset();
+                      auto r =
+                          compact_solve(c, correction, outer, o.workers, 2048);
+                      return std::make_pair(
+                          r, Metrics{pre.products + fg.fine_calls,
+                                     matrix1.applications, bottom.applications,
+                                     coarse_k, bottom.iterations,
+                                     bottom.worst_true});
+                    },
+                    csv, trace);
+              }
+            }
+          }
+        }
+      }
+      std::cout << "PASS all full FP64 original-equation residual checks"
+                << std::endl;
+      return 0;
+    } catch (const std::exception &e) {
+      std::cerr << "ERROR: " << e.what() << std::endl;
+      return 1;
+    }
+  }
+}
