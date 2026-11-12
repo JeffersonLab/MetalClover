@@ -1,0 +1,6 @@
+{
+  "file": "benchmark-source.patch.gz",
+  "uncompressed_sha256": "9cf4ac51f2482ae089ded4115c78febaf0e97fb295e0652ee50b5af4ad4baf9e",
+  "base_commit": "369c3dcf680f1588838e555bb87ba7b749691540",
+  "apply": "gzip -dc benchmark-source.patch.gz | git apply"
+}

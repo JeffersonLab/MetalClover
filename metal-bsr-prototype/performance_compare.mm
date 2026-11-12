@@ -1,10 +1,13 @@
 #include "compact_solve.hpp"
 #include "production_bridge.hpp"
 #include "three_level.hpp"
+
 #include <filesystem>
 #include <iomanip>
 #include <sstream>
 #include <sys/resource.h>
+
+using namespace MetalCloverEnv;
 
 namespace {
   constexpr double target = 1e-12;

@@ -27,6 +27,7 @@ Chroma/QDP++ developers for these foundations.
 
 The source and reproducible numerical results are in [metal-bsr-prototype](metal-bsr-prototype/).
 
+- [Near-null/SVD MG on 32³×256: 4.61× warm solve speedup and original Chroma FP64 checks](metal-bsr-prototype/NEAR_NULL_SVD32.md)
 - [Real 32³×256 low-memory LDL clover, tuned MG timings, and native FP64 checks](metal-bsr-prototype/LOW_MEMORY.md)
 - [Real 24³×256 MG tuning and original Chroma FP64 validation](metal-bsr-prototype/MG_TUNING_REAL.md)
 - [Homogeneous near-null solves and SVD-compressed MG basis](metal-bsr-prototype/NEAR_NULL_SVD.md)
@@ -35,6 +36,29 @@ The source and reproducible numerical results are in [metal-bsr-prototype](metal
 
 Large gauge fields, generated binaries, and saved solution fields are excluded from Git;
 text results, input/output hashes, source, and reproduction instructions are versioned.
+
+## Library and Chroma integration
+
+Build the installable Metal library with Apple Clang:
+
+```sh
+make install PREFIX=/path/to/metal-prefix
+```
+
+All C++ library types and routines are in `MetalCloverEnv`. The public header
+`metalclover/metalclover.h` provides a C ABI usable from GCC-built Chroma,
+separate full and odd-Schur solve interfaces, arrays of source/solution pointers,
+and structured residual, iteration, timing and nominal operator-work results.
+One context owns and reuses one hierarchy and GPU workspace; array solves
+process one GPU RHS at a time. The caller owns the source and solution arrays.
+See [interfaces and FLOP accounting](metal-bsr-prototype/OPERATOR_WORK.md).
+
+The Chroma integration on `rge/devel-datalib-reorg` enables
+`MetalBiCGClover` and `MetalMGClover` with `--with-metal=/path/to/metal-prefix`.
+It implements the vector SystemSolver interface used by the SuperbBLAS
+propagator/distillation measurement, including native even/odd reduction and
+reconstruction. Each refinement uses the supplied original Chroma FP64
+operator. See Chroma's `docs/metal-clover.md` for XML and the real-gauge harness.
 
 ## Formatting and continuous integration
 

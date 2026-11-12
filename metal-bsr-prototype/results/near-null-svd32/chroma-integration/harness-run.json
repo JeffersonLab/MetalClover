@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover",
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+    "/private/tmp/mg-null-metadata/correctness12/action.xml",
+    "3,3,3,8"
+  ],
+  "exit": 0,
+  "seconds": 134.57618021965027,
+  "environment": {
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  }
+}

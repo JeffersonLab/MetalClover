@@ -3,7 +3,10 @@
 #include "actions/ferm/linop/lwldslash_w.h"
 #include "chromabase.h"
 #include "production_bridge.hpp"
+
 #include <iomanip>
+
+using namespace MetalCloverEnv;
 
 static_assert(BASE_PRECISION == 64,
               "Verification requires FP64 action parameters");

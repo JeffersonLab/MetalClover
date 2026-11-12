@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/private/tmp/mg-fit32.bridge",
+    "bytes": 6442451024,
+    "sha256": "5c26360f3d32f7bbd27c4d50037aea2c6b9c6b60ae0e0ed66ab7f28b34c796c5"
+  },
+  {
+    "path": "/Users/admin/Downloads/download/prop_tests/szscl21_32_256_b1p50_t_x4p300_um0p0860_sm0p0743_n1p265_cfg_1000a.lime",
+    "bytes": 2415945208,
+    "sha256": "668d86198fed92f4f34414e70279ec942fb6da080d056f4393dc8ba68ec56298"
+  },
+  {
+    "path": "/private/tmp/mg-null32/near.svd.csv",
+    "bytes": 25027993,
+    "sha256": "1a270394b24bfad89ea142d26a4369c53de0595f5f4d8c241a44e71be6afe6ee"
+  },
+  {
+    "path": "/private/tmp/mg-null32/bicg.metal-bicgstab.rhs0.bin",
+    "bytes": 1610612736,
+    "sha256": "8d32020e8eb425f5d9f5288dcc6f64131402397ea2a19037e4dd70256bdf7f4a"
+  },
+  {
+    "path": "/private/tmp/mg-null32/bicg.metal-bicgstab.rhs1.bin",
+    "bytes": 1610612736,
+    "sha256": "690ba25f55a5f66d1f887e37c95a731d3413d08adf1c476e473ec0deabca36a7"
+  },
+  {
+    "path": "/private/tmp/mg-null32/near.metal-mg.rhs0.bin",
+    "bytes": 1610612736,
+    "sha256": "873c3644eada2ce2b9e944ae17f307bfdaa27708033001dedeeb4d7bc71b7b44"
+  },
+  {
+    "path": "/private/tmp/mg-null32/near.metal-mg.rhs1.bin",
+    "bytes": 1610612736,
+    "sha256": "79ac5618e47abe6ef3a9bb23c6224a92f30f9559afff0c3c4b02568137712cf7"
+  }
+]

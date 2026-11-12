@@ -1,0 +1,208 @@
+{
+  "base_branch": "rge/devel-datalib-reorg",
+  "base_commit": "e43d28927117ce672088106965a823e42947cfc6",
+  "configuration": "CPU FP64 QDP++ MPI (one rank), SuperbBLAS MPI, Apple Clang C++20, no PRIMME",
+  "metal_prefix": "/private/tmp/metalclover-install",
+  "factory_names": [
+    "MetalBiCGClover",
+    "MetalMGClover"
+  ],
+  "checks": {
+    "without_metal_configure": true,
+    "with_metal_configure": true,
+    "without_metal_factory_aggregate_compile": true,
+    "native_real_gauge_harness_compile": true,
+    "full_fresh_build": true,
+    "harness_link": true,
+    "real12_native_array_distillation_harness": true,
+    "all_original_FP64_residuals_le_1e_minus12": true
+  },
+  "exact_user_clang_format_sha256": "a3c37d019d81b4d97a24c1a6fe44f95ec09e559dbe31495b6955ce2726db68d6",
+  "configure_argv": "--with-qdp=/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi --with-datalib=/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb --with-superbblas=/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi --with-gmp=/opt/homebrew/opt/gmp --disable-cpp-wilson-dslash --enable-testcase-runner=trivial 'CXXFLAGS=-O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include' 'LDFLAGS=-framework Accelerate -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp' --prefix=/private/tmp/chroma-metal-validation/install --with-metal=/private/tmp/metalclover-install",
+  "maximum_native_operator_probe_relative": 1.82490493260258e-16,
+  "maximum_checked_relative_residual": 2.3533913177178173e-14,
+  "records": {
+    "HARNESS": [
+      {
+        "solver": "MetalBiCGClover",
+        "subset": "full",
+        "rhs": "0",
+        "K": "366",
+        "relative": "1.2621407385533173e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "subset": "full",
+        "rhs": "1",
+        "K": "366",
+        "relative": "1.9123136702011026e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalMGClover",
+        "subset": "full",
+        "rhs": "0",
+        "K": "78",
+        "relative": "6.9777132243767736e-15",
+        "bicg_mg_difference": "2.7301699923177526e-13"
+      },
+      {
+        "solver": "MetalMGClover",
+        "subset": "full",
+        "rhs": "1",
+        "K": "78",
+        "relative": "7.8548851165440858e-15",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "subset": "odd",
+        "rhs": "0",
+        "K": "368",
+        "relative": "2.197197405906398e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "subset": "odd",
+        "rhs": "1",
+        "K": "370",
+        "relative": "1.8810635516558317e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalMGClover",
+        "subset": "odd",
+        "rhs": "0",
+        "K": "78",
+        "relative": "8.3149785829715108e-15",
+        "bicg_mg_difference": "2.5959725842435421e-13"
+      },
+      {
+        "solver": "MetalMGClover",
+        "subset": "odd",
+        "rhs": "1",
+        "K": "78",
+        "relative": "9.3642261558692658e-15",
+        "bicg_mg_difference": "0"
+      }
+    ],
+    "RECONSTRUCTED": [
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "0",
+        "full_relative": "1.8432630272114915e-14"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "1",
+        "full_relative": "1.5775181094947021e-14"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "0",
+        "full_relative": "6.9793426480476669e-15"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "1",
+        "full_relative": "7.8562752232565149e-15"
+      }
+    ],
+    "QPROP_ARRAY": [
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "0",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "1.0171233524328811e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "1.4606040591956856e-14",
+        "bicg_mg_difference": "0"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "0",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "9.5226911899651922e-15",
+        "bicg_mg_difference": "1.6912172149685565e-13"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "6.9628575221140456e-15",
+        "bicg_mg_difference": "1.8502032677149974e-13"
+      }
+    ],
+    "SUPERB_ARRAY": [
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "0",
+        "max_rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "2.3533913177178173e-14"
+      },
+      {
+        "solver": "MetalBiCGClover",
+        "rhs": "1",
+        "max_rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "1.9852583463295439e-14"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "0",
+        "max_rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "1.1768151964698481e-14"
+      },
+      {
+        "solver": "MetalMGClover",
+        "rhs": "1",
+        "max_rhs": "1",
+        "source_spin": "3",
+        "t_source": "80",
+        "full_relative": "7.0229406982369641e-15"
+      }
+    ]
+  },
+  "run": {
+    "argv": [
+      "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover",
+      "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+      "/private/tmp/mg-null-metadata/correctness12/action.xml",
+      "3,3,3,8"
+    ],
+    "exit": 0,
+    "seconds": 134.57618021965027,
+    "environment": {
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "source_hashes": {
+    "lib/actions/ferm/invert/metal_solvers/syssolver_linop_metal_clover.h": "28b569a3c71231627dd30e921f22144264e9041caad165a26961821802dd8eb1",
+    "lib/actions/ferm/invert/metal_solvers/syssolver_linop_metal_clover.cc": "05d848726b6352131e41aeab45c4cd71c7f6d07084d8e6ff89be6a489f9050f0",
+    "lib/util/ferm/mgproton.cc": "85701b6c0550cd6924bf216972ef29cca44bd92b726bc6fe5ce5e601ea1d8890",
+    "mainprogs/tests/t_metal_clover.cc": "e45d985ec779ab76dbc3336e63a3cb84f74e20940312ee52c754b10e1c4a557e"
+  },
+  "binary_sha256": "dd900d7ff4dfaaf9707f6f5b95d37212edef2df199869e540d10862265e731e5",
+  "input_hashes": {
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime": "0d1191873629673fb37b55e75deb291b7c0a8cc66073d2d1ec61dec4275a7afe",
+    "/private/tmp/mg-null-metadata/correctness12/action.xml": "ce64a92842bccf803c0097e4bbe1e6907d6c63386db1496ff3536462f3fe0780"
+  },
+  "chroma_commit": "0c73a0c05d6e127898dbea1841ca296cbd45c8e1"
+}

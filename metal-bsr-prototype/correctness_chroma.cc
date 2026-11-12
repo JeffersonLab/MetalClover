@@ -4,9 +4,12 @@
 #include "actions/ferm/linop/unprec_clover_linop_w.h"
 #include "chromabase.h"
 #include "production_bridge.hpp"
+
 #include "util/gauge/reunit.h"
 #include <chrono>
 #include <iomanip>
+
+using namespace MetalCloverEnv;
 
 static_assert(BASE_PRECISION == 64, "Independent reference must be FP64");
 namespace {

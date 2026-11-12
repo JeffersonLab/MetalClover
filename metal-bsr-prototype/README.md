@@ -383,3 +383,18 @@ GPU, and a fixed operator/input during each timing sample. It does not implement
 conjugate transpose, general alpha/beta, MPI, precision conversion, tensor
 permutations, solver dependencies, or SuperbBLAS's allocation/stream interfaces.
 Those remain work for a full backend.
+
+The installable C ABI and the native Chroma integration are described in
+[OPERATOR_WORK.md](OPERATOR_WORK.md). It exposes separate full and odd-Schur
+solve calls, FP64 reduction/reconstruction helpers and a structured solve
+result with explicitly scoped operator-work rates. Build with `make library`
+and install with `make install PREFIX=/path/to/metal-prefix`. Chroma's
+`rge/devel-datalib-reorg` integration uses `--with-metal=/path/to/metal-prefix`
+and the SystemSolver names `MetalBiCGClover` and `MetalMGClover`.
+
+The completed [32³×256 near-null/SVD comparison](NEAR_NULL_SVD32.md) fits
+the real mass −0.0860 field in 32 GiB, reuses one hierarchy, and verifies
+each solution with the original Chroma CPU FP64 operator at 1e-12.
+The array interfaces accept caller-owned solution/source vectors and process
+one GPU RHS at a time with that same hierarchy. All C++ library routines and
+types are in `MetalCloverEnv`; the installed C ABI keeps prefixed C symbols.

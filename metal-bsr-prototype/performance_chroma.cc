@@ -4,11 +4,14 @@
 #include "actions/ferm/linop/eoprec_clover_linop_w.h"
 #include "chromabase.h"
 #include "production_bridge.hpp"
+
 #include <chrono>
 #include <filesystem>
 #include <iomanip>
 #include <memory>
 #include <sys/resource.h>
+
+using namespace MetalCloverEnv;
 
 static_assert(BASE_PRECISION == 64, "Native outer operator must be FP64");
 namespace {

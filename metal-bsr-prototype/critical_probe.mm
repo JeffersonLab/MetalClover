@@ -1,5 +1,7 @@
 #include "sparse_rhs.hpp"
 
+using namespace MetalCloverEnv;
+
 using Vec = std::vector<D>;
 struct SpectralProbe {
   CloverSystem c;

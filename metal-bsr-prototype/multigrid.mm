@@ -1,4 +1,7 @@
 #include "mg_checks.hpp"
+
+using namespace MetalCloverEnv;
+
 int main(int argc, char **argv) {
   @autoreleasepool {
     try {

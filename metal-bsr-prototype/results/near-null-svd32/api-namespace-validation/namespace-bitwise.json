@@ -1,0 +1,14 @@
+[
+  {
+    "rhs": 0,
+    "new_sha256": "b20fad024fcee6be13de0d5e19b2f8c5af7900ccc38b8b69d9188473c61981e1",
+    "pre_namespace_sha256": "b20fad024fcee6be13de0d5e19b2f8c5af7900ccc38b8b69d9188473c61981e1",
+    "bitwise_identical": true
+  },
+  {
+    "rhs": 1,
+    "new_sha256": "e8b2d9132400609a20bd131825bb3fce5b2332365690e54d09671ff1f5066380",
+    "pre_namespace_sha256": "e8b2d9132400609a20bd131825bb3fce5b2332365690e54d09671ff1f5066380",
+    "bitwise_identical": true
+  }
+]

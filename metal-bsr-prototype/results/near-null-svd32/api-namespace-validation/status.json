@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "steps": [
+    {
+      "name": "driver-build",
+      "exit": 0,
+      "seconds": 5.092207908630371
+    },
+    {
+      "name": "analytic-svd",
+      "exit": 0,
+      "seconds": 0.18722891807556152
+    },
+    {
+      "name": "small-real-mg",
+      "exit": 0,
+      "seconds": 31.220850944519043
+    },
+    {
+      "name": "original-chroma",
+      "exit": 0,
+      "seconds": 1.9664840698242188
+    },
+    {
+      "name": "gcc-api-contract",
+      "exit": 0,
+      "seconds": 26.549466133117676
+    },
+    {
+      "name": "benchmark-rebuild",
+      "exit": 0,
+      "seconds": 5.016285181045532
+    }
+  ],
+  "phase": "benchmark-rebuild"
+}

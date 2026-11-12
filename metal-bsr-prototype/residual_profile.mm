@@ -1,8 +1,11 @@
 #include "chroma_import.hpp"
 #include "compact_residual.hpp"
+
 #include <algorithm>
 #include <iomanip>
 #include <unistd.h>
+
+using namespace MetalCloverEnv;
 
 struct ResidualTimings {
   double operator_ms = 0;

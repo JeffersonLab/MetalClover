@@ -1,0 +1,47 @@
+LDL_CLOVER seconds=13.488 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.33845
+FP64 original_Chroma_operator_match=1.7085932134554531e-16
+NEAR_NULL candidate=0 K=128 residual_reduction=0.03082403147434036 Sv_over_v=0.053370762192081742 seconds=39.678886499999997
+NEAR_NULL candidate=1 K=128 residual_reduction=0.031215425298561694 Sv_over_v=0.054997122423476402 seconds=39.686022833000003
+NEAR_NULL candidate=2 K=128 residual_reduction=0.030213315487554751 Sv_over_v=0.052573521035338987 seconds=35.262215625000003
+NEAR_NULL candidate=3 K=128 residual_reduction=0.03134546996611591 Sv_over_v=0.0529909776815497 seconds=34.702717749999998
+NEAR_NULL candidate=4 K=128 residual_reduction=0.030505311063700424 Sv_over_v=0.052864535396370094 seconds=35.123968083000001
+NEAR_NULL candidate=5 K=128 residual_reduction=0.03084341471238676 Sv_over_v=0.053528435884120741 seconds=35.191766874999999
+NEAR_NULL candidate=6 K=128 residual_reduction=0.030920670526117154 Sv_over_v=0.052404676667871491 seconds=35.552626250000003
+NEAR_NULL candidate=7 K=128 residual_reduction=0.03065399819477278 Sv_over_v=0.053764023610549841 seconds=36.973207000000002
+NEAR_NULL candidate=8 K=128 residual_reduction=0.030955701388904085 Sv_over_v=0.052862484366899047 seconds=35.859357250000002
+NEAR_NULL candidate=9 K=128 residual_reduction=0.030977987550831636 Sv_over_v=0.053270788063653762 seconds=34.792607416999999
+NEAR_NULL candidate=10 K=128 residual_reduction=0.031119300372219199 Sv_over_v=0.053173711105029095 seconds=36.134830084000001
+NEAR_NULL candidate=11 K=128 residual_reduction=0.030923952373084162 Sv_over_v=0.054268192601700217 seconds=35.421417750000003
+NEAR_NULL_CARRY generated=13 retained=9 represented_energy=12.861680673670298 fraction=0.98936005181947928
+NEAR_NULL candidate=12 K=128 residual_reduction=0.03133139460035099 Sv_over_v=0.053608848314296846 seconds=38.373009291000002
+NEAR_NULL candidate=13 K=128 residual_reduction=0.030632235350751161 Sv_over_v=0.052810437422606812 seconds=34.823425082999997
+NEAR_NULL candidate=14 K=128 residual_reduction=0.030873661810455696 Sv_over_v=0.053354450786526002 seconds=35.370111833000003
+NEAR_NULL candidate=15 K=128 residual_reduction=0.030973248607474954 Sv_over_v=0.054276823410635541 seconds=34.663285375000001
+NEAR_NULL_CARRY generated=17 retained=9 represented_energy=16.686693061357335 fraction=0.98962217255802365
+NEAR_NULL candidate=16 K=128 residual_reduction=0.031412649974981381 Sv_over_v=0.052663961400554252 seconds=38.702112333999999
+NEAR_NULL candidate=17 K=128 residual_reduction=0.030196946486648852 Sv_over_v=0.053312849542769714 seconds=38.420182625000002
+NEAR_NULL candidate=18 K=128 residual_reduction=0.031056296427168173 Sv_over_v=0.05326314198656816 seconds=36.270764
+NEAR_NULL candidate=19 K=128 residual_reduction=0.0310482622451447 Sv_over_v=0.053783713631942738 seconds=36.588074749999997
+NEAR_NULL_CARRY generated=21 retained=9 represented_energy=20.498821655076281 fraction=0.99091824846787713
+NEAR_NULL candidate=20 K=128 residual_reduction=0.031306681318903712 Sv_over_v=0.053120877035264365 seconds=43.057025916999997
+NEAR_NULL candidate=21 K=128 residual_reduction=0.031132999221559706 Sv_over_v=0.054145216105250679 seconds=38.356632625000003
+NEAR_NULL candidate=22 K=128 residual_reduction=0.030867620028036974 Sv_over_v=0.05283064475769126 seconds=36.709748040999997
+NEAR_NULL candidate=23 K=128 residual_reduction=0.031483636883860182 Sv_over_v=0.054770877878881907 seconds=36.367009832999997
+NEAR_NULL_SVD seconds=887.87560141699998 compression_seconds=5.7887966249999998 candidates=24 retained=8 batch=4 pool_columns=13 energy_lower_bound=0.96555072931860086 energy=0.98614380941466473 minimum_energy=0.95354993461079529 minimum_rank_ratio=0.028416212217591746 orthogonality=8.2156503827280159e-15
+BASIS method=near-null-svd seconds=888.42026166699998 fine_S=4272
+COARSE1 seconds=936.16295166700002 dofs=524288
+MG_READY hierarchy_seconds=964.98606141699997 hierarchy_fine_S=4272 GPU_GiB=23.074905395507812 recommended_GiB=24.960006713867188
+OUTER method=metal-mg rhs=0 step=1 K=22 fine_S=69 seconds=62.125611583000001 full_FP64_relative=0.0015327925540949863
+OUTER method=metal-mg rhs=0 step=2 K=44 fine_S=138 seconds=119.97263904099999 full_FP64_relative=2.7844293713623492e-06
+OUTER method=metal-mg rhs=0 step=3 K=46 fine_S=144 seconds=90.965249791999994 full_FP64_relative=5.1874616837758882e-09
+OUTER method=metal-mg rhs=0 step=4 K=46 fine_S=144 seconds=101.38567075 full_FP64_relative=9.8622993327094353e-12
+OUTER method=metal-mg rhs=0 step=5 K=47 fine_S=147 seconds=95.759225624999999 full_FP64_relative=1.7347070076010848e-14
+SOLVED method=metal-mg rhs=0 seconds=470.209010541 K=205 fine_S=642 full_FP64_relative=1.7347070076010848e-14 nominal_operator_GFLOP_per_s=131.88348360949323
+OUTER method=metal-mg rhs=1 step=1 K=23 fine_S=72 seconds=65.931467791000003 full_FP64_relative=0.001485331593503936
+OUTER method=metal-mg rhs=1 step=2 K=46 fine_S=144 seconds=99.203505207999996 full_FP64_relative=2.5859858303958269e-06
+OUTER method=metal-mg rhs=1 step=3 K=46 fine_S=144 seconds=98.256148749999994 full_FP64_relative=5.0631193491872682e-09
+OUTER method=metal-mg rhs=1 step=4 K=47 fine_S=147 seconds=104.54719595900001 full_FP64_relative=9.1350370126901814e-12
+OUTER method=metal-mg rhs=1 step=5 K=47 fine_S=147 seconds=110.849632875 full_FP64_relative=1.6140286164422496e-14
+SOLVED method=metal-mg rhs=1 seconds=478.78835412500001 K=209 fine_S=654 full_FP64_relative=1.6140286164422496e-14 nominal_operator_GFLOP_per_s=131.82002372591231
+COARSE_STATS calls=414 iterations=2702 at_limit=0 bottom_iterations=19575 bottom_padded=21616 bottom_worst_true=1.722073549556304
+PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB=15.929107666015625

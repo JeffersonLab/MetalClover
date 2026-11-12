@@ -1,7 +1,10 @@
 #include "sparse_checks.hpp"
 #include "sparse_rhs.hpp"
+
 #include <memory>
 #include <sys/resource.h>
+
+using namespace MetalCloverEnv;
 
 struct Work {
   uint64_t fine = 0, pre = 0, coarse_ops = 0, coarse_iters = 0;

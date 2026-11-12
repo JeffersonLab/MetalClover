@@ -1,0 +1,39 @@
+depbase=`echo actions/ferm/invert/syssolver_linop_aggregate.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	/opt/homebrew/bin/mpicxx -DHAVE_CONFIG_H -I. -I/private/tmp/chroma-metal-integration/lib    -I/private/tmp/chroma-metal-integration/lib -I../lib -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include -I/private/tmp/chroma-metal-integration/other_libs/qdp-lapack/include -I../other_libs/qdp-lapack/include -I/opt/homebrew/opt/gmp/include             -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include    -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -MT actions/ferm/invert/syssolver_linop_aggregate.o -MD -MP -MF $depbase.Tpo -c -o actions/ferm/invert/syssolver_linop_aggregate.o /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.cc:5:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.h:9:
+/private/tmp/chroma-metal-integration/lib/chromabase.h:81:11: warning: 'SUPERBBLAS_USE_MPI' macro redefined [-Wmacro-redefined]
+   81 | #  define SUPERBBLAS_USE_MPI
+      |           ^
+<command line>:2:9: note: previous definition is here
+    2 | #define SUPERBBLAS_USE_MPI 1
+      |         ^
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.cc:16:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_rel_bicgstab_clover.h:20:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/linop/eoprec_clover_dumb_linop_w.h:14:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/linop/clover_term_w.h:69:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/linop/clover_term_qdp_w.h:1605:2: warning: "Using unrolled clover term" [-W#warnings]
+ 1605 | #warning "Using unrolled clover term"
+      |  ^
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.cc:21:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/invert/projector_null.h:39:19: warning: 'subset' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   39 |     const Subset& subset() const
+      |                   ^
+/private/tmp/chroma-metal-integration/lib/actions/ferm/invert/projector_null.h:104:18: note: in instantiation of template class 'Chroma::ProjectorNull<QDP::OLattice<QDP::PSpinVector<QDP::PColorVector<QDP::RComplex<double>, 3>, 4>>>' requested here
+  104 |       return new ProjectorNull<LatticeFermion>(A);
+      |                  ^
+/private/tmp/chroma-metal-integration/lib/syssolver.h:113:27: note: overridden virtual function is here
+  113 |     virtual const Subset& subset() const = 0;
+      |                           ^
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/invert/syssolver_linop_aggregate.cc:22:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/invert/projector_random.h:45:19: warning: 'subset' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   45 |     const Subset& subset() const
+      |                   ^
+/private/tmp/chroma-metal-integration/lib/actions/ferm/invert/projector_random.h:116:18: note: in instantiation of template class 'Chroma::ProjectorRandom<QDP::OLattice<QDP::PSpinVector<QDP::PColorVector<QDP::RComplex<double>, 3>, 4>>>' requested here
+  116 |       return new ProjectorRandom<LatticeFermion>(A);
+      |                  ^
+/private/tmp/chroma-metal-integration/lib/syssolver.h:113:27: note: overridden virtual function is here
+  113 |     virtual const Subset& subset() const = 0;
+      |                           ^
+4 warnings generated.

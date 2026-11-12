@@ -1,0 +1,18 @@
+{
+  "bootstrap.log": {
+    "local_path": "/private/tmp/chroma-metal-validation/bootstrap.log",
+    "bytes": 14224,
+    "raw_local_sha256": "1e3cd6c49360409755ca363c5f150cce61f4a98dd62ad7279ca5b28961e976e1"
+  },
+  "build-final.log": {
+    "local_path": "/private/tmp/chroma-metal-validation/build-final.log",
+    "bytes": 1154458,
+    "raw_local_sha256": "f01e50cc93b2e9f059e8e56466d0c1ec9bb31ec37dff82c90dc846e994181606"
+  },
+  "harness-final-build.log": {
+    "local_path": "/private/tmp/chroma-metal-validation/harness-final-build.log",
+    "bytes": 13830,
+    "raw_local_sha256": "082a7be85d3bb00014299454f3e72d9530dd38054e63f49be7d35598ca2266d3",
+    "git_copy_sha256": "0565d2099080f988155b0c2155cd21fc288340b1ad4dcb7a4ab6b50ba06febe2"
+  }
+}

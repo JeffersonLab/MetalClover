@@ -1,0 +1,85 @@
+depbase=`echo t_metal_clover.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	/opt/homebrew/bin/mpicxx -DHAVE_CONFIG_H -I. -I/private/tmp/chroma-metal-integration/mainprogs/tests -I../../lib    -I/private/tmp/chroma-metal-integration/lib -I../../lib  -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include -I/opt/homebrew/opt/gmp/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -I/private/tmp/chroma-metal-integration/other_libs/qdp-lapack/include -I../../other_libs/qdp-lapack/include          -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include   -I/private/tmp/metalclover-install/include -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -MT t_metal_clover.o -MD -MP -MF $depbase.Tpo -c -o t_metal_clover.o /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:9:
+In file included from /private/tmp/chroma-metal-integration/lib/eoprec_logdet_wilstype_fermact_w.h:10:
+In file included from /private/tmp/chroma-metal-integration/lib/eoprec_wilstype_fermact_w.h:10:
+In file included from /private/tmp/chroma-metal-integration/lib/wilstype_fermact_w.h:10:
+In file included from /private/tmp/chroma-metal-integration/lib/fermact.h:10:
+/private/tmp/chroma-metal-integration/lib/chromabase.h:81:11: warning: 'SUPERBBLAS_USE_MPI' macro redefined [-Wmacro-redefined]
+   81 | #  define SUPERBBLAS_USE_MPI
+      |           ^
+<command line>:2:9: note: previous definition is here
+    2 | #define SUPERBBLAS_USE_MPI 1
+      |         ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:9:
+In file included from /private/tmp/chroma-metal-integration/lib/eoprec_logdet_wilstype_fermact_w.h:10:
+/private/tmp/chroma-metal-integration/lib/eoprec_wilstype_fermact_w.h:31:47: warning: 'linOp' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   31 |     virtual EvenOddPrecLinearOperator<T,P,Q>* linOp(Handle< FermState<T,P,Q> > state) const = 0;
+      |                                               ^
+/private/tmp/chroma-metal-integration/lib/eoprec_logdet_wilstype_fermact_w.h:22:53: note: in instantiation of template class 'Chroma::EvenOddPrecWilsonTypeFermAct<QDP::OLattice<QDP::PSpinVector<QDP::PColorVector<QDP::RComplex<double>, 3>, 4>>, QDP::multi1d<QDP::OLattice<QDP::PScalar<QDP::PColorMatrix<QDP::RComplex<double>, 3>>>>, QDP::multi1d<QDP::OLattice<QDP::PScalar<QDP::PColorMatrix<QDP::RComplex<double>, 3>>>>>' requested here
+   22 |   class EvenOddPrecLogDetWilsonTypeFermAct : public EvenOddPrecWilsonTypeFermAct<T,P,Q>
+      |                                                     ^
+/private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:31:43: note: in instantiation of template class 'Chroma::EvenOddPrecLogDetWilsonTypeFermAct<QDP::OLattice<QDP::PSpinVector<QDP::PColorVector<QDP::RComplex<double>, 3>, 4>>, QDP::multi1d<QDP::OLattice<QDP::PScalar<QDP::PColorMatrix<QDP::RComplex<double>, 3>>>>, QDP::multi1d<QDP::OLattice<QDP::PScalar<QDP::PColorMatrix<QDP::RComplex<double>, 3>>>>>' requested here
+   31 |   class EvenOddPrecCloverFermAct : public EvenOddPrecLogDetWilsonTypeFermAct<LatticeFermion,
+      |                                           ^
+/private/tmp/chroma-metal-integration/lib/fermact.h:241:40: note: overridden virtual function is here
+  241 |     virtual DiffLinearOperator<T,Q,P>* linOp(Handle< FermState<T,P,Q> > state) const = 0;
+      |                                        ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:9:
+In file included from /private/tmp/chroma-metal-integration/lib/eoprec_logdet_wilstype_fermact_w.h:10:
+/private/tmp/chroma-metal-integration/lib/eoprec_wilstype_fermact_w.h:41:30: warning: 'qprop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   41 |     virtual SystemSolver<T>* qprop(Handle< FermState<T,P,Q> > state,
+      |                              ^
+/private/tmp/chroma-metal-integration/lib/fermact.h:221:30: note: overridden virtual function is here
+  221 |     virtual SystemSolver<T>* qprop(Handle< FermState<T,P,Q> > state,
+      |                              ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:53:45: warning: 'linOp' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   53 |     EvenOddPrecLogDetLinearOperator<T,P,Q>* linOp(Handle< FermState<T,P,Q> > state) const;
+      |                                             ^
+/private/tmp/chroma-metal-integration/lib/eoprec_logdet_wilstype_fermact_w.h:30:53: note: overridden virtual function is here
+   30 |     virtual EvenOddPrecLogDetLinearOperator<T,P,Q>* linOp(Handle< FermState<T,P,Q> > state) const = 0;
+      |                                                     ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:56:37: warning: 'hermitianLinOp' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   56 |     LinearOperator<LatticeFermion>* hermitianLinOp(Handle< FermState<T,P,Q> > state) const
+      |                                     ^
+/private/tmp/chroma-metal-integration/lib/wilstype_fermact_w.h:37:32: note: overridden virtual function is here
+   37 |     virtual LinearOperator<T>* hermitianLinOp(Handle< FermState<T,P,Q> > state) const = 0;
+      |                                ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:2:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/fermacts/eoprec_clover_fermact_w.h:70:35: warning: 'getCreateState' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   70 |     const CreateFermState<T,P,Q>& getCreateState() const {return *cfs;}
+      |                                   ^
+/private/tmp/chroma-metal-integration/lib/fermact.h:92:43: note: overridden virtual function is here
+   92 |     virtual const CreateFermState<T,P,Q>& getCreateState() const = 0;
+      |                                           ^
+In file included from /private/tmp/chroma-metal-integration/mainprogs/tests/t_metal_clover.cc:8:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/linop/eoprec_clover_linop_w.h:14:
+In file included from /private/tmp/chroma-metal-integration/lib/actions/ferm/linop/clover_term_w.h:69:
+/private/tmp/chroma-metal-integration/lib/actions/ferm/linop/clover_term_qdp_w.h:1605:2: warning: "Using unrolled clover term" [-W#warnings]
+ 1605 | #warning "Using unrolled clover term"
+      |  ^
+7 warnings generated.
+cd ../../lib ; /Applications/Xcode.app/Contents/Developer/usr/bin/make
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+cd ../../other_libs ; /Applications/Xcode.app/Contents/Developer/usr/bin/make
+Making all in qdp-lapack
+Making all in include
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+make[4]: Nothing to be done for `all-am'.
+Making all in lib
+make[3]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all-am'.
+make[2]: Nothing to be done for `all-am'.
+/opt/homebrew/bin/mpicxx -I/private/tmp/chroma-metal-integration/lib -I../../lib  -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include -I/opt/homebrew/opt/gmp/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -I/private/tmp/chroma-metal-integration/other_libs/qdp-lapack/include -I../../other_libs/qdp-lapack/include          -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include   -I/private/tmp/metalclover-install/include -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -L../../lib  -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -framework Accelerate -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -L/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/lib -L/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/lib -L/opt/homebrew/opt/gmp/lib -framework Accelerate -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -L/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/lib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -framework Accelerate -L/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/lib -L../../other_libs/qdp-lapack/lib           -L/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/lib   -framework Accelerate -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -L/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/lib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -framework Accelerate -L/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/lib -o t_metal_clover t_metal_clover.o -lchroma   -lqdp -lXPathReader -lxmlWriter -lqio -llime -L/opt/homebrew/opt/libxml2/lib -lxml2 -L/usr/lib -lz -L/opt/homebrew/opt/icu4c@76/lib -licuuc -liconv -lqmp -L/opt/homebrew/opt/gmp/lib -lgmpxx -lgmp -lqmp -lgmp -ldatalib_serial -L/opt/homebrew/opt/libxml2/lib -lxml2 -L/usr/lib -lz -L/opt/homebrew/opt/icu4c@76/lib -licuuc -liconv -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -lfiledb -lfilehash -lpthread -L/private/tmp/metalclover-install/lib -Wl,-rpath,/private/tmp/metalclover-install/lib -lmetalclover  -lqdp-lapack          -lsuperbblas   -ldatalib_serial -L/opt/homebrew/opt/libxml2/lib -lxml2 -L/usr/lib -lz -L/opt/homebrew/opt/icu4c@76/lib -licuuc -liconv -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -lfiledb -lfilehash -lpthread -L/private/tmp/metalclover-install/lib -Wl,-rpath,/private/tmp/metalclover-install/lib -lmetalclover
+ld: warning: duplicate -rpath '/opt/homebrew/opt/libomp/lib' ignored
+ld: warning: duplicate -rpath '/opt/homebrew/opt/libomp/lib' ignored
+ld: warning: duplicate -rpath '/opt/homebrew/opt/libomp/lib' ignored
+ld: warning: duplicate -rpath '/private/tmp/metalclover-install/lib' ignored
+ld: warning: duplicate -rpath '/opt/homebrew/opt/libomp/lib' ignored
+ld: warning: ignoring duplicate libraries: '-ldatalib_serial', '-lfiledb', '-lfilehash', '-lgmp', '-liconv', '-licuuc', '-lmetalclover', '-lomp', '-lpthread', '-lqmp', '-lxml2', '-lz'

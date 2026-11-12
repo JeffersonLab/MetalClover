@@ -5,10 +5,13 @@
 #include "qdp_iogauge.h"
 
 #include "chroma_bridge.hpp"
+
 #include <cmath>
 #include <iomanip>
 #include <sstream>
 #include <vector>
+
+using namespace MetalCloverEnv;
 
 namespace {
   using namespace QDP;

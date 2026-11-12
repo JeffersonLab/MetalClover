@@ -1,4 +1,7 @@
 #include "clover_checks.hpp"
+
+using namespace MetalCloverEnv;
+
 int main() {
   @autoreleasepool {
     try {

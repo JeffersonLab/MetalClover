@@ -1,0 +1,10 @@
+{
+  "source": "/private/tmp/mg-null32/near.svd.csv",
+  "entries": 786432,
+  "aggregate_chirality_groups": 65536,
+  "singular_value_min": 0.0003452453403520922,
+  "singular_value_max": 0.09183053756207893,
+  "minimum_retained_rank_ratio": 0.028416212217591746,
+  "represented_energy_fraction_min": 0.9535499346107953,
+  "represented_energy_fraction_max": 0.9990251268677289
+}

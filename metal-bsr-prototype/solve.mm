@@ -1,5 +1,7 @@
 #include "solve_common.hpp"
 
+using namespace MetalCloverEnv;
+
 int main(int argc, char **argv) {
   @autoreleasepool {
     try {

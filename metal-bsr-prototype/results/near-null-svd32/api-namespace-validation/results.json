@@ -1,0 +1,101 @@
+[
+  {
+    "file": "clover.mm",
+    "code": 0,
+    "seconds": 4.13828706741333
+  },
+  {
+    "file": "clover_stage1.mm",
+    "code": 0,
+    "seconds": 1.430846929550171
+  },
+  {
+    "file": "compact_probe.mm",
+    "code": 0,
+    "seconds": 1.333132028579712
+  },
+  {
+    "file": "correctness_compare.mm",
+    "code": 0,
+    "seconds": 1.3907320499420166
+  },
+  {
+    "file": "critical_probe.mm",
+    "code": 0,
+    "seconds": 1.2333519458770752
+  },
+  {
+    "file": "evenodd.mm",
+    "code": 0,
+    "seconds": 1.2794218063354492
+  },
+  {
+    "file": "low_memory_solve.mm",
+    "code": 0,
+    "seconds": 1.9626538753509521
+  },
+  {
+    "file": "main.mm",
+    "code": 0,
+    "seconds": 1.376136064529419
+  },
+  {
+    "file": "metal_memory_limits.mm",
+    "code": 0,
+    "seconds": 0.3427109718322754
+  },
+  {
+    "file": "mg_real_tune.mm",
+    "code": 0,
+    "seconds": 1.5609300136566162
+  },
+  {
+    "file": "multigrid.mm",
+    "code": 0,
+    "seconds": 1.5980198383331299
+  },
+  {
+    "file": "performance_compare.mm",
+    "code": 0,
+    "seconds": 1.3670310974121094
+  },
+  {
+    "file": "production_solve.mm",
+    "code": 0,
+    "seconds": 1.384033203125
+  },
+  {
+    "file": "residual_profile.mm",
+    "code": 0,
+    "seconds": 2.329261064529419
+  },
+  {
+    "file": "solve.mm",
+    "code": 0,
+    "seconds": 2.3696320056915283
+  },
+  {
+    "file": "solver_compare.mm",
+    "code": 0,
+    "seconds": 2.554074764251709
+  },
+  {
+    "file": "sparse_multigrid.mm",
+    "code": 0,
+    "seconds": 3.3856918811798096
+  },
+  {
+    "file": "three_level.mm",
+    "code": 0,
+    "seconds": 4.346189260482788
+  },
+  {
+    "file": "wilson.mm",
+    "code": 0,
+    "seconds": 1.861577033996582
+  },
+  {
+    "file": "api_contract_gcc",
+    "code": 0
+  }
+]

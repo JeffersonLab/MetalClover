@@ -4,21 +4,25 @@
 #include <limits>
 #include <stdexcept>
 
-using LatticeShape = std::array<uint32_t, 4>;
+namespace MetalCloverEnv {
 
-inline LatticeShape hypercube(uint32_t extent) {
-  return {extent, extent, extent, extent};
-}
+  using LatticeShape = std::array<uint32_t, 4>;
 
-inline uint32_t lattice_volume(const LatticeShape &shape) {
-  uint64_t volume = 1;
-  for (uint32_t n : shape) {
-    if (n < 2 || n % 2)
-      throw std::runtime_error(
-          "lattice extents must be positive even integers");
-    volume *= n;
+  inline LatticeShape hypercube(uint32_t extent) {
+    return {extent, extent, extent, extent};
   }
-  if (volume > std::numeric_limits<uint32_t>::max() / 12)
-    throw std::runtime_error("lattice exceeds component index range");
-  return uint32_t(volume);
-}
+
+  inline uint32_t lattice_volume(const LatticeShape &shape) {
+    uint64_t volume = 1;
+    for (uint32_t n : shape) {
+      if (n < 2 || n % 2)
+        throw std::runtime_error(
+            "lattice extents must be positive even integers");
+      volume *= n;
+    }
+    if (volume > std::numeric_limits<uint32_t>::max() / 12)
+      throw std::runtime_error("lattice exceeds component index range");
+    return uint32_t(volume);
+  }
+
+} // namespace MetalCloverEnv

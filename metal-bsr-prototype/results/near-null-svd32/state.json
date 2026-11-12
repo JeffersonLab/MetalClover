@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "started": 1794497399.745215,
+  "source_tags": [
+    20261107,
+    20261108
+  ],
+  "steps": [
+    {
+      "name": "mg",
+      "exit": 0,
+      "elapsed": 1946.310758113861
+    },
+    {
+      "name": "mg-native",
+      "exit": 0,
+      "elapsed": 102.64580202102661
+    },
+    {
+      "name": "bicg",
+      "exit": 0,
+      "elapsed": 4406.835860967636
+    },
+    {
+      "name": "bicg-native",
+      "exit": 0,
+      "elapsed": 86.58044505119324
+    }
+  ],
+  "phase": "bicg-native",
+  "finished": 1794503942.136996
+}

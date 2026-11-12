@@ -4,6 +4,8 @@
 
 #include "sparse_rhs.hpp"
 
+using namespace MetalCloverEnv;
+
 template <class Inner, class Pre, class Coarse, class FG>
 void benchmark_sparse(CloverSystem &c, const TwoLevel &h,
                       const SparseCoarse &ac, Inner &correction, Pre &pre,

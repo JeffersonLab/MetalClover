@@ -3,7 +3,7 @@ CXX := xcrun clang++
 CXXFLAGS := -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobjc-arc -fblocks -DACCELERATE_NEW_LAPACK
 FRAMEWORKS := -framework Metal -framework Foundation -framework Accelerate
 CLANG_FORMAT ?= clang-format
-FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal)
+FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal) include/metalclover/metalclover.h
 METAL_SOURCES := kernels.metal solve.metal bicgstab.metal evenodd.metal \
 	clover.metal multigrid.metal sparse_coarse.metal compact_clover.metal \
 	mg_real_tune.metal packed_clover.metal
@@ -176,3 +176,33 @@ build/residual_profile: residual_profile.mm $(wildcard *.hpp)
 build/anisotropic_inspect: anisotropic_inspect.cc
 	mkdir -p build
 	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) $(CHROMA_EXTRA_CPPFLAGS) anisotropic_inspect.cc -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
+# Public C ABI: GCC-built Chroma can call the Apple Clang/libc++ dylib.
+PREFIX ?= /usr/local
+API_BUILD ?= build/api
+METALCLOVER_MACOS_MIN ?= 15.0
+$(API_BUILD)/metalclover_shaders.hpp: embed_shaders.py $(METAL_SOURCES)
+	mkdir -p $(API_BUILD)
+	python3 embed_shaders.py $@
+
+$(API_BUILD)/libmetalclover.dylib: Makefile metalclover_api.mm include/metalclover/metalclover.h $(wildcard *.hpp) $(API_BUILD)/metalclover_shaders.hpp
+	$(CXX) $(CXXFLAGS) -mmacosx-version-min=$(METALCLOVER_MACOS_MIN) -I$(API_BUILD) -fvisibility=hidden -fvisibility-inlines-hidden -dynamiclib metalclover_api.mm -o $@ $(FRAMEWORKS) -install_name @rpath/libmetalclover.dylib
+
+.PHONY: library install
+library: $(API_BUILD)/libmetalclover.dylib
+install: library
+	install -d "$(DESTDIR)$(PREFIX)/include/metalclover" "$(DESTDIR)$(PREFIX)/lib"
+	install -m 644 include/metalclover/metalclover.h "$(DESTDIR)$(PREFIX)/include/metalclover/metalclover.h"
+	install -m 755 $(API_BUILD)/libmetalclover.dylib "$(DESTDIR)$(PREFIX)/lib/libmetalclover.dylib"
+
+build/low_memory_solve: low_memory_solve.mm $(wildcard *.hpp)
+	mkdir -p build
+	$(CXX) $(CXXFLAGS) $< -o $@ $(FRAMEWORKS)
+
+$(API_BUILD)/api_contract_test: api_contract_test.cc production_bridge.hpp $(API_BUILD)/libmetalclover.dylib
+	$(CXX) -std=c++17 -O2 -Wall -Wextra $< -o $@ -L$(API_BUILD) -lmetalclover -Wl,-rpath,$(abspath $(API_BUILD))
+
+.PHONY: api-contract-test
+# Set BRIDGE to a small real aligned CHRMG003 field.
+api-contract-test: $(API_BUILD)/api_contract_test
+	VECLIB_MAXIMUM_THREADS=1 $(API_BUILD)/api_contract_test "$(BRIDGE)"

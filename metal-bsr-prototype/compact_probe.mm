@@ -1,4 +1,7 @@
 #include "compact_clover.hpp"
+
+using namespace MetalCloverEnv;
+
 using Vec = std::vector<D>;
 struct CompactProbe {
   CompactClover c;

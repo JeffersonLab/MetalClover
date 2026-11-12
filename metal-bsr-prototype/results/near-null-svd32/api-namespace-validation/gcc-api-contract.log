@@ -1,0 +1,2 @@
+LDL_CLOVER seconds=0.391057 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.40464
+PASS C ABI full/odd/reconstruction, exact guess, budget/tolerance/ABI errors, structured work info; reconstructed_relative=1.70588e-14 solution_agreement=4.53226e-13

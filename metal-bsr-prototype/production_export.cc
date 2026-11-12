@@ -3,6 +3,7 @@
 #include "actions/ferm/linop/lwldslash_w.h"
 #include "chromabase.h"
 #include "production_bridge.hpp"
+
 #include "qdp_disk_map_slice.h"
 #include "qdp_map_obj_disk.h"
 #include "util/ferm/key_timeslice_colorvec.h"
@@ -11,6 +12,8 @@
 #include <filesystem>
 #include <iomanip>
 #include <sstream>
+
+using namespace MetalCloverEnv;
 
 static_assert(BASE_PRECISION == 64,
               "Production action parameters must remain FP64");

@@ -1,10 +1,13 @@
 #include "low_memory_clover.hpp"
 #include "mg_real_tune.hpp"
 #include "near_null_svd.hpp"
+
 #include <filesystem>
 #include <iomanip>
 #include <sstream>
 #include <sys/resource.h>
+
+using namespace MetalCloverEnv;
 namespace {
   constexpr int workers = 8;
   constexpr double tolerance = 1e-12;
@@ -49,10 +52,10 @@ namespace {
     }
   }
   template <class Correction>
-  void solve(LowMemoryClover &c, Correction &correction, CountedSchur &op,
-             MappedField &residual, const std::string &output,
-             const std::string &method, int rhs, std::ostream &trace,
-             std::ostream &csv) {
+  CloverSolveInfo solve(LowMemoryClover &c, Correction &correction,
+                        CountedSchur &op, MappedField &residual,
+                        const std::string &output, const std::string &method,
+                        int rhs, std::ostream &trace, std::ostream &csv) {
     uint32_t tag = 20261107 + rhs;
     size_t bytes = size_t(c.w.a.p.outputs()) * 16;
     std::string work = output + ".work-x.bin";
@@ -67,6 +70,7 @@ namespace {
     });
     c.drop_coefficients();
     auto start = Clock::now();
+    auto work_before = op.m.work;
     uint64_t before = op.applications;
     double rho = 1, check_s = 0;
     int k = 0, outer = 0;
@@ -110,15 +114,22 @@ namespace {
     if (rho > tolerance)
       throw std::runtime_error("full FP64 tolerance failed");
     double elapsed = seconds(start);
+    auto work_count = op.m.work - work_before;
     x.rename_to(output + "." + method + ".rhs" + std::to_string(rhs) + ".bin");
     csv << method << ',' << rhs << ',' << outer << ',' << k << ',' << elapsed
         << ',' << check_s << ',' << rho << ',' << op.applications - before
-        << '\n';
+        << ',' << work_count.total() << ',' << work_count.gflops(elapsed) << ','
+        << work_count.fine << ',' << work_count.coarse << ','
+        << work_count.transfer << ',' << work_count.local_vector << '\n';
     csv.flush();
     std::cout << "SOLVED method=" << method << " rhs=" << rhs
               << " seconds=" << elapsed << " K=" << k
               << " fine_S=" << op.applications - before
-              << " full_FP64_relative=" << rho << std::endl;
+              << " full_FP64_relative=" << rho
+              << " nominal_operator_GFLOP_per_s=" << work_count.gflops(elapsed)
+              << std::endl;
+    return {outer, k,         op.applications - before, elapsed, check_s,
+            rho,   work_count};
   }
 } // namespace
 int main(int argc, char **argv) {
@@ -133,7 +144,7 @@ int main(int argc, char **argv) {
             "Usage: low_memory_solve BRIDGE_PREFIX OUTPUT_PREFIX mg|bicg RHS "
             "BLOCKS RESTART FILTER_SWEEPS [SECOND_FILTER_SWEEPS BOTTOM_LIMIT] "
             "[--basis filtered|near-null-svd --null-vectors N --null-iters N "
-            "--null-restart N --null-warm N --null-tol X]");
+            "--null-restart N --null-warm N --null-tol X --null-batch N]");
       std::string prefix = argv[1], output = argv[2], method = argv[3];
       int rhs = std::stoi(argv[4]), restart = std::stoi(argv[6]),
           sweeps = std::stoi(argv[7]);
@@ -161,6 +172,8 @@ int main(int argc, char **argv) {
           null_options.restart = std::stoi(value);
         else if (key == "--null-warm")
           null_options.warm = std::stoi(value);
+        else if (key == "--null-batch")
+          null_options.batch = std::stoi(value);
         else if (key == "--null-tol")
           null_options.tolerance = std::stod(value);
         else
@@ -222,7 +235,9 @@ int main(int argc, char **argv) {
                "seconds\n";
       csv << std::setprecision(17)
           << "method,rhs,outer,krylov,seconds,residual_seconds,full_relative,"
-             "fine_schur_applications\n";
+             "fine_schur_applications,nominal_operator_flops,operator_gflops,"
+             "fine_flops,coarse_flops,transfer_flops,local_vector_flops\n";
+      std::vector<CloverSolveInfo> solved;
       if (method == "bicg") {
         GPUBiCGStab bi(metal, c.parity.oe, 1, workers);
         bi.encode_override = [&](id<MTLComputeCommandEncoder> e,
@@ -238,8 +253,8 @@ int main(int argc, char **argv) {
                   << double(metal.device.currentAllocatedSize) / (1ull << 30)
                   << std::endl;
         for (int i = 0; i < rhs; ++i)
-          solve(c, correction, op, residual, output, "metal-bicgstab", i, trace,
-                csv);
+          solved.push_back(solve(c, correction, op, residual, output,
+                                 "metal-bicgstab", i, trace, csv));
       } else {
         auto start = Clock::now();
         auto before = op.applications;
@@ -328,7 +343,8 @@ int main(int argc, char **argv) {
                          (1ull << 30)
                   << std::endl;
         for (int i = 0; i < rhs; ++i)
-          solve(c, correction, op, residual, output, "metal-mg", i, trace, csv);
+          solved.push_back(solve(c, correction, op, residual, output,
+                                 "metal-mg", i, trace, csv));
         std::cout << "COARSE_STATS calls=" << coarse_calls
                   << " iterations=" << coarse_iterations
                   << " at_limit=" << coarse_at_limit
@@ -336,6 +352,18 @@ int main(int argc, char **argv) {
                   << " bottom_padded=" << bottom.padded_iterations
                   << " bottom_worst_true=" << bottom.worst_true << std::endl;
       }
+      double solve_seconds = 0;
+      uint64_t solve_flops = 0;
+      for (const auto &info : solved) {
+        solve_seconds += info.seconds;
+        solve_flops += info.operator_work.total();
+      }
+      std::cout << "TOTAL_SOLVE method=" << method << " rhs=" << solved.size()
+                << " seconds=" << solve_seconds
+                << " mean_seconds=" << solve_seconds / solved.size()
+                << " nominal_operator_flops=" << solve_flops
+                << " nominal_operator_GFLOP_per_s="
+                << double(solve_flops) / (solve_seconds * 1e9) << std::endl;
       rusage u{};
       getrusage(RUSAGE_SELF, &u);
       std::cout << "PASS all full FP64 residuals <=1e-12; original Chroma "

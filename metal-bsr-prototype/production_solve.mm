@@ -1,9 +1,12 @@
 #include "compact_solve.hpp"
 #include "production_bridge.hpp"
 #include "three_level.hpp"
+
 #include <filesystem>
 #include <iomanip>
 #include <sys/resource.h>
+
+using namespace MetalCloverEnv;
 
 namespace {
   template <class T> void release(std::vector<T> &values) {

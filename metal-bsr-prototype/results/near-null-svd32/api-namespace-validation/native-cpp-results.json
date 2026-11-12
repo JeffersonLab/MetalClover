@@ -1,0 +1,26 @@
+[
+  {
+    "file": "metal-bsr-prototype/chroma_export.cc",
+    "exit": 0
+  },
+  {
+    "file": "metal-bsr-prototype/correctness_chroma.cc",
+    "exit": 0
+  },
+  {
+    "file": "metal-bsr-prototype/low_memory_verify.cc",
+    "exit": 0
+  },
+  {
+    "file": "metal-bsr-prototype/performance_chroma.cc",
+    "exit": 0
+  },
+  {
+    "file": "metal-bsr-prototype/production_export.cc",
+    "exit": 0
+  },
+  {
+    "file": "metal-bsr-prototype/production_verify.cc",
+    "exit": 0
+  }
+]

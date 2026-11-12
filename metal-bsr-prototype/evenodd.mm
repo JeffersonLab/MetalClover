@@ -1,5 +1,7 @@
 #include "evenodd.hpp"
 
+using namespace MetalCloverEnv;
+
 void validate_evenodd(const WilsonSystem &w, const EvenOdd &e, MetalRun &metal,
                       int workers) {
   uint32_t rhs = w.a.p.rhs, width = 12 * rhs;

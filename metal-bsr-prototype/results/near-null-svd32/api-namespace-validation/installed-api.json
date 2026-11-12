@@ -1,0 +1,23 @@
+{
+  "exported_C_symbols": [
+    "_metalclover_apply_full",
+    "_metalclover_apply_odd",
+    "_metalclover_create",
+    "_metalclover_default_options",
+    "_metalclover_destroy",
+    "_metalclover_last_error",
+    "_metalclover_reconstruct",
+    "_metalclover_reduce_rhs",
+    "_metalclover_setup_seconds",
+    "_metalclover_solve_full",
+    "_metalclover_solve_full_array",
+    "_metalclover_solve_odd",
+    "_metalclover_solve_odd_array"
+  ],
+  "cpp_namespace": "MetalCloverEnv",
+  "ABI_version": 1,
+  "deployment_target": "15.0",
+  "shader_language": "Metal 3.1",
+  "library_sha256": "a8908a2df493443643c1e28a08ae5fb9295af120a7ae63296e4f971ca3210425",
+  "installed_header_sha256": "e843d5627cf2c40562d61149b3540323c764bc7c2222952e0ac9c812a761f69c"
+}
