@@ -1,5 +1,6 @@
 #include "low_memory_clover.hpp"
 #include "mg_real_tune.hpp"
+#include "near_null_svd.hpp"
 #include <filesystem>
 #include <iomanip>
 #include <sstream>
@@ -123,16 +124,50 @@ namespace {
 int main(int argc, char **argv) {
   @autoreleasepool {
     try {
-      if (argc != 8 && argc != 10)
+      if (argc == 2 && std::string(argv[1]) == "--basis-self-test") {
+        check_near_null_svd();
+        return 0;
+      }
+      if (argc < 8)
         throw std::runtime_error(
             "Usage: low_memory_solve BRIDGE_PREFIX OUTPUT_PREFIX mg|bicg RHS "
-            "BLOCKS RESTART FILTER_SWEEPS [SECOND_FILTER_SWEEPS BOTTOM_LIMIT]");
+            "BLOCKS RESTART FILTER_SWEEPS [SECOND_FILTER_SWEEPS BOTTOM_LIMIT] "
+            "[--basis filtered|near-null-svd --null-vectors N --null-iters N "
+            "--null-restart N --null-warm N --null-tol X]");
       std::string prefix = argv[1], output = argv[2], method = argv[3];
       int rhs = std::stoi(argv[4]), restart = std::stoi(argv[6]),
           sweeps = std::stoi(argv[7]);
       auto blocks = shape_arg(argv[5]);
-      int second_sweeps = argc == 10 ? std::stoi(argv[8]) : 16,
-          bottom_limit = argc == 10 ? std::stoi(argv[9]) : 4;
+      int second_sweeps = 16, bottom_limit = 4, first_option = 8;
+      if (argc >= 10 && std::string(argv[8]).rfind("--", 0) != 0) {
+        second_sweeps = std::stoi(argv[8]);
+        bottom_limit = std::stoi(argv[9]);
+        first_option = 10;
+      }
+      std::string basis = "filtered";
+      NearNullOptions null_options;
+      for (int i = first_option; i < argc; ++i) {
+        std::string key = argv[i];
+        if (++i >= argc)
+          throw std::runtime_error("missing basis option value");
+        std::string value = argv[i];
+        if (key == "--basis")
+          basis = value;
+        else if (key == "--null-vectors")
+          null_options.candidates = std::stoi(value);
+        else if (key == "--null-iters")
+          null_options.iterations = std::stoi(value);
+        else if (key == "--null-restart")
+          null_options.restart = std::stoi(value);
+        else if (key == "--null-warm")
+          null_options.warm = std::stoi(value);
+        else if (key == "--null-tol")
+          null_options.tolerance = std::stod(value);
+        else
+          throw std::runtime_error("unknown basis option " + key);
+      }
+      if (basis != "filtered" && basis != "near-null-svd")
+        throw std::runtime_error("unknown basis construction");
       if ((method != "mg" && method != "bicg") || rhs < 1 || rhs > 192 ||
           restart < 2 || restart > 12 || sweeps < 1 || second_sweeps < 1 ||
           bottom_limit < 1)
@@ -216,9 +251,17 @@ int main(int argc, char **argv) {
         }
         Transfer first(c.parity.oe.p.rows, 12, 8, h.shape, blocks, true,
                        workers, &c.parity.odd);
-        build_gpu_filtered_basis(first, op, c, sweeps, .65, workers);
+        if (basis == "near-null-svd") {
+          std::ofstream null_log(output + ".near-null.csv"),
+              spectrum(output + ".svd.csv");
+          null_log << std::setprecision(17);
+          spectrum << std::setprecision(17);
+          build_gpu_near_null_svd(first, op, null_options, null_log, spectrum);
+        } else {
+          build_gpu_filtered_basis(first, op, c, sweeps, .65, workers);
+        }
         c.drop_coefficients();
-        std::cout << "BASIS seconds=" << seconds(start)
+        std::cout << "BASIS method=" << basis << " seconds=" << seconds(start)
                   << " fine_S=" << op.applications - before << std::endl;
         BlockMatrix a1(16, first.aggregates, workers);
         assemble_schur(a1, c, first);

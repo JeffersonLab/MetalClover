@@ -9,8 +9,10 @@ in Chroma and his [SuperbBLAS](https://github.com/eromero-vlc/superbblas) work.
 We credit that work for guiding the initial sparse color/spin representation
 and the investigation of even/odd preconditioning, chirality-split aggregation,
 Galerkin coarse operators, and Krylov solvers. MetalClover implements these
-ideas separately with dedicated CPU and Metal kernels; its basis construction,
-multigrid cycle, and memory management differ from `mgproton`.
+ideas with dedicated CPU and Metal kernels. The optional near-null/SVD basis
+builder follows the homogeneous-solve and local-compression approach in
+`mgproton`; the hierarchy application and memory management remain separate
+implementations.
 
 The fermion-action conventions and independent numerical references come from
 [Chroma](https://github.com/JeffersonLab/chroma) and QDP++. The anisotropic
@@ -27,6 +29,7 @@ The source and reproducible numerical results are in [metal-bsr-prototype](metal
 
 - [Real 32³×256 low-memory LDL clover, tuned MG timings, and native FP64 checks](metal-bsr-prototype/LOW_MEMORY.md)
 - [Real 24³×256 MG tuning and original Chroma FP64 validation](metal-bsr-prototype/MG_TUNING_REAL.md)
+- [Homogeneous near-null solves and SVD-compressed MG basis](metal-bsr-prototype/NEAR_NULL_SVD.md)
 - [Native Chroma adapter, action conventions, and initial real-field timings](metal-bsr-prototype/PERFORMANCE_REAL_FIELDS.md)
 - [Standalone prototype overview](metal-bsr-prototype/README.md)
 
