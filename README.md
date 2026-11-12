@@ -2,6 +2,27 @@
 
 Standalone Apple GPU experiments for anisotropic clover-Wilson inversion.
 
+## Provenance
+
+This project grew out of studying Eloy Romero's `mgproton` multigrid prototype
+in Chroma and his [SuperbBLAS](https://github.com/eromero-vlc/superbblas) work.
+We credit that work for guiding the initial sparse color/spin representation
+and the investigation of even/odd preconditioning, chirality-split aggregation,
+Galerkin coarse operators, and Krylov solvers. MetalClover implements these
+ideas separately with dedicated CPU and Metal kernels; its basis construction,
+multigrid cycle, and memory management differ from `mgproton`.
+
+The fermion-action conventions and independent numerical references come from
+[Chroma](https://github.com/JeffersonLab/chroma) and QDP++. The anisotropic
+stout-smeared clover-Wilson operator follows Chroma's conventions, and the native
+adapter and verification tools use Chroma/QDP++ to check the stout gauge state,
+operator application, and full FP64 residuals. These checks establish agreement
+with the Chroma operator; they do not establish identical hierarchy construction
+or convergence behavior to `mgproton`. We acknowledge Eloy Romero and the
+Chroma/QDP++ developers for these foundations.
+
+## Code and results
+
 The source and reproducible numerical results are in [metal-bsr-prototype](metal-bsr-prototype/).
 
 - [Real 32³×256 low-memory LDL clover, tuned MG timings, and native FP64 checks](metal-bsr-prototype/LOW_MEMORY.md)
@@ -12,7 +33,22 @@ The source and reproducible numerical results are in [metal-bsr-prototype](metal
 Large gauge fields, generated binaries, and saved solution fields are excluded from Git;
 text results, input/output hashes, source, and reproduction instructions are versioned.
 
+## Formatting and continuous integration
+
 Run `make format` from the repo root or `metal-bsr-prototype/` to format the
 `.hpp`, `.cc`, `.mm`, and `.metal` sources using the checked-in
 [`.clang-format`](.clang-format). This requires `clang-format` on `PATH`;
 override the executable with `make format CLANG_FORMAT=clang-format-23` if needed.
+Use `make format-check` to check formatting without modifying files. CI pins
+clang-format to **23.1.5**, the version used to format the current sources.
+
+[GitHub Actions](.github/workflows/ci.yml) runs on pushes, pull requests, and
+manual dispatches. It checks formatting on Ubuntu and builds all 19 standalone
+Objective-C++ programs on an Apple Silicon `macos-15` runner with Xcode 16.4.
+It also compiles all ten Metal shader files offline using `make -C
+metal-bsr-prototype metal-check`; this does not require GPU execution.
+
+CI covers the standalone build. Native Chroma/QDP++ adapters require a separate
+installation, and the real-field residual checks and performance studies require
+local gauge data and an Apple GPU. Those numerical runs remain separate from
+the hosted formatting and build checks.

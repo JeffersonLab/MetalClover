@@ -4,10 +4,26 @@ CXXFLAGS := -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobj
 FRAMEWORKS := -framework Metal -framework Foundation -framework Accelerate
 CLANG_FORMAT ?= clang-format
 FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal)
+METAL_SOURCES := kernels.metal solve.metal bicgstab.metal evenodd.metal \
+	clover.metal multigrid.metal sparse_coarse.metal compact_clover.metal \
+	mg_real_tune.metal packed_clover.metal
 
-.PHONY: format
+.PHONY: format format-check metal-check
 format:
 	$(CLANG_FORMAT) --style=file -i $(FORMAT_SOURCES)
+
+format-check:
+	$(CLANG_FORMAT) --style=file --dry-run --Werror $(FORMAT_SOURCES)
+
+# Compile the shader fragments together, in dependency order, without a GPU.
+metal-check: build/standalone-shaders.air
+
+build/standalone-shaders.metal: $(METAL_SOURCES)
+	mkdir -p build
+	cat $(METAL_SOURCES) > $@
+
+build/standalone-shaders.air: build/standalone-shaders.metal
+	xcrun -sdk macosx metal -std=metal3.0 -c $< -o $@
 
 build/metal_three_level: three_level.mm $(wildcard *.hpp) $(wildcard *.metal)
 	mkdir -p build

@@ -1,4 +1,4 @@
-.PHONY: format
+.PHONY: format format-check
 
-format:
-	$(MAKE) -C metal-bsr-prototype format
+format format-check:
+	$(MAKE) -C metal-bsr-prototype $@

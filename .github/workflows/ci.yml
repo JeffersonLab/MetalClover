@@ -1,0 +1,69 @@
+name: Formatting and build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  format:
+    name: Formatting (clang-format 23.1.5)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned clang-format
+        run: |
+          python3 -m venv "$RUNNER_TEMP/clang-format"
+          "$RUNNER_TEMP/clang-format/bin/python" -m pip install --disable-pip-version-check clang-format==23.1.5
+          echo "$RUNNER_TEMP/clang-format/bin" >> "$GITHUB_PATH"
+
+      - name: Check source formatting
+        run: |
+          clang-format --version
+          make format-check
+
+  build:
+    name: Standalone build (macOS ARM64)
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Check Apple Silicon toolchain
+        run: |
+          test "$(uname -m)" = arm64
+          xcodebuild -version
+          xcrun clang++ --version
+
+      - name: Build standalone experiments
+        run: |
+          make -C metal-bsr-prototype -j2 all \
+            build/clover_stage1 build/compact_probe build/critical_probe \
+            build/residual_profile
+
+      - name: Build standalone real-field drivers
+        run: |
+          make -C metal-bsr-prototype -f Makefile.production -j2 \
+            build/production_solve build/correctness_compare \
+            build/performance_compare build/mg_real_tune \
+            build/low_memory_solve build/metal_memory_limits
+
+      - name: Compile Metal shaders offline
+        run: make -C metal-bsr-prototype metal-check
