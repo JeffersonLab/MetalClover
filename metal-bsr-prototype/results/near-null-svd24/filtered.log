@@ -1,0 +1,27 @@
+LDL_CLOVER seconds=3.85464 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.33935
+FP64 original_Chroma_operator_match=1.3419559477028456e-16
+BASIS filtered 1/8
+BASIS filtered 2/8
+BASIS filtered 3/8
+BASIS filtered 4/8
+BASIS filtered 5/8
+BASIS filtered 6/8
+BASIS filtered 7/8
+BASIS filtered 8/8
+BASIS method=filtered seconds=45.422128082999997 fine_S=1024
+COARSE1 seconds=61.847067875 dofs=262144
+MG_READY hierarchy_seconds=65.206526666000002 hierarchy_fine_S=1024 GPU_GiB=11.040130615234375 recommended_GiB=24.960006713867188
+OUTER method=metal-mg rhs=0 step=1 K=50 fine_S=155 seconds=25.637403875 full_FP64_relative=0.0016052018750935682
+OUTER method=metal-mg rhs=0 step=2 K=168 fine_S=518 seconds=57.440458667000001 full_FP64_relative=3.1665344930758757e-06
+OUTER method=metal-mg rhs=0 step=3 K=178 fine_S=549 seconds=60.135977625000002 full_FP64_relative=6.1470323170427569e-09
+OUTER method=metal-mg rhs=0 step=4 K=177 fine_S=546 seconds=60.120182624999998 full_FP64_relative=1.2234006482456067e-11
+OUTER method=metal-mg rhs=0 step=5 K=178 fine_S=549 seconds=60.584966792000003 full_FP64_relative=2.3845253262061694e-14
+SOLVED method=metal-mg rhs=0 seconds=263.919075459 K=751 fine_S=2317 full_FP64_relative=2.3845253262061694e-14
+OUTER method=metal-mg rhs=1 step=1 K=44 fine_S=136 seconds=18.632679082999999 full_FP64_relative=0.0016334041323572451
+OUTER method=metal-mg rhs=1 step=2 K=171 fine_S=528 seconds=58.332289541999998 full_FP64_relative=3.2065138491755225e-06
+OUTER method=metal-mg rhs=1 step=3 K=177 fine_S=546 seconds=59.927297791999997 full_FP64_relative=6.1684341775740381e-09
+OUTER method=metal-mg rhs=1 step=4 K=180 fine_S=555 seconds=60.527339832999999 full_FP64_relative=1.1873503219083489e-11
+OUTER method=metal-mg rhs=1 step=5 K=180 fine_S=555 seconds=60.511312625000002 full_FP64_relative=2.3380604766217589e-14
+SOLVED method=metal-mg rhs=1 seconds=257.93197824999999 K=752 fine_S=2320 full_FP64_relative=2.3380604766217589e-14
+COARSE_STATS calls=1503 iterations=4633 at_limit=0 bottom_iterations=13891 bottom_padded=18532 bottom_worst_true=0.10781762713467727
+PASS all full FP64 residuals <=1e-12; original Chroma final verification required; peak_RSS_GiB=15.110824584960938

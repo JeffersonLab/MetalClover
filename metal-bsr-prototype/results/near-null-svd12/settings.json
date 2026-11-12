@@ -1,0 +1,33 @@
+{
+  "shape": [
+    12,
+    12,
+    12,
+    96
+  ],
+  "mass": -0.0743,
+  "sources": [
+    20261107,
+    20261108
+  ],
+  "basis": "near-null-svd",
+  "candidates": 24,
+  "retained_per_chirality": 8,
+  "null_iters": 128,
+  "null_restart": 12,
+  "null_tol": 0.001,
+  "null_warm": 32,
+  "aggregation": [
+    3,
+    3,
+    3,
+    8
+  ],
+  "one_reused_hierarchy": true,
+  "full_residual_tolerance": 1e-12,
+  "native_verifier": "original Chroma UnprecCloverLinOp, BASE_PRECISION=64",
+  "source_commit": "f182d2a279c596f66fe0dce0861e989f889c3f31",
+  "executable_sha256": "77971e22b9d28ff543c1ef85901267192739cd2d2c6d6fe84d5dd4094d354ed9",
+  "native_verifier_sha256": "2ff4412b3acec6d0866c9053e19db1a547e739cf4fc551784cbee340aeda49c4",
+  "bridge_sha256": "a3a5acfb2f27f99697be88caff2c751bd1e9ff3a4420549baf22f7706e66ae05"
+}

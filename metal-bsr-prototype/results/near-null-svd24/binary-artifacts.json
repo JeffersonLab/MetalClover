@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/private/tmp/mg-near-null24/bicg.metal-bicgstab.rhs0.bin",
+    "bytes": 679477248,
+    "sha256": "29615515e2c1498aabfc380ba553418642428850c9f694c26530a009f92aaa83"
+  },
+  {
+    "path": "/private/tmp/mg-near-null24/bicg.metal-bicgstab.rhs1.bin",
+    "bytes": 679477248,
+    "sha256": "e7049ad298b93cb374fa598c4aae874784566d177786623b8e4759dad81ac085"
+  },
+  {
+    "path": "/private/tmp/mg-near-null24/filtered.metal-mg.rhs0.bin",
+    "bytes": 679477248,
+    "sha256": "c3c38b08443fabce478396c7387b555c851ba5aafd6fe5c810a287a2763a725f"
+  },
+  {
+    "path": "/private/tmp/mg-near-null24/filtered.metal-mg.rhs1.bin",
+    "bytes": 679477248,
+    "sha256": "225d709bbb2d70d4c595967db38e68035cbb6d338811d16a15e428afefc3123d"
+  },
+  {
+    "path": "/private/tmp/mg-near-null24/near.metal-mg.rhs0.bin",
+    "bytes": 679477248,
+    "sha256": "1db10d0653aee25f8054e9ce77c71cc4830077e30f66b67ee553d13901859085"
+  },
+  {
+    "path": "/private/tmp/mg-near-null24/near.metal-mg.rhs1.bin",
+    "bytes": 679477248,
+    "sha256": "46951358610b696150eab14d8f0c278eab716f082cf45f43d6ab0349a617bef4"
+  }
+]
