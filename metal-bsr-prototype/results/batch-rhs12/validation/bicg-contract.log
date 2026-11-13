@@ -1,0 +1,3 @@
+LDL_CLOVER seconds=0.187884 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.40464
+PASS mixed-scale zero/exact/collinear/nonzero-guess GPU tiles=3+2, full/odd FP64 checks, scalar agreement, per-column budgets and batch accounting
+PASS C ABI full/odd/reconstruction, exact guess, budget/tolerance/ABI errors, structured work info; reconstructed_relative=1.4589e-14 solution_agreement=4.64191e-13

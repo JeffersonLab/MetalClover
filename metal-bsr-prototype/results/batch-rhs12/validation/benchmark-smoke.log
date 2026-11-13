@@ -1,0 +1,112 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+u0 is 1
+Single Precision Read
+QIO_read_finished
+  ... constructing linop  ...0.361103 sec
+  ... constructing invLinOp LDL_CLOVER seconds=0.12636979100000001 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.4046377332171687
+MetalBiCGClover: subset=odd Schur operator_match=1.82490493260258e-16 setup_seconds=0.190503625
+ ...0.826175 sec
+  ... constructing PrecFermActQprop  ...1e-06 sec
+BATCH_SETUP method=MetalBiCGClover seconds=1.187349 hierarchy_instances=0
+BATCH_BEGIN method=MetalBiCGClover rhs=2 caller_tile=1
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.190993 fine_schur_dispatches=726 nominal_operator_flops=942280998912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.293972412976
+MetalBiCGClover batch_rhs=0 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.089973 fine_schur_dispatches=708 nominal_operator_flops=918918660096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.387278172334
+BATCH_RESULT method=MetalBiCGClover rhs=2 caller_tile=1 seconds=6.6353749999999998 seconds_per_rhs=3.3176874999999999 max_full_relative=2.0923312336556421e-14 max_solution_difference=0 K_min=354 K_max=363
+BATCH_BEGIN method=MetalBiCGClover rhs=2 caller_tile=8
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover array: rhs=2 resident_GPU_rhs=2 gpu_tiles=1 hierarchy_reused=true seconds=4.79817 fine_schur_dispatches=734 nominal_operator_flops=1905328521216 batch_workspace_seconds=0.00081275 nominal_operator_GFLOP_per_s=397.094834325587
+BATCH_RESULT method=MetalBiCGClover rhs=2 caller_tile=8 seconds=5.1465709999999998 seconds_per_rhs=2.5732854999999999 max_full_relative=2.0923312336556421e-14 max_solution_difference=0 K_min=354 K_max=363
+BATCH_BEGIN method=MetalBiCGClover rhs=2 caller_tile=16
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover array: rhs=2 resident_GPU_rhs=2 gpu_tiles=1 hierarchy_reused=true seconds=4.767305 fine_schur_dispatches=734 nominal_operator_flops=1905328521216 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=399.665748513259
+BATCH_RESULT method=MetalBiCGClover rhs=2 caller_tile=16 seconds=5.1136860000000004 seconds_per_rhs=2.5568430000000002 max_full_relative=2.0923312336556421e-14 max_solution_difference=0 K_min=354 K_max=363
+BATCH_BEGIN method=MetalBiCGClover rhs=4 caller_tile=16
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover batch_rhs=2 iterations=356 outer=5 relative_residual=2.27645705157052e-14
+MetalBiCGClover batch_rhs=3 iterations=368 outer=5 relative_residual=1.23220326592992e-14
+MetalBiCGClover array: rhs=4 resident_GPU_rhs=4 gpu_tiles=1 hierarchy_reused=true seconds=8.947278 fine_schur_dispatches=776 nominal_operator_flops=4028705538048 batch_workspace_seconds=0.137525667 nominal_operator_GFLOP_per_s=450.271639938761
+BATCH_RESULT method=MetalBiCGClover rhs=4 caller_tile=16 seconds=9.6473010000000006 seconds_per_rhs=2.4118252500000001 max_full_relative=2.0923312336556421e-14 max_solution_difference=0 K_min=354 K_max=368
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.808877
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.234179
+  ... constructing linop  ...0.339641 sec
+  ... constructing invLinOp LDL_CLOVER seconds=0.12226308299999999 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.4046377332171687
+NEAR_NULL candidate=0 K=117 residual_reduction=0.00098114237496299767 Sv_over_v=0.078726277928019145 seconds=0.72369308300000001
+NEAR_NULL candidate=1 K=118 residual_reduction=0.00095908628854462672 Sv_over_v=0.082916297741807005 seconds=0.70527412499999997
+NEAR_NULL candidate=2 K=115 residual_reduction=0.00099520176891141916 Sv_over_v=0.090538710045552501 seconds=0.68894374999999997
+NEAR_NULL candidate=3 K=119 residual_reduction=0.00098508883486959236 Sv_over_v=0.089289547343677403 seconds=0.71252587499999998
+NEAR_NULL candidate=4 K=120 residual_reduction=0.00096382769106213015 Sv_over_v=0.092059859701665331 seconds=0.72071679200000005
+NEAR_NULL candidate=5 K=117 residual_reduction=0.00097634421147498431 Sv_over_v=0.076051031435059466 seconds=0.69812637499999997
+NEAR_NULL candidate=6 K=120 residual_reduction=0.00096215719423678036 Sv_over_v=0.082342946219128299 seconds=0.71362899999999996
+NEAR_NULL candidate=7 K=119 residual_reduction=0.00096858982122586266 Sv_over_v=0.086109253293135735 seconds=0.71108087499999995
+NEAR_NULL candidate=8 K=119 residual_reduction=0.00099572234552424603 Sv_over_v=0.080802865993885628 seconds=0.71483862499999995
+NEAR_NULL candidate=9 K=119 residual_reduction=0.00098139695194416113 Sv_over_v=0.094177834759557488 seconds=0.71274033400000003
+NEAR_NULL candidate=10 K=118 residual_reduction=0.00098573160539815576 Sv_over_v=0.086212110949310347 seconds=0.70650037499999996
+NEAR_NULL candidate=11 K=120 residual_reduction=0.00096284827926229361 Sv_over_v=0.086524245273241193 seconds=0.71711854200000003
+NEAR_NULL_CARRY generated=13 retained=9 represented_energy=12.895925279888118 fraction=0.99199425226846849
+NEAR_NULL candidate=12 K=117 residual_reduction=0.00098952014942542974 Sv_over_v=0.089753867512751759 seconds=0.77019716599999999
+NEAR_NULL candidate=13 K=119 residual_reduction=0.00099287920924563439 Sv_over_v=0.093379651790196611 seconds=0.71385645799999997
+NEAR_NULL candidate=14 K=118 residual_reduction=0.00096574450019275249 Sv_over_v=0.087187444007089165 seconds=0.70844966700000001
+NEAR_NULL candidate=15 K=117 residual_reduction=0.00096251150193126943 Sv_over_v=0.092282262655708103 seconds=0.697212791
+NEAR_NULL_CARRY generated=17 retained=9 represented_energy=16.753430595693086 fraction=0.99156632846436177
+NEAR_NULL candidate=16 K=117 residual_reduction=0.00098215145521029189 Sv_over_v=0.085893174493061025 seconds=0.77199591700000003
+NEAR_NULL candidate=17 K=121 residual_reduction=0.00099358615846154778 Sv_over_v=0.08937984129255265 seconds=0.72596470800000001
+NEAR_NULL candidate=18 K=120 residual_reduction=0.00097637327593747718 Sv_over_v=0.090946799221731184 seconds=0.71884666600000002
+NEAR_NULL candidate=19 K=119 residual_reduction=0.00096932433055575435 Sv_over_v=0.088548561271219142 seconds=0.71234370800000002
+NEAR_NULL_CARRY generated=21 retained=9 represented_energy=20.589599261694879 fraction=0.99210581915905105
+NEAR_NULL candidate=20 K=118 residual_reduction=0.00098774549647389991 Sv_over_v=0.089224093760075632 seconds=0.777370958
+NEAR_NULL candidate=21 K=118 residual_reduction=0.00098259014813534967 Sv_over_v=0.091997408345556031 seconds=0.70846037500000003
+NEAR_NULL candidate=22 K=118 residual_reduction=0.00099156716979474212 Sv_over_v=0.078013326849797712 seconds=0.706034834
+NEAR_NULL candidate=23 K=119 residual_reduction=0.00096122840117108415 Sv_over_v=0.095296458336055961 seconds=0.71079199999999998
+NEAR_NULL_SVD seconds=17.339637207999999 compression_seconds=0.091079332999999998 candidates=24 retained=8 batch=4 pool_columns=13 energy_lower_bound=0.97171633401382707 energy=0.98862179714322185 minimum_energy=0.97043881633343343 minimum_rank_ratio=0.049409226877010867 orthogonality=5.7731597482795395e-15
+MetalMGClover: subset=odd Schur operator_match=1.82490493260258e-16 setup_seconds=18.432518584
+ ...19.022581 sec
+  ... constructing PrecFermActQprop  ...1e-06 sec
+BATCH_SETUP method=MetalMGClover seconds=19.362302 hierarchy_instances=1
+BATCH_BEGIN method=MetalMGClover rhs=2 caller_tile=1
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.323302 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=170.123304297074
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.855292 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=142.397511181343
+BATCH_RESULT method=MetalMGClover rhs=2 caller_tile=1 seconds=5.5342970000000005 seconds_per_rhs=2.7671485000000002 max_full_relative=1.3182312588211721e-14 max_solution_difference=4.1853418655545559e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=2 caller_tile=8
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover array: rhs=2 resident_GPU_rhs=2 gpu_tiles=1 hierarchy_reused=true seconds=3.467971 fine_schur_dispatches=246 nominal_operator_flops=815269201920 batch_workspace_seconds=0.002453416 nominal_operator_GFLOP_per_s=235.085357380439
+BATCH_RESULT method=MetalMGClover rhs=2 caller_tile=8 seconds=3.812767 seconds_per_rhs=1.9063835 max_full_relative=1.3182312588211721e-14 max_solution_difference=4.1853418655545559e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=2 caller_tile=16
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover array: rhs=2 resident_GPU_rhs=2 gpu_tiles=1 hierarchy_reused=true seconds=3.306837 fine_schur_dispatches=246 nominal_operator_flops=815269201920 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=246.54048624713
+BATCH_RESULT method=MetalMGClover rhs=2 caller_tile=16 seconds=3.6524209999999999 seconds_per_rhs=1.8262105 max_full_relative=1.3182312588211721e-14 max_solution_difference=4.1853418655545559e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=4 caller_tile=16
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=7.66153219099258e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.96248038548583e-15
+MetalMGClover array: rhs=4 resident_GPU_rhs=4 gpu_tiles=1 hierarchy_reused=true seconds=5.640886 fine_schur_dispatches=250 nominal_operator_flops=1666646163456 batch_workspace_seconds=0.113328292 nominal_operator_GFLOP_per_s=295.458224728527
+BATCH_RESULT method=MetalMGClover rhs=4 caller_tile=16 seconds=6.3364609999999999 seconds_per_rhs=1.58411525 max_full_relative=1.3182312588211721e-14 max_solution_difference=4.1853418655545559e-13 K_min=76 K_max=78
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.808826999999999
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 0.230062
+PASS real 12^3x96 qprop scalar/batched 8/16 RHS, one reused hierarchy, all full FP64 residuals <=1e-12

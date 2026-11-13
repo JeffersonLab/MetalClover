@@ -1,0 +1,22 @@
+{
+  "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_batch.cc": {
+    "bytes": 11342,
+    "sha256": "ad787b9b61ae5b2e6f70a8a6f3f5ca0c31e98b4475982b660a4c3102bf4c7c92"
+  },
+  "/Users/admin/Downloads/chroma.metalclover/lib/actions/ferm/invert/metal_solvers/syssolver_linop_metal_clover.cc": {
+    "bytes": 17369,
+    "sha256": "c784d6b6e4ef1e682e06cd28fc0a99d32f0dc86fc53955eda81c10055650b0b7"
+  },
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/metalclover_api.mm": {
+    "bytes": 35629,
+    "sha256": "9fc287cf25a669afe90f171ad210c34432ae89ddf866a315ddb5a7e825ee9698"
+  },
+  "/private/tmp/metalclover-install/lib/libmetalclover.dylib": {
+    "bytes": 479976,
+    "sha256": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738"
+  },
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_batch": {
+    "bytes": 3621400,
+    "sha256": "3f01e399a086fa55070e1c68dd46518dc9e3ba7950fa4ce5d994290e1d2d0a17"
+  }
+}

@@ -38,8 +38,9 @@ namespace MetalCloverEnv {
     int pre_steps = 1, post_steps = 1;
     float omega = 1;
     TunedGPUCycle(const Transfer &h, MetalRun &m, uint32_t rhs,
-                  const std::vector<Cx<float>> &inverse, uint32_t format = 0)
-        : GPUCycle(h, m, rhs, inverse, format), vectors(m) {}
+                  const std::vector<Cx<float>> &inverse, uint32_t format = 0,
+                  const GPUCycle *shared = nullptr)
+        : GPUCycle(h, m, rhs, inverse, format, shared), vectors(m) {}
     void diagonal(id<MTLComputeCommandEncoder> e, id<MTLBuffer> r,
                   id<MTLBuffer> z) {
       size_t n = size_t(h.rows) * h.inbs * rhs;

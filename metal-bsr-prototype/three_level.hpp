@@ -557,7 +557,8 @@ namespace MetalCloverEnv {
     std::function<void(id<MTLBuffer>, id<MTLBuffer>)> blocking_coarse;
     std::function<void()> check;
     GPUCycle(const Transfer &h, MetalRun &m, uint32_t rhs,
-             const std::vector<Cx<float>> &inverse, uint32_t format = 0)
+             const std::vector<Cx<float>> &inverse, uint32_t format = 0,
+             const GPUCycle *shared = nullptr)
         : h(h), m(m), rhs(rhs), diagonal_format(format) {
       auto put = [&](const void *p, size_t n) {
         auto b = [m.device newBufferWithLength:std::max(size_t(8), n)
@@ -568,11 +569,14 @@ namespace MetalCloverEnv {
           std::memcpy([b contents], p, n);
         return b;
       };
-      basis = put(h.basis32.data(), h.basis32.size() * 8);
-      offsets = put(h.offsets.data(), h.offsets.size() * 4);
-      sites = put(h.sites.data(), h.sites.size() * 4);
-      aggregate = put(h.aggregate.data(), h.aggregate.size() * 4);
-      inv = put(inverse.data(), inverse.size() * 8);
+      basis =
+          shared ? shared->basis : put(h.basis32.data(), h.basis32.size() * 8);
+      offsets = shared ? shared->offsets
+                       : put(h.offsets.data(), h.offsets.size() * 4);
+      sites = shared ? shared->sites : put(h.sites.data(), h.sites.size() * 4);
+      aggregate = shared ? shared->aggregate
+                         : put(h.aggregate.data(), h.aggregate.size() * 4);
+      inv = shared ? shared->inv : put(inverse.data(), inverse.size() * 8);
       size_t n = size_t(h.rows) * h.inbs * rhs * 8;
       residual = put(nullptr, n);
       work = put(nullptr, n);

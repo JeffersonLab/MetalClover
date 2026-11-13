@@ -1,0 +1,68 @@
+[
+  {
+    "source": "/private/tmp/metalclover-batch-real12/summary.json",
+    "copy": "summary.json",
+    "raw_sha256": "07b9c227d66c5e229319df949412b625624b6b9e69c9e142d92b40e4843d60a7",
+    "normalized_sha256": "07b9c227d66c5e229319df949412b625624b6b9e69c9e142d92b40e4843d60a7"
+  },
+  {
+    "source": "/private/tmp/metalclover-batch-real12/run.csv",
+    "copy": "run.csv",
+    "raw_sha256": "bb5678591ee7caf10f73a9f8c42fec13baba5aaae26294f5d37af1f2d3e2c1ee",
+    "normalized_sha256": "bb5678591ee7caf10f73a9f8c42fec13baba5aaae26294f5d37af1f2d3e2c1ee"
+  },
+  {
+    "source": "/private/tmp/metalclover-batch-real12/timing.log",
+    "copy": "timing.log",
+    "raw_sha256": "4105f6e9645b3f6c56426b3d82a65def74a66be3297013b1d8d5d03fd94aa9ca",
+    "normalized_sha256": "4105f6e9645b3f6c56426b3d82a65def74a66be3297013b1d8d5d03fd94aa9ca"
+  },
+  {
+    "source": "/private/tmp/metalclover-batch-real12/resources.csv",
+    "copy": "resources.csv",
+    "raw_sha256": "e2cba94581287bdaee178de1b29bd7a3cc2337855451e9cb7735a21248704e86",
+    "normalized_sha256": "d7dbf92d2d4e089e96d91b8d9b83d363d302ce2869ffc7f62ff708956e88d4ba"
+  },
+  {
+    "source": "/private/tmp/metalclover-batch-real12/status.json",
+    "copy": "status.json",
+    "raw_sha256": "9a3c56228fc6ec73ba088ea59547aaace848fdfa42c9852e6fa590e96d1a2010",
+    "normalized_sha256": "9a3c56228fc6ec73ba088ea59547aaace848fdfa42c9852e6fa590e96d1a2010"
+  },
+  {
+    "source": "/private/tmp/chroma-batch-validation/benchmark-build.log",
+    "copy": "validation/benchmark-build.log",
+    "raw_sha256": "9ee2215264af9262387621c588c306a6bc700fa5e540950ab0f08592f847e967",
+    "normalized_sha256": "8c1427d208a0cdad43a59ea6ce76ad3af092af24268f54c4b53d3db91e72eade"
+  },
+  {
+    "source": "/private/tmp/chroma-batch-validation/regression-build.log",
+    "copy": "validation/regression-build.log",
+    "raw_sha256": "59ae30cb790706e72c8f9aa365501be4ca6379ae3727e40093496361f0009bf6",
+    "normalized_sha256": "912d43fe9224a2f844b38f9c7a397f409b8cf63572c6055202dd7df196126228"
+  },
+  {
+    "source": "/private/tmp/chroma-batch-validation/bootstrap.log",
+    "copy": "validation/bootstrap.log",
+    "raw_sha256": "1e3cd6c49360409755ca363c5f150cce61f4a98dd62ad7279ca5b28961e976e1",
+    "normalized_sha256": "1e3cd6c49360409755ca363c5f150cce61f4a98dd62ad7279ca5b28961e976e1"
+  },
+  {
+    "source": "/private/tmp/chroma-batch-validation/benchmark-source-binary.json",
+    "copy": "validation/benchmark-source-binary.json",
+    "raw_sha256": "065fce021ed8bf5fc2e5a88c315f9dc3219b8f7bffd95ecf01e74b985f863220",
+    "normalized_sha256": "065fce021ed8bf5fc2e5a88c315f9dc3219b8f7bffd95ecf01e74b985f863220"
+  },
+  {
+    "source": "/private/tmp/chroma-batch-validation/remote-bases.json",
+    "copy": "validation/remote-bases.json",
+    "raw_sha256": "a3b1d3a3312f77bed702d48f67a5b2a63d29b6c558d2ecb6b2894f2001a3c1c8",
+    "normalized_sha256": "a3b1d3a3312f77bed702d48f67a5b2a63d29b6c558d2ecb6b2894f2001a3c1c8"
+  },
+  {
+    "source": "/private/tmp/run_chroma_batch_timing.py",
+    "copy": "validation/run_chroma_batch_timing.py",
+    "raw_sha256": "42210f4a3b76f84f7baa24b1da1d22d7164d086b730af5242b2767bd126d86df",
+    "normalized_sha256": "42210f4a3b76f84f7baa24b1da1d22d7164d086b730af5242b2767bd126d86df"
+  }
+]

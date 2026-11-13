@@ -9,6 +9,7 @@ namespace MetalCloverEnv {
 #endif
 
 #define METALCLOVER_ABI_VERSION 1
+#define METALCLOVER_BATCH_API_VERSION 1
 #if defined(__GNUC__)
 #define METALCLOVER_API __attribute__((visibility("default")))
 #else
@@ -16,7 +17,8 @@ namespace MetalCloverEnv {
 #endif
 /* All fields use interleaved FP64 {real,imag}. Lexicographic site order,
  * x fastest, then y,z,t; spinors: site,color,spin; links: site,mu,row,col.
- * Odd fields enumerate odd sites in this same order. One RHS per call.
+ * Odd fields enumerate odd sites in this same order. Scalar fields contain one
+ * RHS; array calls pack multiple fields into component-major GPU tiles.
  * Contexts own their gauge/hierarchy and are serial, not thread safe.
  */
 #ifdef __cplusplus
@@ -49,6 +51,24 @@ typedef struct metalclover_context metalclover_context;
      * Denominator includes FP64 checks. This is not a hardware-counter rate. */
     double nominal_operator_gflops;
   } metalclover_solve_info;
+  /* ABI-1 additive batch extension. Existing options/info layouts are
+   * unchanged. Per-column solve seconds are amortized shares of the batch
+   * elapsed time. Nominal dispatched work (including inactive lanes) is
+   * apportioned over columns requiring correction; aggregate work/rate is
+   * authoritative. */
+  typedef struct {
+    size_t rhs_count, configured_batch_rhs, maximum_resident_rhs, tiles;
+    uint64_t nominal_operator_flops, fine_schur_dispatches;
+    double seconds, workspace_seconds, residual_seconds,
+        nominal_operator_gflops;
+  } metalclover_batch_info;
+  /* Default cap is 8; 1 selects scalar execution. A memory-budget estimate may
+   * lower the actual width. Changes reuse the existing hierarchy. */
+  METALCLOVER_API int metalclover_set_rhs_batch(metalclover_context *context,
+                                                size_t maximum_rhs);
+  METALCLOVER_API int
+  metalclover_get_batch_info(const metalclover_context *context,
+                             metalclover_batch_info *info);
   /* Optional independent CPU FP64 operator, PLUS sign, matching the solve
    * subset. Returns zero on success. Input/output each contain n_complex
    * interleaved complex numbers; access with memcpy or the caller's own type.
@@ -78,11 +98,13 @@ typedef struct metalclover_context metalclover_context;
                         void *x64, double tolerance, int max_iterations,
                         metalclover_apply64 apply, void *user,
                         metalclover_solve_info *info);
-  /* Array calls reuse one context/hierarchy and one resident GPU RHS. Fields
+  /* Array calls reuse one context/hierarchy and use batched GPU tiles. Fields
    * are pointer arrays, not one contiguous multi-RHS allocation. Outputs must
    * be distinct and disjoint from all source fields. Each info corresponds to
    * the same array index. On failure, completed results remain available and
-   * failed_rhs identifies the failed column; SIZE_MAX means all succeeded.
+   * failed_rhs identifies the first unaccepted column of a failed GPU tile
+   * (or the precise column for validation/FP64 callback failures); SIZE_MAX
+   * means all succeeded. Results marked converged remain available on failure.
    * An empty array succeeds without touching fields or info. */
   METALCLOVER_API int metalclover_solve_full_array(
       metalclover_context *context, size_t rhs_count, const void *const *b64,

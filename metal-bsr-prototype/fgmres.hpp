@@ -143,7 +143,7 @@ namespace MetalCloverEnv {
       }
     }
     return {*std::min_element(counts.begin(), counts.end()),
-            *std::max_element(counts.begin(), counts.end()), total};
+            *std::max_element(counts.begin(), counts.end()), total, counts};
   }
 
   template <class Operator, class Preconditioner> struct CPUGenericFGMRES {

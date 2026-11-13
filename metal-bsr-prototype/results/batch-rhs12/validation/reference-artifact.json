@@ -1,0 +1,8 @@
+{
+  "path": "/private/tmp/metalclover-batch-real12/run.reference.bin",
+  "bytes": 3057647616,
+  "sha256": "24013f5e64a51ef751649f02733b863acb7dad089ff42a355917c8277c908606",
+  "committed": false,
+  "contents": "96 complete full FP64 scalar BiCGStab reference solutions, site/color/spin, interleaved real/imag doubles",
+  "source_seed_base": 20261113
+}

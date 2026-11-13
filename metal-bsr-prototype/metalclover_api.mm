@@ -53,8 +53,34 @@ namespace MetalCloverEnv {
     std::unique_ptr<CompactDeviceCorrection<FineFG>> mg_correction;
     std::unique_ptr<CompactDeviceCorrection<GPUBiCGStab>> bi_correction;
 
+    struct BatchWorkspace {
+      uint32_t rhs;
+      GPUCompactSchur op;
+      std::unique_ptr<TunedGPUCycle> pre, pre1;
+      std::unique_ptr<Coarse> matrix1, bottom;
+      std::unique_ptr<GPUBlockOperator> op1;
+      std::unique_ptr<CoarseFG> coarse;
+      std::unique_ptr<FineFG> mg;
+      std::unique_ptr<GPUBiCGStab> bi;
+      std::unique_ptr<CompactDeviceCorrection<FineFG>> mg_correction;
+      std::unique_ptr<CompactDeviceCorrection<GPUBiCGStab>> bi_correction;
+      size_t allocated_bytes = 0;
+      BatchWorkspace(Context &context, uint32_t width);
+    };
+    std::unique_ptr<BatchWorkspace> batch;
+    size_t batch_limit = 8;
+    metalclover_batch_info batch_info{};
     double setup_seconds = 0;
     std::mutex mutex;
+    uint32_t batch_width(size_t remaining) const;
+    void solve_many(bool full, size_t count, const void *const *b,
+                    void *const *x, double tolerance, int limit,
+                    metalclover_apply64 apply, void *user,
+                    metalclover_solve_info *info, size_t *failed);
+    void solve_tile(bool full, size_t offset, uint32_t width,
+                    const void *const *b, void *const *x, double tolerance,
+                    int limit, metalclover_apply64 apply, void *user,
+                    metalclover_solve_info *info, size_t *failed);
 
     explicit Context(const metalclover_options &o, const void *links)
         : options(o) {
@@ -263,9 +289,9 @@ namespace MetalCloverEnv {
     }
     void solve(bool full, const void *bptr, void *xptr, double tolerance,
                int limit, metalclover_apply64 apply, void *user,
-               metalclover_solve_info &info) {
-      std::unique_lock<std::mutex> lock(mutex, std::try_to_lock);
-      if (!lock.owns_lock())
+               metalclover_solve_info &info, bool acquire_lock = true) {
+      std::unique_lock<std::mutex> lock(mutex, std::defer_lock);
+      if (acquire_lock && !lock.try_lock())
         throw std::runtime_error("concurrent use of solver context");
       if (!(tolerance > 0 && tolerance < 1) || limit < 1)
         throw std::runtime_error("invalid solve tolerance or iteration limit");
@@ -307,19 +333,23 @@ namespace MetalCloverEnv {
         auto correction = [&](auto &corr) {
           InnerInfo inner;
           const Cx<float> *dx;
+          // Normalize before FP32 conversion; otherwise independent RHS scales
+          // can underflow FP32 norm reductions near a 1e-12 relative target.
+          double scale = norm(r);
+          auto *p = static_cast<Cx<float> *>(
+              [(full ? corr.input : corr.reduced) contents]);
+          for (size_t j = 0; j < n; ++j)
+            p[j] = {float(r[j].re / scale), float(r[j].im / scale)};
           if (full) {
-            inner = corr.run(r.data(), .002, budget);
+            inner = corr.run_prepared(.002, budget);
             dx = corr.correction();
           } else {
-            auto *p = static_cast<Cx<float> *>([corr.reduced contents]);
-            for (size_t j = 0; j < n; ++j)
-              p[j] = {float(r[j].re), float(r[j].im)};
             inner = corr.solve_reduced(.002, budget);
             dx = corr.odd_correction();
           }
           for (size_t j = 0; j < n; ++j) {
-            x[j].re += dx[j].re;
-            x[j].im += dx[j].im;
+            x[j].re += scale * dx[j].re;
+            x[j].im += scale * dx[j].im;
           }
           info.krylov_iterations += inner.max_iterations;
         };
@@ -346,6 +376,284 @@ namespace MetalCloverEnv {
     }
   };
 
+  Context::BatchWorkspace::BatchWorkspace(Context &ctx, uint32_t width)
+      : rhs(width), op(*ctx.op, width) {
+    // Coefficients and transfer weights are shared with the scalar graph.
+    // Only RHS-dependent vectors and function specializations are new.
+    if (ctx.options.method == METALCLOVER_BICGSTAB) {
+      System system;
+      system.p.rows = op.eo.rows;
+      system.p.rhs = rhs;
+      system.p.colors = 3;
+      system.p.spins = 4;
+      bi = std::make_unique<GPUBiCGStab>(*ctx.metal, system, 1,
+                                         ctx.options.workers);
+      bi->allow_inexact = true;
+      bi->encode_override = [this](id<MTLComputeCommandEncoder> enc,
+                                   id<MTLBuffer> x,
+                                   id<MTLBuffer> y) { op.encode(enc, x, y); };
+      bi_correction = std::make_unique<CompactDeviceCorrection<GPUBiCGStab>>(
+          *ctx.c, op, *bi, ctx.options.workers);
+    } else {
+      std::vector<Cx<float>> empty;
+      pre = std::make_unique<TunedGPUCycle>(*ctx.first, *ctx.metal, rhs, empty,
+                                            2, ctx.pre.get());
+      pre->product = [this](id<MTLComputeCommandEncoder> enc, id<MTLBuffer> x,
+                            id<MTLBuffer> y) { op.encode(enc, x, y); };
+      matrix1 = std::make_unique<Coarse>(*ctx.a1, *ctx.metal, rhs, 1, .1,
+                                         ctx.matrix1.get());
+      bottom = std::make_unique<Coarse>(*ctx.a2, *ctx.metal, rhs,
+                                        ctx.options.bottom_iterations, .1,
+                                        ctx.bottom.get());
+      op1 = std::make_unique<GPUBlockOperator>(*matrix1);
+      pre1 = std::make_unique<TunedGPUCycle>(*ctx.second, *ctx.metal, rhs,
+                                             empty, 0, ctx.pre1.get());
+      pre1->product = [this](id<MTLComputeCommandEncoder> enc, id<MTLBuffer> x,
+                             id<MTLBuffer> y) { op1->encode(enc, x, y); };
+      pre1->coarse = [this](id<MTLComputeCommandEncoder> enc, id<MTLBuffer> x,
+                            id<MTLBuffer> y) { bottom->encode(enc, x, y); };
+      pre1->check = [this]() { bottom->check(); };
+      coarse = std::make_unique<CoarseFG>(ctx.a1->n, rhs, *op1, *pre1, 8);
+      coarse->allow_inexact = true;
+      pre->blocking_coarse = [this, &ctx](id<MTLBuffer> x, id<MTLBuffer> y) {
+        coarse->run_device(x, .1, 32);
+        pre->copy(coarse->delta, y, size_t(ctx.a1->n) * rhs);
+      };
+      mg = std::make_unique<FineFG>(ctx.first->rows * 12, rhs, op, *pre,
+                                    ctx.options.restart);
+      mg->allow_inexact = true;
+      mg->blocking_pre = [this](id<MTLBuffer> x, id<MTLBuffer> y) {
+        pre->apply_device(x, y);
+      };
+      mg_correction = std::make_unique<CompactDeviceCorrection<FineFG>>(
+          *ctx.c, op, *mg, ctx.options.workers);
+    }
+  }
+
+  uint32_t Context::batch_width(size_t remaining) const {
+    size_t width = std::min(remaining, batch_limit);
+    size_t components = size_t(c->w.a.p.rows) * 12;
+    width = std::min(width, size_t(UINT32_MAX) / components);
+    width = std::max(size_t(1), width);
+    if (batch && batch->rhs == width)
+      return uint32_t(width);
+    // Keep the old large-volume scalar path viable: batching must fit in the
+    // device's recommended budget in addition to the retained scalar graph.
+    double per_rhs = double(components / 2) * 8;
+    per_rhs *= options.method == METALCLOVER_MG ? 32 : 12;
+    if (options.method == METALCLOVER_MG)
+      per_rhs += (36. * a1->n + 10. * a2->n) * 8;
+    per_rhs *= 1.08; // norm/Arnoldi partials and small allocation padding
+    double current = double(metal->device.currentAllocatedSize);
+    if (batch)
+      current -= batch->allocated_bytes;
+    double available = double(metal->device.recommendedMaxWorkingSetSize) -
+                       current - 256. * 1024 * 1024;
+    size_t fitting = available > 0 ? size_t(available / per_rhs) : 0;
+    return uint32_t(std::max(size_t(1), std::min(width, fitting)));
+  }
+
+  void Context::solve_tile(bool full, size_t offset, uint32_t width,
+                           const void *const *bptr, void *const *xptr,
+                           double tolerance, int limit,
+                           metalclover_apply64 apply, void *user,
+                           metalclover_solve_info *info, size_t *failed) {
+    if (width == 1) {
+      if (failed)
+        *failed = offset;
+      auto before = op->applications;
+      solve(full, bptr[offset], xptr[offset], tolerance, limit, apply, user,
+            info[offset], false);
+      batch_info.fine_schur_dispatches += op->applications - before;
+      return;
+    }
+    if (!batch || batch->rhs != width) {
+      auto started = Clock::now();
+      batch.reset();
+      size_t before = metal->device.currentAllocatedSize;
+      batch = std::make_unique<BatchWorkspace>(*this, width);
+      batch->allocated_bytes = metal->device.currentAllocatedSize - before;
+      batch_info.workspace_seconds += seconds(started);
+    }
+    struct Field {
+      std::vector<D> b, x, residual;
+      double bnorm = 1, scale = 1;
+    };
+    size_t n = size_t(c->w.a.p.rows) * 12 / (full ? 1 : 2);
+    std::vector<Field> fields(width);
+    auto norm = [](const std::vector<D> &v) {
+      double sum = 0;
+      for (auto z : v)
+        sum += z.re * z.re + z.im * z.im;
+      return std::sqrt(sum);
+    };
+    auto publish = [&](uint32_t r) {
+      std::memcpy(xptr[offset + r], fields[r].x.data(), n * sizeof(D));
+    };
+    auto check_field = [&](uint32_t r) {
+      if (failed)
+        *failed = offset + r;
+      auto started = Clock::now();
+      auto &f = fields[r];
+      auto &out = info[offset + r];
+      if (apply) {
+        if (apply(user, f.x.data(), f.residual.data(), n))
+          throw std::runtime_error(
+              "external FP64 batch operator callback failed");
+      } else if (full)
+        c->apply(f.x.data(), f.residual.data(), options.workers, -1, true);
+      else
+        apply_odd(f.x.data(), f.residual.data());
+      for (size_t j = 0; j < n; ++j)
+        f.residual[j] = minus_z(f.b[j], f.residual[j]);
+      f.scale = norm(f.residual);
+      out.relative_residual = f.scale / f.bnorm;
+      out.residual_seconds += seconds(started);
+      if (!std::isfinite(out.relative_residual))
+        throw std::runtime_error("nonfinite full FP64 batch residual");
+      out.converged = out.relative_residual <= tolerance;
+      if (out.converged)
+        publish(r);
+    };
+    for (uint32_t r = 0; r < width; ++r) {
+      auto &f = fields[r];
+      f.b = copy_field(bptr[offset + r], n);
+      f.x = copy_field(xptr[offset + r], n);
+      f.residual.resize(n);
+      f.bnorm = norm(f.b);
+      if (f.bnorm == 0)
+        f.bnorm = 1;
+      check_field(r);
+    }
+    for (;;) {
+      std::vector<uint32_t> active;
+      int budget = limit;
+      for (uint32_t r = 0; r < width; ++r) {
+        auto &out = info[offset + r];
+        if (out.converged)
+          continue;
+        if (failed)
+          *failed = offset + r;
+        if (out.outer_iterations >= 16 || out.krylov_iterations >= limit) {
+          publish(r);
+          throw std::runtime_error(
+              "batch FP64 residual tolerance not attained within budget");
+        }
+        active.push_back(r);
+        budget = std::min(budget, limit - out.krylov_iterations);
+      }
+      if (active.empty())
+        break;
+      if (failed)
+        *failed = offset + active.front();
+      auto before = metal->work;
+      uint64_t applications_before = batch->op.applications;
+      InnerInfo inner;
+      const Cx<float> *dx = nullptr;
+      auto correct = [&](auto &corr) {
+        auto *input = static_cast<Cx<float> *>(
+            [(full ? corr.input : corr.reduced) contents]);
+        chunks(uint32_t(n), options.workers,
+               [&](int, uint32_t begin, uint32_t end) {
+                 for (size_t q = begin; q < end; ++q)
+                   for (uint32_t r = 0; r < width; ++r) {
+                     auto z = info[offset + r].converged
+                                  ? D{}
+                                  : fields[r].residual[q];
+                     double scale =
+                         info[offset + r].converged ? 1 : fields[r].scale;
+                     input[q * width + r] = {float(z.re / scale),
+                                             float(z.im / scale)};
+                   }
+               });
+        inner = full ? corr.run_prepared(.002, budget)
+                     : corr.solve_reduced(.002, budget);
+        dx = full ? corr.correction() : corr.odd_correction();
+      };
+      if (batch->mg_correction)
+        correct(*batch->mg_correction);
+      else
+        correct(*batch->bi_correction);
+      if (inner.rhs_iterations.size() != width)
+        throw std::runtime_error("missing per-RHS batch iteration counts");
+      auto work = metal->work - before;
+      uint64_t dispatches = batch->op.applications - applications_before;
+      batch_info.fine_schur_dispatches += dispatches;
+      // Attribute all nominal dispatched work, including inactive lanes, over
+      // the columns corrected in this outer step. Preserve exact-guess zeros.
+      auto share = [&](uint64_t total, size_t index) {
+        return total / active.size() + uint64_t(index < total % active.size());
+      };
+      for (size_t k = 0; k < active.size(); ++k) {
+        uint32_t r = active[k];
+        auto &out = info[offset + r];
+        out.fine_flops += share(work.fine, k);
+        out.coarse_flops += share(work.coarse, k);
+        out.transfer_flops += share(work.transfer, k);
+        out.local_vector_flops += share(work.local_vector, k);
+        out.nominal_operator_flops = out.fine_flops + out.coarse_flops +
+                                     out.transfer_flops +
+                                     out.local_vector_flops;
+        out.fine_schur_applications += dispatches;
+        out.krylov_iterations += inner.rhs_iterations[r];
+        ++out.outer_iterations;
+        auto &f = fields[r];
+        for (size_t q = 0; q < n; ++q) {
+          f.x[q].re += f.scale * dx[q * width + r].re;
+          f.x[q].im += f.scale * dx[q * width + r].im;
+        }
+        check_field(r);
+      }
+    }
+  }
+
+  void Context::solve_many(bool full, size_t count, const void *const *b,
+                           void *const *x, double tolerance, int limit,
+                           metalclover_apply64 apply, void *user,
+                           metalclover_solve_info *info, size_t *failed) {
+    std::unique_lock<std::mutex> lock(mutex, std::try_to_lock);
+    if (!lock.owns_lock())
+      throw std::runtime_error("concurrent use of solver context");
+    batch_info = {};
+    batch_info.rhs_count = count;
+    batch_info.configured_batch_rhs = batch_limit;
+    auto started = Clock::now();
+    auto before = metal->work;
+    auto finish = [&]() {
+      batch_info.seconds = seconds(started);
+      batch_info.nominal_operator_flops = (metal->work - before).total();
+      batch_info.nominal_operator_gflops =
+          (metal->work - before).gflops(batch_info.seconds);
+      for (size_t i = 0; i < count; ++i) {
+        info[i].seconds = batch_info.seconds / count;
+        info[i].nominal_operator_gflops =
+            info[i].seconds > 0 ? double(info[i].nominal_operator_flops) /
+                                      (info[i].seconds * 1e9)
+                                : 0;
+        batch_info.residual_seconds += info[i].residual_seconds;
+      }
+    };
+    try {
+      if (count && (!(tolerance > 0 && tolerance < 1) || limit < 1))
+        throw std::runtime_error("invalid batch solve stopping parameters");
+      for (size_t i = 0; i < count;) {
+        uint32_t width = batch_width(count - i);
+        ++batch_info.tiles;
+        batch_info.maximum_resident_rhs =
+            std::max(batch_info.maximum_resident_rhs, size_t(width));
+        solve_tile(full, i, width, b, x, tolerance, limit, apply, user, info,
+                   failed);
+        i += width;
+      }
+      if (failed)
+        *failed = SIZE_MAX;
+    } catch (...) {
+      finish();
+      throw;
+    }
+    finish();
+  }
+
   int solve_array(Context *context, bool full, size_t count,
                   const void *const *b, void *const *x, double tolerance,
                   int limit, metalclover_apply64 apply, void *user,
@@ -355,6 +663,15 @@ namespace MetalCloverEnv {
     return protect([&] {
       if (!context || (count && (!b || !x || !info)))
         throw std::runtime_error("null array solve argument");
+      size_t bytes =
+          size_t(context->c->w.a.p.rows) * 12 * sizeof(D) / (full ? 1 : 2);
+      auto overlap = [&](const void *a, const void *b) {
+        auto left = reinterpret_cast<uintptr_t>(a),
+             right = reinterpret_cast<uintptr_t>(b);
+        if (left > UINTPTR_MAX - bytes || right > UINTPTR_MAX - bytes)
+          throw std::runtime_error("invalid field address range");
+        return left < right + bytes && right < left + bytes;
+      };
       for (size_t i = 0; i < count; ++i)
         info[i] = {};
       for (size_t i = 0; i < count; ++i) {
@@ -363,22 +680,34 @@ namespace MetalCloverEnv {
         if (!b[i] || !x[i])
           throw std::runtime_error("null array field");
         for (size_t j = 0; j < count; ++j)
-          if (x[i] == b[j] || (i != j && x[i] == x[j]))
+          if (overlap(x[i], b[j]) || (i != j && overlap(x[i], x[j])))
             throw std::runtime_error("array output fields must be distinct and "
                                      "disjoint from sources");
       }
-      for (size_t i = 0; i < count; ++i) {
-        if (failed)
-          *failed = i;
-        context->solve(full, b[i], x[i], tolerance, limit, apply, user,
-                       info[i]);
-      }
-      if (failed)
-        *failed = SIZE_MAX;
+      context->solve_many(full, count, b, x, tolerance, limit, apply, user,
+                          info, failed);
     });
   }
 
   extern "C" {
+  int metalclover_set_rhs_batch(metalclover_context *ctx, size_t cap) {
+    return protect([&] {
+      if (!ctx || cap < 1 || cap > 64)
+        throw std::runtime_error("RHS batch cap must be between 1 and 64");
+      std::unique_lock<std::mutex> lock(ctx->mutex, std::try_to_lock);
+      if (!lock.owns_lock())
+        throw std::runtime_error("concurrent use of solver context");
+      ctx->batch_limit = cap;
+    });
+  }
+  int metalclover_get_batch_info(const metalclover_context *ctx,
+                                 metalclover_batch_info *info) {
+    return protect([&] {
+      if (!ctx || !info)
+        throw std::runtime_error("null batch info argument");
+      *info = ctx->batch_info;
+    });
+  }
   void metalclover_default_options(metalclover_options *o) {
     if (!o)
       return;

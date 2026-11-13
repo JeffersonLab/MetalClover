@@ -219,10 +219,11 @@ namespace MetalCloverEnv {
     GPUCompactSchur &op;
     Inner &inner;
     int workers;
+    uint32_t rhs;
     id<MTLBuffer> input, delta, re, reduced;
     CompactDeviceCorrection(const CompactClover &c, GPUCompactSchur &op,
                             Inner &inner, int workers)
-        : c(c), op(op), inner(inner), workers(workers) {
+        : c(c), op(op), inner(inner), workers(workers), rhs(op.rhs) {
       auto alloc = [&](size_t n) {
         auto b = [op.m.device newBufferWithLength:n
                                           options:MTLResourceStorageModeShared];
@@ -230,10 +231,10 @@ namespace MetalCloverEnv {
           throw std::runtime_error("compact correction allocation");
         return b;
       };
-      input = alloc(c.w.a.p.outputs() * 8);
+      input = alloc(size_t(c.w.a.p.rows) * 12 * rhs * 8);
       delta = input;
-      re = alloc(c.parity.eo.p.outputs() * 8);
-      reduced = alloc(c.parity.eo.p.outputs() * 8);
+      re = alloc(op.eo.outputs * 8);
+      reduced = alloc(op.eo.outputs * 8);
     }
     void dispatch(id<MTLComputeCommandEncoder> enc,
                   id<MTLComputePipelineState> pipe,
@@ -260,7 +261,6 @@ namespace MetalCloverEnv {
       return run(residual.data(), tol, limit);
     }
     InnerInfo run(const D *residual, double tol, int limit) {
-      uint32_t rhs = c.w.a.p.rhs;
       auto *in = static_cast<Cx<float> *>([input contents]);
       chunks(c.w.a.p.rows * 12, workers,
              [&](int, uint32_t first, uint32_t last) {

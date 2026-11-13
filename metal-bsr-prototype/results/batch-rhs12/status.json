@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "argv": [
+    "python3",
+    "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_guarded.py",
+    "--log",
+    "/private/tmp/metalclover-batch-real12/timing.log",
+    "--resources",
+    "/private/tmp/metalclover-batch-real12/resources.csv",
+    "--max-rss-gib",
+    "26",
+    "--reserve-disk-gib",
+    "4",
+    "--",
+    "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_batch",
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+    "/private/tmp/mg-null-metadata/correctness12/action.xml",
+    "/private/tmp/metalclover-batch-real12/run",
+    "96"
+  ],
+  "environment": {
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "started": 1794600433.2762399,
+  "exit": 0,
+  "finished": 1794602524.42179
+}

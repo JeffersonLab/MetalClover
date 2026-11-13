@@ -1,0 +1,336 @@
+{
+  "captured_after_timing_UTC": "2026-11-13T20:44:42.711045+00:00",
+  "MetalClover_base_commit": "0658d648e17bbdd6126a48fd366b03aede0100d8",
+  "Chroma_base_commit": "0c73a0c05d6e127898dbea1841ca296cbd45c8e1",
+  "Chroma_branch": "rge/devel-datalib-reorg",
+  "clang_format": {
+    "bytes": 61,
+    "sha256": "a3c37d019d81b4d97a24c1a6fe44f95ec09e559dbe31495b6955ce2726db68d6"
+  },
+  "sources": {
+    "metal-bsr-prototype/Makefile": {
+      "bytes": 9131,
+      "sha256": "9e9b40b9474c732ef04bac12230728295b1430377e3f3863d6cfd9e5b7d72599"
+    },
+    "metal-bsr-prototype/anisotropic_inspect.cc": {
+      "bytes": 4313,
+      "sha256": "2837533c8364d3a2e3aaea672a0a48ae5aaa95129c6edc9e8f30ef74b80e327a"
+    },
+    "metal-bsr-prototype/api_contract_test.cc": {
+      "bytes": 12462,
+      "sha256": "658ea17ed926535824c8ac631879f1bf9daadc329a9aadcd34159ded17999569"
+    },
+    "metal-bsr-prototype/bicgstab.hpp": {
+      "bytes": 16025,
+      "sha256": "03f2b9bacaa93a3fb0164e1e5f2aea86f49c60e166b0b1b05f465810b08ae0ec"
+    },
+    "metal-bsr-prototype/bicgstab.metal": {
+      "bytes": 5082,
+      "sha256": "7199faa81f1ed9be074df1ef7f03d7f93ac27d2d67e6b92d1c92b75efeebbb4e"
+    },
+    "metal-bsr-prototype/bsr_common.hpp": {
+      "bytes": 17786,
+      "sha256": "b2798a2129b147393c710f37b3e81fe67145d6ed49164eb51b37e1cce422f80e"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/clover-2017.h": {
+      "bytes": 75896,
+      "sha256": "fd284133d958a2cabb9d0b83bb818663aba0077cca2607c4e5ddee90a5a968b6"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/clover_fermact_params_w.cc": {
+      "bytes": 3117,
+      "sha256": "ca3df093114297cde445241fd5f6a88562349d598f3c1c6b71fca4a54a5de977"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/clover_term_qdp_w.h": {
+      "bytes": 75815,
+      "sha256": "88a3c8e7d0c71ed1ff9cbee22e80fec421ab3423dea2b772bee7105536f5a931"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/eoprec_clover_fermact_w.h": {
+      "bytes": 2138,
+      "sha256": "d074278f2744eeb42041bc6ff04b841ee606de66c80fea4995c6264b3b9d7e43"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/lwldslash_w.h": {
+      "bytes": 9231,
+      "sha256": "4fba693bbf65a981ebd6ce6e92acb563d004bca7bbbfd2b81bf950ea1b884541"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/mesfield.cc": {
+      "bytes": 1955,
+      "sha256": "2af4ec03d2b20b86ed775501892fc17f546ba5b2ca9602d1499efa9144391772"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/quda-mg-2017.cc": {
+      "bytes": 3229,
+      "sha256": "678aca7a546b1e051ad90fbb0d413a1672b6885b4d1e4fc5460378ba7a90a46d"
+    },
+    "metal-bsr-prototype/build/anisotropic-study/quda-mg-2017.h": {
+      "bytes": 24597,
+      "sha256": "28cbec2d39d7900cb389673e90a48d767ca7ed71b38e1337fb9a6ab92176c635"
+    },
+    "metal-bsr-prototype/build/standalone-shaders.metal": {
+      "bytes": 36592,
+      "sha256": "69890d97d992903f7d2f9aa5b5b6dfcf57b5911efb96b5caf22ad62e4e184fd4"
+    },
+    "metal-bsr-prototype/chroma_bridge.hpp": {
+      "bytes": 1901,
+      "sha256": "7a2a893048a43e1b9e06a537dc635cf97e40f003dba5d489527d11d4f09bb9fe"
+    },
+    "metal-bsr-prototype/chroma_export.cc": {
+      "bytes": 9251,
+      "sha256": "4175fb231b7e1502486e5c1f831f3ba71a9a3eb19be7d4aa389ddc8b55f3942d"
+    },
+    "metal-bsr-prototype/chroma_import.hpp": {
+      "bytes": 5652,
+      "sha256": "c74cedec1fc3369d23461e2a5fc59eda0510ee760243652e4f838efae193ca33"
+    },
+    "metal-bsr-prototype/clover.metal": {
+      "bytes": 2618,
+      "sha256": "f9ed4c0aea2f8aacaa6e7a304955ae83da4c1f1b64bb432913bd15d04f16b1e9"
+    },
+    "metal-bsr-prototype/clover.mm": {
+      "bytes": 11559,
+      "sha256": "8f9d8b23c3d2fd726e81a1110e74b99100a82b08f696f9627aae51da75757fff"
+    },
+    "metal-bsr-prototype/clover_checks.hpp": {
+      "bytes": 12785,
+      "sha256": "acf3a07916806ec01781eb87c629e47be2ae0cfc2375a723ba7987d77d1a871d"
+    },
+    "metal-bsr-prototype/clover_common.hpp": {
+      "bytes": 18570,
+      "sha256": "6915566401d4fb30e5eab3965192dcf6faa598e5dfe0b219bfeb520c89401387"
+    },
+    "metal-bsr-prototype/clover_stage1.mm": {
+      "bytes": 2416,
+      "sha256": "c6519c10c42d2f01f4840eaff67616af9db1ef93ee8f6a2bc141c3c2b9543307"
+    },
+    "metal-bsr-prototype/compact_clover.hpp": {
+      "bytes": 20608,
+      "sha256": "0199e21ac182a9b2922d0fdf39f83354602561437276856a5878fa915be8985e"
+    },
+    "metal-bsr-prototype/compact_clover.metal": {
+      "bytes": 6694,
+      "sha256": "909357005b78cbd0d267f0df042614e109a8fdd6b78a5f0cfa463b0bacbc172a"
+    },
+    "metal-bsr-prototype/compact_probe.mm": {
+      "bytes": 8865,
+      "sha256": "d957f35949214f4f132bf2b8d7c2303e2b0c547c732c26a8d7482ddeb725dedd"
+    },
+    "metal-bsr-prototype/compact_residual.hpp": {
+      "bytes": 6598,
+      "sha256": "f8436139235831d9162ab9e18866e14cb9cb4476249ff0e9e024df266fc5e61a"
+    },
+    "metal-bsr-prototype/compact_solve.hpp": {
+      "bytes": 12959,
+      "sha256": "8d449e1ade60bd30ad53d9eafedc6ab866df984cf7f5752589bef2b340b953e1"
+    },
+    "metal-bsr-prototype/correctness_chroma.cc": {
+      "bytes": 9819,
+      "sha256": "49e5d7f2a007d3e26c5991020f071b7ced6a88ae69834645d16664e7c2a74c7c"
+    },
+    "metal-bsr-prototype/correctness_compare.mm": {
+      "bytes": 13856,
+      "sha256": "08c7b21c8622f51bdf5b6d3d17b8c45ea59ea1030905a40886a4dd2125193cab"
+    },
+    "metal-bsr-prototype/critical_probe.mm": {
+      "bytes": 9715,
+      "sha256": "89af321bae137f9c2bbbd9c2a662379ed2ba458c17c1df8d4e97c8e4cfc671a4"
+    },
+    "metal-bsr-prototype/evenodd.hpp": {
+      "bytes": 7641,
+      "sha256": "84ae2f36b24ad1fdc3c5edf01ccecd2720e9eafd17d881e9f4bf6dbe9eaa6e6e"
+    },
+    "metal-bsr-prototype/evenodd.metal": {
+      "bytes": 383,
+      "sha256": "0bb816d30ca49cd66442c0ac2806d8092127cace94634c027a4537041f86f0fc"
+    },
+    "metal-bsr-prototype/evenodd.mm": {
+      "bytes": 16984,
+      "sha256": "6024653084225ae1f22c44696fff34f9a7e32a33e9fce1612ab6b71220b41c01"
+    },
+    "metal-bsr-prototype/fgmres.hpp": {
+      "bytes": 17605,
+      "sha256": "6017251442c6481768498a73fb170348164d9ae8d321347b3a000bb18e702bf7"
+    },
+    "metal-bsr-prototype/include/metalclover/metalclover.h": {
+      "bytes": 7158,
+      "sha256": "f18c3b3c3245d2e02ab0a554f1b64b6388b80eef6b01ec6c39ec0c84c9157da4"
+    },
+    "metal-bsr-prototype/kernels.metal": {
+      "bytes": 1941,
+      "sha256": "da7ccddfd7db0a3556589daed2f52c53ffe7f5cacb3f096b7744a8de4a78e018"
+    },
+    "metal-bsr-prototype/lattice_geometry.hpp": {
+      "bytes": 730,
+      "sha256": "abba11e48fa2a9a7c3a5c662b29985e3d948359c75742b34134374e333df793a"
+    },
+    "metal-bsr-prototype/low_memory_clover.hpp": {
+      "bytes": 10263,
+      "sha256": "165b4d0aeea76e748b2905cb74a9ed6a6f2b956b8c6f4ef3695e137025be176d"
+    },
+    "metal-bsr-prototype/low_memory_solve.mm": {
+      "bytes": 17107,
+      "sha256": "4f8b9ceeb882c0c2a74cdb02995c3885a9fcfc9ade655048cf05884d63d4eac5"
+    },
+    "metal-bsr-prototype/low_memory_verify.cc": {
+      "bytes": 7189,
+      "sha256": "0e243598d5362999f5649e007f7f1a1752ae01fa2bb45ae35e25f72fc23dceb8"
+    },
+    "metal-bsr-prototype/main.mm": {
+      "bytes": 8305,
+      "sha256": "e4b8a1ec1edd29ca9a431c7ea96803132b8ce95fd678b91fa773d0bb380e14ec"
+    },
+    "metal-bsr-prototype/mapped_field.hpp": {
+      "bytes": 2867,
+      "sha256": "a4861cc14dbae749ce34b6aceb241a4bb0af5b4e240989b9c86f8afafe38cd4b"
+    },
+    "metal-bsr-prototype/metal_memory_limits.mm": {
+      "bytes": 1156,
+      "sha256": "e174b9aaf8839b1c5280809882855a0232ae89957cb2ae37ea5324ee6970a075"
+    },
+    "metal-bsr-prototype/metalclover_api.mm": {
+      "bytes": 35629,
+      "sha256": "9fc287cf25a669afe90f171ad210c34432ae89ddf866a315ddb5a7e825ee9698"
+    },
+    "metal-bsr-prototype/mg_checks.hpp": {
+      "bytes": 5830,
+      "sha256": "4a75895e1a9d5f9eb1853f281bfe24ccfb55ae80c26f55cc3fc79faad41e33c9"
+    },
+    "metal-bsr-prototype/mg_real_tune.hpp": {
+      "bytes": 6623,
+      "sha256": "a16ab99cc00cf53df70821cd8b747a4fe50721f0190821cb5918fcbf481f2b9f"
+    },
+    "metal-bsr-prototype/mg_real_tune.metal": {
+      "bytes": 561,
+      "sha256": "a00c90951e7cd57d5521a478ab439befabdb5262464bf0b3cb7997142c60eb06"
+    },
+    "metal-bsr-prototype/mg_real_tune.mm": {
+      "bytes": 23117,
+      "sha256": "bd40b4f4a4050706cf40f07d4cf6a2ca4515c316b08dd3cf4ff07c9d0894cdfe"
+    },
+    "metal-bsr-prototype/multigrid.hpp": {
+      "bytes": 19902,
+      "sha256": "fd4af4a49355905a9e160153fb033e65659ae49911363814b24da7331c187ed2"
+    },
+    "metal-bsr-prototype/multigrid.metal": {
+      "bytes": 7706,
+      "sha256": "4d444ed7f1781ea5592dcddec48697d7b3ee1e7e7dc979b8a8ff050a06fc331e"
+    },
+    "metal-bsr-prototype/multigrid.mm": {
+      "bytes": 15918,
+      "sha256": "b0824c2279330c00c4a85636e0b0285e5837f2bfa2403d1435476f1cfc4c0b88"
+    },
+    "metal-bsr-prototype/near_null_svd.hpp": {
+      "bytes": 15966,
+      "sha256": "5f44237bb05ad46e02378d931d86ce22b0261629b9824496e470ebe9da5f43a6"
+    },
+    "metal-bsr-prototype/operator_work.hpp": {
+      "bytes": 1081,
+      "sha256": "e803869167ba15323fbc54910d740be1ad9fc6b8879e34609c9734eaf2f20878"
+    },
+    "metal-bsr-prototype/packed_clover.metal": {
+      "bytes": 5019,
+      "sha256": "f1fca81e2f6206cbd979fddbe6fb9294c8ca5a70b6c99e9378538b9d927500ad"
+    },
+    "metal-bsr-prototype/performance_chroma.cc": {
+      "bytes": 10740,
+      "sha256": "42794514606b65a498705ee8951dfedfd54a7386afc12e4e3987c24eb0fa2ef0"
+    },
+    "metal-bsr-prototype/performance_compare.mm": {
+      "bytes": 15954,
+      "sha256": "62605b9aa122afbd787fe76dfe9ca8068bbe57ad4706066bb59b8c3dbb693be1"
+    },
+    "metal-bsr-prototype/production_bridge.hpp": {
+      "bytes": 2474,
+      "sha256": "96eedc7ad1d4b00f176253c14bec561d5d30bd7a87c9570ae6a6e9a58a785880"
+    },
+    "metal-bsr-prototype/production_export.cc": {
+      "bytes": 9699,
+      "sha256": "47b6c4a560bbb32f40d8a4c024ed66938421ad5317274b3c3bef77b0beaeb8e6"
+    },
+    "metal-bsr-prototype/production_solve.mm": {
+      "bytes": 17334,
+      "sha256": "9e7a49222a7b4e951b644755c8f92071875ec253f14d55301827932bebc7043c"
+    },
+    "metal-bsr-prototype/production_verify.cc": {
+      "bytes": 5329,
+      "sha256": "ab68d18ca61e3d2b4138b045b837c3939083ac80b3930f8abf9f0b67c79d1818"
+    },
+    "metal-bsr-prototype/residual_profile.mm": {
+      "bytes": 7122,
+      "sha256": "ce2a4da9c5566213d913d93337a60ba923a0d6ea74788e3e54b150f391f7a3f2"
+    },
+    "metal-bsr-prototype/solve.metal": {
+      "bytes": 3979,
+      "sha256": "713f14a8e100adc71eb486adb2b9f1a0de308d3377502b1afb215e41527b3412"
+    },
+    "metal-bsr-prototype/solve.mm": {
+      "bytes": 7758,
+      "sha256": "9afef87f96b571941ea84b39d79871cacdb6eb17742d7bfbd97cc4bca09fea97"
+    },
+    "metal-bsr-prototype/solve_common.hpp": {
+      "bytes": 25988,
+      "sha256": "7f94dec462904ea98ff1bc338a5ca766158e8afc58f5d5b65fc080f8b7656512"
+    },
+    "metal-bsr-prototype/solver_compare.mm": {
+      "bytes": 20148,
+      "sha256": "41c3d6c54d6f4b5681c85e5d65020e9bb46dcfddf4c4d0c8bad169f55ca75f90"
+    },
+    "metal-bsr-prototype/sparse_checks.hpp": {
+      "bytes": 5587,
+      "sha256": "d625089dcb7174f7d81d862e53d452fa63561e8a0ffef61698d59d2a48c51613"
+    },
+    "metal-bsr-prototype/sparse_coarse.hpp": {
+      "bytes": 18928,
+      "sha256": "e45356e5e33787183f3a724695aedd101c72915d83d55ecb88b80eb08c12232e"
+    },
+    "metal-bsr-prototype/sparse_coarse.metal": {
+      "bytes": 2609,
+      "sha256": "108a63b4cab83fc1ace71caa5a8e5056b13abe129316b42f50535d101eb0a41a"
+    },
+    "metal-bsr-prototype/sparse_multigrid.mm": {
+      "bytes": 15111,
+      "sha256": "9f58d7279876a7f530842176bb19362656516dc7f8966f7d6adbf08d40e15a2a"
+    },
+    "metal-bsr-prototype/sparse_rhs.hpp": {
+      "bytes": 1607,
+      "sha256": "ed87b174faeeda99573faddf5aa6fd4ff3b0c5b644bac557939b96d5da86b66f"
+    },
+    "metal-bsr-prototype/three_level.hpp": {
+      "bytes": 28750,
+      "sha256": "e77083fdaf173cc537a05a2e4aeb4e2030682287a134e369a59c2ea5bb13969f"
+    },
+    "metal-bsr-prototype/three_level.mm": {
+      "bytes": 32999,
+      "sha256": "cd0ed7740aa8799d873420abc5588f39b650bca633884f34848730e834438702"
+    },
+    "metal-bsr-prototype/wilson.mm": {
+      "bytes": 8507,
+      "sha256": "c79fe23a4e9c2736ca5cd915b1eb2c10659547ecdf5a3b8f4378b1e7cf4cf66f"
+    },
+    "metal-bsr-prototype/wilson_common.hpp": {
+      "bytes": 12804,
+      "sha256": "effdc24086b1e231ef7c8c80bc1a8d073988e999fd92b22ab115e202c64d7c42"
+    },
+    "Chroma/configure.ac": {
+      "bytes": 50516,
+      "sha256": "6130adf8be910d4592f78282ee4e3561624f78ad0a9fd5b21f41d8d28c29aebb"
+    },
+    "Chroma/mainprogs/tests/Makefile.am": {
+      "bytes": 9695,
+      "sha256": "e6a81e5c6f699aaca747f3f149e7f64d63c6ad3e10ea25faaaa148ef3c3aa58d"
+    },
+    "Chroma/mainprogs/tests/t_metal_clover.cc": {
+      "bytes": 14509,
+      "sha256": "17781ea051e11ebe4a911d49c5f343762bcf7b7b2d62f51381a632acc6189bb6"
+    },
+    "Chroma/mainprogs/tests/t_metal_clover_batch.cc": {
+      "bytes": 11342,
+      "sha256": "ad787b9b61ae5b2e6f70a8a6f3f5ca0c31e98b4475982b660a4c3102bf4c7c92"
+    },
+    "Chroma/lib/actions/ferm/invert/metal_solvers/syssolver_linop_metal_clover.cc": {
+      "bytes": 17369,
+      "sha256": "c784d6b6e4ef1e682e06cd28fc0a99d32f0dc86fc53955eda81c10055650b0b7"
+    },
+    "Chroma/lib/actions/ferm/invert/metal_solvers/syssolver_linop_metal_clover.h": {
+      "bytes": 2910,
+      "sha256": "4c5d51efb2090d6126f3be075b654a87fd3c8aa8d23a9ace89a6b95621c95d3f"
+    }
+  }
+}

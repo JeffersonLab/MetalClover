@@ -364,6 +364,7 @@ namespace MetalCloverEnv {
 
   struct GPUCompactSchur {
     uint64_t applications = 0;
+    uint32_t rhs;
     MetalRun &m;
     const CompactClover &c;
     struct Half {
@@ -378,7 +379,8 @@ namespace MetalCloverEnv {
       uint32_t rows;
       float beta;
     } params;
-    GPUCompactSchur(MetalRun &m, const CompactClover &c) : m(m), c(c) {
+    GPUCompactSchur(MetalRun &m, const CompactClover &c)
+        : rhs(c.w.a.p.rhs), m(m), c(c) {
       auto put = [&](const void *p, size_t n) {
         auto b = [m.device newBufferWithLength:std::max(size_t(8), n)
                                        options:MTLResourceStorageModeShared];
@@ -396,15 +398,35 @@ namespace MetalCloverEnv {
             put(c.parity.even.data(), c.parity.even.size() * 4)};
       oe = {eo.rows, eo.outputs,
             put(c.parity.odd.data(), c.parity.odd.size() * 4)};
-      temp = put(nullptr, eo.outputs * 8);
-      inverted = put(nullptr, eo.outputs * 8);
+
       perms = put(c.perm.data(), 64);
       auto ph =
           block_cast<float>(std::vector<D>(c.phase.begin(), c.phase.end()));
       phases = put(ph.data(), 128);
+      initialize_workspace();
+    }
+    GPUCompactSchur(const GPUCompactSchur &shared, uint32_t width)
+        : rhs(width), m(shared.m), c(shared.c),
+          eo{shared.eo.rows, size_t(shared.eo.rows) * 12 * width,
+             shared.eo.map},
+          oe{shared.oe.rows, size_t(shared.oe.rows) * 12 * width,
+             shared.oe.map},
+          links(shared.links), neighbors(shared.neighbors), inv(shared.inv),
+          Aodd(shared.Aodd), perms(shared.perms), phases(shared.phases) {
+      initialize_workspace();
+    }
+    void initialize_workspace() {
+      auto alloc = [&]() {
+        auto b = [m.device newBufferWithLength:eo.outputs * 8
+                                       options:MTLResourceStorageModeShared];
+        if (!b)
+          throw std::runtime_error("compact batch workspace allocation");
+        return b;
+      };
+      temp = alloc();
+      inverted = alloc();
       params = {eo.rows, 0};
       auto values = [MTLFunctionConstantValues new];
-      uint32_t rhs = c.w.a.p.rhs;
       [values setConstantValue:&rhs type:MTLDataTypeUInt atIndex:0];
       auto pipe = [&](const char *n) {
         NSError *e = nil;

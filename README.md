@@ -49,9 +49,11 @@ All C++ library types and routines are in `MetalCloverEnv`. The public header
 `metalclover/metalclover.h` provides a C ABI usable from GCC-built Chroma,
 separate full and odd-Schur solve interfaces, arrays of source/solution pointers,
 and structured residual, iteration, timing and nominal operator-work results.
-One context owns and reuses one hierarchy and GPU workspace; array solves
-process one GPU RHS at a time. The caller owns the source and solution arrays.
-See [interfaces and FLOP accounting](metal-bsr-prototype/OPERATOR_WORK.md).
+One context owns and reuses one hierarchy. Array solves run batched GPU tiles
+(default cap 8), sharing gauge, clover and hierarchy data. The caller owns
+the source and solution arrays.
+See [batched RHS support](metal-bsr-prototype/BATCH_RHS.md) and
+[interfaces and FLOP accounting](metal-bsr-prototype/OPERATOR_WORK.md).
 
 The Chroma integration on `rge/devel-datalib-reorg` enables
 `MetalBiCGClover` and `MetalMGClover` with `--with-metal=/path/to/metal-prefix`.

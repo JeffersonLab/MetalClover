@@ -1,0 +1,1294 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+u0 is 1
+Single Precision Read
+QIO_read_finished
+  ... constructing linop  ...0.36196 sec
+  ... constructing invLinOp LDL_CLOVER seconds=0.12554320899999999 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.4046377332171687
+MetalBiCGClover: subset=odd Schur operator_match=1.82490493260258e-16 setup_seconds=0.180013708
+ ...0.813025 sec
+  ... constructing PrecFermActQprop  ...1e-06 sec
+BATCH_SETUP method=MetalBiCGClover seconds=1.1750510000000001 hierarchy_instances=0
+BATCH_BEGIN method=MetalBiCGClover rhs=96 caller_tile=1
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.188592 fine_schur_dispatches=726 nominal_operator_flops=942280998912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.516327868852
+MetalBiCGClover batch_rhs=0 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.112216 fine_schur_dispatches=708 nominal_operator_flops=918918660096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.261852035977
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=2.27645705157052e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.10811 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.322260455389
+MetalBiCGClover batch_rhs=0 iterations=368 outer=5 relative_residual=1.23220326592992e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.205664 fine_schur_dispatches=736 nominal_operator_flops=955260076032 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.99132910748
+MetalBiCGClover batch_rhs=0 iterations=370 outer=5 relative_residual=1.28938119818935e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.207549 fine_schur_dispatches=740 nominal_operator_flops=960451706880 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.434773055688
+MetalBiCGClover batch_rhs=0 iterations=394 outer=5 relative_residual=1.67818206815769e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.372915 fine_schur_dispatches=788 nominal_operator_flops=1022751277056 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=303.224740930619
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.4431140780083e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.153009 fine_schur_dispatches=724 nominal_operator_flops=939685183488 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.028068897996
+MetalBiCGClover batch_rhs=0 iterations=366 outer=5 relative_residual=1.16639961718232e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.197566 fine_schur_dispatches=732 nominal_operator_flops=950068445184 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.122387836248
+MetalBiCGClover batch_rhs=0 iterations=364 outer=5 relative_residual=2.05413639240459e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.181122 fine_schur_dispatches=728 nominal_operator_flops=944876814336 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.026273854319
+MetalBiCGClover batch_rhs=0 iterations=377 outer=5 relative_residual=1.71921606830774e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.254014 fine_schur_dispatches=754 nominal_operator_flops=978622414848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.743148261808
+MetalBiCGClover batch_rhs=0 iterations=376 outer=5 relative_residual=2.36455126052905e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.277002 fine_schur_dispatches=752 nominal_operator_flops=976026599424 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.841319420617
+MetalBiCGClover batch_rhs=0 iterations=350 outer=5 relative_residual=2.86087213250107e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.071199 fine_schur_dispatches=700 nominal_operator_flops=908535398400 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.824333883933
+MetalBiCGClover batch_rhs=0 iterations=377 outer=5 relative_residual=9.07606158769229e-15
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.262992 fine_schur_dispatches=754 nominal_operator_flops=978622414848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.915664778829
+MetalBiCGClover batch_rhs=0 iterations=374 outer=5 relative_residual=2.04728551042508e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.255249 fine_schur_dispatches=748 nominal_operator_flops=970834968576 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.236776534145
+MetalBiCGClover batch_rhs=0 iterations=376 outer=5 relative_residual=2.46946271987869e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.245133 fine_schur_dispatches=752 nominal_operator_flops=976026599424 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.766285826806
+MetalBiCGClover batch_rhs=0 iterations=366 outer=5 relative_residual=1.70374755415237e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.22675 fine_schur_dispatches=732 nominal_operator_flops=950068445184 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.435095741536
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.25195836008475e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.104397 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.677871401113
+MetalBiCGClover batch_rhs=0 iterations=387 outer=5 relative_residual=1.93894741375696e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.32581 fine_schur_dispatches=774 nominal_operator_flops=1004580569088 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=302.05591091734
+MetalBiCGClover batch_rhs=0 iterations=352 outer=5 relative_residual=2.23079617441619e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.082838 fine_schur_dispatches=704 nominal_operator_flops=913727029248 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.39151627429
+MetalBiCGClover batch_rhs=0 iterations=381 outer=5 relative_residual=2.06692896035845e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.301599 fine_schur_dispatches=762 nominal_operator_flops=989005676544 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.55354255438
+MetalBiCGClover batch_rhs=0 iterations=370 outer=5 relative_residual=2.04636556354797e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.202614 fine_schur_dispatches=740 nominal_operator_flops=960451706880 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.896180707385
+MetalBiCGClover batch_rhs=0 iterations=380 outer=5 relative_residual=1.78149061381024e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.292601 fine_schur_dispatches=760 nominal_operator_flops=986409861120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.583782280331
+MetalBiCGClover batch_rhs=0 iterations=392 outer=5 relative_residual=2.03345245770225e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.378359 fine_schur_dispatches=784 nominal_operator_flops=1017559646208 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=301.199382957229
+MetalBiCGClover batch_rhs=0 iterations=336 outer=5 relative_residual=2.16008419550281e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.994352 fine_schur_dispatches=672 nominal_operator_flops=872193982464 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=291.279710088861
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.43314368760135e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.08113 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.02835419992
+MetalBiCGClover batch_rhs=0 iterations=355 outer=5 relative_residual=2.60970773506779e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.111107 fine_schur_dispatches=710 nominal_operator_flops=921514475520 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.201472826232
+MetalBiCGClover batch_rhs=0 iterations=371 outer=5 relative_residual=2.21912070097082e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.206987 fine_schur_dispatches=742 nominal_operator_flops=963047522304 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.296671705872
+MetalBiCGClover batch_rhs=0 iterations=379 outer=5 relative_residual=1.58039302839678e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.267706 fine_schur_dispatches=758 nominal_operator_flops=983814045696 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=301.071775029945
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.05390608531347e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.119514 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.235340166449
+MetalBiCGClover batch_rhs=0 iterations=353 outer=5 relative_residual=1.78430004279714e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.112817 fine_schur_dispatches=706 nominal_operator_flops=916322844672 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.370933039751
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.99388764489404e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.099338 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.163766244275
+MetalBiCGClover batch_rhs=0 iterations=343 outer=5 relative_residual=2.25062780551698e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.006439 fine_schur_dispatches=686 nominal_operator_flops=890364690432 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.152587972681
+MetalBiCGClover batch_rhs=0 iterations=343 outer=5 relative_residual=2.84942433737067e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.040682 fine_schur_dispatches=686 nominal_operator_flops=890364690432 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=292.817430573799
+MetalBiCGClover batch_rhs=0 iterations=382 outer=5 relative_residual=1.75838762625374e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.295182 fine_schur_dispatches=764 nominal_operator_flops=991601491968 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.92465058622
+MetalBiCGClover batch_rhs=0 iterations=370 outer=5 relative_residual=2.0418559362672e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.203961 fine_schur_dispatches=740 nominal_operator_flops=960451706880 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.770099224054
+MetalBiCGClover batch_rhs=0 iterations=376 outer=5 relative_residual=1.50914439593933e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.251011 fine_schur_dispatches=752 nominal_operator_flops=976026599424 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.222484459142
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.69650084156718e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.097386 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=292.485206227445
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.71379253266227e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.088726 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=293.30526015451
+MetalBiCGClover batch_rhs=0 iterations=344 outer=5 relative_residual=2.4136662194592e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.042544 fine_schur_dispatches=688 nominal_operator_flops=892960505856 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=293.491402542083
+MetalBiCGClover batch_rhs=0 iterations=350 outer=5 relative_residual=2.67548655000909e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.081284 fine_schur_dispatches=700 nominal_operator_flops=908535398400 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.856104922493
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.58410060080643e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.05948 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.109006424621
+MetalBiCGClover batch_rhs=0 iterations=373 outer=5 relative_residual=1.83492030905388e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.254553 fine_schur_dispatches=746 nominal_operator_flops=968239153152 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.502960668331
+MetalBiCGClover batch_rhs=0 iterations=345 outer=5 relative_residual=1.66806415876333e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.046721 fine_schur_dispatches=690 nominal_operator_flops=895556321280 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=293.941034075651
+MetalBiCGClover batch_rhs=0 iterations=373 outer=5 relative_residual=1.54183887342257e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.223928 fine_schur_dispatches=746 nominal_operator_flops=968239153152 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.329025075002
+MetalBiCGClover batch_rhs=0 iterations=357 outer=5 relative_residual=1.29401655847502e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.106942 fine_schur_dispatches=714 nominal_operator_flops=926706106368 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.26952236894
+MetalBiCGClover batch_rhs=0 iterations=364 outer=5 relative_residual=2.20662541420581e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.196175 fine_schur_dispatches=728 nominal_operator_flops=944876814336 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.627371572583
+MetalBiCGClover batch_rhs=0 iterations=371 outer=5 relative_residual=1.82675312266349e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.208194 fine_schur_dispatches=742 nominal_operator_flops=963047522304 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.183692851492
+MetalBiCGClover batch_rhs=0 iterations=375 outer=5 relative_residual=1.78745543718707e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.235696 fine_schur_dispatches=750 nominal_operator_flops=973430784000 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.841236012283
+MetalBiCGClover batch_rhs=0 iterations=374 outer=5 relative_residual=2.15580333117314e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.241074 fine_schur_dispatches=748 nominal_operator_flops=970834968576 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.541130062442
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.05959278945838e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.127786 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=289.642444520181
+MetalBiCGClover batch_rhs=0 iterations=350 outer=5 relative_residual=2.22098438151312e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.093925 fine_schur_dispatches=700 nominal_operator_flops=908535398400 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=293.651396979565
+MetalBiCGClover batch_rhs=0 iterations=358 outer=5 relative_residual=1.22718339001329e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.14137 fine_schur_dispatches=716 nominal_operator_flops=929301921792 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.826955052095
+MetalBiCGClover batch_rhs=0 iterations=366 outer=5 relative_residual=1.76294624999463e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.177171 fine_schur_dispatches=732 nominal_operator_flops=950068445184 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.029685586328
+MetalBiCGClover batch_rhs=0 iterations=344 outer=5 relative_residual=2.41327867459203e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.048446 fine_schur_dispatches=688 nominal_operator_flops=892960505856 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=292.923183109033
+MetalBiCGClover batch_rhs=0 iterations=367 outer=5 relative_residual=1.75016742164274e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.228146 fine_schur_dispatches=734 nominal_operator_flops=952664260608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.111887940632
+MetalBiCGClover batch_rhs=0 iterations=364 outer=5 relative_residual=1.15788581721235e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.206699 fine_schur_dispatches=728 nominal_operator_flops=944876814336 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.657158135516
+MetalBiCGClover batch_rhs=0 iterations=380 outer=5 relative_residual=2.1692600808405e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.279192 fine_schur_dispatches=760 nominal_operator_flops=986409861120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.808815439901
+MetalBiCGClover batch_rhs=0 iterations=378 outer=5 relative_residual=1.9970383277978e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.272793 fine_schur_dispatches=756 nominal_operator_flops=981218230272 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.810660274573
+MetalBiCGClover batch_rhs=0 iterations=381 outer=5 relative_residual=2.10856929273409e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.281756 fine_schur_dispatches=762 nominal_operator_flops=989005676544 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=301.364780484594
+MetalBiCGClover batch_rhs=0 iterations=357 outer=5 relative_residual=2.02478557458471e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.141569 fine_schur_dispatches=714 nominal_operator_flops=926706106368 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.981936213402
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=2.16629945741886e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.105426 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.579234199752
+MetalBiCGClover batch_rhs=0 iterations=372 outer=5 relative_residual=1.26799223171108e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.222313 fine_schur_dispatches=744 nominal_operator_flops=965643337728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.673972617806
+MetalBiCGClover batch_rhs=0 iterations=378 outer=5 relative_residual=1.7775581540479e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.27026 fine_schur_dispatches=756 nominal_operator_flops=981218230272 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.042880465773
+MetalBiCGClover batch_rhs=0 iterations=378 outer=5 relative_residual=2.89250384797459e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.262509 fine_schur_dispatches=756 nominal_operator_flops=981218230272 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.755716006301
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.28906413204438e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.153558 fine_schur_dispatches=724 nominal_operator_flops=939685183488 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.976185466701
+MetalBiCGClover batch_rhs=0 iterations=373 outer=5 relative_residual=1.89009082945276e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.235601 fine_schur_dispatches=746 nominal_operator_flops=968239153152 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.245535265937
+MetalBiCGClover batch_rhs=0 iterations=368 outer=5 relative_residual=2.35745464437549e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.186827 fine_schur_dispatches=736 nominal_operator_flops=955260076032 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=299.752724585301
+MetalBiCGClover batch_rhs=0 iterations=372 outer=5 relative_residual=1.70184875725032e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.239359 fine_schur_dispatches=744 nominal_operator_flops=965643337728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.097042571694
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.80390762639476e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.165067 fine_schur_dispatches=726 nominal_operator_flops=942280998912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.712812686746
+MetalBiCGClover batch_rhs=0 iterations=351 outer=5 relative_residual=2.35123162821587e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.093043 fine_schur_dispatches=702 nominal_operator_flops=911131213824 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.574376697641
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.35580321143086e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.172536 fine_schur_dispatches=724 nominal_operator_flops=939685183488 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.193702289903
+MetalBiCGClover batch_rhs=0 iterations=365 outer=5 relative_residual=9.08700838147092e-15
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.178946 fine_schur_dispatches=730 nominal_operator_flops=947472629760 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.046154215894
+MetalBiCGClover batch_rhs=0 iterations=369 outer=5 relative_residual=1.94397382339749e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.216606 fine_schur_dispatches=738 nominal_operator_flops=957855891456 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.784649862619
+MetalBiCGClover batch_rhs=0 iterations=367 outer=5 relative_residual=1.60930653820024e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.242995 fine_schur_dispatches=734 nominal_operator_flops=952664260608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=293.76063194917
+MetalBiCGClover batch_rhs=0 iterations=380 outer=5 relative_residual=2.35960106564026e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.283236 fine_schur_dispatches=760 nominal_operator_flops=986409861120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.438305720332
+MetalBiCGClover batch_rhs=0 iterations=359 outer=5 relative_residual=1.68956138984118e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.143284 fine_schur_dispatches=718 nominal_operator_flops=931897737216 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.472650010626
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.79590075229124e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.092065 fine_schur_dispatches=698 nominal_operator_flops=905939582976 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=292.988531281199
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=2.4353534393924e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.164497 fine_schur_dispatches=726 nominal_operator_flops=942280998912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.766437734654
+MetalBiCGClover batch_rhs=0 iterations=355 outer=5 relative_residual=2.81414375515741e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.124471 fine_schur_dispatches=710 nominal_operator_flops=921514475520 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=294.934558688495
+MetalBiCGClover batch_rhs=0 iterations=400 outer=5 relative_residual=2.3072039145529e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.420209 fine_schur_dispatches=800 nominal_operator_flops=1038326169600 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=303.585590705129
+MetalBiCGClover batch_rhs=0 iterations=348 outer=5 relative_residual=2.75317013853573e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.059023 fine_schur_dispatches=696 nominal_operator_flops=903343767552 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.304666735752
+MetalBiCGClover batch_rhs=0 iterations=344 outer=5 relative_residual=1.20007510911372e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.064608 fine_schur_dispatches=688 nominal_operator_flops=892960505856 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=291.378377220186
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=2.21954520051543e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.256148 fine_schur_dispatches=726 nominal_operator_flops=942280998912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=289.385187317038
+MetalBiCGClover batch_rhs=0 iterations=352 outer=5 relative_residual=2.46563242839105e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.079233 fine_schur_dispatches=704 nominal_operator_flops=913727029248 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.738515483564
+MetalBiCGClover batch_rhs=0 iterations=373 outer=5 relative_residual=1.37561701413058e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.247916 fine_schur_dispatches=746 nominal_operator_flops=968239153152 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=298.110897311384
+MetalBiCGClover batch_rhs=0 iterations=360 outer=5 relative_residual=2.17653215105475e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.151856 fine_schur_dispatches=720 nominal_operator_flops=934493552640 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.489926138758
+MetalBiCGClover batch_rhs=0 iterations=351 outer=5 relative_residual=2.16069334005899e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.087556 fine_schur_dispatches=702 nominal_operator_flops=911131213824 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.097874766968
+MetalBiCGClover batch_rhs=0 iterations=381 outer=5 relative_residual=1.82124043753761e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.32014 fine_schur_dispatches=762 nominal_operator_flops=989005676544 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.880714832507
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=2.02178697521783e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.123611 fine_schur_dispatches=712 nominal_operator_flops=924110290944 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.846791083781
+MetalBiCGClover batch_rhs=0 iterations=341 outer=5 relative_residual=2.08605855697846e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.031944 fine_schur_dispatches=682 nominal_operator_flops=885173059584 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=291.949013432966
+MetalBiCGClover batch_rhs=0 iterations=350 outer=5 relative_residual=2.02063846047869e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.108071 fine_schur_dispatches=700 nominal_operator_flops=908535398400 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=292.314879035904
+MetalBiCGClover batch_rhs=0 iterations=381 outer=5 relative_residual=2.14557696406692e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.329341 fine_schur_dispatches=762 nominal_operator_flops=989005676544 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.057488717437
+MetalBiCGClover batch_rhs=0 iterations=369 outer=5 relative_residual=1.72874456882959e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.241706 fine_schur_dispatches=738 nominal_operator_flops=957855891456 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=295.478951964182
+MetalBiCGClover batch_rhs=0 iterations=388 outer=5 relative_residual=2.56909471932207e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.356859 fine_schur_dispatches=776 nominal_operator_flops=1007176384512 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=300.035355822809
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.75711287078819e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.169083 fine_schur_dispatches=724 nominal_operator_flops=939685183488 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=296.516431878875
+MetalBiCGClover batch_rhs=0 iterations=360 outer=5 relative_residual=1.6834920151171e-14
+MetalBiCGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=3.143801 fine_schur_dispatches=720 nominal_operator_flops=934493552640 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=297.249588202307
+BATCH_RESULT method=MetalBiCGClover rhs=96 caller_tile=1 seconds=322.35668199999998 seconds_per_rhs=3.3578821041666664 max_full_relative=2.4256013401188647e-14 max_solution_difference=0 K_min=336 K_max=400
+BATCH_BEGIN method=MetalBiCGClover rhs=96 caller_tile=8
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover batch_rhs=2 iterations=356 outer=5 relative_residual=2.27645705157052e-14
+MetalBiCGClover batch_rhs=3 iterations=368 outer=5 relative_residual=1.23220326592992e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=1.28938119818935e-14
+MetalBiCGClover batch_rhs=5 iterations=394 outer=5 relative_residual=1.67818206815769e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.4431140780083e-14
+MetalBiCGClover batch_rhs=7 iterations=366 outer=5 relative_residual=1.16639961718232e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=17.425701 fine_schur_dispatches=836 nominal_operator_flops=8680406777856 batch_workspace_seconds=0.155091042 nominal_operator_GFLOP_per_s=498.138168321378
+MetalBiCGClover batch_rhs=0 iterations=364 outer=5 relative_residual=2.05413639240459e-14
+MetalBiCGClover batch_rhs=1 iterations=377 outer=5 relative_residual=1.71921606830774e-14
+MetalBiCGClover batch_rhs=2 iterations=376 outer=5 relative_residual=2.36455126052905e-14
+MetalBiCGClover batch_rhs=3 iterations=350 outer=5 relative_residual=2.86087213250107e-14
+MetalBiCGClover batch_rhs=4 iterations=377 outer=5 relative_residual=9.07606158769229e-15
+MetalBiCGClover batch_rhs=5 iterations=374 outer=5 relative_residual=2.04728551042508e-14
+MetalBiCGClover batch_rhs=6 iterations=376 outer=5 relative_residual=2.46946271987869e-14
+MetalBiCGClover batch_rhs=7 iterations=366 outer=5 relative_residual=1.70374755415237e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=17.360672 fine_schur_dispatches=844 nominal_operator_flops=8763472871424 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=504.788804916307
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.25195836008475e-14
+MetalBiCGClover batch_rhs=1 iterations=387 outer=5 relative_residual=1.93894741375696e-14
+MetalBiCGClover batch_rhs=2 iterations=352 outer=5 relative_residual=2.23079617441619e-14
+MetalBiCGClover batch_rhs=3 iterations=381 outer=5 relative_residual=2.06692896035845e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=2.04636556354797e-14
+MetalBiCGClover batch_rhs=5 iterations=380 outer=5 relative_residual=1.78149061381024e-14
+MetalBiCGClover batch_rhs=6 iterations=392 outer=5 relative_residual=2.03345245770225e-14
+MetalBiCGClover batch_rhs=7 iterations=336 outer=5 relative_residual=2.16008419550281e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.959282 fine_schur_dispatches=826 nominal_operator_flops=8576574160896 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=505.715640608842
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.43314368760135e-14
+MetalBiCGClover batch_rhs=1 iterations=355 outer=5 relative_residual=2.60970773506779e-14
+MetalBiCGClover batch_rhs=2 iterations=371 outer=5 relative_residual=2.21912070097082e-14
+MetalBiCGClover batch_rhs=3 iterations=379 outer=5 relative_residual=1.58039302839678e-14
+MetalBiCGClover batch_rhs=4 iterations=356 outer=5 relative_residual=1.05390608531347e-14
+MetalBiCGClover batch_rhs=5 iterations=353 outer=5 relative_residual=1.78430004279714e-14
+MetalBiCGClover batch_rhs=6 iterations=356 outer=5 relative_residual=1.99388764489404e-14
+MetalBiCGClover batch_rhs=7 iterations=343 outer=5 relative_residual=2.25062780551698e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.724184 fine_schur_dispatches=810 nominal_operator_flops=8410441973760 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=502.891021395125
+MetalBiCGClover batch_rhs=0 iterations=343 outer=5 relative_residual=2.84942433737067e-14
+MetalBiCGClover batch_rhs=1 iterations=382 outer=5 relative_residual=1.75838762625374e-14
+MetalBiCGClover batch_rhs=2 iterations=370 outer=5 relative_residual=2.0418559362672e-14
+MetalBiCGClover batch_rhs=3 iterations=376 outer=5 relative_residual=1.50914439593933e-14
+MetalBiCGClover batch_rhs=4 iterations=349 outer=5 relative_residual=2.69650084156718e-14
+MetalBiCGClover batch_rhs=5 iterations=349 outer=5 relative_residual=2.71379253266227e-14
+MetalBiCGClover batch_rhs=6 iterations=344 outer=5 relative_residual=2.4136662194592e-14
+MetalBiCGClover batch_rhs=7 iterations=350 outer=5 relative_residual=2.67548655000909e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.53433 fine_schur_dispatches=798 nominal_operator_flops=8285842833408 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=501.129639568582
+MetalBiCGClover batch_rhs=0 iterations=349 outer=5 relative_residual=2.58410060080643e-14
+MetalBiCGClover batch_rhs=1 iterations=373 outer=5 relative_residual=1.83492030905388e-14
+MetalBiCGClover batch_rhs=2 iterations=345 outer=5 relative_residual=1.66806415876333e-14
+MetalBiCGClover batch_rhs=3 iterations=373 outer=5 relative_residual=1.54183887342257e-14
+MetalBiCGClover batch_rhs=4 iterations=357 outer=5 relative_residual=1.29401655847502e-14
+MetalBiCGClover batch_rhs=5 iterations=364 outer=5 relative_residual=2.20662541420581e-14
+MetalBiCGClover batch_rhs=6 iterations=371 outer=5 relative_residual=1.82675312266349e-14
+MetalBiCGClover batch_rhs=7 iterations=375 outer=5 relative_residual=1.78745543718707e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=17.028688 fine_schur_dispatches=834 nominal_operator_flops=8659640254464 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=508.532439754842
+MetalBiCGClover batch_rhs=0 iterations=374 outer=5 relative_residual=2.15580333117314e-14
+MetalBiCGClover batch_rhs=1 iterations=349 outer=5 relative_residual=2.05959278945838e-14
+MetalBiCGClover batch_rhs=2 iterations=350 outer=5 relative_residual=2.22098438151312e-14
+MetalBiCGClover batch_rhs=3 iterations=358 outer=5 relative_residual=1.22718339001329e-14
+MetalBiCGClover batch_rhs=4 iterations=366 outer=5 relative_residual=1.76294624999463e-14
+MetalBiCGClover batch_rhs=5 iterations=344 outer=5 relative_residual=2.41327867459203e-14
+MetalBiCGClover batch_rhs=6 iterations=367 outer=5 relative_residual=1.75016742164274e-14
+MetalBiCGClover batch_rhs=7 iterations=364 outer=5 relative_residual=1.15788581721235e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.940681 fine_schur_dispatches=822 nominal_operator_flops=8535041114112 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=503.819245171549
+MetalBiCGClover batch_rhs=0 iterations=380 outer=5 relative_residual=2.1692600808405e-14
+MetalBiCGClover batch_rhs=1 iterations=378 outer=5 relative_residual=1.9970383277978e-14
+MetalBiCGClover batch_rhs=2 iterations=381 outer=5 relative_residual=2.10856929273409e-14
+MetalBiCGClover batch_rhs=3 iterations=357 outer=5 relative_residual=2.02478557458471e-14
+MetalBiCGClover batch_rhs=4 iterations=356 outer=5 relative_residual=2.16629945741886e-14
+MetalBiCGClover batch_rhs=5 iterations=372 outer=5 relative_residual=1.26799223171108e-14
+MetalBiCGClover batch_rhs=6 iterations=378 outer=5 relative_residual=1.7775581540479e-14
+MetalBiCGClover batch_rhs=7 iterations=378 outer=5 relative_residual=2.89250384797459e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=17.097568 fine_schur_dispatches=836 nominal_operator_flops=8680406777856 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=507.698333345187
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.28906413204438e-14
+MetalBiCGClover batch_rhs=1 iterations=373 outer=5 relative_residual=1.89009082945276e-14
+MetalBiCGClover batch_rhs=2 iterations=368 outer=5 relative_residual=2.35745464437549e-14
+MetalBiCGClover batch_rhs=3 iterations=372 outer=5 relative_residual=1.70184875725032e-14
+MetalBiCGClover batch_rhs=4 iterations=363 outer=5 relative_residual=1.80390762639476e-14
+MetalBiCGClover batch_rhs=5 iterations=351 outer=5 relative_residual=2.35123162821587e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.35580321143086e-14
+MetalBiCGClover batch_rhs=7 iterations=365 outer=5 relative_residual=9.08700838147092e-15
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.511235 fine_schur_dispatches=796 nominal_operator_flops=8265076310016 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=500.572871139924
+MetalBiCGClover batch_rhs=0 iterations=369 outer=5 relative_residual=1.94397382339749e-14
+MetalBiCGClover batch_rhs=1 iterations=367 outer=5 relative_residual=1.60930653820024e-14
+MetalBiCGClover batch_rhs=2 iterations=380 outer=5 relative_residual=2.35960106564026e-14
+MetalBiCGClover batch_rhs=3 iterations=359 outer=5 relative_residual=1.68956138984118e-14
+MetalBiCGClover batch_rhs=4 iterations=349 outer=5 relative_residual=2.79590075229124e-14
+MetalBiCGClover batch_rhs=5 iterations=363 outer=5 relative_residual=2.4353534393924e-14
+MetalBiCGClover batch_rhs=6 iterations=355 outer=5 relative_residual=2.81414375515741e-14
+MetalBiCGClover batch_rhs=7 iterations=400 outer=5 relative_residual=2.3072039145529e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=17.348437 fine_schur_dispatches=852 nominal_operator_flops=8846538964992 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=509.932910093976
+MetalBiCGClover batch_rhs=0 iterations=348 outer=5 relative_residual=2.75317013853573e-14
+MetalBiCGClover batch_rhs=1 iterations=344 outer=5 relative_residual=1.20007510911372e-14
+MetalBiCGClover batch_rhs=2 iterations=363 outer=5 relative_residual=2.21954520051543e-14
+MetalBiCGClover batch_rhs=3 iterations=352 outer=5 relative_residual=2.46563242839105e-14
+MetalBiCGClover batch_rhs=4 iterations=373 outer=5 relative_residual=1.37561701413058e-14
+MetalBiCGClover batch_rhs=5 iterations=360 outer=5 relative_residual=2.17653215105475e-14
+MetalBiCGClover batch_rhs=6 iterations=351 outer=5 relative_residual=2.16069334005899e-14
+MetalBiCGClover batch_rhs=7 iterations=381 outer=5 relative_residual=1.82124043753761e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.618128 fine_schur_dispatches=804 nominal_operator_flops=8348142403584 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=502.351552688967
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=2.02178697521783e-14
+MetalBiCGClover batch_rhs=1 iterations=341 outer=5 relative_residual=2.08605855697846e-14
+MetalBiCGClover batch_rhs=2 iterations=350 outer=5 relative_residual=2.02063846047869e-14
+MetalBiCGClover batch_rhs=3 iterations=381 outer=5 relative_residual=2.14557696406692e-14
+MetalBiCGClover batch_rhs=4 iterations=369 outer=5 relative_residual=1.72874456882959e-14
+MetalBiCGClover batch_rhs=5 iterations=388 outer=5 relative_residual=2.56909471932207e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.75711287078819e-14
+MetalBiCGClover batch_rhs=7 iterations=360 outer=5 relative_residual=1.6834920151171e-14
+MetalBiCGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=16.853286 fine_schur_dispatches=820 nominal_operator_flops=8514274590720 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=505.199673863008
+BATCH_RESULT method=MetalBiCGClover rhs=96 caller_tile=8 seconds=220.28065799999999 seconds_per_rhs=2.2945901874999999 max_full_relative=2.4256013401188647e-14 max_solution_difference=0 K_min=336 K_max=400
+BATCH_BEGIN method=MetalBiCGClover rhs=96 caller_tile=16
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover batch_rhs=2 iterations=356 outer=5 relative_residual=2.27645705157052e-14
+MetalBiCGClover batch_rhs=3 iterations=368 outer=5 relative_residual=1.23220326592992e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=1.28938119818935e-14
+MetalBiCGClover batch_rhs=5 iterations=394 outer=5 relative_residual=1.67818206815769e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.4431140780083e-14
+MetalBiCGClover batch_rhs=7 iterations=366 outer=5 relative_residual=1.16639961718232e-14
+MetalBiCGClover batch_rhs=8 iterations=364 outer=5 relative_residual=2.05413639240459e-14
+MetalBiCGClover batch_rhs=9 iterations=377 outer=5 relative_residual=1.71921606830774e-14
+MetalBiCGClover batch_rhs=10 iterations=376 outer=5 relative_residual=2.36455126052905e-14
+MetalBiCGClover batch_rhs=11 iterations=350 outer=5 relative_residual=2.86087213250107e-14
+MetalBiCGClover batch_rhs=12 iterations=377 outer=5 relative_residual=9.07606158769229e-15
+MetalBiCGClover batch_rhs=13 iterations=374 outer=5 relative_residual=2.04728551042508e-14
+MetalBiCGClover batch_rhs=14 iterations=376 outer=5 relative_residual=2.46946271987869e-14
+MetalBiCGClover batch_rhs=15 iterations=366 outer=5 relative_residual=1.70374755415237e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.90655 fine_schur_dispatches=864 nominal_operator_flops=17942276210688 batch_workspace_seconds=0.102660583 nominal_operator_GFLOP_per_s=545.249386845111
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.25195836008475e-14
+MetalBiCGClover batch_rhs=1 iterations=387 outer=5 relative_residual=1.93894741375696e-14
+MetalBiCGClover batch_rhs=2 iterations=352 outer=5 relative_residual=2.23079617441619e-14
+MetalBiCGClover batch_rhs=3 iterations=381 outer=5 relative_residual=2.06692896035845e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=2.04636556354797e-14
+MetalBiCGClover batch_rhs=5 iterations=380 outer=5 relative_residual=1.78149061381024e-14
+MetalBiCGClover batch_rhs=6 iterations=392 outer=5 relative_residual=2.03345245770225e-14
+MetalBiCGClover batch_rhs=7 iterations=336 outer=5 relative_residual=2.16008419550281e-14
+MetalBiCGClover batch_rhs=8 iterations=349 outer=5 relative_residual=2.43314368760135e-14
+MetalBiCGClover batch_rhs=9 iterations=355 outer=5 relative_residual=2.60970773506779e-14
+MetalBiCGClover batch_rhs=10 iterations=371 outer=5 relative_residual=2.21912070097082e-14
+MetalBiCGClover batch_rhs=11 iterations=379 outer=5 relative_residual=1.58039302839678e-14
+MetalBiCGClover batch_rhs=12 iterations=356 outer=5 relative_residual=1.05390608531347e-14
+MetalBiCGClover batch_rhs=13 iterations=353 outer=5 relative_residual=1.78430004279714e-14
+MetalBiCGClover batch_rhs=14 iterations=356 outer=5 relative_residual=1.99388764489404e-14
+MetalBiCGClover batch_rhs=15 iterations=343 outer=5 relative_residual=2.25062780551698e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.498912 fine_schur_dispatches=856 nominal_operator_flops=17776144023552 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=546.97658874094
+MetalBiCGClover batch_rhs=0 iterations=343 outer=5 relative_residual=2.84942433737067e-14
+MetalBiCGClover batch_rhs=1 iterations=382 outer=5 relative_residual=1.75838762625374e-14
+MetalBiCGClover batch_rhs=2 iterations=370 outer=5 relative_residual=2.0418559362672e-14
+MetalBiCGClover batch_rhs=3 iterations=376 outer=5 relative_residual=1.50914439593933e-14
+MetalBiCGClover batch_rhs=4 iterations=349 outer=5 relative_residual=2.69650084156718e-14
+MetalBiCGClover batch_rhs=5 iterations=349 outer=5 relative_residual=2.71379253266227e-14
+MetalBiCGClover batch_rhs=6 iterations=344 outer=5 relative_residual=2.4136662194592e-14
+MetalBiCGClover batch_rhs=7 iterations=350 outer=5 relative_residual=2.67548655000909e-14
+MetalBiCGClover batch_rhs=8 iterations=349 outer=5 relative_residual=2.58410060080643e-14
+MetalBiCGClover batch_rhs=9 iterations=373 outer=5 relative_residual=1.83492030905388e-14
+MetalBiCGClover batch_rhs=10 iterations=345 outer=5 relative_residual=1.66806415876333e-14
+MetalBiCGClover batch_rhs=11 iterations=373 outer=5 relative_residual=1.54183887342257e-14
+MetalBiCGClover batch_rhs=12 iterations=357 outer=5 relative_residual=1.29401655847502e-14
+MetalBiCGClover batch_rhs=13 iterations=364 outer=5 relative_residual=2.20662541420581e-14
+MetalBiCGClover batch_rhs=14 iterations=371 outer=5 relative_residual=1.82675312266349e-14
+MetalBiCGClover batch_rhs=15 iterations=375 outer=5 relative_residual=1.78745543718707e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.082011 fine_schur_dispatches=844 nominal_operator_flops=17526945742848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=546.31692953562
+MetalBiCGClover batch_rhs=0 iterations=374 outer=5 relative_residual=2.15580333117314e-14
+MetalBiCGClover batch_rhs=1 iterations=349 outer=5 relative_residual=2.05959278945838e-14
+MetalBiCGClover batch_rhs=2 iterations=350 outer=5 relative_residual=2.22098438151312e-14
+MetalBiCGClover batch_rhs=3 iterations=358 outer=5 relative_residual=1.22718339001329e-14
+MetalBiCGClover batch_rhs=4 iterations=366 outer=5 relative_residual=1.76294624999463e-14
+MetalBiCGClover batch_rhs=5 iterations=344 outer=5 relative_residual=2.41327867459203e-14
+MetalBiCGClover batch_rhs=6 iterations=367 outer=5 relative_residual=1.75016742164274e-14
+MetalBiCGClover batch_rhs=7 iterations=364 outer=5 relative_residual=1.15788581721235e-14
+MetalBiCGClover batch_rhs=8 iterations=380 outer=5 relative_residual=2.1692600808405e-14
+MetalBiCGClover batch_rhs=9 iterations=378 outer=5 relative_residual=1.9970383277978e-14
+MetalBiCGClover batch_rhs=10 iterations=381 outer=5 relative_residual=2.10856929273409e-14
+MetalBiCGClover batch_rhs=11 iterations=357 outer=5 relative_residual=2.02478557458471e-14
+MetalBiCGClover batch_rhs=12 iterations=356 outer=5 relative_residual=2.16629945741886e-14
+MetalBiCGClover batch_rhs=13 iterations=372 outer=5 relative_residual=1.26799223171108e-14
+MetalBiCGClover batch_rhs=14 iterations=378 outer=5 relative_residual=1.7775581540479e-14
+MetalBiCGClover batch_rhs=15 iterations=378 outer=5 relative_residual=2.89250384797459e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.299765 fine_schur_dispatches=846 nominal_operator_flops=17568478789632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=543.919709311569
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.28906413204438e-14
+MetalBiCGClover batch_rhs=1 iterations=373 outer=5 relative_residual=1.89009082945276e-14
+MetalBiCGClover batch_rhs=2 iterations=368 outer=5 relative_residual=2.35745464437549e-14
+MetalBiCGClover batch_rhs=3 iterations=372 outer=5 relative_residual=1.70184875725032e-14
+MetalBiCGClover batch_rhs=4 iterations=363 outer=5 relative_residual=1.80390762639476e-14
+MetalBiCGClover batch_rhs=5 iterations=351 outer=5 relative_residual=2.35123162821587e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.35580321143086e-14
+MetalBiCGClover batch_rhs=7 iterations=365 outer=5 relative_residual=9.08700838147092e-15
+MetalBiCGClover batch_rhs=8 iterations=369 outer=5 relative_residual=1.94397382339749e-14
+MetalBiCGClover batch_rhs=9 iterations=367 outer=5 relative_residual=1.60930653820024e-14
+MetalBiCGClover batch_rhs=10 iterations=380 outer=5 relative_residual=2.35960106564026e-14
+MetalBiCGClover batch_rhs=11 iterations=359 outer=5 relative_residual=1.68956138984118e-14
+MetalBiCGClover batch_rhs=12 iterations=349 outer=5 relative_residual=2.79590075229124e-14
+MetalBiCGClover batch_rhs=13 iterations=363 outer=5 relative_residual=2.4353534393924e-14
+MetalBiCGClover batch_rhs=14 iterations=355 outer=5 relative_residual=2.81414375515741e-14
+MetalBiCGClover batch_rhs=15 iterations=400 outer=5 relative_residual=2.3072039145529e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.61671 fine_schur_dispatches=860 nominal_operator_flops=17859210117120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=547.547870926283
+MetalBiCGClover batch_rhs=0 iterations=348 outer=5 relative_residual=2.75317013853573e-14
+MetalBiCGClover batch_rhs=1 iterations=344 outer=5 relative_residual=1.20007510911372e-14
+MetalBiCGClover batch_rhs=2 iterations=363 outer=5 relative_residual=2.21954520051543e-14
+MetalBiCGClover batch_rhs=3 iterations=352 outer=5 relative_residual=2.46563242839105e-14
+MetalBiCGClover batch_rhs=4 iterations=373 outer=5 relative_residual=1.37561701413058e-14
+MetalBiCGClover batch_rhs=5 iterations=360 outer=5 relative_residual=2.17653215105475e-14
+MetalBiCGClover batch_rhs=6 iterations=351 outer=5 relative_residual=2.16069334005899e-14
+MetalBiCGClover batch_rhs=7 iterations=381 outer=5 relative_residual=1.82124043753761e-14
+MetalBiCGClover batch_rhs=8 iterations=356 outer=5 relative_residual=2.02178697521783e-14
+MetalBiCGClover batch_rhs=9 iterations=341 outer=5 relative_residual=2.08605855697846e-14
+MetalBiCGClover batch_rhs=10 iterations=350 outer=5 relative_residual=2.02063846047869e-14
+MetalBiCGClover batch_rhs=11 iterations=381 outer=5 relative_residual=2.14557696406692e-14
+MetalBiCGClover batch_rhs=12 iterations=369 outer=5 relative_residual=1.72874456882959e-14
+MetalBiCGClover batch_rhs=13 iterations=388 outer=5 relative_residual=2.56909471932207e-14
+MetalBiCGClover batch_rhs=14 iterations=362 outer=5 relative_residual=2.75711287078819e-14
+MetalBiCGClover batch_rhs=15 iterations=360 outer=5 relative_residual=1.6834920151171e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.165801 fine_schur_dispatches=844 nominal_operator_flops=17526945742848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=544.89380640165
+BATCH_RESULT method=MetalBiCGClover rhs=96 caller_tile=16 seconds=211.32634899999999 seconds_per_rhs=2.2013161354166666 max_full_relative=2.4256013401188647e-14 max_solution_difference=0 K_min=336 K_max=400
+BATCH_BEGIN method=MetalBiCGClover rhs=192 caller_tile=16
+MetalBiCGClover batch_rhs=0 iterations=363 outer=5 relative_residual=1.70343588026877e-14
+MetalBiCGClover batch_rhs=1 iterations=354 outer=5 relative_residual=2.49582769470778e-14
+MetalBiCGClover batch_rhs=2 iterations=356 outer=5 relative_residual=2.27645705157052e-14
+MetalBiCGClover batch_rhs=3 iterations=368 outer=5 relative_residual=1.23220326592992e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=1.28938119818935e-14
+MetalBiCGClover batch_rhs=5 iterations=394 outer=5 relative_residual=1.67818206815769e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.4431140780083e-14
+MetalBiCGClover batch_rhs=7 iterations=366 outer=5 relative_residual=1.16639961718232e-14
+MetalBiCGClover batch_rhs=8 iterations=364 outer=5 relative_residual=2.05413639240459e-14
+MetalBiCGClover batch_rhs=9 iterations=377 outer=5 relative_residual=1.71921606830774e-14
+MetalBiCGClover batch_rhs=10 iterations=376 outer=5 relative_residual=2.36455126052905e-14
+MetalBiCGClover batch_rhs=11 iterations=350 outer=5 relative_residual=2.86087213250107e-14
+MetalBiCGClover batch_rhs=12 iterations=377 outer=5 relative_residual=9.07606158769229e-15
+MetalBiCGClover batch_rhs=13 iterations=374 outer=5 relative_residual=2.04728551042508e-14
+MetalBiCGClover batch_rhs=14 iterations=376 outer=5 relative_residual=2.46946271987869e-14
+MetalBiCGClover batch_rhs=15 iterations=366 outer=5 relative_residual=1.70374755415237e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=33.141034 fine_schur_dispatches=864 nominal_operator_flops=17942276210688 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=541.391563422191
+MetalBiCGClover batch_rhs=0 iterations=356 outer=5 relative_residual=1.25195836008475e-14
+MetalBiCGClover batch_rhs=1 iterations=387 outer=5 relative_residual=1.93894741375696e-14
+MetalBiCGClover batch_rhs=2 iterations=352 outer=5 relative_residual=2.23079617441619e-14
+MetalBiCGClover batch_rhs=3 iterations=381 outer=5 relative_residual=2.06692896035845e-14
+MetalBiCGClover batch_rhs=4 iterations=370 outer=5 relative_residual=2.04636556354797e-14
+MetalBiCGClover batch_rhs=5 iterations=380 outer=5 relative_residual=1.78149061381024e-14
+MetalBiCGClover batch_rhs=6 iterations=392 outer=5 relative_residual=2.03345245770225e-14
+MetalBiCGClover batch_rhs=7 iterations=336 outer=5 relative_residual=2.16008419550281e-14
+MetalBiCGClover batch_rhs=8 iterations=349 outer=5 relative_residual=2.43314368760135e-14
+MetalBiCGClover batch_rhs=9 iterations=355 outer=5 relative_residual=2.60970773506779e-14
+MetalBiCGClover batch_rhs=10 iterations=371 outer=5 relative_residual=2.21912070097082e-14
+MetalBiCGClover batch_rhs=11 iterations=379 outer=5 relative_residual=1.58039302839678e-14
+MetalBiCGClover batch_rhs=12 iterations=356 outer=5 relative_residual=1.05390608531347e-14
+MetalBiCGClover batch_rhs=13 iterations=353 outer=5 relative_residual=1.78430004279714e-14
+MetalBiCGClover batch_rhs=14 iterations=356 outer=5 relative_residual=1.99388764489404e-14
+MetalBiCGClover batch_rhs=15 iterations=343 outer=5 relative_residual=2.25062780551698e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.530493 fine_schur_dispatches=856 nominal_operator_flops=17776144023552 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=546.445577186672
+MetalBiCGClover batch_rhs=0 iterations=343 outer=5 relative_residual=2.84942433737067e-14
+MetalBiCGClover batch_rhs=1 iterations=382 outer=5 relative_residual=1.75838762625374e-14
+MetalBiCGClover batch_rhs=2 iterations=370 outer=5 relative_residual=2.0418559362672e-14
+MetalBiCGClover batch_rhs=3 iterations=376 outer=5 relative_residual=1.50914439593933e-14
+MetalBiCGClover batch_rhs=4 iterations=349 outer=5 relative_residual=2.69650084156718e-14
+MetalBiCGClover batch_rhs=5 iterations=349 outer=5 relative_residual=2.71379253266227e-14
+MetalBiCGClover batch_rhs=6 iterations=344 outer=5 relative_residual=2.4136662194592e-14
+MetalBiCGClover batch_rhs=7 iterations=350 outer=5 relative_residual=2.67548655000909e-14
+MetalBiCGClover batch_rhs=8 iterations=349 outer=5 relative_residual=2.58410060080643e-14
+MetalBiCGClover batch_rhs=9 iterations=373 outer=5 relative_residual=1.83492030905388e-14
+MetalBiCGClover batch_rhs=10 iterations=345 outer=5 relative_residual=1.66806415876333e-14
+MetalBiCGClover batch_rhs=11 iterations=373 outer=5 relative_residual=1.54183887342257e-14
+MetalBiCGClover batch_rhs=12 iterations=357 outer=5 relative_residual=1.29401655847502e-14
+MetalBiCGClover batch_rhs=13 iterations=364 outer=5 relative_residual=2.20662541420581e-14
+MetalBiCGClover batch_rhs=14 iterations=371 outer=5 relative_residual=1.82675312266349e-14
+MetalBiCGClover batch_rhs=15 iterations=375 outer=5 relative_residual=1.78745543718707e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.179957 fine_schur_dispatches=844 nominal_operator_flops=17526945742848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=544.654106991131
+MetalBiCGClover batch_rhs=0 iterations=374 outer=5 relative_residual=2.15580333117314e-14
+MetalBiCGClover batch_rhs=1 iterations=349 outer=5 relative_residual=2.05959278945838e-14
+MetalBiCGClover batch_rhs=2 iterations=350 outer=5 relative_residual=2.22098438151312e-14
+MetalBiCGClover batch_rhs=3 iterations=358 outer=5 relative_residual=1.22718339001329e-14
+MetalBiCGClover batch_rhs=4 iterations=366 outer=5 relative_residual=1.76294624999463e-14
+MetalBiCGClover batch_rhs=5 iterations=344 outer=5 relative_residual=2.41327867459203e-14
+MetalBiCGClover batch_rhs=6 iterations=367 outer=5 relative_residual=1.75016742164274e-14
+MetalBiCGClover batch_rhs=7 iterations=364 outer=5 relative_residual=1.15788581721235e-14
+MetalBiCGClover batch_rhs=8 iterations=380 outer=5 relative_residual=2.1692600808405e-14
+MetalBiCGClover batch_rhs=9 iterations=378 outer=5 relative_residual=1.9970383277978e-14
+MetalBiCGClover batch_rhs=10 iterations=381 outer=5 relative_residual=2.10856929273409e-14
+MetalBiCGClover batch_rhs=11 iterations=357 outer=5 relative_residual=2.02478557458471e-14
+MetalBiCGClover batch_rhs=12 iterations=356 outer=5 relative_residual=2.16629945741886e-14
+MetalBiCGClover batch_rhs=13 iterations=372 outer=5 relative_residual=1.26799223171108e-14
+MetalBiCGClover batch_rhs=14 iterations=378 outer=5 relative_residual=1.7775581540479e-14
+MetalBiCGClover batch_rhs=15 iterations=378 outer=5 relative_residual=2.89250384797459e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.270115 fine_schur_dispatches=846 nominal_operator_flops=17568478789632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=544.419466420619
+MetalBiCGClover batch_rhs=0 iterations=362 outer=5 relative_residual=2.28906413204438e-14
+MetalBiCGClover batch_rhs=1 iterations=373 outer=5 relative_residual=1.89009082945276e-14
+MetalBiCGClover batch_rhs=2 iterations=368 outer=5 relative_residual=2.35745464437549e-14
+MetalBiCGClover batch_rhs=3 iterations=372 outer=5 relative_residual=1.70184875725032e-14
+MetalBiCGClover batch_rhs=4 iterations=363 outer=5 relative_residual=1.80390762639476e-14
+MetalBiCGClover batch_rhs=5 iterations=351 outer=5 relative_residual=2.35123162821587e-14
+MetalBiCGClover batch_rhs=6 iterations=362 outer=5 relative_residual=2.35580321143086e-14
+MetalBiCGClover batch_rhs=7 iterations=365 outer=5 relative_residual=9.08700838147092e-15
+MetalBiCGClover batch_rhs=8 iterations=369 outer=5 relative_residual=1.94397382339749e-14
+MetalBiCGClover batch_rhs=9 iterations=367 outer=5 relative_residual=1.60930653820024e-14
+MetalBiCGClover batch_rhs=10 iterations=380 outer=5 relative_residual=2.35960106564026e-14
+MetalBiCGClover batch_rhs=11 iterations=359 outer=5 relative_residual=1.68956138984118e-14
+MetalBiCGClover batch_rhs=12 iterations=349 outer=5 relative_residual=2.79590075229124e-14
+MetalBiCGClover batch_rhs=13 iterations=363 outer=5 relative_residual=2.4353534393924e-14
+MetalBiCGClover batch_rhs=14 iterations=355 outer=5 relative_residual=2.81414375515741e-14
+MetalBiCGClover batch_rhs=15 iterations=400 outer=5 relative_residual=2.3072039145529e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.569963 fine_schur_dispatches=860 nominal_operator_flops=17859210117120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=548.333755157167
+MetalBiCGClover batch_rhs=0 iterations=348 outer=5 relative_residual=2.75317013853573e-14
+MetalBiCGClover batch_rhs=1 iterations=344 outer=5 relative_residual=1.20007510911372e-14
+MetalBiCGClover batch_rhs=2 iterations=363 outer=5 relative_residual=2.21954520051543e-14
+MetalBiCGClover batch_rhs=3 iterations=352 outer=5 relative_residual=2.46563242839105e-14
+MetalBiCGClover batch_rhs=4 iterations=373 outer=5 relative_residual=1.37561701413058e-14
+MetalBiCGClover batch_rhs=5 iterations=360 outer=5 relative_residual=2.17653215105475e-14
+MetalBiCGClover batch_rhs=6 iterations=351 outer=5 relative_residual=2.16069334005899e-14
+MetalBiCGClover batch_rhs=7 iterations=381 outer=5 relative_residual=1.82124043753761e-14
+MetalBiCGClover batch_rhs=8 iterations=356 outer=5 relative_residual=2.02178697521783e-14
+MetalBiCGClover batch_rhs=9 iterations=341 outer=5 relative_residual=2.08605855697846e-14
+MetalBiCGClover batch_rhs=10 iterations=350 outer=5 relative_residual=2.02063846047869e-14
+MetalBiCGClover batch_rhs=11 iterations=381 outer=5 relative_residual=2.14557696406692e-14
+MetalBiCGClover batch_rhs=12 iterations=369 outer=5 relative_residual=1.72874456882959e-14
+MetalBiCGClover batch_rhs=13 iterations=388 outer=5 relative_residual=2.56909471932207e-14
+MetalBiCGClover batch_rhs=14 iterations=362 outer=5 relative_residual=2.75711287078819e-14
+MetalBiCGClover batch_rhs=15 iterations=360 outer=5 relative_residual=1.6834920151171e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.152775 fine_schur_dispatches=844 nominal_operator_flops=17526945742848 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=545.114558318777
+MetalBiCGClover batch_rhs=0 iterations=350 outer=5 relative_residual=2.45496976942984e-14
+MetalBiCGClover batch_rhs=1 iterations=379 outer=5 relative_residual=1.99281148774365e-14
+MetalBiCGClover batch_rhs=2 iterations=408 outer=5 relative_residual=1.42569351945018e-14
+MetalBiCGClover batch_rhs=3 iterations=368 outer=5 relative_residual=2.54390814129265e-14
+MetalBiCGClover batch_rhs=4 iterations=353 outer=5 relative_residual=2.28231561852776e-14
+MetalBiCGClover batch_rhs=5 iterations=369 outer=5 relative_residual=1.7524209698676e-14
+MetalBiCGClover batch_rhs=6 iterations=395 outer=5 relative_residual=2.39250275655728e-14
+MetalBiCGClover batch_rhs=7 iterations=362 outer=5 relative_residual=1.87731802976998e-14
+MetalBiCGClover batch_rhs=8 iterations=375 outer=5 relative_residual=1.09653264858778e-14
+MetalBiCGClover batch_rhs=9 iterations=350 outer=5 relative_residual=2.58606956224559e-14
+MetalBiCGClover batch_rhs=10 iterations=354 outer=5 relative_residual=2.6254114196586e-14
+MetalBiCGClover batch_rhs=11 iterations=368 outer=5 relative_residual=1.58576079092695e-14
+MetalBiCGClover batch_rhs=12 iterations=375 outer=5 relative_residual=1.90569009528488e-14
+MetalBiCGClover batch_rhs=13 iterations=370 outer=5 relative_residual=1.97104023563023e-14
+MetalBiCGClover batch_rhs=14 iterations=377 outer=5 relative_residual=1.76083126357446e-14
+MetalBiCGClover batch_rhs=15 iterations=380 outer=5 relative_residual=2.37157271160807e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.576347 fine_schur_dispatches=858 nominal_operator_flops=17817677070336 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=546.951353088669
+MetalBiCGClover batch_rhs=0 iterations=394 outer=5 relative_residual=1.53949531437008e-14
+MetalBiCGClover batch_rhs=1 iterations=368 outer=5 relative_residual=2.28956626461548e-14
+MetalBiCGClover batch_rhs=2 iterations=359 outer=5 relative_residual=2.40182656506125e-14
+MetalBiCGClover batch_rhs=3 iterations=354 outer=5 relative_residual=2.33906541539223e-14
+MetalBiCGClover batch_rhs=4 iterations=355 outer=5 relative_residual=1.67542281606139e-14
+MetalBiCGClover batch_rhs=5 iterations=371 outer=5 relative_residual=1.36587091386394e-14
+MetalBiCGClover batch_rhs=6 iterations=359 outer=5 relative_residual=1.1883201653423e-14
+MetalBiCGClover batch_rhs=7 iterations=370 outer=5 relative_residual=1.94147295652872e-14
+MetalBiCGClover batch_rhs=8 iterations=384 outer=5 relative_residual=1.68582176885069e-14
+MetalBiCGClover batch_rhs=9 iterations=359 outer=5 relative_residual=2.45378621912827e-14
+MetalBiCGClover batch_rhs=10 iterations=380 outer=5 relative_residual=2.90025510605765e-14
+MetalBiCGClover batch_rhs=11 iterations=353 outer=5 relative_residual=2.27524763363589e-14
+MetalBiCGClover batch_rhs=12 iterations=365 outer=5 relative_residual=2.22817253533413e-14
+MetalBiCGClover batch_rhs=13 iterations=352 outer=5 relative_residual=2.84301950016434e-14
+MetalBiCGClover batch_rhs=14 iterations=372 outer=5 relative_residual=1.26278857744237e-14
+MetalBiCGClover batch_rhs=15 iterations=382 outer=5 relative_residual=1.28283231302436e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.633826 fine_schur_dispatches=860 nominal_operator_flops=17859210117120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=547.260689479683
+MetalBiCGClover batch_rhs=0 iterations=365 outer=5 relative_residual=2.54839781735721e-14
+MetalBiCGClover batch_rhs=1 iterations=346 outer=5 relative_residual=2.21700177660532e-14
+MetalBiCGClover batch_rhs=2 iterations=377 outer=5 relative_residual=2.29749829828792e-14
+MetalBiCGClover batch_rhs=3 iterations=370 outer=5 relative_residual=2.44176095359133e-14
+MetalBiCGClover batch_rhs=4 iterations=349 outer=5 relative_residual=2.84673738419305e-14
+MetalBiCGClover batch_rhs=5 iterations=357 outer=5 relative_residual=2.40163070999849e-14
+MetalBiCGClover batch_rhs=6 iterations=360 outer=5 relative_residual=1.75359716739937e-14
+MetalBiCGClover batch_rhs=7 iterations=353 outer=5 relative_residual=2.6256391449456e-14
+MetalBiCGClover batch_rhs=8 iterations=393 outer=5 relative_residual=9.50050335765959e-15
+MetalBiCGClover batch_rhs=9 iterations=384 outer=5 relative_residual=1.50255611532889e-14
+MetalBiCGClover batch_rhs=10 iterations=354 outer=5 relative_residual=1.74118018304399e-14
+MetalBiCGClover batch_rhs=11 iterations=378 outer=5 relative_residual=1.73510714077759e-14
+MetalBiCGClover batch_rhs=12 iterations=380 outer=5 relative_residual=2.57562474022231e-14
+MetalBiCGClover batch_rhs=13 iterations=363 outer=5 relative_residual=2.70992855070943e-14
+MetalBiCGClover batch_rhs=14 iterations=353 outer=5 relative_residual=2.23411058617573e-14
+MetalBiCGClover batch_rhs=15 iterations=364 outer=5 relative_residual=2.01968301499338e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.487024 fine_schur_dispatches=858 nominal_operator_flops=17817677070336 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=548.455194613579
+MetalBiCGClover batch_rhs=0 iterations=378 outer=5 relative_residual=1.29843669423625e-14
+MetalBiCGClover batch_rhs=1 iterations=368 outer=5 relative_residual=2.73698874355671e-14
+MetalBiCGClover batch_rhs=2 iterations=376 outer=5 relative_residual=1.75490287409334e-14
+MetalBiCGClover batch_rhs=3 iterations=369 outer=5 relative_residual=1.08322534073991e-14
+MetalBiCGClover batch_rhs=4 iterations=358 outer=5 relative_residual=2.09231159159487e-14
+MetalBiCGClover batch_rhs=5 iterations=367 outer=5 relative_residual=2.6230345310141e-14
+MetalBiCGClover batch_rhs=6 iterations=391 outer=5 relative_residual=2.25319719961761e-14
+MetalBiCGClover batch_rhs=7 iterations=366 outer=5 relative_residual=2.31435074956713e-14
+MetalBiCGClover batch_rhs=8 iterations=352 outer=5 relative_residual=2.06418419629554e-14
+MetalBiCGClover batch_rhs=9 iterations=364 outer=5 relative_residual=1.81827963862928e-14
+MetalBiCGClover batch_rhs=10 iterations=375 outer=5 relative_residual=2.28391420488104e-14
+MetalBiCGClover batch_rhs=11 iterations=378 outer=5 relative_residual=1.72033834365483e-14
+MetalBiCGClover batch_rhs=12 iterations=394 outer=5 relative_residual=2.32784804286358e-14
+MetalBiCGClover batch_rhs=13 iterations=363 outer=5 relative_residual=1.83064733924619e-14
+MetalBiCGClover batch_rhs=14 iterations=353 outer=5 relative_residual=2.43729263335737e-14
+MetalBiCGClover batch_rhs=15 iterations=372 outer=5 relative_residual=1.68002834236933e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=33.145585 fine_schur_dispatches=882 nominal_operator_flops=18316073631744 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=552.594670805901
+MetalBiCGClover batch_rhs=0 iterations=372 outer=5 relative_residual=2.29960345544263e-14
+MetalBiCGClover batch_rhs=1 iterations=372 outer=5 relative_residual=1.12794352452578e-14
+MetalBiCGClover batch_rhs=2 iterations=359 outer=5 relative_residual=1.95994222249894e-14
+MetalBiCGClover batch_rhs=3 iterations=357 outer=5 relative_residual=1.48321843195335e-14
+MetalBiCGClover batch_rhs=4 iterations=385 outer=5 relative_residual=2.59916643926198e-14
+MetalBiCGClover batch_rhs=5 iterations=356 outer=5 relative_residual=1.36826037711771e-14
+MetalBiCGClover batch_rhs=6 iterations=345 outer=5 relative_residual=2.65863062055212e-14
+MetalBiCGClover batch_rhs=7 iterations=356 outer=5 relative_residual=1.58486593547852e-14
+MetalBiCGClover batch_rhs=8 iterations=367 outer=5 relative_residual=2.48517095676437e-14
+MetalBiCGClover batch_rhs=9 iterations=380 outer=5 relative_residual=1.42602878909207e-14
+MetalBiCGClover batch_rhs=10 iterations=400 outer=5 relative_residual=9.38483803821809e-15
+MetalBiCGClover batch_rhs=11 iterations=365 outer=5 relative_residual=2.49762482933481e-14
+MetalBiCGClover batch_rhs=12 iterations=365 outer=5 relative_residual=1.29764625402677e-14
+MetalBiCGClover batch_rhs=13 iterations=364 outer=5 relative_residual=1.68762982407611e-14
+MetalBiCGClover batch_rhs=14 iterations=359 outer=5 relative_residual=2.58778801261583e-14
+MetalBiCGClover batch_rhs=15 iterations=357 outer=5 relative_residual=2.86516593828862e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=32.28815 fine_schur_dispatches=840 nominal_operator_flops=17443879649280 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=540.256398997155
+MetalBiCGClover batch_rhs=0 iterations=357 outer=5 relative_residual=2.0463619966689e-14
+MetalBiCGClover batch_rhs=1 iterations=380 outer=5 relative_residual=1.38445282211701e-14
+MetalBiCGClover batch_rhs=2 iterations=359 outer=5 relative_residual=2.25760453005851e-14
+MetalBiCGClover batch_rhs=3 iterations=370 outer=5 relative_residual=2.57631769309594e-14
+MetalBiCGClover batch_rhs=4 iterations=383 outer=5 relative_residual=2.04954228314201e-14
+MetalBiCGClover batch_rhs=5 iterations=390 outer=5 relative_residual=2.70507774159056e-14
+MetalBiCGClover batch_rhs=6 iterations=373 outer=5 relative_residual=1.18118865207312e-14
+MetalBiCGClover batch_rhs=7 iterations=373 outer=5 relative_residual=2.25149113077957e-14
+MetalBiCGClover batch_rhs=8 iterations=345 outer=5 relative_residual=2.08565056499557e-14
+MetalBiCGClover batch_rhs=9 iterations=358 outer=5 relative_residual=1.56285455350556e-14
+MetalBiCGClover batch_rhs=10 iterations=371 outer=5 relative_residual=2.51006440554323e-14
+MetalBiCGClover batch_rhs=11 iterations=353 outer=5 relative_residual=1.96753262355871e-14
+MetalBiCGClover batch_rhs=12 iterations=357 outer=5 relative_residual=1.59546738674186e-14
+MetalBiCGClover batch_rhs=13 iterations=354 outer=5 relative_residual=2.7384121834947e-14
+MetalBiCGClover batch_rhs=14 iterations=368 outer=5 relative_residual=2.35107537902415e-14
+MetalBiCGClover batch_rhs=15 iterations=388 outer=5 relative_residual=1.68754480295539e-14
+MetalBiCGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=33.031287 fine_schur_dispatches=876 nominal_operator_flops=18191474491392 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=550.734656248544
+BATCH_RESULT method=MetalBiCGClover rhs=192 caller_tile=16 seconds=425.175704 seconds_per_rhs=2.2144567916666666 max_full_relative=2.4327991851445997e-14 max_solution_difference=0 K_min=336 K_max=408
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 38.4499340000001
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 11.515942
+  ... constructing linop  ...0.414571 sec
+  ... constructing invLinOp LDL_CLOVER seconds=0.1273135 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.4046377332171687
+NEAR_NULL candidate=0 K=117 residual_reduction=0.00098114237496299767 Sv_over_v=0.078726277928019145 seconds=0.72806512499999998
+NEAR_NULL candidate=1 K=118 residual_reduction=0.00095908628854462672 Sv_over_v=0.082916297741807005 seconds=0.70793679200000004
+NEAR_NULL candidate=2 K=115 residual_reduction=0.00099520176891141916 Sv_over_v=0.090538710045552501 seconds=0.690184833
+NEAR_NULL candidate=3 K=119 residual_reduction=0.00098508883486959236 Sv_over_v=0.089289547343677403 seconds=0.71461133300000002
+NEAR_NULL candidate=4 K=120 residual_reduction=0.00096382769106213015 Sv_over_v=0.092059859701665331 seconds=0.72180341699999995
+NEAR_NULL candidate=5 K=117 residual_reduction=0.00097634421147498431 Sv_over_v=0.076051031435059466 seconds=0.70063016600000005
+NEAR_NULL candidate=6 K=120 residual_reduction=0.00096215719423678036 Sv_over_v=0.082342946219128299 seconds=0.718870958
+NEAR_NULL candidate=7 K=119 residual_reduction=0.00096858982122586266 Sv_over_v=0.086109253293135735 seconds=0.71122420799999997
+NEAR_NULL candidate=8 K=119 residual_reduction=0.00099572234552424603 Sv_over_v=0.080802865993885628 seconds=0.71288387499999994
+NEAR_NULL candidate=9 K=119 residual_reduction=0.00098139695194416113 Sv_over_v=0.094177834759557488 seconds=0.71442520799999998
+NEAR_NULL candidate=10 K=118 residual_reduction=0.00098573160539815576 Sv_over_v=0.086212110949310347 seconds=0.70840733300000003
+NEAR_NULL candidate=11 K=120 residual_reduction=0.00096284827926229361 Sv_over_v=0.086524245273241193 seconds=0.71869649999999996
+NEAR_NULL_CARRY generated=13 retained=9 represented_energy=12.895925279888118 fraction=0.99199425226846849
+NEAR_NULL candidate=12 K=117 residual_reduction=0.00098952014942542974 Sv_over_v=0.089753867512751759 seconds=0.77141291700000003
+NEAR_NULL candidate=13 K=119 residual_reduction=0.00099287920924563439 Sv_over_v=0.093379651790196611 seconds=0.71545587499999996
+NEAR_NULL candidate=14 K=118 residual_reduction=0.00096574450019275249 Sv_over_v=0.087187444007089165 seconds=0.70853091700000004
+NEAR_NULL candidate=15 K=117 residual_reduction=0.00096251150193126943 Sv_over_v=0.092282262655708103 seconds=0.70083333400000003
+NEAR_NULL_CARRY generated=17 retained=9 represented_energy=16.753430595693086 fraction=0.99156632846436177
+NEAR_NULL candidate=16 K=117 residual_reduction=0.00098215145521029189 Sv_over_v=0.085893174493061025 seconds=0.77122766600000003
+NEAR_NULL candidate=17 K=121 residual_reduction=0.00099358615846154778 Sv_over_v=0.08937984129255265 seconds=0.72847883300000005
+NEAR_NULL candidate=18 K=120 residual_reduction=0.00097637327593747718 Sv_over_v=0.090946799221731184 seconds=0.71809637500000001
+NEAR_NULL candidate=19 K=119 residual_reduction=0.00096932433055575435 Sv_over_v=0.088548561271219142 seconds=0.70514370800000004
+NEAR_NULL_CARRY generated=21 retained=9 represented_energy=20.589599261694879 fraction=0.99210581915905105
+NEAR_NULL candidate=20 K=118 residual_reduction=0.00098774549647389991 Sv_over_v=0.089224093760075632 seconds=0.77472158300000005
+NEAR_NULL candidate=21 K=118 residual_reduction=0.00098259014813534967 Sv_over_v=0.091997408345556031 seconds=0.69945516699999999
+NEAR_NULL candidate=22 K=118 residual_reduction=0.00099156716979474212 Sv_over_v=0.078013326849797712 seconds=0.69747229200000005
+NEAR_NULL candidate=23 K=119 residual_reduction=0.00096122840117108415 Sv_over_v=0.095296458336055961 seconds=0.70639974999999999
+NEAR_NULL_SVD seconds=17.345047000000001 compression_seconds=0.098379375000000005 candidates=24 retained=8 batch=4 pool_columns=13 energy_lower_bound=0.97171633401382707 energy=0.98862179714322185 minimum_energy=0.97043881633343343 minimum_rank_ratio=0.049409226877010867 orthogonality=5.7731597482795395e-15
+MetalMGClover: subset=odd Schur operator_match=1.82490493260258e-16 setup_seconds=18.61623575
+ ...19.299263 sec
+  ... constructing PrecFermActQprop  ...1e-06 sec
+BATCH_SETUP method=MetalMGClover seconds=19.713902999999998 hierarchy_instances=1
+BATCH_BEGIN method=MetalMGClover rhs=96 caller_tile=1
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.300544 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=171.806239359039
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.414444 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=168.397558401023
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.66153219099258e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.349209 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.148137198521
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.96248038548583e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.315557 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.815381667564
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.28048024257216e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.277567 fine_schur_dispatches=243 nominal_operator_flops=401479749120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.27571400534
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.9605113385037e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.330501 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.613033842938
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.67014072522531e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.313489 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.74601586435
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.29216707695597e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.30576 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.42340056901
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.05721425470328e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.411255 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=168.765165850978
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.01072806148058e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.345348 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.433180167719
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.15698598223749e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.324914 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.032646361973
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.23409683650556e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.268609 fine_schur_dispatches=243 nominal_operator_flops=401479749120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.971769538074
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.587860032573e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.331023 fine_schur_dispatches=246 nominal_operator_flops=407983976448 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.023573962162
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.69465865808535e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.25507 fine_schur_dispatches=239 nominal_operator_flops=395597188608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.42568018199
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.67332732459354e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.396591 fine_schur_dispatches=239 nominal_operator_flops=394549062144 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=164.629284739866
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.75688496150918e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.252124 fine_schur_dispatches=239 nominal_operator_flops=395422500864 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.577588473814
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.33820116549368e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.334121 fine_schur_dispatches=243 nominal_operator_flops=402003812352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=172.229208490905
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.49043186586305e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.259889 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.897002958995
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.70544589406414e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.270692 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.064916386723
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.86070809646129e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.325937 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.030767268417
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.53524967663775e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.256929 fine_schur_dispatches=239 nominal_operator_flops=395771876352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.358585206712
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.7302414394006e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.272843 fine_schur_dispatches=239 nominal_operator_flops=395073125376 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.823324081778
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.11988009654016e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.468949 fine_schur_dispatches=242 nominal_operator_flops=400179850752 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=162.08510210296
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.97526871233886e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.594141 fine_schur_dispatches=246 nominal_operator_flops=407634600960 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=157.136640205756
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.31474170946891e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.300047 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.85664427553
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.44534329243618e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.241088 fine_schur_dispatches=239 nominal_operator_flops=394898437632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.208358454465
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.05095496075588e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.314565 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.815261176074
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.2624726586804e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.319737 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.372455625789
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.04886448315844e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.314931 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.636541432984
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.12341290978268e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.264029 fine_schur_dispatches=243 nominal_operator_flops=401829124608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.484089032428
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.58269444506301e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.234617 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.874969231864
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.68812604737174e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.287598 fine_schur_dispatches=246 nominal_operator_flops=406237099008 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.582380736476
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.12121911082407e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.302851 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.709587369743
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.2957086732962e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.303233 fine_schur_dispatches=243 nominal_operator_flops=402353187840 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.690614384216
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.22480305345615e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.283942 fine_schur_dispatches=243 nominal_operator_flops=401829124608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.936658902897
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.12142349018892e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.332021 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.574130219239
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.49282504896084e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.326023 fine_schur_dispatches=246 nominal_operator_flops=407459913216 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.174498797303
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.48052086404757e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.270325 fine_schur_dispatches=239 nominal_operator_flops=394723749888 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.862222319712
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.43202642708047e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.315625 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.810218721943
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.39263360074624e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.311024 fine_schur_dispatches=243 nominal_operator_flops=401829124608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.874924971787
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.26137872662977e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.297223 fine_schur_dispatches=243 nominal_operator_flops=401479749120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.767425330497
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.16007237686772e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.263624 fine_schur_dispatches=242 nominal_operator_flops=399830475264 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.632901605567
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.48094607508529e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.371311 fine_schur_dispatches=239 nominal_operator_flops=395073125376 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=166.60536107495
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.23521648622759e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.272669 fine_schur_dispatches=243 nominal_operator_flops=401654436864 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.732483641041
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.23960096375992e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.313059 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.872996796018
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.22367678727297e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.280887 fine_schur_dispatches=243 nominal_operator_flops=402003812352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.248894553742
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.34967168414925e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.43496 fine_schur_dispatches=243 nominal_operator_flops=402003812352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=165.096680172159
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.15049464757885e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.359268 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=172.632030558631
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.53580243190931e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.469834 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=160.03011259866
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.51063110509185e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.30034 fine_schur_dispatches=239 nominal_operator_flops=394898437632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=171.669595638906
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.22318900755477e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.309747 fine_schur_dispatches=243 nominal_operator_flops=402003812352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.046686650962
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.52413355651258e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.268793 fine_schur_dispatches=239 nominal_operator_flops=395422500864 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.287606169448
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.61570352585743e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.279446 fine_schur_dispatches=239 nominal_operator_flops=395073125376 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.319800239181
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.40515188283623e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.312643 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.904273204295
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.83325273631318e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.307792 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.482640321138
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.04130748564975e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.275477 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=178.681865163216
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.41774760834609e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.224398 fine_schur_dispatches=239 nominal_operator_flops=395597188608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.844607218672
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.77527239322336e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.224463 fine_schur_dispatches=239 nominal_operator_flops=395073125376 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.603819607699
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.70988177458947e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.387919 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=170.414427785867
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.27374644500845e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.290658 fine_schur_dispatches=243 nominal_operator_flops=402178500096 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.573350581361
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.73964605605193e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.253745 fine_schur_dispatches=239 nominal_operator_flops=394723749888 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.141264822773
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.14488555624962e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.32314 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.166305080193
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.27350558990502e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.299944 fine_schur_dispatches=246 nominal_operator_flops=406935849984 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.932938360238
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.05902820707987e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.276493 fine_schur_dispatches=242 nominal_operator_flops=399306412032 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.40419058262
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.40614610232894e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.388592 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=170.51268088983
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.69670533001809e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.235323 fine_schur_dispatches=239 nominal_operator_flops=395422500864 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.897254161479
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.66727162939631e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.216106 fine_schur_dispatches=239 nominal_operator_flops=395597188608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=178.510048078928
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.51529794686794e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.270629 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=179.140300876982
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.24176691287621e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.29329 fine_schur_dispatches=242 nominal_operator_flops=400878601728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.805018871578
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.90905879760567e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.421261 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=167.923439272346
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.12786672383456e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.29131 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.447169739581
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.79125195178547e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.307119 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.231253999469
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.03181193787201e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.439397 fine_schur_dispatches=246 nominal_operator_flops=406411786752 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=166.60338056987
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.1823606267639e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.258776 fine_schur_dispatches=243 nominal_operator_flops=401479749120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.742170591506
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.66287506878253e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.282471 fine_schur_dispatches=239 nominal_operator_flops=395771876352 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.39623432324
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.58173252577529e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.496762 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=162.915473016651
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.79967885478218e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.312258 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.915128086918
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.59416391970703e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.272205 fine_schur_dispatches=239 nominal_operator_flops=395247813120 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.949011255587
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.15506515831191e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.310127 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.077402774826
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.31041801538416e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.297243 fine_schur_dispatches=243 nominal_operator_flops=401829124608 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.917988479234
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.81601405609723e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.320052 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.474747000498
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.9302217637835e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.341125 fine_schur_dispatches=246 nominal_operator_flops=407459913216 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.044492804101
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.070500255217e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.269857 fine_schur_dispatches=243 nominal_operator_flops=402527875584 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=177.336226724415
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.49186872513061e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.259541 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=180.019376607904
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.61925248410634e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.391082 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=170.335114175089
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.4749314202055e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.248997 fine_schur_dispatches=239 nominal_operator_flops=394898437632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.588690261481
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.04287081588745e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.341442 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.946322596075
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.92922093498536e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.320338 fine_schur_dispatches=246 nominal_operator_flops=407110537728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.453118350861
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.83556179349858e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.320288 fine_schur_dispatches=246 nominal_operator_flops=407634600960 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.682760484905
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.22926758484333e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.340279 fine_schur_dispatches=246 nominal_operator_flops=407285225472 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.03276509852
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.88746241972431e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.310114 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=176.002774969547
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.21371659222217e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.30252 fine_schur_dispatches=243 nominal_operator_flops=402353187840 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.744709205566
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.27686941817236e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.324031 fine_schur_dispatches=246 nominal_operator_flops=406761162240 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.023983001948
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.02077640757239e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.329082 fine_schur_dispatches=246 nominal_operator_flops=407459913216 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=174.944425836445
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=7.8876285460708e-15
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.323077 fine_schur_dispatches=246 nominal_operator_flops=406586474496 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=175.020662034018
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.6740402513259e-14
+MetalMGClover array: rhs=1 resident_GPU_rhs=1 gpu_tiles=1 hierarchy_reused=true seconds=2.283191 fine_schur_dispatches=239 nominal_operator_flops=395422500864 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=173.18853344464
+BATCH_RESULT method=MetalMGClover rhs=96 caller_tile=1 seconds=238.83453600000001 seconds_per_rhs=2.4878597500000001 max_full_relative=1.4884932876663406e-14 max_solution_difference=6.3423941087858968e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=96 caller_tile=8
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=7.66153219099258e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.96248038548583e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.28048024257216e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.9605113385037e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.67014072522531e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.29216707695597e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=10.104339 fine_schur_dispatches=250 nominal_operator_flops=3336087330816 batch_workspace_seconds=0.119608208 nominal_operator_GFLOP_per_s=330.163836626622
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.05721425470328e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=1.01072806148058e-14
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=8.15698598223749e-15
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.23409683650556e-14
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=9.587860032573e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.69465865808535e-14
+MetalMGClover batch_rhs=6 iterations=76 outer=5 relative_residual=1.67332732459354e-14
+MetalMGClover batch_rhs=7 iterations=76 outer=5 relative_residual=1.75688496150918e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.942888 fine_schur_dispatches=250 nominal_operator_flops=3330497323008 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=334.962771682433
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.33820116549368e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.49043186586305e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.70544589406414e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.86070809646129e-15
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.53524967663775e-14
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.7302414394006e-14
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.11988009654016e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=8.97526871233886e-15
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.915871 fine_schur_dispatches=250 nominal_operator_flops=3329099821056 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.734482735405
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.31474170946891e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.44534329243618e-14
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=1.05095496075588e-14
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.2624726586804e-14
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=8.04886448315844e-15
+MetalMGClover batch_rhs=5 iterations=77 outer=5 relative_residual=1.12341290978268e-14
+MetalMGClover batch_rhs=6 iterations=76 outer=5 relative_residual=1.58269444506301e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.68812604737174e-15
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.940544 fine_schur_dispatches=250 nominal_operator_flops=3329099821056 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=334.901170504954
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.12121911082407e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.2957086732962e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22480305345615e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.12142349018892e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=9.49282504896084e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.48052086404757e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.43202642708047e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.39263360074624e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.954685 fine_schur_dispatches=250 nominal_operator_flops=3338882334720 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.408135437736
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.26137872662977e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.16007237686772e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.48094607508529e-14
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.23521648622759e-14
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.23960096375992e-14
+MetalMGClover batch_rhs=5 iterations=77 outer=5 relative_residual=1.22367678727297e-14
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.34967168414925e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.15049464757885e-15
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.988308 fine_schur_dispatches=250 nominal_operator_flops=3327702319104 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=333.159762304486
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.53580243190931e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.51063110509185e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22318900755477e-14
+MetalMGClover batch_rhs=3 iterations=76 outer=5 relative_residual=1.52413355651258e-14
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.61570352585743e-14
+MetalMGClover batch_rhs=5 iterations=77 outer=5 relative_residual=1.40515188283623e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.83325273631318e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=1.04130748564975e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.902635 fine_schur_dispatches=250 nominal_operator_flops=3326304817152 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.90098162277
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.41774760834609e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.77527239322336e-14
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=7.70988177458947e-15
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.27374644500845e-14
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.73964605605193e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.14488555624962e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.27350558990502e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.05902820707987e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.960912 fine_schur_dispatches=250 nominal_operator_flops=3331894824960 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=334.496964229781
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.40614610232894e-15
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.69670533001809e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.66727162939631e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=9.51529794686794e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.24176691287621e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=7.90905879760567e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.12786672383456e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.79125195178547e-15
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.921087 fine_schur_dispatches=250 nominal_operator_flops=3330497323008 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.698832497689
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.03181193787201e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.1823606267639e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.66287506878253e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.58173252577529e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=8.79967885478218e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.59416391970703e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.15506515831191e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.31041801538416e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.943923 fine_schur_dispatches=250 nominal_operator_flops=3333292326912 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.208984111401
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.81601405609723e-15
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=7.9302217637835e-15
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.070500255217e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.49186872513061e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=7.61925248410634e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.4749314202055e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.04287081588745e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=7.92922093498536e-15
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.849567 fine_schur_dispatches=246 nominal_operator_flops=3279244333056 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=332.932841926554
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.83556179349858e-15
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=9.22926758484333e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=9.88746241972431e-15
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.21371659222217e-14
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=9.27686941817236e-15
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=1.02077640757239e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=7.8876285460708e-15
+MetalMGClover batch_rhs=7 iterations=76 outer=5 relative_residual=1.6740402513259e-14
+MetalMGClover array: rhs=8 resident_GPU_rhs=8 gpu_tiles=1 hierarchy_reused=true seconds=9.912966 fine_schur_dispatches=250 nominal_operator_flops=3330497323008 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=335.973847081489
+BATCH_RESULT method=MetalMGClover rhs=96 caller_tile=8 seconds=135.94643199999999 seconds_per_rhs=1.4161086666666665 max_full_relative=1.4884932876663406e-14 max_solution_difference=6.3423941087858968e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=96 caller_tile=16
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=7.66153219099258e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.96248038548583e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.28048024257216e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.9605113385037e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.67014072522531e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.29216707695597e-14
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=1.05721425470328e-14
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=1.01072806148058e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=8.15698598223749e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.23409683650556e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=9.587860032573e-15
+MetalMGClover batch_rhs=13 iterations=76 outer=5 relative_residual=1.69465865808535e-14
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.67332732459354e-14
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.75688496150918e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.543814 fine_schur_dispatches=250 nominal_operator_flops=6672174661632 batch_workspace_seconds=0.119996 nominal_operator_GFLOP_per_s=341.395730722366
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.33820116549368e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.49043186586305e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.70544589406414e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.86070809646129e-15
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.53524967663775e-14
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.7302414394006e-14
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.11988009654016e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=8.97526871233886e-15
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.31474170946891e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.44534329243618e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=1.05095496075588e-14
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.2624726586804e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=8.04886448315844e-15
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.12341290978268e-14
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.58269444506301e-14
+MetalMGClover batch_rhs=15 iterations=78 outer=5 relative_residual=9.68812604737174e-15
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.355631 fine_schur_dispatches=250 nominal_operator_flops=6669379657728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=344.570510655426
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.12121911082407e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.2957086732962e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22480305345615e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.12142349018892e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=9.49282504896084e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.48052086404757e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.43202642708047e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.39263360074624e-14
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.26137872662977e-14
+MetalMGClover batch_rhs=9 iterations=77 outer=5 relative_residual=1.16007237686772e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.48094607508529e-14
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.23521648622759e-14
+MetalMGClover batch_rhs=12 iterations=77 outer=5 relative_residual=1.23960096375992e-14
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.22367678727297e-14
+MetalMGClover batch_rhs=14 iterations=77 outer=5 relative_residual=1.34967168414925e-14
+MetalMGClover batch_rhs=15 iterations=78 outer=5 relative_residual=9.15049464757885e-15
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.112978 fine_schur_dispatches=250 nominal_operator_flops=6677764669440 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=349.383788828721
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.53580243190931e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.51063110509185e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22318900755477e-14
+MetalMGClover batch_rhs=3 iterations=76 outer=5 relative_residual=1.52413355651258e-14
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.61570352585743e-14
+MetalMGClover batch_rhs=5 iterations=77 outer=5 relative_residual=1.40515188283623e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.83325273631318e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=1.04130748564975e-14
+MetalMGClover batch_rhs=8 iterations=76 outer=5 relative_residual=1.41774760834609e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.77527239322336e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=7.70988177458947e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.27374644500845e-14
+MetalMGClover batch_rhs=12 iterations=76 outer=5 relative_residual=1.73964605605193e-14
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=9.14488555624962e-15
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=9.27350558990502e-15
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.05902820707987e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.100684 fine_schur_dispatches=250 nominal_operator_flops=6672174661632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=349.316006779234
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.40614610232894e-15
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.69670533001809e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.66727162939631e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=9.51529794686794e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.24176691287621e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=7.90905879760567e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.12786672383456e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.79125195178547e-15
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=1.03181193787201e-14
+MetalMGClover batch_rhs=9 iterations=77 outer=5 relative_residual=1.1823606267639e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.66287506878253e-14
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=8.58173252577529e-15
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=8.79967885478218e-15
+MetalMGClover batch_rhs=13 iterations=76 outer=5 relative_residual=1.59416391970703e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=9.15506515831191e-15
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.31041801538416e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.287092 fine_schur_dispatches=250 nominal_operator_flops=6674969665536 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=346.084814939235
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.81601405609723e-15
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=7.9302217637835e-15
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.070500255217e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.49186872513061e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=7.61925248410634e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.4749314202055e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.04287081588745e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=7.92922093498536e-15
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=8.83556179349858e-15
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=9.22926758484333e-15
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=9.88746241972431e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.21371659222217e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=9.27686941817236e-15
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=1.02077640757239e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=7.8876285460708e-15
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.6740402513259e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.416709 fine_schur_dispatches=250 nominal_operator_flops=6669379657728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=343.486615457233
+BATCH_RESULT method=MetalMGClover rhs=96 caller_tile=16 seconds=132.70684499999999 seconds_per_rhs=1.3823629687499999 max_full_relative=1.4884932876663406e-14 max_solution_difference=6.3423941087858968e-13 K_min=76 K_max=78
+BATCH_BEGIN method=MetalMGClover rhs=192 caller_tile=16
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.57151142723583e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.43646991963202e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=7.66153219099258e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.96248038548583e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.28048024257216e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.9605113385037e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.67014072522531e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.29216707695597e-14
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=1.05721425470328e-14
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=1.01072806148058e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=8.15698598223749e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.23409683650556e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=9.587860032573e-15
+MetalMGClover batch_rhs=13 iterations=76 outer=5 relative_residual=1.69465865808535e-14
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.67332732459354e-14
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.75688496150918e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=20.344925 fine_schur_dispatches=250 nominal_operator_flops=6672174661632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=327.952777492765
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.33820116549368e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.49043186586305e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.70544589406414e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.86070809646129e-15
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.53524967663775e-14
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.7302414394006e-14
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.11988009654016e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=8.97526871233886e-15
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.31474170946891e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.44534329243618e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=1.05095496075588e-14
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.2624726586804e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=8.04886448315844e-15
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.12341290978268e-14
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.58269444506301e-14
+MetalMGClover batch_rhs=15 iterations=78 outer=5 relative_residual=9.68812604737174e-15
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.320765 fine_schur_dispatches=250 nominal_operator_flops=6669379657728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=345.192318095479
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=1.12121911082407e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.2957086732962e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22480305345615e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.12142349018892e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=9.49282504896084e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.48052086404757e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.43202642708047e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.39263360074624e-14
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.26137872662977e-14
+MetalMGClover batch_rhs=9 iterations=77 outer=5 relative_residual=1.16007237686772e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.48094607508529e-14
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.23521648622759e-14
+MetalMGClover batch_rhs=12 iterations=77 outer=5 relative_residual=1.23960096375992e-14
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.22367678727297e-14
+MetalMGClover batch_rhs=14 iterations=77 outer=5 relative_residual=1.34967168414925e-14
+MetalMGClover batch_rhs=15 iterations=78 outer=5 relative_residual=9.15049464757885e-15
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.501143 fine_schur_dispatches=250 nominal_operator_flops=6677764669440 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=342.42939859679
+MetalMGClover batch_rhs=0 iterations=76 outer=5 relative_residual=1.53580243190931e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.51063110509185e-14
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.22318900755477e-14
+MetalMGClover batch_rhs=3 iterations=76 outer=5 relative_residual=1.52413355651258e-14
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.61570352585743e-14
+MetalMGClover batch_rhs=5 iterations=77 outer=5 relative_residual=1.40515188283623e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.83325273631318e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=1.04130748564975e-14
+MetalMGClover batch_rhs=8 iterations=76 outer=5 relative_residual=1.41774760834609e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.77527239322336e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=7.70988177458947e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.27374644500845e-14
+MetalMGClover batch_rhs=12 iterations=76 outer=5 relative_residual=1.73964605605193e-14
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=9.14488555624962e-15
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=9.27350558990502e-15
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.05902820707987e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.256957 fine_schur_dispatches=250 nominal_operator_flops=6672174661632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=346.481256702811
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.40614610232894e-15
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.69670533001809e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.66727162939631e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=9.51529794686794e-15
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.24176691287621e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=7.90905879760567e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.12786672383456e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.79125195178547e-15
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=1.03181193787201e-14
+MetalMGClover batch_rhs=9 iterations=77 outer=5 relative_residual=1.1823606267639e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.66287506878253e-14
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=8.58173252577529e-15
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=8.79967885478218e-15
+MetalMGClover batch_rhs=13 iterations=76 outer=5 relative_residual=1.59416391970703e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=9.15506515831191e-15
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.31041801538416e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.230275 fine_schur_dispatches=250 nominal_operator_flops=6674969665536 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=347.107343266594
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.81601405609723e-15
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=7.9302217637835e-15
+MetalMGClover batch_rhs=2 iterations=77 outer=5 relative_residual=1.070500255217e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.49186872513061e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=7.61925248410634e-15
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.4749314202055e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.04287081588745e-15
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=7.92922093498536e-15
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=8.83556179349858e-15
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=9.22926758484333e-15
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=9.88746241972431e-15
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.21371659222217e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=9.27686941817236e-15
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=1.02077640757239e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=7.8876285460708e-15
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.6740402513259e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.319097 fine_schur_dispatches=250 nominal_operator_flops=6669379657728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=345.222121806625
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=8.90991596204597e-15
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=9.02503724989394e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=1.06690060762873e-14
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.26730114596485e-14
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.27180002900568e-14
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.4566549170538e-14
+MetalMGClover batch_rhs=6 iterations=76 outer=5 relative_residual=1.64183317369858e-14
+MetalMGClover batch_rhs=7 iterations=76 outer=5 relative_residual=1.62431622124145e-14
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=1.04096230120554e-14
+MetalMGClover batch_rhs=9 iterations=77 outer=5 relative_residual=1.17529947462004e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=7.66722762767993e-15
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=7.90943590283957e-15
+MetalMGClover batch_rhs=12 iterations=76 outer=5 relative_residual=1.81070972239488e-14
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=9.28696661292342e-15
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.84498399960828e-14
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.55799191582669e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.58079 fine_schur_dispatches=250 nominal_operator_flops=6666584653824 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=340.465561084308
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.34497226049595e-14
+MetalMGClover batch_rhs=1 iterations=76 outer=5 relative_residual=1.52239425255905e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.59861678817985e-14
+MetalMGClover batch_rhs=3 iterations=76 outer=5 relative_residual=1.50676205252508e-14
+MetalMGClover batch_rhs=4 iterations=77 outer=5 relative_residual=1.36352521613038e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=8.14206753308854e-15
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.10994529285965e-14
+MetalMGClover batch_rhs=7 iterations=76 outer=5 relative_residual=1.64041174364217e-14
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.2164122200721e-14
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=1.03085120193212e-14
+MetalMGClover batch_rhs=10 iterations=77 outer=5 relative_residual=1.26321672467138e-14
+MetalMGClover batch_rhs=11 iterations=77 outer=5 relative_residual=1.09163878537154e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=7.84877220489874e-15
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=9.7445946036435e-15
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.64293923867746e-14
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.39522702161019e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.279685 fine_schur_dispatches=250 nominal_operator_flops=6672174661632 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=346.07280469738
+MetalMGClover batch_rhs=0 iterations=78 outer=5 relative_residual=9.9307227079393e-15
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.2504335445267e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.7367419826644e-14
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=9.47848829936606e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=8.37220065925399e-15
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.94402543747797e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=8.49549925549315e-15
+MetalMGClover batch_rhs=7 iterations=76 outer=5 relative_residual=1.66775489387615e-14
+MetalMGClover batch_rhs=8 iterations=78 outer=5 relative_residual=9.767144154011e-15
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.29979493209243e-14
+MetalMGClover batch_rhs=10 iterations=78 outer=5 relative_residual=9.43797445946716e-15
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=9.74175469584539e-15
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=9.97311569767421e-15
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=1.03013554660914e-14
+MetalMGClover batch_rhs=14 iterations=76 outer=5 relative_residual=1.43201628244833e-14
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.14050661885143e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.184382 fine_schur_dispatches=250 nominal_operator_flops=6666584653824 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=347.500620756196
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.51582407278159e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=7.75604942044798e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=8.25110927571537e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=8.81848190901938e-15
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.83145586086157e-14
+MetalMGClover batch_rhs=5 iterations=76 outer=5 relative_residual=1.69448584474408e-14
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=9.00830271638379e-15
+MetalMGClover batch_rhs=7 iterations=77 outer=5 relative_residual=1.3213546670111e-14
+MetalMGClover batch_rhs=8 iterations=76 outer=5 relative_residual=1.74261632726847e-14
+MetalMGClover batch_rhs=9 iterations=78 outer=5 relative_residual=8.01312380227379e-15
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.59970775711586e-14
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=8.34800670728071e-15
+MetalMGClover batch_rhs=12 iterations=77 outer=5 relative_residual=1.30471317380757e-14
+MetalMGClover batch_rhs=13 iterations=78 outer=5 relative_residual=9.10636868576647e-15
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=8.89366266940141e-15
+MetalMGClover batch_rhs=15 iterations=78 outer=5 relative_residual=8.92771522911938e-15
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.17216 fine_schur_dispatches=250 nominal_operator_flops=6666584653824 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=347.72214783436
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.19328359194374e-14
+MetalMGClover batch_rhs=1 iterations=78 outer=5 relative_residual=8.80530495858808e-15
+MetalMGClover batch_rhs=2 iterations=78 outer=5 relative_residual=9.96756581590945e-15
+MetalMGClover batch_rhs=3 iterations=78 outer=5 relative_residual=9.14077641564765e-15
+MetalMGClover batch_rhs=4 iterations=78 outer=5 relative_residual=7.78659551328317e-15
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=1.0374171387748e-14
+MetalMGClover batch_rhs=6 iterations=77 outer=5 relative_residual=1.13908513346531e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=9.26471139744416e-15
+MetalMGClover batch_rhs=8 iterations=76 outer=5 relative_residual=1.57741436529531e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.51696696868093e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.6158343682439e-14
+MetalMGClover batch_rhs=11 iterations=78 outer=5 relative_residual=1.02708089173326e-14
+MetalMGClover batch_rhs=12 iterations=78 outer=5 relative_residual=7.44995182889024e-15
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.3551836063737e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=9.85648280806688e-15
+MetalMGClover batch_rhs=15 iterations=76 outer=5 relative_residual=1.35835427255e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.574555 fine_schur_dispatches=250 nominal_operator_flops=6669379657728 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=340.71679574468
+MetalMGClover batch_rhs=0 iterations=77 outer=5 relative_residual=1.44020208014219e-14
+MetalMGClover batch_rhs=1 iterations=77 outer=5 relative_residual=1.32959712308986e-14
+MetalMGClover batch_rhs=2 iterations=76 outer=5 relative_residual=1.4920481565546e-14
+MetalMGClover batch_rhs=3 iterations=77 outer=5 relative_residual=1.53275247917173e-14
+MetalMGClover batch_rhs=4 iterations=76 outer=5 relative_residual=1.67685378112987e-14
+MetalMGClover batch_rhs=5 iterations=78 outer=5 relative_residual=9.33180603464674e-15
+MetalMGClover batch_rhs=6 iterations=78 outer=5 relative_residual=1.01498209901614e-14
+MetalMGClover batch_rhs=7 iterations=78 outer=5 relative_residual=8.94857097685769e-15
+MetalMGClover batch_rhs=8 iterations=77 outer=5 relative_residual=1.16698225277545e-14
+MetalMGClover batch_rhs=9 iterations=76 outer=5 relative_residual=1.61615845461328e-14
+MetalMGClover batch_rhs=10 iterations=76 outer=5 relative_residual=1.86848524111868e-14
+MetalMGClover batch_rhs=11 iterations=76 outer=5 relative_residual=1.24560296332051e-14
+MetalMGClover batch_rhs=12 iterations=77 outer=5 relative_residual=1.12478155301865e-14
+MetalMGClover batch_rhs=13 iterations=77 outer=5 relative_residual=1.24849152617362e-14
+MetalMGClover batch_rhs=14 iterations=78 outer=5 relative_residual=8.40749760080956e-15
+MetalMGClover batch_rhs=15 iterations=77 outer=5 relative_residual=1.18428294835298e-14
+MetalMGClover array: rhs=16 resident_GPU_rhs=16 gpu_tiles=1 hierarchy_reused=true seconds=19.33816 fine_schur_dispatches=250 nominal_operator_flops=6674969665536 batch_workspace_seconds=0 nominal_operator_GFLOP_per_s=345.170877970603
+BATCH_RESULT method=MetalMGClover rhs=192 caller_tile=16 seconds=267.82017500000001 seconds_per_rhs=1.3948967447916667 max_full_relative=1.5671262120133647e-14 max_solution_difference=6.3423941087858968e-13 K_min=76 K_max=78
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 38.4459140000002
+CLOV_LINOP: Time spent in clov deriv (total) = 0
+CLOV_LINOP: Time spent in clov apply/invapply (total) = 11.478197
+PASS real 12^3x96 qprop scalar/batched 8/16 RHS, one reused hierarchy, all full FP64 residuals <=1e-12

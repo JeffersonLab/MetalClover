@@ -396,5 +396,5 @@ The completed [32³×256 near-null/SVD comparison](NEAR_NULL_SVD32.md) fits
 the real mass −0.0860 field in 32 GiB, reuses one hierarchy, and verifies
 each solution with the original Chroma CPU FP64 operator at 1e-12.
 The array interfaces accept caller-owned solution/source vectors and process
-one GPU RHS at a time with that same hierarchy. All C++ library routines and
+configurable GPU RHS tiles with that same hierarchy. All C++ library routines and
 types are in `MetalCloverEnv`; the installed C ABI keeps prefixed C symbols.

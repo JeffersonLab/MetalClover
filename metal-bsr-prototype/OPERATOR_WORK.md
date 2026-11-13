@@ -83,7 +83,8 @@ provide independent CPU FP64 conversion helpers. Reconstruction uses the
 full source, not the reduced odd source.
 
 Each context can serve either interface and reuses its selected inverter and
-hierarchy. One RHS is resident per call. The C ABI has no C++ standard-library
+hierarchy. Scalar calls use one resident RHS. Array calls use GPU tiles,
+defaulting to at most eight resident RHS. The C ABI has no C++ standard-library
 objects or Objective-C types, so GCC/libstdc++ Chroma can link the Apple
 Clang/libc++ backend. The installed dylib embeds the Metal shader sources and
 does not depend on the working directory.
@@ -97,8 +98,11 @@ The standalone 32-cubed memory result does not establish that the complete
 
 The `metalclover_solve_full_array` and `metalclover_solve_odd_array` C ABI calls
 accept arrays of field pointers and return an info array in the same order.
-They reuse one context/hierarchy and one GPU workspace, processing columns
-sequentially. They report a failed-column index; an empty array succeeds.
+They reuse one context/hierarchy and pack columns component-major into shared
+GPU dispatches on the fine, coarse and bottom levels. `metalclover_set_rhs_batch`
+sets a cap from 1 to 64 (default 8); cap 1 selects scalar execution. A conservative
+GPU allocation estimate may lower the actual width. They report a failed-column
+index; an empty array succeeds.
 Caller-owned output fields must be distinct and disjoint from source fields.
 The native Chroma overrides use the corresponding vector-of-shared-pointers
 signature used by `SB::doInversion` and expose per-column info plus an array
@@ -111,3 +115,46 @@ Metal device and shader support are checked when the context is created.
 
 Runtime shader compilation explicitly selects Metal 3.1, so a GCC-built
 calling executable cannot silently select the legacy Metal 1.1 default.
+
+## Batched execution and accounting
+
+The array solver performs independent BiCGStab or FGMRES solves in parallel
+across RHS; it does not form a coupled block Krylov space. Gauge links, packed
+LDL clover blocks, transfer weights and sparse coarse coefficients share the
+same Metal allocations as the scalar hierarchy. RHS-dependent Krylov and
+smoother workspaces are specialized to the current tile width. Changing that
+width does not rebuild the hierarchy. Partial final tiles use their actual
+width. `metalclover_get_batch_info` returns observed tile count, maximum resident
+RHS, workspace-creation time, elapsed time, fine Schur dispatches and aggregate
+nominal work/rate. The extension is additive: ABI-1 options/solve-info layouts
+are unchanged and `METALCLOVER_BATCH_API_VERSION` advertises the new functions.
+
+Each RHS has independent FP64 source norm, initial guess, residual, refinement
+state, Krylov count and total iteration budget. Before FP32 conversion, each
+correction residual is normalized independently; its correction is rescaled
+in FP64. This avoids underflow/overflow in FP32 reductions when sources have
+different amplitudes. Converged lanes are masked with zero input at the next
+refinement; only CPU FP64 acceptance can mark a result converged. Full solves
+retain Metal reduction/reconstruction, and reduced-odd solves do not repeat
+RHS reduction. The optional independent operator callback remains per field.
+
+Per-column `seconds` in an array result is an amortized share of complete
+array elapsed time. It is not an independently timed concurrent solve. Actual
+per-column CPU FP64 residual times and iteration counts are retained. Nominal
+dispatched work, including inactive lanes, is apportioned among columns being
+corrected in that outer step; initially exact/zero columns have zero Krylov
+work. Summed work matches the aggregate batch count. Aggregate rate is the
+preferred performance measure; its scope still excludes CPU FP64 and Krylov
+vector arithmetic from the numerator and includes their elapsed time.
+Workspace allocation/pipeline specialization is included in array elapsed
+time and reported separately; hierarchy setup remains separate.
+
+In Chroma, `<RHSBatch>16</RHSBatch>` sets the inverter cap. The qprop wrapper
+still performs native CPU FP64 source reduction, reconstruction and final
+full-system residual evaluation for every field. The Metal adapter submits
+the entire reduced array to the batched C ABI, checks each final native Schur
+residual and returns one `SystemSolverResults_t` per input. Its printed batch
+rate includes its packing and native checks. A caller measuring qprop wall
+time also includes the wrapper's full-system operations. SuperbBLAS's
+`max_rhs` controls how many fields reach qprop at once and bounds its full
+CPU temporary array; it is separate from the inverter's GPU cap.

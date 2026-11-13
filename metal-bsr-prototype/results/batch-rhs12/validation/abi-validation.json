@@ -1,0 +1,24 @@
+{
+  "library_sha256": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+  "exports": [
+    "_metalclover_apply_full",
+    "_metalclover_apply_odd",
+    "_metalclover_create",
+    "_metalclover_default_options",
+    "_metalclover_destroy",
+    "_metalclover_get_batch_info",
+    "_metalclover_last_error",
+    "_metalclover_reconstruct",
+    "_metalclover_reduce_rhs",
+    "_metalclover_set_rhs_batch",
+    "_metalclover_setup_seconds",
+    "_metalclover_solve_full",
+    "_metalclover_solve_full_array",
+    "_metalclover_solve_odd",
+    "_metalclover_solve_odd_array"
+  ],
+  "ABI": 1,
+  "batch_extension": 1,
+  "C11_header_compile": "pass",
+  "style_exact_copy_both_repos": true
+}

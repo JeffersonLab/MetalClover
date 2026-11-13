@@ -211,6 +211,7 @@ namespace MetalCloverEnv {
       uint32_t stage;
     } params;
     int chunk, workers;
+    bool allow_inexact = false;
     uint32_t rhs;
     std::function<void(id<MTLComputeCommandEncoder>, id<MTLBuffer>,
                        id<MTLBuffer>)>
@@ -380,13 +381,16 @@ namespace MetalCloverEnv {
           break;
       }
       int lo = limit, hi = 0;
+      std::vector<int> counts(rhs);
       for (uint32_t k = 0; k < rhs; ++k) {
-        if (ss[9 * rhs + k].re > params.tolerance2 * ss[5 * rhs + k].re)
+        if (!allow_inexact &&
+            ss[9 * rhs + k].re > params.tolerance2 * ss[5 * rhs + k].re)
           throw std::runtime_error("GPU BiCGStab iteration limit");
-        lo = std::min(lo, int(ss[7 * rhs + k].re));
+        counts[k] = int(ss[7 * rhs + k].re);
+        lo = std::min(lo, counts[k]);
         hi = std::max(hi, int(ss[7 * rhs + k].re));
       }
-      return {lo, hi, dispatched};
+      return {lo, hi, dispatched, counts};
     }
     const Cx<float> *correction() const {
       return static_cast<Cx<float> *>([delta contents]);

@@ -1,0 +1,78 @@
+[
+  {
+    "source": "clover.mm",
+    "exit": 0
+  },
+  {
+    "source": "clover_stage1.mm",
+    "exit": 0
+  },
+  {
+    "source": "compact_probe.mm",
+    "exit": 0
+  },
+  {
+    "source": "correctness_compare.mm",
+    "exit": 0
+  },
+  {
+    "source": "critical_probe.mm",
+    "exit": 0
+  },
+  {
+    "source": "evenodd.mm",
+    "exit": 0
+  },
+  {
+    "source": "low_memory_solve.mm",
+    "exit": 0
+  },
+  {
+    "source": "main.mm",
+    "exit": 0
+  },
+  {
+    "source": "metal_memory_limits.mm",
+    "exit": 0
+  },
+  {
+    "source": "mg_real_tune.mm",
+    "exit": 0
+  },
+  {
+    "source": "multigrid.mm",
+    "exit": 0
+  },
+  {
+    "source": "performance_compare.mm",
+    "exit": 0
+  },
+  {
+    "source": "production_solve.mm",
+    "exit": 0
+  },
+  {
+    "source": "residual_profile.mm",
+    "exit": 0
+  },
+  {
+    "source": "solve.mm",
+    "exit": 0
+  },
+  {
+    "source": "solver_compare.mm",
+    "exit": 0
+  },
+  {
+    "source": "sparse_multigrid.mm",
+    "exit": 0
+  },
+  {
+    "source": "three_level.mm",
+    "exit": 0
+  },
+  {
+    "source": "wilson.mm",
+    "exit": 0
+  }
+]

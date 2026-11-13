@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "steps": [
+    {
+      "name": "real12-regression",
+      "exit": 0,
+      "seconds": 154.622132062912
+    },
+    {
+      "name": "gcc-contract",
+      "exit": 0,
+      "seconds": 52.77489995956421
+    },
+    {
+      "name": "benchmark-smoke",
+      "exit": 0,
+      "seconds": 70.84795808792114
+    }
+  ],
+  "phase": "benchmark-smoke"
+}

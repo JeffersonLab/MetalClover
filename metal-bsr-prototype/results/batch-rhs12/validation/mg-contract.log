@@ -1,0 +1,31 @@
+LDL_CLOVER seconds=0.135744 CPU_FP64_clover=recomputed_from_original_FP64_gauge min_D=1.40464
+NEAR_NULL candidate=0 K=117 residual_reduction=0.000981142 Sv_over_v=0.0787263 seconds=0.720204
+NEAR_NULL candidate=1 K=118 residual_reduction=0.000959086 Sv_over_v=0.0829163 seconds=0.704233
+NEAR_NULL candidate=2 K=115 residual_reduction=0.000995202 Sv_over_v=0.0905387 seconds=0.687302
+NEAR_NULL candidate=3 K=119 residual_reduction=0.000985089 Sv_over_v=0.0892895 seconds=0.712138
+NEAR_NULL candidate=4 K=120 residual_reduction=0.000963828 Sv_over_v=0.0920599 seconds=0.720294
+NEAR_NULL candidate=5 K=117 residual_reduction=0.000976344 Sv_over_v=0.076051 seconds=0.701508
+NEAR_NULL candidate=6 K=120 residual_reduction=0.000962157 Sv_over_v=0.0823429 seconds=0.719197
+NEAR_NULL candidate=7 K=119 residual_reduction=0.00096859 Sv_over_v=0.0861093 seconds=0.712913
+NEAR_NULL candidate=8 K=119 residual_reduction=0.000995722 Sv_over_v=0.0808029 seconds=0.714466
+NEAR_NULL candidate=9 K=119 residual_reduction=0.000981397 Sv_over_v=0.0941778 seconds=0.713982
+NEAR_NULL candidate=10 K=118 residual_reduction=0.000985732 Sv_over_v=0.0862121 seconds=0.702949
+NEAR_NULL candidate=11 K=120 residual_reduction=0.000962848 Sv_over_v=0.0865242 seconds=0.721047
+NEAR_NULL_CARRY generated=13 retained=9 represented_energy=12.9156 fraction=0.993509
+NEAR_NULL candidate=12 K=117 residual_reduction=0.00098952 Sv_over_v=0.0897539 seconds=0.779797
+NEAR_NULL candidate=13 K=119 residual_reduction=0.000992879 Sv_over_v=0.0933797 seconds=0.712024
+NEAR_NULL candidate=14 K=118 residual_reduction=0.000965745 Sv_over_v=0.0871874 seconds=0.707714
+NEAR_NULL candidate=15 K=117 residual_reduction=0.000962512 Sv_over_v=0.0922823 seconds=0.700691
+NEAR_NULL_CARRY generated=17 retained=9 represented_energy=16.7996 fraction=0.993142
+NEAR_NULL candidate=16 K=117 residual_reduction=0.000982151 Sv_over_v=0.0858932 seconds=0.777193
+NEAR_NULL candidate=17 K=121 residual_reduction=0.000993586 Sv_over_v=0.0893798 seconds=0.727512
+NEAR_NULL candidate=18 K=120 residual_reduction=0.000976373 Sv_over_v=0.0909468 seconds=0.717736
+NEAR_NULL candidate=19 K=119 residual_reduction=0.000969324 Sv_over_v=0.0885486 seconds=0.712959
+NEAR_NULL_CARRY generated=21 retained=9 represented_energy=20.6667 fraction=0.993612
+NEAR_NULL candidate=20 K=118 residual_reduction=0.000987745 Sv_over_v=0.0892241 seconds=0.789991
+NEAR_NULL candidate=21 K=118 residual_reduction=0.00098259 Sv_over_v=0.0919974 seconds=0.706617
+NEAR_NULL candidate=22 K=118 residual_reduction=0.000991567 Sv_over_v=0.0780133 seconds=0.70378
+NEAR_NULL candidate=23 K=119 residual_reduction=0.000961228 Sv_over_v=0.0952965 seconds=0.712216
+NEAR_NULL_SVD seconds=17.3845 compression_seconds=0.104156 candidates=24 retained=8 batch=4 pool_columns=13 energy_lower_bound=0.976734 energy=0.990488 minimum_energy=0.969882 minimum_rank_ratio=0.0366945 orthogonality=4.88498e-15
+PASS mixed-scale zero/exact/collinear/nonzero-guess GPU tiles=3+2, full/odd FP64 checks, scalar agreement, per-column budgets and batch accounting
+PASS C ABI full/odd/reconstruction, exact guess, budget/tolerance/ABI errors, structured work info; reconstructed_relative=7.58382e-15 solution_agreement=3.95301e-16

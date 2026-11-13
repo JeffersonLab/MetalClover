@@ -302,7 +302,7 @@ namespace MetalCloverEnv {
     uint64_t calls = 0, applications = 0, iterations = 0, padded_iterations = 0;
     double worst_true = 0;
     GPUBlockCoarseSolve(const Matrix &a, MetalRun &m, uint32_t rhs, int limit,
-                        double tol)
+                        double tol, const GPUBlockCoarseSolve *shared = nullptr)
         : a(a), m(m), rhs(rhs), limit(limit), tol(tol) {
       auto put = [&](const void *data, size_t bytes) {
         auto b = [m.device newBufferWithLength:std::max(size_t(8), bytes)
@@ -313,10 +313,10 @@ namespace MetalCloverEnv {
           std::memcpy([b contents], data, bytes);
         return b;
       };
-      rows = put(a.row.data(), a.row.size() * 4);
-      cols = put(a.col.data(), a.col.size() * 4);
-      coeff = put(a.a32.data(), a.a32.size() * 8);
-      diag = put(a.di32.data(), a.di32.size() * 8);
+      rows = shared ? shared->rows : put(a.row.data(), a.row.size() * 4);
+      cols = shared ? shared->cols : put(a.col.data(), a.col.size() * 4);
+      coeff = shared ? shared->coeff : put(a.a32.data(), a.a32.size() * 8);
+      diag = shared ? shared->diag : put(a.di32.data(), a.di32.size() * 8);
       size_t bytes = size_t(a.n) * rhs * 8;
       r = put(nullptr, bytes);
       shadow = put(nullptr, bytes);

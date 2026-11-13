@@ -1,0 +1,15 @@
+{
+  "Chroma_repository": "git@github.com:JeffersonLab/chroma.git",
+  "Chroma_branch": "rge/devel-datalib-reorg",
+  "Chroma_commit": "b3a380ea62c7c9002781a5bc1e9a557e4d3f3521",
+  "MetalClover_repository": "git@github.com:JeffersonLab/MetalClover.git",
+  "MetalClover_branch": "main",
+  "MetalClover_commit": "containing commit",
+  "final_checks": {
+    "MetalClover_make_format_check": 0,
+    "Chroma_new_CXX_format_check": 0,
+    "MetalClover_git_diff_check": 0,
+    "Chroma_git_diff_check": 0
+  },
+  "note": "Numerical code and tested binaries match the frozen pre-timing manifest; only documentation/evidence changed after timing."
+}

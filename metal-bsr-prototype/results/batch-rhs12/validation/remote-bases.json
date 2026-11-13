@@ -1,0 +1,14 @@
+[
+  {
+    "root": "/Users/admin/Documents/ChatGPT/MG for Apple GPU",
+    "branch": "main",
+    "local_base": "0658d648e17bbdd6126a48fd366b03aede0100d8",
+    "remote": "0658d648e17bbdd6126a48fd366b03aede0100d8\trefs/heads/main"
+  },
+  {
+    "root": "/Users/admin/Downloads/chroma.metalclover",
+    "branch": "rge/devel-datalib-reorg",
+    "local_base": "0c73a0c05d6e127898dbea1841ca296cbd45c8e1",
+    "remote": "0c73a0c05d6e127898dbea1841ca296cbd45c8e1\trefs/heads/rge/devel-datalib-reorg"
+  }
+]

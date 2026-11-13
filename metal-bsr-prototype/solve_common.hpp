@@ -306,6 +306,7 @@ namespace MetalCloverEnv {
 
   struct InnerInfo {
     int min_iterations = 0, max_iterations = 0, dispatched = 0;
+    std::vector<int> rhs_iterations{};
   };
   template <class T> struct CPUCG {
     const System &a;

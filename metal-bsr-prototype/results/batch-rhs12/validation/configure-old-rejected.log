@@ -1,0 +1,81 @@
+checking build system type... arm-apple-darwin25.6.0
+checking host system type... arm-apple-darwin25.6.0
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... unsupported
+checking for g++ option to enable C++98 features... none needed
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of g++... gcc3
+checking for gcc... gcc
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking for ar... ar
+configure: QDPCVER_HOME variable not set.
+checking for qdp++-config... /Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/bin/qdp++-config
+configure: Found QDP++ configuration program /Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/bin/qdp++-config
+configure: QDP++ compiler: /opt/homebrew/bin/mpicxx
+configure: QDP++ compile flags: -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include
+configure: QDP++ linking flags: -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -framework Accelerate -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -L/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/lib -L/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/lib
+configure: QDP++ libraries flags: -lqdp -lXPathReader -lxmlWriter -lqio -llime -L/opt/homebrew/opt/libxml2/lib -lxml2 -L/usr/lib -lz -L/opt/homebrew/opt/icu4c@76/lib -licuuc -liconv -lqmp -L/opt/homebrew/opt/gmp/lib -lgmpxx -lgmp -lqmp
+configure: QDP++ spacetime dimension: 4
+configure: QDP++ number of colors: 3
+configure: QDP++ number of spin components: 4
+configure: QDP++ parallel arch: parscalar
+configure: QDP++ precision: double
+checking if we can compile/link a simple QDP++ program... yes
+configure: Not building SSE Dslash
+configure: Not building CPP Dslash
+configure: Not building CG DWF
+configure: Not enabling Static Packed Gauge Fields
+configure: Not using ITTNOTIFY instrumentaiton
+configure: Not using fused clover deriv loops routine
+configure: Configuring CG-DWF for Higher Memory Mode
+configure: Not using BAGEL Wilson Dslash
+configure: Not using BAGEL Clover
+configure: Not using SSE DP Clover
+configure: Not using QDP-JIT Clover
+configure: Not using QDP-JIT contraction kernels
+configure: Not using QUDA device pointer interface
+configure: Will not use Lapack
+configure: Will not build optimized eigCG.
+configure: Not Configuring Asqtad level3 Inverter Wrapper
+configure: Not building optimized CFZ LinOp
+configure: Enabling GNU Multi-Precision Library
+configure: GMP CXXFLAGS: -I/opt/homebrew/opt/gmp/include
+configure: GMP LDFLAGS: -L/opt/homebrew/opt/gmp/lib
+configure: GMP LIBS: -lgmp
+checking if we can compile/link a simple GMP program... yes
+configure: Using Trivial Testcase Runner: trivial_runner.sh
+configure: Configuring qdp-lapack
+configure: Finished configuring qdp-lapack
+checking for latex... latex
+checking for dvips... dvips
+checking for dvipdf... dvipdf
+checking for doxygen... doxygen
+checking for xmldiff... xmldiff
+configure: WARNING: xmldiff not found in your PATH. make xcheck may fail
+checking for compatible MetalClover C ABI... configure: error: in '/private/tmp/chroma-batch-validation/configure-old-rejected':
+configure: error: MetalClover header/library not found or incompatible in /private/tmp/chroma-batch-validation/legacy-metal
+See 'config.log' for more details
