@@ -1,0 +1,382 @@
+cd .. && /Applications/Xcode.app/Contents/Developer/usr/bin/make  am--refresh
+CDPATH="${ZSH_VERSION+.}:" && cd /private/tmp/chroma-metal-integration && /bin/sh '/private/tmp/chroma-metal-integration/config/missing' aclocal-1.17
+ cd /private/tmp/chroma-metal-integration && /bin/sh /private/tmp/chroma-metal-integration/config/missing automake-1.17 --gnu
+CDPATH="${ZSH_VERSION+.}:" && cd /private/tmp/chroma-metal-integration && /bin/sh '/private/tmp/chroma-metal-integration/config/missing' autoconf
+configure.ac:34: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:34: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:34: the top level
+configure.ac:42: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:42: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:42: the top level
+configure.ac:49: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:49: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:49: the top level
+configure.ac:55: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:55: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:55: the top level
+configure.ac:62: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:62: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:62: the top level
+configure.ac:69: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:69: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:69: the top level
+configure.ac:77: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:77: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:77: the top level
+configure.ac:83: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:83: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:83: the top level
+configure.ac:89: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:89: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:89: the top level
+configure.ac:97: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:97: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:97: the top level
+configure.ac:105: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:105: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:105: the top level
+configure.ac:112: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:112: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:112: the top level
+configure.ac:119: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:119: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:119: the top level
+configure.ac:128: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:128: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:128: the top level
+configure.ac:137: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:137: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:137: the top level
+configure.ac:146: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:146: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:146: the top level
+configure.ac:154: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:154: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:154: the top level
+configure.ac:162: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:162: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:162: the top level
+configure.ac:170: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:170: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:170: the top level
+configure.ac:179: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:179: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:179: the top level
+configure.ac:185: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:185: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:185: the top level
+configure.ac:192: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:192: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:192: the top level
+configure.ac:198: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:198: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:198: the top level
+configure.ac:204: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:204: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:204: the top level
+configure.ac:210: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:210: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:210: the top level
+configure.ac:217: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:217: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:217: the top level
+configure.ac:224: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:224: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:224: the top level
+configure.ac:234: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:234: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:234: the top level
+configure.ac:245: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:245: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:245: the top level
+configure.ac:255: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:255: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:255: the top level
+configure.ac:264: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:264: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:264: the top level
+configure.ac:273: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:273: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:273: the top level
+configure.ac:283: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:283: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:283: the top level
+configure.ac:294: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:294: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:294: the top level
+configure.ac:303: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:303: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:303: the top level
+configure.ac:312: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:312: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:312: the top level
+configure.ac:321: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:321: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:321: the top level
+configure.ac:330: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:330: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:330: the top level
+configure.ac:339: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:339: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:339: the top level
+configure.ac:349: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:349: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:349: the top level
+configure.ac:367: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:367: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:367: the top level
+configure.ac:376: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:376: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:376: the top level
+configure.ac:385: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:385: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:385: the top level
+configure.ac:394: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:394: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:394: the top level
+configure.ac:403: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:403: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:403: the top level
+configure.ac:412: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:412: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:412: the top level
+configure.ac:419: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:419: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:419: the top level
+configure.ac:428: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:428: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:428: the top level
+configure.ac:447: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:447: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:447: the top level
+configure.ac:590: warning: The macro 'AC_LANG_CPLUSPLUS' is obsolete.
+configure.ac:590: You should run autoupdate.
+./lib/autoconf/c.m4:270: AC_LANG_CPLUSPLUS is expanded from...
+acinclude.m4:25: PAC_QDPXX_LINK_CXX_FUNC is expanded from...
+configure.ac:590: the top level
+configure.ac:590: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:590: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+acinclude.m4:25: PAC_QDPXX_LINK_CXX_FUNC is expanded from...
+configure.ac:590: the top level
+configure.ac:740: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:740: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:740: the top level
+configure.ac:757: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:757: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:757: the top level
+configure.ac:843: warning: The macro 'AC_LANG_CPLUSPLUS' is obsolete.
+configure.ac:843: You should run autoupdate.
+./lib/autoconf/c.m4:270: AC_LANG_CPLUSPLUS is expanded from...
+acinclude.m4:77: PAC_BAGEL_WFM_LINK_CXX_FUNC is expanded from...
+configure.ac:843: the top level
+configure.ac:843: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:843: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+acinclude.m4:77: PAC_BAGEL_WFM_LINK_CXX_FUNC is expanded from...
+configure.ac:843: the top level
+configure.ac:918: warning: The macro 'AC_LANG_CPLUSPLUS' is obsolete.
+configure.ac:918: You should run autoupdate.
+./lib/autoconf/c.m4:270: AC_LANG_CPLUSPLUS is expanded from...
+acinclude.m4:162: PAC_BAGEL_CLOVER_LINK_CXX_FUNC is expanded from...
+configure.ac:918: the top level
+configure.ac:918: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:918: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+acinclude.m4:162: PAC_BAGEL_CLOVER_LINK_CXX_FUNC is expanded from...
+configure.ac:918: the top level
+configure.ac:1112: warning: The macro 'AC_LANG_CPLUSPLUS' is obsolete.
+configure.ac:1112: You should run autoupdate.
+./lib/autoconf/c.m4:270: AC_LANG_CPLUSPLUS is expanded from...
+acinclude.m4:119: PAC_GMP_LINK_CXX_FUNC is expanded from...
+configure.ac:1112: the top level
+configure.ac:1112: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:1112: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+acinclude.m4:119: PAC_GMP_LINK_CXX_FUNC is expanded from...
+configure.ac:1112: the top level
+/bin/sh ./config.status --recheck
+running CONFIG_SHELL=/bin/sh /bin/sh /private/tmp/chroma-metal-integration/configure --with-qdp=/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi --with-datalib=/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb --with-superbblas=/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi --with-gmp=/opt/homebrew/opt/gmp --disable-cpp-wilson-dslash --enable-testcase-runner=trivial CXXFLAGS=-O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include LDFLAGS=-framework Accelerate -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp --prefix=/private/tmp/chroma-metal-validation/install --with-metal=/private/tmp/metalclover-install --no-create --no-recursion
+checking build system type... arm-apple-darwin25.6.0
+checking host system type... arm-apple-darwin25.6.0
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... unsupported
+checking for g++ option to enable C++98 features... none needed
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of g++... gcc3
+checking for gcc... gcc
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking for ar... ar
+configure: QDPCVER_HOME variable not set.
+checking for qdp++-config... /Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/bin/qdp++-config
+configure: Found QDP++ configuration program /Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/bin/qdp++-config
+configure: QDP++ compiler: /opt/homebrew/bin/mpicxx
+configure: QDP++ compile flags: -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include
+configure: QDP++ linking flags: -L/opt/homebrew/opt/libomp/lib -Wl,-rpath,/opt/homebrew/opt/libomp/lib -lomp -framework Accelerate -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -L/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/lib -L/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/lib
+configure: QDP++ libraries flags: -lqdp -lXPathReader -lxmlWriter -lqio -llime -L/opt/homebrew/opt/libxml2/lib -lxml2 -L/usr/lib -lz -L/opt/homebrew/opt/icu4c@76/lib -licuuc -liconv -lqmp -L/opt/homebrew/opt/gmp/lib -lgmpxx -lgmp -lqmp
+configure: QDP++ spacetime dimension: 4
+configure: QDP++ number of colors: 3
+configure: QDP++ number of spin components: 4
+configure: QDP++ parallel arch: parscalar
+configure: QDP++ precision: double
+checking if we can compile/link a simple QDP++ program... yes
+configure: Not building SSE Dslash
+configure: Not building CPP Dslash
+configure: Not building CG DWF
+configure: Not enabling Static Packed Gauge Fields
+configure: Not using ITTNOTIFY instrumentaiton
+configure: Not using fused clover deriv loops routine
+configure: Configuring CG-DWF for Higher Memory Mode
+configure: Not using BAGEL Wilson Dslash
+configure: Not using BAGEL Clover
+configure: Not using SSE DP Clover
+configure: Not using QDP-JIT Clover
+configure: Not using QDP-JIT contraction kernels
+configure: Not using QUDA device pointer interface
+configure: Will not use Lapack
+configure: Will not build optimized eigCG.
+configure: Not Configuring Asqtad level3 Inverter Wrapper
+configure: Not building optimized CFZ LinOp
+configure: Enabling GNU Multi-Precision Library
+configure: GMP CXXFLAGS: -I/opt/homebrew/opt/gmp/include
+configure: GMP LDFLAGS: -L/opt/homebrew/opt/gmp/lib
+configure: GMP LIBS: -lgmp
+checking if we can compile/link a simple GMP program... yes
+configure: Using Trivial Testcase Runner: trivial_runner.sh
+configure: Configuring qdp-lapack
+configure: Finished configuring qdp-lapack
+checking for latex... latex
+checking for dvips... dvips
+checking for dvipdf... dvipdf
+checking for doxygen... doxygen
+checking for xmldiff... xmldiff
+configure: WARNING: xmldiff not found in your PATH. make xcheck may fail
+checking for compatible MetalClover C ABI... yes
+configure:  Enabling SUPERB tasks using superbblas installation in /Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi
+configure:  Not using GTest Unittesting
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+ /bin/sh ./config.status
+config.status: creating Makefile
+config.status: creating chroma-config
+config.status: creating lib/Makefile
+config.status: creating mainprogs/Makefile
+config.status: creating mainprogs/tests/Makefile
+config.status: creating mainprogs/main/Makefile
+config.status: creating docs/Makefile
+config.status: creating other_libs/Makefile
+config.status: creating scripts/test_runners/trivial_runner.sh
+config.status: creating scripts/test_runners/6n_mpirun_rsh_runner.sh
+config.status: creating scripts/test_runners/7n_mpirun_rsh_runner.sh
+config.status: creating scripts/test_runners/9q_mpirun_rsh_runner.sh
+config.status: creating scripts/test_runners/cobalt_runner.sh
+config.status: creating lib/chroma_config_internal.h
+config.status: lib/chroma_config_internal.h is unchanged
+config.status: executing depfiles commands
+config.status: executing RUN commands
+(CDPATH="${ZSH_VERSION+.}:" && cd /private/tmp/chroma-metal-integration && /bin/sh '/private/tmp/chroma-metal-integration/config/missing' autoheader)
+rm -f stamp-h1
+touch /private/tmp/chroma-metal-integration/lib/chroma_config_internal.h.in
+rm -f stamp-h1
+cd .. && /bin/sh ./config.status lib/chroma_config_internal.h
+config.status: creating lib/chroma_config_internal.h
+config.status: lib/chroma_config_internal.h is unchanged
+depbase=`echo util/ferm/mgproton.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	/opt/homebrew/bin/mpicxx -DHAVE_CONFIG_H -I. -I/private/tmp/chroma-metal-integration/lib    -I/private/tmp/chroma-metal-integration/lib -I../lib -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include -I/private/tmp/chroma-metal-integration/other_libs/qdp-lapack/include -I../other_libs/qdp-lapack/include -I/opt/homebrew/opt/gmp/include             -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include   -I/private/tmp/metalclover-install/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -MT util/ferm/mgproton.o -MD -MP -MF $depbase.Tpo -c -o util/ferm/mgproton.o /private/tmp/chroma-metal-integration/lib/util/ferm/mgproton.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from /private/tmp/chroma-metal-integration/lib/util/ferm/mgproton.cc:8:
+In file included from /private/tmp/chroma-metal-integration/lib/util/ferm/mgproton.h:11:
+/private/tmp/chroma-metal-integration/lib/chromabase.h:81:11: warning: 'SUPERBBLAS_USE_MPI' macro redefined [-Wmacro-redefined]
+   81 | #  define SUPERBBLAS_USE_MPI
+      |           ^
+<command line>:2:9: note: previous definition is here
+    2 | #define SUPERBBLAS_USE_MPI 1
+      |         ^
+1 warning generated.
+depbase=`echo meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	/opt/homebrew/bin/mpicxx -DHAVE_CONFIG_H -I. -I/private/tmp/chroma-metal-integration/lib    -I/private/tmp/chroma-metal-integration/lib -I../lib -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -DSUPERBBLAS_USE_MPI -I/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/qdpxx-mpi/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/qmp-mpi/include -I/private/tmp/chroma-metal-integration/other_libs/qdp-lapack/include -I../other_libs/qdp-lapack/include -I/opt/homebrew/opt/gmp/include             -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -O1 -std=c++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/libxml2/include/libxml2 -I/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/datalib-filedb/include -I/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/superbblas-mpi/include   -I/private/tmp/metalclover-install/include -O1 -std=c++20 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/opt/homebrew/opt/gmp/include -MT meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.o -MD -MP -MF $depbase.Tpo -c -o meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.o /private/tmp/chroma-metal-integration/lib/meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from /private/tmp/chroma-metal-integration/lib/meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.cc:8:
+In file included from /private/tmp/chroma-metal-integration/lib/fermact.h:10:
+/private/tmp/chroma-metal-integration/lib/chromabase.h:81:11: warning: 'SUPERBBLAS_USE_MPI' macro redefined [-Wmacro-redefined]
+   81 | #  define SUPERBBLAS_USE_MPI
+      |           ^
+<command line>:2:9: note: previous definition is here
+    2 | #define SUPERBBLAS_USE_MPI 1
+      |         ^
+1 warning generated.

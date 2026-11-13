@@ -158,3 +158,9 @@ rate includes its packing and native checks. A caller measuring qprop wall
 time also includes the wrapper's full-system operations. SuperbBLAS's
 `max_rhs` controls how many fields reach qprop at once and bounds its full
 CPU temporary array; it is separate from the inverter's GPU cap.
+
+For distillation, one color eigenvector supplies `Ns=4` physical spinor RHS,
+one per source spin. Caller `max_rhs`, GPU width and work counts use physical
+spinors. The distillation caller groups complete eigenvectors, and reports
+both units; see [DISTILLATION_RHS.md](DISTILLATION_RHS.md). A 96-RHS group
+therefore contains 24 color eigenvectors, rather than 96.

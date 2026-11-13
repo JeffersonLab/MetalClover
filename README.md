@@ -54,6 +54,8 @@ One context owns and reuses one hierarchy. Array solves run batched GPU tiles
 the source and solution arrays.
 See [batched RHS support](metal-bsr-prototype/BATCH_RHS.md) and
 [interfaces and FLOP accounting](metal-bsr-prototype/OPERATOR_WORK.md).
+For distillation, [each color eigenvector supplies four source-spin RHS](metal-bsr-prototype/DISTILLATION_RHS.md);
+`num_vecs=1` therefore means four inversions.
 
 The Chroma integration on `rge/devel-datalib-reorg` enables
 `MetalBiCGClover` and `MetalMGClover` with `--with-metal=/path/to/metal-prefix`.

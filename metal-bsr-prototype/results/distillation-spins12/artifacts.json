@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover",
+    "bytes": 62590688,
+    "sha256": "c01efcc349bc87269528ba7a76e0651714dccc3f5222234944bc9cfd3f1bc7a9",
+    "committed": false
+  },
+  {
+    "path": "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_batch",
+    "bytes": 3621400,
+    "sha256": "e1d31e791cef3999141743cab2c03c576f85ef2938eb8913a7f792435e7de6a6",
+    "committed": false
+  },
+  {
+    "path": "/private/tmp/metalclover-install/lib/libmetalclover.dylib",
+    "bytes": 479976,
+    "sha256": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+    "committed": false
+  },
+  {
+    "path": "/private/tmp/chroma-distillation-spin/spins1.reference.bin",
+    "bytes": 127401984,
+    "sha256": "fda09f3fb6d33198a0fa2546a27f4a4d096e2da658270cb2f99ce3f25bfdf1f0",
+    "committed": false
+  }
+]

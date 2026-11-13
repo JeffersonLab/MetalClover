@@ -13,6 +13,9 @@ if status['status'] != 'complete' or status.get('exit') != 0:
     raise RuntimeError('timing is incomplete')
 with (root / 'run.csv').open() as f:
     rows = list(csv.DictReader(f))
+if rows and 'num_vecs' in rows[0]:
+    raise RuntimeError('This report describes the original full-field random-spinor experiment; '
+                       'four-spin distillation CSV has separate vector/RHS units.')
 log = (root / 'timing.log').read_text()
 if 'PASS real 12^3x96 qprop scalar/batched' not in log:
     raise RuntimeError('native harness did not finish')
@@ -120,6 +123,13 @@ the RHS dimension. The inverters use independent Krylov solves/convergence
 per column, sharing one gauge field, packed LDL clover data and MG hierarchy.
 This does not introduce a coupled block Krylov algorithm.
 
+These timings used the original independent full-field random spinors.
+They count physical spinor RHS. The current distillation harness instead
+uses four source spins per time-localized color vector and takes
+`BASE_NUM_VECS`; 24 vectors mean 96 RHS and 48 mean 192. See
+[DISTILLATION_RHS.md](DISTILLATION_RHS.md). The results below retain their
+original source definition and have not been relabeled as distillation timings.
+
 The real **12³×96**, mass **−0.0743** LIME field was tested on the **32 GiB
 Apple M1 Max with 24 GPU cores**, one MPI rank, MetalClover CPU workers=8,
 `OMP_NUM_THREADS=1`, `VECLIB_MAXIMUM_THREADS=1`. The header action uses
@@ -226,9 +236,10 @@ make -C mainprogs/tests t_metal_clover t_metal_clover_batch
 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 \\
   mainprogs/tests/t_metal_clover gauge.lime action.xml 3,3,3,8
 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 \\
-  mainprogs/tests/t_metal_clover_batch gauge.lime action.xml /tmp/batch12 96
+  mainprogs/tests/t_metal_clover_batch gauge.lime action.xml /tmp/batch12 24
 ```
 
+The current command uses 24 color vectors (96 physical RHS), then 48 (192).
 Use a fresh output prefix. The action XML follows the perambulator metadata
 paths. The throughput harness measures vector qprop calls and is separate
 from running the complete perambulator measurement.

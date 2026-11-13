@@ -1,0 +1,74 @@
+[
+  {
+    "source": "/private/tmp/chroma-distillation-spin/summary.json",
+    "copy": "summary.json",
+    "raw_sha256": "3e1431ffc2838302b9abf508e5fe132756555a02b643cac880abe2350de0f3c2",
+    "normalized_sha256": "3e1431ffc2838302b9abf508e5fe132756555a02b643cac880abe2350de0f3c2"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/validation-status.json",
+    "copy": "validation-status.json",
+    "raw_sha256": "edcb2a01226bb1713c9b7f5468c2b93b2694e75ee183424a4d011f90a9d39c87",
+    "normalized_sha256": "edcb2a01226bb1713c9b7f5468c2b93b2694e75ee183424a4d011f90a9d39c87"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/sources.json",
+    "copy": "sources.json",
+    "raw_sha256": "c08801f7a2287ae66b5f991b032566767b3206de9931f4e226de600686ed4002",
+    "normalized_sha256": "c08801f7a2287ae66b5f991b032566767b3206de9931f4e226de600686ed4002"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/spins1.csv",
+    "copy": "spins1.csv",
+    "raw_sha256": "aed50f7493e7916a6b6dd942afbeadcce74e039ee10d1bf5d15d25a075461ebd",
+    "normalized_sha256": "aed50f7493e7916a6b6dd942afbeadcce74e039ee10d1bf5d15d25a075461ebd"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/regression.log",
+    "copy": "regression.log",
+    "raw_sha256": "45ba97c0539be644f9bd3a14323d7e34ac912c48e9803551baeeb420b7d1189b",
+    "normalized_sha256": "45ba97c0539be644f9bd3a14323d7e34ac912c48e9803551baeeb420b7d1189b"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/four-spin-smoke.log",
+    "copy": "four-spin-smoke.log",
+    "raw_sha256": "de9b88a358abd560055ed3aecf7b8446eb3042ad9eae1c91af71c387d6f9bb30",
+    "normalized_sha256": "de9b88a358abd560055ed3aecf7b8446eb3042ad9eae1c91af71c387d6f9bb30"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/native-objects.log",
+    "copy": "compile-logs/native-objects.log",
+    "raw_sha256": "d43de76eec4144b5ff954be2500679d91b3a4a956b6335018c88184e0cc0dc75",
+    "normalized_sha256": "223acc4818a880dd6d41a17e46f45e1e4ff043e7361fd14fd2289dfbe2005f77"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/regression-rebuild.log",
+    "copy": "compile-logs/regression-rebuild.log",
+    "raw_sha256": "082a7be85d3bb00014299454f3e72d9530dd38054e63f49be7d35598ca2266d3",
+    "normalized_sha256": "0565d2099080f988155b0c2155cd21fc288340b1ad4dcb7a4ab6b50ba06febe2"
+  },
+  {
+    "source": "/private/tmp/chroma-distillation-spin/benchmark-build.log",
+    "copy": "compile-logs/benchmark-build.log",
+    "raw_sha256": "986d35272f5996d8e0fe885d4c233e8eddab46fc2393c85206204f854d1f1963",
+    "normalized_sha256": "152dc4e0dcb1e781b71fe4d024c56e53be2c0df2bbaf838254166d6c5268c03b"
+  },
+  {
+    "source": "/private/tmp/build_distillation_spin.py",
+    "copy": "build_distillation_spin.py",
+    "raw_sha256": "5c4e64b2437aeeba4fc566de5ae2502732faf6a0284197aa9d26bcc217cd0ded",
+    "normalized_sha256": "5c4e64b2437aeeba4fc566de5ae2502732faf6a0284197aa9d26bcc217cd0ded"
+  },
+  {
+    "source": "/private/tmp/validate_distillation_spin.py",
+    "copy": "validate_distillation_spin.py",
+    "raw_sha256": "fc416b4d7f5d558c891ad640489dfc751fa1de7caa7c0a4c91e6129ea49e7aec",
+    "normalized_sha256": "fc416b4d7f5d558c891ad640489dfc751fa1de7caa7c0a4c91e6129ea49e7aec"
+  },
+  {
+    "source": "/private/tmp/report_distillation_spin.py",
+    "copy": "report_distillation_spin.py",
+    "raw_sha256": "4ded7c82ccf8fa197d9e547dbc727dc0ca17993ca13aec2bd7fe690f9761c278",
+    "normalized_sha256": "4ded7c82ccf8fa197d9e547dbc727dc0ca17993ca13aec2bd7fe690f9761c278"
+  }
+]

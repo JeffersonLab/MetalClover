@@ -1,0 +1,39 @@
+[
+  {
+    "name": "native-objects",
+    "command": [
+      "make",
+      "-o",
+      "Makefile",
+      "-j1",
+      "util/ferm/mgproton.o",
+      "meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.o"
+    ],
+    "cwd": "/private/tmp/chroma-metal-validation/enabled/lib",
+    "exit": 0,
+    "seconds": 302.397412776947
+  },
+  {
+    "name": "native-archive",
+    "command": [
+      "/usr/bin/ar",
+      "r",
+      "libchroma.a",
+      "util/ferm/mgproton.o",
+      "meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.o"
+    ],
+    "cwd": "/private/tmp/chroma-metal-validation/enabled/lib",
+    "exit": 0,
+    "seconds": 3.417573928833008
+  },
+  {
+    "name": "native-index",
+    "command": [
+      "/usr/bin/ranlib",
+      "libchroma.a"
+    ],
+    "cwd": "/private/tmp/chroma-metal-validation/enabled/lib",
+    "exit": 0,
+    "seconds": 0.20774412155151367
+  }
+]
