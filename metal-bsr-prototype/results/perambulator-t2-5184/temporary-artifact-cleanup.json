@@ -1,0 +1,70 @@
+{
+  "UTC": "2026-11-14T22:26:11.992112+00:00",
+  "reason": "space for queued time-two run while retaining all existing production outputs",
+  "files": [
+    {
+      "path": "/private/tmp/mg-fit32.bridge",
+      "bytes": 6442451024,
+      "sha256": "5c26360f3d32f7bbd27c4d50037aea2c6b9c6b60ae0e0ed66ab7f28b34c796c5",
+      "archived_hash_verified": true,
+      "kind": "derived temporary gauge/clover export"
+    },
+    {
+      "path": "/private/tmp/mg-null32/bicg.metal-bicgstab.rhs0.bin",
+      "bytes": 1610612736,
+      "sha256": "8d32020e8eb425f5d9f5288dcc6f64131402397ea2a19037e4dd70256bdf7f4a",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-null32/bicg.metal-bicgstab.rhs1.bin",
+      "bytes": 1610612736,
+      "sha256": "690ba25f55a5f66d1f887e37c95a731d3413d08adf1c476e473ec0deabca36a7",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/bicg.metal-bicgstab.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "29615515e2c1498aabfc380ba553418642428850c9f694c26530a009f92aaa83",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/bicg.metal-bicgstab.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "e7049ad298b93cb374fa598c4aae874784566d177786623b8e4759dad81ac085",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/filtered.metal-mg.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "c3c38b08443fabce478396c7387b555c851ba5aafd6fe5c810a287a2763a725f",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/filtered.metal-mg.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "225d709bbb2d70d4c595967db38e68035cbb6d338811d16a15e428afefc3123d",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/near.metal-mg.rhs0.bin",
+      "bytes": 679477248,
+      "sha256": "1db10d0653aee25f8054e9ce77c71cc4830077e30f66b67ee553d13901859085",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    },
+    {
+      "path": "/private/tmp/mg-near-null24/near.metal-mg.rhs1.bin",
+      "bytes": 679477248,
+      "sha256": "46951358610b696150eab14d8f0c278eab716f082cf45f43d6ab0349a617bef4",
+      "archived_hash_verified": true,
+      "kind": "regenerable temporary benchmark solution"
+    }
+  ],
+  "original_gauge_and_eigenvector_inputs_retained": true
+}
