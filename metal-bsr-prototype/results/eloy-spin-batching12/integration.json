@@ -1,0 +1,21 @@
+{
+  "Chroma_repository": "git@github.com:JeffersonLab/chroma.git",
+  "Chroma_branch": "rge/devel-datalib-reorg",
+  "Chroma_parent": "bc151f436806191452d3aa363ae4ca2972e3ceaf",
+  "Chroma_commit": "d8765a05538285412b7983888ab336546ea0009f",
+  "restored_from": "b3a380ea62c7c9002781a5bc1e9a557e4d3f3521",
+  "MetalClover_repository": "git@github.com:JeffersonLab/MetalClover.git",
+  "MetalClover_branch": "main",
+  "MetalClover_parent": "8e52e4de73ec127ea78aa5f23f241bd4237386d5",
+  "MetalClover_commit": "containing commit",
+  "Metal_numerical_library_unchanged": true,
+  "checks": {
+    "native_regression_exit": 0,
+    "spin_major_smoke_exit": 0,
+    "max_rhs_1_respected": true,
+    "non_multiple_of_four_caps_respected": true,
+    "MetalClover_make_format_check": 0,
+    "Chroma_harness_clang_format_dry_run": 0,
+    "both_git_diff_check": 0
+  }
+}

@@ -161,6 +161,7 @@ CPU temporary array; it is separate from the inverter's GPU cap.
 
 For distillation, one color eigenvector supplies `Ns=4` physical spinor RHS,
 one per source spin. Caller `max_rhs`, GPU width and work counts use physical
-spinors. The distillation caller groups complete eigenvectors, and reports
-both units; see [DISTILLATION_RHS.md](DISTILLATION_RHS.md). A 96-RHS group
-therefore contains 24 color eigenvectors, rather than 96.
+spinors. Eloy's caller batches eigenvectors within each of four source-spin
+loops. `max_rhs=1` is valid; no multiple-of-four cap is required. The total
+inversion count is four times `num_vecs` per source time/phasing, independently
+of the cap. See [DISTILLATION_RHS.md](DISTILLATION_RHS.md).

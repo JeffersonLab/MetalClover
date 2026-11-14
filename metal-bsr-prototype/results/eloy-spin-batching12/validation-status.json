@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "steps": [
+    {
+      "name": "regression-build",
+      "command": [
+        "make",
+        "-o",
+        "Makefile",
+        "t_metal_clover"
+      ],
+      "exit": 0,
+      "seconds": 659.0669379234314
+    },
+    {
+      "name": "benchmark-build",
+      "command": [
+        "make",
+        "-f",
+        "Makefile.batch",
+        "-o",
+        "Makefile",
+        "t_metal_clover_batch"
+      ],
+      "exit": 0,
+      "seconds": 8.950960874557495
+    },
+    {
+      "name": "regression",
+      "command": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "3,3,3,8"
+      ],
+      "exit": 0,
+      "seconds": 240.36487913131714
+    },
+    {
+      "name": "spin-major-smoke",
+      "command": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_batch",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "/private/tmp/chroma-eloy-spin-batching/spins1",
+        "1"
+      ],
+      "exit": 0,
+      "seconds": 132.68916416168213
+    }
+  ],
+  "stage": "spin-major-smoke"
+}

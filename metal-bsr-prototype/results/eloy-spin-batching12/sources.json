@@ -1,0 +1,26 @@
+{
+  "lib/meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.cc": {
+    "bytes": 20924,
+    "sha256": "3bf1632a8b069c25441b5bb7bd7d86f5f058f0d527af9da76b64b84ac771665e"
+  },
+  "lib/meas/inline/hadron/inline_prop_and_matelem_distillation_superb_w.h": {
+    "bytes": 3229,
+    "sha256": "6b207aecd3030c2554518e848b223f0210d955a1a885848a0c79709bc7ca05b7"
+  },
+  "lib/util/ferm/mgproton.cc": {
+    "bytes": 179739,
+    "sha256": "daf4b40ddcd46cb6e51c880969b7ddbac12ebf6e6442cd0e2682fdcdba2900bf"
+  },
+  "lib/util/ferm/mgproton.h": {
+    "bytes": 5938,
+    "sha256": "fc7eec4c5d2274a77f04c2a09afc963acdc7b7fad33c1f9792a547b0d66bcdf8"
+  },
+  "mainprogs/tests/t_metal_clover.cc": {
+    "bytes": 18971,
+    "sha256": "a4bc0c7eec33fdeef71cab24b07ce96f4657f6aeb53c191dd760cfe74b32881f"
+  },
+  "mainprogs/tests/t_metal_clover_batch.cc": {
+    "bytes": 12792,
+    "sha256": "da1e0967d669395c7129e804a6b514512434609dbbc296a18b8cca892f362bdb"
+  }
+}

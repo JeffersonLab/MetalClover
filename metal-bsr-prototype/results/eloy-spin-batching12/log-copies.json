@@ -1,0 +1,68 @@
+[
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/summary.json",
+    "copy": "summary.json",
+    "raw_sha256": "1d01dbdde2f69a4255aa390a46c8e6d4cdae71cd1d02eea81f46af63d1e6f42b",
+    "normalized_sha256": "1d01dbdde2f69a4255aa390a46c8e6d4cdae71cd1d02eea81f46af63d1e6f42b"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/validation-status.json",
+    "copy": "validation-status.json",
+    "raw_sha256": "c3c0ba6ae28db09f8335f4b8fd9c1b2ca552e6d7baf4c0ba5db265531ac9cd33",
+    "normalized_sha256": "c3c0ba6ae28db09f8335f4b8fd9c1b2ca552e6d7baf4c0ba5db265531ac9cd33"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/sources.json",
+    "copy": "sources.json",
+    "raw_sha256": "eafe972967a0a2e360d7fd38991d4c6be0e6ef01bd9ad457cecbc5f0ca36a444",
+    "normalized_sha256": "eafe972967a0a2e360d7fd38991d4c6be0e6ef01bd9ad457cecbc5f0ca36a444"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/regression.log",
+    "copy": "regression.log",
+    "raw_sha256": "c4eda606080307e5ca57398fb058fcb44568734f0d8434e5614993b3f1a90802",
+    "normalized_sha256": "c4eda606080307e5ca57398fb058fcb44568734f0d8434e5614993b3f1a90802"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/spin-major-smoke.log",
+    "copy": "spin-major-smoke.log",
+    "raw_sha256": "11beea8e3d321140ad3ef14d633fc12fadbe3e4e3031a9e4efd7fac3d97945b8",
+    "normalized_sha256": "11beea8e3d321140ad3ef14d633fc12fadbe3e4e3031a9e4efd7fac3d97945b8"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/spins1.csv",
+    "copy": "spins1.csv",
+    "raw_sha256": "0a89c8b5a790332412aa5a34fbdaeea15ca666e21b1b8001888df214d0e6aa9f",
+    "normalized_sha256": "0a89c8b5a790332412aa5a34fbdaeea15ca666e21b1b8001888df214d0e6aa9f"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/regression-build.log",
+    "copy": "compile-logs/regression-build.log",
+    "raw_sha256": "9a02cca4b6ec5a70d1ff453df7daf9951efce7d586485d3fc7fc1155637b5276",
+    "normalized_sha256": "37e4c1accabd9ee96920942ce1ff7e8cff5314e9f2dabed17c99c84224c1368e"
+  },
+  {
+    "source": "/private/tmp/chroma-eloy-spin-batching/benchmark-build.log",
+    "copy": "compile-logs/benchmark-build.log",
+    "raw_sha256": "5cc79d5dda2d2788f5ce615110bc077f6c92e4e42e837c287dffc68a7b84e90a",
+    "normalized_sha256": "3d5f01e25002ddf48438b93617ed832e49a0a2be16b1a25746fd7d2f63dbd047"
+  },
+  {
+    "source": "/private/tmp/restore_eloy_batching.py",
+    "copy": "restore_eloy_batching.py",
+    "raw_sha256": "03b2b68208b40ded15f30ad54b7bc948c54b7d48ecfd65538e6501c1f20d1b2b",
+    "normalized_sha256": "03b2b68208b40ded15f30ad54b7bc948c54b7d48ecfd65538e6501c1f20d1b2b"
+  },
+  {
+    "source": "/private/tmp/validate_eloy_spin_batching.py",
+    "copy": "validate_eloy_spin_batching.py",
+    "raw_sha256": "2ac41122135695c4e0de373064f6001f8d72ec961fd210c4d3c8cd912ec405f3",
+    "normalized_sha256": "2ac41122135695c4e0de373064f6001f8d72ec961fd210c4d3c8cd912ec405f3"
+  },
+  {
+    "source": "/private/tmp/report_eloy_spin_batching.py",
+    "copy": "report_eloy_spin_batching.py",
+    "raw_sha256": "82ace49f5e77940942f9750bb30f1a28dfc62ab99043b9e28b0155f734349015",
+    "normalized_sha256": "82ace49f5e77940942f9750bb30f1a28dfc62ab99043b9e28b0155f734349015"
+  }
+]
