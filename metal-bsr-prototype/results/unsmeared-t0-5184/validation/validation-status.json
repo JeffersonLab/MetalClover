@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "steps": [
+    {
+      "name": "pilot5-resume",
+      "exit": 0,
+      "seconds": 55.985658168792725,
+      "args": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_0.mod1000",
+        "/private/tmp/chroma-unsmeared-production/pilot5",
+        "0",
+        "5",
+        "2",
+        "MetalMGClover",
+        "--resume"
+      ]
+    },
+    {
+      "name": "pilot5-verify",
+      "exit": 0,
+      "seconds": 1.367568016052246,
+      "args": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_0.mod1000",
+        "/private/tmp/chroma-unsmeared-production/pilot5",
+        "0",
+        "5",
+        "1",
+        "MetalMGClover",
+        "--resume"
+      ]
+    },
+    {
+      "name": "ir-mg",
+      "exit": 0,
+      "seconds": 33.597644090652466,
+      "args": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_0.mod1000",
+        "/private/tmp/chroma-unsmeared-production/ir-mg",
+        "5183",
+        "1",
+        "1",
+        "MetalMGClover"
+      ]
+    },
+    {
+      "name": "ir-bicg",
+      "exit": 0,
+      "seconds": 19.462585926055908,
+      "args": [
+        "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared",
+        "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+        "/private/tmp/mg-null-metadata/correctness12/action.xml",
+        "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_0.mod1000",
+        "/private/tmp/chroma-unsmeared-production/ir-bicg",
+        "5183",
+        "1",
+        "1",
+        "MetalBiCGClover"
+      ]
+    }
+  ],
+  "stage": "ir-bicg"
+}

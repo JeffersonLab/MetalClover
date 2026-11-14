@@ -1,0 +1,9 @@
+{
+  "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_unsmeared.cc": "ff425991c49e7cc66fd506dc2c499cc1ea08a7ee73e603b6c924603edea2ffeb",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared": "36959b2d0cc4bc20651fe8db1f3afe1bbd59c8f75f81d11b3a71f63c03c4db1c",
+  "/private/tmp/metalclover-install/lib/libmetalclover.dylib": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py": "63a40ad3e8e55dbe7a744bff67d1313c706ccc14d43a1a4441f464a323138695",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/unsmeared-t0-5184/action.xml": "ce64a92842bccf803c0097e4bbe1e6907d6c63386db1496ff3536462f3fe0780",
+  "Chroma_commit": "6aeb610a133b83ec910e0530471c34494117fde1",
+  "MetalClover_numerical_backend_commit": "adaf4324ee6d339a6bcd0b29845436d02a76de9f"
+}

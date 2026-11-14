@@ -1,0 +1,18 @@
+{
+  "exit": 75,
+  "seconds": 28.102011919021606,
+  "expected_exit": 75,
+  "args": [
+    "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared",
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+    "/private/tmp/mg-null-metadata/correctness12/action.xml",
+    "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_0.mod1000",
+    "/private/tmp/chroma-unsmeared-production/pilot5",
+    "0",
+    "5",
+    "3",
+    "MetalMGClover",
+    "--stop-after-batches",
+    "1"
+  ]
+}

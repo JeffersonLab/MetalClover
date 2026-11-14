@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "pilot_records": {
+    "pilot5": {
+      "shape": [
+        5,
+        4,
+        12,
+        12,
+        12,
+        3,
+        4
+      ],
+      "accepted_rhs": 20,
+      "maximum_full_relative": 1.1886919579998483e-14,
+      "payload_sha256": "74d2b8b8ed802d13da85fbcfbc227a0717f5600ca567881772154b7a64afa3ba"
+    },
+    "ir-mg": {
+      "shape": [
+        1,
+        4,
+        12,
+        12,
+        12,
+        3,
+        4
+      ],
+      "accepted_rhs": 4,
+      "maximum_full_relative": 1.2979020324019043e-14,
+      "payload_sha256": "828172bed94fe2144c2df0f212707467a4129944cceb8437ef5ddbb0f42188e0"
+    },
+    "ir-bicg": {
+      "shape": [
+        1,
+        4,
+        12,
+        12,
+        12,
+        3,
+        4
+      ],
+      "accepted_rhs": 4,
+      "maximum_full_relative": 2.5011382143520228e-14,
+      "payload_sha256": "e30dcfc7412313bfff9d5e4c86105179913f81538509f9b57de6a04719131be6"
+    }
+  },
+  "MG_BiCG_unsmeared_slice_relative_difference": 2.4058583633892834e-14,
+  "all_pilot_column_checksums_verified": true,
+  "checkpoint_uncommitted_tail_recovered": true,
+  "source_precision_bits": 32,
+  "output_precision_bits": 64
+}
