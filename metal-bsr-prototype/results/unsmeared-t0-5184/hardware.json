@@ -1,0 +1,11 @@
+{
+  "CPU_GPU": "Apple M1 Max",
+  "GPU_cores": 24,
+  "system_memory_bytes": 34359738368,
+  "MPI_ranks": 1,
+  "OMP_NUM_THREADS": 1,
+  "VECLIB_MAXIMUM_THREADS": 1,
+  "macOS": "26.7.1",
+  "architecture": "arm64",
+  "controller_Python": "3.9.6"
+}

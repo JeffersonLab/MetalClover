@@ -103,3 +103,18 @@ rereading and SHA256 are outside that solve-session time.
 Large eigenvectors and generated propagators stay outside Git. Only code,
 action XML, compact validation evidence, hashes and reproduction instructions
 are versioned.
+
+## Completed full-basis run
+
+The complete configuration-1000 run finished on 2026-11-14: all 20,736 RHS,
+one reused hierarchy, and both full original Chroma CPU FP64 residual checks
+passed at 1e-12. The largest relative residual was 2.4064e-14. Total solve-session
+wall time was 8 h 22 min 20 s, with peak process RSS 5.955 GiB on the 32 GiB
+M1 Max. Nominal dispatched operator work divided by this total wall time was
+277.49 GFLOP/s, with the counting scope described above.
+
+The verified payload is
+`/Users/admin/Downloads/MetalClover-results/cfg1000-t0-unsmeared.npy`.
+See [the full run record](results/unsmeared-t0-5184/README.md) for exact input,
+output and binary hashes, all column residuals, timing details and native
+completed-output checksum verification.

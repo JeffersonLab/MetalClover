@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "Chroma_commit": "6aeb610a133b83ec910e0530471c34494117fde1",
+  "MetalClover_controller_commit": "60e62ed53915ce464c107a9ab82e2827b620a355",
+  "frozen_files_still_match": true,
+  "production_controller_exit_code": 0,
+  "native_array_calls": 1296,
+  "physical_GPU_RHS_per_call": 16,
+  "all_arrays_report_hierarchy_reuse": true,
+  "native_hierarchy_setup_log_count": 1,
+  "native_complete_payload_verification": "all 20,736 committed FNV1a64 column checksums reread",
+  "per_source_spin": {
+    "0": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.4063810813519627e-14,
+      "maximum_qprop_relative": 2.4063810813519627e-14,
+      "source_norm_min": 0.9999999986416703,
+      "source_norm_max": 1.0000000014039585
+    },
+    "1": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3881947975581127e-14,
+      "maximum_qprop_relative": 2.3881947975581127e-14,
+      "source_norm_min": 0.9999999986416703,
+      "source_norm_max": 1.0000000014039585
+    },
+    "2": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3847691853833837e-14,
+      "maximum_qprop_relative": 2.3847691853833837e-14,
+      "source_norm_min": 0.9999999986416703,
+      "source_norm_max": 1.0000000014039585
+    },
+    "3": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3540774929400372e-14,
+      "maximum_qprop_relative": 2.3540774929400372e-14,
+      "source_norm_min": 0.9999999986416703,
+      "source_norm_max": 1.0000000014039585
+    }
+  },
+  "retained_output": "/Users/admin/Downloads/MetalClover-results/cfg1000-t0-unsmeared.npy",
+  "retained_output_SHA256": "3b017ee3fd6989514f3ac23f79859082442da18b3fb201c278d14fd85c8ffc51",
+  "large_payload_committed_to_git": false,
+  "timing_scope": "nominal dispatched GPU operator work, including inactive/padded lanes; CPU FP64 and Krylov-vector arithmetic excluded from numerator; session wall includes setup, input, residual checks and output, excluding final checksum reread and SHA256"
+}
