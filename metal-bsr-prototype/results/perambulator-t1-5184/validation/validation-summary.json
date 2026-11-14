@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "source_time": 1,
+  "sink_time": 1,
+  "MG_physical_RHS": 64,
+  "BiCG_physical_RHS": 4,
+  "MG_BiCG_point_slice_relative_difference": 6.860057641027904e-14,
+  "MG_max_full_relative": 1.035965931511933e-14,
+  "BiCG_max_full_relative": 1.481359751608451e-14,
+  "time1_full_gamma5_relative": 6.65747924206058e-16,
+  "time1_QDP_projection_scaled_error": 2.59306887130892e-15,
+  "independent_DataLib_complex_values_bitwise_checked": 4096,
+  "checkpoint_initial_exit": 75,
+  "checkpoint_resume": "pass",
+  "wrong_eigen_time_rejected": true,
+  "time0_complete_output_verifies": true,
+  "time0_projector_all_16_value_hashes_unchanged": true
+}

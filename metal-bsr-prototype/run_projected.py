@@ -46,7 +46,9 @@ def main():
     original_run = json.loads(Path(str(args.point_prefix) + '.run.json').read_text())
     assert original['status'] == original_run['status'] == 'complete'
     assert original['completed_rhs'] == original['physical_rhs'] == 4 * original['num_vectors']
-    assert original['first_vector'] == original['source_time'] == original['sink_time'] == 0
+    assert original['first_vector'] == 0
+    assert original['source_time'] == original['sink_time']
+    assert 0 <= original['source_time'] < original['lattice'][3]
     assert original['maximum_full_relative'] <= 1e-12 and original['maximum_qprop_relative'] <= 1e-12
     assert 1 <= args.vectors <= original['num_vectors']
     expected_eigen = original_run['inputs_sha256'][str(args.eigenvectors.resolve())]
@@ -62,7 +64,8 @@ def main():
     env = os.environ.copy()
     env.update(OMP_NUM_THREADS='1', VECLIB_MAXIMUM_THREADS='8')
     info = {'status': 'running', 'started_UTC': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            'command': command, 'source_time': 0, 'sink_time': 0, 'num_vectors': args.vectors,
+            'command': command, 'source_time': original['source_time'],
+            'sink_time': original['sink_time'], 'num_vectors': args.vectors,
             'definition': 'V_dagger M_inverse V', 'format': 'standard Chroma FILEDB/SDB propElemOp, complex FP64',
             'point_SHA256': point_hash, 'eigenvector_SHA256': eigen_hash,
             'binary_SHA256': digest(args.binary), 'original_full_CPU_FP64_checks': original,
@@ -119,6 +122,8 @@ def main():
         assert native.findtext('status') == 'pass'
         assert int(native.findtext('num_vectors')) == args.vectors
         assert int(native.findtext('spin_records')) == 16
+        assert int(native.findtext('source_time')) == original['source_time']
+        assert int(native.findtext('sink_time')) == original['sink_time']
         assert float(native.findtext('max_QDP_dot_scaled_error')) <= 1e-12
         assert float(native.findtext('full_gamma5_relative_Frobenius')) <= 1e-10
         assert native.findtext('metadata/DBMetaData/id') == 'propElemOp'

@@ -59,6 +59,10 @@ def summarize(prefix):
     count = int(meta.findtext('num_vectors'))
     first = int(meta.findtext('first_vector'))
     dims = tuple(map(int, meta.findtext('lattSize').split()))
+    source_time = int(meta.findtext('source_time'))
+    sink_time = int(meta.findtext('sink_time'))
+    if not 0 <= source_time < dims[3] or sink_time != source_time:
+        raise RuntimeError('unsupported source/sink times')
     shape = (count, 4, dims[2], dims[1], dims[0], 3, 4)
     state = checkpoint(prefix)
     if state['completed_rhs'] != 4 * count:
@@ -94,8 +98,8 @@ def summarize(prefix):
                     flops += int(m.group(1))
             if line.startswith('NEAR_NULL_SVD '):
                 hierarchies += 1
-    result = {'status': 'complete', 'method': meta.findtext('method'), 'source_time': 0,
-              'sink_time': 0, 'lattice': dims, 'first_vector': first, 'num_vectors': count,
+    result = {'status': 'complete', 'method': meta.findtext('method'), 'source_time': source_time,
+              'sink_time': sink_time, 'lattice': dims, 'first_vector': first, 'num_vectors': count,
               'source_spins': 4, 'physical_rhs': 4 * count, 'numpy_shape': shape,
               'numpy_axes': meta.findtext('axes_C_order'), 'dtype': '<c16',
               'input_eigen_precision_bits': int(meta.findtext('input_eigen_precision_bits')),
@@ -128,11 +132,14 @@ def main():
     parser.add_argument('--first', type=int, default=0)
     parser.add_argument('--vectors', type=int, default=5184)
     parser.add_argument('--max-rhs', type=int, default=16)
+    parser.add_argument('--time', type=int, default=0, help='common source and retained sink time')
     parser.add_argument('--method', choices=['MetalMGClover', 'MetalBiCGClover'], default='MetalMGClover')
     parser.add_argument('--resume', action='store_true')
     parser.add_argument('--max-rss-gib', type=float, default=26)
     parser.add_argument('--reserve-disk-gib', type=float, default=4)
     a = parser.parse_args()
+    if not 0 <= a.time < 96:
+        parser.error('--time must lie in [0,95] for this 12^3x96 harness')
     a.prefix = a.prefix.resolve()
     a.prefix.parent.mkdir(parents=True, exist_ok=True)
     prior = list(a.prefix.parent.glob(a.prefix.name + '.session-*.status.json'))
@@ -142,11 +149,14 @@ def main():
     command = [str(a.binary.resolve()), str(a.gauge.resolve()), str(a.action.resolve()),
                str(a.eigenvectors.resolve()), str(a.prefix), str(a.first), str(a.vectors),
                str(a.max_rhs), a.method]
+    if a.time:
+        command.extend(['--time', str(a.time)])
     if a.resume:
         command.append('--resume')
     env = os.environ.copy()
     env.update(OMP_NUM_THREADS='1', VECLIB_MAXIMUM_THREADS='1')
     record = {'status': 'running', 'command': command, 'total_rhs': a.vectors * 4,
+              'source_time': a.time, 'sink_time': a.time,
               'started_UTC': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'binary_sha256': sha256(a.binary), 'inputs_sha256': {str(p.resolve()): sha256(p) for p in [a.gauge, a.action, a.eigenvectors]},
               'environment': {'OMP_NUM_THREADS': '1', 'VECLIB_MAXIMUM_THREADS': '1'},

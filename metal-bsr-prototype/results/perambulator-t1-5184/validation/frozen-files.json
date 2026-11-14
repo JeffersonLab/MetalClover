@@ -1,0 +1,13 @@
+{
+  "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_unsmeared.cc": "010d26b6918ef4a55aec3ec935194a6a80266cd686bf2ea93b3c345358f346b9",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/project_perambulator.cc": "140432b324fa7b2c5049f9f2d582443b2fd6e68e1b5f6e6a8cbb3c6a3997dc12",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/perambulator_reader_check.cc": "e7ff17a601346479d4071f063ffcb1bd1d8356e4f90c75bdd3b5b56462005b5e",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py": "98c1743bda4b1f3e9f9f6f6ed9de2bda33be1365c2fbb0ad08cb3f946c358f1b",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_projected.py": "5376edf4a27df11c53fd80aeedd59fe462a20bba6eb3afd8a971a14c6359b1cb",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t1-5184/action.xml": "8435829c044b045724e89e809bcd6807c182eddb1c1a3c09157bcd4ef5f90bdf",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared_time": "9a85259957dfafd08e4cedd74805289a71f0597472a07809dba64d4633223527",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/project_perambulator_time": "26d886da35ca6f6069a1cbd446326a5eb603fd7d58df89a146791e2d86684bd6",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/reader_check_time": "d422bd573d3fbe21c1216c5b4378e0e2918918cc6fe758f7f6e8beafb73623ed",
+  "/private/tmp/metalclover-install/lib/libmetalclover.dylib": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+  "action_change": "only Contractions/t_sources: 0 to 1; FermionAction byte-for-byte identical"
+}

@@ -1,0 +1,2 @@
+Open store database /private/tmp/chroma-time1-production/pilot16.sdb1000
+PASS analysis_reader t_source=1 t_sink=1 mass=light vectors=16

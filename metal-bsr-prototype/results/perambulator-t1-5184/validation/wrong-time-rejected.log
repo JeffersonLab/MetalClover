@@ -1,0 +1,22 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+u0 is 1
+Single Precision Read
+QIO_read_finished
+MapObjectDisk: opening file /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_1.mod1000 for reading
+MapObjectDisk: reading and checking header
+MapObjectDisk: file has version: 1
+MapObjectDisk: reading key/fileposition data
+ERROR expected all 5184 supplied eigenvectors at the requested time

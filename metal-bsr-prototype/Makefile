@@ -181,6 +181,10 @@ build/project_perambulator: project_perambulator.cc
 	mkdir -p build
 	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) $(CHROMA_EXTRA_CPPFLAGS) project_perambulator.cc -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs) -framework Accelerate
 
+build/perambulator_reader_check: perambulator_reader_check.cc
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) $(CHROMA_EXTRA_CPPFLAGS) perambulator_reader_check.cc -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
+
 # Public C ABI: GCC-built Chroma can call the Apple Clang/libc++ dylib.
 PREFIX ?= /usr/local
 API_BUILD ?= build/api

@@ -1,0 +1,27 @@
+{
+  "UTC": "2026-11-14T15:54:47.850596+00:00",
+  "reason": "make room for time-one production output while retaining existing time-zero output",
+  "files": [
+    {
+      "path": "/private/tmp/metalclover-batch-real12/run.reference.bin",
+      "bytes": 3057647616,
+      "sha256": "24013f5e64a51ef751649f02733b863acb7dad089ff42a355917c8277c908606",
+      "kind": "regenerable temporary benchmark solution output",
+      "archived_hash_verified": true
+    },
+    {
+      "path": "/private/tmp/mg-null32/near.metal-mg.rhs0.bin",
+      "bytes": 1610612736,
+      "sha256": "873c3644eada2ce2b9e944ae17f307bfdaa27708033001dedeeb4d7bc71b7b44",
+      "kind": "regenerable temporary benchmark solution output",
+      "archived_hash_verified": true
+    },
+    {
+      "path": "/private/tmp/mg-null32/near.metal-mg.rhs1.bin",
+      "bytes": 1610612736,
+      "sha256": "79ac5618e47abe6ef3a9bb23c6224a92f30f9559afff0c3c4b02568137712cf7",
+      "kind": "regenerable temporary benchmark solution output",
+      "archived_hash_verified": true
+    }
+  ]
+}

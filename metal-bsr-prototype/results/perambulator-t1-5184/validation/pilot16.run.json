@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "command": [
+    "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared_time",
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+    "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t1-5184/action.xml",
+    "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_1.mod1000",
+    "/private/tmp/chroma-time1-production/pilot16",
+    "0",
+    "16",
+    "16",
+    "MetalMGClover",
+    "--time",
+    "1",
+    "--resume"
+  ],
+  "total_rhs": 64,
+  "source_time": 1,
+  "sink_time": 1,
+  "started_UTC": "2026-11-14T16:00:25.638467+00:00",
+  "binary_sha256": "9a85259957dfafd08e4cedd74805289a71f0597472a07809dba64d4633223527",
+  "inputs_sha256": {
+    "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime": "0d1191873629673fb37b55e75deb291b7c0a8cc66073d2d1ec61dec4275a7afe",
+    "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t1-5184/action.xml": "8435829c044b045724e89e809bcd6807c182eddb1c1a3c09157bcd4ef5f90bdf",
+    "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_1.mod1000": "979163206595380f7031b324eede3005ac855c53cd7299ae3da9d150e6ec8090"
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "limits": {
+    "max_rss_gib": 26,
+    "reserve_disk_gib": 4
+  },
+  "PID": 94399,
+  "completed_rhs": 64,
+  "max_full_relative": 1.035965931511933e-14,
+  "qprop_seconds": 86.123053,
+  "verify_seconds": 6.054026999999999,
+  "write_seconds": 0.08604300000000001,
+  "elapsed_seconds": 95.505720041,
+  "RSS_GiB": 4.4337615966796875,
+  "free_disk_GiB": 19.123489379882812,
+  "peak_RSS_GiB": 5.465972900390625,
+  "minimum_free_disk_GiB": 17.62934112548828,
+  "exit_code": 0,
+  "finished_UTC": "2026-11-14T16:02:01.303444+00:00",
+  "payload_sha256": "15cb5efdfebe722b34ccd5d534a8ad8cb9a6b9eae90e33b288b3ebf2985508d1"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "t0-complete-regression",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 2.407310916,
+    "log": "/private/tmp/chroma-time1-production/t0-complete-regression.log"
+  },
+  {
+    "name": "wrong-time-rejected",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "seconds": 0.9667144999999997,
+    "log": "/private/tmp/chroma-time1-production/wrong-time-rejected.log"
+  },
+  {
+    "name": "checkpoint-initial",
+    "exit_code": 75,
+    "expected_exit": 75,
+    "seconds": 44.97592525,
+    "log": "/private/tmp/chroma-time1-production/pilot16.session-000.log"
+  },
+  {
+    "name": "checkpoint-resume",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 97.208474958,
+    "log": "/private/tmp/chroma-time1-production/checkpoint-resume.log"
+  },
+  {
+    "name": "bicg-reference",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 21.810292207999993,
+    "log": "/private/tmp/chroma-time1-production/bicg-reference.log"
+  },
+  {
+    "name": "t1-projector",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 5.249310624999993,
+    "log": "/private/tmp/chroma-time1-production/t1-projector.log"
+  },
+  {
+    "name": "t1-analysis-reader",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 0.32920162499999606,
+    "log": "/private/tmp/chroma-time1-production/t1-analysis-reader.log"
+  },
+  {
+    "name": "t0-projector-regression",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "seconds": 0.9859059169999966,
+    "log": "/private/tmp/chroma-time1-production/t0-projector-regression.log"
+  }
+]

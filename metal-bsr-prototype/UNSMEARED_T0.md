@@ -3,10 +3,12 @@
 The separate Chroma test program `t_metal_clover_unsmeared` uses Eloy's
 existing `SB::doInversion` callback without changing his projected perambulator
 measurement. It solves all four source spins for each supplied color
-eigenvector at source time zero, retains unsmeared site/color/spin sinks at
-time zero, and streams accepted columns to disk. The current harness targets
-one rank on the real 12³×96 configuration 1000. Other sink times or geometries
-require an explicit extension of this harness.
+eigenvector at a selected source time, retains unsmeared site/color/spin sinks
+at that same time, and streams accepted columns to disk. The current harness
+targets one rank on the real 12³×96 configuration 1000. `--time T` selects the
+common source/sink time (default zero); the action XML's `t_sources` and the
+supplied MOD eigenvector file must agree with it. Different source/sink times
+or other geometries require an explicit extension of this harness.
 
 For 5,184 eigenvectors this means 20,736 physical RHS, not 5,184 spinor RHS.
 The solver and its MG hierarchy are constructed once and reused throughout
@@ -17,7 +19,7 @@ The device `RHSBatch` is fixed to sixteen independently of the caller cap.
 Every full four-dimensional solution is checked against the original Chroma
 unpreconditioned clover operator in CPU FP64, both by the native qprop and by
 an independent evaluation in the output callback. Both relative residuals
-must be at most 1e-12 before the time-zero slice is retained. The other 95
+must be at most 1e-12 before the selected time slice is retained. The other 95
 sink times are discarded only after these checks.
 
 ## Inputs and conventions
@@ -118,3 +120,16 @@ The verified payload is
 See [the full run record](results/unsmeared-t0-5184/README.md) for exact input,
 output and binary hashes, all column residuals, timing details and native
 completed-output checksum verification.
+
+
+## Selecting another source time
+
+For example, use `run_unsmeared.py --time 1` with
+`results/perambulator-t1-5184/action.xml` and the supplied
+`eigs_mod.n5184/1000/eigs.t_1.mod1000` file to solve source and sink time one.
+The native program accepts the same `--time 1` option. Time zero remains the
+default and existing time-zero checkpoints retain the same metadata layout.
+The solver checks that the action source-time list and eigenvector metadata
+agree with the selected time before creating output. The projector infers
+the time from the accepted point-file metadata and writes that time into
+both standard perambulator keys and XML.

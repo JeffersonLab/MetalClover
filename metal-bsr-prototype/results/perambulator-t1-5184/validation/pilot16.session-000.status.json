@@ -1,0 +1,8 @@
+{
+  "status": "paused",
+  "elapsed_seconds": 44.97592525,
+  "exit_code": 75,
+  "source_time": 1,
+  "sink_time": 1,
+  "purpose": "controlled checkpoint/restart test"
+}

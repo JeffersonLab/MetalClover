@@ -8,8 +8,9 @@ tau[spin_sink, spin_source](sink_vector, source_vector)
                         * solution[source_vector,spin_source,x,colour,spin_sink]
 ```
 
-at source and sink time zero. Both ends use the supplied MOD eigenvector
-ordering and phases. Eigenvectors stored as complex FP32 are promoted to FP64;
+at the common source/sink time recorded in the accepted point file. Both ends
+use the supplied MOD eigenvector ordering and phases. Eigenvectors stored as
+complex FP32 are promoted to FP64;
 the contraction and stored values are complex FP64. The operation uses CPU
 Accelerate complex-double GEMM and requires no further inversions or hierarchy
 construction. The verified unsmeared collection remains its input.

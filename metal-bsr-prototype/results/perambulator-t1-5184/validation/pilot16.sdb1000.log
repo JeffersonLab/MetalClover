@@ -1,0 +1,38 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+MapObjectDisk: opening file /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_1.mod1000 for reading
+MapObjectDisk: reading and checking header
+MapObjectDisk: file has version: 1
+MapObjectDisk: reading key/fileposition data
+Open store database /private/tmp/chroma-time1-production/pilot16.sdb1000.partial
+Doubling at level 5 max_bucket at 56 data page starts at 57
+PROJECTED source_spin=0 sink_spin=0 vectors=16 gemm_seconds=0.00057600000000000001 qdp_dot_scaled_error=2.1433785872917092e-15
+PROJECTED source_spin=0 sink_spin=1 vectors=16 gemm_seconds=0.000435 qdp_dot_scaled_error=1.6042258118505496e-16
+PROJECTED source_spin=0 sink_spin=2 vectors=16 gemm_seconds=0.00045300000000000001 qdp_dot_scaled_error=3.5182187019525385e-16
+PROJECTED source_spin=0 sink_spin=3 vectors=16 gemm_seconds=0.00046099999999999998 qdp_dot_scaled_error=3.8733928455146175e-16
+PROJECTED source_spin=1 sink_spin=0 vectors=16 gemm_seconds=0.00044000000000000002 qdp_dot_scaled_error=1.4740427239868833e-16
+PROJECTED source_spin=1 sink_spin=1 vectors=16 gemm_seconds=0.000444 qdp_dot_scaled_error=2.0173694998673913e-15
+PROJECTED source_spin=1 sink_spin=2 vectors=16 gemm_seconds=0.00044299999999999998 qdp_dot_scaled_error=2.1738822370232824e-16
+PROJECTED source_spin=1 sink_spin=3 vectors=16 gemm_seconds=0.00041800000000000002 qdp_dot_scaled_error=3.3777936370205693e-16
+PROJECTED source_spin=2 sink_spin=0 vectors=16 gemm_seconds=0.00044200000000000001 qdp_dot_scaled_error=2.686920829215193e-16
+PROJECTED source_spin=2 sink_spin=1 vectors=16 gemm_seconds=0.000444 qdp_dot_scaled_error=2.1960610443616644e-16
+PROJECTED source_spin=2 sink_spin=2 vectors=16 gemm_seconds=0.00044000000000000002 qdp_dot_scaled_error=2.5930688713089154e-15
+PROJECTED source_spin=2 sink_spin=3 vectors=16 gemm_seconds=0.00043300000000000001 qdp_dot_scaled_error=1.16609484986906e-16
+PROJECTED source_spin=3 sink_spin=0 vectors=16 gemm_seconds=0.00044299999999999998 qdp_dot_scaled_error=2.4532679989799444e-16
+PROJECTED source_spin=3 sink_spin=1 vectors=16 gemm_seconds=0.00044299999999999998 qdp_dot_scaled_error=3.565203785682681e-16
+PROJECTED source_spin=3 sink_spin=2 vectors=16 gemm_seconds=0.00045399999999999998 qdp_dot_scaled_error=3.3406938121526457e-16
+PROJECTED source_spin=3 sink_spin=3 vectors=16 gemm_seconds=0.00043899999999999999 qdp_dot_scaled_error=1.571540681857601e-15
+Open store database /private/tmp/chroma-time1-production/pilot16.sdb1000.partial
+PASS projected_perambulator vectors=16 records=16 full_gamma5_relative=6.6574792420605834e-16 qdp_dot_scaled_error=2.5930688713089154e-15 total_seconds=0.85225899999999999

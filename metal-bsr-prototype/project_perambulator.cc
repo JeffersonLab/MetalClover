@@ -1,4 +1,4 @@
-// Project verified time-zero point sinks into the supplied LapH basis and
+// Project verified same-time point sinks into the supplied LapH basis and
 // write the standard Chroma propElemOp key/value database.
 #include <Accelerate/Accelerate.h>
 
@@ -99,17 +99,18 @@ namespace {
   ProjectComplex value(const ComplexD &z) {
     return {toDouble(real(z)), toDouble(imag(z))};
   }
-  Key key(int source, int sink) {
+  Key key(int source, int sink, int time_slice) {
     KeyPropElementalOperator_t k;
-    k.t_source = k.t_slice = 0;
+    k.t_source = k.t_slice = time_slice;
     k.spin_src = source;
     k.spin_snk = sink;
     k.mass_label = "light";
     return k;
   }
-  void get(Store &db, int source, int sink, Value &v, int n) {
+  void get(Store &db, int source, int sink, Value &v, int n, int time_slice) {
     std::string encoded;
-    if (db.get_record(encodeStorageRecord(key(source, sink)), encoded))
+    if (db.get_record(encodeStorageRecord(key(source, sink, time_slice)),
+                      encoded))
       throw std::runtime_error("standard Chroma record readback failed");
     QDP::BinaryBufferReader reader(encoded);
     read(reader, v);
@@ -150,8 +151,8 @@ int main(int argc, char **argv) {
     read(meta, "/MetalCloverUnsmeared/sink_time", sink_time);
     read(meta, "/MetalCloverUnsmeared/input_eigen_precision_bits", precision);
     if (dims.size() != 4 || dims[0] != 12 || dims[1] != 12 || dims[2] != 12 ||
-        dims[3] != 96 || input_n < n || first != 0 || source_time != 0 ||
-        sink_time != 0 || precision != 32)
+        dims[3] != 96 || input_n < n || first != 0 || source_time < 0 ||
+        source_time >= dims[3] || sink_time != source_time || precision != 32)
       throw std::runtime_error("unsupported point-file metadata");
     Layout::setLattSize(dims);
     Layout::create();
@@ -169,7 +170,7 @@ int main(int argc, char **argv) {
     const int k = dims[0] * dims[1] * dims[2] * 3;
     std::vector<int> sites(k / 3);
     multi1d<int> coord(4);
-    coord[3] = 0;
+    coord[3] = sink_time;
     for (size_t i = 0; i < sites.size(); ++i) {
       size_t x = i;
       for (int d = 0; d < 3; ++d) {
@@ -190,14 +191,14 @@ int main(int argc, char **argv) {
     int available, eigen_time;
     read(eigen_meta, "/MODMetaData/num_vecs", available);
     read(eigen_meta, "/MODMetaData/t_slice", eigen_time);
-    if (available < n || eigen_time != 0)
+    if (available < n || eigen_time != sink_time)
       throw std::runtime_error("eigenvector metadata mismatch");
     std::vector<ProjectComplex> basis(uint64_t(k) * n), rhs(uint64_t(k) * n),
         projected(uint64_t(n) * n);
     LatticeColorVectorF vf = zero;
     for (int v = 0; v < n; ++v) {
-      TimeSliceIO<LatticeColorVectorF> slice(vf, 0);
-      if (eigen.get(KeyTimeSliceColorVec_t(0, v), slice))
+      TimeSliceIO<LatticeColorVectorF> slice(vf, sink_time);
+      if (eigen.get(KeyTimeSliceColorVec_t(sink_time, v), slice))
         throw std::runtime_error("cannot read eigenvector");
       for (size_t i = 0; i < sites.size(); ++i)
         for (int c = 0; c < 3; ++c) {
@@ -218,7 +219,7 @@ int main(int argc, char **argv) {
     push(metadata, "Contractions");
     write(metadata, "num_vecs", n);
     multi1d<int> times(1), phase(3);
-    times[0] = 0;
+    times[0] = source_time;
     phase = 0;
     write(metadata, "t_sources", times);
     write(metadata, "Nt_forward", 1);
@@ -277,8 +278,8 @@ int main(int argc, char **argv) {
         for (int check = 0; check < 8; ++check) {
           int i = check == 0 ? 0 : check == 1 ? n - 1 : (check * 1543 + 17) % n;
           int j = check == 0 ? 0 : check == 1 ? n - 1 : (check * 727 + 13) % n;
-          TimeSliceIO<LatticeColorVectorF> slice(vf, 0);
-          if (eigen.get(KeyTimeSliceColorVec_t(0, i), slice))
+          TimeSliceIO<LatticeColorVectorF> slice(vf, sink_time);
+          if (eigen.get(KeyTimeSliceColorVec_t(sink_time, i), slice))
             throw std::runtime_error("independent eigenvector read failed");
           v = vf;
           w = zero;
@@ -307,7 +308,8 @@ int main(int argc, char **argv) {
           }
         auto encoded = encodeStorageRecord(matrix);
         hashes[src][snk] = fnv(encoded);
-        if (writer.put_record(encodeStorageRecord(key(src, snk)), encoded))
+        if (writer.put_record(encodeStorageRecord(key(src, snk, source_time)),
+                              encoded))
           throw std::runtime_error("write standard perambulator block failed");
         journal << src << ',' << snk << ',' << n << ','
                 << multiply.getTimeInSeconds() << ',' << block_check << ','
@@ -343,7 +345,7 @@ int main(int argc, char **argv) {
     for (int src = 0; src < 4; ++src)
       for (int snk = 0; snk < 4; ++snk) {
         Value block;
-        get(db, src, snk, block, n);
+        get(db, src, snk, block, n, source_time);
         if (fnv(encodeStorageRecord(block)) != hashes[src][snk])
           throw std::runtime_error("complete standard block checksum failed");
       }
@@ -352,9 +354,9 @@ int main(int argc, char **argv) {
     for (int src = 0; src < 4; ++src)
       for (int snk = src; snk < 4; ++snk) {
         Value a, b;
-        get(db, src, snk, a, n);
+        get(db, src, snk, a, n, source_time);
         if (src != snk)
-          get(db, snk, src, b, n);
+          get(db, snk, src, b, n, source_time);
         const auto &am = a.mat;
         const auto &bm = src == snk ? am : b.mat;
         const int sign = (src < 2) == (snk < 2) ? 1 : -1;
@@ -382,8 +384,8 @@ int main(int argc, char **argv) {
     write(report, "status", std::string("pass"));
     write(report, "num_vectors", n);
     write(report, "spin_records", 16);
-    write(report, "source_time", 0);
-    write(report, "sink_time", 0);
+    write(report, "source_time", source_time);
+    write(report, "sink_time", sink_time);
     write(report, "max_QDP_dot_scaled_error", Double(max_check));
     write(report, "full_gamma5_relative_Frobenius", Double(hermiticity));
     write(report, "full_gamma5_max_absolute", Double(max_abs));
