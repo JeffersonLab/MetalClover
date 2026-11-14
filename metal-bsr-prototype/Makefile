@@ -177,6 +177,10 @@ build/anisotropic_inspect: anisotropic_inspect.cc
 	mkdir -p build
 	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) $(CHROMA_EXTRA_CPPFLAGS) anisotropic_inspect.cc -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs)
 
+build/project_perambulator: project_perambulator.cc
+	mkdir -p build
+	"$$("$(CHROMA_CONFIG)" --cxx)" $$("$(CHROMA_CONFIG)" --cxxflags) $(CHROMA_EXTRA_CPPFLAGS) project_perambulator.cc -o $@ $$("$(CHROMA_CONFIG)" --ldflags) $$("$(CHROMA_CONFIG)" --libs) -framework Accelerate
+
 # Public C ABI: GCC-built Chroma can call the Apple Clang/libc++ dylib.
 PREFIX ?= /usr/local
 API_BUILD ?= build/api

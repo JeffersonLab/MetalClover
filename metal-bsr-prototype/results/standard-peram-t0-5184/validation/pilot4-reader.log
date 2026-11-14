@@ -1,0 +1,2 @@
+Open store database /private/tmp/chroma-projected-production/pilot4.sdb1000
+PASS analysis_reader t_source=0 t_sink=0 mass=light vectors=4

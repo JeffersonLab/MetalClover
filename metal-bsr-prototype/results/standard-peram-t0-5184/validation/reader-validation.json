@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "independent_reader": "Datalib::TensorStorage::StorageProp4",
+  "physical_spin_blocks": 16,
+  "eigenvectors": 4,
+  "complex_elements": 256,
+  "all_elements_bitwise_match_Chroma_encoded_values": true,
+  "source_time": 0,
+  "sink_time": 0,
+  "mass_label": "light"
+}

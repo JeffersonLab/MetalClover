@@ -1,0 +1,8 @@
+{
+  "make_format_check": "pass",
+  "new_cpp_sources_clang_format": "pass",
+  "Python_compile": "pass",
+  "git_diff_check": "pass",
+  "native_projector_build": "pass",
+  "independent_reader_build": "pass"
+}

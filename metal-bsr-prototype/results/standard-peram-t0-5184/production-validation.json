@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "num_vectors": 5184,
+  "source_time": 0,
+  "sink_time": 0,
+  "spin_records": 16,
+  "input_point_file_SHA256_verified": "3b017ee3fd6989514f3ac23f79859082442da18b3fb201c278d14fd85c8ffc51",
+  "input_eigenvector_SHA256_verified": "2208a505fe122e667bfaf65ebf9a91e8d508e1e52c4d71e9191b37a64a71cb2f",
+  "frozen_source_and_binary_hashes_match": true,
+  "all_16_complete_records_roundtrip_bitwise": true,
+  "direct_QDP_inner_products": 128,
+  "max_QDP_dot_scaled_error": 5.79128486695564e-15,
+  "full_gamma5_relative_Frobenius": 1.08003059885922e-14,
+  "original_full_CPU_FP64_tolerance": 1e-12,
+  "original_max_full_relative": 2.4063810813519627e-14,
+  "additional_inversions": 0,
+  "additional_hierarchies": 0,
+  "retained_output": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_0.sdb1000",
+  "retained_output_SHA256": "d987f2a56d393e8941d5315c8d842762f22c6299b2cd506947cb060c5acabef4",
+  "large_output_committed_to_Git": false,
+  "independent_DataLib_full_file_key_check": "pass: one t_source=0, t_sink=0, mass=light Prop4 key"
+}

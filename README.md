@@ -59,6 +59,9 @@ For distillation, [each color eigenvector supplies four source-spin RHS](metal-b
 The separate [unsmeared time-zero writer](metal-bsr-prototype/UNSMEARED_T0.md)
 streams point-sink output with per-column full Chroma FP64 checks and resumable
 batch checkpoints, without changing Eloy's projected perambulator measurement.
+The [standard perambulator converter](metal-bsr-prototype/STANDARD_PERAMBULATOR.md)
+projects those accepted solutions onto the sink eigenvectors and writes Chroma's
+usual FP64 perambulator database without repeating the inversions.
 
 The Chroma integration on `rge/devel-datalib-reorg` enables
 `MetalBiCGClover` and `MetalMGClover` with `--with-metal=/path/to/metal-prefix`.
