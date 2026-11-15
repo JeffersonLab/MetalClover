@@ -1,0 +1,7 @@
+{
+  "queue_PID": 61688,
+  "launch_mode": "detached local process with local logs and full-pipeline sleep prevention",
+  "queue_script_SHA256": "da76acfaf54eb7c4d7ed2ae2b1c4192abd57855292bb3fdda7179b1ebfaca7a4",
+  "dependency": "time-four pipeline and queue must both complete successfully",
+  "intermediate_retention": "retain all standard perambulators; reclaim only validated time-four point intermediate after evidence and hashes are checked"
+}

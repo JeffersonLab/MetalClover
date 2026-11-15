@@ -169,3 +169,10 @@ The accepted time-two/time-three unsmeared `.npy` intermediates were subsequentl
 retired after complete evidence capture and point/standard checksum rechecks to
 make room for time four. Every standard perambulator and original input remains;
 see [the cleanup record](results/perambulator-t4-5184/intermediate-cleanup.json).
+
+Time five is queued after complete time-four pipeline and reader verification,
+using all 20,736 RHS, the unchanged action, one reused MG hierarchy and both
+full Chroma CPU FP64 residual checks at 1e-12. The detached local queue saves
+accepted time-four evidence before verified intermediate retirement when needed
+for space; all standard perambulators and original inputs remain. See
+[the time-five record](results/perambulator-t5-5184/README.md).

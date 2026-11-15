@@ -1,0 +1,19 @@
+{
+  "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_unsmeared.cc": "010d26b6918ef4a55aec3ec935194a6a80266cd686bf2ea93b3c345358f346b9",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/project_perambulator.cc": "140432b324fa7b2c5049f9f2d582443b2fd6e68e1b5f6e6a8cbb3c6a3997dc12",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/perambulator_reader_check.cc": "e7ff17a601346479d4071f063ffcb1bd1d8356e4f90c75bdd3b5b56462005b5e",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py": "98c1743bda4b1f3e9f9f6f6ed9de2bda33be1365c2fbb0ad08cb3f946c358f1b",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_projected.py": "5376edf4a27df11c53fd80aeedd59fe462a20bba6eb3afd8a971a14c6359b1cb",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared_time": "9a85259957dfafd08e4cedd74805289a71f0597472a07809dba64d4633223527",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/project_perambulator_time": "26d886da35ca6f6069a1cbd446326a5eb603fd7d58df89a146791e2d86684bd6",
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/reader_check_time": "d422bd573d3fbe21c1216c5b4378e0e2918918cc6fe758f7f6e8beafb73623ed",
+  "/private/tmp/metalclover-install/lib/libmetalclover.dylib": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+  "action_change": "only Contractions/t_sources: 0 to 5; FermionAction byte-for-byte identical",
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t5-5184/action.xml": "3c3617c9dc2750c3c81de1a158c963b425f5202cc68a9404a0b792538cf3d106",
+  "/private/tmp/chroma-time5-production/full_run.py": "5ae52689485984db18874feaf75185f7ecb6069ade0697d5acf49fbdce20bdbe",
+  "/private/tmp/chroma-time5-production/capture_completed.py": "f846cb051b096010d006083dcdca372b5e9ee382d9168e26b7005040b6ecb96e",
+  "/private/tmp/chroma-time5-production/render_completed.py": "6f73b56f11bfb3b3d6f634e9e09c1d46229f530d9665ffc8646009e1daf702b8",
+  "/private/tmp/chroma-time5-production/queue_after.py": "da76acfaf54eb7c4d7ed2ae2b1c4192abd57855292bb3fdda7179b1ebfaca7a4",
+  "/private/tmp/chroma-time5-production/make_room.py": "ef194577ac01a530e064546168a9253ec71535912cb5fcfb9eec593e325f46fb",
+  "/private/tmp/chroma-time5-production/reclaim_temporaries.py": "2982d2957a876285166cd9f32545a386f399d993aef6b7402e805e54e67d1817"
+}

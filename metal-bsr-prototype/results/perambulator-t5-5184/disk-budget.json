@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-11-15T21:23:40.633935+00:00",
+  "free_bytes_at_staging_after_temporary_cleanup": 18880770048,
+  "remaining_time_four_standard_output_bytes": 6907158528,
+  "accepted_time_four_point_intermediate_reclaimable_bytes": 6879707264,
+  "estimated_free_GiB_before_time_five_after_time_four_projection_and_point_retirement": 17.558521389961243,
+  "minimum_free_GiB_before_time_five": 17.0,
+  "estimated_free_GiB_after_both_time_five_outputs": 4.718502044677734,
+  "controller_free_disk_reserve_GiB": 4.0,
+  "note": "estimates assume no unrelated disk growth; actual free space is rechecked before starting and throughout production"
+}
