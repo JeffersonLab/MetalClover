@@ -1,7 +1,12 @@
-# Configuration 1000: queued source/sink t=4 perambulator
+# Configuration 1000: running source/sink t=4 perambulator
+
+**Started automatically on 2026-11-15 at 17:29:49 UTC**, after complete
+time-three validation, evidence capture and verified intermediate cleanup.
+The initial source batches have passed both full CPU FP64 residual checks;
+`handoff-validation.json` records the accepted handoff, not a completed run.
 
 All 5,184 supplied eigenvectors and four source spins (20,736 physical RHS)
-are staged for common source and sink time four, using the same procedure as
+are running for common source and sink time four, using the same procedure as
 the earlier runs. The detached local queue waits for the complete time-three
 pipeline: solve, standard projection, complete verification and independent
 DataLib reader. Sleep prevention covers the queue and all stages. Connection

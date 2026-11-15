@@ -72,8 +72,16 @@ repeat, including the dependency on standard validation and independent reader
 completion. Its separate hierarchy is reused for that entire new collection.
 See [the time-three record](../perambulator-t3-5184/README.md).
 
-Storage: with explicit user approval, only the earlier time-zero and time-one
+Storage: with explicit user approval, the earlier time-zero and time-one
 unsmeared `.npy` intermediates were removed after checking their hashes and
 rechecking the retained standard perambulator hashes. Every standard file,
 original gauge/eigenvector input, log and residual record is retained; see
 [the cleanup record](../perambulator-t3-5184/intermediate-cleanup.json).
+
+
+Storage update for the time-four repeat: the accepted time-two and time-three
+unsmeared `.npy` intermediates were retired after all checks and evidence capture,
+rechecking both point and retained standard SHA256 hashes, and confirming the
+intermediates were not open. Every standard perambulator, original input, log
+and accepted residual record is retained. See
+[the time-four cleanup record](../perambulator-t4-5184/intermediate-cleanup.json).

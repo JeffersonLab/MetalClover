@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "source_time": 3,
+  "sink_time": 3,
+  "solve_seconds": 30172.532101916,
+  "projection_validation_seconds": 285.502022,
+  "pipeline_seconds": 30482.897746667,
+  "maximum_full_relative": 2.4644485165869945e-14,
+  "full_gamma5_relative_Frobenius": 1.08170893841624e-14,
+  "nominal_dispatched_GPU_operator_GFLOP_per_second_solve_wall": 277.9256161112362,
+  "point_SHA256": "47ea5a8dbe16f7a72ec9f93dd698eaaaf684c26722210ec6d1c391402a166d5d",
+  "standard_perambulator_SHA256": "346a37dbea6ed810e8a209e42fc482c895366024dc12e00d199466731e88ebd8"
+}
+Wrote completed time-3 report.

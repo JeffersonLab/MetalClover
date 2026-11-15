@@ -1,48 +1,82 @@
-# Configuration 1000: running source/sink t=3 perambulator
+# Configuration 1000: standard perambulator at source/sink t=3
 
-**Started automatically on 2026-11-15 at 09:00:39 UTC**, after successful
-time-two solve, projection, full verification and independent reader checks.
-The first source batches have passed both full CPU FP64 residual checks.
+**Completed and verified, 2026-11-15 UTC.** All 20,736 RHS
+passed both original full Chroma CPU FP64 residual checks at 1e-12. One MG
+hierarchy served all 1,296 width-sixteen array calls in one uninterrupted session.
+Native rereading checked every saved point column; standard conversion passed
+all sixteen full record readbacks, direct QDP contractions, full gamma5
+Hermiticity and the independent DataLib key check.
 
-All 5,184 eigenvectors and four source spins (20,736 physical RHS) run
-for common source and sink time three. The detached local queue waits for the
-entire time-two pipeline: solve, standard projection, validation and independent
-DataLib reader. It also requires 17 GiB free before starting. Idle-sleep
-prevention covers the queue and complete pipeline. An interrupted iPhone
-connection does not stop either job.
+| Measurement | Result |
+| --- | ---: |
+| Solve-session wall, including input/setup/full checks/output | 30,172.532 s (8 h 22 min 53 s) |
+| Native qprop calls, including native full FP64 checks | 28,001.372 s |
+| Additional independent full FP64 checks | 1,964.159 s |
+| Point extraction/write/readback | 31.342 s |
+| Maximum full relative residual, either check | 2.464448516586995e-14 |
+| Iterations per physical RHS | 73–82 |
+| Maximum sampled solve process RSS | 5.954 GiB |
+| Nominal dispatched GPU operator work | 8,385,719,574,061,056 FLOP |
+| Nominal GPU operator work / total solve wall | 277.93 GFLOP/s |
+| Standard projection plus complete native validation | 285.502 s |
+| Complex-double GEMM time | 35.642 s |
+| Maximum sampled projection process RSS | 11.368 GiB |
+| Full projected gamma5 relative Frobenius discrepancy | 1.08170893841624e-14 |
+| Maximum absolute gamma5 discrepancy | 1.47832923494512e-15 |
+| Maximum independent QDP contraction error, norm-scaled | 3.46972980107725e-15 |
+| Complete local pipeline, including whole-file hashes and reader | 30,482.898 s (8 h 28 min 3 s) |
 
-The input is
-`/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_3.mod1000`.
-Its header reports 12³, decay_dir=3, t_slice=3 and 5,184 vectors. It is
-215,332,763 bytes, SHA256
-`b2b5b12df39c2952c3473e59ae6fb9e4decfd1b8ea6ef853b00506dbbdd1a79e`.
-Stored ordering and phases are preserved; the FP32 vectors are promoted to FP64.
+Hardware: Apple M1 Max, 24 GPU cores, 32 GiB, one rank. The nominal GPU
+operator numerator includes dispatched inactive/padded lanes and excludes CPU
+FP64 and Krylov-vector arithmetic. Its denominator includes the complete
+solve-session wall; final checksum rereading/hashing and standard projection
+are separate. Process RSS is sampled every five seconds.
 
-Only `Contractions/t_sources` changes to three in `action.xml`. FermionAction
-is identical to the accepted time-zero, one and two runs: mass −0.0743,
-anisotropic stout clover and antiperiodic temporal boundary conditions.
-Caller/device caps remain sixteen, with one reused MG hierarchy for all RHS.
-Both original full Chroma CPU FP64 residual checks must pass at 1e-12 per RHS.
-No numerical code or executable changes for this run.
-
-Output locations:
+The verified standard perambulator is:
 
 ```
-/Users/admin/Downloads/MetalClover-results/cfg1000-t3-unsmeared.npy
 /Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_3.sdb1000
 ```
 
-The standard output contains sixteen 5,184×5,184 complex-FP64 spin matrices.
-Checks include input hashes, direct QDP contractions, complete record readback,
-full gamma5 Hermiticity and independent DataLib key compatibility. The local
-queue status is `cfg1000-t3-unsmeared.queue.json`; pipeline and stage status
-sidecars follow the earlier runs. `staged-run.json` records inputs and settings;
-`frozen-files.json` records source, executable, library and orchestration hashes.
-Exact orchestration scripts are in `production/`.
+It contains sixteen 5,184×5,184 complex-FP64 matrices with source and sink time
+3 in the actual keys and XML, mass label `light`, and the original vector
+ordering and phases. Size is 6,907,158,528 bytes; SHA256:
+`346a37dbea6ed810e8a209e42fc482c895366024dc12e00d199466731e88ebd8`.
 
-With explicit user approval, the intermediate time-zero and time-one
-`cfg1000-t*-unsmeared.npy` files were removed to reclaim 12.8 GiB. Their hashes
-and both retained standard perambulator hashes were checked before removal.
-Every standard perambulator, original gauge/eigenvector input, log, checksum
-and accepted residual record is retained. See `intermediate-cleanup.json`.
-Large output data remain outside Git.
+The accepted intermediate point file is `/Users/admin/Downloads/MetalClover-results/cfg1000-t3-unsmeared.npy`,
+6,879,707,264 bytes, SHA256
+`47ea5a8dbe16f7a72ec9f93dd698eaaaf684c26722210ec6d1c391402a166d5d`.
+It retains the unsmeared solution only at the common sink time after the full
+four-dimensional native qprop and independent original Chroma FP64 checks.
+
+The supplied eigenvectors are `/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_3.mod1000`,
+215,332,763 bytes, SHA256
+`b2b5b12df39c2952c3473e59ae6fb9e4decfd1b8ea6ef853b00506dbbdd1a79e`. Their header reports 12³,
+decay_dir=3, t_slice=3 and 5,184 vectors. Stored FP32 values are promoted to
+FP64; the residual checks refer to those supplied promoted sources.
+
+Only `Contractions/t_sources` changes to 3 in `action.xml`. The mass −0.0743,
+anisotropies, clover coefficients, spatial stout action and antiperiodic
+temporal boundary conditions are identical to the earlier accepted runs.
+No numerical source, executable, library or solver setting changed.
+
+`production-validation.json` checks every source-spin collection, all native
+array calls, one hierarchy/session, both residual bounds, complete file checks
+and frozen source/executable/library hashes. `point.*` and `peram.*` contain
+the full journals, metadata, logs, checksums and resource samples. The queue
+and pipeline scripts run locally with sleep prevention, independently of the
+user's iPhone connection. Large output data remain outside Git.
+
+Storage: with explicit user approval, the earlier time-zero and time-one
+unsmeared `.npy` intermediates were removed after checking their hashes and
+rechecking the retained standard perambulator hashes. Every standard file,
+original gauge/eigenvector input, log and residual record is retained; see
+[the cleanup record](../perambulator-t3-5184/intermediate-cleanup.json).
+
+
+Storage update for the time-four repeat: the accepted time-two and time-three
+unsmeared `.npy` intermediates were retired after all checks and evidence capture,
+rechecking both point and retained standard SHA256 hashes, and confirming the
+intermediates were not open. Every standard perambulator, original input, log
+and accepted residual record is retained. See
+[the time-four cleanup record](../perambulator-t4-5184/intermediate-cleanup.json).

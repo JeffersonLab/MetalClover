@@ -1,0 +1,23 @@
+{
+  "status": "running",
+  "source_time": 4,
+  "sink_time": 4,
+  "physical_rhs": 20736,
+  "queue_PID": 47267,
+  "dependency_pipeline": "/Users/admin/Downloads/MetalClover-results/cfg1000-t3-unsmeared.pipeline.json",
+  "pipeline_script": "/private/tmp/chroma-time4-production/full_run.py",
+  "queued_UTC": "2026-11-15T16:12:08.830000+00:00",
+  "continues_without_iPhone_connection": true,
+  "minimum_free_disk_GiB_before_start": 17.0,
+  "awake_keeper_PID": 47268,
+  "dependency_status": "complete",
+  "dependency_stage": "complete",
+  "free_disk_GiB": 21.950252532958984,
+  "last_checked_UTC": "2026-11-15T17:29:10.537133+00:00",
+  "waiting_for": null,
+  "dependency_evidence_captured": true,
+  "storage_record": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t4-5184/intermediate-cleanup.json",
+  "dependency_standard_perambulator_SHA256": "346a37dbea6ed810e8a209e42fc482c895366024dc12e00d199466731e88ebd8",
+  "started_UTC": "2026-11-15T17:29:49.822208+00:00",
+  "pipeline_PID": 52690
+}

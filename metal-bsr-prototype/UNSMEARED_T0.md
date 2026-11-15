@@ -149,14 +149,23 @@ maximum full CPU FP64 residual 2.44056e-14, solve wall
 `.prop.n5184.light.t0_2.sdb1000`; see
 [the time-two record](results/perambulator-t2-5184/README.md).
 
-Time three started automatically after successful time-two completion; see
-[the time-three run record](results/perambulator-t3-5184/README.md). With explicit
+The complete time-three repeat passed all 20,736 RHS with one hierarchy:
+maximum full CPU FP64 residual 2.46445e-14, solve wall
+30,172.532 s, and full projected gamma5 relative discrepancy
+1.08171e-14. Its verified standard filename ends in
+`.prop.n5184.light.t0_3.sdb1000`; see
+[the time-three record](results/perambulator-t3-5184/README.md). With explicit
 user approval, the time-zero and time-one unsmeared `.npy` intermediate payloads
 were retired after final standard-file validation and checksum checks to make
 space. Their standard perambulators and all original inputs and logs remain.
 
-Time four is queued after complete time-three verification, with the same
+Time four started automatically after complete time-three verification, with the same
 20,736-RHS procedure and full CPU FP64 checks. The local queue also saves all
 time-three evidence before reclaiming validated point intermediates when
 needed for space, retaining every standard perambulator and original input.
 See [the time-four record](results/perambulator-t4-5184/README.md).
+
+The accepted time-two/time-three unsmeared `.npy` intermediates were subsequently
+retired after complete evidence capture and point/standard checksum rechecks to
+make room for time four. Every standard perambulator and original input remains;
+see [the cleanup record](results/perambulator-t4-5184/intermediate-cleanup.json).

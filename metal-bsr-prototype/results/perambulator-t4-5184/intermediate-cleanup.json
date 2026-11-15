@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-11-15T17:29:26.283400+00:00",
+  "authorization": "User requested time four, same as before; retain all standard perambulators and reclaim only validated point intermediates as in the explicitly approved time-three procedure",
+  "minimum_free_disk_GiB_before_start": 17.0,
+  "free_disk_GiB_before": 9.15011215209961,
+  "all_original_inputs_logs_checksums_and_standard_perambulators_retained": true,
+  "removed_intermediate_files": [
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/cfg1000-t2-unsmeared.npy",
+      "bytes": 6879707264,
+      "accepted_SHA256": "7196467bfbd0da3399de4ca30f07f13ed7938870ac226d93dc1a28deb47449e3",
+      "current_SHA256_matches_accepted_result": true
+    },
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/cfg1000-t3-unsmeared.npy",
+      "bytes": 6879707264,
+      "accepted_SHA256": "47ea5a8dbe16f7a72ec9f93dd698eaaaf684c26722210ec6d1c391402a166d5d",
+      "current_SHA256_matches_accepted_result": true
+    }
+  ],
+  "retained_standard_perambulators": [
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_2.sdb1000",
+      "bytes": 6907158528,
+      "accepted_SHA256": "94d47408815e44c6fe90d3aa21d38f9af956e5c0367ddcca3f92dbf789d2e4c9",
+      "current_SHA256_matches_accepted_result": true
+    },
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_3.sdb1000",
+      "bytes": 6907158528,
+      "accepted_SHA256": "346a37dbea6ed810e8a209e42fc482c895366024dc12e00d199466731e88ebd8",
+      "current_SHA256_matches_accepted_result": true
+    }
+  ],
+  "intermediate_files_not_open": true,
+  "status": "reclaimed_verified_intermediates",
+  "free_disk_GiB_after": 21.950271606445312
+}

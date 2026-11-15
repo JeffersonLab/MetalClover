@@ -51,5 +51,8 @@
   "standard_perambulator_SHA256": "94d47408815e44c6fe90d3aa21d38f9af956e5c0367ddcca3f92dbf789d2e4c9",
   "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_2.sdb1000",
   "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1000-t2-unsmeared.npy",
-  "large_payloads_committed_to_git": false
+  "large_payloads_committed_to_git": false,
+  "point_intermediate_retired_after_full_validation": true,
+  "retirement_record": "../perambulator-t4-5184/intermediate-cleanup.json",
+  "standard_perambulator_retained_SHA256_rechecked": true
 }

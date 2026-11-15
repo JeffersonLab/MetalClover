@@ -1,0 +1,20 @@
+{
+  "status": "pass_for_queue_handoff",
+  "UTC": "2026-11-15T17:31:28.203813+00:00",
+  "time_three_complete_and_all_checks_passed": true,
+  "time_three_standard_perambulator_SHA256": "346a37dbea6ed810e8a209e42fc482c895366024dc12e00d199466731e88ebd8",
+  "time_four_status": "running, not complete",
+  "source_time": 4,
+  "sink_time": 4,
+  "physical_rhs_requested": 20736,
+  "RHS_accepted_so_far": 32,
+  "maximum_full_CPU_FP64_relative_so_far": 1.1690511546915858e-14,
+  "one_near_null_SVD_hierarchy_setup_observed": true,
+  "RHS_per_array_call": 16,
+  "pipeline_PID": 52690,
+  "queue_PID": 47267,
+  "awake_keeper_PID": 47268,
+  "continues_without_iPhone_connection": true,
+  "intermediate_cleanup_record": "intermediate-cleanup.json",
+  "all_standard_perambulators_retained": true
+}
