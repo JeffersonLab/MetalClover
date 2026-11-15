@@ -1,0 +1,21 @@
+{
+  "status": "queued",
+  "source_time": 6,
+  "sink_time": 6,
+  "physical_rhs": 20736,
+  "queue_PID": 39341,
+  "queued_UTC": "2026-11-15T22:52:37.434485+00:00",
+  "dependency_pipeline": "/Users/admin/Downloads/MetalClover-results/cfg1000-t5-unsmeared.pipeline.json",
+  "pipeline_script": "/private/tmp/chroma-time6-production/full_run.py",
+  "continues_without_iPhone_connection": true,
+  "minimum_free_disk_GiB_before_start": 18.0,
+  "finalize_own_evidence_before_success": true,
+  "awake_keeper_PID": 39351,
+  "dependency_status": "not_started",
+  "dependency_stage": "not_started",
+  "dependency_queue_status": "queued",
+  "batch_storage_status": "pass",
+  "waiting_for": "time-5 complete validation and finalization",
+  "last_checked_UTC": "2026-11-15T22:52:37.445471+00:00",
+  "free_disk_GiB": 55.02778625488281
+}

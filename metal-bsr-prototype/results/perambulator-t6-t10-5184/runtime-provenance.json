@@ -1,0 +1,140 @@
+{
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared_time": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+    "SHA256": "9a85259957dfafd08e4cedd74805289a71f0597472a07809dba64d4633223527",
+    "bytes": 63791440,
+    "role": "unchanged native executable"
+  },
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/project_perambulator_time": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/libexec/project_perambulator_time",
+    "SHA256": "26d886da35ca6f6069a1cbd446326a5eb603fd7d58df89a146791e2d86684bd6",
+    "bytes": 676312,
+    "role": "unchanged native executable"
+  },
+  "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/reader_check_time": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/libexec/reader_check_time",
+    "SHA256": "d422bd573d3fbe21c1216c5b4378e0e2918918cc6fe758f7f6e8beafb73623ed",
+    "bytes": 971952,
+    "role": "unchanged native executable"
+  },
+  "/private/tmp/metalclover-install/lib/libmetalclover.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libmetalclover.dylib",
+    "SHA256": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+    "bytes": 479976,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/open-mpi/lib/libmpi.40.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libmpi.40.dylib",
+    "SHA256": "8a30d56db9bfba9ac6dbfaef695b187e2521bb771cff3a2dc940eeb0242483b1",
+    "bytes": 2501408,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/pmix/lib/libpmix.2.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libpmix.2.dylib",
+    "SHA256": "698291db9b43a527a66964a10db63abd225bebfdf760a24b8e4afb271d883668",
+    "bytes": 1677904,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/hwloc/lib/libhwloc.15.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libhwloc.15.dylib",
+    "SHA256": "d95b6039745d46bd7e84ca562ed65f4baf142f646889254c044c019ddb9f1116",
+    "bytes": 332016,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/libevent/lib/libevent_pthreads-2.1.7.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libevent_pthreads-2.1.7.dylib",
+    "SHA256": "5baedef2e7638186b738749faa4621e3f9956bd715ceb1524cce4c057b282c8e",
+    "bytes": 69952,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/libevent/lib/libevent_core-2.1.7.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libevent_core-2.1.7.dylib",
+    "SHA256": "e96729da954afd0397c59b95112445a2d6602f2a8b76648ac5d6e1c2e4f18303",
+    "bytes": 203840,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/Cellar/open-mpi/5.0.7/lib/libopen-pal.80.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libopen-pal.80.dylib",
+    "SHA256": "dd9a8840529401d46bcef386dc90102f4a905b6e563a8fb11213535fee5f9df1",
+    "bytes": 710976,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/gmp/lib/libgmp.10.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libgmp.10.dylib",
+    "SHA256": "bc6145edbeca608b4fecd4440dbbd7b27cacd55cbfd2b552b8bc333febe43b35",
+    "bytes": 452832,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/gmp/lib/libgmpxx.4.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libgmpxx.4.dylib",
+    "SHA256": "85f9c1c2df8b07456b0ca126cea95a7db478ba51e5d49855a1c8a991ab8ed7c9",
+    "bytes": 81008,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/icu4c@76/lib/libicuuc.76.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libicuuc.76.dylib",
+    "SHA256": "a5f654df661cfca40d5a6e6dfea666db857c8f7b845761da692ad17a373e4efc",
+    "bytes": 1838240,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/libxml2/lib/libxml2.2.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libxml2.2.dylib",
+    "SHA256": "6f9dc3659616bb5c850be820111f93ef2f47418a48a29a6597feb0ae001f9c9d",
+    "bytes": 1116928,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/libomp/lib/libomp.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libomp.dylib",
+    "SHA256": "07df38a5b4ffd405e614516cafa11abe20018e60c71167be0c2d5cd9e39718b6",
+    "bytes": 725328,
+    "role": "unchanged native shared library"
+  },
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+    "SHA256": "98c1743bda4b1f3e9f9f6f6ed9de2bda33be1365c2fbb0ad08cb3f946c358f1b",
+    "bytes": 12488,
+    "role": "unchanged controller"
+  },
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_projected.py": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py",
+    "SHA256": "5376edf4a27df11c53fd80aeedd59fe462a20bba6eb3afd8a971a14c6359b1cb",
+    "bytes": 8341,
+    "role": "unchanged controller"
+  },
+  "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_unsmeared.cc": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/sources/t_metal_clover_unsmeared.cc",
+    "SHA256": "010d26b6918ef4a55aec3ec935194a6a80266cd686bf2ea93b3c345358f346b9",
+    "bytes": 25082,
+    "role": "validated numerical source snapshot"
+  },
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/project_perambulator.cc": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/sources/project_perambulator.cc",
+    "SHA256": "140432b324fa7b2c5049f9f2d582443b2fd6e68e1b5f6e6a8cbb3c6a3997dc12",
+    "bytes": 17215,
+    "role": "validated numerical source snapshot"
+  },
+  "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/perambulator_reader_check.cc": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/sources/perambulator_reader_check.cc",
+    "SHA256": "e7ff17a601346479d4071f063ffcb1bd1d8356e4f90c75bdd3b5b56462005b5e",
+    "bytes": 2085,
+    "role": "validated numerical source snapshot"
+  },
+  "/opt/homebrew/opt/icu4c@76/lib/libicudata.76.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libicudata.76.dylib",
+    "SHA256": "77d2b0e3fcb46ec46f095b626973720491abb8de1d3a3a6e190c37d77fe77372",
+    "bytes": 32134224,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/Cellar/gmp/6.3.0/lib/libgmp.10.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libgmp.10.dylib",
+    "SHA256": "bc6145edbeca608b4fecd4440dbbd7b27cacd55cbfd2b552b8bc333febe43b35",
+    "bytes": 452832,
+    "role": "unchanged native shared library"
+  },
+  "/opt/homebrew/opt/open-mpi/lib/libopen-pal.80.dylib": {
+    "snapshot": "/private/tmp/chroma-times6-10-production/runtime/lib/libopen-pal.80.dylib",
+    "SHA256": "dd9a8840529401d46bcef386dc90102f4a905b6e563a8fb11213535fee5f9df1",
+    "bytes": 710976,
+    "role": "unchanged native shared library"
+  }
+}

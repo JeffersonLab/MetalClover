@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-15T22:42:37.469550+00:00",
+  "tests": 8,
+  "scope": "synthetic unit fixtures for dependency/storage gates and retirement guards; no numerical or GPU test results",
+  "driver_SHA256": "bac2e404219b7600870d8be1e726734afe8dbfbc411c0adc9f221da355574f4c"
+}

@@ -1,0 +1,937 @@
+[
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/const_hmc",
+    "bytes": 113054168
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/const_hmc",
+    "bytes": 113054168
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/smd",
+    "bytes": 113051248
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/smd",
+    "bytes": 113051248
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/hmc",
+    "bytes": 113051104
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/hmc",
+    "bytes": 113051104
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/tests/t_leapfrog",
+    "bytes": 112926632
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/tests/t_leapfrog",
+    "bytes": 112926632
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/purgaug",
+    "bytes": 111860392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/purgaug",
+    "bytes": 111860392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/spectrum_s",
+    "bytes": 111807480
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/spectrum_s",
+    "bytes": 111807480
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/tests/t_minvert",
+    "bytes": 111476808
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/tests/t_minvert",
+    "bytes": 111476808
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/main/chroma",
+    "bytes": 111361256
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/main/chroma",
+    "bytes": 111361256
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 111344192
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 111344192
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/smd",
+    "bytes": 104348976
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/smd",
+    "bytes": 104348976
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/const_hmc",
+    "bytes": 104334920
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/const_hmc",
+    "bytes": 104334920
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/hmc",
+    "bytes": 104331504
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/hmc",
+    "bytes": 104331504
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/tests/t_leapfrog",
+    "bytes": 104206680
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/t_leapfrog",
+    "bytes": 104206680
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/purgaug",
+    "bytes": 102891080
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/purgaug",
+    "bytes": 102891080
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/spectrum_s",
+    "bytes": 102821384
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/spectrum_s",
+    "bytes": 102821384
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/tests/t_minvert",
+    "bytes": 102453480
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/t_minvert",
+    "bytes": 102453480
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/main/chroma",
+    "bytes": 102345400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/chroma",
+    "bytes": 102345400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/build/chroma-v3-compatible/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 102343040
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/mpi-devel-build-20261111-001/install/chroma-v3-compatible/bin/t_meas_wilson_flow",
+    "bytes": 102343040
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/const_hmc",
+    "bytes": 99997848
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/const_hmc",
+    "bytes": 99997848
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/smd",
+    "bytes": 99994912
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/smd",
+    "bytes": 99994912
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/hmc",
+    "bytes": 99978272
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/hmc",
+    "bytes": 99978272
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99894536
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/const_hmc",
+    "bytes": 99894536
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99894536
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/const_hmc",
+    "bytes": 99894536
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99892328
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/const_hmc",
+    "bytes": 99892328
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/const_hmc",
+    "bytes": 99892328
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99891616
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/smd",
+    "bytes": 99891616
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99891616
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/smd",
+    "bytes": 99891616
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99891472
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/hmc",
+    "bytes": 99891472
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99891472
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/hmc",
+    "bytes": 99891472
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99889392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/smd",
+    "bytes": 99889392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/smd",
+    "bytes": 99889392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99889264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/hmc",
+    "bytes": 99889264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/hmc",
+    "bytes": 99889264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/tests/t_leapfrog",
+    "bytes": 99853800
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99767000
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99767000
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99767000
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99767000
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99764792
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99764792
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/t_leapfrog",
+    "bytes": 99764792
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/const_hmc",
+    "bytes": 99335816
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/smd",
+    "bytes": 99332928
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/hmc",
+    "bytes": 99332800
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/const_hmc",
+    "bytes": 99264312
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/smd",
+    "bytes": 99261392
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/hmc",
+    "bytes": 99261264
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/t_leapfrog",
+    "bytes": 99208280
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/tests/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/t_leapfrog",
+    "bytes": 99136776
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/purgaug",
+    "bytes": 98772184
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/purgaug",
+    "bytes": 98772184
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/spectrum_s",
+    "bytes": 98716936
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/spectrum_s",
+    "bytes": 98716936
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98685400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/purgaug",
+    "bytes": 98685400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98685400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/purgaug",
+    "bytes": 98685400
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98683192
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/purgaug",
+    "bytes": 98683192
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/purgaug",
+    "bytes": 98683192
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 98630136
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/spectrum_s",
+    "bytes": 98630136
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 98630136
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/spectrum_s",
+    "bytes": 98630136
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 98627944
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/spectrum_s",
+    "bytes": 98627944
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/spectrum_s",
+    "bytes": 98627944
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/tests/t_minvert",
+    "bytes": 98372344
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 98285560
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/t_minvert",
+    "bytes": 98285560
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 98285560
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/t_minvert",
+    "bytes": 98285560
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 98283336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/t_minvert",
+    "bytes": 98283336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/t_minvert",
+    "bytes": 98283336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/main/chroma",
+    "bytes": 98272152
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/install/chroma/bin/chroma",
+    "bytes": 98272152
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/no1pt-clean-20261103-002/builds/chroma-mpi/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 98271632
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 98185368
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/chroma",
+    "bytes": 98185368
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 98185368
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/chroma",
+    "bytes": 98185368
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 98183144
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/chroma",
+    "bytes": 98183144
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/chroma",
+    "bytes": 98183144
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 98168336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/arrays-owned-20261108-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 98168336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 98168336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/standalone-clean-20261107-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 98168336
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 98166112
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 98166112
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/tools-filedb-20261109-001/install/chroma-initial/bin/t_meas_wilson_flow",
+    "bytes": 98166112
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/purgaug",
+    "bytes": 98126680
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/spectrum_s",
+    "bytes": 98071464
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/purgaug",
+    "bytes": 98055176
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/spectrum_s",
+    "bytes": 97999960
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/t_minvert",
+    "bytes": 97726888
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/chroma",
+    "bytes": 97610152
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/t_meas_wilson_flow",
+    "bytes": 97609616
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/chroma",
+    "bytes": 97555160
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/mpi-smoke/corr-registration",
+    "bytes": 82107680
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/redstar_corr_graph",
+    "bytes": 37249712
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/extract_ops_util",
+    "bytes": 30018256
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/generate_redstar_2pt",
+    "bytes": 29613672
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/generate_nonint_spectrum_3ops",
+    "bytes": 29364448
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/generate_nonint_spectrum",
+    "bytes": 29329736
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/redstar_npt",
+    "bytes": 27057544
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/dbutil",
+    "bytes": 17961688
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/validated-programs/check_onept_graph_reuse",
+    "bytes": 14655480
+  },
+  {
+    "priority": 1,
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/datalib-graph-20261106-001/reference-writer-v3",
+    "bytes": 11410960
+  }
+]

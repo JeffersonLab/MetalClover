@@ -1,0 +1,62 @@
+{
+  "status": "queued",
+  "UTC": "2026-11-15T22:52:37.336279+00:00",
+  "source_sink_times": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "physical_RHS_per_time": 20736,
+  "additional_physical_RHS_total": 103680,
+  "detached_local_workers": true,
+  "all_standard_perambulators_retained": true,
+  "jobs": [
+    {
+      "source_time": 6,
+      "sink_time": 6,
+      "queue_PID": 39341,
+      "log": "/private/tmp/chroma-time6-production/queue-controller.log",
+      "awake_keeper_PID": 39351,
+      "dependency_time": 5,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 7,
+      "sink_time": 7,
+      "queue_PID": 39342,
+      "log": "/private/tmp/chroma-time7-production/queue-controller.log",
+      "awake_keeper_PID": 39353,
+      "dependency_time": 6,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 8,
+      "sink_time": 8,
+      "queue_PID": 39343,
+      "log": "/private/tmp/chroma-time8-production/queue-controller.log",
+      "awake_keeper_PID": 39354,
+      "dependency_time": 7,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 9,
+      "sink_time": 9,
+      "queue_PID": 39344,
+      "log": "/private/tmp/chroma-time9-production/queue-controller.log",
+      "awake_keeper_PID": 39357,
+      "dependency_time": 8,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 10,
+      "sink_time": 10,
+      "queue_PID": 39345,
+      "log": "/private/tmp/chroma-time10-production/queue-controller.log",
+      "awake_keeper_PID": 39358,
+      "dependency_time": 9,
+      "verified_status": "queued"
+    }
+  ]
+}

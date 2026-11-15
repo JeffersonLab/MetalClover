@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-15T22:52:28.322030+00:00",
+  "actual_free_disk_GiB": 55.03467559814453,
+  "source_files_numerical_datasets_and_perambulators_excluded": true,
+  "audit_scope": "Reconcile every journal entry, saved full SHA256 results, current sizes/compression flags and absence of replacement leftovers; full hashes were checked during each atomic replacement",
+  "audits": [
+    {
+      "directory": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t6-t10-5184",
+      "files_compressed": 1608,
+      "logical_bytes_preserved": 30728297049,
+      "allocated_bytes_saved_per_file": 26643357696,
+      "all_committed_full_final_path_SHA256_checks_passed": true,
+      "no_temporary_or_backup_files_left": true
+    },
+    {
+      "directory": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t6-t10-5184/binary-preservation",
+      "files_compressed": 158,
+      "logical_bytes_preserved": 15954381568,
+      "allocated_bytes_saved_per_file": 11060932608,
+      "all_committed_full_final_path_SHA256_checks_passed": true,
+      "no_temporary_or_backup_files_left": true
+    }
+  ]
+}

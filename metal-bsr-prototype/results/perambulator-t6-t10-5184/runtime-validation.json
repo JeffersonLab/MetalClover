@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "t_metal_clover_unsmeared_time",
+      "exit_code": 2,
+      "private_frozen_Metal_library_loaded": true,
+      "usage_only_no_operator_or_GPU_work": true
+    },
+    {
+      "name": "project_perambulator_time",
+      "exit_code": 2,
+      "private_frozen_Metal_library_loaded": true,
+      "usage_only_no_operator_or_GPU_work": true
+    },
+    {
+      "source_sink_times": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "all_native_argument_lists_verified": true,
+      "all_frozen_file_hashes_verified": true,
+      "physical_RHS_per_run": 20736,
+      "caller_device_caps": 16
+    }
+  ]
+}

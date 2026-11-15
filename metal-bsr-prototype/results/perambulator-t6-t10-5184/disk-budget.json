@@ -1,0 +1,132 @@
+{
+  "status": "pass",
+  "forecast_all_runs_fit": true,
+  "all_standard_perambulators_retained": true,
+  "minimum_forecast_free_GiB": 6.9965819120407104,
+  "minimum_new_job_start_free_GiB": 20.12353515625,
+  "minimum_before_projection_GiB": 13.46630847454071,
+  "native_projection_required_free_GiB": 11.04794921875,
+  "final_forecast_free_GiB": 13.40380859375,
+  "standard_output_budget_bytes_each": 6946816000,
+  "per_job_log_and_evidence_reserve_bytes": 268435456,
+  "additional_global_reserve_bytes": 1073741824,
+  "events": [
+    {
+      "event": "global 1 GiB reserve",
+      "free_GiB": 54.034664154052734
+    },
+    {
+      "event": "time-4 start",
+      "free_GiB": 54.034664154052734
+    },
+    {
+      "event": "time-4 before standard projection",
+      "free_GiB": 53.784664154052734
+    },
+    {
+      "event": "time-4 peak output allocation",
+      "free_GiB": 47.314937591552734
+    },
+    {
+      "event": "time-5 start",
+      "free_GiB": 47.314937591552734
+    },
+    {
+      "event": "time-5 before standard projection",
+      "free_GiB": 40.657710909843445
+    },
+    {
+      "event": "time-5 peak output allocation",
+      "free_GiB": 34.187984347343445
+    },
+    {
+      "event": "retire accepted points 4/5 after full evidence",
+      "free_GiB": 47.00244140625
+    },
+    {
+      "event": "time-6 start",
+      "free_GiB": 47.00244140625
+    },
+    {
+      "event": "time-6 before standard projection",
+      "free_GiB": 40.34521472454071
+    },
+    {
+      "event": "time-6 peak output allocation",
+      "free_GiB": 33.87548816204071
+    },
+    {
+      "event": "time-6 accepted point retired",
+      "free_GiB": 40.28271484375
+    },
+    {
+      "event": "time-7 start",
+      "free_GiB": 40.28271484375
+    },
+    {
+      "event": "time-7 before standard projection",
+      "free_GiB": 33.62548816204071
+    },
+    {
+      "event": "time-7 peak output allocation",
+      "free_GiB": 27.15576159954071
+    },
+    {
+      "event": "time-7 accepted point retired",
+      "free_GiB": 33.56298828125
+    },
+    {
+      "event": "time-8 start",
+      "free_GiB": 33.56298828125
+    },
+    {
+      "event": "time-8 before standard projection",
+      "free_GiB": 26.90576159954071
+    },
+    {
+      "event": "time-8 peak output allocation",
+      "free_GiB": 20.43603503704071
+    },
+    {
+      "event": "time-8 accepted point retired",
+      "free_GiB": 26.84326171875
+    },
+    {
+      "event": "time-9 start",
+      "free_GiB": 26.84326171875
+    },
+    {
+      "event": "time-9 before standard projection",
+      "free_GiB": 20.18603503704071
+    },
+    {
+      "event": "time-9 peak output allocation",
+      "free_GiB": 13.71630847454071
+    },
+    {
+      "event": "time-9 accepted point retired",
+      "free_GiB": 20.12353515625
+    },
+    {
+      "event": "time-10 start",
+      "free_GiB": 20.12353515625
+    },
+    {
+      "event": "time-10 before standard projection",
+      "free_GiB": 13.46630847454071
+    },
+    {
+      "event": "time-10 peak output allocation",
+      "free_GiB": 6.9965819120407104
+    },
+    {
+      "event": "time-10 accepted point retired",
+      "free_GiB": 13.40380859375
+    }
+  ],
+  "UTC": "2026-11-15T22:52:28.502957+00:00",
+  "actual_free_disk_GiB": 55.034664154052734,
+  "initial_state": "time four solving with its full point file allocated; time five waiting",
+  "storage_preservation_status": "complete",
+  "assumes_no_unbudgeted_large_disk_writes": true
+}

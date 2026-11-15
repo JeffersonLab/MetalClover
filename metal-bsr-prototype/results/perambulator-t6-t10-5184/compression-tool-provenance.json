@@ -1,0 +1,8 @@
+{
+  "bottle": "/Users/admin/Library/Caches/Homebrew/downloads/4a6b5f05c94048f299feb2e657286bfa40f6c3ce7e4221ab0ed7b97d5ad38694--afsctool--1.7.3.arm64_tahoe.bottle.1.tar.gz",
+  "bottle_SHA256": "551e9f8910b53ce228f1f710e100c54266cbed7ffa3a087ecec516c71bba5dbb",
+  "temporary_binary": "/private/tmp/metalclover-storage-tools/afsctool",
+  "binary_SHA256": "fceb1affaa1e642ce7f305b952cce5e017b92f6b60fffe896a98b265b98a83ba",
+  "installed_globally": false,
+  "source": "Homebrew verified afsctool 1.7.3 bottle"
+}

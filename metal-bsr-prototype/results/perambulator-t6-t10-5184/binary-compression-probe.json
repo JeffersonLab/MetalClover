@@ -1,0 +1,14 @@
+{
+  "UTC": "2026-11-15T22:47:32.112909+00:00",
+  "source": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/purgaug",
+  "exit": 0,
+  "stdout": "/private/tmp/chroma-times6-10-production/binary-compression-probe:\nCompression type: ZLIB in resource fork (4)\nFile content type: public.unix-executable\nFile size (uncompressed; reported size by Mac OS 10.6+ Finder): 98055176 bytes / 98.1 MB (megabytes, base-10)\nFile size (compressed): 30134272 bytes / 28.7 MiB\nCompression savings: 69.3%\nNumber of extended attributes: 1\nTotal size of extended attribute data: 11 bytes\nUncompressed file size reported in compressed header: 98055176 bytes\n",
+  "stderr": "",
+  "flags": 32,
+  "bytes": 98055176,
+  "allocated": 30134272,
+  "SHA256": "52f157eb159e879427cd529aa4c50ccddf2b7218f947630750065d7c3360fa0c",
+  "full_SHA256_unchanged": true,
+  "all_originals_unchanged": true,
+  "larger_individual_chunks_allowed_but_minimum_total_savings_10_percent": true
+}

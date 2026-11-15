@@ -1,0 +1,76 @@
+{
+  "UTC": "2026-11-15T22:53:02.755236+00:00",
+  "free_disk_GiB": 55.033565521240234,
+  "jobs": [
+    {
+      "source_sink_time": 4,
+      "queue_status": "running",
+      "stage": "solve",
+      "queue_PID": 47267,
+      "pipeline_PID": 52690,
+      "completed_rhs": 13248,
+      "total_rhs": 20736,
+      "waiting_for": null
+    },
+    {
+      "source_sink_time": 5,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 61688,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-four pipeline completion"
+    },
+    {
+      "source_sink_time": 6,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39341,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-5 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 7,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39342,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-6 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 8,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39343,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-7 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 9,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39344,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-8 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 10,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39345,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-9 complete validation and finalization"
+    }
+  ]
+}

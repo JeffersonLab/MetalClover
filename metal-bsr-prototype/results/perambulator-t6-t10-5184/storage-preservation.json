@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "started_UTC": "2026-11-15T22:20:52.817520+00:00",
+  "method": "APFS transparent compression on a temporary clone; complete SHA256 before/after; atomic replacement with original retained until final readback passes",
+  "all_original_file_paths_and_byte_contents_preserved": true,
+  "numerical_datasets_and_source_files_excluded": true,
+  "files_compressed": 1608,
+  "files_skipped": 187,
+  "logical_bytes_preserved": 30728297049,
+  "allocated_bytes_saved_per_file": 26643357696,
+  "target_free_GiB": 55.0,
+  "free_disk_GiB_before": 20.73360824584961,
+  "candidate_count": 15799,
+  "free_disk_GiB": 55.03400421142578,
+  "original_bytes_preserved_at_restart": true,
+  "restart_UTC": "2026-11-15T22:41:27.232877+00:00",
+  "resumed_UTC": "2026-11-15T22:41:55.203769+00:00",
+  "remaining_candidates_at_resume": 15754,
+  "DNS_lookups_disabled": true,
+  "finished_UTC": "2026-11-15T22:52:14.781702+00:00"
+}

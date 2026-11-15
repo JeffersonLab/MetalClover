@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "started_UTC": "2026-11-15T22:48:14.135228+00:00",
+  "method": "APFS transparent compression on a temporary clone; complete SHA256 before/after; atomic replacement with original retained until final readback passes",
+  "all_original_file_paths_and_byte_contents_preserved": true,
+  "numerical_datasets_and_source_files_excluded": true,
+  "files_compressed": 158,
+  "files_skipped": 0,
+  "logical_bytes_preserved": 15954381568,
+  "allocated_bytes_saved_per_file": 11060932608,
+  "target_free_GiB": 55.0,
+  "free_disk_GiB_before": 44.391990661621094,
+  "candidate_count": 187,
+  "free_disk_GiB": 55.033714294433594,
+  "finished_UTC": "2026-11-15T22:52:14.594046+00:00"
+}

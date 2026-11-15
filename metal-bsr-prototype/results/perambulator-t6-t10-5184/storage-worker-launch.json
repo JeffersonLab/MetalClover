@@ -1,0 +1,9 @@
+{
+  "PID": 92483,
+  "awake_keeper_PID": 92484,
+  "UTC": "2026-11-15T22:41:49.409331+00:00",
+  "detached": true,
+  "script_SHA256": "f115bd877adb690b3991c988efd4bfbf3fff3482d1f1a83e8c876bf722318fbd",
+  "log": "/private/tmp/chroma-times6-10-production/storage-controller.log",
+  "resumes_prior_integrity_journal": true
+}

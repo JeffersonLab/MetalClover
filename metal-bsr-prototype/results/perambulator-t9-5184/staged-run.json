@@ -1,0 +1,41 @@
+{
+  "status": "staged",
+  "source_time": 9,
+  "sink_time": 9,
+  "physical_rhs": 20736,
+  "eigenvectors": 5184,
+  "caller_RHS": 16,
+  "GPU_RHS": 16,
+  "method": "MetalMGClover",
+  "one_reused_hierarchy_per_run": true,
+  "full_Chroma_CPU_FP64_relative_tolerance": 1e-12,
+  "dependency": "t=8 full pipeline and finalization",
+  "gauge_file": "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+  "gauge_SHA256": "0d1191873629673fb37b55e75deb291b7c0a8cc66073d2d1ec61dec4275a7afe",
+  "eigenvector_file": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_9.mod1000",
+  "eigenvector_bytes": 215332765,
+  "eigenvector_SHA256": "5d2e7d8b02a510cb9efb83371d3a33101a63a3c1962083c600f1b9d957df6e95",
+  "eigenvector_header": {
+    "id": "eigenVecsTimeSlice",
+    "lattSize": [
+      12,
+      12,
+      12
+    ],
+    "decay_dir": 3,
+    "t_slice": 9,
+    "num_vecs": 5184
+  },
+  "action_XML_SHA256": "4d799fc5eb75997111938bfa870655708c840cb37896acf2a19f2e027c4a12fc",
+  "action_change": "only Contractions/t_sources=9; FermionAction unchanged",
+  "frozen_executables_and_library_verified": true,
+  "point_prefix": "/Users/admin/Downloads/MetalClover-results/cfg1000-t9-unsmeared",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_9.sdb1000",
+  "staged_UTC": "2026-11-15T22:28:19.353833+00:00",
+  "free_disk_GiB_at_staging": 30.959854125976562,
+  "minimum_free_disk_GiB_before_start": 18.0,
+  "intermediate_retention": "capture all full checks, keep every standard perambulator, retire only accepted point intermediates with point/standard SHA256 rechecks",
+  "runtime_action_XML": "/private/tmp/chroma-time9-production/action.xml",
+  "isolated_runtime": "/private/tmp/chroma-times6-10-production/runtime",
+  "batch_storage_gate": "/private/tmp/chroma-times6-10-production/batch-storage-ready.json"
+}

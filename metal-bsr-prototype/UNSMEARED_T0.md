@@ -176,3 +176,11 @@ full Chroma CPU FP64 residual checks at 1e-12. The detached local queue saves
 accepted time-four evidence before verified intermediate retirement when needed
 for space; all standard perambulators and original inputs remain. See
 [the time-five record](results/perambulator-t5-5184/README.md).
+
+
+Source/sink times six through ten are queued sequentially after time five,
+with 20,736 RHS at each time, the unchanged action and both full Chroma CPU
+FP64 checks at 1e-12. Each job uses one reused hierarchy, saves complete evidence
+and retains its standard perambulator. The detached workers continue without
+a phone/chat connection. See [the five-job queue record](results/perambulator-t6-t10-5184/README.md)
+for the frozen private runtime, full-sequence storage budget and checks.
