@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "source_time": 2,
+  "sink_time": 2,
+  "physical_rhs": 20736,
+  "source_vectors": 5184,
+  "spin_records": 16,
+  "native_array_calls": 1296,
+  "RHS_per_call": 16,
+  "hierarchies": 1,
+  "sessions": 1,
+  "both_original_full_CPU_FP64_checks_tolerance": 1e-12,
+  "maximum_full_relative": 2.4405605444115193e-14,
+  "all_point_column_checksums_verified": true,
+  "all_standard_record_values_readback_bitwise": true,
+  "full_gamma5_relative_Frobenius": 1.08481565710146e-14,
+  "direct_QDP_contraction_scaled_error": 4.48638185413861e-15,
+  "independent_DataLib_full_file_key_check": "pass",
+  "unchanged_frozen_source_executable_library_hashes": true,
+  "per_source_spin": {
+    "0": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3132218360543014e-14,
+      "source_norm_min": 0.9999999983930291,
+      "source_norm_max": 1.0000000013983867
+    },
+    "1": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.31788050249614e-14,
+      "source_norm_min": 0.9999999983930291,
+      "source_norm_max": 1.0000000013983867
+    },
+    "2": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.4405605444115193e-14,
+      "source_norm_min": 0.9999999983930291,
+      "source_norm_max": 1.0000000013983867
+    },
+    "3": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3764137595300103e-14,
+      "source_norm_min": 0.9999999983930291,
+      "source_norm_max": 1.0000000013983867
+    }
+  },
+  "solve_seconds": 30198.006891917,
+  "projection_validation_seconds": 276.066184,
+  "pipeline_seconds": 30499.060252208,
+  "nominal_dispatched_GPU_operator_GFLOP_per_second_solve_wall": 277.4871322817698,
+  "point_SHA256": "7196467bfbd0da3399de4ca30f07f13ed7938870ac226d93dc1a28deb47449e3",
+  "standard_perambulator_SHA256": "94d47408815e44c6fe90d3aa21d38f9af956e5c0367ddcca3f92dbf789d2e4c9",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_2.sdb1000",
+  "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1000-t2-unsmeared.npy",
+  "large_payloads_committed_to_git": false
+}

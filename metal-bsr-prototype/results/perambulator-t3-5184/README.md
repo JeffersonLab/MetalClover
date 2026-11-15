@@ -1,6 +1,10 @@
-# Configuration 1000: queued source/sink t=3 perambulator
+# Configuration 1000: running source/sink t=3 perambulator
 
-All 5,184 eigenvectors and four source spins (20,736 physical RHS) are queued
+**Started automatically on 2026-11-15 at 09:00:39 UTC**, after successful
+time-two solve, projection, full verification and independent reader checks.
+The first source batches have passed both full CPU FP64 residual checks.
+
+All 5,184 eigenvectors and four source spins (20,736 physical RHS) run
 for common source and sink time three. The detached local queue waits for the
 entire time-two pipeline: solve, standard projection, validation and independent
 DataLib reader. It also requires 17 GiB free before starting. Idle-sleep
