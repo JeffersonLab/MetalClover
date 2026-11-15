@@ -80,3 +80,10 @@ uncommitted test data after a checkpoint. The final-width pilot separately
 checks the complete controller and corrected nested XML metadata. Frozen
 source, executable and library SHA256 hashes are recorded alongside it.
 Numerical solver/library source was unchanged for this writer addition.
+
+
+Storage update for the queued time-three run: with explicit user approval, the
+intermediate time-zero and time-one unsmeared `.npy` payloads were removed after
+checking their hashes and the retained standard perambulator hashes. All standard
+`.sdb1000` files and the original inputs, logs and checksums remain. See
+[the cleanup record](../perambulator-t3-5184/intermediate-cleanup.json).

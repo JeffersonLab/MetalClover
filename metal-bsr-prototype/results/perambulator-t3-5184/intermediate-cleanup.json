@@ -1,0 +1,37 @@
+{
+  "UTC": "2026-11-15T03:06:38.361334+00:00",
+  "authorization": "User explicitly approved removal of these two intermediate .npy files, retaining every standard perambulator",
+  "reason": "space for queued time-three production",
+  "free_disk_GiB_before": 12.165702819824219,
+  "removed_intermediate_files": [
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/cfg1000-t0-unsmeared.npy",
+      "bytes": 6879707264,
+      "accepted_SHA256": "3b017ee3fd6989514f3ac23f79859082442da18b3fb201c278d14fd85c8ffc51",
+      "current_SHA256_matches_accepted_result": true
+    },
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/cfg1000-t1-unsmeared.npy",
+      "bytes": 6879707264,
+      "accepted_SHA256": "a45f5451781bc8b2ad58f22cc16c026408dfc502213f843cfaabf55539087a27",
+      "current_SHA256_matches_accepted_result": true
+    }
+  ],
+  "retained_standard_perambulators": [
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_0.sdb1000",
+      "bytes": 6907158528,
+      "accepted_SHA256": "d987f2a56d393e8941d5315c8d842762f22c6299b2cd506947cb060c5acabef4",
+      "current_SHA256_matches_accepted_result": true
+    },
+    {
+      "path": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_1.sdb1000",
+      "bytes": 6907158528,
+      "accepted_SHA256": "820f87e336648a40cd579043ba87efa6e03dd5fa4e935179e16f83778dd88cc5",
+      "current_SHA256_matches_accepted_result": true
+    }
+  ],
+  "all_original_gauge_eigenvectors_logs_and_checksums_retained": true,
+  "intermediate_files_not_open": true,
+  "free_disk_GiB_after": 24.997203826904297
+}

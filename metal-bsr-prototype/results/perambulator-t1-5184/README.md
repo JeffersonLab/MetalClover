@@ -91,3 +91,10 @@ new time-default-zero executable verified an existing complete time-zero
 checkpoint, and all sixteen value hashes of the time-zero projection
 regression were unchanged. The interrupted pilot intentionally builds two
 hierarchies across its two sessions; production starts fresh and uses one.
+
+
+Storage update for the queued time-three run: with explicit user approval, the
+intermediate time-zero and time-one unsmeared `.npy` payloads were removed after
+checking their hashes and the retained standard perambulator hashes. All standard
+`.sdb1000` files and the original inputs, logs and checksums remain. See
+[the cleanup record](../perambulator-t3-5184/intermediate-cleanup.json).

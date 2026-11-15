@@ -1,0 +1,18 @@
+{
+  "status": "queued",
+  "source_time": 3,
+  "sink_time": 3,
+  "physical_rhs": 20736,
+  "queue_PID": 21997,
+  "dependency_pipeline": "/Users/admin/Downloads/MetalClover-results/cfg1000-t2-unsmeared.pipeline.json",
+  "pipeline_script": "/private/tmp/chroma-time3-production/full_run.py",
+  "queued_UTC": "2026-11-15T03:05:31.474932+00:00",
+  "continues_without_iPhone_connection": true,
+  "minimum_free_disk_GiB_before_start": 17.0,
+  "awake_keeper_PID": 21998,
+  "dependency_status": "running",
+  "dependency_stage": "solve",
+  "free_disk_GiB": 24.994121551513672,
+  "last_checked_UTC": "2026-11-15T03:08:01.522321+00:00",
+  "waiting_for": "time-two pipeline completion"
+}

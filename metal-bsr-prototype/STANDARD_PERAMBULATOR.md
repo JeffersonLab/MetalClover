@@ -101,3 +101,9 @@ the full projected gamma5 relative Frobenius discrepancy was 1.08110e-14.
 See [the time-one run record](results/perambulator-t1-5184/README.md).
 The same procedure for time two is queued locally after successful time-one
 completion; see [the staged time-two record](results/perambulator-t2-5184/README.md).
+
+Time three is also queued locally after successful time-two completion; see
+[the time-three run record](results/perambulator-t3-5184/README.md). With explicit
+user approval, the time-zero and time-one unsmeared `.npy` intermediate payloads
+were retired after final standard-file validation and checksum checks to make
+space. Their standard perambulators and all original inputs and logs remain.
