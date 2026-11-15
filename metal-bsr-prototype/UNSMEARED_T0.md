@@ -133,3 +133,14 @@ The solver checks that the action source-time list and eigenvector metadata
 agree with the selected time before creating output. The projector infers
 the time from the accepted point-file metadata and writes that time into
 both standard perambulator keys and XML.
+
+
+The full source/sink time-one repeat is also complete. All 20,736 RHS passed
+both original Chroma CPU FP64 checks at 1e-12 (maximum 2.38185e-14), using
+one reused hierarchy. The verified standard file ends in
+`.prop.n5184.light.t0_1.sdb1000`, with source/sink time one in its actual keys.
+The solve took 30,095.368 s and standard projection/validation 273.205 s;
+the full projected gamma5 relative Frobenius discrepancy was 1.08110e-14.
+See [the time-one run record](results/perambulator-t1-5184/README.md).
+The same procedure for time two is queued locally after successful time-one
+completion; see [the staged time-two record](results/perambulator-t2-5184/README.md).
