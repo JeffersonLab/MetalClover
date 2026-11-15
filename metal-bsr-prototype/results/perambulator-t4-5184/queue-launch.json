@@ -1,0 +1,6 @@
+{
+  "queue_PID": 47267,
+  "launch_mode": "detached local process with local logs and full-pipeline sleep prevention",
+  "queue_script_SHA256": "737b20c9a9579edbab6e6d19e11e148e213a53906a194987a97bbf2c183c15a1",
+  "intermediate_retention": "same validated cleanup procedure as requested; all standard perambulators retained"
+}

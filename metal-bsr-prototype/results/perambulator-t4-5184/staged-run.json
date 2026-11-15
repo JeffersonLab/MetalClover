@@ -1,0 +1,38 @@
+{
+  "status": "staged",
+  "source_time": 4,
+  "sink_time": 4,
+  "physical_rhs": 20736,
+  "eigenvectors": 5184,
+  "caller_RHS": 16,
+  "GPU_RHS": 16,
+  "method": "MetalMGClover",
+  "one_reused_hierarchy_per_run": true,
+  "full_Chroma_CPU_FP64_relative_tolerance": 1e-12,
+  "dependency": "t=3 solve, standard projection and independent reader must finish successfully",
+  "gauge_file": "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+  "gauge_SHA256": "0d1191873629673fb37b55e75deb291b7c0a8cc66073d2d1ec61dec4275a7afe",
+  "eigenvector_file": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_4.mod1000",
+  "eigenvector_bytes": 215332828,
+  "eigenvector_SHA256": "5605ffb6568cc8fd3800c66cf09bbe21be740abdf254612f73624261372a6114",
+  "eigenvector_header": {
+    "id": "eigenVecsTimeSlice",
+    "lattSize": [
+      12,
+      12,
+      12
+    ],
+    "decay_dir": 3,
+    "t_slice": 4,
+    "num_vecs": 5184
+  },
+  "action_XML_SHA256": "89f51bf6dacef5e4724c2d6902fb703c571ffce3b4c2037a38182ee8ef2ecf43",
+  "action_change": "only Contractions/t_sources=4; all FermionAction parameters unchanged",
+  "frozen_executables_and_library_verified": true,
+  "point_prefix": "/Users/admin/Downloads/MetalClover-results/cfg1000-t4-unsmeared",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000",
+  "staged_UTC": "2026-11-15T16:10:30.193989+00:00",
+  "free_disk_GiB_at_staging": 12.312480926513672,
+  "minimum_free_disk_GiB_before_start": 17.0,
+  "intermediate_retention": "as requested: same procedure as time three; retain all standard perambulators and inputs; reclaim only accepted time-two/time-three point intermediates if space is needed, after dependent evidence and hashes are verified"
+}

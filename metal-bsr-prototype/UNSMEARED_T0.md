@@ -154,3 +154,9 @@ Time three started automatically after successful time-two completion; see
 user approval, the time-zero and time-one unsmeared `.npy` intermediate payloads
 were retired after final standard-file validation and checksum checks to make
 space. Their standard perambulators and all original inputs and logs remain.
+
+Time four is queued after complete time-three verification, with the same
+20,736-RHS procedure and full CPU FP64 checks. The local queue also saves all
+time-three evidence before reclaiming validated point intermediates when
+needed for space, retaining every standard perambulator and original input.
+See [the time-four record](results/perambulator-t4-5184/README.md).
