@@ -1,0 +1,439 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\newcommand{\adj}{^{\dagger}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert_2}
+\newcommand{\file}[1]{\nolinkurl{#1}}
+\title{MetalClover GPU implementation notes\\\large Schur multigrid, local SVD, and Apple Metal}
+\author{Notes from the MetalClover source and recorded experiments}
+\date{15 November 2026}
+\begin{document}
+\maketitle
+
+\paragraph{Scope.}
+These notes describe the implementations in this repository, with emphasis on
+the sparse three-level multigrid (MG) path and the optional near-null/SVD setup.
+The older dense two-level prototype is identified separately. Mathematical
+equalities below describe the unrounded operators; device arithmetic and stored
+hierarchy coefficients are predominantly FP32. Source names in Section~\ref{sec:source}
+provide a guide to the implementation and its recorded validation.
+Unless stated otherwise, source and study filenames refer to files under
+\file{metal-bsr-prototype/} relative to the repository root. Public API usage
+and build instructions are in \file{docs/API.md} and \file{docs/BUILD.md}.
+
+\section{Fine equation and even/odd elimination}
+At each lattice site a fermion has three colors and four spins, hence twelve
+complex components. Write the clover--Wilson equation as
+\begin{equation}
+ Mx=b,\qquad M=A+H,
+\end{equation}
+where $A$ is site-local and $H$ contains nearest-neighbor hopping. In the
+isotropic synthetic prototype, $A=(m_0+4)I+C$ and $H=-D\!\!\!\!/\,/2$.
+The real-field adapter uses the imported anisotropic action: direction weights,
+spatial/temporal clover coefficients, stout gauge state, and temporal boundary
+sign are part of that operator. The isotropic formula must not replace those
+action-dependent coefficients.
+
+In the implemented gamma basis, $\gamma_5=\operatorname{diag}(I_6,-I_6)$
+up to the interleaved color/spin storage ordering, and each $A(x)$ consists
+of two Hermitian $6\times6$ blocks. With even sites ordered before odd sites,
+\begin{equation}
+ M=\begin{pmatrix}A_{ee}&H_{eo}\\H_{oe}&A_{oo}\end{pmatrix},\qquad
+ S=A_{oo}-H_{oe}A_{ee}^{-1}H_{eo}.
+ \label{eq:schur}
+\end{equation}
+Here the first subscript is the destination parity. The solver retains the
+odd system, with $12V/2$ complex unknowns:
+\begin{align}
+ Sx_o&=b_o-H_{oe}A_{ee}^{-1}b_e,\\
+ x_e&=A_{ee}^{-1}(b_e-H_{eo}x_o).
+\end{align}
+One application of $S$ therefore needs two parity-changing hops, an even
+local solve, an odd local multiplication, and a subtraction. $S$ is applied
+without forming its full two-hop matrix. No normal equations are used for
+the inversion.
+
+\subsection{Mixed-precision defect correction}
+The physical solution and acceptance residual use CPU FP64. At outer step $k$,
+\begin{align}
+ r^{(k)}&=b-M_{64}x^{(k)},\\
+ g_o&=r_o^{(k)}-H_{oe}A_{ee}^{-1}r_e^{(k)},\\
+ S_{32}\delta_o&\simeq (g_o)_{32},\\
+ \delta_e&=A_{ee}^{-1}(r_e^{(k)}-H_{eo}\delta_o),\\
+ x^{(k+1)}&=x^{(k)}+\operatorname{FP64}(\delta).
+\end{align}
+Reduction, inner solution, and reconstruction are GPU FP32 operations on the
+Metal paths. Acceptance requires the full original equation to satisfy
+$\norm{b-M_{64}x}/\norm b\leq\varepsilon$ for every RHS. Zero RHS use an
+absolute criterion. The early synthetic studies used $10^{-10}$; the cited
+real-field studies requested $10^{-12}$. An inner Arnoldi estimate or coarse
+residual alone cannot accept a physical solution.
+
+\section{Aggregation, prolongation, and restriction}
+Partition full lattice coordinates into disjoint rectangular aggregates
+$\Omega_a$. Only odd sites inside each aggregate participate in the fine
+transfer. For example, an even-sided $4^4$ aggregate has $128$ odd sites.
+The implementation also supports rectangular and odd-sided aggregate shapes
+where the lattice partition permits them; parity counts then follow the actual
+site lists.
+
+Let $n_v$ be the number of retained vectors \emph{per chirality}. There are
+$2n_v$ coarse components per aggregate. For $\chi\in\{+,-\}$, define local
+orthonormal columns $p_{a\chi j}$ supported on $\Omega_a$ and chirality $\chi$.
+If $q$ denotes a fine color/spin component, the prolongator is
+\begin{equation}
+ P_{(x,q),(a,\chi,j)}=
+ \begin{cases}
+ p_{a\chi j}(x,q),&x\in\Omega_a,\quad q\in\chi,\\
+ 0,&\text{otherwise},
+ \end{cases}
+ \quad j=1,\ldots,n_v.
+ \label{eq:P}
+\end{equation}
+Thus interpolation is aggregate-local, with $n_v$ nonzero weights per fine
+component. It is not geometric linear interpolation between neighboring
+aggregate centers. Its action and the restriction are
+\begin{align}
+ (Pe)(x,q)&=\sum_{j=1}^{n_v}p_{a(x)\chi(q)j}(x,q)e_{a(x)\chi(q)j},\\
+ (Rr)_{a\chi j}&=\sum_{x\in\Omega_a}\sum_{q\in\chi}
+       \overline{p_{a\chi j}(x,q)}\,r(x,q),\qquad R=P\adj.
+ \label{eq:R}
+\end{align}
+No extra volume normalization or full-weighting stencil appears in $R$.
+Local orthonormality and disjoint support give
+\begin{equation}
+ P\adj P=I,\qquad \gamma_{5,o}P=P\Gamma_5,\qquad
+ \Gamma_5\big|_a=\operatorname{diag}(I_{n_v},-I_{n_v}).
+\end{equation}
+$PP\adj$ is the Euclidean orthogonal projector onto the interpolation space;
+it is generally not the identity. These identities hold to setup accuracy
+before the FP32 cast.
+
+\section{The coarse operator: sparse Galerkin blocks}
+The first coarse matrix is the projection of the \emph{odd Schur complement}:
+\begin{equation}
+ A_1=P_0\adj S P_0,\qquad
+ (A_1)_{a\chi i,b\psi j}
+ =\sum_{x,q;y,t}\overline{P_{(x,q),(a,\chi,i)}}
+ S_{(x,q),(y,t)}P_{(y,t),(b,\psi,j)}.
+ \label{eq:galerkin}
+\end{equation}
+It has dense complex $2n_v\times2n_v$ blocks on a sparse aggregate graph.
+The blocks generally mix both coarse chiralities and all retained vectors.
+The coarse operator is not obtained by fitting a new SU(3) link or by simply
+reusing the original twelve-component Wilson stencil.
+
+\subsection{Local construction and coarse sparsity}
+Let $P_a$ denote the columns supported in aggregate $a$ and let $e$ be an
+even site. Define the small matrix
+\begin{equation}
+ T_{ea}=(H_{eo}P_a)(e),\qquad T_{ea}\in\mathbb C^{12\times2n_v}.
+\end{equation}
+Using $H_{oe}=\gamma_{5,o}H_{eo}\adj\gamma_{5,e}$ and chirality preservation,
+the blocks can be assembled as
+\begin{equation}
+ (A_1)_{ab}=\delta_{ab}\,P_a\adj A_{oo}P_a
+ -\Gamma_5\sum_e T_{ea}\adj\gamma_{5,e}A_{ee}^{-1}T_{eb}.
+ \label{eq:localassembly}
+\end{equation}
+The first term includes a sum over odd sites in $a$. In the second term only
+even sites adjacent to odd support in both $a$ and $b$ contribute. Accordingly,
+the graph is built by joining the aggregates that touch the same even site,
+plus the diagonal. It includes the couplings induced by two fine hops; it
+should not be assumed to have only the nearest-neighbor geometric coarse
+stencil. Contributions are accumulated in CPU FP64, with row ownership
+avoiding assembly atomics. This is an exact algebraic Galerkin construction
+up to arithmetic rounding, without global dense column probing.
+
+The representation is block compressed sparse row: row offsets, aggregate
+column indices, and contiguous dense blocks. Application computes
+\begin{equation}
+ (A_1u)_a=\sum_{b\in\mathcal N(a)}(A_1)_{ab}u_b.
+\end{equation}
+Only diagonal blocks are inverted for block-Jacobi smoothing. They are the
+diagonal blocks of the projected matrix, including Schur contributions;
+they are not just restrictions of $A_{oo}$.
+
+Since $S\adj=\gamma_{5,o}S\gamma_{5,o}$,
+\begin{equation}
+ A_1\adj=\Gamma_5A_1\Gamma_5.
+\end{equation}
+This is gamma5 Hermiticity, not ordinary Hermiticity or positive definiteness.
+It explains the use of non-Hermitian Krylov solvers rather than ordinary CG.
+
+\subsection{A second coarsening}
+The three-level path aggregates coarse sites and constructs another
+chirality-preserving $P_1$, followed by
+\begin{equation}
+ A_2=P_1\adj A_1P_1,\qquad
+ (A_2)_{AB}=\sum_{a\in A,b\in B}(P_1)_a\adj(A_1)_{ab}(P_1)_b.
+\end{equation}
+This is a sparse block contraction. The second transfer's input chirality
+is the coarse $+/-$ component grouping, rather than physical spin indices.
+The near-null/SVD option changes the first transfer; the documented second
+transfer retains the filtered-vector/local-orthogonalization construction.
+
+\section{Building the interpolation space}
+\subsection{Earlier filtered-vector setup}
+The original setup starts from deterministic constant-plus-noise complex
+test vectors and filters them with homogeneous damped clover-block Jacobi:
+\begin{equation}
+ v\leftarrow (I-\omega_{\rm setup}A_{oo}^{-1}S)v.
+\end{equation}
+Aggregate/chirality restrictions are then orthonormalized with two-pass local
+Gram--Schmidt. The corresponding second-level filter uses the coarse diagonal
+block inverse. The setup weight and number of sweeps are separate parameters
+from the pre/post-smoother settings during a solve. The original prototype
+filters in CPU FP64; the real-field path can filter fine vectors on the GPU
+in FP32 and perform local orthogonalization in CPU FP64.
+
+\subsection{Homogeneous-solve near-null candidates}
+The optional builder in \file{near_null_svd.hpp} uses a larger candidate pool.
+For each deterministic complex Z4 start, independent of physical RHS, it:
+\begin{enumerate}
+ \item Optionally warms $y$ by damped homogeneous Jacobi sweeps.
+ \item Forms $f=Sy$ and approximately solves $Sz=f$ from zero with GPU FP32
+ FGMRES and local clover-block preconditioning.
+ \item Forms the remaining error $v=y-z$ and explicitly measures $Sv$.
+ \item Normalizes the full candidate: $\widehat v=v/\norm v$, using an FP64 norm.
+\end{enumerate}
+The key identity is
+\begin{equation}
+ Sv=f-Sz.
+\end{equation}
+An incomplete solve leaves error that the chosen approximate inverse removes
+poorly. Such errors provide useful coarse-space candidates. The scale-invariant
+quantity $\norm{Sv}/\norm v$ indicates how near-null a candidate actually is;
+a small residual relative to $\norm{Sy}$ alone does not prove that property.
+An exact solve of an invertible $S$ would leave $v=0$, so finite inexact setup
+is intentional. The implementation permits a setup iteration cap and records
+the achieved reductions. All 24 setup candidates in the recorded large-volume
+study reached their 128-iteration cap rather than the requested $0.001$ target.
+
+\subsection{What the SVD does}
+For each aggregate/chirality gather the $m$ normalized candidates into
+\begin{equation}
+ V_{a\chi}=[\widehat v_1|_{a\chi}\ \cdots\ \widehat v_m|_{a\chi}]
+   =U\Sigma W\adj,\qquad \sigma_1\geq\cdots\geq\sigma_m\geq0.
+\end{equation}
+The code calls Accelerate LAPACK \file{zgesvd} in CPU FP64, retaining
+\begin{equation}
+ [p_{a\chi1},\ldots,p_{a\chi n_v}]=U(:,1:n_v).
+\end{equation}
+These are the leading \emph{left} singular vectors of a local sample matrix.
+They are not singular vectors computed directly from the global Dirac matrix.
+Large singular values are retained because they represent the dominant
+\emph{candidate covariance}; the candidates already encode difficult errors.
+The local optimality statement is
+\begin{equation}
+ \min_{Q\adj Q=I_{n_v}}\|V-QQ\adj V\|_F^2
+ =\sum_{j>n_v}\sigma_j^2,\qquad
+ \eta=\frac{\sum_{j\leq n_v}\sigma_j^2}{\sum_j\sigma_j^2}.
+\end{equation}
+Thus the SVD compresses locally redundant errors into a fixed-size basis.
+Energy retention $\eta$ measures representation of these samples, not a
+guarantee on the global low spectrum or the solver's convergence rate.
+The builder checks local orthogonality and rejects retained numerical rank
+with $\sigma_{n_v}\leq10^{-12}\sigma_1$.
+
+\subsection{Bounded-memory incremental compression}
+The later implementation can compress a full pool to weighted columns
+$U_k\Sigma_k$, append new candidates $B$, and recompress
+\begin{equation}
+ [\,U_k\Sigma_k\ \ B\,].
+\end{equation}
+The weights matter because
+$(U_k\Sigma_k)(U_k\Sigma_k)\adj=U_k\Sigma_k^2U_k\adj$ preserves the
+retained covariance. Carrying $U_k$ alone would assign equal weights to
+directions of unequal importance. Final interpolation uses unweighted $U_{n_v}$
+so that $P\adj P=I$. Intermediate truncations mean this is generally different
+from one SVD of all original candidates.
+
+The $32^3\times256$ study used $m=24$, $n_v=8$ per chirality, a nine-column
+weighted carry, and four new columns per batch: a thirteen-column pool.
+One FP32 odd vector is $384$ MiB, so the pool occupies $4.875$ GiB instead of
+$9$ GiB for all 24 vectors. The recorded energy lower bound relative to the
+original normalized candidates is $96.555\%$; it is not the retained fraction
+of a full 24-column SVD. The earlier $24^3\times256$ study used one final
+all-candidate SVD. These are different setup variants.
+
+\section{Multigrid cycle and Krylov solver}
+At level $\ell$, let $B_\ell$ be the local block inverse: $A_{oo}^{-1}$ on
+the fine odd level and $\operatorname{blockdiag}(A_\ell)^{-1}$ on coarse levels.
+Starting with $z=0$, a cycle for residual $r$ performs
+\begin{align}
+ z&\leftarrow z+\omega_\ell B_\ell(r-A_\ell z)
+       &&\text{for each pre-step},\\
+ r_c&=P_\ell\adj(r-A_\ell z),\\
+ A_{\ell+1}e_c&\simeq r_c,\\
+ z&\leftarrow z+P_\ell e_c,\\
+ z&\leftarrow z+\omega_\ell B_\ell(r-A_\ell z)
+       &&\text{for each post-step},
+\end{align}
+where $A_0=S$. Fine smoothing uses the clover block, not the full diagonal
+of the two-hop Schur matrix. For an exact coarse solve, the coarse error
+propagator is $I-P_\ell A_{\ell+1}^{-1}P_\ell\adj A_\ell$; it annihilates
+error in $\operatorname{range}(P_\ell)$. For one pre/post step the full error
+propagator is
+\begin{equation}
+ (I-\omega B A_\ell)
+ (I-P_\ell A_{\ell+1}^{-1}P_\ell\adj A_\ell)
+ (I-\omega B A_\ell).
+\end{equation}
+The applied FP32/inexact cycle only approximates this expression.
+
+The old two-level prototype formed a small dense $A_1$ by column probing and
+stored a CPU-FP64-computed dense inverse, cast to FP32. It limits the coarse
+dimension to 512. The scalable three-level path instead uses an inner coarse
+FGMRES solve, preconditioned by another MG cycle, and a bottom block-Jacobi
+BiCGStab solve. No global dense coarse inverse is used there. Restart sizes,
+targets and iteration caps vary between studies; the original three-level
+example used fine FGMRES(8), coarse FGMRES(4), coarse target $0.1$, and an
+eight-iteration bottom cap. Its bottom target is a left-preconditioned norm;
+the unpreconditioned residual is recorded separately.
+
+Fine FGMRES is right-preconditioned. At step $j$ it stores
+\begin{equation}
+ z_j=\mathcal B_jv_j,\qquad w_j=Sz_j,\qquad
+ SZ_m=V_{m+1}\overline H_m,
+\end{equation}
+and updates $x=x_0+Z_my$ with
+$y=\arg\min_y\|\beta e_1-\overline H_my\|_2$.
+Keeping $Z_m$ explicitly permits variable/inexact coarse corrections.
+Two-pass Gram--Schmidt is used; small Givens/least-squares control is CPU FP64.
+At restart or a predicted early stop, the true FP32 Schur residual is refreshed.
+Multiple RHS share coefficients and dispatches but have separate Krylov bases,
+Hessenberg problems and convergence masks: this is batched independent Krylov,
+not block GMRES.
+
+\section{Apple Metal implementation choices}
+\paragraph{Compact hopping and spin structure.}
+The compact fine operator stores forward gauge links, neighbor tables, parity
+maps, and clover data instead of expanded copies of a fine sparse matrix.
+Backward links are obtained by conjugate transpose at the neighbor. Wilson
+spin projectors use spin permutations and complex phases, followed by small
+color contractions; dense $12\times12$ hopping blocks need not be stored.
+Anisotropy and the temporal wrap sign are applied according to the action.
+
+\paragraph{RHS-contiguous layout and specialization.}
+Fine and coarse fields use a component-major layout
+$\texttt{field[component * RHS + rhs]}$. Adjacent threads can process adjacent
+RHS for the same component while reusing common operator data. Shaders use a
+specialized \file{RHS} constant. Coarse kernels contract BSR blocks using
+FP32 complex arithmetic represented by \file{float2}, with explicit fused
+multiply-add operations. The supplied kernels are conventional compute
+kernels; these notes do not assume tensor/matrix-unit acceleration.
+
+\paragraph{Local clover compression and LDL reuse.}
+Packed Hermitian storage needs six real diagonal entries and fifteen complex
+lower entries per chiral block: 36 reals instead of 36 complex numbers.
+The low-memory path stores $A=LDL\adj$, with unit-diagonal lower $L$, in the
+same 36-real footprint. Multiplication evaluates $L[D(L\adj x)]$; inversion
+uses forward substitution, diagonal division and backward substitution.
+The same odd factor serves Schur multiplication and smoothing; the even
+factor serves elimination/reconstruction. There is no separate odd inverse
+array on this path. FP64 setup checks positive local pivots for the tested
+action; this factorization path is not an unrestricted indefinite solver.
+The recorded large-volume local storage falls from $6.75$ to $2.25$ GiB.
+The current kernel computes a six-component local sequence per output thread;
+the compact storage saves memory but does not remove all duplicated local work.
+
+\paragraph{Resident workspaces and synchronization.}
+Fine Krylov vectors, preconditioned vectors, transfer weights, sparse coarse
+blocks and cycle workspaces remain in Metal buffers during inner solves.
+Shared-storage buffers exploit Apple unified memory, but still require command
+completion before CPU consumption. Dependent GPU dispatches use buffer barriers;
+host control waits where small reductions or nested solver control require it.
+Only small reduced coefficients need return to CPU during Arnoldi, not the full
+Krylov basis. Some operator interfaces still require basis-to-work-buffer copies.
+The implementation includes ordinary dispatch sizes such as 128 threads per
+threadgroup; this is not evidence of a universally optimal hardware tuning.
+
+\paragraph{Bounded memory and FP64 streaming.}
+Restart length and resident RHS tile size bound the large fine-vector stacks.
+The public array interface reuses a context/hierarchy and processes GPU tiles
+(default cap eight); the largest cited standalone run held only one RHS.
+The low-memory driver maps the FP64 solution to a file and streams residual
+work in eight-time-slice slabs. CPU FP64 clover blocks are regenerated from
+the original FP64 gauge, rather than promoted from rounded GPU factors.
+Sources can be regenerated deterministically, and scratch pages are released
+between slabs. These choices make full-precision acceptance feasible without
+keeping full source, residual and clover arrays resident simultaneously.
+Metal allocation and CPU RSS overlap in unified memory and must not be added.
+
+\paragraph{Remaining costs.}
+MG reduces fine-operator work but adds transfer, coarse, reduction and host
+control costs. Fixed bottom dispatch budgets can include masked/padded work.
+Full FP64 residual evaluation and file writeback remain in solve timing.
+Reducing iteration counts or increasing nominal operator GFLOP/s does not by
+itself establish a faster total solve. Hierarchy construction is a separate
+cost amortized when the gauge/action/mass-specific hierarchy is reused.
+
+\section{What is taken from Eloy Romero's mgproton?}
+The repository explicitly credits Eloy's \file{mgproton} work in Chroma and
+SuperbBLAS as the starting point for the sparse color/spin representation and
+the investigation of even/odd reduction, chirality-split aggregation, Galerkin
+coarse operators, and Krylov methods. More specifically, the optional
+\file{getMGProlongator}-inspired structure is:
+\begin{enumerate}
+ \item Generate errors of approximate homogeneous solves,
+       $z\simeq S^{-1}(Sy)$ and $v=y-z$.
+ \item Normalize candidates globally, then gather them by aggregate/chirality.
+ \item Compress the local candidate matrices by SVD and use leading left
+       singular vectors as interpolation weights.
+ \item Optionally carry singular-value-weighted directions between candidate
+       batches, then form the final orthonormal transfer.
+\end{enumerate}
+The shared structure is algorithmic. MetalClover supplies its own dedicated
+CPU/Metal kernels, sparse hierarchy assembly/application, memory management,
+solver orchestration and mixed-precision checking. These notes do not claim
+that the hierarchy is identical to Eloy's, or that \file{mgproton} is called
+as the GPU solver. Agreement with original Chroma establishes the physical
+operator and accepted solutions, not equality of MG setup or convergence.
+This provenance account is supported by the repository's explicit attribution
+and comments; no separate upstream \file{mgproton.cc} checkout was examined
+for a line-by-line comparison.
+
+\section{Recorded example and implementation map}\label{sec:source}
+The near-null/SVD $32^3\times256$, $m_0=-0.0860$ study on a 32 GiB M1 Max
+used $4^4$ fine aggregates, eight retained vectors per chirality at both
+transfers, and fine restart eight. The first coarse grid has
+$(8\cdot8\cdot8\cdot64)$ aggregate sites and 16 components per site,
+or $524{,}288$ unknowns, illustrating why a global dense coarse inverse is
+inappropriate. Mean warm solve times were $474.499$ s/RHS for near-null/SVD MG
+and $2189.472$ s/RHS for BiCGStab ($4.61\times$). One hierarchy cost
+$964.986$ s; including it over the two measured RHS gives $956.992$ s/RHS.
+Every saved MG field passed original Chroma FP64 checks, with maximum relative
+residual $1.7355\times10^{-14}$. These are two single-resident-RHS measurements,
+not measured 96- or 192-RHS throughput.
+
+\begin{description}
+ \item[Fine operator and compact storage:]\hfill\\
+ \file{compact_clover.hpp}, \file{compact_clover.metal},
+ \file{low_memory_clover.hpp}, \file{packed_clover.metal}.
+ \item[Transfers and sparse hierarchy:]\hfill\\
+ \file{three_level.hpp}, \file{three_level.mm},
+ \file{sparse_coarse.hpp}, \file{sparse_coarse.metal}.
+ \item[Cycle tuning and near-null setup:]\hfill\\
+ \file{mg_real_tune.hpp}, \file{mg_real_tune.metal},
+ \file{near_null_svd.hpp}.
+ \item[Krylov and original dense prototype:]\hfill\\
+ \file{fgmres.hpp}, \file{bicgstab.hpp},
+ \file{multigrid.hpp}, \file{multigrid.metal}.
+ \item[Full checks and integration:]\hfill\\
+ \file{low_memory_solve.mm}, \file{compact_residual.hpp},\\
+ \file{production_bridge.hpp}, \file{metalclover_api.mm}.
+ \item[Evidence and historical configurations:]\hfill\\
+ \file{MULTIGRID.md}, \file{THREE_LEVEL.md}, \file{LOW_MEMORY.md},
+ \file{NEAR_NULL_SVD.md}, \file{NEAR_NULL_SVD32.md},
+ \file{BATCH_RHS.md}, and the root \file{README.md} provenance statement.
+\end{description}
+The hierarchy tests cover local orthogonality, gamma5 Hermiticity, Galerkin
+action identities, transfer/cycle agreement between CPU and Metal, and full
+solution residuals. Performance numbers above are the repository's recorded
+experiments; preparing these notes does not rerun the numerical studies.
+\end{document}

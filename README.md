@@ -2,6 +2,12 @@
 
 Standalone Apple GPU experiments for anisotropic clover-Wilson inversion.
 
+## Documentation
+
+See [docs/](docs/README.md) for the [public API and multi-RHS guide](docs/API.md),
+[build/install instructions](docs/BUILD.md), and
+[GPU implementation notes in LaTeX](docs/GPU_IMPLEMENTATION_NOTES.tex).
+
 ## Provenance
 
 This project grew out of studying Eloy Romero's `mgproton` multigrid prototype
