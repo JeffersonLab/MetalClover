@@ -1,0 +1,1304 @@
+[
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-build/lib/libredstar.a",
+    "bytes": 140006544,
+    "allocated": 140009472,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/devel.t8.r1.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/validation-v3/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/optimized.t8.r2.a3/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/validation-v1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/remap-8t-20261108-001/runs/devel.t8.r2.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/validation-before-node-transfer/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/validation-signature-only/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/devel.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/devel.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/profile/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-8t-20261112-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-full27.Mdg7TK/runs/prototype/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-full27.Mdg7TK/runs/collision-breakdown/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/early/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/paired-capacity/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/current/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/final/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/paired-current/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/early-fold.vBoXLv/runs/ordered/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-parallel.BcDSAi/runs/parallel/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-parallel.BcDSAi/runs/baseline/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/corr-graph-phases.i8payS/runs/timed/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/reference.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t16.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t4.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t1.r1.a9/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t2.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t4.r3.a3/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t2.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t4.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t16.r1.a8/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t2.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t4.r1.a2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t16.r2.a2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t1.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t4.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t8.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t16.r3.a3/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t4.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t8.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t2.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t2.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t1.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t1.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t16.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/devel.t1.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t16.r2.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t1.r3.a2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-idle-20261104/runs/optimized.t2.r1.a1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/devel.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/optimized.t8.r3.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/devel.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/validation-v2-failed/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/operator-expansions-8t-20261111-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/regression-combined-devel/graph.xml",
+    "bytes": 316297489,
+    "allocated": 316301312,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/regression-combined-optimized/graph.xml",
+    "bytes": 316297489,
+    "allocated": 316301312,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/devel.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/devel.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/validation-before-sort/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/regression-single-devel/graph.xml",
+    "bytes": 105477384,
+    "allocated": 105480192,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/regression-single-optimized/graph.xml",
+    "bytes": 105477384,
+    "allocated": 105480192,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-maps-8t-20261112-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/devel.t8.r1.a5/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/optimized.t8.r1.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/devel.t8.r2.a4/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/datalib-full27-8t-20261107-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/wick-classes.Ffzrti/runs/classes/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/wick-classes.Ffzrti/runs/current/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/wick-plans.uGZ09P/runs/plans/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/wick-plans.uGZ09P/runs/current/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/comparator-checks/reindexed.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/comparator-checks/changed-coefficient.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/thread_local.t1.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/thread_local.t4.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/thread_local.t16.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t4.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t1.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t2.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t16.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/thread_local.t8.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t8.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/thread_local.t2.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/full27-20261103/runs/devel.t1.r1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/devel.t8.r1.a3/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/devel.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/devel.t8.r3.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/contraction-destinations-8t-20261111-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/reference.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/optimized.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/devel.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/devel.t8.r1.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/optimized.t8.r2.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/validation/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/optimized.t8.r3.a1/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fresh-graphs-8t-20261112-001/runs/devel.t8.r2.a2/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-signature.d4djB2/runs/signature/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/topology-signature.d4djB2/runs/baseline/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-full27-validation/runs/integration/corr_graph.bin",
+    "bytes": 97463846,
+    "allocated": 97464320,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/time-profile.xml",
+    "bytes": 114678825,
+    "allocated": 114679808,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/after-direct/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/production-check/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/optimized.t8.r3/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/dynamic.t8.r1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/optimized.t8.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/control.t8.r1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/optimized.t8.r1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/control.t8.r3/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/accumulate.t8.r1/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/profiles/full27-8t-20261104/runs/control.t8.r2/corr_graph.bin",
+    "bytes": 99140642,
+    "allocated": 99143680,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-validation-multiparticle-ready/combined-off/evaluated.sdb1",
+    "bytes": 119545856,
+    "allocated": 86548480,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-validation-multiparticle-ready/combined-on/evaluated.sdb1",
+    "bytes": 119406592,
+    "allocated": 86425600,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-validation-multiparticle-ready/single/graph.xml",
+    "bytes": 105477384,
+    "allocated": 105480192,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/no1pt-validation-multiparticle-ready/combined/graph.xml",
+    "bytes": 316297489,
+    "allocated": 316301312,
+    "suffix": ".xml"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-full-momenta-20261101-001/genprop-U0.1.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-full-momenta-20261101-001/meson.sbt",
+    "bytes": 90335168,
+    "allocated": 90337280,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-full-momenta-20261101-001/genprop-U0.05.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-full-momenta-20261101-001/baryon.sbt",
+    "bytes": 153288368,
+    "allocated": 153288704,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/meson-native-sphere-20261101-001/meson.sbt",
+    "bytes": 90334464,
+    "allocated": 90337280,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/meson-native-sphere4-20261101-001/meson.sbt",
+    "bytes": 110407056,
+    "allocated": 110407680,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/generate-superb-f64-20261101-002/genprop-U0.1.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/generate-superb-f64-20261101-002/genprop-U0.05.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/corr-graph-v4/redstar-regression/combined-off/evaluated.sdb1",
+    "bytes": 119545856,
+    "allocated": 86548480,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/corr-graph-v4/redstar-regression/combined-on/evaluated.sdb1",
+    "bytes": 119406592,
+    "allocated": 86425600,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/legacy-20261028-141058/rho_rho_3pt.corr.out.gz",
+    "bytes": 144284290,
+    "allocated": 144285696,
+    "suffix": ".gz"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/legacy-20261028-141058/rho_rho_3pt.out.gz",
+    "bytes": 85398420,
+    "allocated": 85401600,
+    "suffix": ".gz"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/expand-native-momenta-20261101-001/meson.sbt",
+    "bytes": 90335168,
+    "allocated": 90337280,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/expand-native-momenta-20261101-001/baryon.sbt",
+    "bytes": 153288368,
+    "allocated": 153288704,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-rsd14-20261101-001/genprop-U0.1.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-rsd14-20261101-001/meson.sbt",
+    "bytes": 110407056,
+    "allocated": 110407680,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-rsd14-20261101-001/genprop-U0.05.sbt",
+    "bytes": 157288704,
+    "allocated": 157290496,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/native-superb-rsd14-20261101-001/baryon.sbt",
+    "bytes": 153288368,
+    "allocated": 153288704,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/generate-superb-f64-20261101-001/genprop.sbt",
+    "bytes": 157286400,
+    "allocated": 157286400,
+    "suffix": ".sbt"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/final-regression/combined-off/evaluated.sdb1",
+    "bytes": 119545856,
+    "allocated": 86548480,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/final-regression/combined-on/evaluated.sdb1",
+    "bytes": 119439360,
+    "allocated": 86474752,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/canonical-regression/combined-off/evaluated.sdb1",
+    "bytes": 119545856,
+    "allocated": 86548480,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/redstar_kanoni.devel/runs/onept-rhopi-development/canonical-regression/combined-on/evaluated.sdb1",
+    "bytes": 119406592,
+    "allocated": 86425600,
+    "suffix": ".sdb1"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/chroma",
+    "bytes": 98185368,
+    "allocated": 98189312,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/t_minvert",
+    "bytes": 98285560,
+    "allocated": 98287616,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/const_hmc",
+    "bytes": 99894536,
+    "allocated": 99897344,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/t_meas_wilson_flow",
+    "bytes": 98168336,
+    "allocated": 98168832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/t_leapfrog",
+    "bytes": 99767000,
+    "allocated": 99770368,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/smd",
+    "bytes": 99891616,
+    "allocated": 99893248,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/spectrum_s",
+    "bytes": 98630136,
+    "allocated": 98631680,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/purgaug",
+    "bytes": 98685400,
+    "allocated": 98689024,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/bin/hmc",
+    "bytes": 99891472,
+    "allocated": 99893248,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/install/chroma-no1pt-reorg-001/lib/libchroma.a",
+    "bytes": 398721312,
+    "allocated": 398725120,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352,
+    "allocated": 97656832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 97655352,
+    "allocated": 97656832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/dbtools-extract-20261109-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352,
+    "allocated": 97656832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/chroma",
+    "bytes": 97610152,
+    "allocated": 97611776,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/install/chroma-before-stoch-removal/bin/t_meas_wilson_flow",
+    "bytes": 97609616,
+    "allocated": 97611776,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/chroma-storage-20261109-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/t_minvert",
+    "bytes": 97655352,
+    "allocated": 97656832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/install/chroma/bin/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/tests/t_minvert",
+    "bytes": 97655352,
+    "allocated": 97656832,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/tests/t_meas_wilson_flow",
+    "bytes": 97538128,
+    "allocated": 97542144,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos-datalib-reorg/evidence/mpi-parscalar-20261110-001/build/chroma/mainprogs/main/chroma",
+    "bytes": 97555160,
+    "allocated": 97558528,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/install/redstar/lib/libredstar.a",
+    "bytes": 220544328,
+    "allocated": 220545024,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/install/fitting_lib/lib/libfitting.a",
+    "bytes": 107406680,
+    "allocated": 107409408,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/clean-checkout-20261027/install/redstar/lib/libredstar.a",
+    "bytes": 139627280,
+    "allocated": 139628544,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/clean-checkout-20261027/install/fitting_lib/lib/libfitting.a",
+    "bytes": 71266384,
+    "allocated": 71270400,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/clean-checkout-20261027/builds/redstar/lib/libredstar.a",
+    "bytes": 139627280,
+    "allocated": 139628544,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/clean-checkout-20261027/builds/fitting_lib/lib/libfitting.a",
+    "bytes": 71266384,
+    "allocated": 71270400,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/tests/rho-expanded-4x4x4x16/corr_graph.bin",
+    "bytes": 75186833,
+    "allocated": 75190272,
+    "suffix": ".bin"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/builds/redstar/lib/libredstar.a",
+    "bytes": 220544328,
+    "allocated": 220545024,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/builds/fitting_lib/lib/libfitting.a",
+    "bytes": 107406680,
+    "allocated": 107409408,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/script-build-20261028/install/redstar/lib/libredstar.a",
+    "bytes": 139626072,
+    "allocated": 139628544,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/script-build-20261028/install/fitting_lib/lib/libfitting.a",
+    "bytes": 71266256,
+    "allocated": 71266304,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/script-build-20261028/builds/redstar/lib/libredstar.a",
+    "bytes": 139626072,
+    "allocated": 139628544,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/script-build-20261028/builds/fitting_lib/lib/libfitting.a",
+    "bytes": 71266256,
+    "allocated": 71266304,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/linux-test-20261028/source-cache.tar.gz",
+    "bytes": 117647865,
+    "allocated": 117649408,
+    "suffix": ".gz"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/linux-test-20261028/mirrors/matelem_fitter.git/objects/pack/pack-fc450b3a0e696307a96773fc3b2ce056fd1fdb03.pack",
+    "bytes": 83885511,
+    "allocated": 83886080,
+    "suffix": ".pack"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/redstar-clean-macos-20261028/install/redstar/lib/libredstar.a",
+    "bytes": 139630072,
+    "allocated": 139632640,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/macos_matelem_fitter/redstar-clean-macos-20261028/builds/redstar/lib/libredstar.a",
+    "bytes": 139630072,
+    "allocated": 139632640,
+    "suffix": ".a"
+  },
+  {
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/mpi-smoke/corr-registration",
+    "bytes": 82107680,
+    "allocated": 82108416,
+    "suffix": ""
+  },
+  {
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-superbblas-cpu-mpi/lib/util/ferm/mgproton.o",
+    "bytes": 74256568,
+    "allocated": 74260480,
+    "suffix": ".o"
+  },
+  {
+    "path": "/Users/admin/Downloads/chromaform.devel-datalib-reorg/build/chroma-devel-datalib-reorg-qdpxx-devel-datalib-reorg-double-nd4-datalib-devel-datalib-reorg-serial-superbblas-cpu-mpi/lib/util/ferm/mgproton.o",
+    "bytes": 74256568,
+    "allocated": 74260480,
+    "suffix": ".o"
+  }
+]

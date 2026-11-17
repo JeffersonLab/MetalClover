@@ -1,0 +1,176 @@
+{
+  "UTC": "2026-11-17T00:10:19.546995+00:00",
+  "free_disk_GiB": 34.590476989746094,
+  "jobs": [
+    {
+      "source_sink_time": 4,
+      "queue_status": "complete",
+      "stage": "complete",
+      "queue_PID": 47267,
+      "pipeline_PID": 52690,
+      "completed_rhs": 20736,
+      "total_rhs": 20736,
+      "waiting_for": null
+    },
+    {
+      "source_sink_time": 5,
+      "queue_status": "complete",
+      "stage": "complete",
+      "queue_PID": 61688,
+      "pipeline_PID": 47133,
+      "completed_rhs": 20736,
+      "total_rhs": 20736,
+      "waiting_for": null
+    },
+    {
+      "source_sink_time": 6,
+      "queue_status": "complete",
+      "stage": "complete",
+      "queue_PID": 39341,
+      "pipeline_PID": 59659,
+      "completed_rhs": 20736,
+      "total_rhs": 20736,
+      "waiting_for": null
+    },
+    {
+      "source_sink_time": 7,
+      "queue_status": "running",
+      "stage": "solve",
+      "queue_PID": 39342,
+      "pipeline_PID": 74187,
+      "completed_rhs": 12864,
+      "total_rhs": 20736,
+      "waiting_for": null
+    },
+    {
+      "source_sink_time": 8,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39343,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-7 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 9,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39344,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-8 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 10,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 39345,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-9 complete validation and finalization"
+    },
+    {
+      "source_sink_time": 11,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89416,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-10 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 12,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89417,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-11 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 13,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89419,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-12 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 14,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89423,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-13 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 15,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89424,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-14 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 16,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89425,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-15 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 17,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89426,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-16 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 18,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89427,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-17 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 19,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89429,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-18 complete validation/finalization and full-sequence disk budget"
+    },
+    {
+      "source_sink_time": 20,
+      "queue_status": "queued",
+      "stage": "waiting",
+      "queue_PID": 89430,
+      "pipeline_PID": null,
+      "completed_rhs": 0,
+      "total_rhs": 20736,
+      "waiting_for": "time-19 complete validation/finalization and full-sequence disk budget"
+    }
+  ]
+}

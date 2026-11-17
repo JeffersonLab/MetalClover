@@ -1,0 +1,10 @@
+{
+  "status": "launched",
+  "UTC": "2026-11-17T00:09:16.472678+00:00",
+  "PID": 88300,
+  "detached": true,
+  "script_SHA256": "7ce90f6c49da9d82203885d7289ec0482e02e88c65c5391e7548cc028ba81dfc",
+  "log": "/private/tmp/chroma-times11-20-production/storage-supervisor.log",
+  "no_files_deleted_or_moved": true,
+  "purpose": "Enable queued times11..20 only when a current full-sequence disk forecast passes; continue monitoring locally"
+}

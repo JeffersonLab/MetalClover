@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-17T00:09:28.516977+00:00",
+  "distinct_frozen_files_verified": 66,
+  "checks": [
+    {
+      "time": 11,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 12,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 13,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 14,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 15,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 16,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 17,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 18,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 19,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    },
+    {
+      "time": 20,
+      "native_arguments_verified": true,
+      "private_runtime_unchanged": true
+    }
+  ],
+  "no_new_GPU_or_numerical_work": true,
+  "native_executable_library_controller_sources": "unchanged runtime validated by completed earlier runs and active time-seven solve",
+  "storage_supervisor_in_all_frozen_manifests": true
+}

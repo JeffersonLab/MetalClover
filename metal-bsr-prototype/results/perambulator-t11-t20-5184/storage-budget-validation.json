@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "tests": 4,
+  "scope": "Synthetic full-sequence allocation forecasts only",
+  "supervisor_SHA256": "7ce90f6c49da9d82203885d7289ec0482e02e88c65c5391e7548cc028ba81dfc"
+}

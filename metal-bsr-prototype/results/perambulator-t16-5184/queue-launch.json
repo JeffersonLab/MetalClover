@@ -1,0 +1,9 @@
+{
+  "source_time": 16,
+  "sink_time": 16,
+  "queue_PID": 89425,
+  "log": "/private/tmp/chroma-time16-production/queue-controller.log",
+  "awake_keeper_PID": 89447,
+  "dependency_time": 15,
+  "verified_status": "queued"
+}

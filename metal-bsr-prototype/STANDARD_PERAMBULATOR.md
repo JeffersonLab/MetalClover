@@ -141,3 +141,11 @@ FP64 checks at 1e-12. Each job uses one reused hierarchy, saves complete evidenc
 and retains its standard perambulator. The detached workers continue without
 a phone/chat connection. See [the five-job queue record](results/perambulator-t6-t10-5184/README.md)
 for the frozen private runtime, full-sequence storage budget and checks.
+
+
+Times eleven through twenty are queued sequentially after time ten, with the
+same 20,736-RHS action and checks at every time. Their separate detached workers
+retain every standard output and continue waiting without a phone connection.
+The full-sequence storage guard currently needs approximately 65 GiB additional
+free space before the extension can start; existing runs remain unchanged.
+See [the extension record](results/perambulator-t11-t20-5184/README.md).

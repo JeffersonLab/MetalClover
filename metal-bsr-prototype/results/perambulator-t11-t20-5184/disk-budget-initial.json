@@ -1,0 +1,405 @@
+{
+  "status": "insufficient_space",
+  "forecast_all_runs_fit": false,
+  "all_standard_perambulators_retained": true,
+  "actual_free_disk_GiB": 34.619869232177734,
+  "additional_free_space_required_GiB": 65.329345703125,
+  "required_actual_free_disk_GiB": 99.94921493530273,
+  "minimum_forecast_free_GiB": -60.45629894733429,
+  "minimum_new_job_start_free_GiB": -47.329345703125,
+  "minimum_before_projection_GiB": -53.98657238483429,
+  "native_projection_required_free_GiB": 11.04794921875,
+  "final_forecast_free_GiB": -54.049072265625,
+  "standard_budget_bytes_each": 6946816000,
+  "log_evidence_reserve_bytes_per_remaining_time": 268435456,
+  "global_reserve_bytes": 1073741824,
+  "no_files_deleted_or_moved_by_storage_supervisor": true,
+  "events": [
+    {
+      "event": "reserve 1 GiB for unrelated modest disk use",
+      "free_GiB": 33.619869232177734
+    },
+    {
+      "event": "time-7 remaining work begins",
+      "free_GiB": 33.619869232177734
+    },
+    {
+      "event": "time-7 peak output before validated point retirement",
+      "free_GiB": 26.900142669677734
+    },
+    {
+      "event": "time-7 accepted point retired; standard retained",
+      "free_GiB": 33.307373046875
+    },
+    {
+      "event": "time-8 remaining work begins",
+      "free_GiB": 33.307373046875
+    },
+    {
+      "event": "time-8 peak output before validated point retirement",
+      "free_GiB": 20.18041980266571
+    },
+    {
+      "event": "time-8 accepted point retired; standard retained",
+      "free_GiB": 26.587646484375
+    },
+    {
+      "event": "time-9 remaining work begins",
+      "free_GiB": 26.587646484375
+    },
+    {
+      "event": "time-9 peak output before validated point retirement",
+      "free_GiB": 13.46069324016571
+    },
+    {
+      "event": "time-9 accepted point retired; standard retained",
+      "free_GiB": 19.867919921875
+    },
+    {
+      "event": "time-10 remaining work begins",
+      "free_GiB": 19.867919921875
+    },
+    {
+      "event": "time-10 peak output before validated point retirement",
+      "free_GiB": 6.7409666776657104
+    },
+    {
+      "event": "time-10 accepted point retired; standard retained",
+      "free_GiB": 13.148193359375
+    },
+    {
+      "event": "time-11 remaining work begins",
+      "free_GiB": 13.148193359375
+    },
+    {
+      "event": "time-11 peak output before validated point retirement",
+      "free_GiB": 0.02124011516571045
+    },
+    {
+      "event": "time-11 accepted point retired; standard retained",
+      "free_GiB": 6.428466796875
+    },
+    {
+      "event": "time-12 remaining work begins",
+      "free_GiB": 6.428466796875
+    },
+    {
+      "event": "time-12 peak output before validated point retirement",
+      "free_GiB": -6.6984864473342896
+    },
+    {
+      "event": "time-12 accepted point retired; standard retained",
+      "free_GiB": -0.291259765625
+    },
+    {
+      "event": "time-13 remaining work begins",
+      "free_GiB": -0.291259765625
+    },
+    {
+      "event": "time-13 peak output before validated point retirement",
+      "free_GiB": -13.41821300983429
+    },
+    {
+      "event": "time-13 accepted point retired; standard retained",
+      "free_GiB": -7.010986328125
+    },
+    {
+      "event": "time-14 remaining work begins",
+      "free_GiB": -7.010986328125
+    },
+    {
+      "event": "time-14 peak output before validated point retirement",
+      "free_GiB": -20.13793957233429
+    },
+    {
+      "event": "time-14 accepted point retired; standard retained",
+      "free_GiB": -13.730712890625
+    },
+    {
+      "event": "time-15 remaining work begins",
+      "free_GiB": -13.730712890625
+    },
+    {
+      "event": "time-15 peak output before validated point retirement",
+      "free_GiB": -26.85766613483429
+    },
+    {
+      "event": "time-15 accepted point retired; standard retained",
+      "free_GiB": -20.450439453125
+    },
+    {
+      "event": "time-16 remaining work begins",
+      "free_GiB": -20.450439453125
+    },
+    {
+      "event": "time-16 peak output before validated point retirement",
+      "free_GiB": -33.57739269733429
+    },
+    {
+      "event": "time-16 accepted point retired; standard retained",
+      "free_GiB": -27.170166015625
+    },
+    {
+      "event": "time-17 remaining work begins",
+      "free_GiB": -27.170166015625
+    },
+    {
+      "event": "time-17 peak output before validated point retirement",
+      "free_GiB": -40.29711925983429
+    },
+    {
+      "event": "time-17 accepted point retired; standard retained",
+      "free_GiB": -33.889892578125
+    },
+    {
+      "event": "time-18 remaining work begins",
+      "free_GiB": -33.889892578125
+    },
+    {
+      "event": "time-18 peak output before validated point retirement",
+      "free_GiB": -47.01684582233429
+    },
+    {
+      "event": "time-18 accepted point retired; standard retained",
+      "free_GiB": -40.609619140625
+    },
+    {
+      "event": "time-19 remaining work begins",
+      "free_GiB": -40.609619140625
+    },
+    {
+      "event": "time-19 peak output before validated point retirement",
+      "free_GiB": -53.73657238483429
+    },
+    {
+      "event": "time-19 accepted point retired; standard retained",
+      "free_GiB": -47.329345703125
+    },
+    {
+      "event": "time-20 remaining work begins",
+      "free_GiB": -47.329345703125
+    },
+    {
+      "event": "time-20 peak output before validated point retirement",
+      "free_GiB": -60.45629894733429
+    },
+    {
+      "event": "time-20 accepted point retired; standard retained",
+      "free_GiB": -54.049072265625
+    }
+  ],
+  "snapshot": [
+    {
+      "time": 7,
+      "queue_status": "running",
+      "pipeline_exists": true,
+      "point": [
+        840329479,
+        6879707264,
+        6879711232
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 8,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 9,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 10,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 11,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 12,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 13,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 14,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 15,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 16,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 17,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 18,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 19,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 20,
+      "queue_status": "not_started",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    }
+  ],
+  "UTC": "2026-11-17T00:08:22.613878+00:00",
+  "supervisor_PID": 86402
+}

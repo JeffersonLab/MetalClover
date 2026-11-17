@@ -1,0 +1,114 @@
+{
+  "status": "queued",
+  "UTC": "2026-11-17T00:09:33.061732+00:00",
+  "source_sink_times": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "physical_RHS_per_time": 20736,
+  "additional_physical_RHS_total": 207360,
+  "detached_local_workers": true,
+  "storage_status_at_launch": "insufficient_space",
+  "storage_pending_at_launch": true,
+  "all_standard_perambulators_retained": true,
+  "jobs": [
+    {
+      "source_time": 11,
+      "sink_time": 11,
+      "queue_PID": 89416,
+      "log": "/private/tmp/chroma-time11-production/queue-controller.log",
+      "awake_keeper_PID": 89434,
+      "dependency_time": 10,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 12,
+      "sink_time": 12,
+      "queue_PID": 89417,
+      "log": "/private/tmp/chroma-time12-production/queue-controller.log",
+      "awake_keeper_PID": 89435,
+      "dependency_time": 11,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 13,
+      "sink_time": 13,
+      "queue_PID": 89419,
+      "log": "/private/tmp/chroma-time13-production/queue-controller.log",
+      "awake_keeper_PID": 89436,
+      "dependency_time": 12,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 14,
+      "sink_time": 14,
+      "queue_PID": 89423,
+      "log": "/private/tmp/chroma-time14-production/queue-controller.log",
+      "awake_keeper_PID": 89437,
+      "dependency_time": 13,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 15,
+      "sink_time": 15,
+      "queue_PID": 89424,
+      "log": "/private/tmp/chroma-time15-production/queue-controller.log",
+      "awake_keeper_PID": 89440,
+      "dependency_time": 14,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 16,
+      "sink_time": 16,
+      "queue_PID": 89425,
+      "log": "/private/tmp/chroma-time16-production/queue-controller.log",
+      "awake_keeper_PID": 89447,
+      "dependency_time": 15,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 17,
+      "sink_time": 17,
+      "queue_PID": 89426,
+      "log": "/private/tmp/chroma-time17-production/queue-controller.log",
+      "awake_keeper_PID": 89444,
+      "dependency_time": 16,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 18,
+      "sink_time": 18,
+      "queue_PID": 89427,
+      "log": "/private/tmp/chroma-time18-production/queue-controller.log",
+      "awake_keeper_PID": 89445,
+      "dependency_time": 17,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 19,
+      "sink_time": 19,
+      "queue_PID": 89429,
+      "log": "/private/tmp/chroma-time19-production/queue-controller.log",
+      "awake_keeper_PID": 89441,
+      "dependency_time": 18,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 20,
+      "sink_time": 20,
+      "queue_PID": 89430,
+      "log": "/private/tmp/chroma-time20-production/queue-controller.log",
+      "awake_keeper_PID": 89446,
+      "dependency_time": 19,
+      "verified_status": "queued"
+    }
+  ]
+}

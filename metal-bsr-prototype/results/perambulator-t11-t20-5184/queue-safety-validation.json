@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-17T00:07:11.933228+00:00",
+  "tests": 8,
+  "scope": "Synthetic queue gates and point-retirement guards; no numerical or GPU work",
+  "driver_SHA256": "175b840940f5ad5102eb16ba9b3adad2fbee1d57b999b78e1aa1d0d308efe80e"
+}
