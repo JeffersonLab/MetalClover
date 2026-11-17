@@ -8,3 +8,7 @@ format format-check:
 .PHONY: library install
 library install:
 	$(MAKE) -C metal-bsr-prototype $@
+
+.PHONY: api-example api-example-run
+api-example api-example-run:
+	$(MAKE) -C metal-bsr-prototype $@

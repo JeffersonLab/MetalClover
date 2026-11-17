@@ -3,7 +3,7 @@ CXX := xcrun clang++
 CXXFLAGS := -std=c++17 -O3 -mcpu=apple-m1 -ffp-contract=fast -Wall -Wextra -fobjc-arc -fblocks -DACCELERATE_NEW_LAPACK
 FRAMEWORKS := -framework Metal -framework Foundation -framework Accelerate
 CLANG_FORMAT ?= clang-format
-FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal) include/metalclover/metalclover.h
+FORMAT_SOURCES := $(wildcard *.hpp *.cc *.mm *.metal examples/*.cc) include/metalclover/metalclover.h
 METAL_SOURCES := kernels.metal solve.metal bicgstab.metal evenodd.metal \
 	clover.metal multigrid.metal sparse_coarse.metal compact_clover.metal \
 	mg_real_tune.metal packed_clover.metal
@@ -214,3 +214,13 @@ $(API_BUILD)/api_contract_test: api_contract_test.cc production_bridge.hpp $(API
 # Set BRIDGE to a small real aligned CHRMG003 field.
 api-contract-test: $(API_BUILD)/api_contract_test
 	VECLIB_MAXIMUM_THREADS=1 $(API_BUILD)/api_contract_test "$(BRIDGE)"
+
+# Self-contained client of the public C ABI; no Chroma or input files required.
+$(API_BUILD)/multi_rhs: examples/multi_rhs.cc include/metalclover/metalclover.h $(API_BUILD)/libmetalclover.dylib
+	$(CXX) -std=c++17 -O2 -Wall -Wextra -Iinclude $< -o $@ -L$(API_BUILD) -lmetalclover -Wl,-rpath,"$(abspath $(API_BUILD))"
+
+.PHONY: api-example api-example-run
+api-example: $(API_BUILD)/multi_rhs
+
+api-example-run: api-example
+	VECLIB_MAXIMUM_THREADS=1 $(API_BUILD)/multi_rhs bicg 5 3

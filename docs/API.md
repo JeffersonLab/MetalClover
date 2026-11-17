@@ -236,6 +236,37 @@ See [the detailed accounting](../metal-bsr-prototype/OPERATOR_WORK.md).
 
 ## C++ multi-RHS example
 
+For a complete runnable program, see
+[`examples/multi_rhs.cc`](../metal-bsr-prototype/examples/multi_rhs.cc).
+It uses only the public header, builds an identity gauge on a small 4^4 lattice,
+manufactures five different full sources from known solutions, and submits them
+in one array call with a default cap of three. No external input files or
+Chroma installation are required. From the repository root:
+
+```sh
+make api-example
+VECLIB_MAXIMUM_THREADS=1 ./metal-bsr-prototype/build/api/multi_rhs bicg 5 3
+# Or build and run that same default case:
+make api-example-run
+# Exercise the MG API with the same manufactured problem:
+VECLIB_MAXIMUM_THREADS=1 ./metal-bsr-prototype/build/api/multi_rhs mg 5 3
+```
+
+Arguments are `[bicg|mg] [rhs_count=5] [batch_cap=3]`, with counts in 1–64;
+`--help` prints usage. GPU execution requires Apple Metal access. The default
+five-RHS/cap-three case exercises a partial tail (normally tiles of 3+2;
+memory budgeting may lower the actual width). The program prints actual batch
+statistics and per-column iterations, recomputes every full FP64 residual,
+checks known-solution error, and exits nonzero on failure. It uses zero guesses
+and RAII cleanup. Its operator self-check is not independent Chroma validation.
+The example sets `second_filter=1`: long production setup filters can collapse
+the sample rank on this tiny free field. This demonstration setting is not a
+tuning recommendation for physical gauge configurations.
+For performance runs, replace the synthetic data with your physical gauge and
+action, and reuse a context across source groups to amortize setup.
+
+### Embeddable function
+
 This function accepts caller-prepared stout links and full spinor sources,
 allocates zero guesses, submits one array call, and releases the context on
 all exit paths. It can be compiled as a translation unit; supply your own

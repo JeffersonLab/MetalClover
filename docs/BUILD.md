@@ -68,6 +68,12 @@ library and rpath flags. Clients include only the public header; Objective-C++
 flags and framework compilation belong to the dylib build. See [API.md](API.md)
 for C++ namespacing, data preparation and a compilable function example.
 
+Build the self-contained multi-RHS example against the local library with
+`make api-example` from the repository root. `make api-example-run` also runs
+its five-source BiCGStab consistency check on the GPU; no gauge files are needed.
+See [the runnable example instructions](API.md#c-multi-rhs-example) for MG and
+RHS/tile arguments. The executable is `metal-bsr-prototype/build/api/multi_rhs`.
+
 ## Standalone programs
 
 ```sh
