@@ -6,7 +6,8 @@ Standalone Apple GPU experiments for anisotropic clover-Wilson inversion.
 
 See [docs/](docs/README.md) for the [public API and multi-RHS guide](docs/API.md),
 [build/install instructions](docs/BUILD.md), and
-[GPU implementation notes in LaTeX](docs/GPU_IMPLEMENTATION_NOTES.tex).
+[GPU implementation notes (PDF)](docs/GPU_IMPLEMENTATION_NOTES.pdf)
+([LaTeX source](docs/GPU_IMPLEMENTATION_NOTES.tex)).
 
 ## Provenance
 
