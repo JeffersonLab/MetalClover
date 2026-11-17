@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "UTC": "2026-11-16T10:28:23.167780+00:00",
+  "owner_time": 6,
+  "authorization": "Requested unattended standard-perambulator sequence; retire only fully validated point intermediates after preserving their complete evidence",
+  "all_standard_perambulators_and_original_inputs_retained": true,
+  "free_disk_GiB_before": 35.533111572265625,
+  "files": [
+    {
+      "time": 4,
+      "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1000-t4-unsmeared.npy",
+      "point_bytes": 6879707264,
+      "point_SHA256": "6c674c8f02f30755309cdb4adbb8d310aef7c276e5a1e76d912c2f183e414a57",
+      "retained_standard": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000",
+      "standard_bytes": 6907158528,
+      "standard_SHA256": "9f9151a3c6b52c22016a43948045089a4c5f4d9770e03c9bac933b95757abf23",
+      "current_point_and_standard_hashes_verified": true,
+      "point_file_not_open": true,
+      "retired": true
+    },
+    {
+      "time": 5,
+      "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1000-t5-unsmeared.npy",
+      "point_bytes": 6879707264,
+      "point_SHA256": "33618a98734e16511bc735db2a4f2e198e80a741646a66c58389fc1e244bc060",
+      "retained_standard": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_5.sdb1000",
+      "standard_bytes": 6907158528,
+      "standard_SHA256": "788a52779855df743ba959a05a1a412f9efee3216505d4f3d79e863a8876b072",
+      "current_point_and_standard_hashes_verified": true,
+      "point_file_not_open": true,
+      "retired": true
+    }
+  ],
+  "already_absent_times": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "free_disk_GiB_after": 48.33429718017578
+}

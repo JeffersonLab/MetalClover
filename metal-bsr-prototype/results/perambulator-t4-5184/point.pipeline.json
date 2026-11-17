@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "source_time": 4,
+  "sink_time": 4,
+  "physical_rhs": 20736,
+  "point_prefix": "/Users/admin/Downloads/MetalClover-results/cfg1000-t4-unsmeared",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000",
+  "started_UTC": "2026-11-15T17:29:49.904248+00:00",
+  "commands": {
+    "solve": [
+      "python3",
+      "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py",
+      "--binary",
+      "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/t_metal_clover_unsmeared_time",
+      "--gauge",
+      "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+      "--action",
+      "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/perambulator-t4-5184/action.xml",
+      "--eigenvectors",
+      "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_4.mod1000",
+      "--prefix",
+      "/Users/admin/Downloads/MetalClover-results/cfg1000-t4-unsmeared",
+      "--first",
+      "0",
+      "--vectors",
+      "5184",
+      "--max-rhs",
+      "16",
+      "--method",
+      "MetalMGClover",
+      "--time",
+      "4"
+    ],
+    "project": [
+      "python3",
+      "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_projected.py",
+      "--binary",
+      "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/project_perambulator_time",
+      "--point-prefix",
+      "/Users/admin/Downloads/MetalClover-results/cfg1000-t4-unsmeared",
+      "--eigenvectors",
+      "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_4.mod1000",
+      "--output",
+      "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000",
+      "--vectors",
+      "5184"
+    ],
+    "reader": [
+      "/private/tmp/chroma-metal-validation/enabled/mainprogs/tests/reader_check_time",
+      "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000",
+      "5184",
+      "KEYS_ONLY",
+      "4"
+    ]
+  },
+  "MetalClover_commit": "4974102784d312c83b4be75bf1532bcfa48de519",
+  "Chroma_commit": "17ecd4989cc4686abad0bc5cbfc6e21d32111773",
+  "pipeline_script_SHA256": "e1182d300131f7fd5d1650f85813f5fca1deeb93db188fc6e57e5e11f0e65650",
+  "stage": "complete",
+  "controller_PID": 47127,
+  "elapsed_seconds": 30617.77839725,
+  "finished_UTC": "2026-11-16T02:00:07.984836+00:00"
+}

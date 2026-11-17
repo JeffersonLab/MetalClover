@@ -1,0 +1,38 @@
+QDP use OpenMP threading. We have 1 threads
+Affinity reporting not implemented for this architecture
+Initialize done
+Lattice initialized:
+  problem size = 12 12 12 96
+  layout size = 6 12 12 96
+  logical machine size = 1 1 1 1
+  subgrid size = 12 12 12 96
+  total number of nodes = 1
+  total volume = 165888
+  subgrid volume = 165888
+Initializing QDPDefaultAllocator.
+Finished init of RNG
+Finished lattice layout
+MapObjectDisk: opening file /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_4.mod1000 for reading
+MapObjectDisk: reading and checking header
+MapObjectDisk: file has version: 1
+MapObjectDisk: reading key/fileposition data
+Open store database /Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000.partial
+Doubling at level 5 max_bucket at 56 data page starts at 57
+PROJECTED source_spin=0 sink_spin=0 vectors=5184 gemm_seconds=2.2467610000000002 qdp_dot_scaled_error=4.769360982578756e-15
+PROJECTED source_spin=0 sink_spin=1 vectors=5184 gemm_seconds=2.2070470000000002 qdp_dot_scaled_error=2.9304929259390593e-16
+PROJECTED source_spin=0 sink_spin=2 vectors=5184 gemm_seconds=2.2053750000000001 qdp_dot_scaled_error=8.0406605491256472e-16
+PROJECTED source_spin=0 sink_spin=3 vectors=5184 gemm_seconds=2.2126250000000001 qdp_dot_scaled_error=1.3888464605799321e-16
+PROJECTED source_spin=1 sink_spin=0 vectors=5184 gemm_seconds=2.2108970000000001 qdp_dot_scaled_error=2.4135359247621783e-16
+PROJECTED source_spin=1 sink_spin=1 vectors=5184 gemm_seconds=2.1981069999999998 qdp_dot_scaled_error=3.8678012238886615e-15
+PROJECTED source_spin=1 sink_spin=2 vectors=5184 gemm_seconds=2.2047470000000002 qdp_dot_scaled_error=1.928422626840983e-16
+PROJECTED source_spin=1 sink_spin=3 vectors=5184 gemm_seconds=2.2173069999999999 qdp_dot_scaled_error=4.4829750553334882e-16
+PROJECTED source_spin=2 sink_spin=0 vectors=5184 gemm_seconds=2.2087460000000001 qdp_dot_scaled_error=8.9875144863820253e-17
+PROJECTED source_spin=2 sink_spin=1 vectors=5184 gemm_seconds=2.217641 qdp_dot_scaled_error=2.1032212977435321e-16
+PROJECTED source_spin=2 sink_spin=2 vectors=5184 gemm_seconds=2.2114880000000001 qdp_dot_scaled_error=4.6124552746101127e-15
+PROJECTED source_spin=2 sink_spin=3 vectors=5184 gemm_seconds=2.2132580000000002 qdp_dot_scaled_error=4.9864821620414909e-16
+PROJECTED source_spin=3 sink_spin=0 vectors=5184 gemm_seconds=2.2135669999999998 qdp_dot_scaled_error=1.4991581396868565e-16
+PROJECTED source_spin=3 sink_spin=1 vectors=5184 gemm_seconds=2.182169 qdp_dot_scaled_error=3.2769255196219338e-16
+PROJECTED source_spin=3 sink_spin=2 vectors=5184 gemm_seconds=2.2143169999999999 qdp_dot_scaled_error=1.3007134393390021e-16
+PROJECTED source_spin=3 sink_spin=3 vectors=5184 gemm_seconds=2.21618 qdp_dot_scaled_error=4.1517836627299848e-15
+Open store database /Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1000.partial
+PASS projected_perambulator vectors=5184 records=16 full_gamma5_relative=1.0796451189639573e-14 qdp_dot_scaled_error=4.769360982578756e-15 total_seconds=271.95374099999998
