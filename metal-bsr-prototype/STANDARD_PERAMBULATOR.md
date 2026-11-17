@@ -149,3 +149,12 @@ retain every standard output and continue waiting without a phone connection.
 The full-sequence storage guard currently needs approximately 65 GiB additional
 free space before the extension can start; existing runs remain unchanged.
 See [the extension record](results/perambulator-t11-t20-5184/README.md).
+
+
+The cfg1000 time-eleven through time-twenty extension was cancelled on
+2026-11-17 before those inversions began. Cfg1000 continues through time ten,
+then the replacement cfg1020 queue computes P(1,1) through P(10,10) with the
+same action/checks and all standard files retained. Cfg1020 eigenvalues are
+present in `MODMetaData/Weights`; source-zero P(t,0) blocks are not present in
+older diagonal outputs and remain deferred by the user's priority selection.
+See [the replacement queue and feasibility record](results/cfg1020-t0-t10-5184/README.md).

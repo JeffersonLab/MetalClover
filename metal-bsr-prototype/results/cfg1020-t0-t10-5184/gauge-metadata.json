@@ -1,0 +1,57 @@
+{
+  "path": "/Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime",
+  "bytes": 47794864,
+  "SHA256": "788f93d758dabe96b18a570026624b359a6c503412a1338d1c70616c6ecea794",
+  "records": [
+    {
+      "type": "scidac-private-file-xml",
+      "bytes": 153,
+      "payload_offset": 144
+    },
+    {
+      "type": "scidac-file-xml",
+      "bytes": 455,
+      "payload_offset": 448
+    },
+    {
+      "type": "scidac-private-record-xml",
+      "bytes": 301,
+      "payload_offset": 1048
+    },
+    {
+      "type": "scidac-record-xml",
+      "bytes": 16724,
+      "payload_offset": 1496
+    },
+    {
+      "type": "ildg-format",
+      "bytes": 323,
+      "payload_offset": 18368
+    },
+    {
+      "type": "ildg-binary-data",
+      "bytes": 47775744,
+      "payload_offset": 18840
+    },
+    {
+      "type": "scidac-checksum",
+      "bytes": 135,
+      "payload_offset": 47794728
+    }
+  ],
+  "FermionAction_identical_to_cfg1000": true,
+  "FermionAction_instances_compared": 8,
+  "stored_checksum_XML": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><scidacChecksum><version>1.0</version><suma>a2a46cb</suma><sumb>1ad9a52c</sumb></scidacChecksum>",
+  "full_SciDAC_checksum_verified": true,
+  "computed_suma": "0a2a46cb",
+  "computed_sumb": "1ad9a52c",
+  "configuration_from_header": 1020,
+  "header_cfg_file": "szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime",
+  "ILDG_precision_bits": 32,
+  "lattice": [
+    12,
+    12,
+    12,
+    96
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "queued",
+  "source_time": 9,
+  "sink_time": 9,
+  "configuration": 1020,
+  "physical_rhs": 20736,
+  "queue_PID": 34638,
+  "queued_UTC": "2026-11-17T18:18:41.536763+00:00",
+  "dependency_pipeline": "/Users/admin/Downloads/MetalClover-results/cfg1020-t8-unsmeared.pipeline.json",
+  "pipeline_script": "/private/tmp/chroma-cfg1020-time9-production/full_run.py",
+  "continues_without_iPhone_connection": true,
+  "minimum_free_disk_GiB_before_start": 18.0,
+  "finalize_own_evidence_before_success": true,
+  "awake_keeper_PID": 34649,
+  "dependency_status": "not_started",
+  "dependency_stage": "not_started",
+  "dependency_queue_status": "queued",
+  "batch_storage_status": "pass",
+  "waiting_for": "cfg1020 time8 complete validation/finalization and disk budget",
+  "last_checked_UTC": "2026-11-17T18:18:41.540634+00:00",
+  "free_disk_GiB": 92.49636459350586
+}

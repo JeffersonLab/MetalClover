@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-17T18:17:05.453649+00:00",
+  "tests": 9,
+  "scope": "Synthetic dependency/storage/retirement guards, including rejection of cfg1000 proof for cfg1020 output; no numerical or GPU work",
+  "driver_SHA256": "0eb853b8f52230eb0c77e10d57cf7f4b36ef8adca6ae82fcca136b3a63b53e3e"
+}

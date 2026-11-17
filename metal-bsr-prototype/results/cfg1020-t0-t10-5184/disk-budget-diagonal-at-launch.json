@@ -1,0 +1,363 @@
+{
+  "status": "pass",
+  "forecast_all_runs_fit": true,
+  "all_standard_perambulators_retained": true,
+  "actual_free_disk_GiB": 92.4818344116211,
+  "additional_free_space_required_GiB": 0,
+  "required_actual_free_disk_GiB": 92.4818344116211,
+  "minimum_forecast_free_GiB": 10.84511935710907,
+  "minimum_new_job_start_free_GiB": 23.97207260131836,
+  "minimum_before_projection_GiB": 17.31484591960907,
+  "native_projection_required_free_GiB": 11.04794921875,
+  "final_forecast_free_GiB": 17.25234603881836,
+  "standard_budget_bytes_each": 6946816000,
+  "log_evidence_reserve_bytes_per_remaining_time": 268435456,
+  "global_reserve_bytes": 1073741824,
+  "no_files_deleted_or_moved_by_storage_supervisor": true,
+  "events": [
+    {
+      "event": "reserve 1 GiB for unrelated modest disk use",
+      "free_GiB": 91.4818344116211
+    },
+    {
+      "event": "cfg1000 time9 remaining work begins",
+      "free_GiB": 91.4818344116211
+    },
+    {
+      "event": "cfg1000 time9 peak output before validated point retirement",
+      "free_GiB": 84.7621078491211
+    },
+    {
+      "event": "cfg1000 time9 accepted point retired; standard retained",
+      "free_GiB": 91.16933822631836
+    },
+    {
+      "event": "cfg1000 time10 remaining work begins",
+      "free_GiB": 91.16933822631836
+    },
+    {
+      "event": "cfg1000 time10 peak output before validated point retirement",
+      "free_GiB": 78.04238498210907
+    },
+    {
+      "event": "cfg1000 time10 accepted point retired; standard retained",
+      "free_GiB": 84.44961166381836
+    },
+    {
+      "event": "cfg1020 time1 remaining work begins",
+      "free_GiB": 84.44961166381836
+    },
+    {
+      "event": "cfg1020 time1 peak output before validated point retirement",
+      "free_GiB": 71.32265841960907
+    },
+    {
+      "event": "cfg1020 time1 accepted point retired; standard retained",
+      "free_GiB": 77.72988510131836
+    },
+    {
+      "event": "cfg1020 time2 remaining work begins",
+      "free_GiB": 77.72988510131836
+    },
+    {
+      "event": "cfg1020 time2 peak output before validated point retirement",
+      "free_GiB": 64.60293185710907
+    },
+    {
+      "event": "cfg1020 time2 accepted point retired; standard retained",
+      "free_GiB": 71.01015853881836
+    },
+    {
+      "event": "cfg1020 time3 remaining work begins",
+      "free_GiB": 71.01015853881836
+    },
+    {
+      "event": "cfg1020 time3 peak output before validated point retirement",
+      "free_GiB": 57.88320529460907
+    },
+    {
+      "event": "cfg1020 time3 accepted point retired; standard retained",
+      "free_GiB": 64.29043197631836
+    },
+    {
+      "event": "cfg1020 time4 remaining work begins",
+      "free_GiB": 64.29043197631836
+    },
+    {
+      "event": "cfg1020 time4 peak output before validated point retirement",
+      "free_GiB": 51.16347873210907
+    },
+    {
+      "event": "cfg1020 time4 accepted point retired; standard retained",
+      "free_GiB": 57.57070541381836
+    },
+    {
+      "event": "cfg1020 time5 remaining work begins",
+      "free_GiB": 57.57070541381836
+    },
+    {
+      "event": "cfg1020 time5 peak output before validated point retirement",
+      "free_GiB": 44.44375216960907
+    },
+    {
+      "event": "cfg1020 time5 accepted point retired; standard retained",
+      "free_GiB": 50.85097885131836
+    },
+    {
+      "event": "cfg1020 time6 remaining work begins",
+      "free_GiB": 50.85097885131836
+    },
+    {
+      "event": "cfg1020 time6 peak output before validated point retirement",
+      "free_GiB": 37.72402560710907
+    },
+    {
+      "event": "cfg1020 time6 accepted point retired; standard retained",
+      "free_GiB": 44.13125228881836
+    },
+    {
+      "event": "cfg1020 time7 remaining work begins",
+      "free_GiB": 44.13125228881836
+    },
+    {
+      "event": "cfg1020 time7 peak output before validated point retirement",
+      "free_GiB": 31.00429904460907
+    },
+    {
+      "event": "cfg1020 time7 accepted point retired; standard retained",
+      "free_GiB": 37.41152572631836
+    },
+    {
+      "event": "cfg1020 time8 remaining work begins",
+      "free_GiB": 37.41152572631836
+    },
+    {
+      "event": "cfg1020 time8 peak output before validated point retirement",
+      "free_GiB": 24.28457248210907
+    },
+    {
+      "event": "cfg1020 time8 accepted point retired; standard retained",
+      "free_GiB": 30.69179916381836
+    },
+    {
+      "event": "cfg1020 time9 remaining work begins",
+      "free_GiB": 30.69179916381836
+    },
+    {
+      "event": "cfg1020 time9 peak output before validated point retirement",
+      "free_GiB": 17.56484591960907
+    },
+    {
+      "event": "cfg1020 time9 accepted point retired; standard retained",
+      "free_GiB": 23.97207260131836
+    },
+    {
+      "event": "cfg1020 time10 remaining work begins",
+      "free_GiB": 23.97207260131836
+    },
+    {
+      "event": "cfg1020 time10 peak output before validated point retirement",
+      "free_GiB": 10.84511935710907
+    },
+    {
+      "event": "cfg1020 time10 accepted point retired; standard retained",
+      "free_GiB": 17.25234603881836
+    }
+  ],
+  "snapshot": [
+    {
+      "configuration": 1000,
+      "time": 9,
+      "queue_status": "running",
+      "pipeline_exists": true,
+      "point": [
+        840535418,
+        6879707264,
+        6879711232
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1000,
+      "time": 10,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 1,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 2,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 3,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 4,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 5,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 6,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 7,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 8,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 9,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    },
+    {
+      "configuration": 1020,
+      "time": 10,
+      "queue_status": "queued",
+      "pipeline_exists": false,
+      "point": [
+        null,
+        0,
+        0
+      ],
+      "standard": [
+        null,
+        0,
+        0
+      ]
+    }
+  ],
+  "UTC": "2026-11-17T18:19:38.349077+00:00",
+  "supervisor_PID": 34592
+}

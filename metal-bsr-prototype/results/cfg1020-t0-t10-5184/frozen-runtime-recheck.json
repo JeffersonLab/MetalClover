@@ -1,0 +1,80 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-17T18:18:07.015376+00:00",
+  "distinct_frozen_files": 66,
+  "checks": [
+    {
+      "configuration": 1020,
+      "source_time": 1,
+      "sink_time": 1,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 2,
+      "sink_time": 2,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 3,
+      "sink_time": 3,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 4,
+      "sink_time": 4,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 5,
+      "sink_time": 5,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 6,
+      "sink_time": 6,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 7,
+      "sink_time": 7,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 8,
+      "sink_time": 8,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 9,
+      "sink_time": 9,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    },
+    {
+      "configuration": 1020,
+      "source_time": 10,
+      "sink_time": 10,
+      "native_argument_lists_verified": true,
+      "all_frozen_hashes_verified": true
+    }
+  ],
+  "numerical_executables_libraries_controllers_unchanged": true,
+  "new_GPU_work_performed": false,
+  "cfg1000_time10_dependency_explicit": true
+}

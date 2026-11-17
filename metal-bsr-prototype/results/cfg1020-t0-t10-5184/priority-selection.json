@@ -1,0 +1,6 @@
+{
+  "user_reply": "1",
+  "selected": "Run P(1,1) throughP(10,10) first; defer source-zero blocks",
+  "configuration": 1020,
+  "source_zero_blocks_computed_or_queued": false
+}

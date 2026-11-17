@@ -1,0 +1,101 @@
+{
+  "UTC": "2026-11-17T18:19:41.975216+00:00",
+  "jobs": [
+    {
+      "configuration": 1000,
+      "time": 9,
+      "status": "running",
+      "queue_PID": 39344,
+      "waiting_for": null,
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1000,
+      "time": 10,
+      "status": "queued",
+      "queue_PID": 39345,
+      "waiting_for": "time-9 complete validation and finalization",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 1,
+      "status": "queued",
+      "queue_PID": 34630,
+      "waiting_for": "cfg1000 time10 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 2,
+      "status": "queued",
+      "queue_PID": 34631,
+      "waiting_for": "cfg1020 time1 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 3,
+      "status": "queued",
+      "queue_PID": 34632,
+      "waiting_for": "cfg1020 time2 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 4,
+      "status": "queued",
+      "queue_PID": 34633,
+      "waiting_for": "cfg1020 time3 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 5,
+      "status": "queued",
+      "queue_PID": 34634,
+      "waiting_for": "cfg1020 time4 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 6,
+      "status": "queued",
+      "queue_PID": 34635,
+      "waiting_for": "cfg1020 time5 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 7,
+      "status": "queued",
+      "queue_PID": 34636,
+      "waiting_for": "cfg1020 time6 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 8,
+      "status": "queued",
+      "queue_PID": 34637,
+      "waiting_for": "cfg1020 time7 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 9,
+      "status": "queued",
+      "queue_PID": 34638,
+      "waiting_for": "cfg1020 time8 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    },
+    {
+      "configuration": 1020,
+      "time": 10,
+      "status": "queued",
+      "queue_PID": 34639,
+      "waiting_for": "cfg1020 time9 complete validation/finalization and disk budget",
+      "batch_storage_status": "pass"
+    }
+  ]
+}

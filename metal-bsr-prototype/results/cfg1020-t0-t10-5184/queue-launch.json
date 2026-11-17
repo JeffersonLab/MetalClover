@@ -1,0 +1,125 @@
+{
+  "status": "queued",
+  "configuration": 1020,
+  "UTC": "2026-11-17T18:18:41.348851+00:00",
+  "source_sink_times": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "physical_RHS_per_time": 20736,
+  "additional_physical_RHS_total": 207360,
+  "detached_local_workers": true,
+  "storage_status_at_launch": "pass",
+  "storage_pending_at_launch": false,
+  "all_standard_perambulators_retained": true,
+  "jobs": [
+    {
+      "source_time": 1,
+      "sink_time": 1,
+      "queue_PID": 34630,
+      "log": "/private/tmp/chroma-cfg1020-time1-production/queue-controller.log",
+      "awake_keeper_PID": 34640,
+      "dependency_configuration": 1000,
+      "dependency_time": 10,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 2,
+      "sink_time": 2,
+      "queue_PID": 34631,
+      "log": "/private/tmp/chroma-cfg1020-time2-production/queue-controller.log",
+      "awake_keeper_PID": 34641,
+      "dependency_configuration": 1020,
+      "dependency_time": 1,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 3,
+      "sink_time": 3,
+      "queue_PID": 34632,
+      "log": "/private/tmp/chroma-cfg1020-time3-production/queue-controller.log",
+      "awake_keeper_PID": 34642,
+      "dependency_configuration": 1020,
+      "dependency_time": 2,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 4,
+      "sink_time": 4,
+      "queue_PID": 34633,
+      "log": "/private/tmp/chroma-cfg1020-time4-production/queue-controller.log",
+      "awake_keeper_PID": 34643,
+      "dependency_configuration": 1020,
+      "dependency_time": 3,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 5,
+      "sink_time": 5,
+      "queue_PID": 34634,
+      "log": "/private/tmp/chroma-cfg1020-time5-production/queue-controller.log",
+      "awake_keeper_PID": 34644,
+      "dependency_configuration": 1020,
+      "dependency_time": 4,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 6,
+      "sink_time": 6,
+      "queue_PID": 34635,
+      "log": "/private/tmp/chroma-cfg1020-time6-production/queue-controller.log",
+      "awake_keeper_PID": 34645,
+      "dependency_configuration": 1020,
+      "dependency_time": 5,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 7,
+      "sink_time": 7,
+      "queue_PID": 34636,
+      "log": "/private/tmp/chroma-cfg1020-time7-production/queue-controller.log",
+      "awake_keeper_PID": 34647,
+      "dependency_configuration": 1020,
+      "dependency_time": 6,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 8,
+      "sink_time": 8,
+      "queue_PID": 34637,
+      "log": "/private/tmp/chroma-cfg1020-time8-production/queue-controller.log",
+      "awake_keeper_PID": 34648,
+      "dependency_configuration": 1020,
+      "dependency_time": 7,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 9,
+      "sink_time": 9,
+      "queue_PID": 34638,
+      "log": "/private/tmp/chroma-cfg1020-time9-production/queue-controller.log",
+      "awake_keeper_PID": 34649,
+      "dependency_configuration": 1020,
+      "dependency_time": 8,
+      "verified_status": "queued"
+    },
+    {
+      "source_time": 10,
+      "sink_time": 10,
+      "queue_PID": 34639,
+      "log": "/private/tmp/chroma-cfg1020-time10-production/queue-controller.log",
+      "awake_keeper_PID": 34646,
+      "dependency_configuration": 1020,
+      "dependency_time": 9,
+      "verified_status": "queued"
+    }
+  ]
+}

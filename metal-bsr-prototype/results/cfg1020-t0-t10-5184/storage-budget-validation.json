@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "tests": 4,
+  "scope": "Synthetic remaining-output allocations only",
+  "supervisor_SHA256": "543602fbca03bedfe7369100cbaafc89eed9974306cd87de4f8761f52aff56f8"
+}

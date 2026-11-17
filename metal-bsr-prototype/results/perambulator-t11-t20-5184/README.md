@@ -1,3 +1,8 @@
+**Cancelled on 2026-11-17: superseded by cfg1020 P(1,1) through P(10,10).**
+All ten waiting workers and their storage supervisor exited; cfg1000 continues
+through time ten. No standards or inputs were removed. See
+[the replacement queue](../cfg1020-t0-t10-5184/README.md).
+
 # Configuration 1000: queued source/sink times 11–20
 
 **Queued and launch-verified on 2026-11-16 Eastern time. Storage is pending.**

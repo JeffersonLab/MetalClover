@@ -1,0 +1,42 @@
+from pathlib import Path
+import subprocess,os,json,signal,time,datetime,hashlib
+root=Path('/Users/admin/Documents/ChatGPT/MG for Apple GPU');scratch=Path('/private/tmp/chroma-cfg1020-time8-production')
+bin=Path('/private/tmp/chroma-times6-10-production/runtime/bin')
+point=Path('/Users/admin/Downloads/MetalClover-results/cfg1020-t8-unsmeared')
+peram=Path('/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_8.sdb1020')
+gauge=Path('/Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime')
+eigen=Path('/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_8.mod1020')
+action=Path('/private/tmp/chroma-cfg1020-time8-production/action.xml')
+commands=[('solve',['python3',Path('/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py'),'--binary',bin/'t_metal_clover_unsmeared_time','--gauge',gauge,'--action',action,'--eigenvectors',eigen,'--prefix',point,'--first','0','--vectors','5184','--max-rhs','16','--method','MetalMGClover','--time','8']),('project',['python3',Path('/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py'),'--binary',bin/'project_perambulator_time','--point-prefix',point,'--eigenvectors',eigen,'--output',peram,'--vectors','5184']),('reader',[bin/'reader_check_time',peram,'5184','KEYS_ONLY','8'])]
+status_path=Path(str(point)+'.pipeline.json')
+record={'status':'running','configuration':1020,'source_time':8,'sink_time':8,'physical_rhs':20736,'point_prefix':str(point),'standard_perambulator':str(peram),'started_UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'commands':{name:[str(x) for x in cmd] for name,cmd in commands}}
+record['MetalClover_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
+record['Chroma_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd='/Users/admin/Downloads/chroma.metalclover',text=True).strip()
+record['pipeline_script_SHA256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+def save():
+ tmp=Path(str(status_path)+'.tmp');tmp.write_text(json.dumps(record,indent=2)+'\n');tmp.replace(status_path)
+child=None
+requested=[]
+def stop(sig,_):
+ requested.append(sig)
+ if child is not None and child.poll() is None:child.send_signal(signal.SIGTERM)
+signal.signal(signal.SIGINT,stop);signal.signal(signal.SIGTERM,stop)
+start=time.monotonic()
+for stage,cmd in commands:
+ if requested:
+  record.update(status='paused',stage=stage);save();raise SystemExit(75)
+ record.update(stage=stage);save()
+ with (scratch/('full-'+stage+'-controller.log')).open('x') as log:
+  child=subprocess.Popen([str(x) for x in cmd],stdout=log,stderr=subprocess.STDOUT)
+  record['controller_PID']=child.pid;save();code=child.wait()
+ if code:
+  record.update(status='paused' if code==75 else 'failed',exit_code=code,elapsed_seconds=time.monotonic()-start);save();raise SystemExit(code)
+ if stage=='solve':
+  completed=json.loads(Path(str(point)+'.complete.json').read_text())
+  assert completed['physical_rhs']==20736 and completed['source_time']==completed['sink_time']==8
+  assert completed['MG_hierarchy_builds_across_sessions']==completed['session_count']==1
+ if stage=='project':
+  completed=json.loads(Path(str(peram)+'.complete.json').read_text())
+  assert completed['source_time']==completed['sink_time']==8 and completed['spin_records']==16
+record.update(status='complete',stage='complete',elapsed_seconds=time.monotonic()-start,finished_UTC=datetime.datetime.now(datetime.timezone.utc).isoformat());save()
+print(json.dumps(record,indent=2),flush=True)

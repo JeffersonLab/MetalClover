@@ -1,0 +1,9 @@
+{
+  "status": "launched",
+  "PID": 34592,
+  "detached": true,
+  "UTC": "2026-11-17T18:18:38.014632+00:00",
+  "script_SHA256": "543602fbca03bedfe7369100cbaafc89eed9974306cd87de4f8761f52aff56f8",
+  "scope": "cfg1000 finish9/10, then cfg1020 diagonal1..10; source0 cross-time blocks deferred",
+  "no_files_deleted_or_moved": true
+}

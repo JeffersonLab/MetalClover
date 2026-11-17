@@ -1,3 +1,6 @@
+**Cancelled on 2026-11-17, before any inversion: replaced by cfg1020.**
+See `queue-cancelled.json`. All original inputs and standards are retained.
+
 # Configuration 1000: source/sink t=11
 
 Queued extension: all 5,184 eigenvectors and four spins (20,736 RHS), after

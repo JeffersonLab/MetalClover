@@ -1,0 +1,71 @@
+{
+  "status": "cancelled",
+  "UTC": "2026-11-17T18:10:50.417577+00:00",
+  "reason": "User changed plan: finish cfg1000 through t0=10, then cfg1020; cancel cfg1000 t0=11..20",
+  "cfg1000_times9_and10_untouched": true,
+  "workers": [
+    {
+      "time": 11,
+      "PID": 89416,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 12,
+      "PID": 89417,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 13,
+      "PID": 89419,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 14,
+      "PID": 89423,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 15,
+      "PID": 89424,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 16,
+      "PID": 89425,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 17,
+      "PID": 89426,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 18,
+      "PID": 89427,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 19,
+      "PID": 89429,
+      "previous_status": "queued",
+      "status": "cancelled"
+    },
+    {
+      "time": 20,
+      "PID": 89430,
+      "previous_status": "queued",
+      "status": "cancelled"
+    }
+  ],
+  "all_waiting_workers_exited": true,
+  "storage_supervisor_exited": true,
+  "finished_UTC": "2026-11-17T18:11:41.972921+00:00"
+}

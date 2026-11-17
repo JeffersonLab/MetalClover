@@ -1,0 +1,44 @@
+{
+  "status": "feasible_with_additional_export_support_and_storage; deferred_by_user",
+  "configuration": 1020,
+  "requested_blocks": {
+    "source_time": 0,
+    "sink_times": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "source_eigenvectors": 5184,
+  "source_spins": 4,
+  "required_physical_RHS_one_shared_source_bank": 20736,
+  "additional_RHS_per_extra_sink_time": 0,
+  "one_hierarchy_can_be_reused_for_the_source_bank": true,
+  "existing_cfg1020_perambulator_found": false,
+  "search_scope": [
+    "/Users/admin/Downloads/MetalClover-results",
+    "/Users/admin/Downloads/unitary_distillation",
+    "configuration-number filename inventory under Downloads and Documents/ChatGPT"
+  ],
+  "existing_cfg1000_production_retained_only_same_source_sink_time": true,
+  "cannot_recover_cross_time_blocks_from_saved_diagonal_blocks": true,
+  "unchanged_native_exporter_currently_supports_only_equal_source_sink_time": true,
+  "multi_sink_export_extension_required_before_computation": true,
+  "standard_bytes_per_block_observed_cfg1000": 6907158528,
+  "ten_cross_time_standards_GiB": 64.32792663574219,
+  "ten_diagonal_plus_ten_cross_time_standards_GiB": 128.65585327148438,
+  "conservative_cross_time_start_free_GiB_using_ten_point_spools_and_one_projection_at_a_time": 75.3702160358429,
+  "remaining_free_GiB_after_chosen_diagonals_in_current_forecast": 17.25234603881836,
+  "additional_free_GiB_for_deferred_cross_time_pipeline_after_diagonals": 58.11786999702454,
+  "existing_full_FP64_residual_checks_can_be_reused": true,
+  "cross_time_gamma5_check_requires_reverse_time_block_not_self_hermiticity": true,
+  "ordering": "User selected option1: diagonal P(t,t) first; source-zero blocks deferred",
+  "no_new_cfg1020_GPU_work_run_before_cfg1000_time10": true
+}

@@ -1,0 +1,10 @@
+{
+  "source_time": 7,
+  "sink_time": 7,
+  "queue_PID": 34636,
+  "log": "/private/tmp/chroma-cfg1020-time7-production/queue-controller.log",
+  "awake_keeper_PID": 34647,
+  "dependency_configuration": 1020,
+  "dependency_time": 6,
+  "verified_status": "queued"
+}

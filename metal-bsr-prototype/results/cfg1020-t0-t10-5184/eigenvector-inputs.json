@@ -1,0 +1,215 @@
+{
+  "status": "pass",
+  "inputs": [
+    {
+      "time": 0,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_0.mod1020",
+      "bytes": 215332818,
+      "SHA256": "2016bde95970b08dcd3e71dd3738fbad8bcf3e49071d6d974441cb682a71956e",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.168540958176172,
+      "eigenvalue_max": 11.8314590418238,
+      "eigenvalue_first": 11.8314590418238,
+      "eigenvalue_last": 0.168540958176172,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "0",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 1,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_1.mod1020",
+      "bytes": 215332806,
+      "SHA256": "0a9799acebceec0580567c600732b5a2719ac406028415bfff8ab8c106ae179d",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.167797118677476,
+      "eigenvalue_max": 11.8322028813225,
+      "eigenvalue_first": 11.8322028813225,
+      "eigenvalue_last": 0.167797118677476,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "1",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 2,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_2.mod1020",
+      "bytes": 215332772,
+      "SHA256": "742e34d2d9f049a69241e2c5b68f4f8c6129d2c7ad68e7d4af4c1c556abbcac2",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.167417527485907,
+      "eigenvalue_max": 11.8325824725141,
+      "eigenvalue_first": 11.8325824725141,
+      "eigenvalue_last": 0.167417527485907,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "2",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 3,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_3.mod1020",
+      "bytes": 215332806,
+      "SHA256": "ea7f2c0912354125852b480ed451d5f8ea7056c4608274926e00fbea1d45c7f4",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.184602395509034,
+      "eigenvalue_max": 11.815397604491,
+      "eigenvalue_first": 11.815397604491,
+      "eigenvalue_last": 0.184602395509034,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "3",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 4,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_4.mod1020",
+      "bytes": 215332809,
+      "SHA256": "661dded1b4479a2d8c1f0983ccbe34be4913e34acf05395aaeabec238307aa45",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.176267998087402,
+      "eigenvalue_max": 11.8237320019126,
+      "eigenvalue_first": 11.8237320019126,
+      "eigenvalue_last": 0.176267998087402,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "4",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 5,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_5.mod1020",
+      "bytes": 215332789,
+      "SHA256": "9ba7649b3585670b145d68e7345a76f6598806243a30738f43352f13e4241197",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.164738210954859,
+      "eigenvalue_max": 11.8352617890452,
+      "eigenvalue_first": 11.8352617890452,
+      "eigenvalue_last": 0.164738210954859,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "5",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 6,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_6.mod1020",
+      "bytes": 215332791,
+      "SHA256": "453befe3ada05360190239c3a8736659ff0fee2a3d90cee7851d80b032fd4104",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.163137181256354,
+      "eigenvalue_max": 11.8368628187436,
+      "eigenvalue_first": 11.8368628187436,
+      "eigenvalue_last": 0.163137181256354,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "6",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 7,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_7.mod1020",
+      "bytes": 215332803,
+      "SHA256": "e4dead2322f0e76e5b5fb428771747dd268ab02e58168aa98a1d965a9464accf",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.168863367753145,
+      "eigenvalue_max": 11.8311366322469,
+      "eigenvalue_first": 11.8311366322469,
+      "eigenvalue_last": 0.168863367753145,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "7",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 8,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_8.mod1020",
+      "bytes": 215332800,
+      "SHA256": "6b8e61c6bcf5e0c171c41e4b741a56541445556a6aabf059b85f0c3df89a85d1",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.170341967710212,
+      "eigenvalue_max": 11.8296580322898,
+      "eigenvalue_first": 11.8296580322898,
+      "eigenvalue_last": 0.170341967710212,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "8",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 9,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_9.mod1020",
+      "bytes": 215332811,
+      "SHA256": "165c385e18fd9e8f4226a1c93485d4fa168cef4a70fad4263bc7a90b7e34d67b",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.162212327404231,
+      "eigenvalue_max": 11.8377876725957,
+      "eigenvalue_first": 11.8377876725957,
+      "eigenvalue_last": 0.162212327404231,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "9",
+        "num_vecs": "5184"
+      }
+    },
+    {
+      "time": 10,
+      "path": "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_10.mod1020",
+      "bytes": 215332749,
+      "SHA256": "cb82c0b60884b044224810683f3a4913d9a51bfffd42a5af17066840fa58cfea",
+      "eigenvalue_count": 5184,
+      "eigenvalue_min": 0.156498511255899,
+      "eigenvalue_max": 11.8435014887441,
+      "eigenvalue_first": 11.8435014887441,
+      "eigenvalue_last": 0.156498511255899,
+      "descending": true,
+      "metadata": {
+        "id": "eigenVecsTimeSlice",
+        "lattSize": "12 12 12",
+        "decay_dir": "3",
+        "t_slice": "10",
+        "num_vecs": "5184"
+      }
+    }
+  ],
+  "all_header_ids_geometries_time_indices_counts_verified": true
+}
