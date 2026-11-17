@@ -4,7 +4,8 @@
   multi-RHS tiles, callbacks, errors, and a C++ usage example.
 - [Build and checks](BUILD.md): library installation, client linking, standalone
   programs, shader checks, numerical tests, and optional Chroma integration.
-- [GPU implementation notes (LaTeX)](GPU_IMPLEMENTATION_NOTES.tex): Schur
+- GPU implementation notes ([PDF](GPU_IMPLEMENTATION_NOTES.pdf),
+  [LaTeX source](GPU_IMPLEMENTATION_NOTES.tex)): Schur
   multigrid mathematics, Galerkin operators, transfers, near-null/SVD setup,
   Apple Metal implementation choices, and mgproton provenance.
 
