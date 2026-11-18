@@ -158,3 +158,11 @@ same action/checks and all standard files retained. Cfg1020 eigenvalues are
 present in `MODMetaData/Weights`; source-zero P(t,0) blocks are not present in
 older diagonal outputs and remain deferred by the user's priority selection.
 See [the replacement queue and feasibility record](results/cfg1020-t0-t10-5184/README.md).
+
+
+Cfg1000 time ten was temporarily suspended in place on 2026-11-17 Eastern to
+provide the user-requested idle benchmark window for New Wick contraction.
+The same PID, session and hierarchy resumed after 1,544.714 seconds. Raw native
+wall timings include the pause; no numerical timings or residual data were
+rewritten. See [the pause/resume record](results/cpu-idle-wick-20261117-224910/README.md)
+and the time-ten `manual-idle-window.json` when interpreting performance.

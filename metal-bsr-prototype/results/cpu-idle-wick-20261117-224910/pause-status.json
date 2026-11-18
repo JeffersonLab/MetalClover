@@ -1,0 +1,296 @@
+{
+  "window_id": "20261117-224910",
+  "status": "resumed",
+  "controller_PID": 2177,
+  "UTC": "2026-11-18T03:50:09.652521+00:00",
+  "targets": [
+    {
+      "role": "cfg1020 time1 start gate",
+      "pid": 34630,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 1"
+      ],
+      "original_identity": {
+        "pid": 34630,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 1",
+        "command_SHA256": "4d9319f488fb8aeb6a4ad7b7a2355af9089d7aaa123e91d7750af6dbbd78f4c0"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time2 start gate",
+      "pid": 34631,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 2"
+      ],
+      "original_identity": {
+        "pid": 34631,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 2",
+        "command_SHA256": "df00834ccf3fbae2dac5b6d5957ce68a6216bc66c3beb7c7bc19ed5d310840db"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time3 start gate",
+      "pid": 34632,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 3"
+      ],
+      "original_identity": {
+        "pid": 34632,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 3",
+        "command_SHA256": "8c4dd1ee95490543049ffc142bef4b4c7cdefd263726eecb762aaa31aa297e04"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time4 start gate",
+      "pid": 34633,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 4"
+      ],
+      "original_identity": {
+        "pid": 34633,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 4",
+        "command_SHA256": "e0f967d54897a96f262fafcb990e2821d76c9a3943db5d201cbb7f53a03e1314"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time5 start gate",
+      "pid": 34634,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 5"
+      ],
+      "original_identity": {
+        "pid": 34634,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 5",
+        "command_SHA256": "06eb5faa5043ba41a005ff9f4db4e891fd737aa9939f6c67d5c8a90aded23cb8"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time6 start gate",
+      "pid": 34635,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 6"
+      ],
+      "original_identity": {
+        "pid": 34635,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 6",
+        "command_SHA256": "e46a2ed76367a2705630da13cf6fd93ccf2bc6b8dff29e1ea7422184debfe7f9"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time7 start gate",
+      "pid": 34636,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 7"
+      ],
+      "original_identity": {
+        "pid": 34636,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 7",
+        "command_SHA256": "88311aa8df11bc87d4428bcdb88b8a5920736d3523b4f8fb2f863dc216de1226"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time8 start gate",
+      "pid": 34637,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 8"
+      ],
+      "original_identity": {
+        "pid": 34637,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 8",
+        "command_SHA256": "b9f5960d9f6f2f22c423ecdadb64851ddc8a9cba2ebf488f734eb62e5fc0787b"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time9 start gate",
+      "pid": 34638,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 9"
+      ],
+      "original_identity": {
+        "pid": 34638,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 9",
+        "command_SHA256": "94cedc415e1306d08d6e4e38ff603aca3f608ab8071c97cc2546e175eba5e867"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time10 start gate",
+      "pid": 34639,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 10"
+      ],
+      "original_identity": {
+        "pid": 34639,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/batch_queue.py --time 10",
+        "command_SHA256": "f149937f88297330a640d5f3ad308e4d9f5c1e04c2e7e5472e3c605ae8400a6a"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 storage monitor",
+      "pid": 34592,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/storage_watch.py"
+      ],
+      "original_identity": {
+        "pid": 34592,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Tue Nov 17 13:18:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-production/storage_watch.py",
+        "command_SHA256": "002552ee4a782e2841f419023f6ec0a70ffcb579cd447534d82aedb1602872f6"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1000 time10 queue",
+      "pid": 39345,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/batch_queue.py",
+        "--time 10"
+      ],
+      "original_identity": {
+        "pid": 39345,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Sun Nov 15 17:52:37 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-times6-10-production/batch_queue.py --time 10",
+        "command_SHA256": "0e1581210ef321a8b2dd1f7cc149db2b489abb7821d428b9ad47a0785eb7242c"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1000 time10 pipeline",
+      "pid": 46024,
+      "command_contains": [
+        "/private/tmp/chroma-time10-production/full_run.py"
+      ],
+      "original_identity": {
+        "pid": 46024,
+        "parent": 39345,
+        "state": "S",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-time10-production/full_run.py",
+        "command_SHA256": "193e8f1b3c5cf99b1f5b5ae53998a08e5c8de40286798b89f87a0a3d8e67ec27"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1000 time10 resource controller",
+      "pid": 46027,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+        "cfg1000-t10-unsmeared"
+      ],
+      "original_identity": {
+        "pid": 46027,
+        "parent": 46024,
+        "state": "S",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py --binary /private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time --gauge /Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime --action /private/tmp/chroma-time10-production/action.xml --eigenvectors /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_10.mod1000 --prefix /Users/admin/Downloads/MetalClover-results/cfg1000-t10-unsmeared --first 0 --vectors 5184 --max-rhs 16 --method MetalMGClover --time 10",
+        "command_SHA256": "fe48aaacd1259f3b14644680a3d451eec410c014dd5f136c4bf59ffdf7d29e56"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1000 time10 native solve",
+      "pid": 46030,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+        "cfg1000-t10-unsmeared"
+      ],
+      "original_identity": {
+        "pid": 46030,
+        "parent": 46027,
+        "state": "S",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command": "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time /Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime /private/tmp/chroma-time10-production/action.xml /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_10.mod1000 /Users/admin/Downloads/MetalClover-results/cfg1000-t10-unsmeared 0 5184 16 MetalMGClover --time 10",
+        "command_SHA256": "cbe67feccc980d5479065ca8e4125896df53ba28aa7cbf2077edcead148aad20"
+      },
+      "stopped": true,
+      "resumed": true
+    }
+  ],
+  "method": "SIGSTOP/SIGCONT in place; no solver exit or hierarchy rebuild",
+  "one_hierarchy_and_live_solve_preserved": true,
+  "updated_UTC": "2026-11-18T04:15:54.848458+00:00",
+  "paused_UTC": "2026-11-18T03:50:10.005768+00:00",
+  "maximum_pause_seconds": 1800,
+  "automatic_resume_deadline_UTC": "2026-11-18T04:20:10.005803+00:00",
+  "test_result": {
+    "window_id": "20261117-224910",
+    "status": "passed",
+    "test_processes_finished": true,
+    "report_path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/results.json",
+    "reason": "All six accepted runs passed byte comparison, audit and report publication.",
+    "UTC": "2026-11-18T04:15:53.995257+00:00",
+    "accepted_count": 6
+  },
+  "pause_seconds": 1544.713573125,
+  "resume_reason": "peer_test_finished",
+  "resume_started_UTC": "2026-11-18T04:15:54.670633+00:00",
+  "resumed_UTC": "2026-11-18T04:15:54.848432+00:00",
+  "resume_errors": []
+}

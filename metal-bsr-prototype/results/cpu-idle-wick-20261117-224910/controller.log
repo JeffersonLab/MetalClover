@@ -1,0 +1,2 @@
+{"status": "paused", "window_id": "20261117-224910", "processes": 15, "automatic_resume_deadline_UTC": "2026-11-18T04:20:10.005803+00:00"}
+{"status": "resumed", "resume_reason": "peer_test_finished", "pause_seconds": 1544.713573125, "resume_errors": []}

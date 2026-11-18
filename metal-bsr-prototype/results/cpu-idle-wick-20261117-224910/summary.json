@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "window_id": "20261117-224910",
+  "pause_started_UTC": "2026-11-18T03:50:10.005768+00:00",
+  "resumed_UTC": "2026-11-18T04:15:54.848432+00:00",
+  "pause_seconds": 1544.713573125,
+  "resume_reason": "peer_test_finished",
+  "native_PID_preserved": 46030,
+  "hierarchy_count_preserved": 1,
+  "session_preserved": 0,
+  "standard_outputs_and_full_FP64_checks_unchanged": true,
+  "raw_wall_times_include_pause": true,
+  "pause_record": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cpu-idle-wick-20261117-224910/pause-status.json",
+  "peer_results_snapshot_SHA256": "815cfb110052129b72f08389a14afcb06ff5963cc38cac3b0af5e0f27b32696f",
+  "peer_results_original_path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/results.json"
+}

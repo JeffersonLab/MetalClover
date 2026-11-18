@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-18T04:17:07.771277+00:00",
+  "window_id": "20261117-224910",
+  "all_15_processes_resumed": true,
+  "same_native_PID": 46030,
+  "same_solver_session": 0,
+  "hierarchy_setup_count": 1,
+  "paused_RHS": 17104,
+  "resumed_RHS": 17152,
+  "max_full_relative": 2.3624615691580134e-14,
+  "cfg1020_time1_status": "queued",
+  "storage_guard": "pass",
+  "pause_seconds": 1544.713573125,
+  "all_six_peer_runs_byte_identical": true,
+  "peer_report": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/results.json",
+  "native_reported_wall_times_include_this_pause": true
+}

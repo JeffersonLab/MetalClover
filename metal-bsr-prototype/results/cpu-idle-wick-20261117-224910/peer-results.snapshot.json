@@ -1,0 +1,785 @@
+{
+  "status": "passed",
+  "baseline": "6d80a78",
+  "threads": 8,
+  "repetitions": 3,
+  "variants": {
+    "devel": {
+      "commit": "6d80a78",
+      "wall_seconds": 30.538464792072773,
+      "wall_range": [
+        30.37856262503192,
+        30.733057542005554
+      ],
+      "peak_gib": 3.5433349609375,
+      "maximum_peak_gib": 3.6569061279296875,
+      "remapping_and_conversion_seconds": 9.79325,
+      "remapping_and_conversion_range": [
+        9.77322,
+        9.81044
+      ],
+      "phases": {
+        "factory_registration": 0.981916,
+        "input_and_setup": 0.142231,
+        "projected_weights": 0.050222,
+        "operator_map": 0.546184,
+        "contraction_pipeline": 6.01097,
+        "unique_graphs": 3.4056,
+        "topology_classification": 5.25153,
+        "graph_remapping": 5.03756,
+        "integer_graph_conversion": 4.75012,
+        "vertex_coefficients": 1.84197,
+        "evaluability_check": 0.841415,
+        "binary_serialization": 0.648789,
+        "optional_outputs_and_report": 0.000113667
+      },
+      "fused_subphases": {},
+      "workers": {
+        "setup_and_diagnostics": 0.778351,
+        "operator_expansion": 7.97684,
+        "quark_products": 10.1638,
+        "matching_and_flavor_folding": 11.306,
+        "graph_construction": 8.01283,
+        "insertion_wait": 3.918e-05,
+        "insertion_work": 7.55908,
+        "cleanup": 1.22352
+      }
+    },
+    "optimized": {
+      "commit": "6d80a78+fused-remap",
+      "wall_seconds": 22.778281167149544,
+      "wall_range": [
+        22.685820666141808,
+        23.06159945903346
+      ],
+      "peak_gib": 3.1446990966796875,
+      "maximum_peak_gib": 3.1576690673828125,
+      "remapping_and_conversion_seconds": 1.97323,
+      "remapping_and_conversion_range": [
+        1.94603,
+        1.9869
+      ],
+      "phases": {
+        "factory_registration": 1.00067,
+        "input_and_setup": 0.142151,
+        "projected_weights": 0.0503158,
+        "operator_map": 0.547917,
+        "contraction_pipeline": 6.299,
+        "unique_graphs": 3.43842,
+        "topology_classification": 5.34115,
+        "fused_remapping_and_integer_conversion": 1.97323,
+        "vertex_coefficients": 1.82921,
+        "evaluability_check": 0.737839,
+        "binary_serialization": 0.624851,
+        "optional_outputs_and_report": 0.000100834
+      },
+      "fused_subphases": {
+        "binary_ranking": 0.744266,
+        "compatibility_setup": 0.0153848,
+        "compact_remapping": 0.49041,
+        "integer_numbering": 0.190066,
+        "integer_diagrams": 0.26826
+      },
+      "workers": {
+        "setup_and_diagnostics": 0.774689,
+        "operator_expansion": 8.4162,
+        "quark_products": 10.9793,
+        "matching_and_flavor_folding": 11.9589,
+        "graph_construction": 8.59617,
+        "insertion_wait": 4.0582e-05,
+        "insertion_work": 7.88921,
+        "cleanup": 1.25143
+      }
+    }
+  },
+  "comparison": {
+    "remapping_and_conversion_speedup": 4.963055497838569,
+    "wall_speedup": 1.3406834592995909,
+    "wall_reduction_fraction": 0.2541117792842563,
+    "peak_rss_reduction_fraction": 0.11250301443483657
+  },
+  "direct_byte_comparison_all_six": true,
+  "graph_agreement": {
+    "equal": true,
+    "correlators": 729,
+    "graphs": 139733,
+    "vertices": 354,
+    "diagrams": 217532,
+    "finite_coefficients_compared": 234922,
+    "comparison": "exact after graph-ID remapping and map-key lookup"
+  },
+  "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+  "matching_counts_all_runs": {
+    "raw": 4419072,
+    "isospin_keys": 0,
+    "fold_merges": 3865280,
+    "fold_pruned": 314204,
+    "folded_keys": 239588,
+    "graph_keys": 239516
+  },
+  "small_graph_regressions": [
+    {
+      "scope": "single",
+      "basis": "four one/two/three-particle operators",
+      "sources": 1,
+      "baseline_candidate_byte_identical": true,
+      "historical_baseline_byte_identical": true,
+      "sha256": "5727a913468741b1a2f972c28ecc059b477fa224f750002c13616d50359386f9"
+    },
+    {
+      "scope": "combined",
+      "basis": "four one/two/three-particle operators",
+      "sources": 3,
+      "baseline_candidate_byte_identical": true,
+      "historical_baseline_byte_identical": true,
+      "sha256": "c08e74f6a76a57060e8171eda9ea62c087ca667a1b0ffb473bc90a638ce8d12e"
+    }
+  ],
+  "edge_graph_regressions": [
+    {
+      "case": "eta_eta_3pt",
+      "direct_bytes_equal": true,
+      "historical_bytes_equal": true,
+      "sha256": "ffd08af28105bede0bd3872f947981731462abc5fd81e300f205fe6cab5ce170"
+    },
+    {
+      "case": "nucnuc_small",
+      "direct_bytes_equal": true,
+      "historical_bytes_equal": true,
+      "sha256": "92ef833534f44d1cb776764c81171632e87f76296fe2b2e6b18cc2a575edce0c"
+    }
+  ],
+  "idle_thresholds_unchanged": true,
+  "idle_policy": {
+    "clock_disagreement_max_s": 1.0,
+    "idle_window_s": 60,
+    "sample_s": 5,
+    "pre_mean_cpu_cores_max": 1.0,
+    "pre_peak_cpu_cores_max": 1.5,
+    "mean_gpu_percent_max": 20,
+    "peak_gpu_percent_max": 30,
+    "run_15s_external_cores_max": 1.5,
+    "run_30s_external_cores_max": 1.0,
+    "run_30s_gpu_percent_max": 20,
+    "run_total_external_cores_max": 1.0,
+    "run_total_gpu_percent_max": 20,
+    "known_compute_prefixes": [
+      "metal_",
+      "mg-"
+    ],
+    "known_compute_names": [
+      "metal_clover",
+      "matelem_fitter",
+      "chroma",
+      "redstar_npt",
+      "redstar_corr_graph",
+      "production_solve",
+      "mg-near-null-solve",
+      "t_metal_clover_unsmeared_time"
+    ]
+  },
+  "monitor_notes": "All quantitative idle/AC-power criteria unchanged. Known compute detection additionally includes the observed t_metal_clover_unsmeared_time GPU test; unrelated processes are left untouched. A user-authorized production pause window excludes only independently verified stopped process identities from compute blockers; numerical activity criteria are unchanged. Original controller, policy, manifest and pause proof are preserved.",
+  "production_pause": {
+    "window_id": "20261117-224910",
+    "pause_record": "/private/tmp/metalclover-wick-idle-20261117-224910/status.json",
+    "proof_snapshot": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/logs/authorized-pause/status-before.json",
+    "plan_sha256": "15e63187fe6057d52876dbfaf158aff5e70049fb38ee2f41c89e82d341724375",
+    "independent_identities": [
+      {
+        "pid": 34630,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "4d9319f488fb8aeb6a4ad7b7a2355af9089d7aaa123e91d7750af6dbbd78f4c0"
+      },
+      {
+        "pid": 34631,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "df00834ccf3fbae2dac5b6d5957ce68a6216bc66c3beb7c7bc19ed5d310840db"
+      },
+      {
+        "pid": 34632,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "8c4dd1ee95490543049ffc142bef4b4c7cdefd263726eecb762aaa31aa297e04"
+      },
+      {
+        "pid": 34633,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "e0f967d54897a96f262fafcb990e2821d76c9a3943db5d201cbb7f53a03e1314"
+      },
+      {
+        "pid": 34634,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "06eb5faa5043ba41a005ff9f4db4e891fd737aa9939f6c67d5c8a90aded23cb8"
+      },
+      {
+        "pid": 34635,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "e46a2ed76367a2705630da13cf6fd93ccf2bc6b8dff29e1ea7422184debfe7f9"
+      },
+      {
+        "pid": 34636,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "88311aa8df11bc87d4428bcdb88b8a5920736d3523b4f8fb2f863dc216de1226"
+      },
+      {
+        "pid": 34637,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "b9f5960d9f6f2f22c423ecdadb64851ddc8a9cba2ebf488f734eb62e5fc0787b"
+      },
+      {
+        "pid": 34638,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "94cedc415e1306d08d6e4e38ff603aca3f608ab8071c97cc2546e175eba5e867"
+      },
+      {
+        "pid": 34639,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:41 2026",
+        "command_SHA256": "f149937f88297330a640d5f3ad308e4d9f5c1e04c2e7e5472e3c605ae8400a6a"
+      },
+      {
+        "pid": 34592,
+        "state": "Ts",
+        "started": "Tue Nov 17 13:18:38 2026",
+        "command_SHA256": "002552ee4a782e2841f419023f6ec0a70ffcb579cd447534d82aedb1602872f6"
+      },
+      {
+        "pid": 39345,
+        "state": "Ts",
+        "started": "Sun Nov 15 17:52:37 2026",
+        "command_SHA256": "0e1581210ef321a8b2dd1f7cc149db2b489abb7821d428b9ad47a0785eb7242c"
+      },
+      {
+        "pid": 46024,
+        "state": "T",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command_SHA256": "193e8f1b3c5cf99b1f5b5ae53998a08e5c8de40286798b89f87a0a3d8e67ec27"
+      },
+      {
+        "pid": 46027,
+        "state": "T",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command_SHA256": "fe48aaacd1259f3b14644680a3d451eec410c014dd5f136c4bf59ffdf7d29e56"
+      },
+      {
+        "pid": 46030,
+        "state": "T",
+        "started": "Tue Nov 17 15:46:37 2026",
+        "command_SHA256": "cbe67feccc980d5479065ca8e4125896df53ba28aa7cbf2077edcead148aad20"
+      }
+    ],
+    "deadline_UTC": "2026-11-18T04:20:10.005803+00:00",
+    "detection_change": "Only identity-verified kernel T-state targets from the authorized pause proof are inactive; active or identity-mismatched jobs remain blockers. Actual CPU/GPU, idle window, memory, thermal and AC-power limits are unchanged.",
+    "display_sleep": {
+      "UTC": "2026-11-18T03:57:58.898052+00:00",
+      "command": [
+        "/usr/bin/pmset",
+        "displaysleepnow"
+      ],
+      "purpose": "Reduce desktop GPU rendering; system stays awake and numeric GPU limits remain unchanged."
+    },
+    "spotlight_pause": {
+      "pid": 828,
+      "started": "Thu Nov  5 16:37:58 2026",
+      "command_SHA256": "1b10d49ffba9814f4be356e18172e78b93338e530c7dd4b45212c4e272a40e85",
+      "user_authorized": true,
+      "original_proof": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/logs/authorized-pause/spotlight-original.json",
+      "restoration_record": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/logs/authorized-pause/spotlight-restoration.json",
+      "guard_pid": 8022
+    },
+    "additional_display_sleep_requests": [
+      {
+        "UTC": "2026-11-18T04:05:13.571846+00:00",
+        "reason": "Renewed desktop GPU utilization above unchanged mean limit."
+      }
+    ]
+  },
+  "maximum_accepted_external_cores": 0.4876747115879545,
+  "accepted_runs": [
+    {
+      "variant": "devel",
+      "threads": 8,
+      "repeat": 1,
+      "attempt": 2,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 30.733057542005554,
+      "real_wall_seconds": 30.733081102371216,
+      "wick_seconds": 6.24307,
+      "actual_team": 8.0,
+      "user_seconds": 89.693566,
+      "system_seconds": 1.03272,
+      "peak_rss_bytes": 3804626944,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.27242813523432613,
+      "gpu_mean": 0.0,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/devel.t8.r1.a2",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 0.979431,
+        "input_and_setup": 0.141952,
+        "projected_weights": 0.050222,
+        "operator_map": 0.544819,
+        "contraction_pipeline": 6.2431,
+        "unique_graphs": 3.4056,
+        "topology_classification": 5.25153,
+        "graph_remapping": 5.0231,
+        "integer_graph_conversion": 4.75012,
+        "vertex_coefficients": 1.83243,
+        "evaluability_check": 0.855607,
+        "binary_serialization": 0.615048,
+        "optional_outputs_and_report": 0.000113667
+      },
+      "remap_subphase_seconds": {
+        "binary_ranking": 0.786405,
+        "output_setup": 0.00771379,
+        "per_correlator_remapping": 1.961
+      },
+      "fused_subphase_seconds": {},
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.769123,
+        "operator_expansion": 8.25671,
+        "quark_products": 10.7383,
+        "matching_and_flavor_folding": 11.754,
+        "graph_construction": 8.30192,
+        "insertion_wait": 3.7496e-05,
+        "insertion_work": 7.88883,
+        "cleanup": 1.22352
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 9.77322
+    },
+    {
+      "variant": "optimized",
+      "threads": 8,
+      "repeat": 1,
+      "attempt": 1,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 22.685820666141808,
+      "real_wall_seconds": 22.685838222503662,
+      "wick_seconds": 6.07193,
+      "actual_team": 8.0,
+      "user_seconds": 69.678638,
+      "system_seconds": 0.9425319999999999,
+      "peak_rss_bytes": 3331211264,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.4876747115879545,
+      "gpu_mean": 0.0,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/optimized.t8.r1.a1",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 0.996181,
+        "input_and_setup": 0.143439,
+        "projected_weights": 0.0505778,
+        "operator_map": 0.547917,
+        "contraction_pipeline": 6.07196,
+        "unique_graphs": 3.43842,
+        "topology_classification": 5.34239,
+        "fused_remapping_and_integer_conversion": 1.97323,
+        "vertex_coefficients": 1.82921,
+        "evaluability_check": 0.737839,
+        "binary_serialization": 0.603482,
+        "optional_outputs_and_report": 0.000100834
+      },
+      "remap_subphase_seconds": {},
+      "fused_subphase_seconds": {
+        "binary_ranking": 0.763399,
+        "compatibility_setup": 0.01551,
+        "compact_remapping": 0.481154,
+        "integer_numbering": 0.189839,
+        "integer_diagrams": 0.27394
+      },
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.774689,
+        "operator_expansion": 7.71117,
+        "quark_products": 10.4568,
+        "matching_and_flavor_folding": 11.4811,
+        "graph_construction": 8.16021,
+        "insertion_wait": 5.1156e-05,
+        "insertion_work": 7.66332,
+        "cleanup": 1.25143
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 1.97323
+    },
+    {
+      "variant": "optimized",
+      "threads": 8,
+      "repeat": 2,
+      "attempt": 1,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 23.06159945903346,
+      "real_wall_seconds": 23.061617136001587,
+      "wick_seconds": 6.45835,
+      "actual_team": 8.0,
+      "user_seconds": 73.213632,
+      "system_seconds": 0.9781439999999999,
+      "peak_rss_bytes": 3376594944,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.2877793779760969,
+      "gpu_mean": 0.0,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/optimized.t8.r2.a1",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 1.00067,
+        "input_and_setup": 0.142151,
+        "projected_weights": 0.0503158,
+        "operator_map": 0.546228,
+        "contraction_pipeline": 6.45837,
+        "unique_graphs": 3.44518,
+        "topology_classification": 5.34115,
+        "fused_remapping_and_integer_conversion": 1.9869,
+        "vertex_coefficients": 1.83207,
+        "evaluability_check": 0.774112,
+        "binary_serialization": 0.624851,
+        "optional_outputs_and_report": 8.4083e-05
+      },
+      "remap_subphase_seconds": {},
+      "fused_subphase_seconds": {
+        "binary_ranking": 0.744266,
+        "compatibility_setup": 0.0153477,
+        "compact_remapping": 0.490739,
+        "integer_numbering": 0.194788,
+        "integer_diagrams": 0.2665
+      },
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.831529,
+        "operator_expansion": 8.44855,
+        "quark_products": 11.1424,
+        "matching_and_flavor_folding": 12.0909,
+        "graph_construction": 8.70945,
+        "insertion_wait": 3.9297e-05,
+        "insertion_work": 8.15452,
+        "cleanup": 1.32953
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 1.9869
+    },
+    {
+      "variant": "devel",
+      "threads": 8,
+      "repeat": 2,
+      "attempt": 1,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 30.538464792072773,
+      "real_wall_seconds": 30.538488149642944,
+      "wick_seconds": 6.01096,
+      "actual_team": 8.0,
+      "user_seconds": 88.045263,
+      "system_seconds": 1.11722,
+      "peak_rss_bytes": 3926573056,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.28939342604814666,
+      "gpu_mean": 0.18854381996211575,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/devel.t8.r2.a1",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 1.03324,
+        "input_and_setup": 0.142231,
+        "projected_weights": 0.0505353,
+        "operator_map": 0.546184,
+        "contraction_pipeline": 6.01097,
+        "unique_graphs": 3.37546,
+        "topology_classification": 5.19992,
+        "graph_remapping": 5.0981,
+        "integer_graph_conversion": 4.69515,
+        "vertex_coefficients": 1.84738,
+        "evaluability_check": 0.82971,
+        "binary_serialization": 0.65431,
+        "optional_outputs_and_report": 0.000153333
+      },
+      "remap_subphase_seconds": {
+        "binary_ranking": 0.779644,
+        "output_setup": 0.0076025,
+        "per_correlator_remapping": 2.02792
+      },
+      "fused_subphase_seconds": {},
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.778351,
+        "operator_expansion": 7.97684,
+        "quark_products": 10.1638,
+        "matching_and_flavor_folding": 11.306,
+        "graph_construction": 8.01283,
+        "insertion_wait": 3.9495e-05,
+        "insertion_work": 7.55908,
+        "cleanup": 1.21622
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 9.79325
+    },
+    {
+      "variant": "devel",
+      "threads": 8,
+      "repeat": 3,
+      "attempt": 1,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 30.37856262503192,
+      "real_wall_seconds": 30.378586292266846,
+      "wick_seconds": 5.80087,
+      "actual_team": 8.0,
+      "user_seconds": 85.952984,
+      "system_seconds": 0.9882559999999999,
+      "peak_rss_bytes": 3783081984,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.2700218037472621,
+      "gpu_mean": 0.1067299010026816,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/devel.t8.r3.a1",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 0.981916,
+        "input_and_setup": 0.142478,
+        "projected_weights": 0.0499887,
+        "operator_map": 0.546258,
+        "contraction_pipeline": 5.8009,
+        "unique_graphs": 3.40606,
+        "topology_classification": 5.254,
+        "graph_remapping": 5.03756,
+        "integer_graph_conversion": 4.77288,
+        "vertex_coefficients": 1.84197,
+        "evaluability_check": 0.841415,
+        "binary_serialization": 0.648789,
+        "optional_outputs_and_report": 9.95e-05
+      },
+      "remap_subphase_seconds": {
+        "binary_ranking": 0.802093,
+        "output_setup": 0.00765825,
+        "per_correlator_remapping": 1.93301
+      },
+      "fused_subphase_seconds": {},
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.834921,
+        "operator_expansion": 7.08997,
+        "quark_products": 9.87976,
+        "matching_and_flavor_folding": 11.1144,
+        "graph_construction": 7.7611,
+        "insertion_wait": 3.918e-05,
+        "insertion_work": 7.41085,
+        "cleanup": 1.37864
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 9.81044
+    },
+    {
+      "variant": "optimized",
+      "threads": 8,
+      "repeat": 3,
+      "attempt": 1,
+      "accepted_environment": true,
+      "environment_rejection": null,
+      "exit_code": 0,
+      "wall_seconds": 22.778281167149544,
+      "real_wall_seconds": 22.778297901153564,
+      "wick_seconds": 6.29898,
+      "actual_team": 8.0,
+      "user_seconds": 72.233685,
+      "system_seconds": 0.908872,
+      "peak_rss_bytes": 3390521344,
+      "major_page_faults": 9,
+      "swaps": 0,
+      "external_cores_mean": 0.4318917052528058,
+      "gpu_mean": 0.0,
+      "run_directory": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/optimized.t8.r3.a1",
+      "thermal_power_after": {
+        "thermal_text": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "thermal_limit": false,
+        "power_source": "AC Power"
+      },
+      "actual_team_max": 8.0,
+      "phase_wall_seconds": {
+        "factory_registration": 1.01162,
+        "input_and_setup": 0.141932,
+        "projected_weights": 0.0501544,
+        "operator_map": 0.552612,
+        "contraction_pipeline": 6.299,
+        "unique_graphs": 3.42773,
+        "topology_classification": 5.32879,
+        "fused_remapping_and_integer_conversion": 1.94603,
+        "vertex_coefficients": 1.82902,
+        "evaluability_check": 0.726427,
+        "binary_serialization": 0.625799,
+        "optional_outputs_and_report": 0.000344167
+      },
+      "remap_subphase_seconds": {},
+      "fused_subphase_seconds": {
+        "binary_ranking": 0.742851,
+        "compatibility_setup": 0.0153848,
+        "compact_remapping": 0.49041,
+        "integer_numbering": 0.190066,
+        "integer_diagrams": 0.26826
+      },
+      "worker_summed_seconds": {
+        "setup_and_diagnostics": 0.756904,
+        "operator_expansion": 8.4162,
+        "quark_products": 10.9793,
+        "matching_and_flavor_folding": 11.9589,
+        "graph_construction": 8.59617,
+        "insertion_wait": 4.0582e-05,
+        "insertion_work": 7.88921,
+        "cleanup": 1.20495
+      },
+      "comparison": {
+        "equal": true,
+        "correlators": 729,
+        "graphs": 139733,
+        "vertices": 354,
+        "diagrams": 217532,
+        "finite_coefficients_compared": 234922,
+        "comparison": "exact after graph-ID remapping and map-key lookup"
+      },
+      "graph_sha256": "3f9c33fcd1c529c0bd9d210c47a146259eb63129fa8dbb3c3cf7238103e457d8",
+      "accepted": true,
+      "matching_counts": {
+        "raw": 4419072,
+        "isospin_keys": 0,
+        "fold_merges": 3865280,
+        "fold_pruned": 314204,
+        "folded_keys": 239588,
+        "graph_keys": 239516
+      },
+      "remapping_and_conversion_seconds": 1.94603
+    }
+  ],
+  "excluded_attempts": [
+    "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/runs/devel.t8.r1.a1"
+  ],
+  "make_check": "passed",
+  "formatting": "repository .clang-format on edited implementation blocks",
+  "legacy_fallback_used": false
+}

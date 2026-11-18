@@ -1,0 +1,9 @@
+{
+  "window_id": "20261117-224910",
+  "status": "passed",
+  "test_processes_finished": true,
+  "report_path": "/Users/admin/Downloads/redstar.devel-rge-wick/build/benchmarks/fused-remap-8t-20261117-001/results.json",
+  "reason": "All six accepted runs passed byte comparison, audit and report publication.",
+  "UTC": "2026-11-18T04:15:53.995257+00:00",
+  "accepted_count": 6
+}

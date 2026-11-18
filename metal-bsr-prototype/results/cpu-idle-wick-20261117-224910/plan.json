@@ -1,0 +1,132 @@
+{
+  "window_id": "20261117-224910",
+  "report_directory": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cpu-idle-wick-20261117-224910",
+  "work_directory": "/private/tmp/metalclover-wick-idle-20261117-224910",
+  "maximum_pause_seconds": 1800,
+  "purpose": "User requested up to30min idle CPU/GPU for New Wick contraction benchmark",
+  "method": "SIGSTOP/SIGCONT in place; no solver exit or hierarchy rebuild",
+  "preserve_all_standard_perambulators": true,
+  "native_completed_rhs_before_pause": 17056,
+  "native_max_full_relative_before_pause": 2.3624615691580134e-14,
+  "targets": [
+    {
+      "role": "cfg1020 time1 start gate",
+      "pid": 34630,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 1"
+      ]
+    },
+    {
+      "role": "cfg1020 time2 start gate",
+      "pid": 34631,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 2"
+      ]
+    },
+    {
+      "role": "cfg1020 time3 start gate",
+      "pid": 34632,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 3"
+      ]
+    },
+    {
+      "role": "cfg1020 time4 start gate",
+      "pid": 34633,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 4"
+      ]
+    },
+    {
+      "role": "cfg1020 time5 start gate",
+      "pid": 34634,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 5"
+      ]
+    },
+    {
+      "role": "cfg1020 time6 start gate",
+      "pid": 34635,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 6"
+      ]
+    },
+    {
+      "role": "cfg1020 time7 start gate",
+      "pid": 34636,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 7"
+      ]
+    },
+    {
+      "role": "cfg1020 time8 start gate",
+      "pid": 34637,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 8"
+      ]
+    },
+    {
+      "role": "cfg1020 time9 start gate",
+      "pid": 34638,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 9"
+      ]
+    },
+    {
+      "role": "cfg1020 time10 start gate",
+      "pid": 34639,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+        "--time 10"
+      ]
+    },
+    {
+      "role": "cfg1020 storage monitor",
+      "pid": 34592,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-production/storage_watch.py"
+      ]
+    },
+    {
+      "role": "cfg1000 time10 queue",
+      "pid": 39345,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/batch_queue.py",
+        "--time 10"
+      ]
+    },
+    {
+      "role": "cfg1000 time10 pipeline",
+      "pid": 46024,
+      "command_contains": [
+        "/private/tmp/chroma-time10-production/full_run.py"
+      ]
+    },
+    {
+      "role": "cfg1000 time10 resource controller",
+      "pid": 46027,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+        "cfg1000-t10-unsmeared"
+      ]
+    },
+    {
+      "role": "cfg1000 time10 native solve",
+      "pid": 46030,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+        "cfg1000-t10-unsmeared"
+      ]
+    }
+  ],
+  "peer_thread_id": "01a1a318-f0db-7360-a259-360a394f231e"
+}
