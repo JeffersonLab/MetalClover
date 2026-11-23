@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "UTC": "2026-11-20T00:02:20.133114+00:00",
+  "owner_time": 5,
+  "configuration": 1020,
+  "authorization": "Requested unattended standard-perambulator sequence; retire only fully validated point intermediates after preserving their complete evidence",
+  "all_standard_perambulators_and_original_inputs_retained": true,
+  "free_disk_GiB_before": 71.7220458984375,
+  "files": [
+    {
+      "time": 5,
+      "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1020-t5-unsmeared.npy",
+      "point_bytes": 6879707264,
+      "point_SHA256": "1843bf0a35e9b94f839bfcb8dc2b859a889efe73ba416eda9a92875e4261c5b3",
+      "retained_standard": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_5.sdb1020",
+      "standard_bytes": 6907158528,
+      "standard_SHA256": "9ff68602a9447adf6eb2f38d039102b17b8eb83cb85797a376873d1644288483",
+      "current_point_and_standard_hashes_verified": true,
+      "point_file_not_open": true,
+      "retired": true
+    }
+  ],
+  "already_absent_times": [],
+  "free_disk_GiB_after": 78.14627075195312
+}

@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "source_time": 9,
+  "sink_time": 9,
+  "physical_rhs": 20736,
+  "point_prefix": "/Users/admin/Downloads/MetalClover-results/cfg1000-t9-unsmeared",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_9.sdb1000",
+  "started_UTC": "2026-11-17T11:54:56.365307+00:00",
+  "commands": {
+    "solve": [
+      "python3",
+      "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+      "--binary",
+      "/private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time",
+      "--gauge",
+      "/Users/admin/Downloads/download/prop_tests/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1000.lime",
+      "--action",
+      "/private/tmp/chroma-time9-production/action.xml",
+      "--eigenvectors",
+      "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_9.mod1000",
+      "--prefix",
+      "/Users/admin/Downloads/MetalClover-results/cfg1000-t9-unsmeared",
+      "--first",
+      "0",
+      "--vectors",
+      "5184",
+      "--max-rhs",
+      "16",
+      "--method",
+      "MetalMGClover",
+      "--time",
+      "9"
+    ],
+    "project": [
+      "python3",
+      "/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py",
+      "--binary",
+      "/private/tmp/chroma-times6-10-production/runtime/bin/project_perambulator_time",
+      "--point-prefix",
+      "/Users/admin/Downloads/MetalClover-results/cfg1000-t9-unsmeared",
+      "--eigenvectors",
+      "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1000/eigs.t_9.mod1000",
+      "--output",
+      "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_9.sdb1000",
+      "--vectors",
+      "5184"
+    ],
+    "reader": [
+      "/private/tmp/chroma-times6-10-production/runtime/bin/reader_check_time",
+      "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_9.sdb1000",
+      "5184",
+      "KEYS_ONLY",
+      "9"
+    ]
+  },
+  "MetalClover_commit": "26468f60374393bca7541c4078b8d7c6a8ab8ac0",
+  "Chroma_commit": "42997f596f993b03d8aa0fe1a45b964a761104ff",
+  "pipeline_script_SHA256": "1b1dced68f061175e925eccf4abdf44fc011515877fb611c72bb20946e26e163",
+  "stage": "complete",
+  "controller_PID": 45993,
+  "elapsed_seconds": 31866.067464916,
+  "finished_UTC": "2026-11-17T20:46:02.740247+00:00"
+}

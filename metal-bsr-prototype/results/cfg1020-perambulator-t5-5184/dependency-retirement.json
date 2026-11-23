@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "UTC": "2026-11-19T15:36:13.930320+00:00",
+  "owner_time": 5,
+  "configuration": 1020,
+  "authorization": "Requested unattended standard-perambulator sequence; retire only fully validated point intermediates after preserving their complete evidence",
+  "all_standard_perambulators_and_original_inputs_retained": true,
+  "free_disk_GiB_before": 87.53626251220703,
+  "files": [],
+  "already_absent_times": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "free_disk_GiB_after": 87.5362548828125
+}

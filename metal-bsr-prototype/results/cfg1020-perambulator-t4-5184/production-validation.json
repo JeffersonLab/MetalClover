@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "configuration": 1020,
+  "source_time": 4,
+  "sink_time": 4,
+  "physical_rhs": 20736,
+  "source_vectors": 5184,
+  "spin_records": 16,
+  "native_array_calls": 1296,
+  "RHS_per_call": 16,
+  "hierarchies": 1,
+  "sessions": 1,
+  "both_original_full_CPU_FP64_checks_tolerance": 1e-12,
+  "maximum_full_relative": 2.4878384610123573e-14,
+  "all_point_column_checksums_verified": true,
+  "all_standard_record_values_readback_bitwise": true,
+  "full_gamma5_relative_Frobenius": 1.09986128214969e-14,
+  "direct_QDP_contraction_scaled_error": 5.47264608052771e-15,
+  "independent_DataLib_full_file_key_check": "pass",
+  "unchanged_frozen_source_executable_library_hashes": true,
+  "per_source_spin": {
+    "0": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.442973861814641e-14,
+      "source_norm_min": 0.9999999980997339,
+      "source_norm_max": 1.0000000014501962
+    },
+    "1": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3749327777799196e-14,
+      "source_norm_min": 0.9999999980997339,
+      "source_norm_max": 1.0000000014501962
+    },
+    "2": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.4878384610123573e-14,
+      "source_norm_min": 0.9999999980997339,
+      "source_norm_max": 1.0000000014501962
+    },
+    "3": {
+      "accepted_rhs": 5184,
+      "maximum_full_relative": 2.3804004564682765e-14,
+      "source_norm_min": 0.9999999980997339,
+      "source_norm_max": 1.0000000014501962
+    }
+  },
+  "solve_seconds": 29953.624170292,
+  "projection_validation_seconds": 275.198835,
+  "pipeline_seconds": 30254.593354375,
+  "nominal_dispatched_GPU_operator_GFLOP_per_second_solve_wall": 278.67066833236896,
+  "point_SHA256": "0dbfdca4ddfbbab2da4ec5b22fe9e8419f7a36b7fb41a5c266c24c1ca1b91d8c",
+  "standard_perambulator_SHA256": "c17085161ddcb12caf5771de6c32817a025a9a7b7ec326f1d92644b57572fb5f",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_4.sdb1020",
+  "point_file": "/Users/admin/Downloads/MetalClover-results/cfg1020-t4-unsmeared.npy",
+  "large_payloads_committed_to_git": false,
+  "point_intermediate_retired_after_full_validation": true,
+  "retirement_record": "../cfg1020-perambulator-t4-5184/intermediate-retirement.json",
+  "standard_perambulator_retained_SHA256_rechecked": true
+}

@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "command": [
+    "/private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time",
+    "/Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime",
+    "/private/tmp/chroma-cfg1020-time2-production/action.xml",
+    "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_2.mod1020",
+    "/Users/admin/Downloads/MetalClover-results/cfg1020-t2-unsmeared",
+    "0",
+    "5184",
+    "16",
+    "MetalMGClover",
+    "--time",
+    "2"
+  ],
+  "total_rhs": 20736,
+  "source_time": 2,
+  "sink_time": 2,
+  "started_UTC": "2026-11-18T14:17:39.170919+00:00",
+  "binary_sha256": "9cd0be6ac9e1dcb3782ed51bdc577f2077c337b176d171f695217b2fe0e91115",
+  "inputs_sha256": {
+    "/Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime": "788f93d758dabe96b18a570026624b359a6c503412a1338d1c70616c6ecea794",
+    "/private/tmp/chroma-cfg1020-time2-production/action.xml": "91b65f00078295277b892f302912b021db17f7cbd7a3292e5c2cf0fd48d791cf",
+    "/Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_2.mod1020": "742e34d2d9f049a69241e2c5b68f4f8c6129d2c7ad68e7d4af4c1c556abbcac2"
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "limits": {
+    "max_rss_gib": 26,
+    "reserve_disk_gib": 4
+  },
+  "PID": 40916,
+  "elapsed_seconds": 30074.512280749997,
+  "RSS_GiB": 3.936981201171875,
+  "free_disk_GiB": 100.32484436035156,
+  "peak_RSS_GiB": 5.9535064697265625,
+  "minimum_free_disk_GiB": 100.32177352905273,
+  "completed_rhs": 20736,
+  "max_full_relative": 2.571971200775573e-14,
+  "qprop_seconds": 27910.041109999962,
+  "verify_seconds": 1963.7155060000218,
+  "write_seconds": 29.565716,
+  "exit_code": 0,
+  "finished_UTC": "2026-11-18T22:38:54.075940+00:00",
+  "payload_sha256": "add38d294ffbe3751a41495c1cf94c75a1d4c64526284fcf6a871471bdac61e1"
+}
