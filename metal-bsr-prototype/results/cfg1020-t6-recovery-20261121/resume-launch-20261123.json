@@ -1,0 +1,41 @@
+{
+  "status": "launched",
+  "UTC": "2026-11-23T21:42:38.167361+00:00",
+  "user_authorized_resume": true,
+  "continue_without_chat_or_phone": true,
+  "configuration": 1020,
+  "scope": "Recover diagonal6; resume diagonal7..10; no source-zero or cfg1000 work",
+  "durable_runtime_backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123",
+  "jobs": [
+    {
+      "name": "runtime-supervisor",
+      "PID": 17663,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/runtime-supervisor-20261123.log"
+    },
+    {
+      "name": "time6-postprocessing",
+      "PID": 17664,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/time6-postprocessing-20261123.log"
+    },
+    {
+      "name": "time7-queue",
+      "PID": 17665,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/time7-queue-20261123.log"
+    },
+    {
+      "name": "time8-queue",
+      "PID": 17666,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/time8-queue-20261123.log"
+    },
+    {
+      "name": "time9-queue",
+      "PID": 17667,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/time9-queue-20261123.log"
+    },
+    {
+      "name": "time10-queue",
+      "PID": 17668,
+      "log": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/time10-queue-20261123.log"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "user_paused",
+  "UTC": "2026-11-21T19:54:37.088450+00:00",
+  "reason": "User explicitly requested stopping jobs while freeing disk; do not resume until asked",
+  "configuration": 1020,
+  "completed_solve_t6_preserved": true,
+  "native_t6_exit_code": 0,
+  "native_t6_completed_RHS": 20736,
+  "waiting_worker_PIDs": {
+    "7": 34636,
+    "8": 34637,
+    "9": 34638,
+    "10": 34639
+  },
+  "storage_supervisor_PID": 34592,
+  "automatic_resume_authorized": false,
+  "no_runtime_restoration_or_recovery_run_launched": true,
+  "all_waiting_workers_and_storage_supervisor_exited": true,
+  "confirmed_UTC": "2026-11-21T19:55:17.287569+00:00"
+}

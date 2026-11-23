@@ -1,0 +1,62 @@
+{
+  "status": "verified_preimages",
+  "restorations": [
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time",
+      "expected_SHA256": "9cd0be6ac9e1dcb3782ed51bdc577f2077c337b176d171f695217b2fe0e91115",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-t_metal_clover_unsmeared_time",
+      "origin": "recreated exact recorded shell wrapper",
+      "mode": 493
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/bin/project_perambulator_time",
+      "expected_SHA256": "29e29d1da8130b00c3e75107146df3c2a1b998ebaef6c799a61fbf0a3d4ce8fa",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-project_perambulator_time",
+      "origin": "recreated exact recorded shell wrapper",
+      "mode": 493
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/bin/reader_check_time",
+      "expected_SHA256": "26d681eaf41256cc4c0dc33f9995b0b25e5c5b80c41d41293b1490327546d090",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-reader_check_time",
+      "origin": "recreated exact recorded shell wrapper",
+      "mode": 493
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+      "expected_SHA256": "98c1743bda4b1f3e9f9f6f6ed9de2bda33be1365c2fbb0ad08cb3f946c358f1b",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-run_unsmeared.py",
+      "origin": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_unsmeared.py",
+      "mode": 420
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py",
+      "expected_SHA256": "5376edf4a27df11c53fd80aeedd59fe462a20bba6eb3afd8a971a14c6359b1cb",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-run_projected.py",
+      "origin": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/run_projected.py",
+      "mode": 420
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/sources/t_metal_clover_unsmeared.cc",
+      "expected_SHA256": "010d26b6918ef4a55aec3ec935194a6a80266cd686bf2ea93b3c345358f346b9",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-t_metal_clover_unsmeared.cc",
+      "origin": "/Users/admin/Downloads/chroma.metalclover/mainprogs/tests/t_metal_clover_unsmeared.cc",
+      "mode": 420
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/sources/project_perambulator.cc",
+      "expected_SHA256": "140432b324fa7b2c5049f9f2d582443b2fd6e68e1b5f6e6a8cbb3c6a3997dc12",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-project_perambulator.cc",
+      "origin": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/project_perambulator.cc",
+      "mode": 420
+    },
+    {
+      "target": "/private/tmp/chroma-times6-10-production/runtime/sources/perambulator_reader_check.cc",
+      "expected_SHA256": "e7ff17a601346479d4071f063ffcb1bd1d8356e4f90c75bdd3b5b56462005b5e",
+      "source": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/restore-perambulator_reader_check.cc",
+      "origin": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/perambulator_reader_check.cc",
+      "mode": 420
+    }
+  ],
+  "all_present_frozen_files_match": true
+}

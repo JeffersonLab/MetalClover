@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-23T21:44:08.042092+00:00",
+  "recovery_driver_SHA256": "1d68e9ea84335ac304b329b181dbe34c8d4ffa5c4fcd2b1468633cedcfce5057",
+  "recovery_fixtures": 3,
+  "original_queue_safety_fixtures": 9,
+  "original_allocation_fixtures": 4,
+  "production_payloads_not_opened_by_fixture_tests": true
+}

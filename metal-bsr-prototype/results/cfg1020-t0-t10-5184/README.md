@@ -86,3 +86,24 @@ conversion at a time needs about 58 GiB more free space than the current
 post-diagonal forecast. This is a capacity/algorithm feasibility estimate,
 not a numerical test of an implemented cross-time exporter. The user chose
 to defer these source-zero blocks. See `source0-feasibility.json`.
+
+## November 23 recovery and resume
+
+Cfg1000 through time ten and cfg1020 diagonal times one through five completed
+with their full acceptance checks. Time six finished all 20,736 numerical
+inversions, but a missing temporary launcher stopped its subsequent verifier.
+The user paused the queue on November 21, then explicitly resumed it on
+November 23. Exact frozen runtime files were restored and backed up outside
+temporary storage. Time six resumes verification and standard conversion
+without any new inversion session or hierarchy; times seven through ten follow
+as detached local jobs. All original numerical settings and checks remain.
+
+Each remaining worker now reads a scoped storage forecast through its own time,
+allowing a fully funded prefix to proceed while later jobs wait. The separate
+full-sequence forecast continues to report the actual remaining deficit. At
+resume the forecasts fit through time eight, with about 9.2 GiB additional free
+space needed for the complete sequence through ten. No standard output or
+original input is removed. See
+[the recovery record](../cfg1020-t6-recovery-20261121/README.md) for exact hashes,
+original failure evidence, detached process records and the durable runtime
+backup. Phone/chat disconnection does not stop the local jobs.

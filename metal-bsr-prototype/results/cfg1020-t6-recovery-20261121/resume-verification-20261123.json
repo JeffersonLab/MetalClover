@@ -1,0 +1,101 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-23T21:49:15.874658+00:00",
+  "cfg1020_t6_recovery": {
+    "status": "pass",
+    "UTC": "2026-11-23T21:47:58.942007+00:00",
+    "one_original_solve_session_and_hierarchy": true,
+    "no_repeated_inversions": true,
+    "recovery_active_seconds": 320.561109292,
+    "maximum_full_relative": 2.586792573545587e-14
+  },
+  "detached_local_processes": [
+    {
+      "PID": 17663,
+      "PPID": 1,
+      "process_group": 17663,
+      "state": "Ss"
+    },
+    {
+      "PID": 17665,
+      "PPID": 1,
+      "process_group": 17665,
+      "state": "Ss"
+    },
+    {
+      "PID": 17666,
+      "PPID": 1,
+      "process_group": 17666,
+      "state": "Ss"
+    },
+    {
+      "PID": 17667,
+      "PPID": 1,
+      "process_group": 17667,
+      "state": "Ss"
+    },
+    {
+      "PID": 17668,
+      "PPID": 1,
+      "process_group": 17668,
+      "state": "Ss"
+    }
+  ],
+  "t7_native_status_at_check": {
+    "status": "running",
+    "PID": 23677,
+    "completed_rhs": 16,
+    "max_full_relative": 1.0235560113380512e-14,
+    "elapsed_seconds": 65.40878404099999
+  },
+  "queue_order": [
+    {
+      "time": 7,
+      "status": "running",
+      "PID": 17665
+    },
+    {
+      "time": 8,
+      "status": "queued",
+      "PID": 17666
+    },
+    {
+      "time": 9,
+      "status": "queued",
+      "PID": 17667
+    },
+    {
+      "time": 10,
+      "status": "queued",
+      "PID": 17668
+    }
+  ],
+  "storage": {
+    "7": {
+      "status": "pass",
+      "additional_free_space_required_GiB": 0,
+      "forecast_scope": "All remaining diagonal jobs through cfg1020 time7"
+    },
+    "8": {
+      "status": "pass",
+      "additional_free_space_required_GiB": 0,
+      "forecast_scope": "All remaining diagonal jobs through cfg1020 time8"
+    },
+    "9": {
+      "status": "insufficient_space",
+      "additional_free_space_required_GiB": 2.2789649963378906,
+      "forecast_scope": "All remaining diagonal jobs through cfg1020 time9"
+    },
+    "10": {
+      "status": "insufficient_space",
+      "additional_free_space_required_GiB": 8.99869155883789,
+      "forecast_scope": "All remaining diagonal jobs through cfg1020 time10"
+    }
+  },
+  "full_queue_deficit_reported_honestly": true,
+  "all_original_numerical_and_FP64_checks_unchanged": true,
+  "all_standard_perambulators_retained": true,
+  "cfg1000_t11_to_20_not_resumed": true,
+  "cfg1020_source_zero_blocks_not_queued": true,
+  "phone_chat_connection_not_required": true
+}

@@ -1,0 +1,618 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-23T21:42:05.047594+00:00",
+  "restored_files": 71,
+  "all_frozen_bytes_unchanged": true,
+  "durable_backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123",
+  "files": [
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+      "SHA256": "9a85259957dfafd08e4cedd74805289a71f0597472a07809dba64d4633223527",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+      "mode": 493,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time",
+      "SHA256": "9cd0be6ac9e1dcb3782ed51bdc577f2077c337b176d171f695217b2fe0e91115",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time",
+      "mode": 493,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/libexec/project_perambulator_time",
+      "SHA256": "26d886da35ca6f6069a1cbd446326a5eb603fd7d58df89a146791e2d86684bd6",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/libexec/project_perambulator_time",
+      "mode": 493,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/bin/project_perambulator_time",
+      "SHA256": "29e29d1da8130b00c3e75107146df3c2a1b998ebaef6c799a61fbf0a3d4ce8fa",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/bin/project_perambulator_time",
+      "mode": 493,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/libexec/reader_check_time",
+      "SHA256": "d422bd573d3fbe21c1216c5b4378e0e2918918cc6fe758f7f6e8beafb73623ed",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/libexec/reader_check_time",
+      "mode": 493,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/bin/reader_check_time",
+      "SHA256": "26d681eaf41256cc4c0dc33f9995b0b25e5c5b80c41d41293b1490327546d090",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/bin/reader_check_time",
+      "mode": 493,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libmetalclover.dylib",
+      "SHA256": "704c1e1be9d833f99b83e43428b4356edb370ac0eed5ea7c755de2d163022738",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libmetalclover.dylib",
+      "mode": 493,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libmpi.40.dylib",
+      "SHA256": "8a30d56db9bfba9ac6dbfaef695b187e2521bb771cff3a2dc940eeb0242483b1",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libmpi.40.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libpmix.2.dylib",
+      "SHA256": "698291db9b43a527a66964a10db63abd225bebfdf760a24b8e4afb271d883668",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libpmix.2.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libhwloc.15.dylib",
+      "SHA256": "d95b6039745d46bd7e84ca562ed65f4baf142f646889254c044c019ddb9f1116",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libhwloc.15.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libevent_pthreads-2.1.7.dylib",
+      "SHA256": "5baedef2e7638186b738749faa4621e3f9956bd715ceb1524cce4c057b282c8e",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libevent_pthreads-2.1.7.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libevent_core-2.1.7.dylib",
+      "SHA256": "e96729da954afd0397c59b95112445a2d6602f2a8b76648ac5d6e1c2e4f18303",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libevent_core-2.1.7.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libopen-pal.80.dylib",
+      "SHA256": "dd9a8840529401d46bcef386dc90102f4a905b6e563a8fb11213535fee5f9df1",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libopen-pal.80.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libgmp.10.dylib",
+      "SHA256": "bc6145edbeca608b4fecd4440dbbd7b27cacd55cbfd2b552b8bc333febe43b35",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libgmp.10.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libgmpxx.4.dylib",
+      "SHA256": "85f9c1c2df8b07456b0ca126cea95a7db478ba51e5d49855a1c8a991ab8ed7c9",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libgmpxx.4.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libicuuc.76.dylib",
+      "SHA256": "a5f654df661cfca40d5a6e6dfea666db857c8f7b845761da692ad17a373e4efc",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libicuuc.76.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libxml2.2.dylib",
+      "SHA256": "6f9dc3659616bb5c850be820111f93ef2f47418a48a29a6597feb0ae001f9c9d",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libxml2.2.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libomp.dylib",
+      "SHA256": "07df38a5b4ffd405e614516cafa11abe20018e60c71167be0c2d5cd9e39718b6",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libomp.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+      "SHA256": "98c1743bda4b1f3e9f9f6f6ed9de2bda33be1365c2fbb0ad08cb3f946c358f1b",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py",
+      "SHA256": "5376edf4a27df11c53fd80aeedd59fe462a20bba6eb3afd8a971a14c6359b1cb",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/controllers/run_projected.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/sources/t_metal_clover_unsmeared.cc",
+      "SHA256": "010d26b6918ef4a55aec3ec935194a6a80266cd686bf2ea93b3c345358f346b9",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/sources/t_metal_clover_unsmeared.cc",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/sources/project_perambulator.cc",
+      "SHA256": "140432b324fa7b2c5049f9f2d582443b2fd6e68e1b5f6e6a8cbb3c6a3997dc12",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/sources/project_perambulator.cc",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/sources/perambulator_reader_check.cc",
+      "SHA256": "e7ff17a601346479d4071f063ffcb1bd1d8356e4f90c75bdd3b5b56462005b5e",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/sources/perambulator_reader_check.cc",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-times6-10-production/runtime/lib/libicudata.76.dylib",
+      "SHA256": "77d2b0e3fcb46ec46f095b626973720491abb8de1d3a3a6e190c37d77fe77372",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-times6-10-production/runtime/lib/libicudata.76.dylib",
+      "mode": 292,
+      "restored": false
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-production/batch_queue.py",
+      "SHA256": "0eb853b8f52230eb0c77e10d57cf7f4b36ef8adca6ae82fcca136b3a63b53e3e",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-production/batch_queue.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/action.xml",
+      "SHA256": "8435829c044b045724e89e809bcd6807c182eddb1c1a3c09157bcd4ef5f90bdf",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/full_run.py",
+      "SHA256": "f46b32ac2e48ab596e38594bddc799ad458812b7010a076179c794d95438087f",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-production/storage_watch.py",
+      "SHA256": "543602fbca03bedfe7369100cbaafc89eed9974306cd87de4f8761f52aff56f8",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-production/storage_watch.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/frozen-files.json",
+      "SHA256": "8a019a7ded61f6469f83fb436b20df6d26a570544aaee36f6ae64c703fcb5ec1",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time1-production/staged-run.json",
+      "SHA256": "d70de1cfacb4a7ecf86b2632eb09bbfe9c717813733199d7af818eabc9342915",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time1-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/action.xml",
+      "SHA256": "91b65f00078295277b892f302912b021db17f7cbd7a3292e5c2cf0fd48d791cf",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/full_run.py",
+      "SHA256": "356f5f9dc6fffd8835fda1ee6e4bc3e811d2d4ac903c54e2e0e5bdc7168524f7",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/frozen-files.json",
+      "SHA256": "ebdccf1404a5b7a638e651c7433760ef77adee4eef4b30935757afa8b7fcd033",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time2-production/staged-run.json",
+      "SHA256": "1a1925777f6f0d9f324d6dc77598525229d481c3466126dca1b3cdbf0c51ce69",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time2-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/action.xml",
+      "SHA256": "aef73340ba48e3c6b1daaaa22aecc9e9b6217c592635d592e256ccd88676d875",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/full_run.py",
+      "SHA256": "c2e1630f6797aec5d01865b2f0e3992be27c4aa3520f7583caaff7140b1b0bf3",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/frozen-files.json",
+      "SHA256": "2ed01050422e64b384a81e09af75742e0747682543d170399d446e0b2fe8d5b8",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time3-production/staged-run.json",
+      "SHA256": "16ca64429d828f22ebd629df2ffc249dac2bff2d6c6a99c8d1681aa0560b485b",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time3-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/action.xml",
+      "SHA256": "89f51bf6dacef5e4724c2d6902fb703c571ffce3b4c2037a38182ee8ef2ecf43",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/full_run.py",
+      "SHA256": "3d329919b05c47585cdc6be9cffa5f1bbfa170e7781c7a6583861c72664d446c",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/frozen-files.json",
+      "SHA256": "91e2c717f1a22233e39532ccdf5c84c916422c5096a5e3731b6236d72427c6a9",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time4-production/staged-run.json",
+      "SHA256": "d19b2e10e37876f5113ccb5e99de3769cae284682078e45ee91b0987d0b35746",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time4-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/action.xml",
+      "SHA256": "3c3617c9dc2750c3c81de1a158c963b425f5202cc68a9404a0b792538cf3d106",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/full_run.py",
+      "SHA256": "784d59a68e57723fa7fd7d1475676c5edd637ef82342cb5685e729ce2c7366d1",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/frozen-files.json",
+      "SHA256": "ad088cecb1c94fe3c14e419ee3d8a299d174e6043951da37398f3c56a2f06a5c",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time5-production/staged-run.json",
+      "SHA256": "92737968f584aced53911219c7a766d80b9fa16238312a3486d23b1da4c17ad1",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time5-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/action.xml",
+      "SHA256": "86028fd27f56ad8cba17bcc8a85f1595a633fe7ae56bdb40966bbb0dc1832607",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/full_run.py",
+      "SHA256": "571b92b535b8b8948ff7a5967f4d41ec35b7f94a2245a5388be3dd3f34be35ec",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/frozen-files.json",
+      "SHA256": "fccef84ef6e52cbd9520d202ffe7c52eb7891dc6718ade8c4bc3b5084f0bce12",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time6-production/staged-run.json",
+      "SHA256": "83b252393660e8ad77dd19b239d019ee759cb5644e1728af49b89715a4d79ceb",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time6-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/action.xml",
+      "SHA256": "f9e7822dbf9c9ffc6beea2dc5e9812558b41019f773227546383f26329791393",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/full_run.py",
+      "SHA256": "a5d75024544dc6961a76a4c00921b255c2fce28d01f1c506c05de56e5b6cbb78",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/frozen-files.json",
+      "SHA256": "4467de0f2d1e312583038cf71cdb6615c97f6f789bb3ff87ccdbc8cedc95d78c",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time7-production/staged-run.json",
+      "SHA256": "276db27d2bab9a454c3e04e62f2007f400fb8d8943e6548f324eb2e1c1f912c3",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time7-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/action.xml",
+      "SHA256": "69eed4034f6d5eab791d7cbdd433d4d92c9bf98573c3c8f1fd9b18719500beb3",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/full_run.py",
+      "SHA256": "197dfa77d1c8f49f0d941c1a94e48568e66d9e8308ac6069aec885f6b327628d",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/frozen-files.json",
+      "SHA256": "b14c74d3a750770498b7fd90e24843224245d16565c5c9399d825ed49780ae37",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time8-production/staged-run.json",
+      "SHA256": "267e5a88d58914c2062487f52273d6fb5dce74eea5cdf4ae63f980a318e5d415",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time8-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/action.xml",
+      "SHA256": "4d799fc5eb75997111938bfa870655708c840cb37896acf2a19f2e027c4a12fc",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/full_run.py",
+      "SHA256": "5d4087bccd661f46c5124eb373295ebc271126b998bc8b56e3414fa30c7d793b",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/frozen-files.json",
+      "SHA256": "1a02e9cb4d7aaa74920a48011390c16498bb4817c3650776141ffd951e97cd3c",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time9-production/staged-run.json",
+      "SHA256": "0388fb9b5861cec3def543b019956728ae95c80039a585f3affa6b8f7698c863",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time9-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/capture_completed.py",
+      "SHA256": "3793ec7c73a95839a318a8e8acac19726a33c2f797711ee69d80481fa4416995",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/capture_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/render_completed.py",
+      "SHA256": "b17b862b4f3b2e7a6f94b28ecdf37970e18eae0fa5a794a958d857ca97265ecd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/render_completed.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/action.xml",
+      "SHA256": "d59945bb78d6d1a909e9034e1058cd6bb3b0f7c9d424ce47a639f99a204de782",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/action.xml",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/full_run.py",
+      "SHA256": "1538aa6bccf70a11124395ba6dd3da3ecf7c8c718fa1b90c144354f4d1c280c3",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/full_run.py",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/frozen-files.json",
+      "SHA256": "fe8b1a4e381c03faade252ecf58e8bdd9465e460f582b74d13c46aaed123cd96",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/frozen-files.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-time10-production/staged-run.json",
+      "SHA256": "4bb8711732e4cbe20e7299d84f0093d367af4804118caf3049f569fee06c1abd",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-time10-production/staged-run.json",
+      "mode": 420,
+      "restored": true
+    },
+    {
+      "path": "/private/tmp/chroma-cfg1020-production/batch_status.py",
+      "SHA256": "e9f3cefbe4a1f3905fc8e565b83ccc46edffaef9cdcbcb2c31d8c2a7fb14b91b",
+      "backup": "/Users/admin/Downloads/MetalClover-runtime/cfg1020-frozen-20261123/private/tmp/chroma-cfg1020-production/batch_status.py",
+      "mode": 420,
+      "restored": true
+    }
+  ]
+}

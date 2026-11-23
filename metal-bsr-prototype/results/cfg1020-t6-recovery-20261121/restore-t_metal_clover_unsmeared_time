@@ -1,0 +1,6 @@
+#!/bin/sh
+export DYLD_LIBRARY_PATH=/private/tmp/chroma-times6-10-production/runtime/lib
+if [ "${METALCLOVER_DYLD_AUDIT:-0}" = "1" ]; then
+  export DYLD_PRINT_LIBRARIES=1
+fi
+exec /private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time "$@"
