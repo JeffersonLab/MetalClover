@@ -1,0 +1,9 @@
+{
+  "status": "paused",
+  "duration_limit_seconds": 3600,
+  "pause_record": "../cpu-idle-wick-20261123-174453/",
+  "paused_UTC": "2026-11-23T22:45:06.306991+00:00",
+  "automatic_resume_deadline_UTC": "2026-11-23T23:45:06.307063+00:00",
+  "raw_native_solve_wall_includes_idle_window": true,
+  "same_live_solve_and_hierarchy_preserved": true
+}

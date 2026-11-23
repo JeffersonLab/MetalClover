@@ -1,0 +1,79 @@
+{
+  "window_id": "20261123-174453",
+  "report_directory": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cpu-idle-wick-20261123-174453",
+  "work_directory": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cpu-idle-wick-20261123-174453",
+  "maximum_pause_seconds": 3600,
+  "purpose": "User requested a one-hour production pause for tests in New Wick contractions",
+  "method": "SIGSTOP/SIGCONT in place; no solver exit or hierarchy rebuild",
+  "preserve_all_standard_perambulators": true,
+  "native_completed_rhs_before_pause": 2192,
+  "native_max_full_relative_before_pause": 1.9828080156023448e-14,
+  "targets": [
+    {
+      "role": "cfg1020 time7 queue",
+      "pid": 17665,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 7"
+      ]
+    },
+    {
+      "role": "cfg1020 time8 queue",
+      "pid": 17666,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 8"
+      ]
+    },
+    {
+      "role": "cfg1020 time9 queue",
+      "pid": 17667,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 9"
+      ]
+    },
+    {
+      "role": "cfg1020 time10 queue",
+      "pid": 17668,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 10"
+      ]
+    },
+    {
+      "role": "cfg1020 time7 pipeline",
+      "pid": 23673,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-time7-production/full_run.py"
+      ]
+    },
+    {
+      "role": "cfg1020 time7 resource controller",
+      "pid": 23676,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+        "cfg1020-t7-unsmeared"
+      ]
+    },
+    {
+      "role": "cfg1020 runtime and storage supervisor",
+      "pid": 17663,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "supervise"
+      ]
+    },
+    {
+      "role": "cfg1020 time7 native solve",
+      "pid": 23677,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+        "cfg1020-t7-unsmeared"
+      ]
+    }
+  ],
+  "global_status_file": "/Users/admin/Downloads/MetalClover-results/cfg1020.TIMED_PAUSE.json",
+  "phone_chat_connection_not_required": true,
+  "control_script_SHA256": "a17f8af3eb5315b4c20ab2c3eea5d2e1b33f3058b7881acba0ece0f43b5904a5"
+}
