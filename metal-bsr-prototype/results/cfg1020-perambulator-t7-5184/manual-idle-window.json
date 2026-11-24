@@ -1,9 +1,18 @@
 {
   "status": "paused",
-  "duration_limit_seconds": 3600,
-  "pause_record": "../cpu-idle-wick-20261123-174453/",
-  "paused_UTC": "2026-11-23T22:45:06.306991+00:00",
-  "automatic_resume_deadline_UTC": "2026-11-23T23:45:06.307063+00:00",
-  "raw_native_solve_wall_includes_idle_window": true,
-  "same_live_solve_and_hierarchy_preserved": true
+  "pause_record": "../cpu-idle-wick-20261123-194545/",
+  "paused_UTC": "2026-11-24T00:45:50.202218+00:00",
+  "automatic_resume_deadline_UTC": "2026-11-24T01:45:00+00:00",
+  "raw_native_solve_wall_includes_idle_windows": true,
+  "same_live_solve_and_hierarchy_preserved": true,
+  "completed_previous_windows": [
+    {
+      "pause_record": "../cpu-idle-wick-20261123-174453/",
+      "paused_UTC": "2026-11-23T22:45:06.306991+00:00",
+      "resumed_UTC": "2026-11-23T23:45:06.716966+00:00",
+      "pause_seconds": 3600.1417243749997,
+      "resume_errors": []
+    }
+  ],
+  "current_window_resumes_without_phone_chat": true
 }

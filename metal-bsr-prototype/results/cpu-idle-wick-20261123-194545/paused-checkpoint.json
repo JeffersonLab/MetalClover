@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-24T00:46:17.127151+00:00",
+  "all_eight_production_processes_stopped": true,
+  "production_CPU_times_unchanged_during_check": true,
+  "identities": {
+    "17663": {
+      "PPID": 1,
+      "state": "Ts",
+      "CPU_time": "0:37.11"
+    },
+    "17665": {
+      "PPID": 1,
+      "state": "Ts",
+      "CPU_time": "0:00.31"
+    },
+    "17666": {
+      "PPID": 1,
+      "state": "Ts",
+      "CPU_time": "0:00.41"
+    },
+    "17667": {
+      "PPID": 1,
+      "state": "Ts",
+      "CPU_time": "0:00.36"
+    },
+    "17668": {
+      "PPID": 1,
+      "state": "Ts",
+      "CPU_time": "0:00.36"
+    },
+    "23673": {
+      "PPID": 17665,
+      "state": "T",
+      "CPU_time": "0:00.05"
+    },
+    "23676": {
+      "PPID": 23673,
+      "state": "T",
+      "CPU_time": "0:03.83"
+    },
+    "23677": {
+      "PPID": 23676,
+      "state": "T",
+      "CPU_time": "75:47.46"
+    }
+  },
+  "detached_controller": "45566     1 /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cpu-idle-wick-20261123-194545/control_window.py",
+  "completed_RHS_at_pause": 4704,
+  "maximum_full_relative": 2.3544904559586773e-14,
+  "native_solve_PID_preserved": 23677,
+  "hierarchies_in_native_log": 1,
+  "resume_at_UTC": "2026-11-24T01:45:00+00:00",
+  "resume_at_Eastern": "2026-11-23T20:45:00-05:00",
+  "raw_solve_wall_includes_both_idle_windows": true
+}
