@@ -1,0 +1,38 @@
+{
+  "status": "stopped",
+  "UTC": "2026-11-24T20:52:17.789382+00:00",
+  "user_instruction": "Finish t0=7 production and finish; do not continue to t0=8",
+  "configuration": 1020,
+  "last_authorized_time": 7,
+  "targets": [
+    {
+      "PID": 17666,
+      "role": "queue 8",
+      "identity": "17666 Mon Nov 23 16:42:38 2026     /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 8"
+    },
+    {
+      "PID": 17667,
+      "role": "queue 9",
+      "identity": "17667 Mon Nov 23 16:42:38 2026     /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 9"
+    },
+    {
+      "PID": 17668,
+      "role": "queue 10",
+      "identity": "17668 Mon Nov 23 16:42:38 2026     /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 10"
+    },
+    {
+      "PID": 17663,
+      "role": "supervise",
+      "identity": "17663 Mon Nov 23 16:42:38 2026     /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py supervise"
+    }
+  ],
+  "all_standard_perambulators_and_inputs_retained": true,
+  "remaining_live_PIDs": [],
+  "confirmed_UTC": "2026-11-24T20:52:39.049996+00:00",
+  "time8_status": "paused",
+  "time8_never_started": true,
+  "time9_status": "paused",
+  "time9_never_started": true,
+  "time10_status": "paused",
+  "time10_never_started": true
+}

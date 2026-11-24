@@ -1,3 +1,7 @@
+**Cancelled before starting, November 24, 2026.** The user requested stopping
+after t0=7. No inversion or pipeline ran at this time. The staging records
+below are retained as provenance; do not restart without a new user request.
+
 # Configuration 1020: queued P(8,8)
 
 All 5,184 eigenvectors and four spins (20,736 RHS), cap sixteen, one reused

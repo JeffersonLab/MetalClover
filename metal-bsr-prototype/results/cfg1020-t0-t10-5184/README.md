@@ -107,3 +107,13 @@ original input is removed. See
 [the recovery record](../cfg1020-t6-recovery-20261121/README.md) for exact hashes,
 original failure evidence, detached process records and the durable runtime
 backup. Phone/chat disconnection does not stop the local jobs.
+
+
+## Final state: stopped after time seven, November 24
+
+Cfg1020 diagonal times 1..7 completed all production checks. On the user's
+explicit instruction, the waiting times 8..10 were cancelled before any pipeline
+or inversion started; their workers and runtime/storage supervisor exited.
+All standard perambulators and inputs are retained. The final time-seven standard
+file passed a fresh complete SHA256 check. No further automatic production is
+authorized. See [final verification and stop proof](../cfg1020-stop-after-t7-20261124/README.md).

@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "UTC": "2026-11-24T20:52:53.632469+00:00",
+  "configuration": 1020,
+  "source_time": 7,
+  "sink_time": 7,
+  "completed_RHS": 20736,
+  "hierarchies": 1,
+  "sessions": 1,
+  "full_CPU_FP64_tolerance": 1e-12,
+  "maximum_full_relative": 2.6009830652109176e-14,
+  "full_gamma5_relative_Frobenius": 1.0797177139532e-14,
+  "all_standard_values_readback_bitwise": true,
+  "independent_DataLib_reader": "pass",
+  "standard_perambulator": "/Users/admin/Downloads/MetalClover-results/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265.prop.n5184.light.t0_7.sdb1020",
+  "output_bytes": 6907158528,
+  "current_full_file_SHA256": "d76d9889b510f2bceba1f6118db47d109da6816823c03087f1f3957d8dcb4c6b",
+  "current_checksum_matches_accepted_output": true,
+  "checksum_seconds": 4.00892875,
+  "no_additional_inversion_performed": true,
+  "point_retired_only_after_complete_acceptance": true
+}

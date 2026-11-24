@@ -1,0 +1,24 @@
+{
+  "status": "stopped_after_t7",
+  "UTC": "2026-11-24T20:53:35.443323+00:00",
+  "configuration": 1020,
+  "last_authorized_time": 7,
+  "completed_diagonal_times": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "cancelled_times": [
+    8,
+    9,
+    10
+  ],
+  "cancelled_times_never_started": true,
+  "automatic_resume_authorized": false,
+  "all_standard_perambulators_and_original_inputs_retained": true,
+  "stop_confirmation": "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-stop-after-t7-20261124/stop-confirmation.json"
+}

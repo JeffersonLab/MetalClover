@@ -1,0 +1,2 @@
+{"status": "paused", "window_id": "20261123-194545", "processes": 8, "automatic_resume_deadline_UTC": "2026-11-24T01:45:00+00:00"}
+{"status": "resumed", "resume_reason": "All six normal-policy timing runs finished", "pause_seconds": 1431.718527833, "resume_errors": []}

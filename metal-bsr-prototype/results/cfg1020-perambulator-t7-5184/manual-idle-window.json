@@ -1,18 +1,26 @@
 {
-  "status": "paused",
-  "pause_record": "../cpu-idle-wick-20261123-194545/",
-  "paused_UTC": "2026-11-24T00:45:50.202218+00:00",
-  "automatic_resume_deadline_UTC": "2026-11-24T01:45:00+00:00",
-  "raw_native_solve_wall_includes_idle_windows": true,
-  "same_live_solve_and_hierarchy_preserved": true,
-  "completed_previous_windows": [
+  "status": "resumed",
+  "completed_windows": [
     {
       "pause_record": "../cpu-idle-wick-20261123-174453/",
       "paused_UTC": "2026-11-23T22:45:06.306991+00:00",
       "resumed_UTC": "2026-11-23T23:45:06.716966+00:00",
       "pause_seconds": 3600.1417243749997,
+      "resume_reason": "one_hour_failsafe",
+      "resume_errors": []
+    },
+    {
+      "pause_record": "../cpu-idle-wick-20261123-194545/",
+      "paused_UTC": "2026-11-24T00:45:50.202218+00:00",
+      "resumed_UTC": "2026-11-24T01:09:42.071329+00:00",
+      "pause_seconds": 1431.718527833,
+      "resume_reason": "All six normal-policy timing runs finished",
       "resume_errors": []
     }
   ],
-  "current_window_resumes_without_phone_chat": true
+  "total_recorded_pause_seconds": 5031.860252208,
+  "same_live_native_solve_and_hierarchy_preserved": true,
+  "raw_native_solve_wall_includes_idle_windows": true,
+  "pipeline_wall_also_includes_filesystem_access_stall": true,
+  "all_production_finished_and_stopped_after_t7": true
 }

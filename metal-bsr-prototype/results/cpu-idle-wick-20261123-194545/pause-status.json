@@ -1,0 +1,162 @@
+{
+  "window_id": "20261123-194545",
+  "status": "resumed",
+  "controller_PID": 45566,
+  "UTC": "2026-11-24T00:45:50.019625+00:00",
+  "targets": [
+    {
+      "role": "cfg1020 time7 queue",
+      "pid": 17665,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 7"
+      ],
+      "original_identity": {
+        "pid": 17665,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Mon Nov 23 16:42:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 7",
+        "command_SHA256": "75a73f6f6f8d87ab60ad09057d8ec7917c886b759b413f0e3167511326093a0c"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time8 queue",
+      "pid": 17666,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 8"
+      ],
+      "original_identity": {
+        "pid": 17666,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Mon Nov 23 16:42:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 8",
+        "command_SHA256": "1d21e9866787f1a1b061e460ce171c045fef68cbe8cae4c31772435851478ced"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time9 queue",
+      "pid": 17667,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 9"
+      ],
+      "original_identity": {
+        "pid": 17667,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Mon Nov 23 16:42:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 9",
+        "command_SHA256": "2c0a516fae572d86a167d5bb0d575a8de4f707df042c7654bbc1dc0ff06fd563"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time10 queue",
+      "pid": 17668,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "queue 10"
+      ],
+      "original_identity": {
+        "pid": 17668,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Mon Nov 23 16:42:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py queue 10",
+        "command_SHA256": "ad2188531db8a5ed046f0863918aed10a3c0cf40046ec6db0367f6423c36ee62"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time7 pipeline",
+      "pid": 23673,
+      "command_contains": [
+        "/private/tmp/chroma-cfg1020-time7-production/full_run.py"
+      ],
+      "original_identity": {
+        "pid": 23673,
+        "parent": 17665,
+        "state": "S",
+        "started": "Mon Nov 23 16:48:08 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-cfg1020-time7-production/full_run.py",
+        "command_SHA256": "584fe0433ed68279dc4a4d5c98c35fc6358fb2068603bd53329d75c2343dd25d"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time7 resource controller",
+      "pid": 23676,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py",
+        "cfg1020-t7-unsmeared"
+      ],
+      "original_identity": {
+        "pid": 23676,
+        "parent": 23673,
+        "state": "S",
+        "started": "Mon Nov 23 16:48:09 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /private/tmp/chroma-times6-10-production/runtime/controllers/run_unsmeared.py --binary /private/tmp/chroma-times6-10-production/runtime/bin/t_metal_clover_unsmeared_time --gauge /Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime --action /private/tmp/chroma-cfg1020-time7-production/action.xml --eigenvectors /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_7.mod1020 --prefix /Users/admin/Downloads/MetalClover-results/cfg1020-t7-unsmeared --first 0 --vectors 5184 --max-rhs 16 --method MetalMGClover --time 7",
+        "command_SHA256": "94f617940653f275e72342cc3aa67c3bb43d9e106444b9d7397737397d2e05e6"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 runtime and storage supervisor",
+      "pid": 17663,
+      "command_contains": [
+        "/Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py",
+        "supervise"
+      ],
+      "original_identity": {
+        "pid": 17663,
+        "parent": 1,
+        "state": "Ss",
+        "started": "Mon Nov 23 16:42:38 2026",
+        "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/admin/Documents/ChatGPT/MG for Apple GPU/metal-bsr-prototype/results/cfg1020-t6-recovery-20261121/resume_20261123.py supervise",
+        "command_SHA256": "8896951eb8c2b088a2fb99870900e592a1cb1a5b7b427010d0238d9193d8eac1"
+      },
+      "stopped": true,
+      "resumed": true
+    },
+    {
+      "role": "cfg1020 time7 native solve",
+      "pid": 23677,
+      "command_contains": [
+        "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time",
+        "cfg1020-t7-unsmeared"
+      ],
+      "original_identity": {
+        "pid": 23677,
+        "parent": 23676,
+        "state": "R",
+        "started": "Mon Nov 23 16:48:09 2026",
+        "command": "/private/tmp/chroma-times6-10-production/runtime/libexec/t_metal_clover_unsmeared_time /Users/admin/Downloads/unitary_distillation/cfgs/szscl3_12_96_b1p50_t_x4p300_um0p0743_n1p265_per_cfg_1020.lime /private/tmp/chroma-cfg1020-time7-production/action.xml /Users/admin/Downloads/unitary_distillation/eigs_mod.n5184/1020/eigs.t_7.mod1020 /Users/admin/Downloads/MetalClover-results/cfg1020-t7-unsmeared 0 5184 16 MetalMGClover --time 7",
+        "command_SHA256": "a7b98a314e6549c16e3ae3bc99487a80c6b09d134ade0cfc231657737bfcb07c"
+      },
+      "stopped": true,
+      "resumed": true
+    }
+  ],
+  "method": "SIGSTOP/SIGCONT in place; no solver exit or hierarchy rebuild",
+  "one_hierarchy_and_live_solve_preserved": true,
+  "updated_UTC": "2026-11-24T01:09:42.071369+00:00",
+  "paused_UTC": "2026-11-24T00:45:50.202218+00:00",
+  "maximum_pause_seconds": 3554.39377,
+  "automatic_resume_deadline_UTC": "2026-11-24T01:45:00+00:00",
+  "pause_seconds": 1431.718527833,
+  "resume_reason": "All six normal-policy timing runs finished",
+  "resume_started_UTC": "2026-11-24T01:09:41.959124+00:00",
+  "resumed_UTC": "2026-11-24T01:09:42.071329+00:00",
+  "resume_errors": []
+}
